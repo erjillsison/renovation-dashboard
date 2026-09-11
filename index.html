@@ -1552,18 +1552,6 @@
         border-bottom: none;
       }
 
-      .sim-status-banner {
-        padding: 8px 12px;
-        border-radius: var(--radius-sm);
-        font-size: 0.78rem;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        background: #fdf7ec;
-        border: 1px solid #ebd7b8;
-        color: #7d5a2b;
-      }
 
     </style>
   </head>
@@ -3384,10 +3372,6 @@ automation:
               Explore the exact 2-bedroom architectural floor plan with live sensor radar, smart lighting, climate, and furniture zones
             </p>
           </div>
-          <div class="sim-status-banner" id="mapSimStatusBanner">
-            <span>☀️</span>
-            <span id="mapSimStatusText">Simulation: Normal Ambient Mode. Click any room or time of day below.</span>
-          </div>
         </div>
 
         <div class="map-wrapper">
@@ -3412,25 +3396,6 @@ automation:
                 </button>
               </div>
 
-              <!-- Circadian Time Simulator -->
-              <div class="map-controls-group">
-                <span class="filter-label" style="font-size: 0.75rem;">Simulate Time:</span>
-                <button class="map-tool-btn" onclick="simulateMapTime('morning', this)" title="07:00 AM Coffee Scene">
-                  <span>🌅</span> 07:00
-                </button>
-                <button class="map-tool-btn" onclick="simulateMapTime('day', this)" title="12:00 PM Focus Mode">
-                  <span>☀️</span> 12:00
-                </button>
-                <button class="map-tool-btn" onclick="simulateMapTime('evening', this)" title="19:00 PM Dinner Scene">
-                  <span>🌇</span> 19:00
-                </button>
-                <button class="map-tool-btn" onclick="simulateMapTime('night', this)" title="23:00 PM Night Wind-Down">
-                  <span>🌙</span> 23:00
-                </button>
-                <button class="map-tool-btn active" onclick="simulateMapTime('reset', this)" title="Reset to default">
-                  <span>🔄</span> Reset
-                </button>
-              </div>
             </div>
 
             <!-- SVG Floor Plan Viewport -->
@@ -6068,58 +6033,6 @@ automation:
         const img = document.getElementById("mapCleanFloorPlanImg");
         if (img) {
           img.style.display = isActive ? "inline" : "none";
-        }
-      }
-
-      function simulateMapTime(timeOfDay, btnEl) {
-        if (btnEl && btnEl.parentElement) {
-          btnEl.parentElement.querySelectorAll(".map-tool-btn").forEach(b => b.classList.remove("active"));
-          btnEl.classList.add("active");
-        }
-
-        const banner = document.getElementById("mapSimStatusText");
-        const livingSpots = document.getElementById("light-living-spots");
-        const diningPendant = document.getElementById("light-dining-pendant");
-        const kitchenStrip = document.getElementById("light-kitchen-strip");
-        const entranceStrip = document.getElementById("light-entrance-strip");
-        const masterSpots = document.getElementById("light-master-spots");
-        const masterVanity = document.getElementById("light-master-vanity");
-
-        if (timeOfDay === "morning") {
-          if (banner) banner.innerHTML = "<strong>07:00 AM Coffee Routine:</strong> Kitchen under-cabinet strip softly illuminated at 2700K (30%). Living & bedroom remain glare-free.";
-          if (kitchenStrip) { kitchenStrip.style.stroke = "#ff9e3b"; kitchenStrip.style.opacity = "1"; kitchenStrip.setAttribute("stroke-width", "12"); }
-          if (entranceStrip) { entranceStrip.style.opacity = "0.2"; }
-          if (livingSpots) livingSpots.style.opacity = "0.1";
-          if (diningPendant) diningPendant.style.opacity = "0.1";
-          if (masterSpots) masterSpots.style.opacity = "0.05";
-        } else if (timeOfDay === "day") {
-          if (banner) banner.innerHTML = "<strong>12:00 PM Focus Mode:</strong> Whole house illuminated in crisp 5000K daylight at 100% brightness for WFH productivity.";
-          if (kitchenStrip) { kitchenStrip.style.stroke = "#e6f4fa"; kitchenStrip.style.opacity = "1"; kitchenStrip.setAttribute("stroke-width", "8"); }
-          if (livingSpots) { livingSpots.style.opacity = "1"; livingSpots.querySelectorAll("circle").forEach(c => c.setAttribute("fill", "#e6f4fa")); }
-          if (diningPendant) { diningPendant.style.opacity = "1"; diningPendant.setAttribute("fill", "#e6f4fa"); }
-          if (masterSpots) { masterSpots.style.opacity = "0.9"; masterSpots.querySelectorAll("circle").forEach(c => c.setAttribute("fill", "#e6f4fa")); }
-        } else if (timeOfDay === "evening") {
-          if (banner) banner.innerHTML = "<strong>19:00 PM Evening Dinner:</strong> Dining pendant & living spotlights tuned to 3000K cozy warm white at 60%.";
-          if (diningPendant) { diningPendant.style.opacity = "1"; diningPendant.setAttribute("fill", "#ffa834"); }
-          if (livingSpots) { livingSpots.style.opacity = "0.6"; livingSpots.querySelectorAll("circle").forEach(c => c.setAttribute("fill", "#ffd080")); }
-          if (kitchenStrip) { kitchenStrip.style.stroke = "#ffd080"; kitchenStrip.style.opacity = "0.6"; kitchenStrip.setAttribute("stroke-width", "8"); }
-        } else if (timeOfDay === "night") {
-          if (banner) banner.innerHTML = "<strong>23:00 PM Night Wind-Down / Piddle:</strong> Master bath vanity mirror illuminated at 15% warm amber (2200K). All main lights OFF.";
-          if (livingSpots) livingSpots.style.opacity = "0";
-          if (diningPendant) diningPendant.style.opacity = "0";
-          if (kitchenStrip) kitchenStrip.style.opacity = "0";
-          if (entranceStrip) entranceStrip.style.opacity = "0";
-          if (masterSpots) masterSpots.style.opacity = "0";
-          if (masterVanity) { masterVanity.style.opacity = "1"; masterVanity.setAttribute("fill", "#ff7a22"); }
-        } else {
-          // Reset
-          if (banner) banner.innerText = "Simulation: Normal Ambient Mode. Click any room or time of day.";
-          if (kitchenStrip) { kitchenStrip.style.stroke = "#ffbb55"; kitchenStrip.style.opacity = "0.8"; kitchenStrip.setAttribute("stroke-width", "8"); }
-          if (entranceStrip) { entranceStrip.style.opacity = "0.8"; }
-          if (livingSpots) { livingSpots.style.opacity = "0.85"; livingSpots.querySelectorAll("circle").forEach(c => c.setAttribute("fill", "#ffd080")); }
-          if (diningPendant) { diningPendant.style.opacity = "0.85"; diningPendant.setAttribute("fill", "#ffa834"); }
-          if (masterSpots) { masterSpots.style.opacity = "0.75"; masterSpots.querySelectorAll("circle").forEach(c => c.setAttribute("fill", "#ffd080")); }
-          if (masterVanity) { masterVanity.style.opacity = "0.75"; masterVanity.setAttribute("fill", "#ffd080"); }
         }
       }
 
