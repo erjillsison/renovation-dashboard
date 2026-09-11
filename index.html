@@ -677,21 +677,26 @@
       .status-badge {
         display: inline-flex;
         align-items: center;
-        gap: 4px;
+        justify-content: center;
         font-size: 0.68rem;
         font-weight: 700;
-        padding: 2px 6px;
+        padding: 3px 8px;
         border-radius: var(--radius-full);
+        white-space: nowrap;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
       }
 
       .status-selected {
         background: var(--sage-light);
         color: var(--sage-primary);
+        border: 1px solid rgba(40, 90, 58, 0.2);
       }
 
       .status-tbd {
         background: #f1f3f5;
         color: #6c757d;
+        border: 1px solid #dee2e6;
       }
 
       .item-link-btn {
@@ -1168,10 +1173,10 @@
               class="filter-btn"
               onclick="setStatusFilter('Selected', this)"
             >
-              ● Selected (20)
+              Selected
             </button>
             <button class="filter-btn" onclick="setStatusFilter('TBD', this)">
-              ○ TBD (16)
+              TBD
             </button>
             <button
               class="filter-btn"
@@ -2369,7 +2374,6 @@
                   : "p-2";
             let statusClass =
               item.status === "Selected" ? "status-selected" : "status-tbd";
-            let statusIcon = item.status === "Selected" ? "●" : "○";
 
             const isCourts =
               item.availableAt &&
@@ -2405,7 +2409,7 @@
             <td>${linkDisplay}</td>
             <td><span class="badge-room">${item.room}</span></td>
             <td><span class="badge-priority ${priorityClass}">${item.priority}</span></td>
-            <td><span class="status-badge ${statusClass}">${statusIcon} ${item.status}</span></td>
+            <td><span class="status-badge ${statusClass}">${item.status}</span></td>
             <td style="text-align: right;"><span class="price-tag">${item.priceDisplay}</span></td>
           `;
             tbody.appendChild(row);
