@@ -3484,11 +3484,15 @@ automation:
                   <rect id="fill-living" x="590" y="268" width="350" height="442" fill="#fcfbf7" stroke="#e8e5dc" stroke-width="1" />
                   <!-- Dining Room -->
                   <rect id="fill-dining" x="590" y="710" width="350" height="170" fill="#faf6f0" stroke="#ede5d8" stroke-width="1" />
-                  <!-- Foyer / Entrance -->
-                  <rect id="fill-foyer" x="590" y="880" width="350" height="320" fill="#f4f5f2" stroke="#dde0da" stroke-width="1" />
-                  <!-- Master Bedroom -->
+                  <!-- Foyer / Entrance (L-shape: center bottom + right strip under master bath) -->
+                  <polygon id="fill-foyer"
+                    points="590,880 940,880 940,900 1320,900 1320,1200 940,1200 940,1200 590,1200"
+                    fill="#f4f5f2" stroke="#dde0da" stroke-width="1" />
+                  <!-- Master Bedroom (y=340 to y=700) -->
                   <rect id="fill-master-bed" x="940" y="340" width="340" height="360" fill="#f4f7f4" stroke="#dce5dc" stroke-width="1" />
-                  <!-- Master Bathroom -->
+                  <!-- Master Bed window/AC ledge zone (between balcony wall and master bed) -->
+                  <rect id="fill-master-ledge" x="940" y="268" width="340" height="72" fill="#f0f3f0" stroke="#d0dbd0" stroke-width="1" stroke-dasharray="4 3" />
+                  <!-- Master Bathroom (x=940–1320, y=700–900) -->
                   <rect id="fill-master-bath" x="940" y="700" width="380" height="200" fill="#edf3f7" stroke="#d5e1e8" stroke-width="1" />
                 </g>
 
@@ -3569,7 +3573,7 @@ automation:
                       M 590 268 L 590 25 L 940 25 L 940 268
                       M 590 268 L 300 268 L 300 1200 L 590 1200
                       M 590 1200 L 670 1200
-                      M 760 1200 L 940 1200 L 940 900 L 1320 900 L 1320 700 L 1280 700 L 1280 340 L 940 340
+                      M 760 1200 L 940 1200 L 940 900 L 1320 900 L 1320 700 L 1280 700 L 1280 340 L 940 340 L 940 268
                     "
                     fill="none" stroke="#232724" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"
                   />
@@ -3608,9 +3612,11 @@ automation:
                   <!-- Column Anchors -->
                   <rect x="584" y="262" width="12" height="12" fill="#232724" />
                   <rect x="934" y="262" width="12" height="12" fill="#232724" />
+                  <rect x="934" y="334" width="12" height="12" fill="#232724" />
                   <rect x="294" y="262" width="12" height="12" fill="#232724" />
                   <rect x="294" y="1194" width="12" height="12" fill="#232724" />
                   <rect x="934" y="1194" width="12" height="12" fill="#232724" />
+                  <rect x="1314" y="894" width="12" height="12" fill="#232724" />
                 </g>
 
                 <!-- Layer 2: Interactive Room Zones (Polygons for click & hover highlight) -->
@@ -3649,7 +3655,7 @@ automation:
                   <polygon
                     id="zone-Entrance"
                     class="map-room-zone"
-                    points="590,880 940,880 940,1200 590,1200"
+                    points="590,880 940,880 940,900 1320,900 1320,1200 590,1200"
                     onclick="selectMapRoom('Entrance')"
                   >
                     <title>Entrance: Door Contact (0ms), PIR Motion, Shoe Cabinet LED</title>
@@ -3699,7 +3705,7 @@ automation:
                   <polygon
                     id="zone-Master-Bath"
                     class="map-room-zone"
-                    points="940,700 1360,700 1360,900 940,900"
+                    points="940,700 1320,700 1320,900 940,900"
                     onclick="selectMapRoom('Master Bath')"
                   >
                     <title>Master Bathroom: Wasp in a Box, Manual Bidet Seat, Nightlight</title>
