@@ -1404,27 +1404,39 @@
       /* SVG Device Markers */
       .sensor-pin {
         cursor: pointer;
-        transition: transform 0.2s ease, filter 0.2s ease;
+        transition: filter 0.2s ease;
+      }
+
+      .sensor-pin circle {
+        transition: r 0.2s ease, stroke-width 0.2s ease;
+      }
+
+      .sensor-pin:hover circle {
+        r: 16px;
+        stroke-width: 3.5px;
       }
 
       .sensor-pin:hover {
-        transform: scale(1.22);
-        filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
+        filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
       }
 
-      .radar-wave {
-        animation: radarPulse 2.4s infinite ease-out;
-        transform-origin: 620px 340px;
+      /* Animated Radar Wave Pulse */
+      .radar-pulse-ring {
+        animation: radarPulseAnim 2.2s infinite ease-out;
       }
 
-      @keyframes radarPulse {
+      @keyframes radarPulseAnim {
         0% {
           opacity: 0.85;
-          r: 25px;
+          stroke-width: 2.5px;
+        }
+        50% {
+          opacity: 0.45;
+          stroke-width: 2px;
         }
         100% {
-          opacity: 0;
-          r: 160px;
+          opacity: 0.1;
+          stroke-width: 1px;
         }
       }
 
@@ -3617,18 +3629,28 @@ automation:
                 </g>
 
                 <!-- Layer 5: Sensors Markers (Pins with pulse & icons) -->
-                <g id="layerSensorsGroup">
-                  <!-- 1. Living Room mmWave Sensor (Aqara FP1E on TV Console) -->
-                  <g class="sensor-pin" transform="translate(615, 335)" onclick="selectMapRoom('Living Room')">
-                    <!-- Radar Cone Sweeping Across Sofa -->
+                  <!-- Radar Beam Field (Non-blocking, elegant concentric waves) -->
+                  <g id="radarField" pointer-events="none">
+                    <!-- Soft translucent coverage cone towards modular sofa -->
                     <path
-                      d="M 0 0 L 250 -40 A 300 300 0 0 1 230 240 Z"
-                      fill="url(#radarGrad)" opacity="0.6"
+                      d="M 615 395 L 890 320 A 290 290 0 0 1 870 570 Z"
+                      fill="rgba(74, 107, 87, 0.08)"
+                      stroke="rgba(74, 107, 87, 0.25)"
+                      stroke-width="1.5"
+                      stroke-dasharray="6 4"
                     />
-                    <circle cx="0" cy="0" r="14" fill="#4a6b57" stroke="#ffffff" stroke-width="2.5" />
-                    <text x="0" y="4" font-size="10" fill="#ffffff" font-weight="800" text-anchor="middle">📡</text>
-                    <rect x="18" y="-12" width="130" height="20" rx="4" fill="#1e221f" opacity="0.88" />
-                    <text x="24" y="2" font-size="9.5" fill="#ffffff" font-weight="700">FP1E mmWave Radar</text>
+                    <!-- Concentric Radar Wave Arcs -->
+                    <path d="M 685 375 A 75 75 0 0 1 680 445" fill="none" stroke="#4a6b57" stroke-width="2.5" stroke-linecap="round" opacity="0.8" class="radar-pulse-ring" />
+                    <path d="M 755 355 A 150 150 0 0 1 745 500" fill="none" stroke="#4a6b57" stroke-width="2" stroke-linecap="round" opacity="0.55" class="radar-pulse-ring" style="animation-delay: 0.6s;" />
+                    <path d="M 825 338 A 225 225 0 0 1 810 545" fill="none" stroke="#4a6b57" stroke-width="1.5" stroke-linecap="round" opacity="0.35" class="radar-pulse-ring" style="animation-delay: 1.2s;" />
+                  </g>
+
+                  <!-- 1. Living Room mmWave Sensor (Aqara FP1E on TV Console) -->
+                  <g class="sensor-pin" transform="translate(615, 395)" onclick="selectMapRoom('Living Room')">
+                    <circle cx="0" cy="0" r="13" fill="#4a6b57" stroke="#ffffff" stroke-width="2.5" />
+                    <text x="0" y="4" font-size="9" fill="#ffffff" font-weight="800" text-anchor="middle" pointer-events="none">📡</text>
+                    <rect x="16" y="-10" width="138" height="20" rx="4" fill="#1e221f" opacity="0.9" />
+                    <text x="22" y="3" font-size="9" fill="#ffffff" font-weight="700" pointer-events="none">FP1E mmWave (Sofa)</text>
                   </g>
 
                   <!-- 2. Entrance Main Door Contact Sensor (T1) -->
