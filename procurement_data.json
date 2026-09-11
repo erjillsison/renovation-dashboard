@@ -450,21 +450,6 @@
     "sellerSavings": 650
   },
   {
-    "name": "Bidet",
-    "choice": "Panasonic DL-EH30 E-Bidet (x2)",
-    "notes": "Requires dedicated power points adjacent to bowls.",
-    "room": "Bathrooms",
-    "priority": "P0",
-    "status": "Selected",
-    "price": 1200,
-    "priceDisplay": "$1,200",
-    "availableAt": "Sim Siang Choon / Panasonic Store",
-    "linkText": "Sim Siang Choon",
-    "linkUrl": "https://www.simsiangchoon.com",
-    "sellerDeductible": false,
-    "sellerSavings": 0
-  },
-  {
     "name": "Smart Curtains (Master)",
     "choice": "Aqara C3 Motorised Tracks + Custom Day/Night Curtains",
     "notes": "2x motorised tracks with custom day & night drapery.",
@@ -758,6 +743,21 @@
     "status": "TBD",
     "price": 1300,
     "priceDisplay": "$800-$1,800",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0
+  },
+  {
+    "name": "Master Toilet & Manual Bidet Seat",
+    "choice": "Standard 1-piece ceramic WC + non-electric manual bidet seat (e",
+    "notes": "Standard 1-piece ceramic WC + non-electric manual bidet seat (e.g. Kohler / TOTO Eco-washer). Common bath toilet retained ($0).",
+    "room": "Master Bath",
+    "priority": "P1",
+    "status": "TBD",
+    "price": 550,
+    "priceDisplay": "$350-$750",
     "availableAt": "-",
     "linkText": "",
     "linkUrl": "",
