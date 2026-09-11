@@ -1,0 +1,311 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1251" width="100%" height="100%" style="background-color: #faf9f6; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Architectural CAD Drafting Grid Pattern -->
+    <pattern id="cadGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="none" stroke="rgba(74, 107, 87, 0.05)" stroke-width="1" />
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(74, 107, 87, 0.08)" stroke-width="1" />
+    </pattern>
+
+    <!-- Warm Glow Filters -->
+    <filter id="lightGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1600" height="1251" fill="#faf9f6" />
+  <rect width="1600" height="1251" fill="url(#cadGrid)" />
+
+  <!-- ==================== LAYER 1: ROOM RECTANGLES (BASIC SQUARES) ==================== -->
+  <g id="schematicRooms">
+    <!-- Balcony -->
+    <rect id="rect-balcony" x="590" y="25" width="350" height="243" fill="#edf4ec" stroke="#d5e2d3" stroke-width="1" />
+
+    <!-- Bedroom 2 / Study -->
+    <rect id="rect-bed2" x="300" y="268" width="290" height="372" fill="#f4f7f4" stroke="#dce5dc" stroke-width="1" />
+
+    <!-- Common Bathroom -->
+    <rect id="rect-common-bath" x="300" y="640" width="290" height="160" fill="#edf3f7" stroke="#d5e1e8" stroke-width="1" />
+
+    <!-- Kitchen -->
+    <rect id="rect-kitchen" x="300" y="800" width="290" height="400" fill="#f7f7f4" stroke="#e2e2dc" stroke-width="1" />
+
+    <!-- Living Room -->
+    <rect id="rect-living" x="590" y="268" width="350" height="442" fill="#fcfbf7" stroke="#e8e5dc" stroke-width="1" />
+
+    <!-- Dining Room -->
+    <rect id="rect-dining" x="590" y="710" width="350" height="170" fill="#faf6f0" stroke="#ede5d8" stroke-width="1" />
+
+    <!-- Foyer / Entrance -->
+    <rect id="rect-foyer" x="590" y="880" width="350" height="320" fill="#f4f5f2" stroke="#dde0da" stroke-width="1" />
+
+    <!-- Master Bedroom -->
+    <rect id="rect-master-bed" x="940" y="340" width="340" height="360" fill="#f4f7f4" stroke="#dce5dc" stroke-width="1" />
+
+    <!-- Master Bathroom -->
+    <rect id="rect-master-bath" x="940" y="700" width="380" height="200" fill="#edf3f7" stroke="#d5e1e8" stroke-width="1" />
+  </g>
+
+  <!-- ==================== LAYER 2: MINIMALIST FURNITURE & FIXTURES ==================== -->
+  <g id="schematicFurniture" stroke="#8a9e8f" stroke-width="1.5" fill="none" opacity="0.65">
+    <!-- Balcony Outdoor Furniture -->
+    <rect x="715" y="100" width="100" height="60" rx="6" fill="#ffffff" fill-opacity="0.6" />
+    <circle cx="690" cy="130" r="14" fill="#ffffff" fill-opacity="0.6" />
+    <circle cx="840" cy="130" r="14" fill="#ffffff" fill-opacity="0.6" />
+
+    <!-- Bedroom 2 Study Desk & Sofa Bed -->
+    <rect x="320" y="285" width="150" height="65" rx="4" fill="#ffffff" fill-opacity="0.6" />
+    <rect x="370" y="300" width="45" height="30" rx="3" fill="#ffffff" fill-opacity="0.8" />
+    <rect x="320" y="440" width="130" height="180" rx="6" fill="#ffffff" fill-opacity="0.6" />
+    <line x1="320" y1="480" x2="450" y2="480" stroke-dasharray="3 3" />
+
+    <!-- Common Bathroom Fixtures -->
+    <rect x="320" y="655" width="85" height="130" rx="4" stroke-dasharray="4 3" /> <!-- Shower -->
+    <rect x="440" y="655" width="45" height="65" rx="8" fill="#ffffff" fill-opacity="0.7" /> <!-- WC -->
+    <rect x="520" y="720" width="60" height="65" rx="4" fill="#ffffff" fill-opacity="0.7" /> <!-- Vanity Basin -->
+    <circle cx="550" cy="750" r="12" fill="#ffffff" fill-opacity="0.9" />
+
+    <!-- Kitchen L-Counter & Appliances -->
+    <path d="M 315 815 L 375 815 L 375 1185 L 575 1185 L 575 1125 L 375 1125" fill="#ffffff" fill-opacity="0.7" />
+    <!-- Kitchen Sink -->
+    <rect x="325" y="930" width="40" height="70" rx="4" fill="#ffffff" />
+    <!-- Fridge -->
+    <rect x="500" y="1115" width="70" height="68" rx="4" fill="#ffffff" fill-opacity="0.9" stroke-width="2" />
+    <text x="535" y="1155" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">FRIDGE</text>
+    <!-- Washer / Dryer -->
+    <rect x="320" y="1115" width="52" height="68" rx="4" fill="#ffffff" fill-opacity="0.9" stroke-width="2" />
+    <text x="346" y="1155" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">W/D</text>
+
+    <!-- Living Room Media & Seating -->
+    <!-- 65" TV & Console -->
+    <rect x="600" y="340" width="28" height="180" rx="4" fill="#ffffff" fill-opacity="0.85" stroke-width="2" />
+    <text x="614" y="435" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none" transform="rotate(-90 614 435)">65" TV CONSOLE</text>
+    <!-- Modular L-Sofa -->
+    <path d="M 780 370 L 915 370 L 915 630 L 835 630 L 835 520 L 780 520 Z" rx="8" fill="#ffffff" fill-opacity="0.75" stroke-width="2" />
+    <text x="860" y="460" font-size="11" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">MODULAR SOFA</text>
+
+    <!-- Dining Table & Chairs -->
+    <rect x="715" y="745" width="150" height="90" rx="6" fill="#ffffff" fill-opacity="0.8" stroke-width="2" />
+    <rect x="740" y="725" width="40" height="15" rx="3" fill="#ffffff" fill-opacity="0.6" />
+    <rect x="805" y="725" width="40" height="15" rx="3" fill="#ffffff" fill-opacity="0.6" />
+    <rect x="740" y="840" width="40" height="15" rx="3" fill="#ffffff" fill-opacity="0.6" />
+    <rect x="805" y="840" width="40" height="15" rx="3" fill="#ffffff" fill-opacity="0.6" />
+
+    <!-- Entrance Shoe Bench & Cabinet -->
+    <rect x="750" y="960" width="70" height="210" rx="4" fill="#ffffff" fill-opacity="0.8" stroke-width="2" />
+    <text x="785" y="1070" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none" transform="rotate(90 785 1070)">SHOE BENCH / STORAGE</text>
+
+    <!-- Master Bedroom Queen Bed & Wardrobe -->
+    <!-- Queen Bed -->
+    <rect x="1050" y="380" width="190" height="200" rx="8" fill="#ffffff" fill-opacity="0.8" stroke-width="2" />
+    <rect x="1070" y="395" width="65" height="40" rx="4" fill="#ffffff" fill-opacity="0.9" />
+    <rect x="1155" y="395" width="65" height="40" rx="4" fill="#ffffff" fill-opacity="0.9" />
+    <!-- Bedside Tables -->
+    <rect x="1000" y="395" width="40" height="40" rx="4" fill="#ffffff" fill-opacity="0.7" />
+    <rect x="1250" y="395" width="40" height="40" rx="4" fill="#ffffff" fill-opacity="0.7" />
+    <!-- Built-in Wardrobe -->
+    <rect x="955" y="640" width="160" height="50" rx="4" fill="#ffffff" fill-opacity="0.85" stroke-width="2" />
+    <text x="1035" y="670" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">BUILT-IN WARDROBE</text>
+
+    <!-- Master Bathroom Fixtures -->
+    <rect x="955" y="720" width="85" height="160" rx="4" stroke-dasharray="4 3" />
+    <rect x="1070" y="720" width="45" height="65" rx="8" fill="#ffffff" fill-opacity="0.7" />
+    <rect x="1270" y="720" width="75" height="65" rx="4" fill="#ffffff" fill-opacity="0.7" />
+    <circle cx="1307" cy="752" r="14" fill="#ffffff" fill-opacity="0.9" />
+  </g>
+
+  <!-- ==================== LAYER 3: ARCHITECTURAL WALLS & DOORS ==================== -->
+  <g id="schematicWalls">
+    <!-- Exterior Boundary Walls (Heavy stroke: 7px) -->
+    <path
+      d="
+        M 590 268 L 590 25 L 940 25 L 940 268
+        M 590 268 L 300 268 L 300 1200 L 590 1200
+        M 590 1200 L 670 1200
+        M 760 1200 L 940 1200 L 940 900 L 1320 900 L 1320 700 L 1280 700 L 1280 340 L 940 340
+      "
+      fill="none" stroke="#232724" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"
+    />
+
+    <!-- Interior Dividing Walls (Medium stroke: 4.5px) -->
+    <path
+      d="
+        M 300 640 L 590 640
+        M 300 800 L 590 800
+        M 590 268 L 590 610
+        M 590 670 L 590 1200
+        M 940 340 L 940 670
+        M 940 700 L 1280 700
+      "
+      fill="none" stroke="#333b35" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"
+    />
+
+    <!-- Doors & Door Swing Arcs -->
+    <!-- 1. Main Entrance Door (Bottom of Foyer) -->
+    <path d="M 670 1200 A 80 80 0 0 1 595 1125" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
+    <line x1="670" y1="1200" x2="670" y2="1120" stroke="#232724" stroke-width="3" stroke-linecap="round" />
+
+    <!-- 2. Bedroom 2 Door -->
+    <path d="M 590 610 A 60 60 0 0 0 535 555" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
+    <line x1="590" y1="610" x2="535" y2="610" stroke="#232724" stroke-width="3" stroke-linecap="round" />
+
+    <!-- 3. Common Bathroom Door -->
+    <path d="M 590 670 A 55 55 0 0 1 540 720" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
+    <line x1="590" y1="670" x2="540" y2="670" stroke="#232724" stroke-width="3" stroke-linecap="round" />
+
+    <!-- 4. Master Bedroom Door -->
+    <path d="M 940 670 A 65 65 0 0 0 1000 610" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
+    <line x1="940" y1="670" x2="1000" y2="670" stroke="#232724" stroke-width="3" stroke-linecap="round" />
+
+    <!-- 5. Master Bathroom Door -->
+    <path d="M 1140 700 A 55 55 0 0 1 1190 750" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
+    <line x1="1140" y1="700" x2="1140" y2="750" stroke="#232724" stroke-width="3" stroke-linecap="round" />
+
+    <!-- 6. Balcony Sliding Glass Doors (Living Room to Balcony) -->
+    <line x1="600" y1="264" x2="770" y2="264" stroke="#5a8b9e" stroke-width="3" stroke-linecap="round" />
+    <line x1="760" y1="272" x2="930" y2="272" stroke="#5a8b9e" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Concrete Structural Column Anchors -->
+    <rect x="584" y="262" width="12" height="12" fill="#232724" />
+    <rect x="934" y="262" width="12" height="12" fill="#232724" />
+    <rect x="294" y="262" width="12" height="12" fill="#232724" />
+    <rect x="294" y="1194" width="12" height="12" fill="#232724" />
+    <rect x="934" y="1194" width="12" height="12" fill="#232724" />
+  </g>
+
+  <!-- ==================== LAYER 4: ROOM LABELS & BADGES ==================== -->
+  <g id="schematicLabels" pointer-events="none">
+    <!-- Balcony -->
+    <g transform="translate(765, 80)">
+      <rect x="-85" y="-18" width="170" height="38" rx="6" fill="#ffffff" fill-opacity="0.9" stroke="#d5ddd6" stroke-width="1.5" filter="url(#dropShadow)" />
+      <text x="0" y="-1" font-size="13" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1">BALCONY</text>
+      <text x="0" y="13" font-size="9" font-weight="600" fill="#66776b" text-anchor="middle">Zip Blinds • Outdoor</text>
+    </g>
+
+    <!-- Living Room -->
+    <g transform="translate(765, 480)">
+      <rect x="-105" y="-20" width="210" height="42" rx="6" fill="#ffffff" fill-opacity="0.95" stroke="#d5ddd6" stroke-width="1.5" filter="url(#dropShadow)" />
+      <text x="0" y="-2" font-size="15" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1.2">LIVING ROOM</text>
+      <text x="0" y="14" font-size="9.5" font-weight="600" fill="#66776b" text-anchor="middle">65" TV • Sofa Lounge • mmWave</text>
+    </g>
+
+    <!-- Dining -->
+    <g transform="translate(765, 795)">
+      <rect x="-80" y="-18" width="160" height="38" rx="6" fill="#ffffff" fill-opacity="0.9" stroke="#d5ddd6" stroke-width="1.5" filter="url(#dropShadow)" />
+      <text x="0" y="-1" font-size="13" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1">DINING</text>
+      <text x="0" y="13" font-size="9" font-weight="600" fill="#66776b" text-anchor="middle">4-Seater • CCT Pendant</text>
+    </g>
+
+    <!-- Entrance / Foyer -->
+    <g transform="translate(765, 1055)">
+      <rect x="-95" y="-18" width="190" height="38" rx="6" fill="#ffffff" fill-opacity="0.9" stroke="#d5ddd6" stroke-width="1.5" filter="url(#dropShadow)" />
+      <text x="0" y="-1" font-size="13" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1">FOYER / ENTRANCE</text>
+      <text x="0" y="13" font-size="9" font-weight="600" fill="#66776b" text-anchor="middle">Main Door • Shoe Bench</text>
+    </g>
+
+    <!-- Kitchen -->
+    <g transform="translate(445, 990)">
+      <rect x="-85" y="-18" width="170" height="38" rx="6" fill="#ffffff" fill-opacity="0.9" stroke="#d5ddd6" stroke-width="1.5" filter="url(#dropShadow)" />
+      <text x="0" y="-1" font-size="13" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1">KITCHEN</text>
+      <text x="0" y="13" font-size="9" font-weight="600" fill="#66776b" text-anchor="middle">L-Counters • Fridge • W/D</text>
+    </g>
+
+    <!-- Common Bathroom -->
+    <g transform="translate(445, 720)">
+      <rect x="-80" y="-18" width="160" height="38" rx="6" fill="#ffffff" fill-opacity="0.9" stroke="#d5ddd6" stroke-width="1.5" filter="url(#dropShadow)" />
+      <text x="0" y="-1" font-size="12" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1">COMMON BATH</text>
+      <text x="0" y="13" font-size="8.5" font-weight="600" fill="#66776b" text-anchor="middle">Wasp Occupancy • Shower</text>
+    </g>
+
+    <!-- Bedroom 2 / Study -->
+    <g transform="translate(445, 430)">
+      <rect x="-95" y="-18" width="190" height="38" rx="6" fill="#ffffff" fill-opacity="0.9" stroke="#d5ddd6" stroke-width="1.5" filter="url(#dropShadow)" />
+      <text x="0" y="-1" font-size="13" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1">BEDROOM 2 / STUDY</text>
+      <text x="0" y="13" font-size="9" font-weight="600" fill="#66776b" text-anchor="middle">Workstation • Sofa Bed</text>
+    </g>
+
+    <!-- Master Bedroom -->
+    <g transform="translate(1110, 520)">
+      <rect x="-95" y="-18" width="190" height="38" rx="6" fill="#ffffff" fill-opacity="0.95" stroke="#d5ddd6" stroke-width="1.5" filter="url(#dropShadow)" />
+      <text x="0" y="-1" font-size="14" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1.2">MASTER BEDROOM</text>
+      <text x="0" y="13" font-size="9" font-weight="600" fill="#66776b" text-anchor="middle">Queen Suite • Wardrobe</text>
+    </g>
+
+    <!-- Master Bathroom -->
+    <g transform="translate(1130, 800)">
+      <rect x="-80" y="-18" width="160" height="38" rx="6" fill="#ffffff" fill-opacity="0.9" stroke="#d5ddd6" stroke-width="1.5" filter="url(#dropShadow)" />
+      <text x="0" y="-1" font-size="12" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1">MASTER BATH</text>
+      <text x="0" y="13" font-size="8.5" font-weight="600" fill="#66776b" text-anchor="middle">Ensuite • Manual Bidet</text>
+    </g>
+  </g>
+
+  <!-- ==================== LAYER 5: SMART HOME DEVICES OVERLAY ==================== -->
+  <g id="schematicDevices">
+    <!-- mmWave Radar Detection Wave Arcs -->
+    <g pointer-events="none">
+      <path d="M 615 395 L 890 320 A 290 290 0 0 1 870 570 Z" fill="rgba(74, 107, 87, 0.08)" stroke="rgba(74, 107, 87, 0.25)" stroke-width="1.5" stroke-dasharray="6 4" />
+      <path d="M 685 375 A 75 75 0 0 1 680 445" fill="none" stroke="#4a6b57" stroke-width="2.5" stroke-linecap="round" opacity="0.8" />
+      <path d="M 755 355 A 150 150 0 0 1 745 500" fill="none" stroke="#4a6b57" stroke-width="2" stroke-linecap="round" opacity="0.55" />
+      <path d="M 825 338 A 225 225 0 0 1 810 545" fill="none" stroke="#4a6b57" stroke-width="1.5" stroke-linecap="round" opacity="0.35" />
+    </g>
+
+    <!-- Device Pins -->
+    <!-- 1. Living Room mmWave -->
+    <g transform="translate(615, 395)">
+      <circle cx="0" cy="0" r="13" fill="#4a6b57" stroke="#ffffff" stroke-width="2.5" filter="url(#dropShadow)" />
+      <text x="0" y="4" font-size="9" fill="#ffffff" font-weight="800" text-anchor="middle">📡</text>
+    </g>
+
+    <!-- 2. Entrance Door Contact -->
+    <g transform="translate(670, 1195)">
+      <circle cx="0" cy="0" r="12" fill="#c95d46" stroke="#ffffff" stroke-width="2" filter="url(#dropShadow)" />
+      <text x="0" y="4" font-size="9" fill="#ffffff" font-weight="800" text-anchor="middle">🚪</text>
+    </g>
+
+    <!-- 3. Entrance Shoe Bench PIR -->
+    <g transform="translate(735, 1020)">
+      <circle cx="0" cy="0" r="12" fill="#d9822b" stroke="#ffffff" stroke-width="2" filter="url(#dropShadow)" />
+      <text x="0" y="4" font-size="9" fill="#ffffff" font-weight="800" text-anchor="middle">👁️</text>
+    </g>
+
+    <!-- 4. Master Bath Door Contact -->
+    <g transform="translate(1160, 715)">
+      <circle cx="0" cy="0" r="11" fill="#c95d46" stroke="#ffffff" stroke-width="2" filter="url(#dropShadow)" />
+      <text x="0" y="3.5" font-size="8.5" fill="#ffffff" font-weight="800" text-anchor="middle">🚪</text>
+    </g>
+
+    <!-- 5. Master Bath PIR -->
+    <g transform="translate(1080, 775)">
+      <circle cx="0" cy="0" r="11" fill="#d9822b" stroke="#ffffff" stroke-width="2" filter="url(#dropShadow)" />
+      <text x="0" y="3.5" font-size="8.5" fill="#ffffff" font-weight="800" text-anchor="middle">👁️</text>
+    </g>
+
+    <!-- 6. Common Bath Door Contact -->
+    <g transform="translate(540, 660)">
+      <circle cx="0" cy="0" r="11" fill="#c95d46" stroke="#ffffff" stroke-width="2" filter="url(#dropShadow)" />
+      <text x="0" y="3.5" font-size="8.5" fill="#ffffff" font-weight="800" text-anchor="middle">🚪</text>
+    </g>
+
+    <!-- 7. Common Bath PIR -->
+    <g transform="translate(465, 715)">
+      <circle cx="0" cy="0" r="11" fill="#d9822b" stroke="#ffffff" stroke-width="2" filter="url(#dropShadow)" />
+      <text x="0" y="3.5" font-size="8.5" fill="#ffffff" font-weight="800" text-anchor="middle">👁️</text>
+    </g>
+
+    <!-- 8. Bedside Kill Switch -->
+    <g transform="translate(1220, 395)">
+      <circle cx="0" cy="0" r="12" fill="#3a7d99" stroke="#ffffff" stroke-width="2" filter="url(#dropShadow)" />
+      <text x="0" y="4" font-size="9" fill="#ffffff" font-weight="800" text-anchor="middle">🔘</text>
+    </g>
+
+    <!-- 9. Wardrobe Contact -->
+    <g transform="translate(1040, 680)">
+      <circle cx="0" cy="0" r="10" fill="#c95d46" stroke="#ffffff" stroke-width="1.5" filter="url(#dropShadow)" />
+      <text x="0" y="3" font-size="8" fill="#ffffff" font-weight="800" text-anchor="middle">👗</text>
+    </g>
+  </g>
+</svg>

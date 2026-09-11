@@ -1378,26 +1378,23 @@
 
       /* SVG Room Polygons */
       .map-room-zone {
-        fill: rgba(74, 107, 87, 0.04);
-        stroke: rgba(74, 107, 87, 0.28);
-        stroke-width: 2.5;
-        stroke-dasharray: 6 5;
+        fill: transparent;
+        stroke: transparent;
+        stroke-width: 3;
         cursor: pointer;
         transition: all 0.25s ease;
       }
 
       .map-room-zone:hover {
-        fill: rgba(74, 107, 87, 0.22);
+        fill: rgba(74, 107, 87, 0.16);
         stroke: var(--sage-primary);
         stroke-width: 3.5;
-        stroke-dasharray: none;
       }
 
       .map-room-zone.selected {
-        fill: rgba(74, 107, 87, 0.32);
+        fill: rgba(74, 107, 87, 0.26);
         stroke: var(--sage-primary);
         stroke-width: 4;
-        stroke-dasharray: none;
         filter: drop-shadow(0 0 10px rgba(74, 107, 87, 0.5));
       }
 
@@ -3371,6 +3368,17 @@ automation:
           <!-- Main Map Viewport & Controls -->
           <div class="map-main-card">
             <div class="map-toolbar">
+              <!-- View Mode Switcher -->
+              <div class="map-controls-group">
+                <span class="filter-label" style="font-size: 0.75rem;">Floor Plan:</span>
+                <button class="map-tool-btn active" id="btnModeSchematic" onclick="setMapMode('schematic', this)">
+                  <span>📐</span> Schematic (Clean Boxes)
+                </button>
+                <button class="map-tool-btn" id="btnModeSketch" onclick="setMapMode('sketch', this)">
+                  <span>🖼️</span> Sketch Photo (JPG)
+                </button>
+              </div>
+
               <!-- Layer Toggles -->
               <div class="map-controls-group">
                 <span class="filter-label" style="font-size: 0.75rem;">Layers:</span>
@@ -3382,9 +3390,6 @@ automation:
                 </button>
                 <button class="map-tool-btn active" id="btnLayerClimate" onclick="toggleMapLayer('climate', this)">
                   <span>❄️</span> AC & Fans
-                </button>
-                <button class="map-tool-btn" id="btnLayerDrawing" onclick="toggleMapLayer('drawing', this)">
-                  <span>🖼️</span> Background Blueprint
                 </button>
               </div>
 
@@ -3413,6 +3418,12 @@ automation:
             <div class="map-viewport-container">
               <svg class="map-svg" viewBox="0 0 1600 1251" xmlns="http://www.w3.org/2000/svg">
                 <defs>
+                  <!-- Architectural CAD Drafting Grid Pattern -->
+                  <pattern id="cadGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <rect width="40" height="40" fill="none" stroke="rgba(74, 107, 87, 0.05)" stroke-width="1" />
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(74, 107, 87, 0.08)" stroke-width="1" />
+                  </pattern>
+
                   <!-- Radar Wave Radial Gradient -->
                   <radialGradient id="radarGrad" cx="50%" cy="50%" r="50%">
                     <stop offset="0%" stop-color="#4a6b57" stop-opacity="0.65" />
@@ -3431,9 +3442,18 @@ automation:
                     <feGaussianBlur stdDeviation="8" result="blur" />
                     <feComposite in="SourceGraphic" in2="blur" operator="over" />
                   </filter>
+
+                  <!-- Drop shadow for badges -->
+                  <filter id="badgeShadow" x="-15%" y="-15%" width="130%" height="130%">
+                    <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1" />
+                  </filter>
                 </defs>
 
-                <!-- Layer 1: Architectural Drawing Image (Opacity adjustable) -->
+                <!-- Background Blueprint Grid -->
+                <rect width="1600" height="1251" fill="#faf9f6" />
+                <rect width="1600" height="1251" fill="url(#cadGrid)" />
+
+                <!-- Layer 1: Hand-drawn Sketch Image (Hidden by default in Schematic mode) -->
                 <image
                   id="mapFloorPlanImg"
                   href="floor_plan.jpeg"
@@ -3443,7 +3463,142 @@ automation:
                   height="1251"
                   preserveAspectRatio="xMidYMid meet"
                   opacity="0.95"
+                  style="display: none;"
                 />
+
+                <!-- Layer 1b: Schematic Room Fills (Clean Solid Rectangles) -->
+                <g id="layerSchematicFills">
+                  <!-- Balcony -->
+                  <rect id="fill-balcony" x="590" y="25" width="350" height="243" fill="#edf4ec" stroke="#d5e2d3" stroke-width="1" />
+                  <!-- Bedroom 2 / Study -->
+                  <rect id="fill-bed2" x="300" y="268" width="290" height="372" fill="#f4f7f4" stroke="#dce5dc" stroke-width="1" />
+                  <!-- Common Bathroom -->
+                  <rect id="fill-common-bath" x="300" y="640" width="290" height="160" fill="#edf3f7" stroke="#d5e1e8" stroke-width="1" />
+                  <!-- Kitchen -->
+                  <rect id="fill-kitchen" x="300" y="800" width="290" height="400" fill="#f7f7f4" stroke="#e2e2dc" stroke-width="1" />
+                  <!-- Living Room -->
+                  <rect id="fill-living" x="590" y="268" width="350" height="442" fill="#fcfbf7" stroke="#e8e5dc" stroke-width="1" />
+                  <!-- Dining Room -->
+                  <rect id="fill-dining" x="590" y="710" width="350" height="170" fill="#faf6f0" stroke="#ede5d8" stroke-width="1" />
+                  <!-- Foyer / Entrance -->
+                  <rect id="fill-foyer" x="590" y="880" width="350" height="320" fill="#f4f5f2" stroke="#dde0da" stroke-width="1" />
+                  <!-- Master Bedroom -->
+                  <rect id="fill-master-bed" x="940" y="340" width="340" height="360" fill="#f4f7f4" stroke="#dce5dc" stroke-width="1" />
+                  <!-- Master Bathroom -->
+                  <rect id="fill-master-bath" x="940" y="700" width="380" height="200" fill="#edf3f7" stroke="#d5e1e8" stroke-width="1" />
+                </g>
+
+                <!-- Layer 1c: Minimalist Architectural Furniture & Fixtures -->
+                <g id="layerSchematicFurniture" stroke="#8a9e8f" stroke-width="1.5" fill="none" opacity="0.65" pointer-events="none">
+                  <!-- Balcony -->
+                  <rect x="715" y="100" width="100" height="60" rx="6" fill="#ffffff" fill-opacity="0.6" />
+                  <circle cx="690" cy="130" r="14" fill="#ffffff" fill-opacity="0.6" />
+                  <circle cx="840" cy="130" r="14" fill="#ffffff" fill-opacity="0.6" />
+
+                  <!-- Bed 2 Study Desk & Sofa Bed -->
+                  <rect x="320" y="285" width="150" height="65" rx="4" fill="#ffffff" fill-opacity="0.6" />
+                  <rect x="370" y="300" width="45" height="30" rx="3" fill="#ffffff" fill-opacity="0.8" />
+                  <rect x="320" y="440" width="130" height="180" rx="6" fill="#ffffff" fill-opacity="0.6" />
+                  <line x1="320" y1="480" x2="450" y2="480" stroke-dasharray="3 3" />
+
+                  <!-- Common Bath Fixtures -->
+                  <rect x="320" y="655" width="85" height="130" rx="4" stroke-dasharray="4 3" />
+                  <rect x="440" y="655" width="45" height="65" rx="8" fill="#ffffff" fill-opacity="0.7" />
+                  <rect x="520" y="720" width="60" height="65" rx="4" fill="#ffffff" fill-opacity="0.7" />
+                  <circle cx="550" cy="750" r="12" fill="#ffffff" fill-opacity="0.9" />
+
+                  <!-- Kitchen L-Counter & Appliances -->
+                  <path d="M 315 815 L 375 815 L 375 1185 L 575 1185 L 575 1125 L 375 1125" fill="#ffffff" fill-opacity="0.7" />
+                  <rect x="325" y="930" width="40" height="70" rx="4" fill="#ffffff" />
+                  <rect x="500" y="1115" width="70" height="68" rx="4" fill="#ffffff" fill-opacity="0.9" stroke-width="2" />
+                  <text x="535" y="1155" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">FRIDGE</text>
+                  <rect x="320" y="1115" width="52" height="68" rx="4" fill="#ffffff" fill-opacity="0.9" stroke-width="2" />
+                  <text x="346" y="1155" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">W/D</text>
+
+                  <!-- Living Room 65" TV Console & Sofa -->
+                  <rect x="600" y="340" width="28" height="180" rx="4" fill="#ffffff" fill-opacity="0.85" stroke-width="2" />
+                  <text x="614" y="435" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none" transform="rotate(-90 614 435)">65" TV CONSOLE</text>
+                  <path d="M 780 370 L 915 370 L 915 630 L 835 630 L 835 520 L 780 520 Z" rx="8" fill="#ffffff" fill-opacity="0.75" stroke-width="2" />
+                  <text x="860" y="460" font-size="11" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">MODULAR SOFA</text>
+
+                  <!-- Dining Table & Chairs -->
+                  <rect x="715" y="745" width="150" height="90" rx="6" fill="#ffffff" fill-opacity="0.8" stroke-width="2" />
+                  <rect x="740" y="725" width="40" height="15" rx="3" fill="#ffffff" fill-opacity="0.6" />
+                  <rect x="805" y="725" width="40" height="15" rx="3" fill="#ffffff" fill-opacity="0.6" />
+                  <rect x="740" y="840" width="40" height="15" rx="3" fill="#ffffff" fill-opacity="0.6" />
+                  <rect x="805" y="840" width="40" height="15" rx="3" fill="#ffffff" fill-opacity="0.6" />
+
+                  <!-- Entrance Shoe Bench & Cabinet -->
+                  <rect x="750" y="960" width="70" height="210" rx="4" fill="#ffffff" fill-opacity="0.8" stroke-width="2" />
+                  <text x="785" y="1070" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none" transform="rotate(90 785 1070)">SHOE BENCH / STORAGE</text>
+
+                  <!-- Master Bed Queen Bed & Wardrobe -->
+                  <rect x="1050" y="380" width="190" height="200" rx="8" fill="#ffffff" fill-opacity="0.8" stroke-width="2" />
+                  <rect x="1070" y="395" width="65" height="40" rx="4" fill="#ffffff" fill-opacity="0.9" />
+                  <rect x="1155" y="395" width="65" height="40" rx="4" fill="#ffffff" fill-opacity="0.9" />
+                  <rect x="1000" y="395" width="40" height="40" rx="4" fill="#ffffff" fill-opacity="0.7" />
+                  <rect x="1250" y="395" width="40" height="40" rx="4" fill="#ffffff" fill-opacity="0.7" />
+                  <rect x="955" y="640" width="160" height="50" rx="4" fill="#ffffff" fill-opacity="0.85" stroke-width="2" />
+                  <text x="1035" y="670" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">BUILT-IN WARDROBE</text>
+
+                  <!-- Master Bath Fixtures -->
+                  <rect x="955" y="720" width="85" height="160" rx="4" stroke-dasharray="4 3" />
+                  <rect x="1070" y="720" width="45" height="65" rx="8" fill="#ffffff" fill-opacity="0.7" />
+                  <rect x="1270" y="720" width="75" height="65" rx="4" fill="#ffffff" fill-opacity="0.7" />
+                  <circle cx="1307" cy="752" r="14" fill="#ffffff" fill-opacity="0.9" />
+                </g>
+
+                <!-- Layer 1d: Architectural Walls & Door Swings -->
+                <g id="layerSchematicWalls" pointer-events="none">
+                  <!-- Exterior Boundary Walls -->
+                  <path
+                    d="
+                      M 590 268 L 590 25 L 940 25 L 940 268
+                      M 590 268 L 300 268 L 300 1200 L 590 1200
+                      M 590 1200 L 670 1200
+                      M 760 1200 L 940 1200 L 940 900 L 1320 900 L 1320 700 L 1280 700 L 1280 340 L 940 340
+                    "
+                    fill="none" stroke="#232724" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"
+                  />
+                  <!-- Interior Dividing Walls -->
+                  <path
+                    d="
+                      M 300 640 L 590 640
+                      M 300 800 L 590 800
+                      M 590 268 L 590 610
+                      M 590 670 L 590 1200
+                      M 940 340 L 940 670
+                      M 940 700 L 1280 700
+                    "
+                    fill="none" stroke="#333b35" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"
+                  />
+                  <!-- Door Swings & Leaves -->
+                  <path d="M 670 1200 A 80 80 0 0 1 595 1125" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
+                  <line x1="670" y1="1200" x2="670" y2="1120" stroke="#232724" stroke-width="3" stroke-linecap="round" />
+
+                  <path d="M 590 610 A 60 60 0 0 0 535 555" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
+                  <line x1="590" y1="610" x2="535" y2="610" stroke="#232724" stroke-width="3" stroke-linecap="round" />
+
+                  <path d="M 590 670 A 55 55 0 0 1 540 720" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
+                  <line x1="590" y1="670" x2="540" y2="670" stroke="#232724" stroke-width="3" stroke-linecap="round" />
+
+                  <path d="M 940 670 A 65 65 0 0 0 1000 610" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
+                  <line x1="940" y1="670" x2="1000" y2="670" stroke="#232724" stroke-width="3" stroke-linecap="round" />
+
+                  <path d="M 1140 700 A 55 55 0 0 1 1190 750" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
+                  <line x1="1140" y1="700" x2="1140" y2="750" stroke="#232724" stroke-width="3" stroke-linecap="round" />
+
+                  <!-- Balcony Sliding Doors -->
+                  <line x1="600" y1="264" x2="770" y2="264" stroke="#5a8b9e" stroke-width="3" stroke-linecap="round" />
+                  <line x1="760" y1="272" x2="930" y2="272" stroke="#5a8b9e" stroke-width="3" stroke-linecap="round" />
+
+                  <!-- Column Anchors -->
+                  <rect x="584" y="262" width="12" height="12" fill="#232724" />
+                  <rect x="934" y="262" width="12" height="12" fill="#232724" />
+                  <rect x="294" y="262" width="12" height="12" fill="#232724" />
+                  <rect x="294" y="1194" width="12" height="12" fill="#232724" />
+                  <rect x="934" y="1194" width="12" height="12" fill="#232724" />
+                </g>
 
                 <!-- Layer 2: Interactive Room Zones (Polygons for click & hover highlight) -->
                 <g id="layerRoomZones">
@@ -3451,7 +3606,7 @@ automation:
                   <polygon
                     id="zone-Balcony"
                     class="map-room-zone"
-                    points="590,20 965,20 965,268 590,268"
+                    points="590,25 940,25 940,268 590,268"
                     onclick="selectMapRoom('Balcony')"
                   >
                     <title>Balcony: Outdoor Dining, Fan, Zip Blinds</title>
@@ -3461,7 +3616,7 @@ automation:
                   <polygon
                     id="zone-Living-Room"
                     class="map-room-zone"
-                    points="590,268 930,268 930,710 590,710"
+                    points="590,268 940,268 940,710 590,710"
                     onclick="selectMapRoom('Living Room')"
                   >
                     <title>Living Room: Sofa, 65" TV, mmWave Sensor, 6x CCT Spotlights</title>
@@ -3471,7 +3626,7 @@ automation:
                   <polygon
                     id="zone-Dining"
                     class="map-room-zone"
-                    points="680,710 930,710 930,880 680,880"
+                    points="590,710 940,710 940,880 590,880"
                     onclick="selectMapRoom('Dining')"
                   >
                     <title>Dining: Sintered Stone Table, 2x CCT Pendant</title>
@@ -3481,7 +3636,7 @@ automation:
                   <polygon
                     id="zone-Entrance"
                     class="map-room-zone"
-                    points="590,880 800,880 800,1220 590,1220"
+                    points="590,880 940,880 940,1200 590,1200"
                     onclick="selectMapRoom('Entrance')"
                   >
                     <title>Entrance: Door Contact (0ms), PIR Motion, Shoe Cabinet LED</title>
@@ -3491,7 +3646,7 @@ automation:
                   <polygon
                     id="zone-Kitchen"
                     class="map-room-zone"
-                    points="300,800 680,800 680,880 590,880 590,1220 300,1220"
+                    points="300,800 590,800 590,1200 300,1200"
                     onclick="selectMapRoom('Kitchen')"
                   >
                     <title>Kitchen: W/D, Fridge, Under-Cabinet LED Strip (7AM Coffee)</title>
@@ -3501,7 +3656,7 @@ automation:
                   <polygon
                     id="zone-Common-Bath"
                     class="map-room-zone"
-                    points="330,640 600,640 600,800 330,800"
+                    points="300,640 590,640 590,800 300,800"
                     onclick="selectMapRoom('Common Bath')"
                   >
                     <title>Common Bathroom: Wasp in a Box Occupancy, IP44 Downlights</title>
@@ -3511,7 +3666,7 @@ automation:
                   <polygon
                     id="zone-Bedroom-2"
                     class="map-room-zone"
-                    points="320,250 600,250 600,640 320,640"
+                    points="300,268 590,268 590,640 300,640"
                     onclick="selectMapRoom('Bedroom 2 / Study')"
                   >
                     <title>Bedroom 2 / Study: Sofa Bed, Study Desk, Starmex 9k AC</title>
@@ -3521,7 +3676,7 @@ automation:
                   <polygon
                     id="zone-Master-Bed"
                     class="map-room-zone"
-                    points="930,340 1260,340 1260,700 930,700"
+                    points="940,340 1280,340 1280,700 940,700"
                     onclick="selectMapRoom('Master Bed')"
                   >
                     <title>Master Bedroom: Queen Bed, Bedside Kill Switch, C3 Curtains</title>
@@ -3531,7 +3686,7 @@ automation:
                   <polygon
                     id="zone-Master-Bath"
                     class="map-room-zone"
-                    points="930,700 1400,700 1400,900 930,900"
+                    points="940,700 1360,700 1360,900 940,900"
                     onclick="selectMapRoom('Master Bath')"
                   >
                     <title>Master Bathroom: Wasp in a Box, Manual Bidet Seat, Nightlight</title>
@@ -3712,17 +3867,70 @@ automation:
                   </g>
                 </g>
 
-                <!-- Layer 6: Room Labels Overlay -->
+                <!-- Layer 6: Room Labels Overlay (Crisp Badges) -->
                 <g id="layerRoomLabels" pointer-events="none">
-                  <text x="760" y="490" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="800" fill="#1e221f" text-anchor="middle" opacity="0.75">LIVING ROOM</text>
-                  <text x="795" y="800" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#1e221f" text-anchor="middle" opacity="0.75">DINING</text>
-                  <text x="695" y="1055" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#1e221f" text-anchor="middle" opacity="0.75">FOYER</text>
-                  <text x="445" y="990" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#1e221f" text-anchor="middle" opacity="0.75">KITCHEN</text>
-                  <text x="1095" y="520" font-family="'Space Grotesk', sans-serif" font-size="15" font-weight="800" fill="#1e221f" text-anchor="middle" opacity="0.75">MASTER BED</text>
-                  <text x="1165" y="800" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#1e221f" text-anchor="middle" opacity="0.75">MASTER BATH</text>
-                  <text x="460" y="440" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#1e221f" text-anchor="middle" opacity="0.75">BEDROOM 2 / STUDY</text>
-                  <text x="465" y="720" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#1e221f" text-anchor="middle" opacity="0.75">COMMON BATH</text>
-                  <text x="778" y="145" font-family="'Space Grotesk', sans-serif" font-size="15" font-weight="800" fill="#1e221f" text-anchor="middle" opacity="0.75">BALCONY</text>
+                  <!-- Balcony -->
+                  <g transform="translate(765, 80)">
+                    <rect x="-85" y="-18" width="170" height="38" rx="6" fill="#ffffff" fill-opacity="0.92" stroke="#d5ddd6" stroke-width="1.5" filter="url(#badgeShadow)" />
+                    <text x="0" y="-1" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1">BALCONY</text>
+                    <text x="0" y="13" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#66776b" text-anchor="middle">Zip Blinds • Outdoor</text>
+                  </g>
+
+                  <!-- Living Room -->
+                  <g transform="translate(765, 480)">
+                    <rect x="-105" y="-20" width="210" height="42" rx="6" fill="#ffffff" fill-opacity="0.95" stroke="#d5ddd6" stroke-width="1.5" filter="url(#badgeShadow)" />
+                    <text x="0" y="-2" font-family="'Space Grotesk', sans-serif" font-size="15" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1.2">LIVING ROOM</text>
+                    <text x="0" y="14" font-family="'Inter', sans-serif" font-size="9.5" font-weight="600" fill="#66776b" text-anchor="middle">65" TV • Sofa Lounge • mmWave</text>
+                  </g>
+
+                  <!-- Dining -->
+                  <g transform="translate(765, 795)">
+                    <rect x="-80" y="-18" width="160" height="38" rx="6" fill="#ffffff" fill-opacity="0.92" stroke="#d5ddd6" stroke-width="1.5" filter="url(#badgeShadow)" />
+                    <text x="0" y="-1" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1">DINING</text>
+                    <text x="0" y="13" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#66776b" text-anchor="middle">4-Seater • CCT Pendant</text>
+                  </g>
+
+                  <!-- Entrance / Foyer -->
+                  <g transform="translate(765, 1055)">
+                    <rect x="-95" y="-18" width="190" height="38" rx="6" fill="#ffffff" fill-opacity="0.92" stroke="#d5ddd6" stroke-width="1.5" filter="url(#badgeShadow)" />
+                    <text x="0" y="-1" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1">FOYER / ENTRANCE</text>
+                    <text x="0" y="13" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#66776b" text-anchor="middle">Main Door • Shoe Bench</text>
+                  </g>
+
+                  <!-- Kitchen -->
+                  <g transform="translate(445, 990)">
+                    <rect x="-85" y="-18" width="170" height="38" rx="6" fill="#ffffff" fill-opacity="0.92" stroke="#d5ddd6" stroke-width="1.5" filter="url(#badgeShadow)" />
+                    <text x="0" y="-1" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1">KITCHEN</text>
+                    <text x="0" y="13" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#66776b" text-anchor="middle">L-Counters • Fridge • W/D</text>
+                  </g>
+
+                  <!-- Common Bathroom -->
+                  <g transform="translate(445, 720)">
+                    <rect x="-80" y="-18" width="160" height="38" rx="6" fill="#ffffff" fill-opacity="0.92" stroke="#d5ddd6" stroke-width="1.5" filter="url(#badgeShadow)" />
+                    <text x="0" y="-1" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1">COMMON BATH</text>
+                    <text x="0" y="13" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" fill="#66776b" text-anchor="middle">Wasp Occupancy • Shower</text>
+                  </g>
+
+                  <!-- Bedroom 2 / Study -->
+                  <g transform="translate(445, 430)">
+                    <rect x="-95" y="-18" width="190" height="38" rx="6" fill="#ffffff" fill-opacity="0.92" stroke="#d5ddd6" stroke-width="1.5" filter="url(#badgeShadow)" />
+                    <text x="0" y="-1" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1">BEDROOM 2 / STUDY</text>
+                    <text x="0" y="13" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#66776b" text-anchor="middle">Workstation • Sofa Bed</text>
+                  </g>
+
+                  <!-- Master Bedroom -->
+                  <g transform="translate(1110, 520)">
+                    <rect x="-95" y="-18" width="190" height="38" rx="6" fill="#ffffff" fill-opacity="0.95" stroke="#d5ddd6" stroke-width="1.5" filter="url(#badgeShadow)" />
+                    <text x="0" y="-2" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1.2">MASTER BEDROOM</text>
+                    <text x="0" y="13" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#66776b" text-anchor="middle">Queen Suite • Wardrobe</text>
+                  </g>
+
+                  <!-- Master Bathroom -->
+                  <g transform="translate(1130, 800)">
+                    <rect x="-80" y="-18" width="160" height="38" rx="6" fill="#ffffff" fill-opacity="0.92" stroke="#d5ddd6" stroke-width="1.5" filter="url(#badgeShadow)" />
+                    <text x="0" y="-1" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1">MASTER BATH</text>
+                    <text x="0" y="13" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" fill="#66776b" text-anchor="middle">Ensuite • Manual Bidet</text>
+                  </g>
                 </g>
               </svg>
             </div>
@@ -5649,22 +5857,48 @@ automation:
         }, 100);
       }
 
+      function setMapMode(mode, btnEl) {
+        if (btnEl && btnEl.parentElement) {
+          btnEl.parentElement.querySelectorAll(".map-tool-btn").forEach(b => b.classList.remove("active"));
+          btnEl.classList.add("active");
+        }
+
+        const imgEl = document.getElementById("mapFloorPlanImg");
+        const wallsEl = document.getElementById("layerSchematicWalls");
+        const furnitureEl = document.getElementById("layerSchematicFurniture");
+        const fillsEl = document.getElementById("layerSchematicFills");
+
+        if (mode === "schematic") {
+          if (imgEl) imgEl.style.display = "none";
+          if (wallsEl) wallsEl.style.display = "inline";
+          if (furnitureEl) furnitureEl.style.display = "inline";
+          if (fillsEl) fillsEl.style.display = "inline";
+        } else if (mode === "sketch") {
+          if (imgEl) {
+            imgEl.style.display = "inline";
+            imgEl.style.opacity = "0.95";
+          }
+          if (fillsEl) fillsEl.style.display = "none";
+          if (wallsEl) wallsEl.style.display = "inline";
+          if (furnitureEl) furnitureEl.style.display = "inline";
+        }
+      }
+
       function toggleMapLayer(layerName, btnEl) {
         btnEl.classList.toggle("active");
         const isActive = btnEl.classList.contains("active");
 
         if (layerName === "sensors") {
           const el = document.getElementById("layerSensorsGroup");
+          const radar = document.getElementById("radarField");
           if (el) el.style.display = isActive ? "inline" : "none";
+          if (radar) radar.style.display = isActive ? "inline" : "none";
         } else if (layerName === "lighting") {
           const el = document.getElementById("layerLightingGroup");
           if (el) el.style.display = isActive ? "inline" : "none";
         } else if (layerName === "climate") {
           const el = document.getElementById("layerClimateGroup");
           if (el) el.style.display = isActive ? "inline" : "none";
-        } else if (layerName === "drawing") {
-          const el = document.getElementById("mapFloorPlanImg");
-          if (el) el.style.opacity = isActive ? "0.95" : "0.2";
         }
       }
 
