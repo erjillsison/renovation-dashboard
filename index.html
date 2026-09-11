@@ -1563,8 +1563,17 @@
             onclick="switchTab('sensors')"
           >
             <span style="font-size: 1.1rem">💡</span>
-            <span>Sensors & Lighting Architecture</span>
+            <span>Sensors & Lighting</span>
             <span class="tab-badge">Zone Plan</span>
+          </button>
+          <button
+            class="nav-tab-btn"
+            id="tabBtnMap"
+            onclick="switchTab('map')"
+          >
+            <span style="font-size: 1.1rem">🗺️</span>
+            <span>Interactive Floor Plan</span>
+            <span class="tab-badge" style="background: rgba(58, 125, 153, 0.15); color: var(--accent-p2);">Interactive</span>
           </button>
         </div>
       </div>
@@ -5391,14 +5400,18 @@ automation:
       function switchTab(tabId) {
         const tabProcurement = document.getElementById("tabViewProcurement");
         const tabSensors = document.getElementById("tabViewSensors");
+        const tabMap = document.getElementById("tabViewMap");
         const btnProcurement = document.getElementById("tabBtnProcurement");
         const btnSensors = document.getElementById("tabBtnSensors");
+        const btnMap = document.getElementById("tabBtnMap");
 
         if (tabId === "procurement") {
           if (tabProcurement) tabProcurement.style.display = "block";
           if (tabSensors) tabSensors.style.display = "none";
+          if (tabMap) tabMap.style.display = "none";
           if (btnProcurement) btnProcurement.classList.add("active");
           if (btnSensors) btnSensors.classList.remove("active");
+          if (btnMap) btnMap.classList.remove("active");
           try {
             if (
               typeof roomSpendChartInstance !== "undefined" &&
@@ -5416,10 +5429,24 @@ automation:
         } else if (tabId === "sensors") {
           if (tabProcurement) tabProcurement.style.display = "none";
           if (tabSensors) tabSensors.style.display = "block";
+          if (tabMap) tabMap.style.display = "none";
           if (btnProcurement) btnProcurement.classList.remove("active");
           if (btnSensors) btnSensors.classList.add("active");
+          if (btnMap) btnMap.classList.remove("active");
           if (history.replaceState)
             history.replaceState(null, null, "#sensors");
+        } else if (tabId === "map") {
+          if (tabProcurement) tabProcurement.style.display = "none";
+          if (tabSensors) tabSensors.style.display = "none";
+          if (tabMap) tabMap.style.display = "block";
+          if (btnProcurement) btnProcurement.classList.remove("active");
+          if (btnSensors) btnSensors.classList.remove("active");
+          if (btnMap) btnMap.classList.add("active");
+          if (typeof selectMapRoom === "function") {
+            selectMapRoom(currentSelectedMapRoom || "Living Room");
+          }
+          if (history.replaceState)
+            history.replaceState(null, null, "#map");
         }
       }
 
