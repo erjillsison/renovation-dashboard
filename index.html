@@ -1,0 +1,2769 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House Renovation 2026 — Procurement & Budget Visualizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      :root {
+        --bg-main: #f7f6f2;
+        --bg-surface: #ffffff;
+        --bg-surface-alt: #f1efe9;
+        --bg-card-hover: #faf9f6;
+        --border-subtle: #e5e2d9;
+        --border-medium: #d6d1c4;
+        --text-primary: #1e221f;
+        --text-secondary: #575e56;
+        --text-muted: #889087;
+
+        /* Harmonious Palette based on Paint selections */
+        --sage-primary: #4a6b57;
+        --sage-light: #e8efe9;
+        --sage-accent: #628b73;
+        --taupe-primary: #947e6b;
+        --taupe-light: #f3efe9;
+        --taupe-accent: #b39f8d;
+        --cream-accent: #fdfbf7;
+
+        --accent-p0: #c95d46;
+        --accent-p0-bg: #faede9;
+        --accent-p1: #d9822b;
+        --accent-p1-bg: #fdf3e7;
+        --accent-p2: #3a7d99;
+        --accent-p2-bg: #eaf4f8;
+
+        --shadow-sm:
+          0 1px 3px rgba(30, 34, 31, 0.04), 0 1px 2px rgba(30, 34, 31, 0.02);
+        --shadow-md:
+          0 4px 12px rgba(30, 34, 31, 0.06), 0 1px 3px rgba(30, 34, 31, 0.03);
+        --shadow-lg:
+          0 12px 28px rgba(30, 34, 31, 0.08), 0 4px 8px rgba(30, 34, 31, 0.04);
+        --radius-sm: 8px;
+        --radius-md: 14px;
+        --radius-lg: 20px;
+        --radius-full: 9999px;
+
+        --font-body: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+        --font-heading: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        font-size: 13.5px; /* Compact global dashboard density */
+      }
+
+      body {
+        font-family: var(--font-body);
+        background-color: var(--bg-main);
+        color: var(--text-primary);
+        line-height: 1.45;
+        -webkit-font-smoothing: antialiased;
+        padding-bottom: 40px;
+      }
+
+      /* Container */
+      .container {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+
+      /* Header */
+      header {
+        padding: 16px 0 12px;
+        border-bottom: 1px solid var(--border-subtle);
+        background: linear-gradient(180deg, #ffffff 0%, var(--bg-main) 100%);
+        margin-bottom: 16px;
+      }
+
+      .header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+
+      .badge-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 2px 8px;
+        background-color: var(--sage-light);
+        color: var(--sage-primary);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        border-radius: var(--radius-full);
+        margin-bottom: 4px;
+      }
+
+      h1 {
+        font-family: var(--font-heading);
+        font-size: 1.55rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+      }
+
+      .header-subtitle {
+        color: var(--text-secondary);
+        font-size: 0.82rem;
+        margin-top: 2px;
+      }
+
+      /* Paint Color Swatches Bar */
+      .paint-palette-bar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--bg-surface);
+        padding: 6px 12px;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-subtle);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .palette-label {
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      .swatches {
+        display: flex;
+        gap: 10px;
+      }
+
+      .swatch-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+        font-weight: 500;
+      }
+
+      .swatch-circle {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      /* Quick Seller Notice Banner */
+      .seller-banner {
+        background: linear-gradient(135deg, #fbf7ec 0%, #f4ede0 100%);
+        border: 1px solid #e5d8c3;
+        border-radius: var(--radius-md);
+        padding: 10px 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 16px;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .seller-banner-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .seller-icon {
+        width: 30px;
+        height: 30px;
+        background: #eadecb;
+        color: #7d603e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--radius-sm);
+        font-size: 1.05rem;
+        flex-shrink: 0;
+      }
+
+      .seller-text h4 {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #5c4327;
+        margin-bottom: 1px;
+      }
+
+      .seller-text p {
+        font-size: 0.78rem;
+        color: #6d563d;
+      }
+
+      .seller-toggle-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.75);
+        padding: 4px 10px;
+        border-radius: var(--radius-full);
+        border: 1px solid #d9cbba;
+        font-size: 0.78rem;
+      }
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 36px;
+        height: 20px;
+      }
+
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #cbd5e1;
+        transition: 0.25s ease;
+        border-radius: 24px;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 14px;
+        width: 14px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.25s ease;
+        border-radius: 50%;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+      }
+
+      input:checked + .slider {
+        background-color: var(--sage-primary);
+      }
+
+      input:checked + .slider:before {
+        transform: translateX(16px);
+      }
+
+      /* KPI Summary Cards Grid */
+      .kpi-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+
+      .kpi-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 12px 14px;
+        box-shadow: var(--shadow-sm);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .kpi-card:hover {
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .kpi-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: var(--border-subtle);
+      }
+
+      .kpi-card.selected::before {
+        background: var(--sage-primary);
+      }
+      .kpi-card.tbd::before {
+        background: var(--taupe-accent);
+      }
+      .kpi-card.total::before {
+        background: linear-gradient(
+          90deg,
+          var(--sage-primary),
+          var(--taupe-primary)
+        );
+      }
+      .kpi-card.p0::before {
+        background: var(--accent-p0);
+      }
+
+      .kpi-title {
+        font-size: 0.74rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        margin-bottom: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .kpi-value {
+        font-family: var(--font-heading);
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        letter-spacing: -0.01em;
+      }
+
+      .kpi-meta {
+        font-size: 0.72rem;
+        color: var(--text-muted);
+        margin-top: 3px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .kpi-pill {
+        font-size: 0.68rem;
+        font-weight: 700;
+        padding: 1px 6px;
+        border-radius: var(--radius-full);
+        background: var(--bg-surface-alt);
+        color: var(--text-secondary);
+      }
+
+      /* Analytics / Infographics Grid */
+      .infographics-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+        gap: 14px;
+        margin-bottom: 18px;
+      }
+
+      .chart-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 14px 16px;
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border-subtle);
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .card-header h3 {
+        font-family: var(--font-heading);
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: var(--text-primary);
+      }
+
+      .chart-container {
+        position: relative;
+        flex-grow: 1;
+        min-height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Smart Infrastructure Highlights Box */
+      .smart-stack-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .stack-mini-card {
+        background: var(--bg-surface-alt);
+        border-radius: var(--radius-sm);
+        padding: 8px 10px;
+        border: 1px solid var(--border-subtle);
+      }
+
+      .stack-mini-card .mini-title {
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--text-muted);
+        margin-bottom: 2px;
+      }
+
+      .stack-mini-card .mini-choice {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--text-primary);
+      }
+
+      .stack-mini-card .mini-cost {
+        font-size: 0.72rem;
+        color: var(--sage-primary);
+        font-weight: 600;
+      }
+
+      /* Interactive Filters & Controls Bar */
+      .controls-section {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 10px 14px;
+        margin-bottom: 14px;
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        position: sticky;
+        top: 10px;
+        z-index: 100;
+        backdrop-filter: blur(12px);
+      }
+
+      .controls-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .filter-group {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        flex-wrap: wrap;
+      }
+
+      .filter-label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        min-width: 50px;
+      }
+
+      .filter-btn {
+        padding: 4px 9px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        background: var(--bg-surface-alt);
+        color: var(--text-secondary);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-full);
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-family: var(--font-body);
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .filter-btn:hover {
+        background: var(--border-subtle);
+        color: var(--text-primary);
+      }
+
+      .filter-btn.active {
+        background: var(--sage-primary);
+        color: #ffffff;
+        border-color: var(--sage-primary);
+        box-shadow: 0 1px 6px rgba(74, 107, 87, 0.25);
+      }
+
+      .filter-btn.p0-btn.active {
+        background: var(--accent-p0);
+        border-color: var(--accent-p0);
+        box-shadow: 0 1px 6px rgba(201, 93, 70, 0.3);
+      }
+
+      .filter-btn.p1-btn.active {
+        background: var(--accent-p1);
+        border-color: var(--accent-p1);
+        box-shadow: 0 1px 6px rgba(217, 130, 43, 0.3);
+      }
+
+      .filter-btn.p2-btn.active {
+        background: var(--accent-p2);
+        border-color: var(--accent-p2);
+        box-shadow: 0 1px 6px rgba(58, 125, 153, 0.3);
+      }
+
+      .count-indicator {
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        background: var(--bg-surface-alt);
+        padding: 3px 8px;
+        border-radius: var(--radius-full);
+        border: 1px solid var(--border-subtle);
+      }
+
+      .search-input {
+        padding: 5px 12px;
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-full);
+        font-size: 0.78rem;
+        font-family: var(--font-body);
+        outline: none;
+        background: var(--bg-surface-alt);
+        width: 190px;
+        transition:
+          border-color 0.2s ease,
+          width 0.2s ease;
+      }
+
+      .search-input:focus {
+        border-color: var(--sage-primary);
+        background: #ffffff;
+        width: 220px;
+      }
+
+      /* Main Table & Card Layout */
+      .table-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        overflow: hidden;
+        margin-bottom: 24px;
+      }
+
+      .items-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        font-size: 0.82rem;
+      }
+
+      .items-table th {
+        background: var(--bg-surface-alt);
+        color: var(--text-secondary);
+        font-weight: 700;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        padding: 8px 12px;
+        border-bottom: 1px solid var(--border-medium);
+      }
+
+      .items-table th.sortable {
+        cursor: pointer;
+        user-select: none;
+        transition:
+          background 0.15s ease,
+          color 0.15s ease;
+      }
+
+      .items-table th.sortable:hover {
+        background: #e4e9e5;
+        color: var(--text-primary);
+      }
+
+      .sort-icon {
+        display: inline-block;
+        margin-left: 4px;
+        font-size: 0.7rem;
+        opacity: 0.35;
+        transition:
+          opacity 0.15s ease,
+          color 0.15s ease;
+      }
+
+      .items-table th.sorted-asc .sort-icon,
+      .items-table th.sorted-desc .sort-icon {
+        opacity: 1;
+        color: var(--sage-primary);
+        font-weight: 900;
+      }
+
+      .items-table td {
+        padding: 9px 12px;
+        border-bottom: 1px solid var(--border-subtle);
+        vertical-align: middle;
+      }
+
+      .items-table tbody tr {
+        transition: background 0.15s ease;
+      }
+
+      .items-table tbody tr:hover {
+        background: var(--bg-card-hover);
+      }
+
+      .item-name-cell {
+        font-weight: 700;
+        color: var(--text-primary);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.84rem;
+      }
+
+      .item-choice-cell {
+        color: var(--text-primary);
+        font-size: 0.82rem;
+      }
+
+      .item-notes {
+        font-size: 0.73rem;
+        color: var(--text-muted);
+        margin-top: 2px;
+        max-width: 500px;
+        line-height: 1.35;
+      }
+
+      .badge-room {
+        display: inline-block;
+        font-size: 0.68rem;
+        font-weight: 600;
+        padding: 2px 7px;
+        background: var(--taupe-light);
+        color: var(--taupe-primary);
+        border-radius: var(--radius-full);
+        white-space: nowrap;
+      }
+
+      .badge-priority {
+        display: inline-block;
+        font-size: 0.68rem;
+        font-weight: 700;
+        padding: 2px 6px;
+        border-radius: var(--radius-full);
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+
+      .p-0 {
+        background: var(--accent-p0-bg);
+        color: var(--accent-p0);
+      }
+      .p-1 {
+        background: var(--accent-p1-bg);
+        color: var(--accent-p1);
+      }
+      .p-2 {
+        background: var(--accent-p2-bg);
+        color: var(--accent-p2);
+      }
+
+      .price-tag {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 0.88rem;
+        color: var(--text-primary);
+        white-space: nowrap;
+      }
+
+      .status-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        padding: 2px 6px;
+        border-radius: var(--radius-full);
+      }
+
+      .status-selected {
+        background: var(--sage-light);
+        color: var(--sage-primary);
+      }
+
+      .status-tbd {
+        background: #f1f3f5;
+        color: #6c757d;
+      }
+
+      /* Reno Action Checklist Section */
+      .reno-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+        gap: 12px;
+        margin-bottom: 28px;
+      }
+
+      .reno-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 12px 14px;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .reno-card-header {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 8px;
+        font-family: var(--font-heading);
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+
+      .reno-list {
+        list-style: none;
+      }
+
+      .reno-list li {
+        position: relative;
+        padding-left: 18px;
+        margin-bottom: 6px;
+        font-size: 0.76rem;
+        color: var(--text-secondary);
+        line-height: 1.38;
+      }
+
+      .reno-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--sage-primary);
+        font-weight: 700;
+      }
+
+      /* Empty state */
+      .no-results {
+        padding: 30px;
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 0.85rem;
+      }
+
+      /* Fully Dynamic & Responsive Media Queries (Horizontal, Vertical, Split-Screen) */
+      @media (max-width: 900px) {
+        .header-top {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .paint-palette-bar {
+          width: 100%;
+          justify-content: space-between;
+        }
+        .seller-banner {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 14px;
+        }
+        .seller-toggle-wrapper {
+          align-self: flex-start;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .controls-section {
+          padding: 10px 12px;
+          gap: 8px;
+          top: 6px;
+        }
+        .controls-row {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 8px;
+        }
+        .search-input {
+          width: 100%;
+        }
+
+        /* Card-Based Responsive Layout for Vertical Screens */
+        .table-card {
+          background: transparent;
+          border: none;
+          box-shadow: none;
+        }
+        .items-table,
+        .items-table thead,
+        .items-table tbody,
+        .items-table th,
+        .items-table td,
+        .items-table tr {
+          display: block;
+        }
+        .items-table thead {
+          display: none;
+        }
+        .items-table tbody {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+        .items-table tbody tr {
+          background: var(--bg-surface);
+          border: 1px solid var(--border-subtle);
+          border-radius: var(--radius-md);
+          padding: 12px;
+          box-shadow: var(--shadow-sm);
+        }
+        .items-table td {
+          padding: 2px 0;
+          border-bottom: none;
+        }
+        .items-table td:nth-child(3),
+        .items-table td:nth-child(4),
+        .items-table td:nth-child(5) {
+          display: inline-block;
+          margin-right: 4px;
+          margin-top: 2px;
+        }
+        .items-table td:last-child {
+          margin-top: 8px;
+          padding-top: 8px;
+          border-top: 1px dashed var(--border-subtle);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .items-table td:last-child::before {
+          content: "Estimated Budget:";
+          font-size: 0.74rem;
+          font-weight: 600;
+          color: var(--text-muted);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .filter-btn {
+          padding: 3px 8px;
+          font-size: 0.72rem;
+        }
+        .filter-label {
+          width: 100%;
+          margin-bottom: 2px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="header-top">
+          <div>
+            <div class="badge-tag">House Renovation 2026</div>
+            <h1>Procurement & Budget Visualizer</h1>
+            <div class="header-subtitle">
+              Comprehensive breakdown of research, selections, and estimated TBD
+              fixtures
+            </div>
+          </div>
+
+          <div class="paint-palette-bar">
+            <div class="palette-label">Theme Palette:</div>
+            <div class="swatches">
+              <div class="swatch-item">
+                <span
+                  class="swatch-circle"
+                  style="background-color: #8a9a86"
+                ></span>
+                <span>Sage Green</span>
+              </div>
+              <div class="swatch-item">
+                <span
+                  class="swatch-circle"
+                  style="background-color: #b39f8d"
+                ></span>
+                <span>Warm Taupe</span>
+              </div>
+              <div class="swatch-item">
+                <span
+                  class="swatch-circle"
+                  style="background-color: #f5f2eb"
+                ></span>
+                <span>Cream White</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seller Inclusions Banner with Toggle -->
+        <div
+          class="seller-banner"
+          style="
+            background: linear-gradient(135deg, #fdfbf7 0%, #f4efe7 100%);
+            border-color: #d9cbba;
+          "
+        >
+          <div class="seller-banner-content">
+            <div
+              class="seller-icon"
+              style="background: #e8ded2; color: #7a6350"
+            >
+              📦
+            </div>
+            <div class="seller-text">
+              <h4 style="color: #4a3b30">
+                Seller Inclusion Contingency (S$2,685)
+              </h4>
+              <p style="color: #635345">
+                Washer & dryer ($1,385), fridge ($650), and smart door lock
+                ($650) are budgeted in your plan. Toggle to preview your budget
+                if the seller leaves them behind.
+              </p>
+            </div>
+          </div>
+          <div class="seller-toggle-wrapper">
+            <span style="font-weight: 600; color: #4a3b30"
+              >Deduct Seller Items</span
+            >
+            <label class="switch">
+              <input
+                type="checkbox"
+                id="sellerToggle"
+                onchange="toggleSellerSavings()"
+              />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- KPI Summary Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card selected">
+          <div class="kpi-title">
+            <span>Selected Committed</span>
+            <span class="kpi-pill" id="kpiSelectedCount">23 Items</span>
+          </div>
+          <div class="kpi-value" id="kpiSelected">$28,125</div>
+          <div class="kpi-meta">High-priority finalized choices</div>
+        </div>
+
+        <div class="kpi-card tbd">
+          <div class="kpi-title">
+            <span>TBD Estimated Range</span>
+            <span class="kpi-pill" id="kpiTbdCount">16 Items</span>
+          </div>
+          <div class="kpi-value" id="kpiTbdRange">$8.5k – $20.2k</div>
+          <div class="kpi-meta" id="kpiTbdMeta">Midpoint average: ~$14,325</div>
+        </div>
+
+        <div class="kpi-card total">
+          <div class="kpi-title">
+            <span>Estimated All-In Total</span>
+            <span class="kpi-pill" id="kpiBadge">Full Scope</span>
+          </div>
+          <div class="kpi-value" id="kpiTotal">$36.6k – $48.3k</div>
+          <div class="kpi-meta" id="kpiTotalSub">
+            Selected + TBD Midpoint: <strong>~$42,450</strong>
+          </div>
+        </div>
+
+        <div class="kpi-card p0">
+          <div class="kpi-title">
+            <span>P0 Reno Critical Infra</span>
+            <span class="kpi-pill">Day 1 Critical</span>
+          </div>
+          <div class="kpi-value" id="kpiP0Value">$15,150</div>
+          <div class="kpi-meta">
+            Aircon, Bed & Mattress, Fans (x2), Curtains, Lighting, Zip Track
+          </div>
+        </div>
+      </div>
+
+      <!-- Infographics / Charts Grid -->
+      <div class="infographics-grid">
+        <!-- Room Spend Doughnut Chart -->
+        <div class="chart-card">
+          <div class="card-header">
+            <h3>💰 Spend by Room (Selected Items)</h3>
+            <span
+              style="
+                font-size: 0.8rem;
+                color: var(--text-muted);
+                font-weight: 500;
+              "
+              >Unbundled individual room spend</span
+            >
+          </div>
+          <div class="chart-container">
+            <canvas id="roomSpendChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Priority Breakdown & Smart Home Stack -->
+        <div class="chart-card">
+          <div class="card-header">
+            <h3>⚡ Priority & Smart Home Hubs</h3>
+            <span
+              style="
+                font-size: 0.8rem;
+                color: var(--text-muted);
+                font-weight: 500;
+              "
+              >Local-First Automation</span
+            >
+          </div>
+          <div
+            class="chart-container"
+            style="min-height: 180px; max-height: 180px"
+          >
+            <canvas id="priorityChart"></canvas>
+          </div>
+
+          <div class="smart-stack-grid">
+            <div class="stack-mini-card">
+              <div class="mini-title">Brain / Hub</div>
+              <div class="mini-choice">HA Green + ZBT</div>
+              <div class="mini-cost">$250 • Zigbee/Matter</div>
+            </div>
+            <div class="stack-mini-card">
+              <div class="mini-title">Switches / Lighting</div>
+              <div class="mini-choice">Aqara H2 + T2</div>
+              <div class="mini-cost">$800 • Neutral Wire</div>
+            </div>
+            <div class="stack-mini-card">
+              <div class="mini-title">Fan Control</div>
+              <div class="mini-choice">Bond Bridge + RF</div>
+              <div class="mini-cost">$600 • Fanco DC</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Filters & Table Header -->
+      <div class="controls-section">
+        <!-- Row 1: Room Filter -->
+        <div class="controls-row">
+          <div class="filter-group">
+            <span class="filter-label">Room:</span>
+            <button
+              class="filter-btn active"
+              onclick="setRoomFilter('all', this)"
+            >
+              All Rooms
+            </button>
+            <button
+              class="filter-btn"
+              onclick="setRoomFilter('Living Room', this)"
+            >
+              Living Room
+            </button>
+            <button
+              class="filter-btn"
+              onclick="setRoomFilter('Master Bed', this)"
+            >
+              Master Bed
+            </button>
+            <button
+              class="filter-btn"
+              onclick="setRoomFilter('Whole House', this)"
+            >
+              Whole House
+            </button>
+            <button class="filter-btn" onclick="setRoomFilter('Kitchen', this)">
+              Kitchen
+            </button>
+            <button
+              class="filter-btn"
+              onclick="setRoomFilter('Bathrooms', this)"
+            >
+              Bathrooms
+            </button>
+            <button
+              class="filter-btn"
+              onclick="setRoomFilter('Entrance', this)"
+            >
+              Entrance
+            </button>
+            <button class="filter-btn" onclick="setRoomFilter('Dining', this)">
+              Dining
+            </button>
+            <button class="filter-btn" onclick="setRoomFilter('Balcony', this)">
+              Balcony
+            </button>
+            <button
+              class="filter-btn"
+              onclick="setRoomFilter('Bedroom 2 / Study', this)"
+            >
+              Bed 2 / Study
+            </button>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 10px">
+            <input
+              type="text"
+              id="searchInput"
+              class="search-input"
+              placeholder="Search item, brand, specs..."
+              oninput="handleSearch()"
+            />
+            <span id="itemsCountBadge" class="count-indicator">38 items</span>
+          </div>
+        </div>
+
+        <!-- Row 2: Priority & Status Filter -->
+        <div
+          class="controls-row"
+          style="border-top: 1px dashed var(--border-subtle); padding-top: 8px"
+        >
+          <div class="filter-group" id="priorityFilterGroup">
+            <span class="filter-label">Priority:</span>
+            <button
+              class="filter-btn active"
+              data-priority="all"
+              onclick="setPriorityFilter('all', this)"
+            >
+              All Priorities
+            </button>
+            <button
+              class="filter-btn p0-btn"
+              data-priority="P0"
+              onclick="setPriorityFilter('P0', this)"
+            >
+              🔴 P0 Critical
+            </button>
+            <button
+              class="filter-btn p1-btn"
+              data-priority="P1"
+              onclick="setPriorityFilter('P1', this)"
+            >
+              🟠 P1 Essential
+            </button>
+            <button
+              class="filter-btn p2-btn"
+              data-priority="P2"
+              onclick="setPriorityFilter('P2', this)"
+            >
+              🔵 P2 Desirable
+            </button>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-label">Status:</span>
+            <button
+              class="filter-btn active"
+              onclick="setStatusFilter('all', this)"
+            >
+              All
+            </button>
+            <button
+              class="filter-btn"
+              onclick="setStatusFilter('Selected', this)"
+            >
+              ● Selected (20)
+            </button>
+            <button class="filter-btn" onclick="setStatusFilter('TBD', this)">
+              ○ TBD (16)
+            </button>
+            <button
+              class="filter-btn"
+              style="
+                margin-left: 8px;
+                background: #e8efe9;
+                color: var(--sage-primary);
+              "
+              onclick="triggerMarkdownReload()"
+              title="Load latest from markdown note"
+            >
+              🔄 Reload from Note
+            </button>
+            <input
+              type="file"
+              id="noteFileInput"
+              accept=".md"
+              style="display: none"
+              onchange="handleFileSelect(event)"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Data Table -->
+      <div class="table-card">
+        <table class="items-table" id="procurementTable">
+          <thead>
+            <tr>
+              <th
+                class="sortable"
+                onclick="handleSort('name')"
+                style="width: 25%"
+              >
+                Item & Category <span class="sort-icon" id="sort-name">⇅</span>
+              </th>
+              <th style="width: 31%">Selected / Recommendation</th>
+              <th
+                class="sortable"
+                onclick="handleSort('room')"
+                style="width: 14%"
+              >
+                Room <span class="sort-icon" id="sort-room">⇅</span>
+              </th>
+              <th
+                class="sortable"
+                onclick="handleSort('priority')"
+                style="width: 10%"
+              >
+                Priority <span class="sort-icon" id="sort-priority">⇅</span>
+              </th>
+              <th
+                class="sortable"
+                onclick="handleSort('status')"
+                style="width: 10%"
+              >
+                Status <span class="sort-icon" id="sort-status">⇅</span>
+              </th>
+              <th
+                class="sortable"
+                onclick="handleSort('price')"
+                style="width: 10%; text-align: right"
+              >
+                Cost (SGD) <span class="sort-icon" id="sort-price">⇅</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Populated by JavaScript -->
+          </tbody>
+        </table>
+        <div id="noResults" class="no-results" style="display: none">
+          No procurement items found matching your filter or search query.
+        </div>
+      </div>
+
+      <!-- Reno Coordination Watchlist & Milestones -->
+      <h2
+        style="
+          font-family: var(--font-heading);
+          font-size: 1.4rem;
+          margin-bottom: 18px;
+          color: var(--text-primary);
+        "
+      >
+        🛠️ Renovation Coordination Watchlist
+      </h2>
+      <div class="reno-grid">
+        <div class="reno-card">
+          <div class="reno-card-header">
+            <span style="color: var(--accent-p0)">⚡</span> Electrical & Neutral
+            Wiring
+          </div>
+          <ul class="reno-list">
+            <li>
+              <strong>Pull neutral wire to all wall boxes:</strong> Critical for
+              Aqara H2 reliability and long-term smart switches.
+            </li>
+            <li>
+              <strong>Power to windows:</strong> Pull power for Living Room &
+              Master Bed motorized curtains before ceiling plastering.
+            </li>
+            <li>
+              <strong>4-wire AC power to Balcony:</strong> Required for
+              motorized zip-track mounting and smart relay.
+            </li>
+            <li>
+              <strong>Power beside toilets:</strong> Required for Panasonic
+              E-Bidet seats in both bathrooms.
+            </li>
+            <li>
+              <strong>Power points:</strong> Living sofa, robot dock base, water
+              dispenser, study desk, bedside tables.
+            </li>
+          </ul>
+        </div>
+
+        <div class="reno-card">
+          <div class="reno-card-header">
+            <span style="color: var(--sage-primary)">💧</span> Plumbing &
+            Appliance Points
+          </div>
+          <ul class="reno-list">
+            <li>
+              <strong>Aircon Piping:</strong> SWG 22 copper + 1/2" Armaflex
+              insulation to prevent condensation.
+            </li>
+            <li>
+              <strong>Kitchen Washer/Dryer:</strong> Verify 600mm width, 850mm
+              height, inlet, drain and door swing clearance.
+            </li>
+            <li>
+              <strong>Water Dispenser & Sink:</strong> Confirm counter cutout
+              and under-sink water filter / leak sensor space.
+            </li>
+            <li>
+              <strong>Robot Vacuum Dock:</strong> Reserve power and water
+              drain/inlet if opting for auto-refill dock.
+            </li>
+          </ul>
+        </div>
+
+        <div class="reno-card">
+          <div class="reno-card-header">
+            <span style="color: var(--taupe-primary)">📐</span> Carpentry &
+            Acoustics
+          </div>
+          <ul class="reno-list">
+            <li>
+              <strong>Floor soundproofing underlay:</strong> Must be installed
+              before laying final flooring.
+            </li>
+            <li>
+              <strong>TV Console depth:</strong> Ensure enough clearance for
+              Samsung HW-Q990F soundbar and cable conduits.
+            </li>
+            <li>
+              <strong>Climbing Gear storage:</strong> Custom ventilated metal
+              cabinetry with internal airflow fans.
+            </li>
+            <li>
+              <strong>Curtain ceiling pelmets:</strong> Ensure double-track
+              recess depth for motorized day/night curtains.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const itemsData = [
+      {
+            "name": "Aircon (System 3)",
+            "choice": "Mitsubishi Electric Starmex 5-Tick + 1/2\" Armaflex Class 0 + SWG 22",
+            "notes": "SWG 22 copper + 1/2\" Armaflex installation required.",
+            "room": "Whole House",
+            "priority": "P0",
+            "status": "Selected",
+            "price": 3650,
+            "priceDisplay": "$3,650",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Smart Switch (Entrance)",
+            "choice": "Aqara H2 2-Gang (Main entry downlight + Shoe cabinet LED)",
+            "notes": "Selected choice for Entrance.",
+            "room": "Entrance & Dining",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 50,
+            "priceDisplay": "$50",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Smart Switch (Living Room)",
+            "choice": "Aqara H2 3-Gang (Ambient CCT, Accent, Ceiling fan)",
+            "notes": "Selected choice for Living Room.",
+            "room": "Living Room",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 56,
+            "priceDisplay": "$56",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Smart Switch (Dining)",
+            "choice": "Aqara H2 1-Gang (Dining pendant light)",
+            "notes": "Selected choice for Dining.",
+            "room": "Entrance & Dining",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 47,
+            "priceDisplay": "$47",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Smart Switch (Kitchen)",
+            "choice": "Aqara H2 2-Gang (Main ceiling downlights + Under-cabinet LED)",
+            "notes": "Selected choice for Kitchen.",
+            "room": "Kitchen",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 50,
+            "priceDisplay": "$50",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Smart Switch (Balcony)",
+            "choice": "Aqara H2 2-Gang (Balcony light + Outdoor fan isolator)",
+            "notes": "Selected choice for Balcony.",
+            "room": "Balcony",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 50,
+            "priceDisplay": "$50",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Smart Switch (Hallway)",
+            "choice": "Aqara H2 1-Gang (Corridor downlights)",
+            "notes": "Selected choice for Whole House.",
+            "room": "Whole House",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 47,
+            "priceDisplay": "$47",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Smart Switch (Master Bed)",
+            "choice": "Aqara H2 2-Gang (Main entry + Bedside ambient CCT)",
+            "notes": "Selected choice for Master Bed.",
+            "room": "Master Bed",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 50,
+            "priceDisplay": "$50",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Smart Switch (Bedroom 2)",
+            "choice": "Aqara H2 2-Gang (Main room lights + Study desk zone)",
+            "notes": "Selected choice for Bedroom 2.",
+            "room": "Bedroom 2",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 50,
+            "priceDisplay": "$50",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Smart Switch (Master Bath)",
+            "choice": "Aqara H2 2-Gang (Main downlight + Vanity mirror light)",
+            "notes": "Selected choice for Bathrooms.",
+            "room": "Bathrooms",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 50,
+            "priceDisplay": "$50",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Smart Switch (Common Bath)",
+            "choice": "Aqara H2 2-Gang (Main downlight + Vanity mirror light)",
+            "notes": "Selected choice for Bathrooms.",
+            "room": "Bathrooms",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 50,
+            "priceDisplay": "$50",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Smart CCT Bulbs (Living Room)",
+            "choice": "6x Aqara T2 Dimmable Tunable White Spotlights",
+            "notes": "Selected choice for Living Room.",
+            "room": "Living Room",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 210,
+            "priceDisplay": "$210",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Smart CCT Bulbs (Dining)",
+            "choice": "2x Aqara T2 Dimmable Tunable White Pendant Bulbs",
+            "notes": "Selected choice for Dining.",
+            "room": "Entrance & Dining",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 70,
+            "priceDisplay": "$70",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Smart CCT Bulbs (Master Bed)",
+            "choice": "4x Aqara T2 Dimmable Tunable White Spotlights",
+            "notes": "Selected choice for Master Bed.",
+            "room": "Master Bed",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 140,
+            "priceDisplay": "$140",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Dumb Downlights (Entrance)",
+            "choice": "1x High-CRI (>90) Recessed Downlight",
+            "notes": "Selected choice for Entrance.",
+            "room": "Entrance & Dining",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 20,
+            "priceDisplay": "$20",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Dumb Downlights (Kitchen)",
+            "choice": "3x High-CRI (>90) Recessed Downlights",
+            "notes": "Selected choice for Kitchen.",
+            "room": "Kitchen",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 65,
+            "priceDisplay": "$65",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Dumb Downlights (Balcony)",
+            "choice": "1x High-CRI (>90) Outdoor-Rated Downlight",
+            "notes": "Selected choice for Balcony.",
+            "room": "Balcony",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 25,
+            "priceDisplay": "$25",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Dumb Downlights (Hallway)",
+            "choice": "2x High-CRI (>90) Recessed Downlights",
+            "notes": "Selected choice for Whole House.",
+            "room": "Whole House",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 45,
+            "priceDisplay": "$45",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Dumb Downlights (Bedroom 2)",
+            "choice": "3x High-CRI (>90) Recessed Downlights",
+            "notes": "Selected choice for Bedroom 2.",
+            "room": "Bedroom 2",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 65,
+            "priceDisplay": "$65",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Dumb Downlights (Bathrooms x2)",
+            "choice": "4x High-CRI (>90) IP44 Splash-Rated Downlights",
+            "notes": "Selected choice for Bathrooms.",
+            "room": "Bathrooms",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 85,
+            "priceDisplay": "$85",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Accent LED Strip (Entrance)",
+            "choice": "1x 2m 24V COB Warm White Strip + Driver (Shoe Cabinet)",
+            "notes": "Selected choice for Entrance.",
+            "room": "Entrance & Dining",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 60,
+            "priceDisplay": "$60",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Accent LED Strip (Kitchen)",
+            "choice": "1x 3m 24V COB Warm White Strip + Driver (Under-Cabinet)",
+            "notes": "Selected choice for Kitchen.",
+            "room": "Kitchen",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 90,
+            "priceDisplay": "$90",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Ceiling Fan (Living)",
+            "choice": "Fanco DC (RF) + Bond Bridge (Living Room)",
+            "notes": "1x unit confirmed for Living Room. Bond Bridge gives local HA RF control.",
+            "room": "Living Room",
+            "priority": "P0",
+            "status": "Selected",
+            "price": 350,
+            "priceDisplay": "$350",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Ceiling Fan (Balcony)",
+            "choice": "Fanco DC 38\" (RF) Compact Outdoor",
+            "notes": "Compact outdoor-rated DC fan. Shares Bond Bridge RF integration.",
+            "room": "Balcony",
+            "priority": "P0",
+            "status": "Selected",
+            "price": 250,
+            "priceDisplay": "$250",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Smart Home Hub",
+            "choice": "Home Assistant Green + Connect ZBT-1",
+            "notes": "Local-first Zigbee/Matter hub on wired Ethernet.",
+            "room": "Whole House",
+            "priority": "P2",
+            "status": "Selected",
+            "price": 250,
+            "priceDisplay": "$250",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Mesh Wifi",
+            "choice": "TP-Link Deco BE65 Pro Wi-Fi 7 (2-Pack)",
+            "notes": "Wi-Fi 7 mesh with multi-gig wired backhaul.",
+            "room": "Whole House",
+            "priority": "P2",
+            "status": "Selected",
+            "price": 650,
+            "priceDisplay": "$650",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Robot Vacuum / Mop",
+            "choice": "Roborock Q Revo Master (SG Set, Heated Mop Drying)",
+            "notes": "Auto-empty dock with mop washing & drying. Dreame L50 Ultra CE benchmark.",
+            "room": "Whole House",
+            "priority": "P2",
+            "status": "Selected",
+            "price": 1200,
+            "priceDisplay": "$1,200",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Washer / Dryer",
+            "choice": "Samsung WD11DB9B84GDSP Bespoke AI (11kg wash / 7kg dry)",
+            "notes": "11kg wash / 7kg dry 2-in-1 combo. Potential seller inclusion savings.",
+            "room": "Kitchen",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 1385,
+            "priceDisplay": "$1,385",
+            "sellerDeductible": true,
+            "sellerSavings": 1385
+      },
+      {
+            "name": "Fridge",
+            "choice": "Panasonic 400L+ 5-Tick / Hisense 2-door",
+            "notes": "400L+ high efficiency. Potential seller inclusion savings.",
+            "room": "Kitchen",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 650,
+            "priceDisplay": "$650",
+            "sellerDeductible": true,
+            "sellerSavings": 650
+      },
+      {
+            "name": "Smart Door Lock",
+            "choice": "Aqara U400 UWB Smart Lock",
+            "notes": "Hands-free UWB proximity walk-up unlock.",
+            "room": "Entrance & Dining",
+            "priority": "P0",
+            "status": "Selected",
+            "price": 650,
+            "priceDisplay": "$650",
+            "sellerDeductible": true,
+            "sellerSavings": 650
+      },
+      {
+            "name": "Bidet",
+            "choice": "Panasonic DL-EH30 E-Bidet (x2)",
+            "notes": "Requires dedicated power points adjacent to bowls.",
+            "room": "Bathrooms",
+            "priority": "P0",
+            "status": "Selected",
+            "price": 1200,
+            "priceDisplay": "$1,200",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Smart Curtains (Master)",
+            "choice": "Aqara C3 Motorised Tracks + Custom Day/Night Curtains",
+            "notes": "2x motorised tracks with custom day & night drapery.",
+            "room": "Master Bed",
+            "priority": "P0",
+            "status": "Selected",
+            "price": 1100,
+            "priceDisplay": "$1,100",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Mattress",
+            "choice": "Simmons Beautyrest Pocketed Coil (Tangs/Taka Promo)",
+            "notes": "Queen hybrid pocket-spring mattress (Target ~$3k).",
+            "room": "Master Bed",
+            "priority": "P0",
+            "status": "Selected",
+            "price": 2800,
+            "priceDisplay": "$2,800",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Bed Frame",
+            "choice": "Blafink Custom Heavy-Duty Hydraulic Storage Bed (Bansbach Struts)",
+            "notes": "Standard frame ~$1,150; hydraulic gas-lift version ~$1,550.",
+            "room": "Master Bed",
+            "priority": "P0",
+            "status": "Selected",
+            "price": 1600,
+            "priceDisplay": "$1,600",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Smart Curtains (Living)",
+            "choice": "Aqara C3 Motorised Tracks + Custom Day/Night Curtains",
+            "notes": "Priority 1 for motorized living room window pelmet.",
+            "room": "Living Room",
+            "priority": "P0",
+            "status": "Selected",
+            "price": 1100,
+            "priceDisplay": "$1,100",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Sofa",
+            "choice": "Cozmo 3-Seater Modular Sofa with Chaise",
+            "notes": "Configurable theater-pit layout. Contenders: Sammie/Cozmo ($1,750), Son & Bear Milo Double ($1,388), IKEA Söderhamn ($850).",
+            "room": "Living Room",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 1750,
+            "priceDisplay": "$1,750",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "TV Console",
+            "choice": "Castlery Seb TV Console (150cm)",
+            "notes": "Ensure deep top surface for soundbar and cable grommets.",
+            "room": "Living Room",
+            "priority": "P2",
+            "status": "Selected",
+            "price": 700,
+            "priceDisplay": "$700",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "TV",
+            "choice": "LG OLED 65\" G-Series",
+            "notes": "4K 120Hz HDMI 2.1 gaming & high-end movie cinema.",
+            "room": "Living Room",
+            "priority": "P2",
+            "status": "Selected",
+            "price": 5000,
+            "priceDisplay": "$5,000",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Soundbar",
+            "choice": "Samsung HW-Q990F 11.1.4",
+            "notes": "Industry benchmark flagship immersive soundbar.",
+            "room": "Living Room",
+            "priority": "P2",
+            "status": "Selected",
+            "price": 1750,
+            "priceDisplay": "$1,750",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Shoe Bench",
+            "choice": "Castlery Nathan Shoe Bench",
+            "notes": "Measure entryway walkway clearance and swing.",
+            "room": "Entrance & Dining",
+            "priority": "P2",
+            "status": "Selected",
+            "price": 325,
+            "priceDisplay": "$325",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Dining Table",
+            "choice": "Comfort Furniture Sintered Stone Dining Table",
+            "notes": "Modular and movable (no fixed kitchen island).",
+            "room": "Entrance & Dining",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 750,
+            "priceDisplay": "$750",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Dining Chairs",
+            "choice": "Castlery Classic Dining Chairs (Set of 4)",
+            "notes": "Comfortable for multi-use WFH dining.",
+            "room": "Entrance & Dining",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 600,
+            "priceDisplay": "$600",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Zip Track",
+            "choice": "Dooya DM45S AC Motor + Aqara T2 Zigbee Relay",
+            "notes": "Track-guided balcony outdoor blinds (~$28-$35 psf).",
+            "room": "Balcony",
+            "priority": "P0",
+            "status": "Selected",
+            "price": 2800,
+            "priceDisplay": "$2,800",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Bedroom 2 Mattress / Bedding",
+            "choice": "Origin Hybrid / Noa Lite / IKEA VALEVAG",
+            "notes": "Origin Hybrid / Noa Lite / IKEA VALEVAG.",
+            "room": "Bedroom 2 / Study",
+            "priority": "P2",
+            "status": "TBD",
+            "price": 950,
+            "priceDisplay": "$700-$1,200",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Study / WFH Desk",
+            "choice": "140-160cm dual-motor standing desk (Omnidesk / EverDesk / Magnus Evo)",
+            "notes": "140-160cm dual-motor standing desk (Omnidesk / EverDesk / Magnus Evo).",
+            "room": "Bedroom 2 / Study",
+            "priority": "P2",
+            "status": "TBD",
+            "price": 750,
+            "priceDisplay": "$500-$1,000",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Office Chair",
+            "choice": "Boulies EP200 / Sihoo C300 / Steelcase Leap",
+            "notes": "Boulies EP200 / Sihoo C300 / Steelcase Leap.",
+            "room": "Bedroom 2 / Study",
+            "priority": "P2",
+            "status": "TBD",
+            "price": 650,
+            "priceDisplay": "$400-$900",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Monitor Arm / Desk Accessories",
+            "choice": "NB / Brateck / Ergotron LX",
+            "notes": "NB / Brateck / Ergotron LX.",
+            "room": "Bedroom 2 / Study",
+            "priority": "P2",
+            "status": "TBD",
+            "price": 325,
+            "priceDisplay": "$150-$500",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Bedside Tables / Lamps",
+            "choice": "Slim bedside tables with reachable USB-C/power",
+            "notes": "Slim bedside tables with reachable USB-C/power.",
+            "room": "Master Bed",
+            "priority": "P2",
+            "status": "TBD",
+            "price": 550,
+            "priceDisplay": "$300-$800",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Bedroom 2 Curtains / Blinds",
+            "choice": "Manual double track day & night curtains",
+            "notes": "Manual double track day & night curtains.",
+            "room": "Bedroom 2 / Study",
+            "priority": "P1",
+            "status": "TBD",
+            "price": 650,
+            "priceDisplay": "$400-$900",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Bathroom Vanities / Mirror Cabinets",
+            "choice": "Wall-hung plywood + mirrored storage cabinet",
+            "notes": "Wall-hung plywood + mirrored storage cabinet.",
+            "room": "Bathrooms",
+            "priority": "P1",
+            "status": "TBD",
+            "price": 1850,
+            "priceDisplay": "$1,200-$2,500",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Bathroom Accessories",
+            "choice": "304 stainless steel / solid brass screw-mounted hardware",
+            "notes": "304 stainless steel / solid brass screw-mounted hardware.",
+            "room": "Bathrooms",
+            "priority": "P1",
+            "status": "TBD",
+            "price": 550,
+            "priceDisplay": "$300-$800",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Shower Screens",
+            "choice": "Fixed tempered glass panels / sliding screen",
+            "notes": "Fixed tempered glass panels / sliding screen.",
+            "room": "Bathrooms",
+            "priority": "P1",
+            "status": "TBD",
+            "price": 1300,
+            "priceDisplay": "$800-$1,800",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Kitchen Small Appliances",
+            "choice": "Induction cookware, rice cooker, kettle, air fryer, coffee setup",
+            "notes": "Induction cookware, rice cooker, kettle, air fryer, coffee setup.",
+            "room": "Kitchen",
+            "priority": "P1",
+            "status": "TBD",
+            "price": 1300,
+            "priceDisplay": "$800-$1,800",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Kitchen Storage / Bins",
+            "choice": "Under-sink pull-outs, drawer dividers, spice racks",
+            "notes": "Under-sink pull-outs, drawer dividers, spice racks.",
+            "room": "Kitchen",
+            "priority": "P1",
+            "status": "TBD",
+            "price": 600,
+            "priceDisplay": "$300-$900",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Living Room Coffee / Side Tables",
+            "choice": "Nesting side tables to match modular sofa pit",
+            "notes": "Nesting side tables to match modular sofa pit.",
+            "room": "Living Room",
+            "priority": "P2",
+            "status": "TBD",
+            "price": 600,
+            "priceDisplay": "$300-$900",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Living Room Rug / Lamps / Shelving",
+            "choice": "Washable low-pile rug (anchors sofa & aids acoustics), floor lamp",
+            "notes": "Washable low-pile rug (anchors sofa & aids acoustics), floor lamp.",
+            "room": "Living Room",
+            "priority": "P2",
+            "status": "TBD",
+            "price": 1200,
+            "priceDisplay": "$600-$1,800",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Entrance Mirror / Drop Zone",
+            "choice": "Full-length mirror + drop shelf + charging for EDC",
+            "notes": "Full-length mirror + drop shelf + charging for EDC.",
+            "room": "Entrance & Dining",
+            "priority": "P2",
+            "status": "TBD",
+            "price": 475,
+            "priceDisplay": "$250-$700",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Cleaning / Laundry Basics",
+            "choice": "Cordless stick vacuum (Dreame R20) + spin mop",
+            "notes": "Cordless stick vacuum (Dreame R20) + spin mop.",
+            "room": "Whole House",
+            "priority": "P1",
+            "status": "TBD",
+            "price": 1000,
+            "priceDisplay": "$600-$1,400",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Linen / General Storage",
+            "choice": "Full-height linen/storage cabinet with labeled pull-out bins",
+            "notes": "Full-height linen/storage cabinet with labeled pull-out bins.",
+            "room": "Whole House",
+            "priority": "P1",
+            "status": "TBD",
+            "price": 1350,
+            "priceDisplay": "$700-$2,000",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      }
+];
+
+      let currentRoomFilter = "all";
+      let selectedPriorities = new Set(); // Empty means 'all'
+      let currentStatusFilter = "all";
+      let currentSearchTerm = "";
+      let isSellerDeducted = false;
+
+      let currentSortColumn = null;
+      let currentSortDirection = "asc"; // 'asc' or 'desc'
+
+      let roomSpendChartInstance = null;
+      let priorityChartInstance = null;
+
+      function handleSort(column) {
+        if (currentSortColumn === column) {
+          currentSortDirection =
+            currentSortDirection === "asc" ? "desc" : "asc";
+        } else {
+          currentSortColumn = column;
+          // Default direction: high-to-low for price, A-to-Z / P0-P2 for others
+          currentSortDirection = column === "price" ? "desc" : "asc";
+        }
+
+        updateSortIcons();
+        renderTable();
+      }
+
+      function updateSortIcons() {
+        const columns = ["name", "room", "priority", "status", "price"];
+        columns.forEach((col) => {
+          const iconEl = document.getElementById(`sort-${col}`);
+          const thEl = iconEl ? iconEl.closest("th") : null;
+          if (iconEl && thEl) {
+            thEl.classList.remove("sorted-asc", "sorted-desc");
+            if (currentSortColumn === col) {
+              thEl.classList.add(
+                currentSortDirection === "asc" ? "sorted-asc" : "sorted-desc",
+              );
+              iconEl.innerText = currentSortDirection === "asc" ? "▲" : "▼";
+            } else {
+              iconEl.innerText = "⇅";
+            }
+          }
+        });
+      }
+
+      function renderTable() {
+        const tbody = document.getElementById("tableBody");
+        const noResults = document.getElementById("noResults");
+        const countBadge = document.getElementById("itemsCountBadge");
+        tbody.innerHTML = "";
+
+        let filtered = itemsData.filter((item) => {
+          const matchesRoom =
+            currentRoomFilter === "all" || item.room === currentRoomFilter;
+          const matchesPriority =
+            selectedPriorities.size === 0 ||
+            selectedPriorities.has(item.priority);
+          const matchesStatus =
+            currentStatusFilter === "all" ||
+            item.status === currentStatusFilter;
+          const matchesSearch =
+            currentSearchTerm === "" ||
+            item.name.toLowerCase().includes(currentSearchTerm) ||
+            item.choice.toLowerCase().includes(currentSearchTerm) ||
+            item.notes.toLowerCase().includes(currentSearchTerm) ||
+            item.room.toLowerCase().includes(currentSearchTerm) ||
+            item.priority.toLowerCase().includes(currentSearchTerm);
+          return (
+            matchesRoom && matchesPriority && matchesStatus && matchesSearch
+          );
+        });
+
+        // Apply multi-column sorting
+        if (currentSortColumn) {
+          filtered.sort((a, b) => {
+            let valA = a[currentSortColumn];
+            let valB = b[currentSortColumn];
+
+            if (currentSortColumn === "price") {
+              valA = Number(valA) || 0;
+              valB = Number(valB) || 0;
+              return currentSortDirection === "asc" ? valA - valB : valB - valA;
+            } else if (currentSortColumn === "priority") {
+              const pOrder = { P0: 0, P1: 1, P2: 2 };
+              valA = pOrder[valA] !== undefined ? pOrder[valA] : 99;
+              valB = pOrder[valB] !== undefined ? pOrder[valB] : 99;
+              return currentSortDirection === "asc" ? valA - valB : valB - valA;
+            } else if (currentSortColumn === "status") {
+              const sOrder = { Selected: 0, TBD: 1 };
+              valA = sOrder[valA] !== undefined ? sOrder[valA] : 99;
+              valB = sOrder[valB] !== undefined ? sOrder[valB] : 99;
+              return currentSortDirection === "asc" ? valA - valB : valB - valA;
+            } else {
+              valA = String(valA || "").toLowerCase();
+              valB = String(valB || "").toLowerCase();
+              return currentSortDirection === "asc"
+                ? valA.localeCompare(valB)
+                : valB.localeCompare(valA);
+            }
+          });
+        }
+
+        if (countBadge) {
+          countBadge.innerText = `${filtered.length} of ${itemsData.length} items`;
+        }
+
+        if (filtered.length === 0) {
+          noResults.style.display = "block";
+        } else {
+          noResults.style.display = "none";
+          filtered.forEach((item) => {
+            const row = document.createElement("tr");
+
+            let priorityClass =
+              item.priority === "P0"
+                ? "p-0"
+                : item.priority === "P1"
+                  ? "p-1"
+                  : "p-2";
+            let statusClass =
+              item.status === "Selected" ? "status-selected" : "status-tbd";
+            let statusIcon = item.status === "Selected" ? "●" : "○";
+
+            row.innerHTML = `
+            <td>
+              <div class="item-name-cell">${item.name}</div>
+            </td>
+            <td>
+              <div class="item-choice-cell"><strong>${item.choice}</strong></div>
+              <div class="item-notes">${item.notes}</div>
+            </td>
+            <td><span class="badge-room">${item.room}</span></td>
+            <td><span class="badge-priority ${priorityClass}">${item.priority}</span></td>
+            <td><span class="status-badge ${statusClass}">${statusIcon} ${item.status}</span></td>
+            <td style="text-align: right;"><span class="price-tag">${item.priceDisplay}</span></td>
+          `;
+            tbody.appendChild(row);
+          });
+        }
+      }
+
+      function setRoomFilter(room, btnElement) {
+        currentRoomFilter = room;
+        btnElement.parentElement
+          .querySelectorAll(".filter-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        btnElement.classList.add("active");
+        renderTable();
+      }
+
+      function setPriorityFilter(priority, btnElement) {
+        const group = btnElement.parentElement;
+        const allBtn = group.querySelector('[data-priority="all"]');
+
+        if (priority === "all") {
+          selectedPriorities.clear();
+          group
+            .querySelectorAll(".filter-btn")
+            .forEach((btn) => btn.classList.remove("active"));
+          if (allBtn) allBtn.classList.add("active");
+        } else {
+          if (selectedPriorities.size === 0) {
+            selectedPriorities.add(priority);
+            if (allBtn) allBtn.classList.remove("active");
+            btnElement.classList.add("active");
+          } else {
+            if (selectedPriorities.has(priority)) {
+              selectedPriorities.delete(priority);
+              btnElement.classList.remove("active");
+            } else {
+              selectedPriorities.add(priority);
+              btnElement.classList.add("active");
+            }
+
+            if (
+              selectedPriorities.size === 0 ||
+              selectedPriorities.size === 3
+            ) {
+              selectedPriorities.clear();
+              group
+                .querySelectorAll(".filter-btn")
+                .forEach((btn) => btn.classList.remove("active"));
+              if (allBtn) allBtn.classList.add("active");
+            } else {
+              if (allBtn) allBtn.classList.remove("active");
+            }
+          }
+        }
+        renderTable();
+      }
+
+      function setStatusFilter(status, btnElement) {
+        currentStatusFilter = status;
+        btnElement.parentElement
+          .querySelectorAll(".filter-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        btnElement.classList.add("active");
+        renderTable();
+      }
+
+      function handleSearch() {
+        currentSearchTerm = document
+          .getElementById("searchInput")
+          .value.toLowerCase()
+          .trim();
+        renderTable();
+      }
+
+      function toggleSellerSavings() {
+        isSellerDeducted = document.getElementById("sellerToggle").checked;
+        updateKPIs();
+        initCharts();
+      }
+
+      function updateKPIs() {
+        const selectedItems = itemsData.filter((i) => i.status === "Selected");
+        const tbdItems = itemsData.filter((i) => i.status === "TBD");
+
+        let baseSelected = selectedItems.reduce(
+          (sum, i) => sum + (i.price || 0),
+          0,
+        );
+        let sellerSavings = 0;
+        selectedItems
+          .filter((i) => i.sellerDeductible)
+          .forEach((i) => {
+            sellerSavings += i.sellerSavings || i.price || 0;
+          });
+
+        let tbdMin = 0;
+        let tbdMax = 0;
+        tbdItems.forEach((i) => {
+          const prices = [...i.priceDisplay.matchAll(/\$(\d[\d,]*)/g)].map(
+            (m) => parseInt(m[1].replace(/,/g, ""), 10),
+          );
+          if (prices.length >= 2) {
+            tbdMin += prices[0];
+            tbdMax += prices[1];
+          } else if (prices.length === 1) {
+            tbdMin += prices[0];
+            tbdMax += prices[0];
+          } else {
+            tbdMin += i.price || 0;
+            tbdMax += i.price || 0;
+          }
+        });
+        const tbdMid = Math.round((tbdMin + tbdMax) / 2);
+
+        const effectiveSelected = isSellerDeducted
+          ? baseSelected - sellerSavings
+          : baseSelected;
+        const effectiveMinTotal = isSellerDeducted
+          ? baseSelected + tbdMin - sellerSavings
+          : baseSelected + tbdMin;
+        const effectiveMaxTotal = isSellerDeducted
+          ? baseSelected + tbdMax - sellerSavings
+          : baseSelected + tbdMax;
+        const effectiveMidTotal = isSellerDeducted
+          ? baseSelected + tbdMid - sellerSavings
+          : baseSelected + tbdMid;
+
+        const kpiSelectedEl = document.getElementById("kpiSelected");
+        if (kpiSelectedEl)
+          kpiSelectedEl.innerText = `$${effectiveSelected.toLocaleString()}`;
+
+        const kpiSelectedCountEl = document.getElementById("kpiSelectedCount");
+        if (kpiSelectedCountEl)
+          kpiSelectedCountEl.innerText = `${selectedItems.length} Items`;
+
+        const kpiTbdCountEl = document.getElementById("kpiTbdCount");
+        if (kpiTbdCountEl) kpiTbdCountEl.innerText = `${tbdItems.length} Items`;
+
+        const kpiTbdRangeEl = document.getElementById("kpiTbdRange");
+        if (kpiTbdRangeEl)
+          kpiTbdRangeEl.innerText = `$${(tbdMin / 1000).toFixed(1)}k – $${(tbdMax / 1000).toFixed(1)}k`;
+
+        const kpiTbdMetaEl = document.getElementById("kpiTbdMeta");
+        if (kpiTbdMetaEl)
+          kpiTbdMetaEl.innerText = `Midpoint average: ~$${tbdMid.toLocaleString()}`;
+
+        const kpiTotalEl = document.getElementById("kpiTotal");
+        if (kpiTotalEl)
+          kpiTotalEl.innerText = `$${(effectiveMinTotal / 1000).toFixed(1)}k – $${(effectiveMaxTotal / 1000).toFixed(1)}k`;
+
+        const kpiTotalSubEl = document.getElementById("kpiTotalSub");
+        if (kpiTotalSubEl)
+          kpiTotalSubEl.innerHTML = `Selected + TBD Midpoint: <strong>~$${effectiveMidTotal.toLocaleString()}</strong>`;
+
+        const kpiBadgeEl = document.getElementById("kpiBadge");
+        if (kpiBadgeEl)
+          kpiBadgeEl.innerText = isSellerDeducted
+            ? "With Seller Deductions"
+            : "Full Scope";
+
+        const p0Items = itemsData.filter(
+          (i) => i.status === "Selected" && i.priority === "P0",
+        );
+        let p0Sum = p0Items.reduce((sum, i) => sum + (i.price || 0), 0);
+        if (isSellerDeducted) {
+          p0Items
+            .filter((i) => i.sellerDeductible)
+            .forEach((i) => (p0Sum -= i.sellerSavings || i.price || 0));
+        }
+        const kpiP0El = document.getElementById("kpiP0Value");
+        if (kpiP0El) kpiP0El.innerText = `$${p0Sum.toLocaleString()}`;
+      }
+
+      function initCharts() {
+        // 1. Room Spend Chart (Individual distinct unbundled rooms)
+        const ctxRoom = document
+          .getElementById("roomSpendChart")
+          .getContext("2d");
+        if (roomSpendChartInstance) roomSpendChartInstance.destroy();
+
+        // Aggregate spend dynamically for each separate room
+        const roomSpendMap = {};
+        itemsData
+          .filter((i) => i.status === "Selected")
+          .forEach((item) => {
+            const room = item.room;
+            let cost = item.price;
+            if (isSellerDeducted && item.sellerDeductible) {
+              cost = 0;
+            }
+            roomSpendMap[room] = (roomSpendMap[room] || 0) + cost;
+          });
+
+        // Sort by cost descending so the chart is intuitive and beautiful
+        const sortedRooms = Object.keys(roomSpendMap).sort(
+          (a, b) => roomSpendMap[b] - roomSpendMap[a],
+        );
+        const roomSpendData = sortedRooms.map((r) => roomSpendMap[r]);
+
+        const roomColorMap = {
+          "Living Room": "#4A6B57", // Sage dark
+          "Whole House": "#628B73", // Sage medium
+          "Master Bed": "#947E6B", // Taupe dark
+          Balcony: "#B39F8D", // Taupe light
+          Kitchen: "#3A7D99", // Blue slate
+          Dining: "#D9822B", // Amber
+          Bathrooms: "#C95D46", // Coral
+          Entrance: "#7D603E", // Warm Bronze
+          "Bedroom 2 / Study": "#5E7D8A", // Slate
+        };
+
+        const palette = [
+          "#4A6B57",
+          "#628B73",
+          "#947E6B",
+          "#B39F8D",
+          "#3A7D99",
+          "#D9822B",
+          "#C95D46",
+          "#7D603E",
+          "#5E7D8A",
+          "#8A9A86",
+        ];
+        const backgroundColors = sortedRooms.map(
+          (r, idx) => roomColorMap[r] || palette[idx % palette.length],
+        );
+
+        roomSpendChartInstance = new Chart(ctxRoom, {
+          type: "doughnut",
+          data: {
+            labels: sortedRooms,
+            datasets: [
+              {
+                data: roomSpendData,
+                backgroundColor: backgroundColors,
+                borderWidth: 2,
+                borderColor: "#ffffff",
+                hoverOffset: 6,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: "right",
+                labels: {
+                  boxWidth: 12,
+                  padding: 10,
+                  font: { family: "'Plus Jakarta Sans', sans-serif", size: 11 },
+                },
+              },
+              tooltip: {
+                callbacks: {
+                  label: function (context) {
+                    const val = context.raw;
+                    const total = context.dataset.data.reduce(
+                      (a, b) => a + b,
+                      0,
+                    );
+                    const pct =
+                      total > 0 ? ((val / total) * 100).toFixed(1) : 0;
+                    return ` ${context.label}: $${val.toLocaleString()} SGD (${pct}%)`;
+                  },
+                },
+              },
+            },
+            cutout: "62%",
+          },
+        });
+
+        // 2. Priority Chart
+        const ctxPriority = document
+          .getElementById("priorityChart")
+          .getContext("2d");
+        if (priorityChartInstance) priorityChartInstance.destroy();
+
+        let p0Spend = isSellerDeducted ? 12200 - 650 : 12200;
+        let p1Spend = isSellerDeducted ? 9985 - 2035 : 9985;
+        let p2Spend = 7975;
+
+        priorityChartInstance = new Chart(ctxPriority, {
+          type: "bar",
+          data: {
+            labels: [
+              "P0 Critical Infra",
+              "P1 Essential Move-In",
+              "P2 Desirable / Post",
+            ],
+            datasets: [
+              {
+                label: "Committed Spend ($)",
+                data: [p0Spend, p1Spend, p2Spend],
+                backgroundColor: [
+                  "#C95D46", // P0 Coral
+                  "#D9822B", // P1 Amber
+                  "#3A7D99", // P2 Slate Blue
+                ],
+                borderRadius: 6,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: "y",
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: (ctx) => ` Cost: $${ctx.raw.toLocaleString()}`,
+                },
+              },
+            },
+            scales: {
+              x: {
+                grid: { color: "#e5e2d9" },
+                ticks: {
+                  font: { family: "'Plus Jakarta Sans', sans-serif", size: 11 },
+                  callback: (v) => "$" + v,
+                },
+              },
+              y: {
+                grid: { display: false },
+                ticks: {
+                  font: {
+                    family: "'Plus Jakarta Sans', sans-serif",
+                    size: 11,
+                    weight: "600",
+                  },
+                },
+              },
+            },
+          },
+        });
+      }
+
+      function parseAndApplyMarkdown(mdText) {
+        const lines = mdText.split("\n");
+        const newItems = [];
+        let inSelectedTable = false;
+        let inTbdTable = false;
+
+        for (let i = 0; i < lines.length; i++) {
+          const line = lines[i].trim();
+          if (line.includes("## 💰 Selected Items Summary")) {
+            inSelectedTable = true;
+            inTbdTable = false;
+            continue;
+          }
+          if (line.includes("## 🧾 Missing / TBD Items")) {
+            inTbdTable = true;
+            inSelectedTable = false;
+            continue;
+          }
+          if (
+            line.startsWith("## ") &&
+            !line.includes("Selected Items") &&
+            !line.includes("Missing / TBD")
+          ) {
+            inSelectedTable = false;
+            inTbdTable = false;
+          }
+
+          if (
+            inSelectedTable &&
+            line.startsWith("|") &&
+            !line.includes("---") &&
+            !line.includes(":--") &&
+            !line.includes("Item") &&
+            !line.includes("TOTAL")
+          ) {
+            const cols = line
+              .split("|")
+              .map((c) => c.trim())
+              .filter(Boolean);
+            if (cols.length >= 4) {
+              const rawName = cols[0].replace(/\*\*/g, "").trim();
+              if (
+                rawName.startsWith(":") ||
+                rawName.startsWith("-") ||
+                rawName === "Item"
+              )
+                continue;
+              const choice = cols[1].trim();
+              const priceStr = cols[2].trim();
+              const room = cols[3].trim();
+              const priceNum = priceStr.replace(/,/g, "").match(/\$(\d+)/);
+              const price = priceNum ? parseInt(priceNum[1], 10) : 0;
+              const nameLower = rawName.toLowerCase();
+
+              let priority = "P1";
+              if (
+                [
+                  "aircon",
+                  "lighting",
+                  "bidet",
+                  "curtain",
+                  "zip track",
+                  "fan",
+                  "lock",
+                  "mattress",
+                  "bed frame",
+                ].some((k) => nameLower.includes(k))
+              ) {
+                priority = "P0";
+              } else if (
+                [
+                  "tv",
+                  "soundbar",
+                  "hub",
+                  "mesh",
+                  "bench",
+                  "robot",
+                  "vacuum",
+                  "robo",
+                ].some((k) => nameLower.includes(k))
+              ) {
+                priority = "P2";
+              }
+
+              const sellerDeductible = [
+                "washer",
+                "dryer",
+                "fridge",
+                "lock",
+              ].some((k) => nameLower.includes(k));
+              let normRoom = room;
+              if (room.includes("Living")) normRoom = "Living Room";
+              else if (room.includes("Master")) normRoom = "Master Bed";
+              else if (room === "Entrance") normRoom = "Entrance";
+              else if (room === "Dining") normRoom = "Dining";
+              else if (room === "Balcony") normRoom = "Balcony";
+
+              newItems.push({
+                name: rawName,
+                choice,
+                notes: `Selected choice for ${normRoom}.`,
+                room: normRoom,
+                priority,
+                status: "Selected",
+                price,
+                priceDisplay: priceStr,
+                sellerDeductible,
+                sellerSavings: sellerDeductible ? price : 0,
+              });
+            }
+          }
+
+          if (
+            inTbdTable &&
+            line.startsWith("|") &&
+            !line.includes("---") &&
+            !line.includes(":--") &&
+            !line.includes("Item")
+          ) {
+            const cols = line
+              .split("|")
+              .map((c) => c.trim())
+              .filter(Boolean);
+            if (cols.length >= 5) {
+              const rawName = cols[0].replace(/\*\*/g, "").trim();
+              if (
+                rawName.startsWith(":") ||
+                rawName.startsWith("-") ||
+                rawName === "Item"
+              )
+                continue;
+              const priorityStr = cols[1].trim();
+              const room = cols[2].trim();
+              const budgetStr = cols[3].trim();
+              const notes = cols[4].trim();
+
+              let priority = "P1";
+              if (priorityStr.startsWith("0")) priority = "P0";
+              else if (priorityStr.startsWith("1")) priority = "P1";
+              else if (priorityStr.startsWith("2")) priority = "P2";
+
+              const prices = [...budgetStr.matchAll(/\$(\d[\d,]*)/g)].map((m) =>
+                parseInt(m[1].replace(/,/g, ""), 10),
+              );
+              const avgPrice = prices.length
+                ? Math.round(prices.reduce((a, b) => a + b, 0) / prices.length)
+                : 0;
+
+              let normRoom = room;
+              if (room.includes("Bedroom 2") || room.includes("Study"))
+                normRoom = "Bedroom 2 / Study";
+              else if (room === "Entrance") normRoom = "Entrance";
+              else if (room === "Dining") normRoom = "Dining";
+
+              newItems.push({
+                name: rawName,
+                choice: notes.split(".")[0] || rawName,
+                notes,
+                room: normRoom,
+                priority,
+                status: "TBD",
+                price: avgPrice,
+                priceDisplay: budgetStr,
+                sellerDeductible: false,
+                sellerSavings: 0,
+              });
+            }
+          }
+        }
+
+        if (newItems.length > 0) {
+          itemsData.length = 0;
+          itemsData.push(...newItems);
+          renderTable();
+          updateKPIs();
+          initCharts();
+          return true;
+        }
+        return false;
+      }
+
+      async function triggerMarkdownReload() {
+        try {
+          const res = await fetch(
+            "Personal/House%20Renovation%202026%20-%20Procurement%20Plan.md",
+          );
+          if (res.ok) {
+            const md = await res.text();
+            if (parseAndApplyMarkdown(md)) {
+              return;
+            }
+          }
+        } catch (err) {
+          // file:// CORS restriction
+        }
+        document.getElementById("noteFileInput").click();
+      }
+
+      function handleFileSelect(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const content = e.target.result;
+          if (parseAndApplyMarkdown(content)) {
+            console.log(`Synced ${itemsData.length} items from ${file.name}`);
+          }
+        };
+        reader.readAsText(file);
+      }
+
+      // Initialize
+      window.addEventListener("DOMContentLoaded", () => {
+        renderTable();
+        updateKPIs();
+        initCharts();
+
+        // Attempt live sync from markdown note if served over HTTP/local server
+        fetch("Personal/House%20Renovation%202026%20-%20Procurement%20Plan.md")
+          .then((res) => (res.ok ? res.text() : null))
+          .then((md) => {
+            if (md) parseAndApplyMarkdown(md);
+          })
+          .catch(() => {});
+      });
+    </script>
+  </body>
+</html>
