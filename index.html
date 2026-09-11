@@ -2462,7 +2462,7 @@
                   <span>📡</span> Sensors Deployed
                 </div>
                 <div class="zone-subcol-content">
-                  • <strong>1x Aqara mmWave Sensor (FP1E / FP2)</strong><br />
+                  • <strong>1x Aqara Presence Sensor FP2 (Multi-Zone)</strong><br />
                   • North Curtain Pelmet pointing lengthwise South<br />
                   <span style="color: var(--accent-p0); font-weight: 600"
                     >5V USB-C (Concealed in curtain pelmet)</span
@@ -3085,13 +3085,13 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Aqara Presence Sensor FP1E</strong></td>
-                  <td>Living Room (TV Console)</td>
-                  <td>FP1E • Zigbee 3.0</td>
-                  <td>5V USB-C (Concealed)</td>
+                  <td><strong>Aqara Presence Sensor FP2</strong></td>
+                  <td>Living & Dining (North Pelmet pointing South)</td>
+                  <td>FP2 • Wi-Fi 2.4GHz (Multi-Zone)</td>
+                  <td>5V USB-C (Concealed in Pelmet)</td>
                   <td>1</td>
-                  <td>$50</td>
-                  <td><strong>$50</strong></td>
+                  <td>$130</td>
+                  <td><strong>$130</strong></td>
                   <td>
                     <a
                       href="https://shopee.sg/product/1245098924/55259558090"
@@ -3244,7 +3244,7 @@
                   <td>9 Units</td>
                   <td>—</td>
                   <td style="color: var(--sage-primary); font-size: 0.95rem">
-                    $188 SGD
+                    $268 SGD
                   </td>
                   <td>—</td>
                 </tr>
@@ -3526,6 +3526,15 @@ automation:
                   <rect x="370" y="300" width="45" height="30" rx="3" fill="#ffffff" fill-opacity="0.8" />
                   <rect x="320" y="440" width="130" height="180" rx="6" fill="#ffffff" fill-opacity="0.6" />
                   <line x1="320" y1="480" x2="450" y2="480" stroke-dasharray="3 3" />
+
+                  <!-- Bed 2 PC Workstation & Shared Wall Pass-Through Conduit -->
+                  <rect x="525" y="380" width="60" height="90" rx="4" fill="#ffffff" fill-opacity="0.85" stroke="#3b82f6" stroke-width="1.5" />
+                  <rect x="535" y="395" width="18" height="40" rx="2" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="1" />
+                  <text x="544" y="420" font-size="7" font-weight="800" fill="#2563eb" text-anchor="middle" stroke="none" transform="rotate(-90 544 420)">PC RIG</text>
+                  <!-- 32mm Wall Pass-Through Conduit Sleeve -->
+                  <line x1="585" y1="425" x2="602" y2="425" stroke="#2563eb" stroke-width="3" stroke-dasharray="3 2" />
+                  <circle cx="590" cy="425" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="1.5" />
+                  <text x="586" y="415" font-size="7.5" font-weight="800" fill="#2563eb" text-anchor="end" stroke="none">HDMI 2.1 / USB HOLE</text>
 
                   <!-- Common Bath Fixtures -->
                   <rect x="320" y="655" width="85" height="130" rx="4" stroke-dasharray="4 3" />
@@ -3831,7 +3840,7 @@ automation:
                     <circle cx="0" cy="0" r="13" fill="#4a6b57" stroke="#ffffff" stroke-width="2.5" />
                     <text x="0" y="4" font-size="9" fill="#ffffff" font-weight="800" text-anchor="middle" pointer-events="none">📡</text>
                     <rect x="16" y="-10" width="168" height="20" rx="4" fill="#1e221f" opacity="0.9" />
-                    <text x="22" y="3" font-size="9" fill="#ffffff" font-weight="700" pointer-events="none">mmWave (Living + Dining)</text>
+                    <text x="22" y="3" font-size="9" fill="#ffffff" font-weight="700" pointer-events="none">Aqara FP2 (Multi-Zone)</text>
                   </g>
 
                   <!-- 2. Entrance Main Door Contact Sensor (T1) -->
@@ -4083,16 +4092,16 @@ automation:
       },
       {
             "name": "Smart Switch (Dining)",
-            "choice": "Aqara H2 1-Gang (Dining pendant light)",
+            "choice": "Aqara Dimmer Switch H2 EU (Rotary Dimmer Dial)",
             "notes": "Selected choice for Dining.",
             "room": "Dining",
             "priority": "P0",
             "status": "Selected",
-            "price": 47,
-            "priceDisplay": "$47",
-            "availableAt": "Aqara Official / Souky",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+            "price": 88,
+            "priceDisplay": "$88",
+            "availableAt": "PassionHome / HomeSmart / Shopee",
+            "linkText": "PassionHome",
+            "linkUrl": "https://passionhome.sg",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -4218,7 +4227,7 @@ automation:
       },
       {
             "name": "Dumb Bulbs (Dining Pendant)",
-            "choice": "2x Warm White E27 LED Bulbs",
+            "choice": "2x Triac Dimmable Warm White E27 LED Bulbs",
             "notes": "Selected choice for Dining.",
             "room": "Dining",
             "priority": "P1",
@@ -4653,16 +4662,16 @@ automation:
       },
       {
             "name": "Sensors Fleet (Whole House)",
-            "choice": "1x FP1E mmWave + 4x Door Contact T1 + 3x PIR Motion P1 + 1x Bedside Switch",
+            "choice": "1x Aqara FP2 mmWave (Multi-Zone) + 4x Door Contact T1 + 3x PIR P1 + 1x Bedside Switch",
             "notes": "Selected choice for Whole House.",
             "room": "Whole House",
             "priority": "P0",
             "status": "Selected",
-            "price": 188,
-            "priceDisplay": "$188",
+            "price": 268,
+            "priceDisplay": "$268",
             "availableAt": "Aqara Official / Shopee",
             "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg/product/1245098924/50459563309",
+            "linkUrl": "https://shopee.sg/product/1245098924/55259558090",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -5743,9 +5752,9 @@ automation:
           icon: "🛋️",
           type: "High Traffic • Sofa Lounge & Cinema",
           zoneId: "zone-Living-Room",
-          sensors: "• <strong>1x Aqara mmWave Sensor (FP1E / FP2)</strong> (North Pelmet)<br>• Protocol: Zigbee 3.0 / Wi-Fi • 5V USB-C in Pelmet<br>• Lengthwise radar sweeps south across Living & Dining.",
+          sensors: "• <strong>1x Aqara Presence Sensor FP2 (Multi-Zone)</strong> (North Pelmet)<br>• Wi-Fi 2.4GHz • 5V USB-C in Pelmet<br>• Lengthwise radar sweeps South across Living (Zone 1) & Dining (Zone 2).<br>• <strong>Through-Wall Conduit:</strong> 32mm sleeve to Bed 2 PC rig for 4K 120Hz TV & USB wireless dongles.",
           lighting: "• <strong>Aqara H2 3-Gang Switch</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Relay Mode</span>)<br>• 6x High-CRI (>90) Recessed Downlights<br>• Fanco DC Ceiling Fan (RF Bond Bridge)",
-          automations: "• <strong>Sofa Presence:</strong> Keeps ambient lights & AC active while reading or watching TV.<br>• <strong>15-Min Auto-Powerdown:</strong> Auto-dims lights and sets AC to eco when room clears.",
+          automations: "• <strong>Sofa Presence (FP2 Zone 1):</strong> Keeps ambient lights & AC active while reading or watching TV.<br>• <strong>15-Min Auto-Powerdown:</strong> Auto-dims lights and sets AC to eco when room clears.",
           filterRoom: "Living Room"
         },
         "Entrance": {
@@ -5797,7 +5806,7 @@ automation:
           icon: "💻",
           type: "Private • WFH Office & Guest Room",
           zoneId: "zone-Bedroom-2",
-          sensors: "• Manual Aqara H2 Switch Control<br>• High reliability manual switch presses<br>• Avoids annoying Zoom auto-offs",
+          sensors: "• Manual Aqara H2 Switch Control (Zero Zoom dropouts)<br>• <strong>High-Performance PC Rig:</strong> Backed onto shared wall with 32mm conduit pass-through sleeve directly to Living Room TV console.",
           lighting: "• <strong>Aqara H2 2-Gang Switch</strong> (Door Box)<br>• 3x High-CRI Recessed Downlights<br>• Mitsubishi Electric Starmex 9k BTU AC",
           automations: "• <strong>WFH Focus Scene:</strong> Single click energizes full 4500K bright white for desk work and Zoom calls.<br>• <strong>Guest Mode:</strong> Double click sets downlights to 3000K relaxed warm white.",
           filterRoom: "Bedroom 2 / Study"
@@ -5806,9 +5815,9 @@ automation:
           icon: "🍽️",
           type: "High Traffic • Sintered Stone Dining Table",
           zoneId: "zone-Dining",
-          sensors: "• Covered by lengthwise mmWave radar from Living pelmet<br>• Multi-zone presence (Aqara FP2) or unified open-concept zone (FP1E)",
-          lighting: "• <strong>Aqara H2 1-Gang Switch</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Relay Mode</span>)<br>• 2x High-CRI Warm White Pendant Bulbs<br>• Automated via lengthwise mmWave radar",
-          automations: "• <strong>Mealtime Presence:</strong> mmWave turns on dining pendant automatically when table is occupied.<br>• <strong>Auto-Off:</strong> Shuts off automatically after table clears.",
+          sensors: "• Lengthwise mmWave radar from North pelmet (Aqara FP2 Zone 2: Dining Table)<br>• Multi-zone autonomous presence tracking",
+          lighting: "• <strong>Aqara Dimmer Switch H2 (Rotary Dial)</strong><br>• 2x Triac Dimmable Warm White Pendant Bulbs<br>• Tactile 1% physical dial + automated scene control",
+          automations: "• <strong>Mealtime Presence (FP2 Zone 2):</strong> mmWave turns on dining pendant automatically when table is occupied.<br>• <strong>Auto-Off:</strong> Shuts off automatically after table clears.",
           filterRoom: "Dining"
         },
         "Balcony": {
