@@ -1045,10 +1045,18 @@
         height: 3px;
       }
 
-      .circadian-step.morning::before { background: #e09b53; }
-      .circadian-step.day::before { background: #5798b3; }
-      .circadian-step.evening::before { background: #c27c59; }
-      .circadian-step.night::before { background: #735994; }
+      .circadian-step.morning::before {
+        background: #e09b53;
+      }
+      .circadian-step.day::before {
+        background: #5798b3;
+      }
+      .circadian-step.evening::before {
+        background: #c27c59;
+      }
+      .circadian-step.night::before {
+        background: #735994;
+      }
 
       .circadian-time {
         font-family: var(--font-heading);
@@ -1100,7 +1108,9 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
       }
 
       .zone-card:hover {
@@ -1142,9 +1152,18 @@
         color: var(--text-secondary);
       }
 
-      .zone-badge.high-traffic { background: #fdf3e7; color: #b86a1f; }
-      .zone-badge.private { background: #eaf4f8; color: #2d6b85; }
-      .zone-badge.utility { background: #e8efe9; color: #3b5f49; }
+      .zone-badge.high-traffic {
+        background: #fdf3e7;
+        color: #b86a1f;
+      }
+      .zone-badge.private {
+        background: #eaf4f8;
+        color: #2d6b85;
+      }
+      .zone-badge.utility {
+        background: #e8efe9;
+        color: #3b5f49;
+      }
 
       .zone-subgrid {
         display: grid;
@@ -1269,7 +1288,246 @@
         font-size: 0.75rem;
         line-height: 1.4;
         overflow-x: auto;
-        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-family:
+          ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      }
+
+      /* Interactive Map Styles */
+      .map-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      @media (max-width: 1080px) {
+        .map-wrapper {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .map-main-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 16px;
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .map-toolbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+
+      .map-controls-group {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .map-tool-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 5px 12px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        background: var(--bg-surface-alt);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-full);
+        color: var(--text-secondary);
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .map-tool-btn:hover {
+        background: var(--border-subtle);
+        color: var(--text-primary);
+      }
+
+      .map-tool-btn.active {
+        background: var(--sage-primary);
+        color: #ffffff;
+        border-color: var(--sage-primary);
+      }
+
+      .map-viewport-container {
+        position: relative;
+        width: 100%;
+        background: #ffffff;
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-sm);
+        overflow: hidden;
+        box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.03);
+      }
+
+      .map-svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* SVG Room Polygons */
+      .map-room-zone {
+        fill: rgba(74, 107, 87, 0.04);
+        stroke: rgba(74, 107, 87, 0.28);
+        stroke-width: 2.5;
+        stroke-dasharray: 6 5;
+        cursor: pointer;
+        transition: all 0.25s ease;
+      }
+
+      .map-room-zone:hover {
+        fill: rgba(74, 107, 87, 0.22);
+        stroke: var(--sage-primary);
+        stroke-width: 3.5;
+        stroke-dasharray: none;
+      }
+
+      .map-room-zone.selected {
+        fill: rgba(74, 107, 87, 0.32);
+        stroke: var(--sage-primary);
+        stroke-width: 4;
+        stroke-dasharray: none;
+        filter: drop-shadow(0 0 10px rgba(74, 107, 87, 0.5));
+      }
+
+      /* SVG Device Markers */
+      .sensor-pin {
+        cursor: pointer;
+        transition: transform 0.2s ease, filter 0.2s ease;
+      }
+
+      .sensor-pin:hover {
+        transform: scale(1.22);
+        filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
+      }
+
+      .radar-wave {
+        animation: radarPulse 2.4s infinite ease-out;
+        transform-origin: 620px 340px;
+      }
+
+      @keyframes radarPulse {
+        0% {
+          opacity: 0.85;
+          r: 25px;
+        }
+        100% {
+          opacity: 0;
+          r: 160px;
+        }
+      }
+
+      .light-glow {
+        transition: fill 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
+      }
+
+      /* Room Inspector Sidebar Card */
+      .inspector-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 16px;
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        max-height: 860px;
+        overflow-y: auto;
+      }
+
+      .inspector-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+
+      .inspector-icon {
+        font-size: 1.8rem;
+        background: var(--bg-surface-alt);
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--radius-sm);
+        flex-shrink: 0;
+      }
+
+      .inspector-title h3 {
+        font-family: var(--font-heading);
+        font-size: 1.18rem;
+        color: var(--text-primary);
+        line-height: 1.2;
+      }
+
+      .inspector-title span {
+        font-size: 0.76rem;
+        color: var(--text-muted);
+      }
+
+      .inspector-section {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .inspector-section-title {
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--text-secondary);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .inspector-box {
+        background: var(--bg-surface-alt);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-sm);
+        padding: 10px 12px;
+        font-size: 0.78rem;
+        line-height: 1.42;
+      }
+
+      .inspector-item-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+        border-bottom: 1px dashed var(--border-subtle);
+        font-size: 0.76rem;
+      }
+
+      .inspector-item-row:last-child {
+        border-bottom: none;
+      }
+
+      .sim-status-banner {
+        padding: 8px 12px;
+        border-radius: var(--radius-sm);
+        font-size: 0.78rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: #fdf7ec;
+        border: 1px solid #ebd7b8;
+        color: #7d5a2b;
       }
 
     </style>
@@ -1278,18 +1536,19 @@
     <!-- Global Master Header -->
     <header>
       <div class="container">
-        <div class="header-top" style="margin-bottom: 8px;">
+        <div class="header-top" style="margin-bottom: 8px">
           <div>
             <div class="badge-tag">House Renovation 2026</div>
             <h1>Condominium Renovation Master Plan</h1>
             <div class="header-subtitle">
-              Integrated master plan: procurement, budget analytics, and smart home automation
+              Integrated master plan: procurement, budget analytics, and smart
+              home automation
             </div>
           </div>
         </div>
 
         <!-- Top Main Tab Navigation Bar -->
-        <div class="nav-tabs-bar" style="margin-top: 14px; margin-bottom: 0px;">
+        <div class="nav-tabs-bar" style="margin-top: 14px; margin-bottom: 0px">
           <button
             class="nav-tab-btn active"
             id="tabBtnProcurement"
@@ -1311,16 +1570,34 @@
       </div>
     </header>
 
-    <main class="container" style="padding-top: 16px;">
+    <main class="container" style="padding-top: 16px">
       <!-- Tab View 1: Procurement & Budget -->
       <div id="tabViewProcurement" class="tab-view">
-        <div style="margin-bottom: 12px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 8px;">
+        <div
+          style="
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 8px;
+          "
+        >
           <div>
-            <h2 style="font-family: var(--font-heading); font-size: 1.28rem; font-weight: 700; color: var(--text-primary); margin-bottom: 2px;">
+            <h2
+              style="
+                font-family: var(--font-heading);
+                font-size: 1.28rem;
+                font-weight: 700;
+                color: var(--text-primary);
+                margin-bottom: 2px;
+              "
+            >
               Procurement & Budget Visualizer
             </h2>
-            <p style="font-size: 0.8rem; color: var(--text-secondary);">
-              Comprehensive breakdown of research, finalized selections, and estimated TBD fixtures
+            <p style="font-size: 0.8rem; color: var(--text-secondary)">
+              Comprehensive breakdown of research, finalized selections, and
+              estimated TBD fixtures
             </p>
           </div>
         </div>
@@ -1366,420 +1643,444 @@
             </label>
           </div>
         </div>
-      <!-- KPI Summary Cards -->
-      <div class="kpi-grid">
-        <div class="kpi-card selected">
-          <div class="kpi-title">
-            <span>Selected Committed</span>
-            <span class="kpi-pill" id="kpiSelectedCount">23 Items</span>
+        <!-- KPI Summary Cards -->
+        <div class="kpi-grid">
+          <div class="kpi-card selected">
+            <div class="kpi-title">
+              <span>Selected Committed</span>
+              <span class="kpi-pill" id="kpiSelectedCount">23 Items</span>
+            </div>
+            <div class="kpi-value" id="kpiSelected">$28,125</div>
+            <div class="kpi-meta">High-priority finalized choices</div>
           </div>
-          <div class="kpi-value" id="kpiSelected">$28,125</div>
-          <div class="kpi-meta">High-priority finalized choices</div>
+
+          <div class="kpi-card tbd">
+            <div class="kpi-title">
+              <span>TBD Estimated Range</span>
+              <span class="kpi-pill" id="kpiTbdCount">16 Items</span>
+            </div>
+            <div class="kpi-value" id="kpiTbdRange">$8.5k – $20.2k</div>
+            <div class="kpi-meta" id="kpiTbdMeta">
+              Midpoint average: ~$14,325
+            </div>
+          </div>
+
+          <div class="kpi-card total">
+            <div class="kpi-title">
+              <span>Estimated All-In Total</span>
+              <span class="kpi-pill" id="kpiBadge">Full Scope</span>
+            </div>
+            <div class="kpi-value" id="kpiTotal">$36.6k – $48.3k</div>
+            <div class="kpi-meta" id="kpiTotalSub">
+              Selected + TBD Midpoint: <strong>~$42,450</strong>
+            </div>
+          </div>
+
+          <div class="kpi-card p0">
+            <div class="kpi-title">
+              <span>P0 Reno Critical Infra</span>
+              <span class="kpi-pill">Day 1 Critical</span>
+            </div>
+            <div class="kpi-value" id="kpiP0Value">$15,150</div>
+            <div class="kpi-meta">
+              Aircon, Bed & Mattress, Fans (x2), Curtains, Lighting, Zip Track
+            </div>
+          </div>
         </div>
 
-        <div class="kpi-card tbd">
-          <div class="kpi-title">
-            <span>TBD Estimated Range</span>
-            <span class="kpi-pill" id="kpiTbdCount">16 Items</span>
+        <!-- Infographics / Charts Grid -->
+        <div class="infographics-grid">
+          <!-- Room Spend Doughnut Chart -->
+          <div class="chart-card">
+            <div class="card-header">
+              <h3>💰 Spend by Room (Selected Items)</h3>
+              <span
+                style="
+                  font-size: 0.8rem;
+                  color: var(--text-muted);
+                  font-weight: 500;
+                "
+                >Unbundled individual room spend</span
+              >
+            </div>
+            <div class="chart-container">
+              <canvas id="roomSpendChart"></canvas>
+            </div>
           </div>
-          <div class="kpi-value" id="kpiTbdRange">$8.5k – $20.2k</div>
-          <div class="kpi-meta" id="kpiTbdMeta">Midpoint average: ~$14,325</div>
-        </div>
 
-        <div class="kpi-card total">
-          <div class="kpi-title">
-            <span>Estimated All-In Total</span>
-            <span class="kpi-pill" id="kpiBadge">Full Scope</span>
-          </div>
-          <div class="kpi-value" id="kpiTotal">$36.6k – $48.3k</div>
-          <div class="kpi-meta" id="kpiTotalSub">
-            Selected + TBD Midpoint: <strong>~$42,450</strong>
-          </div>
-        </div>
-
-        <div class="kpi-card p0">
-          <div class="kpi-title">
-            <span>P0 Reno Critical Infra</span>
-            <span class="kpi-pill">Day 1 Critical</span>
-          </div>
-          <div class="kpi-value" id="kpiP0Value">$15,150</div>
-          <div class="kpi-meta">
-            Aircon, Bed & Mattress, Fans (x2), Curtains, Lighting, Zip Track
-          </div>
-        </div>
-      </div>
-
-      <!-- Infographics / Charts Grid -->
-      <div class="infographics-grid">
-        <!-- Room Spend Doughnut Chart -->
-        <div class="chart-card">
-          <div class="card-header">
-            <h3>💰 Spend by Room (Selected Items)</h3>
-            <span
-              style="
-                font-size: 0.8rem;
-                color: var(--text-muted);
-                font-weight: 500;
-              "
-              >Unbundled individual room spend</span
+          <!-- Priority Breakdown & Smart Home Stack -->
+          <div class="chart-card">
+            <div class="card-header">
+              <h3>⚡ Priority & Smart Home Hubs</h3>
+              <span
+                style="
+                  font-size: 0.8rem;
+                  color: var(--text-muted);
+                  font-weight: 500;
+                "
+                >Local-First Automation</span
+              >
+            </div>
+            <div
+              class="chart-container"
+              style="min-height: 180px; max-height: 180px"
             >
-          </div>
-          <div class="chart-container">
-            <canvas id="roomSpendChart"></canvas>
+              <canvas id="priorityChart"></canvas>
+            </div>
+
+            <div class="smart-stack-grid">
+              <div class="stack-mini-card">
+                <div class="mini-title">Brain / Hub</div>
+                <div class="mini-choice">HA Green + ZBT</div>
+                <div class="mini-cost">$250 • Zigbee/Matter</div>
+              </div>
+              <div class="stack-mini-card">
+                <div class="mini-title">Switches / Lighting</div>
+                <div class="mini-choice">Aqara H2 + T2</div>
+                <div class="mini-cost">$800 • Neutral Wire</div>
+              </div>
+              <div class="stack-mini-card">
+                <div class="mini-title">Fan Control</div>
+                <div class="mini-choice">Bond Bridge + RF</div>
+                <div class="mini-cost">$600 • Fanco DC</div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Priority Breakdown & Smart Home Stack -->
-        <div class="chart-card">
-          <div class="card-header">
-            <h3>⚡ Priority & Smart Home Hubs</h3>
-            <span
-              style="
-                font-size: 0.8rem;
-                color: var(--text-muted);
-                font-weight: 500;
-              "
-              >Local-First Automation</span
-            >
+        <!-- Interactive Filters & Table Header -->
+        <div class="controls-section">
+          <!-- Row 1: Room Filter -->
+          <div class="controls-row">
+            <div class="filter-group">
+              <span class="filter-label">Room:</span>
+              <button
+                class="filter-btn active"
+                onclick="setRoomFilter('all', this)"
+              >
+                All Rooms
+              </button>
+              <button
+                class="filter-btn"
+                onclick="setRoomFilter('Living Room', this)"
+              >
+                Living Room
+              </button>
+              <button
+                class="filter-btn"
+                onclick="setRoomFilter('Master Bed', this)"
+              >
+                Master Bed
+              </button>
+              <button
+                class="filter-btn"
+                onclick="setRoomFilter('Whole House', this)"
+              >
+                Whole House
+              </button>
+              <button
+                class="filter-btn"
+                onclick="setRoomFilter('Kitchen', this)"
+              >
+                Kitchen
+              </button>
+              <button
+                class="filter-btn"
+                onclick="setRoomFilter('Bathrooms', this)"
+              >
+                Bathrooms
+              </button>
+              <button
+                class="filter-btn"
+                onclick="setRoomFilter('Entrance', this)"
+              >
+                Entrance
+              </button>
+              <button
+                class="filter-btn"
+                onclick="setRoomFilter('Dining', this)"
+              >
+                Dining
+              </button>
+              <button
+                class="filter-btn"
+                onclick="setRoomFilter('Balcony', this)"
+              >
+                Balcony
+              </button>
+              <button
+                class="filter-btn"
+                onclick="setRoomFilter('Bedroom 2 / Study', this)"
+              >
+                Bed 2 / Study
+              </button>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 10px">
+              <input
+                type="text"
+                id="searchInput"
+                class="search-input"
+                placeholder="Search item, brand, specs..."
+                oninput="handleSearch()"
+              />
+              <span id="itemsCountBadge" class="count-indicator">38 items</span>
+            </div>
           </div>
+
+          <!-- Row 2: Priority & Status Filter -->
           <div
-            class="chart-container"
-            style="min-height: 180px; max-height: 180px"
+            class="controls-row"
+            style="
+              border-top: 1px dashed var(--border-subtle);
+              padding-top: 8px;
+            "
           >
-            <canvas id="priorityChart"></canvas>
-          </div>
+            <div class="filter-group" id="priorityFilterGroup">
+              <span class="filter-label">Priority:</span>
+              <button
+                class="filter-btn active"
+                data-priority="all"
+                onclick="setPriorityFilter('all', this)"
+              >
+                All Priorities
+              </button>
+              <button
+                class="filter-btn p0-btn"
+                data-priority="P0"
+                onclick="setPriorityFilter('P0', this)"
+              >
+                🔴 P0 Critical
+              </button>
+              <button
+                class="filter-btn p1-btn"
+                data-priority="P1"
+                onclick="setPriorityFilter('P1', this)"
+              >
+                🟠 P1 Essential
+              </button>
+              <button
+                class="filter-btn p2-btn"
+                data-priority="P2"
+                onclick="setPriorityFilter('P2', this)"
+              >
+                🔵 P2 Desirable
+              </button>
+            </div>
 
-          <div class="smart-stack-grid">
-            <div class="stack-mini-card">
-              <div class="mini-title">Brain / Hub</div>
-              <div class="mini-choice">HA Green + ZBT</div>
-              <div class="mini-cost">$250 • Zigbee/Matter</div>
-            </div>
-            <div class="stack-mini-card">
-              <div class="mini-title">Switches / Lighting</div>
-              <div class="mini-choice">Aqara H2 + T2</div>
-              <div class="mini-cost">$800 • Neutral Wire</div>
-            </div>
-            <div class="stack-mini-card">
-              <div class="mini-title">Fan Control</div>
-              <div class="mini-choice">Bond Bridge + RF</div>
-              <div class="mini-cost">$600 • Fanco DC</div>
+            <div class="filter-group">
+              <span class="filter-label">Status:</span>
+              <button
+                class="filter-btn active"
+                onclick="setStatusFilter('all', this)"
+              >
+                All
+              </button>
+              <button
+                class="filter-btn"
+                onclick="setStatusFilter('Selected', this)"
+              >
+                Selected
+              </button>
+              <button class="filter-btn" onclick="setStatusFilter('TBD', this)">
+                TBD
+              </button>
+              <button
+                class="filter-btn"
+                style="
+                  margin-left: 8px;
+                  background: #e8efe9;
+                  color: var(--sage-primary);
+                "
+                onclick="triggerMarkdownReload()"
+                title="Load latest from markdown note"
+              >
+                🔄 Reload from Note
+              </button>
+              <input
+                type="file"
+                id="noteFileInput"
+                accept=".md"
+                style="display: none"
+                onchange="handleFileSelect(event)"
+              />
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Interactive Filters & Table Header -->
-      <div class="controls-section">
-        <!-- Row 1: Room Filter -->
-        <div class="controls-row">
-          <div class="filter-group">
-            <span class="filter-label">Room:</span>
-            <button
-              class="filter-btn active"
-              onclick="setRoomFilter('all', this)"
-            >
-              All Rooms
-            </button>
-            <button
-              class="filter-btn"
-              onclick="setRoomFilter('Living Room', this)"
-            >
-              Living Room
-            </button>
-            <button
-              class="filter-btn"
-              onclick="setRoomFilter('Master Bed', this)"
-            >
-              Master Bed
-            </button>
-            <button
-              class="filter-btn"
-              onclick="setRoomFilter('Whole House', this)"
-            >
-              Whole House
-            </button>
-            <button class="filter-btn" onclick="setRoomFilter('Kitchen', this)">
-              Kitchen
-            </button>
-            <button
-              class="filter-btn"
-              onclick="setRoomFilter('Bathrooms', this)"
-            >
-              Bathrooms
-            </button>
-            <button
-              class="filter-btn"
-              onclick="setRoomFilter('Entrance', this)"
-            >
-              Entrance
-            </button>
-            <button class="filter-btn" onclick="setRoomFilter('Dining', this)">
-              Dining
-            </button>
-            <button class="filter-btn" onclick="setRoomFilter('Balcony', this)">
-              Balcony
-            </button>
-            <button
-              class="filter-btn"
-              onclick="setRoomFilter('Bedroom 2 / Study', this)"
-            >
-              Bed 2 / Study
-            </button>
-          </div>
-
-          <div style="display: flex; align-items: center; gap: 10px">
-            <input
-              type="text"
-              id="searchInput"
-              class="search-input"
-              placeholder="Search item, brand, specs..."
-              oninput="handleSearch()"
-            />
-            <span id="itemsCountBadge" class="count-indicator">38 items</span>
+        <!-- Main Data Table -->
+        <div class="table-card">
+          <table class="items-table" id="procurementTable">
+            <thead>
+              <tr>
+                <th
+                  class="sortable"
+                  onclick="handleSort('name')"
+                  style="width: 18%"
+                >
+                  Item & Category
+                  <span class="sort-icon" id="sort-name">⇅</span>
+                </th>
+                <th style="width: 23%">Selected / Recommendation</th>
+                <th
+                  class="sortable"
+                  onclick="handleSort('availableAt')"
+                  style="width: 14%"
+                >
+                  Available At
+                  <span class="sort-icon" id="sort-availableAt">⇅</span>
+                </th>
+                <th style="width: 11%">Store Link</th>
+                <th
+                  class="sortable"
+                  onclick="handleSort('room')"
+                  style="width: 10%"
+                >
+                  Room <span class="sort-icon" id="sort-room">⇅</span>
+                </th>
+                <th
+                  class="sortable"
+                  onclick="handleSort('priority')"
+                  style="width: 8%"
+                >
+                  Priority <span class="sort-icon" id="sort-priority">⇅</span>
+                </th>
+                <th
+                  class="sortable"
+                  onclick="handleSort('status')"
+                  style="width: 7%"
+                >
+                  Status <span class="sort-icon" id="sort-status">⇅</span>
+                </th>
+                <th
+                  class="sortable"
+                  onclick="handleSort('price')"
+                  style="width: 9%; text-align: right"
+                >
+                  Cost (SGD) <span class="sort-icon" id="sort-price">⇅</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <!-- Populated by JavaScript -->
+            </tbody>
+          </table>
+          <div id="noResults" class="no-results" style="display: none">
+            No procurement items found matching your filter or search query.
           </div>
         </div>
 
-        <!-- Row 2: Priority & Status Filter -->
-        <div
-          class="controls-row"
-          style="border-top: 1px dashed var(--border-subtle); padding-top: 8px"
+        <!-- Reno Coordination Watchlist & Milestones -->
+        <h2
+          style="
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+            color: var(--text-primary);
+          "
         >
-          <div class="filter-group" id="priorityFilterGroup">
-            <span class="filter-label">Priority:</span>
-            <button
-              class="filter-btn active"
-              data-priority="all"
-              onclick="setPriorityFilter('all', this)"
-            >
-              All Priorities
-            </button>
-            <button
-              class="filter-btn p0-btn"
-              data-priority="P0"
-              onclick="setPriorityFilter('P0', this)"
-            >
-              🔴 P0 Critical
-            </button>
-            <button
-              class="filter-btn p1-btn"
-              data-priority="P1"
-              onclick="setPriorityFilter('P1', this)"
-            >
-              🟠 P1 Essential
-            </button>
-            <button
-              class="filter-btn p2-btn"
-              data-priority="P2"
-              onclick="setPriorityFilter('P2', this)"
-            >
-              🔵 P2 Desirable
-            </button>
+          🛠️ Renovation Coordination Watchlist
+        </h2>
+        <div class="reno-grid">
+          <div class="reno-card">
+            <div class="reno-card-header">
+              <span style="color: var(--accent-p0)">⚡</span> Electrical &
+              Neutral Wiring
+            </div>
+            <ul class="reno-list">
+              <li>
+                <strong>Pull neutral wire to all wall boxes:</strong> Critical
+                for Aqara H2 reliability and long-term smart switches.
+              </li>
+              <li>
+                <strong>Power to windows:</strong> Pull power for Living Room &
+                Master Bed motorized curtains before ceiling plastering.
+              </li>
+              <li>
+                <strong>4-wire AC power to Balcony:</strong> Required for
+                motorized zip-track mounting and smart relay.
+              </li>
+              <li>
+                <strong>Power beside toilets:</strong> Required for Panasonic
+                E-Bidet seats in both bathrooms.
+              </li>
+              <li>
+                <strong>Power points:</strong> Living sofa, robot dock base,
+                water dispenser, study desk, bedside tables.
+              </li>
+            </ul>
           </div>
 
-          <div class="filter-group">
-            <span class="filter-label">Status:</span>
-            <button
-              class="filter-btn active"
-              onclick="setStatusFilter('all', this)"
-            >
-              All
-            </button>
-            <button
-              class="filter-btn"
-              onclick="setStatusFilter('Selected', this)"
-            >
-              Selected
-            </button>
-            <button class="filter-btn" onclick="setStatusFilter('TBD', this)">
-              TBD
-            </button>
-            <button
-              class="filter-btn"
-              style="
-                margin-left: 8px;
-                background: #e8efe9;
-                color: var(--sage-primary);
-              "
-              onclick="triggerMarkdownReload()"
-              title="Load latest from markdown note"
-            >
-              🔄 Reload from Note
-            </button>
-            <input
-              type="file"
-              id="noteFileInput"
-              accept=".md"
-              style="display: none"
-              onchange="handleFileSelect(event)"
-            />
+          <div class="reno-card">
+            <div class="reno-card-header">
+              <span style="color: var(--sage-primary)">💧</span> Plumbing &
+              Appliance Points
+            </div>
+            <ul class="reno-list">
+              <li>
+                <strong>Aircon Piping:</strong> SWG 22 copper + 1/2" Armaflex
+                insulation to prevent condensation.
+              </li>
+              <li>
+                <strong>Kitchen Washer/Dryer:</strong> Verify 600mm width, 850mm
+                height, inlet, drain and door swing clearance.
+              </li>
+              <li>
+                <strong>Water Dispenser & Sink:</strong> Confirm counter cutout
+                and under-sink water filter / leak sensor space.
+              </li>
+              <li>
+                <strong>Robot Vacuum Dock:</strong> Reserve power and water
+                drain/inlet if opting for auto-refill dock.
+              </li>
+            </ul>
+          </div>
+
+          <div class="reno-card">
+            <div class="reno-card-header">
+              <span style="color: var(--taupe-primary)">📐</span> Carpentry &
+              Acoustics
+            </div>
+            <ul class="reno-list">
+              <li>
+                <strong>Floor soundproofing underlay:</strong> Must be installed
+                before laying final flooring.
+              </li>
+              <li>
+                <strong>TV Console depth:</strong> Ensure enough clearance for
+                Samsung HW-Q990F soundbar and cable conduits.
+              </li>
+              <li>
+                <strong>Climbing Gear storage:</strong> Custom ventilated metal
+                cabinetry with internal airflow fans.
+              </li>
+              <li>
+                <strong>Curtain ceiling pelmets:</strong> Ensure double-track
+                recess depth for motorized day/night curtains.
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-
-      <!-- Main Data Table -->
-      <div class="table-card">
-        <table class="items-table" id="procurementTable">
-          <thead>
-            <tr>
-              <th
-                class="sortable"
-                onclick="handleSort('name')"
-                style="width: 18%"
-              >
-                Item & Category <span class="sort-icon" id="sort-name">⇅</span>
-              </th>
-              <th style="width: 23%">Selected / Recommendation</th>
-              <th
-                class="sortable"
-                onclick="handleSort('availableAt')"
-                style="width: 14%"
-              >
-                Available At
-                <span class="sort-icon" id="sort-availableAt">⇅</span>
-              </th>
-              <th style="width: 11%">Store Link</th>
-              <th
-                class="sortable"
-                onclick="handleSort('room')"
-                style="width: 10%"
-              >
-                Room <span class="sort-icon" id="sort-room">⇅</span>
-              </th>
-              <th
-                class="sortable"
-                onclick="handleSort('priority')"
-                style="width: 8%"
-              >
-                Priority <span class="sort-icon" id="sort-priority">⇅</span>
-              </th>
-              <th
-                class="sortable"
-                onclick="handleSort('status')"
-                style="width: 7%"
-              >
-                Status <span class="sort-icon" id="sort-status">⇅</span>
-              </th>
-              <th
-                class="sortable"
-                onclick="handleSort('price')"
-                style="width: 9%; text-align: right"
-              >
-                Cost (SGD) <span class="sort-icon" id="sort-price">⇅</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody id="tableBody">
-            <!-- Populated by JavaScript -->
-          </tbody>
-        </table>
-        <div id="noResults" class="no-results" style="display: none">
-          No procurement items found matching your filter or search query.
-        </div>
-      </div>
-
-      <!-- Reno Coordination Watchlist & Milestones -->
-      <h2
-        style="
-          font-family: var(--font-heading);
-          font-size: 1.4rem;
-          margin-bottom: 18px;
-          color: var(--text-primary);
-        "
-      >
-        🛠️ Renovation Coordination Watchlist
-      </h2>
-      <div class="reno-grid">
-        <div class="reno-card">
-          <div class="reno-card-header">
-            <span style="color: var(--accent-p0)">⚡</span> Electrical & Neutral
-            Wiring
-          </div>
-          <ul class="reno-list">
-            <li>
-              <strong>Pull neutral wire to all wall boxes:</strong> Critical for
-              Aqara H2 reliability and long-term smart switches.
-            </li>
-            <li>
-              <strong>Power to windows:</strong> Pull power for Living Room &
-              Master Bed motorized curtains before ceiling plastering.
-            </li>
-            <li>
-              <strong>4-wire AC power to Balcony:</strong> Required for
-              motorized zip-track mounting and smart relay.
-            </li>
-            <li>
-              <strong>Power beside toilets:</strong> Required for Panasonic
-              E-Bidet seats in both bathrooms.
-            </li>
-            <li>
-              <strong>Power points:</strong> Living sofa, robot dock base, water
-              dispenser, study desk, bedside tables.
-            </li>
-          </ul>
-        </div>
-
-        <div class="reno-card">
-          <div class="reno-card-header">
-            <span style="color: var(--sage-primary)">💧</span> Plumbing &
-            Appliance Points
-          </div>
-          <ul class="reno-list">
-            <li>
-              <strong>Aircon Piping:</strong> SWG 22 copper + 1/2" Armaflex
-              insulation to prevent condensation.
-            </li>
-            <li>
-              <strong>Kitchen Washer/Dryer:</strong> Verify 600mm width, 850mm
-              height, inlet, drain and door swing clearance.
-            </li>
-            <li>
-              <strong>Water Dispenser & Sink:</strong> Confirm counter cutout
-              and under-sink water filter / leak sensor space.
-            </li>
-            <li>
-              <strong>Robot Vacuum Dock:</strong> Reserve power and water
-              drain/inlet if opting for auto-refill dock.
-            </li>
-          </ul>
-        </div>
-
-        <div class="reno-card">
-          <div class="reno-card-header">
-            <span style="color: var(--taupe-primary)">📐</span> Carpentry &
-            Acoustics
-          </div>
-          <ul class="reno-list">
-            <li>
-              <strong>Floor soundproofing underlay:</strong> Must be installed
-              before laying final flooring.
-            </li>
-            <li>
-              <strong>TV Console depth:</strong> Ensure enough clearance for
-              Samsung HW-Q990F soundbar and cable conduits.
-            </li>
-            <li>
-              <strong>Climbing Gear storage:</strong> Custom ventilated metal
-              cabinetry with internal airflow fans.
-            </li>
-            <li>
-              <strong>Curtain ceiling pelmets:</strong> Ensure double-track
-              recess depth for motorized day/night curtains.
-            </li>
-          </ul>
-        </div>
-      </div>
       </div>
       <!-- End Tab View 1: Procurement & Budget -->
 
       <!-- Tab View 2: Sensors & Smart Lighting Architecture -->
-      <div id="tabViewSensors" class="tab-view" style="display: none;">
-        <div style="margin-bottom: 14px;">
-          <h2 style="font-family: var(--font-heading); font-size: 1.28rem; font-weight: 700; color: var(--text-primary); margin-bottom: 2px;">
+      <div id="tabViewSensors" class="tab-view" style="display: none">
+        <div style="margin-bottom: 14px">
+          <h2
+            style="
+              font-family: var(--font-heading);
+              font-size: 1.28rem;
+              font-weight: 700;
+              color: var(--text-primary);
+              margin-bottom: 2px;
+            "
+          >
             Sensors & Smart Lighting Architecture
           </h2>
-          <p style="font-size: 0.8rem; color: var(--text-secondary);">
-            Pragmatic, low-power sensor layout and decoupled smart lighting routines by zone
+          <p style="font-size: 0.8rem; color: var(--text-secondary)">
+            Pragmatic, low-power sensor layout and decoupled smart lighting
+            routines by zone
           </p>
         </div>
         <!-- Core Architecture Principles -->
@@ -1789,7 +2090,9 @@
               <span>🛋️</span> 1 mmWave Only (Living Room)
             </div>
             <div class="principle-desc">
-              mmWave presence is strictly reserved for the sofa/TV lounge where people sit motionless for hours. Avoids $600+ cost, ghost wall penetration, and messy USB cords in other rooms.
+              mmWave presence is strictly reserved for the sofa/TV lounge where
+              people sit motionless for hours. Avoids $600+ cost, ghost wall
+              penetration, and messy USB cords in other rooms.
             </div>
           </div>
 
@@ -1798,7 +2101,9 @@
               <span>🚿</span> "Wasp in a Box" (Bathrooms)
             </div>
             <div class="principle-desc">
-              Uses battery Door Contact + PIR Motion. When motion is detected and the door closes, occupancy locks ON indefinitely. Lights NEVER shut off while showering or on the toilet!
+              Uses battery Door Contact + PIR Motion. When motion is detected
+              and the door closes, occupancy locks ON indefinitely. Lights NEVER
+              shut off while showering or on the toilet!
             </div>
           </div>
 
@@ -1807,7 +2112,9 @@
               <span>⚡</span> Aqara H2 Decoupled Mode
             </div>
             <div class="principle-desc">
-              Neutral-wire 230V mains is permanently supplied to smart CCT bulbs & fans. Physical switch presses trigger Zigbee automations without cutting power to downstream radios.
+              Neutral-wire 230V mains is permanently supplied to smart CCT bulbs
+              & fans. Physical switch presses trigger Zigbee automations without
+              cutting power to downstream radios.
             </div>
           </div>
 
@@ -1816,7 +2123,9 @@
               <span>☀️</span> Adaptive Circadian Rhythm
             </div>
             <div class="principle-desc">
-              Home Assistant shifts color temperatures seamlessly throughout the day (2200K amber candlelight &rarr; 5000K crisp daylight &rarr; 2700K warm relax) to protect sleep cycles.
+              Home Assistant shifts color temperatures seamlessly throughout the
+              day (2200K amber candlelight &rarr; 5000K crisp daylight &rarr;
+              2700K warm relax) to protect sleep cycles.
             </div>
           </div>
         </div>
@@ -1873,11 +2182,19 @@
         <div class="circadian-card">
           <div class="circadian-header">
             <div>
-              <h3 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-primary); margin-bottom: 2px;">
+              <h3
+                style="
+                  font-family: var(--font-heading);
+                  font-size: 1.1rem;
+                  color: var(--text-primary);
+                  margin-bottom: 2px;
+                "
+              >
                 ☀️ 24-Hour Circadian Lighting Engine
               </h3>
-              <div style="font-size: 0.8rem; color: var(--text-secondary);">
-                Automatic Kelvin color temperature and brightness transitions synced to the solar cycle
+              <div style="font-size: 0.8rem; color: var(--text-secondary)">
+                Automatic Kelvin color temperature and brightness transitions
+                synced to the solar cycle
               </div>
             </div>
             <span class="badge-tag">Home Assistant Adaptive Lighting</span>
@@ -1887,44 +2204,64 @@
             <div class="circadian-step morning">
               <div class="circadian-time">
                 <span>06:00 – 08:30</span>
-                <span class="circadian-temp" style="color: #c27c59;">2700K • 30%</span>
+                <span class="circadian-temp" style="color: #c27c59"
+                  >2700K • 30%</span
+                >
               </div>
-              <strong style="font-size: 0.82rem; color: var(--text-primary);">🌅 Gentle Wakeup & Coffee</strong>
+              <strong style="font-size: 0.82rem; color: var(--text-primary)"
+                >🌅 Gentle Wakeup & Coffee</strong
+              >
               <div class="circadian-routine">
-                Kitchen under-cabinet warm strip only. Glare-free soft light while making early morning coffee before sunrise.
+                Kitchen under-cabinet warm strip only. Glare-free soft light
+                while making early morning coffee before sunrise.
               </div>
             </div>
 
             <div class="circadian-step day">
               <div class="circadian-time">
                 <span>08:30 – 18:00</span>
-                <span class="circadian-temp" style="color: #2d6b85;">5000K • 100%</span>
+                <span class="circadian-temp" style="color: #2d6b85"
+                  >5000K • 100%</span
+                >
               </div>
-              <strong style="font-size: 0.82rem; color: var(--text-primary);">☀️ Focus & High Productivity</strong>
+              <strong style="font-size: 0.82rem; color: var(--text-primary)"
+                >☀️ Focus & High Productivity</strong
+              >
               <div class="circadian-routine">
-                Crisp daylight in Study/Bedrooms and Kitchen. Maximizes alertness, color accuracy, and energy for WFH tasks.
+                Crisp daylight in Study/Bedrooms and Kitchen. Maximizes
+                alertness, color accuracy, and energy for WFH tasks.
               </div>
             </div>
 
             <div class="circadian-step evening">
               <div class="circadian-time">
                 <span>18:00 – 22:00</span>
-                <span class="circadian-temp" style="color: #b86a1f;">3000K • 60%</span>
+                <span class="circadian-temp" style="color: #b86a1f"
+                  >3000K • 60%</span
+                >
               </div>
-              <strong style="font-size: 0.82rem; color: var(--text-primary);">🌇 Dinner & Lounging Relax</strong>
+              <strong style="font-size: 0.82rem; color: var(--text-primary)"
+                >🌇 Dinner & Lounging Relax</strong
+              >
               <div class="circadian-routine">
-                Warm ambient downlights and intimate dining pendant. Signals the brain to produce natural melatonin.
+                Warm ambient downlights and intimate dining pendant. Signals the
+                brain to produce natural melatonin.
               </div>
             </div>
 
             <div class="circadian-step night">
               <div class="circadian-time">
                 <span>22:00 – 06:00</span>
-                <span class="circadian-temp" style="color: #735994;">2200K • 15%</span>
+                <span class="circadian-temp" style="color: #735994"
+                  >2200K • 15%</span
+                >
               </div>
-              <strong style="font-size: 0.82rem; color: var(--text-primary);">🌙 Night Wind-Down / Piddle</strong>
+              <strong style="font-size: 0.82rem; color: var(--text-primary)"
+                >🌙 Night Wind-Down / Piddle</strong
+              >
               <div class="circadian-routine">
-                Bathroom mirror light and hallway downlights dimmed to amber candle glow. Zero eye shock during midnight runs.
+                Bathroom mirror light and hallway downlights dimmed to amber
+                candle glow. Zero eye shock during midnight runs.
               </div>
             </div>
           </div>
@@ -1933,19 +2270,52 @@
         <!-- Zone Architecture Interactive Cards Header -->
         <div class="zone-section-header">
           <div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary);">
+            <h3
+              style="
+                font-family: var(--font-heading);
+                font-size: 1.15rem;
+                color: var(--text-primary);
+              "
+            >
               🏡 Zone-by-Zone Sensor & Lighting Layout
             </h3>
-            <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;">
-              Tailored sensor hardware, switch decoupling, and real daily routine automations
+            <div
+              style="
+                font-size: 0.8rem;
+                color: var(--text-secondary);
+                margin-top: 2px;
+              "
+            >
+              Tailored sensor hardware, switch decoupling, and real daily
+              routine automations
             </div>
           </div>
 
           <div class="filter-group">
-            <button class="filter-btn active" onclick="filterZoneCards('all', this)">All Zones (9)</button>
-            <button class="filter-btn" onclick="filterZoneCards('high-traffic', this)">High Traffic (3)</button>
-            <button class="filter-btn" onclick="filterZoneCards('private', this)">Private & Baths (4)</button>
-            <button class="filter-btn" onclick="filterZoneCards('utility', this)">Utility & Outdoor (2)</button>
+            <button
+              class="filter-btn active"
+              onclick="filterZoneCards('all', this)"
+            >
+              All Zones (9)
+            </button>
+            <button
+              class="filter-btn"
+              onclick="filterZoneCards('high-traffic', this)"
+            >
+              High Traffic (3)
+            </button>
+            <button
+              class="filter-btn"
+              onclick="filterZoneCards('private', this)"
+            >
+              Private & Baths (4)
+            </button>
+            <button
+              class="filter-btn"
+              onclick="filterZoneCards('utility', this)"
+            >
+              Utility & Outdoor (2)
+            </button>
           </div>
         </div>
 
@@ -1958,7 +2328,9 @@
                 <span class="zone-icon">🚪</span>
                 <div>
                   <div class="zone-name">Entrance & Foyer</div>
-                  <div style="font-size: 0.72rem; color: var(--text-muted);">Drop-zone & Shoe Bench</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted)">
+                    Drop-zone & Shoe Bench
+                  </div>
                 </div>
               </div>
               <span class="zone-badge high-traffic">High Traffic</span>
@@ -1966,18 +2338,24 @@
 
             <div class="zone-subgrid">
               <div>
-                <div class="zone-subcol-title"><span>📡</span> Sensors Deployed</div>
+                <div class="zone-subcol-title">
+                  <span>📡</span> Sensors Deployed
+                </div>
                 <div class="zone-subcol-content">
-                  • <strong>1x Aqara Door Contact T1</strong> (Main Door)<br>
-                  • <strong>1x Aqara PIR Motion P1</strong> (Shoe Bench)<br>
-                  <span style="color: var(--sage-primary); font-weight: 600;">100% Battery Powered (CR1632 / CR2450)</span>
+                  • <strong>1x Aqara Door Contact T1</strong> (Main Door)<br />
+                  • <strong>1x Aqara PIR Motion P1</strong> (Shoe Bench)<br />
+                  <span style="color: var(--sage-primary); font-weight: 600"
+                    >100% Battery Powered (CR1632 / CR2450)</span
+                  >
                 </div>
               </div>
               <div>
-                <div class="zone-subcol-title"><span>💡</span> Switches & Lights</div>
+                <div class="zone-subcol-title">
+                  <span>💡</span> Switches & Lights
+                </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H2 2-Gang</strong> (Neutral Wire)<br>
-                  • 1x High-CRI Ceiling Downlight<br>
+                  • <strong>Aqara H2 2-Gang</strong> (Neutral Wire)<br />
+                  • 1x High-CRI Ceiling Downlight<br />
                   • 1x 2m 24V COB Warm Strip (Shoe Cabinet)
                 </div>
               </div>
@@ -1986,21 +2364,36 @@
             <div class="zone-automations">
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>0ms Instant Welcome Home:</strong> Door cracks open &rarr; 0ms trigger instantly illuminates floating shoe cabinet LED + downlight (after sunset).</div>
+                <div>
+                  <strong>0ms Instant Welcome Home:</strong> Door cracks open
+                  &rarr; 0ms trigger instantly illuminates floating shoe cabinet
+                  LED + downlight (after sunset).
+                </div>
               </div>
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Hands-Free Gear-Up Departure:</strong> Walking to the foyer triggers PIR, turning on shoe bench light for 3 mins while tying boots & buckling helmet before touching the door.</div>
+                <div>
+                  <strong>Hands-Free Gear-Up Departure:</strong> Walking to the
+                  foyer triggers PIR, turning on shoe bench light for 3 mins
+                  while tying boots & buckling helmet before touching the door.
+                </div>
               </div>
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Departure Complete:</strong> Door closes + no motion for 2 mins &rarr; entrance lights turn off automatically.</div>
+                <div>
+                  <strong>Departure Complete:</strong> Door closes + no motion
+                  for 2 mins &rarr; entrance lights turn off automatically.
+                </div>
               </div>
             </div>
 
             <div class="zone-why-box">
-              <div class="zone-why-title"><span>💡</span> Why Door Contact + PIR Motion?</div>
-              Door contact eliminates the 1–2s lag of motion sensors when entering with heavy moto gear. PIR detects movement inside before the door opens. Zero dangling USB cables.
+              <div class="zone-why-title">
+                <span>💡</span> Why Door Contact + PIR Motion?
+              </div>
+              Door contact eliminates the 1–2s lag of motion sensors when
+              entering with heavy moto gear. PIR detects movement inside before
+              the door opens. Zero dangling USB cables.
             </div>
           </div>
 
@@ -2011,7 +2404,9 @@
                 <span class="zone-icon">🛋️</span>
                 <div>
                   <div class="zone-name">Living Room</div>
-                  <div style="font-size: 0.72rem; color: var(--text-muted);">Sofa Lounge & Home Theater</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted)">
+                    Sofa Lounge & Home Theater
+                  </div>
                 </div>
               </div>
               <span class="zone-badge high-traffic">High Traffic</span>
@@ -2019,18 +2414,27 @@
 
             <div class="zone-subgrid">
               <div>
-                <div class="zone-subcol-title"><span>📡</span> Sensors Deployed</div>
+                <div class="zone-subcol-title">
+                  <span>📡</span> Sensors Deployed
+                </div>
                 <div class="zone-subcol-content">
-                  • <strong>1x Aqara FP1E mmWave Sensor</strong><br>
-                  • Placed on TV Console facing sofa<br>
-                  <span style="color: var(--accent-p0); font-weight: 600;">5V USB-C (Concealed behind console)</span>
+                  • <strong>1x Aqara FP1E mmWave Sensor</strong><br />
+                  • Placed on TV Console facing sofa<br />
+                  <span style="color: var(--accent-p0); font-weight: 600"
+                    >5V USB-C (Concealed behind console)</span
+                  >
                 </div>
               </div>
               <div>
-                <div class="zone-subcol-title"><span>💡</span> Switches & Lights</div>
+                <div class="zone-subcol-title">
+                  <span>💡</span> Switches & Lights
+                </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H2 3-Gang</strong> (<span style="color: var(--sage-primary); font-weight: 700;">Decoupled</span>)<br>
-                  • 6x Aqara T2 CCT Spotlights (2700K-6500K)<br>
+                  • <strong>Aqara H2 3-Gang</strong> (<span
+                    style="color: var(--sage-primary); font-weight: 700"
+                    >Decoupled</span
+                  >)<br />
+                  • 6x Aqara T2 CCT Spotlights (2700K-6500K)<br />
                   • Fanco DC Fan (Bond Bridge RF)
                 </div>
               </div>
@@ -2039,21 +2443,37 @@
             <div class="zone-automations">
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Micro-Movement Presence:</strong> Detects chest breathing while watching TV or reading. Lights stay active for hours without waving arms.</div>
+                <div>
+                  <strong>Micro-Movement Presence:</strong> Detects chest
+                  breathing while watching TV or reading. Lights stay active for
+                  hours without waving arms.
+                </div>
               </div>
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Cinema / Bias Lighting:</strong> When LG OLED TV turns on after dark, spotlights dim to 20% warm white (2700K) for comfortable viewing.</div>
+                <div>
+                  <strong>Cinema / Bias Lighting:</strong> When LG OLED TV turns
+                  on after dark, spotlights dim to 20% warm white (2700K) for
+                  comfortable viewing.
+                </div>
               </div>
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>15-Min Auto-Powerdown:</strong> 15 minutes of zero presence shuts off lights, sets AC to eco, and pauses soundbar.</div>
+                <div>
+                  <strong>15-Min Auto-Powerdown:</strong> 15 minutes of zero
+                  presence shuts off lights, sets AC to eco, and pauses
+                  soundbar.
+                </div>
               </div>
             </div>
 
             <div class="zone-why-box">
-              <div class="zone-why-title"><span>💡</span> Why mmWave belongs ONLY here:</div>
-              Living room is the only space where people remain still for hours. TV console provides an invisible USB-C power source without exposed cords.
+              <div class="zone-why-title">
+                <span>💡</span> Why mmWave belongs ONLY here:
+              </div>
+              Living room is the only space where people remain still for hours.
+              TV console provides an invisible USB-C power source without
+              exposed cords.
             </div>
           </div>
 
@@ -2064,7 +2484,9 @@
                 <span class="zone-icon">🚿</span>
                 <div>
                   <div class="zone-name">Master Bathroom</div>
-                  <div style="font-size: 0.72rem; color: var(--text-muted);">En-suite Wet/Dry Zone</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted)">
+                    En-suite Wet/Dry Zone
+                  </div>
                 </div>
               </div>
               <span class="zone-badge private">Private</span>
@@ -2072,18 +2494,25 @@
 
             <div class="zone-subgrid">
               <div>
-                <div class="zone-subcol-title"><span>📡</span> Sensors Deployed</div>
+                <div class="zone-subcol-title">
+                  <span>📡</span> Sensors Deployed
+                </div>
                 <div class="zone-subcol-content">
-                  • <strong>1x Aqara Door Contact T1</strong> (Door frame)<br>
-                  • <strong>1x Aqara PIR Motion P1</strong> (Ceiling/Corner)<br>
-                  <span style="color: var(--sage-primary); font-weight: 600;">100% Battery ("Wasp in a Box")</span>
+                  • <strong>1x Aqara Door Contact T1</strong> (Door frame)<br />
+                  •
+                  <strong>1x Aqara PIR Motion P1</strong> (Ceiling/Corner)<br />
+                  <span style="color: var(--sage-primary); font-weight: 600"
+                    >100% Battery ("Wasp in a Box")</span
+                  >
                 </div>
               </div>
               <div>
-                <div class="zone-subcol-title"><span>💡</span> Switches & Lights</div>
+                <div class="zone-subcol-title">
+                  <span>💡</span> Switches & Lights
+                </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H2 2-Gang</strong> (Outside Bath Box)<br>
-                  • 2x IP44 Splash-Rated Downlights<br>
+                  • <strong>Aqara H2 2-Gang</strong> (Outside Bath Box)<br />
+                  • 2x IP44 Splash-Rated Downlights<br />
                   • 1x Vanity Mirror LED Light
                 </div>
               </div>
@@ -2092,21 +2521,36 @@
             <div class="zone-automations">
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Wasp in a Box Occupancy:</strong> Motion detected + Door closed = Occupancy locked ON. Lights NEVER turn off while showering behind glass or on toilet!</div>
+                <div>
+                  <strong>Wasp in a Box Occupancy:</strong> Motion detected +
+                  Door closed = Occupancy locked ON. Lights NEVER turn off while
+                  showering behind glass or on toilet!
+                </div>
               </div>
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Late-Night Piddle Mode (11PM–6AM):</strong> Motion turns on ONLY the vanity mirror light at 15% warm amber (2200K). Zero blinding glare.</div>
+                <div>
+                  <strong>Late-Night Piddle Mode (11PM–6AM):</strong> Motion
+                  turns on ONLY the vanity mirror light at 15% warm amber
+                  (2200K). Zero blinding glare.
+                </div>
               </div>
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Exit & Exhaust:</strong> Opening door starts 90s timer. Auto-off when room clears.</div>
+                <div>
+                  <strong>Exit & Exhaust:</strong> Opening door starts 90s
+                  timer. Auto-off when room clears.
+                </div>
               </div>
             </div>
 
             <div class="zone-why-box">
-              <div class="zone-why-title"><span>💡</span> The "Wasp in a Box" Secret:</div>
-              mmWave in bathrooms frequently false-triggers through partition walls or detects hot shower steam. Door Contact + PIR provides 100% reliability for $35 total.
+              <div class="zone-why-title">
+                <span>💡</span> The "Wasp in a Box" Secret:
+              </div>
+              mmWave in bathrooms frequently false-triggers through partition
+              walls or detects hot shower steam. Door Contact + PIR provides
+              100% reliability for $35 total.
             </div>
           </div>
 
@@ -2117,7 +2561,9 @@
                 <span class="zone-icon">🚿</span>
                 <div>
                   <div class="zone-name">Common Bathroom</div>
-                  <div style="font-size: 0.72rem; color: var(--text-muted);">Guest & Living Area Access</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted)">
+                    Guest & Living Area Access
+                  </div>
                 </div>
               </div>
               <span class="zone-badge private">Private</span>
@@ -2125,18 +2571,24 @@
 
             <div class="zone-subgrid">
               <div>
-                <div class="zone-subcol-title"><span>📡</span> Sensors Deployed</div>
+                <div class="zone-subcol-title">
+                  <span>📡</span> Sensors Deployed
+                </div>
                 <div class="zone-subcol-content">
-                  • <strong>1x Aqara Door Contact T1</strong> (Door frame)<br>
-                  • <strong>1x Aqara PIR Motion P1</strong> (Interior)<br>
-                  <span style="color: var(--sage-primary); font-weight: 600;">100% Battery ("Wasp in a Box")</span>
+                  • <strong>1x Aqara Door Contact T1</strong> (Door frame)<br />
+                  • <strong>1x Aqara PIR Motion P1</strong> (Interior)<br />
+                  <span style="color: var(--sage-primary); font-weight: 600"
+                    >100% Battery ("Wasp in a Box")</span
+                  >
                 </div>
               </div>
               <div>
-                <div class="zone-subcol-title"><span>💡</span> Switches & Lights</div>
+                <div class="zone-subcol-title">
+                  <span>💡</span> Switches & Lights
+                </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H2 2-Gang</strong> (Outside Door Box)<br>
-                  • 2x IP44 Splash-Rated Downlights<br>
+                  • <strong>Aqara H2 2-Gang</strong> (Outside Door Box)<br />
+                  • 2x IP44 Splash-Rated Downlights<br />
                   • 1x Vanity Mirror LED Light
                 </div>
               </div>
@@ -2145,21 +2597,32 @@
             <div class="zone-automations">
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Guest Hands-Free Walk-In:</strong> Walking in triggers instant illumination without guests fumbling for outside switches.</div>
+                <div>
+                  <strong>Guest Hands-Free Walk-In:</strong> Walking in triggers
+                  instant illumination without guests fumbling for outside
+                  switches.
+                </div>
               </div>
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Shower Safe:</strong> Door closed keeps lights on indefinitely until guest exits.</div>
+                <div>
+                  <strong>Shower Safe:</strong> Door closed keeps lights on
+                  indefinitely until guest exits.
+                </div>
               </div>
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Night Auto-Dim:</strong> After 11 PM, automatically switches to warm dimmed path mode.</div>
+                <div>
+                  <strong>Night Auto-Dim:</strong> After 11 PM, automatically
+                  switches to warm dimmed path mode.
+                </div>
               </div>
             </div>
 
             <div class="zone-why-box">
               <div class="zone-why-title"><span>💡</span> Guest Friendly:</div>
-              Guests never have to guess which gang controls what outside the door. Walking in works automatically.
+              Guests never have to guess which gang controls what outside the
+              door. Walking in works automatically.
             </div>
           </div>
 
@@ -2170,7 +2633,9 @@
                 <span class="zone-icon">🍳</span>
                 <div>
                   <div class="zone-name">Kitchen</div>
-                  <div style="font-size: 0.72rem; color: var(--text-muted);">Cooking & Morning Coffee</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted)">
+                    Cooking & Morning Coffee
+                  </div>
                 </div>
               </div>
               <span class="zone-badge utility">Utility</span>
@@ -2178,18 +2643,24 @@
 
             <div class="zone-subgrid">
               <div>
-                <div class="zone-subcol-title"><span>📡</span> Sensors Deployed</div>
+                <div class="zone-subcol-title">
+                  <span>📡</span> Sensors Deployed
+                </div>
                 <div class="zone-subcol-content">
-                  • <strong>Time-Conditioned Switch</strong><br>
-                  • (Optional Under-Cabinet PIR)<br>
-                  <span style="color: var(--text-secondary);">Relies on smart button logic</span>
+                  • <strong>Time-Conditioned Switch</strong><br />
+                  • (Optional Under-Cabinet PIR)<br />
+                  <span style="color: var(--text-secondary)"
+                    >Relies on smart button logic</span
+                  >
                 </div>
               </div>
               <div>
-                <div class="zone-subcol-title"><span>💡</span> Switches & Lights</div>
+                <div class="zone-subcol-title">
+                  <span>💡</span> Switches & Lights
+                </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H2 2-Gang</strong> (Entrance Box)<br>
-                  • 3x High-CRI Recessed Downlights<br>
+                  • <strong>Aqara H2 2-Gang</strong> (Entrance Box)<br />
+                  • 3x High-CRI Recessed Downlights<br />
                   • 1x 3m 24V COB Warm Strip (Under-Cabinet)
                 </div>
               </div>
@@ -2198,21 +2669,36 @@
             <div class="zone-automations">
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>7:00 AM Coffee Routine:</strong> Pressing switch between 06:00–08:30 AM turns on ONLY the under-cabinet warm strip at 30%. Glare-free soft light before sunrise.</div>
+                <div>
+                  <strong>7:00 AM Coffee Routine:</strong> Pressing switch
+                  between 06:00–08:30 AM turns on ONLY the under-cabinet warm
+                  strip at 30%. Glare-free soft light before sunrise.
+                </div>
               </div>
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Meal Prep (Day/Evening):</strong> Wall switch energizes full 4000K crisp downlights + counter strip for shadowless cutting and cooking.</div>
+                <div>
+                  <strong>Meal Prep (Day/Evening):</strong> Wall switch
+                  energizes full 4000K crisp downlights + counter strip for
+                  shadowless cutting and cooking.
+                </div>
               </div>
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Double-Click Override:</strong> Double tap at any hour instantly forces 100% full brightness.</div>
+                <div>
+                  <strong>Double-Click Override:</strong> Double tap at any hour
+                  instantly forces 100% full brightness.
+                </div>
               </div>
             </div>
 
             <div class="zone-why-box">
-              <div class="zone-why-title"><span>💡</span> Why no motion sensor?</div>
-              In open kitchens, motion sensors accidentally trigger whenever someone walks to the fridge or balcony. Time-conditioned switch presses deliver exact routine needs.
+              <div class="zone-why-title">
+                <span>💡</span> Why no motion sensor?
+              </div>
+              In open kitchens, motion sensors accidentally trigger whenever
+              someone walks to the fridge or balcony. Time-conditioned switch
+              presses deliver exact routine needs.
             </div>
           </div>
 
@@ -2223,7 +2709,9 @@
                 <span class="zone-icon">🛏️</span>
                 <div>
                   <div class="zone-name">Master Bedroom</div>
-                  <div style="font-size: 0.72rem; color: var(--text-muted);">Sleep Sanctuary & Wardrobe</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted)">
+                    Sleep Sanctuary & Wardrobe
+                  </div>
                 </div>
               </div>
               <span class="zone-badge private">Private</span>
@@ -2231,18 +2719,27 @@
 
             <div class="zone-subgrid">
               <div>
-                <div class="zone-subcol-title"><span>📡</span> Sensors Deployed</div>
+                <div class="zone-subcol-title">
+                  <span>📡</span> Sensors Deployed
+                </div>
                 <div class="zone-subcol-content">
-                  • <strong>1x Bedside Wireless Mini Switch</strong><br>
-                  • <strong>1x Wardrobe Door Contact T1</strong><br>
-                  <span style="color: var(--accent-p0); font-weight: 600;">NO motion/presence sensors!</span>
+                  • <strong>1x Bedside Wireless Mini Switch</strong><br />
+                  • <strong>1x Wardrobe Door Contact T1</strong><br />
+                  <span style="color: var(--accent-p0); font-weight: 600"
+                    >NO motion/presence sensors!</span
+                  >
                 </div>
               </div>
               <div>
-                <div class="zone-subcol-title"><span>💡</span> Switches & Lights</div>
+                <div class="zone-subcol-title">
+                  <span>💡</span> Switches & Lights
+                </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H2 2-Gang</strong> (<span style="color: var(--sage-primary); font-weight: 700;">Decoupled</span>)<br>
-                  • 4x Aqara T2 CCT Spotlights (2700K-6500K)<br>
+                  • <strong>Aqara H2 2-Gang</strong> (<span
+                    style="color: var(--sage-primary); font-weight: 700"
+                    >Decoupled</span
+                  >)<br />
+                  • 4x Aqara T2 CCT Spotlights (2700K-6500K)<br />
                   • Aqara C3 Motorized Curtains
                 </div>
               </div>
@@ -2251,21 +2748,37 @@
             <div class="zone-automations">
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Circadian Adaptive Dimming:</strong> Light color automatically tracks the sun (5000K daylight &rarr; 3000K warm &rarr; 2200K candlelight).</div>
+                <div>
+                  <strong>Circadian Adaptive Dimming:</strong> Light color
+                  automatically tracks the sun (5000K daylight &rarr; 3000K warm
+                  &rarr; 2200K candlelight).
+                </div>
               </div>
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Bedside Single / Double Tap:</strong> Single tap toggles reading light. Double tap triggers 10% amber wind-down mode and closes curtains.</div>
+                <div>
+                  <strong>Bedside Single / Double Tap:</strong> Single tap
+                  toggles reading light. Double tap triggers 10% amber wind-down
+                  mode and closes curtains.
+                </div>
               </div>
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Whole-House Goodnight Kill Switch:</strong> Long-pressing bedside button shuts off ALL lights condo-wide, closes curtains, locks door, sets AC to 25°C.</div>
+                <div>
+                  <strong>Whole-House Goodnight Kill Switch:</strong>
+                  Long-pressing bedside button shuts off ALL lights condo-wide,
+                  closes curtains, locks door, sets AC to 25°C.
+                </div>
               </div>
             </div>
 
             <div class="zone-why-box">
-              <div class="zone-why-title"><span>💡</span> Why strictly NO presence sensor?</div>
-              mmWave sensors detect tossing, turning, and ceiling fan breezes, causing phantom light triggers at 3:00 AM. A bedside wireless button provides flawless sleep control.
+              <div class="zone-why-title">
+                <span>💡</span> Why strictly NO presence sensor?
+              </div>
+              mmWave sensors detect tossing, turning, and ceiling fan breezes,
+              causing phantom light triggers at 3:00 AM. A bedside wireless
+              button provides flawless sleep control.
             </div>
           </div>
 
@@ -2276,7 +2789,9 @@
                 <span class="zone-icon">💻</span>
                 <div>
                   <div class="zone-name">Bedroom 2 / Study</div>
-                  <div style="font-size: 0.72rem; color: var(--text-muted);">WFH Office & Guest Room</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted)">
+                    WFH Office & Guest Room
+                  </div>
                 </div>
               </div>
               <span class="zone-badge private">Private</span>
@@ -2284,18 +2799,24 @@
 
             <div class="zone-subgrid">
               <div>
-                <div class="zone-subcol-title"><span>📡</span> Sensors Deployed</div>
+                <div class="zone-subcol-title">
+                  <span>📡</span> Sensors Deployed
+                </div>
                 <div class="zone-subcol-content">
-                  • Manual Wall Switch Control<br>
-                  • (Optional desk motion if desired)<br>
-                  <span style="color: var(--text-secondary);">High reliability manual control</span>
+                  • Manual Wall Switch Control<br />
+                  • (Optional desk motion if desired)<br />
+                  <span style="color: var(--text-secondary)"
+                    >High reliability manual control</span
+                  >
                 </div>
               </div>
               <div>
-                <div class="zone-subcol-title"><span>💡</span> Switches & Lights</div>
+                <div class="zone-subcol-title">
+                  <span>💡</span> Switches & Lights
+                </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H2 2-Gang</strong> (Door Box)<br>
-                  • 3x High-CRI Recessed Downlights<br>
+                  • <strong>Aqara H2 2-Gang</strong> (Door Box)<br />
+                  • 3x High-CRI Recessed Downlights<br />
                   • AC Split Unit (Starmex 9k)
                 </div>
               </div>
@@ -2304,17 +2825,26 @@
             <div class="zone-automations">
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>WFH Focus Scene:</strong> Single click energizes full 4500K bright white for Zoom calls and desk concentration.</div>
+                <div>
+                  <strong>WFH Focus Scene:</strong> Single click energizes full
+                  4500K bright white for Zoom calls and desk concentration.
+                </div>
               </div>
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Guest Ambient Scene:</strong> Double click sets downlights to 3000K relaxed warm white for overnight guests.</div>
+                <div>
+                  <strong>Guest Ambient Scene:</strong> Double click sets
+                  downlights to 3000K relaxed warm white for overnight guests.
+                </div>
               </div>
             </div>
 
             <div class="zone-why-box">
-              <div class="zone-why-title"><span>💡</span> Work Practicality:</div>
-              Automated shutoffs during static WFH meetings are infuriating. Simple, reliable switch presses are best for home offices.
+              <div class="zone-why-title">
+                <span>💡</span> Work Practicality:
+              </div>
+              Automated shutoffs during static WFH meetings are infuriating.
+              Simple, reliable switch presses are best for home offices.
             </div>
           </div>
 
@@ -2325,7 +2855,9 @@
                 <span class="zone-icon">🍽️</span>
                 <div>
                   <div class="zone-name">Dining Room</div>
-                  <div style="font-size: 0.72rem; color: var(--text-muted);">Sintered Stone Table & Meals</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted)">
+                    Sintered Stone Table & Meals
+                  </div>
                 </div>
               </div>
               <span class="zone-badge high-traffic">High Traffic</span>
@@ -2333,17 +2865,26 @@
 
             <div class="zone-subgrid">
               <div>
-                <div class="zone-subcol-title"><span>📡</span> Sensors Deployed</div>
+                <div class="zone-subcol-title">
+                  <span>📡</span> Sensors Deployed
+                </div>
                 <div class="zone-subcol-content">
-                  • Living Room mmWave auxiliary zone<br>
-                  <span style="color: var(--text-secondary);">Integrated with open living area</span>
+                  • Living Room mmWave auxiliary zone<br />
+                  <span style="color: var(--text-secondary)"
+                    >Integrated with open living area</span
+                  >
                 </div>
               </div>
               <div>
-                <div class="zone-subcol-title"><span>💡</span> Switches & Lights</div>
+                <div class="zone-subcol-title">
+                  <span>💡</span> Switches & Lights
+                </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H2 1-Gang</strong> (<span style="color: var(--sage-primary); font-weight: 700;">Decoupled</span>)<br>
-                  • 2x Aqara T2 CCT Pendant Bulbs<br>
+                  • <strong>Aqara H2 1-Gang</strong> (<span
+                    style="color: var(--sage-primary); font-weight: 700"
+                    >Decoupled</span
+                  >)<br />
+                  • 2x Aqara T2 CCT Pendant Bulbs<br />
                   • Smooth CCT & Brightness dimming
                 </div>
               </div>
@@ -2352,17 +2893,27 @@
             <div class="zone-automations">
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Dinner Mode:</strong> Pendant tunes to 2500K intimate warm white at 50% brightness while living room spots softly dim.</div>
+                <div>
+                  <strong>Dinner Mode:</strong> Pendant tunes to 2500K intimate
+                  warm white at 50% brightness while living room spots softly
+                  dim.
+                </div>
               </div>
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Dining Table Laptop Mode:</strong> Shifts to 4000K neutral daylight at 100% for working on the dining table.</div>
+                <div>
+                  <strong>Dining Table Laptop Mode:</strong> Shifts to 4000K
+                  neutral daylight at 100% for working on the dining table.
+                </div>
               </div>
             </div>
 
             <div class="zone-why-box">
-              <div class="zone-why-title"><span>💡</span> Decoupled Pendant:</div>
-              Allows physical wall switch presses or app scenes to adjust pendant mood without cutting electrical power to smart bulbs.
+              <div class="zone-why-title">
+                <span>💡</span> Decoupled Pendant:
+              </div>
+              Allows physical wall switch presses or app scenes to adjust
+              pendant mood without cutting electrical power to smart bulbs.
             </div>
           </div>
 
@@ -2373,7 +2924,9 @@
                 <span class="zone-icon">🌅</span>
                 <div>
                   <div class="zone-name">Balcony</div>
-                  <div style="font-size: 0.72rem; color: var(--text-muted);">Outdoor Dining & Zip Track</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted)">
+                    Outdoor Dining & Zip Track
+                  </div>
                 </div>
               </div>
               <span class="zone-badge utility">Utility</span>
@@ -2381,18 +2934,24 @@
 
             <div class="zone-subgrid">
               <div>
-                <div class="zone-subcol-title"><span>📡</span> Sensors Deployed</div>
+                <div class="zone-subcol-title">
+                  <span>📡</span> Sensors Deployed
+                </div>
                 <div class="zone-subcol-content">
-                  • (Optional Sliding Door Contact)<br>
-                  • Weather & Sunset Sun Sync<br>
-                  <span style="color: var(--text-secondary);">Automated via Solar Elevation</span>
+                  • (Optional Sliding Door Contact)<br />
+                  • Weather & Sunset Sun Sync<br />
+                  <span style="color: var(--text-secondary)"
+                    >Automated via Solar Elevation</span
+                  >
                 </div>
               </div>
               <div>
-                <div class="zone-subcol-title"><span>💡</span> Switches & Lights</div>
+                <div class="zone-subcol-title">
+                  <span>💡</span> Switches & Lights
+                </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H2 2-Gang</strong> (Light + Fan Isolator)<br>
-                  • 1x Outdoor High-CRI Downlight<br>
+                  • <strong>Aqara H2 2-Gang</strong> (Light + Fan Isolator)<br />
+                  • 1x Outdoor High-CRI Downlight<br />
                   • Dooya Zip Track + Fanco DC Fan
                 </div>
               </div>
@@ -2401,38 +2960,72 @@
             <div class="zone-automations">
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Sunset Balcony Glow:</strong> Sliding door opening after dark illuminates outdoor downlight at 30% warm white.</div>
+                <div>
+                  <strong>Sunset Balcony Glow:</strong> Sliding door opening
+                  after dark illuminates outdoor downlight at 30% warm white.
+                </div>
               </div>
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
-                <div><strong>Zip Track Enclosure:</strong> Lowering zip blinds creates an enclosed outdoor room with fan on gentle breeze (Speed 2).</div>
+                <div>
+                  <strong>Zip Track Enclosure:</strong> Lowering zip blinds
+                  creates an enclosed outdoor room with fan on gentle breeze
+                  (Speed 2).
+                </div>
               </div>
             </div>
 
             <div class="zone-why-box">
-              <div class="zone-why-title"><span>💡</span> Outdoor Resilient:</div>
-              Uses IP-rated outdoor fixtures and RF Bond Bridge control, completely isolated from indoor moisture risks.
+              <div class="zone-why-title">
+                <span>💡</span> Outdoor Resilient:
+              </div>
+              Uses IP-rated outdoor fixtures and RF Bond Bridge control,
+              completely isolated from indoor moisture risks.
             </div>
           </div>
         </div>
 
         <!-- Sensor Hardware BOM Table -->
-        <div class="table-card" style="margin-bottom: 20px;">
-          <div class="card-header" style="padding: 14px 16px; border-bottom: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center;">
+        <div class="table-card" style="margin-bottom: 20px">
+          <div
+            class="card-header"
+            style="
+              padding: 14px 16px;
+              border-bottom: 1px solid var(--border-subtle);
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
             <div>
-              <h3 style="font-family: var(--font-heading); font-size: 1.05rem; color: var(--text-primary);">
+              <h3
+                style="
+                  font-family: var(--font-heading);
+                  font-size: 1.05rem;
+                  color: var(--text-primary);
+                "
+              >
                 📦 Sensor Hardware Bill of Materials (BOM)
               </h3>
-              <div style="font-size: 0.78rem; color: var(--text-secondary);">
-                All 9 targeted sensors, protocols, battery types, and verified Shopee links
+              <div style="font-size: 0.78rem; color: var(--text-secondary)">
+                All 9 targeted sensors, protocols, battery types, and verified
+                Shopee links
               </div>
             </div>
-            <span class="kpi-pill" style="font-size: 0.75rem; background: var(--sage-light); color: var(--sage-primary); font-weight: 700;">
+            <span
+              class="kpi-pill"
+              style="
+                font-size: 0.75rem;
+                background: var(--sage-light);
+                color: var(--sage-primary);
+                font-weight: 700;
+              "
+            >
               Total: $188 SGD
             </span>
           </div>
 
-          <div style="overflow-x: auto;">
+          <div style="overflow-x: auto">
             <table class="sensor-bom-table">
               <thead>
                 <tr>
@@ -2455,7 +3048,14 @@
                   <td>1</td>
                   <td>$50</td>
                   <td><strong>$50</strong></td>
-                  <td><a href="https://shopee.sg/product/1245098924/55259558090" target="_blank" class="store-link">Shopee</a></td>
+                  <td>
+                    <a
+                      href="https://shopee.sg/product/1245098924/55259558090"
+                      target="_blank"
+                      class="store-link"
+                      >Shopee</a
+                    >
+                  </td>
                 </tr>
                 <tr>
                   <td><strong>Aqara Door Contact Sensor T1</strong></td>
@@ -2465,7 +3065,14 @@
                   <td>1</td>
                   <td>$15</td>
                   <td><strong>$15</strong></td>
-                  <td><a href="https://shopee.sg/product/1245098924/50459563309" target="_blank" class="store-link">Shopee</a></td>
+                  <td>
+                    <a
+                      href="https://shopee.sg/product/1245098924/50459563309"
+                      target="_blank"
+                      class="store-link"
+                      >Shopee</a
+                    >
+                  </td>
                 </tr>
                 <tr>
                   <td><strong>Aqara Door Contact Sensor T1</strong></td>
@@ -2475,7 +3082,14 @@
                   <td>1</td>
                   <td>$15</td>
                   <td><strong>$15</strong></td>
-                  <td><a href="https://shopee.sg/product/1245098924/50459563309" target="_blank" class="store-link">Shopee</a></td>
+                  <td>
+                    <a
+                      href="https://shopee.sg/product/1245098924/50459563309"
+                      target="_blank"
+                      class="store-link"
+                      >Shopee</a
+                    >
+                  </td>
                 </tr>
                 <tr>
                   <td><strong>Aqara Door Contact Sensor T1</strong></td>
@@ -2485,7 +3099,14 @@
                   <td>1</td>
                   <td>$15</td>
                   <td><strong>$15</strong></td>
-                  <td><a href="https://shopee.sg/product/1245098924/50459563309" target="_blank" class="store-link">Shopee</a></td>
+                  <td>
+                    <a
+                      href="https://shopee.sg/product/1245098924/50459563309"
+                      target="_blank"
+                      class="store-link"
+                      >Shopee</a
+                    >
+                  </td>
                 </tr>
                 <tr>
                   <td><strong>Aqara Door Contact Sensor T1</strong></td>
@@ -2495,7 +3116,14 @@
                   <td>1</td>
                   <td>$15</td>
                   <td><strong>$15</strong></td>
-                  <td><a href="https://shopee.sg/product/1245098924/50459563309" target="_blank" class="store-link">Shopee</a></td>
+                  <td>
+                    <a
+                      href="https://shopee.sg/product/1245098924/50459563309"
+                      target="_blank"
+                      class="store-link"
+                      >Shopee</a
+                    >
+                  </td>
                 </tr>
                 <tr>
                   <td><strong>Aqara PIR Motion Sensor P1</strong></td>
@@ -2505,7 +3133,14 @@
                   <td>1</td>
                   <td>$20</td>
                   <td><strong>$20</strong></td>
-                  <td><a href="https://shopee.sg/product/1245098924/50459563309" target="_blank" class="store-link">Shopee</a></td>
+                  <td>
+                    <a
+                      href="https://shopee.sg/product/1245098924/50459563309"
+                      target="_blank"
+                      class="store-link"
+                      >Shopee</a
+                    >
+                  </td>
                 </tr>
                 <tr>
                   <td><strong>Aqara PIR Motion Sensor P1</strong></td>
@@ -2515,7 +3150,14 @@
                   <td>1</td>
                   <td>$20</td>
                   <td><strong>$20</strong></td>
-                  <td><a href="https://shopee.sg/product/1245098924/50459563309" target="_blank" class="store-link">Shopee</a></td>
+                  <td>
+                    <a
+                      href="https://shopee.sg/product/1245098924/50459563309"
+                      target="_blank"
+                      class="store-link"
+                      >Shopee</a
+                    >
+                  </td>
                 </tr>
                 <tr>
                   <td><strong>Aqara PIR Motion Sensor P1</strong></td>
@@ -2525,7 +3167,14 @@
                   <td>1</td>
                   <td>$20</td>
                   <td><strong>$20</strong></td>
-                  <td><a href="https://shopee.sg/product/1245098924/50459563309" target="_blank" class="store-link">Shopee</a></td>
+                  <td>
+                    <a
+                      href="https://shopee.sg/product/1245098924/50459563309"
+                      target="_blank"
+                      class="store-link"
+                      >Shopee</a
+                    >
+                  </td>
                 </tr>
                 <tr>
                   <td><strong>Aqara Wireless Mini Switch</strong></td>
@@ -2535,13 +3184,24 @@
                   <td>1</td>
                   <td>$18</td>
                   <td><strong>$18</strong></td>
-                  <td><a href="https://shopee.sg/product/1245098924/50459563309" target="_blank" class="store-link">Shopee</a></td>
+                  <td>
+                    <a
+                      href="https://shopee.sg/product/1245098924/50459563309"
+                      target="_blank"
+                      class="store-link"
+                      >Shopee</a
+                    >
+                  </td>
                 </tr>
-                <tr style="background: var(--sage-light); font-weight: 700;">
-                  <td colspan="4" style="color: var(--sage-primary);">TOTAL SENSOR FLEET</td>
+                <tr style="background: var(--sage-light); font-weight: 700">
+                  <td colspan="4" style="color: var(--sage-primary)">
+                    TOTAL SENSOR FLEET
+                  </td>
                   <td>9 Units</td>
                   <td>—</td>
-                  <td style="color: var(--sage-primary); font-size: 0.95rem;">$188 SGD</td>
+                  <td style="color: var(--sage-primary); font-size: 0.95rem">
+                    $188 SGD
+                  </td>
                   <td>—</td>
                 </tr>
               </tbody>
@@ -2553,10 +3213,21 @@
         <div class="ha-code-accordion">
           <details>
             <summary class="ha-code-summary">
-              <span>🛠️ View Home Assistant Blueprint: "Wasp in a Box" Bathroom Occupancy</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500;">Click to expand YAML</span>
+              <span
+                >🛠️ View Home Assistant Blueprint: "Wasp in a Box" Bathroom
+                Occupancy</span
+              >
+              <span
+                style="
+                  font-size: 0.75rem;
+                  color: var(--text-muted);
+                  font-weight: 500;
+                "
+                >Click to expand YAML</span
+              >
             </summary>
-            <pre class="ha-code-pre"># Home Assistant Template Binary Sensor: Bathroom Occupancy (Wasp in a Box)
+            <pre class="ha-code-pre">
+# Home Assistant Template Binary Sensor: Bathroom Occupancy (Wasp in a Box)
 # Combines Door Contact Sensor + PIR Motion Sensor
 template:
   - binary_sensor:
@@ -2596,17 +3267,29 @@ automation:
             data:
               brightness_pct: 100
               color_temp_kelvin: 4000
-</pre>
+</pre
+            >
           </details>
         </div>
 
         <div class="ha-code-accordion">
           <details>
             <summary class="ha-code-summary">
-              <span>🛠️ View Home Assistant Blueprint: 7:00 AM Coffee Scene (Time-Conditioned Switch)</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500;">Click to expand YAML</span>
+              <span
+                >🛠️ View Home Assistant Blueprint: 7:00 AM Coffee Scene
+                (Time-Conditioned Switch)</span
+              >
+              <span
+                style="
+                  font-size: 0.75rem;
+                  color: var(--text-muted);
+                  font-weight: 500;
+                "
+                >Click to expand YAML</span
+              >
             </summary>
-            <pre class="ha-code-pre"># Automation: Kitchen Wall Switch (Aqara H2 Decoupled Single-Click)
+            <pre class="ha-code-pre">
+# Automation: Kitchen Wall Switch (Aqara H2 Decoupled Single-Click)
 automation:
   - alias: "Kitchen: Smart Button Scene Controller"
     trigger:
@@ -2639,11 +3322,450 @@ automation:
             data:
               brightness_pct: 100
               color_temp_kelvin: 4000
-</pre>
+</pre
+            >
           </details>
         </div>
       </div>
       <!-- End Tab View 2: Sensors & Smart Lighting -->
+
+      <!-- Tab View 3: Interactive Floor Plan Map -->
+      <div id="tabViewMap" class="tab-view" style="display: none;">
+        <div style="margin-bottom: 12px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 8px;">
+          <div>
+            <h2 style="font-family: var(--font-heading); font-size: 1.28rem; font-weight: 700; color: var(--text-primary); margin-bottom: 2px;">
+              Interactive Condo Layout & Smart Home Map
+            </h2>
+            <p style="font-size: 0.8rem; color: var(--text-secondary);">
+              Explore the exact 2-bedroom architectural floor plan with live sensor radar, smart lighting, climate, and furniture zones
+            </p>
+          </div>
+          <div class="sim-status-banner" id="mapSimStatusBanner">
+            <span>☀️</span>
+            <span id="mapSimStatusText">Simulation: Normal Ambient Mode. Click any room or time of day below.</span>
+          </div>
+        </div>
+
+        <div class="map-wrapper">
+          <!-- Main Map Viewport & Controls -->
+          <div class="map-main-card">
+            <div class="map-toolbar">
+              <!-- Layer Toggles -->
+              <div class="map-controls-group">
+                <span class="filter-label" style="font-size: 0.75rem;">Layers:</span>
+                <button class="map-tool-btn active" id="btnLayerSensors" onclick="toggleMapLayer('sensors', this)">
+                  <span>📡</span> Sensors (9)
+                </button>
+                <button class="map-tool-btn active" id="btnLayerLighting" onclick="toggleMapLayer('lighting', this)">
+                  <span>💡</span> Lights & Strips
+                </button>
+                <button class="map-tool-btn active" id="btnLayerClimate" onclick="toggleMapLayer('climate', this)">
+                  <span>❄️</span> AC & Fans
+                </button>
+                <button class="map-tool-btn" id="btnLayerDrawing" onclick="toggleMapLayer('drawing', this)">
+                  <span>🖼️</span> Background Blueprint
+                </button>
+              </div>
+
+              <!-- Circadian Time Simulator -->
+              <div class="map-controls-group">
+                <span class="filter-label" style="font-size: 0.75rem;">Simulate Time:</span>
+                <button class="map-tool-btn" onclick="simulateMapTime('morning', this)" title="07:00 AM Coffee Scene">
+                  <span>🌅</span> 07:00
+                </button>
+                <button class="map-tool-btn" onclick="simulateMapTime('day', this)" title="12:00 PM Focus Mode">
+                  <span>☀️</span> 12:00
+                </button>
+                <button class="map-tool-btn" onclick="simulateMapTime('evening', this)" title="19:00 PM Dinner Scene">
+                  <span>🌇</span> 19:00
+                </button>
+                <button class="map-tool-btn" onclick="simulateMapTime('night', this)" title="23:00 PM Night Wind-Down">
+                  <span>🌙</span> 23:00
+                </button>
+                <button class="map-tool-btn active" onclick="simulateMapTime('reset', this)" title="Reset to default">
+                  <span>🔄</span> Reset
+                </button>
+              </div>
+            </div>
+
+            <!-- SVG Floor Plan Viewport -->
+            <div class="map-viewport-container">
+              <svg class="map-svg" viewBox="0 0 1600 1251" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <!-- Radar Wave Radial Gradient -->
+                  <radialGradient id="radarGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#4a6b57" stop-opacity="0.65" />
+                    <stop offset="60%" stop-color="#4a6b57" stop-opacity="0.25" />
+                    <stop offset="100%" stop-color="#4a6b57" stop-opacity="0" />
+                  </radialGradient>
+
+                  <!-- Warm Strip Glow Gradient -->
+                  <filter id="stripGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="6" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
+
+                  <!-- Downlight Glow Filter -->
+                  <filter id="lightGlowFilter" x="-40%" y="-40%" width="180%" height="180%">
+                    <feGaussianBlur stdDeviation="8" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
+                </defs>
+
+                <!-- Layer 1: Architectural Drawing Image (Opacity adjustable) -->
+                <image
+                  id="mapFloorPlanImg"
+                  href="floor_plan.jpeg"
+                  x="0"
+                  y="0"
+                  width="1600"
+                  height="1251"
+                  preserveAspectRatio="xMidYMid meet"
+                  opacity="0.95"
+                />
+
+                <!-- Layer 2: Interactive Room Zones (Polygons for click & hover highlight) -->
+                <g id="layerRoomZones">
+                  <!-- Balcony -->
+                  <polygon
+                    id="zone-Balcony"
+                    class="map-room-zone"
+                    points="590,20 965,20 965,268 590,268"
+                    onclick="selectMapRoom('Balcony')"
+                  >
+                    <title>Balcony: Outdoor Dining, Fan, Zip Blinds</title>
+                  </polygon>
+
+                  <!-- Living Room -->
+                  <polygon
+                    id="zone-Living-Room"
+                    class="map-room-zone"
+                    points="590,268 930,268 930,710 590,710"
+                    onclick="selectMapRoom('Living Room')"
+                  >
+                    <title>Living Room: Sofa, 65" TV, mmWave Sensor, 6x CCT Spotlights</title>
+                  </polygon>
+
+                  <!-- Dining Room -->
+                  <polygon
+                    id="zone-Dining"
+                    class="map-room-zone"
+                    points="680,710 930,710 930,880 680,880"
+                    onclick="selectMapRoom('Dining')"
+                  >
+                    <title>Dining: Sintered Stone Table, 2x CCT Pendant</title>
+                  </polygon>
+
+                  <!-- Entrance / Foyer -->
+                  <polygon
+                    id="zone-Entrance"
+                    class="map-room-zone"
+                    points="590,880 800,880 800,1220 590,1220"
+                    onclick="selectMapRoom('Entrance')"
+                  >
+                    <title>Entrance: Door Contact (0ms), PIR Motion, Shoe Cabinet LED</title>
+                  </polygon>
+
+                  <!-- Kitchen -->
+                  <polygon
+                    id="zone-Kitchen"
+                    class="map-room-zone"
+                    points="300,800 680,800 680,880 590,880 590,1220 300,1220"
+                    onclick="selectMapRoom('Kitchen')"
+                  >
+                    <title>Kitchen: W/D, Fridge, Under-Cabinet LED Strip (7AM Coffee)</title>
+                  </polygon>
+
+                  <!-- Common Bathroom -->
+                  <polygon
+                    id="zone-Common-Bath"
+                    class="map-room-zone"
+                    points="330,640 600,640 600,800 330,800"
+                    onclick="selectMapRoom('Common Bath')"
+                  >
+                    <title>Common Bathroom: Wasp in a Box Occupancy, IP44 Downlights</title>
+                  </polygon>
+
+                  <!-- Bedroom 2 / Study -->
+                  <polygon
+                    id="zone-Bedroom-2"
+                    class="map-room-zone"
+                    points="320,250 600,250 600,640 320,640"
+                    onclick="selectMapRoom('Bedroom 2 / Study')"
+                  >
+                    <title>Bedroom 2 / Study: Sofa Bed, Study Desk, Starmex 9k AC</title>
+                  </polygon>
+
+                  <!-- Master Bedroom -->
+                  <polygon
+                    id="zone-Master-Bed"
+                    class="map-room-zone"
+                    points="930,340 1260,340 1260,700 930,700"
+                    onclick="selectMapRoom('Master Bed')"
+                  >
+                    <title>Master Bedroom: Queen Bed, Bedside Kill Switch, C3 Curtains</title>
+                  </polygon>
+
+                  <!-- Master Bathroom -->
+                  <polygon
+                    id="zone-Master-Bath"
+                    class="map-room-zone"
+                    points="930,700 1400,700 1400,900 930,900"
+                    onclick="selectMapRoom('Master Bath')"
+                  >
+                    <title>Master Bathroom: Wasp in a Box, Manual Bidet Seat, Nightlight</title>
+                  </polygon>
+                </g>
+
+                <!-- Layer 3: Smart Lighting Overlays -->
+                <g id="layerLightingGroup">
+                  <!-- Entrance Floating Shoe Cabinet LED Strip -->
+                  <line
+                    id="light-entrance-strip"
+                    class="light-glow"
+                    x1="760" y1="960" x2="760" y2="1180"
+                    stroke="#ffbb55" stroke-width="8" stroke-linecap="round"
+                    filter="url(#stripGlow)" opacity="0.8"
+                  />
+
+                  <!-- Kitchen Under-Cabinet LED Strip -->
+                  <line
+                    id="light-kitchen-strip"
+                    class="light-glow"
+                    x1="340" y1="840" x2="480" y2="840"
+                    stroke="#ffbb55" stroke-width="8" stroke-linecap="round"
+                    filter="url(#stripGlow)" opacity="0.8"
+                  />
+
+                  <!-- Living Room Spotlights (6x glowing points) -->
+                  <g id="light-living-spots" class="light-glow" opacity="0.85">
+                    <circle cx="670" cy="370" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                    <circle cx="670" cy="510" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                    <circle cx="670" cy="650" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                    <circle cx="850" cy="370" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                    <circle cx="850" cy="510" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                    <circle cx="850" cy="650" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                  </g>
+
+                  <!-- Dining Pendant (Glowing amber orb) -->
+                  <circle
+                    id="light-dining-pendant"
+                    class="light-glow"
+                    cx="795" cy="800" r="20"
+                    fill="#ffa834" filter="url(#lightGlowFilter)" opacity="0.85"
+                  />
+
+                  <!-- Master Bedroom 4x Spotlights -->
+                  <g id="light-master-spots" class="light-glow" opacity="0.75">
+                    <circle cx="990" cy="420" r="12" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                    <circle cx="1200" cy="420" r="12" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                    <circle cx="990" cy="620" r="12" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                    <circle cx="1200" cy="620" r="12" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                  </g>
+
+                  <!-- Bathrooms Vanity Mirror Lights -->
+                  <circle id="light-master-vanity" class="light-glow" cx="1340" cy="740" r="12" fill="#ffd080" filter="url(#lightGlowFilter)" opacity="0.75" />
+                  <circle id="light-common-vanity" class="light-glow" cx="530" cy="750" r="12" fill="#ffd080" filter="url(#lightGlowFilter)" opacity="0.75" />
+                </g>
+
+                <!-- Layer 4: Climate & Motors -->
+                <g id="layerClimateGroup">
+                  <!-- Living Room Starmex 18k AC -->
+                  <g transform="translate(680, 715)">
+                    <rect width="65" height="18" rx="4" fill="#eaf4f8" stroke="#3a7d99" stroke-width="2" />
+                    <text x="32" y="13" font-size="10" font-weight="700" fill="#2d6b85" text-anchor="middle">AC 18k</text>
+                  </g>
+
+                  <!-- Master Bed Starmex 9k AC -->
+                  <g transform="translate(1145, 655)">
+                    <rect width="55" height="18" rx="4" fill="#eaf4f8" stroke="#3a7d99" stroke-width="2" />
+                    <text x="27" y="13" font-size="9" font-weight="700" fill="#2d6b85" text-anchor="middle">AC 9k</text>
+                  </g>
+
+                  <!-- Bed 2 Starmex 9k AC -->
+                  <g transform="translate(520, 565)">
+                    <rect width="55" height="18" rx="4" fill="#eaf4f8" stroke="#3a7d99" stroke-width="2" />
+                    <text x="27" y="13" font-size="9" font-weight="700" fill="#2d6b85" text-anchor="middle">AC 9k</text>
+                  </g>
+
+                  <!-- Fanco Ceiling Fans -->
+                  <circle cx="880" cy="560" r="22" fill="none" stroke="#3a7d99" stroke-width="2" stroke-dasharray="4 3" />
+                  <text x="880" y="564" font-size="10" font-weight="700" fill="#3a7d99" text-anchor="middle">FAN</text>
+
+                  <circle cx="775" cy="140" r="22" fill="none" stroke="#3a7d99" stroke-width="2" stroke-dasharray="4 3" />
+                  <text x="775" y="144" font-size="10" font-weight="700" fill="#3a7d99" text-anchor="middle">FAN</text>
+
+                  <!-- Balcony Motorized Zip Blinds (Outer Edges) -->
+                  <polyline
+                    points="592,260 592,25 963,25 963,260"
+                    fill="none" stroke="#d9822b" stroke-width="5" stroke-dasharray="8 4"
+                  />
+                  <text x="778" y="18" font-size="10" font-weight="700" fill="#d9822b" text-anchor="middle">DOOYA DM45S ZIP BLINDS (3 SIDES)</text>
+
+                  <!-- Motorized Curtains (Living & Master) -->
+                  <line x1="600" y1="275" x2="920" y2="275" stroke="#4a6b57" stroke-width="4" stroke-dasharray="6 3" />
+                  <line x1="940" y1="345" x2="1250" y2="345" stroke="#4a6b57" stroke-width="4" stroke-dasharray="6 3" />
+                </g>
+
+                <!-- Layer 5: Sensors Markers (Pins with pulse & icons) -->
+                <g id="layerSensorsGroup">
+                  <!-- 1. Living Room mmWave Sensor (Aqara FP1E on TV Console) -->
+                  <g class="sensor-pin" transform="translate(615, 335)" onclick="selectMapRoom('Living Room')">
+                    <!-- Radar Cone Sweeping Across Sofa -->
+                    <path
+                      d="M 0 0 L 250 -40 A 300 300 0 0 1 230 240 Z"
+                      fill="url(#radarGrad)" opacity="0.6"
+                    />
+                    <circle cx="0" cy="0" r="14" fill="#4a6b57" stroke="#ffffff" stroke-width="2.5" />
+                    <text x="0" y="4" font-size="10" fill="#ffffff" font-weight="800" text-anchor="middle">📡</text>
+                    <rect x="18" y="-12" width="130" height="20" rx="4" fill="#1e221f" opacity="0.88" />
+                    <text x="24" y="2" font-size="9.5" fill="#ffffff" font-weight="700">FP1E mmWave Radar</text>
+                  </g>
+
+                  <!-- 2. Entrance Main Door Contact Sensor (T1) -->
+                  <g class="sensor-pin" transform="translate(670, 1195)" onclick="selectMapRoom('Entrance')">
+                    <circle cx="0" cy="0" r="12" fill="#c95d46" stroke="#ffffff" stroke-width="2" />
+                    <text x="0" y="4" font-size="9" fill="#ffffff" font-weight="800" text-anchor="middle">🚪</text>
+                    <rect x="16" y="-10" width="125" height="18" rx="4" fill="#1e221f" opacity="0.88" />
+                    <text x="22" y="3" font-size="9" fill="#ffffff" font-weight="700">Door Sensor (0ms)</text>
+                  </g>
+
+                  <!-- 3. Entrance Shoe Bench PIR Motion Sensor (P1) -->
+                  <g class="sensor-pin" transform="translate(735, 1020)" onclick="selectMapRoom('Entrance')">
+                    <circle cx="0" cy="0" r="12" fill="#d9822b" stroke="#ffffff" stroke-width="2" />
+                    <text x="0" y="4" font-size="9" fill="#ffffff" font-weight="800" text-anchor="middle">👁️</text>
+                    <rect x="16" y="-10" width="115" height="18" rx="4" fill="#1e221f" opacity="0.88" />
+                    <text x="22" y="3" font-size="9" fill="#ffffff" font-weight="700">PIR Motion (Bench)</text>
+                  </g>
+
+                  <!-- 4. Master Bathroom Door Contact (T1) -->
+                  <g class="sensor-pin" transform="translate(1160, 715)" onclick="selectMapRoom('Master Bath')">
+                    <circle cx="0" cy="0" r="11" fill="#c95d46" stroke="#ffffff" stroke-width="2" />
+                    <text x="0" y="3.5" font-size="8.5" fill="#ffffff" font-weight="800" text-anchor="middle">🚪</text>
+                    <rect x="15" y="-9" width="110" height="17" rx="4" fill="#1e221f" opacity="0.88" />
+                    <text x="20" y="3" font-size="8.5" fill="#ffffff" font-weight="700">Wasp Door Lock</text>
+                  </g>
+
+                  <!-- 5. Master Bathroom PIR Motion Sensor (P1) -->
+                  <g class="sensor-pin" transform="translate(1080, 775)" onclick="selectMapRoom('Master Bath')">
+                    <circle cx="0" cy="0" r="11" fill="#d9822b" stroke="#ffffff" stroke-width="2" />
+                    <text x="0" y="3.5" font-size="8.5" fill="#ffffff" font-weight="800" text-anchor="middle">👁️</text>
+                    <rect x="15" y="-9" width="95" height="17" rx="4" fill="#1e221f" opacity="0.88" />
+                    <text x="20" y="3" font-size="8.5" fill="#ffffff" font-weight="700">Bath PIR Sensor</text>
+                  </g>
+
+                  <!-- 6. Common Bathroom Door Contact (T1) -->
+                  <g class="sensor-pin" transform="translate(540, 660)" onclick="selectMapRoom('Common Bath')">
+                    <circle cx="0" cy="0" r="11" fill="#c95d46" stroke="#ffffff" stroke-width="2" />
+                    <text x="0" y="3.5" font-size="8.5" fill="#ffffff" font-weight="800" text-anchor="middle">🚪</text>
+                  </g>
+
+                  <!-- 7. Common Bathroom PIR Motion Sensor (P1) -->
+                  <g class="sensor-pin" transform="translate(465, 715)" onclick="selectMapRoom('Common Bath')">
+                    <circle cx="0" cy="0" r="11" fill="#d9822b" stroke="#ffffff" stroke-width="2" />
+                    <text x="0" y="3.5" font-size="8.5" fill="#ffffff" font-weight="800" text-anchor="middle">👁️</text>
+                  </g>
+
+                  <!-- 8. Master Bedroom Bedside Wireless Mini Switch -->
+                  <g class="sensor-pin" transform="translate(1220, 395)" onclick="selectMapRoom('Master Bed')">
+                    <circle cx="0" cy="0" r="12" fill="#3a7d99" stroke="#ffffff" stroke-width="2" />
+                    <text x="0" y="4" font-size="9" fill="#ffffff" font-weight="800" text-anchor="middle">🔘</text>
+                    <rect x="-145" y="-10" width="138" height="18" rx="4" fill="#1e221f" opacity="0.88" />
+                    <text x="-140" y="3" font-size="8.5" fill="#ffffff" font-weight="700">Bedside Kill Switch</text>
+                  </g>
+
+                  <!-- 9. Wardrobe Door Contact Sensor -->
+                  <g class="sensor-pin" transform="translate(1040, 680)" onclick="selectMapRoom('Master Bed')">
+                    <circle cx="0" cy="0" r="10" fill="#c95d46" stroke="#ffffff" stroke-width="1.5" />
+                    <text x="0" y="3" font-size="8" fill="#ffffff" font-weight="800" text-anchor="middle">👗</text>
+                  </g>
+                </g>
+
+                <!-- Layer 6: Room Labels Overlay -->
+                <g id="layerRoomLabels" pointer-events="none">
+                  <text x="760" y="490" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="800" fill="#1e221f" text-anchor="middle" opacity="0.75">LIVING ROOM</text>
+                  <text x="795" y="800" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#1e221f" text-anchor="middle" opacity="0.75">DINING</text>
+                  <text x="695" y="1055" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#1e221f" text-anchor="middle" opacity="0.75">FOYER</text>
+                  <text x="445" y="990" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#1e221f" text-anchor="middle" opacity="0.75">KITCHEN</text>
+                  <text x="1095" y="520" font-family="'Space Grotesk', sans-serif" font-size="15" font-weight="800" fill="#1e221f" text-anchor="middle" opacity="0.75">MASTER BED</text>
+                  <text x="1165" y="800" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#1e221f" text-anchor="middle" opacity="0.75">MASTER BATH</text>
+                  <text x="460" y="440" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#1e221f" text-anchor="middle" opacity="0.75">BEDROOM 2 / STUDY</text>
+                  <text x="465" y="720" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#1e221f" text-anchor="middle" opacity="0.75">COMMON BATH</text>
+                  <text x="778" y="145" font-family="'Space Grotesk', sans-serif" font-size="15" font-weight="800" fill="#1e221f" text-anchor="middle" opacity="0.75">BALCONY</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Room Inspector Sidebar -->
+          <div class="inspector-card" id="mapRoomInspector">
+            <div class="inspector-header">
+              <div class="inspector-icon" id="inspectIcon">🛋️</div>
+              <div class="inspector-title">
+                <h3 id="inspectRoomName">Living Room</h3>
+                <span id="inspectRoomType">High Traffic • Sofa Lounge & Cinema</span>
+              </div>
+            </div>
+
+            <!-- Sensors in this room -->
+            <div class="inspector-section">
+              <div class="inspector-section-title">
+                <span>📡</span> Sensors Deployed
+              </div>
+              <div class="inspector-box" id="inspectSensorsBox">
+                • <strong>1x Aqara FP1E mmWave Sensor</strong> (TV Console)<br>
+                • Protocol: Zigbee 3.0 • 5V USB-C (Concealed)<br>
+                • Micro-movement radar covers sofa without false triggers.
+              </div>
+            </div>
+
+            <!-- Smart Lighting & Switches -->
+            <div class="inspector-section">
+              <div class="inspector-section-title">
+                <span>💡</span> Smart Lighting & Switches
+              </div>
+              <div class="inspector-box" id="inspectLightingBox">
+                • <strong>Aqara H2 3-Gang Switch</strong> (<span style="color: var(--sage-primary); font-weight: 700;">Decoupled</span>)<br>
+                • 6x Aqara T2 CCT Spotlights (2700K–6500K)<br>
+                • Fanco DC Ceiling Fan (RF Bond Bridge)
+              </div>
+            </div>
+
+            <!-- Active Automations -->
+            <div class="inspector-section">
+              <div class="inspector-section-title">
+                <span>⚡</span> Room Automations
+              </div>
+              <div class="inspector-box" id="inspectAutomationsBox">
+                • <strong>Sofa Presence:</strong> Keeps ambient lights & AC active while reading or watching TV.<br>
+                • <strong>Cinema Mode:</strong> Dims spotlights to 20% warm when TV plays after sunset.<br>
+                • <strong>15-Min Vacancy:</strong> Auto-dims lights and sets AC to eco mode when room empty.
+              </div>
+            </div>
+
+            <!-- Procurement Items in this room -->
+            <div class="inspector-section">
+              <div class="inspector-section-title">
+                <span>💰</span> Procurement Selections
+              </div>
+              <div class="inspector-box" id="inspectProcurementBox">
+                <!-- Dynamically rendered -->
+              </div>
+            </div>
+
+            <!-- Quick Action Button -->
+            <button
+              class="filter-btn"
+              style="width: 100%; padding: 8px; font-weight: 700; margin-top: 4px;"
+              id="inspectFilterTableBtn"
+              onclick="filterProcurementFromMap()"
+            >
+              📋 View Items in Procurement Table &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- End Tab View 3: Interactive Floor Plan Map -->
 
     </main>
 
@@ -4266,7 +5388,6 @@ automation:
         reader.readAsText(file);
       }
 
-
       function switchTab(tabId) {
         const tabProcurement = document.getElementById("tabViewProcurement");
         const tabSensors = document.getElementById("tabViewSensors");
@@ -4279,26 +5400,38 @@ automation:
           if (btnProcurement) btnProcurement.classList.add("active");
           if (btnSensors) btnSensors.classList.remove("active");
           try {
-            if (typeof roomSpendChartInstance !== "undefined" && roomSpendChartInstance) roomSpendChartInstance.resize();
-            if (typeof priorityChartInstance !== "undefined" && priorityChartInstance) priorityChartInstance.resize();
+            if (
+              typeof roomSpendChartInstance !== "undefined" &&
+              roomSpendChartInstance
+            )
+              roomSpendChartInstance.resize();
+            if (
+              typeof priorityChartInstance !== "undefined" &&
+              priorityChartInstance
+            )
+              priorityChartInstance.resize();
           } catch (e) {}
-          if (history.replaceState) history.replaceState(null, null, "#procurement");
+          if (history.replaceState)
+            history.replaceState(null, null, "#procurement");
         } else if (tabId === "sensors") {
           if (tabProcurement) tabProcurement.style.display = "none";
           if (tabSensors) tabSensors.style.display = "block";
           if (btnProcurement) btnProcurement.classList.remove("active");
           if (btnSensors) btnSensors.classList.add("active");
-          if (history.replaceState) history.replaceState(null, null, "#sensors");
+          if (history.replaceState)
+            history.replaceState(null, null, "#sensors");
         }
       }
 
       function filterZoneCards(category, btnElement) {
         if (btnElement && btnElement.parentElement) {
-          btnElement.parentElement.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
+          btnElement.parentElement
+            .querySelectorAll(".filter-btn")
+            .forEach((btn) => btn.classList.remove("active"));
           btnElement.classList.add("active");
         }
         const cards = document.querySelectorAll(".zone-card");
-        cards.forEach(card => {
+        cards.forEach((card) => {
           if (category === "all") {
             card.style.display = "flex";
           } else {
@@ -4315,6 +5448,227 @@ automation:
       // Check URL hash on load
       if (window.location.hash === "#sensors") {
         setTimeout(() => switchTab("sensors"), 50);
+      } else if (window.location.hash === "#map") {
+        setTimeout(() => switchTab("map"), 50);
+      }
+
+
+      let currentSelectedMapRoom = "Living Room";
+
+      const roomDataMap = {
+        "Living Room": {
+          icon: "🛋️",
+          type: "High Traffic • Sofa Lounge & Cinema",
+          zoneId: "zone-Living-Room",
+          sensors: "• <strong>1x Aqara FP1E mmWave Sensor</strong> (TV Console)<br>• Protocol: Zigbee 3.0 • 5V USB-C (Concealed)<br>• Micro-movement radar covers sofa without false triggers.",
+          lighting: "• <strong>Aqara H2 3-Gang Switch</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Decoupled Mode</span>)<br>• 6x Aqara T2 CCT Spotlights (2700K–6500K)<br>• Fanco DC Ceiling Fan (RF Bond Bridge)",
+          automations: "• <strong>Sofa Presence:</strong> Keeps ambient lights & AC active while reading or watching TV.<br>• <strong>Cinema Bias Mode:</strong> Dims spotlights to 20% warm when TV plays after dark.<br>• <strong>15-Min Auto-Powerdown:</strong> Auto-dims lights and sets AC to eco when room clears.",
+          filterRoom: "Living Room"
+        },
+        "Entrance": {
+          icon: "🚪",
+          type: "High Traffic • Drop Zone & Shoe Bench",
+          zoneId: "zone-Entrance",
+          sensors: "• <strong>1x Aqara Door Contact Sensor T1</strong> (Main Door Frame)<br>• <strong>1x Aqara PIR Motion Sensor P1</strong> (Shoe Bench)<br>• 100% Battery Powered (CR1632 & CR2450, 2-5 yrs)",
+          lighting: "• <strong>Aqara H2 2-Gang Switch</strong> (Neutral Wire)<br>• 1x High-CRI Ceiling Downlight<br>• 1x 2m 24V COB Warm White Strip (Floating Shoe Cabinet)",
+          automations: "• <strong>0ms Instant Welcome:</strong> Door cracks open &rarr; 0ms trigger illuminates shoe cabinet bottom float + warm downlight.<br>• <strong>Gear-Up Departure:</strong> Walking into foyer triggers PIR, illuminating bench while tying riding boots.<br>• <strong>Auto-Off:</strong> Door closes + 2 min no motion turns off lights.",
+          filterRoom: "Entrance"
+        },
+        "Master Bed": {
+          icon: "🛏️",
+          type: "Private • Sleep Sanctuary & Wardrobe",
+          zoneId: "zone-Master-Bed",
+          sensors: "• <strong>1x Bedside Wireless Mini Switch</strong> (Nightstand)<br>• <strong>1x Wardrobe Door Contact T1</strong> (Wardrobe Door)<br>• <span style='color: var(--accent-p0); font-weight: 700;'>Strictly NO motion/presence sensors!</span>",
+          lighting: "• <strong>Aqara H2 2-Gang Switch</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Decoupled</span>)<br>• 4x Aqara T2 CCT Spotlights (2700K–6500K)<br>• Aqara C3 Motorized Day/Night Curtains",
+          automations: "• <strong>Circadian Tracking:</strong> Smooth Kelvin transitions (5000K daylight &rarr; 2200K amber).<br>• <strong>Bedside Tap:</strong> Single tap toggles reading light; double tap = 10% wind-down.<br>• <strong>Whole-House Kill Switch:</strong> Long-press shuts off ALL condo lights, closes curtains, locks door, sets AC to 25°C.",
+          filterRoom: "Master Bed"
+        },
+        "Master Bath": {
+          icon: "🚿",
+          type: "Private • En-suite Wet/Dry Zone",
+          zoneId: "zone-Master-Bath",
+          sensors: "• <strong>1x Aqara Door Contact T1</strong> (Door Frame)<br>• <strong>1x Aqara PIR Motion P1</strong> (Interior Ceiling)<br>• 100% Battery Powered ('Wasp in a Box' Pair)",
+          lighting: "• <strong>Aqara H2 2-Gang Switch</strong> (Outside Door Box)<br>• 2x IP44 Splash-Rated Downlights<br>• 1x Vanity Mirror LED Light",
+          automations: "• <strong>Wasp in a Box:</strong> Motion + Door Closed locks occupancy ON indefinitely. Lights NEVER shut off in shower or toilet!<br>• <strong>Late-Night Piddle Mode (11PM-6AM):</strong> Vanity mirror turns on at 15% dim warm (2200K). Zero blinding glare.<br>• <strong>Auto-Off:</strong> Door opens &rarr; 90s countdown.",
+          filterRoom: "Bathrooms"
+        },
+        "Common Bath": {
+          icon: "🚿",
+          type: "Private • Guest & Living Area Access",
+          zoneId: "zone-Common-Bath",
+          sensors: "• <strong>1x Aqara Door Contact T1</strong> (Door Frame)<br>• <strong>1x Aqara PIR Motion P1</strong> (Interior Ceiling)<br>• 100% Battery Powered ('Wasp in a Box')",
+          lighting: "• <strong>Aqara H2 2-Gang Switch</strong> (Outside Door Box)<br>• 2x IP44 Splash-Rated Downlights<br>• 1x Vanity Mirror LED Light",
+          automations: "• <strong>Hands-Free Guest Access:</strong> Walk in &rarr; lights turn on instantly.<br>• <strong>Shower Safe:</strong> Door closed keeps lights on indefinitely.<br>• <strong>Night Path:</strong> Dimmed warm path after 11 PM.",
+          filterRoom: "Bathrooms"
+        },
+        "Kitchen": {
+          icon: "🍳",
+          type: "Utility • Cooking & Coffee Routine",
+          zoneId: "zone-Kitchen",
+          sensors: "• <strong>Time-Conditioned Smart Switch</strong><br>• Optional Under-Cabinet PIR Sensor<br>• Context-aware routine automation",
+          lighting: "• <strong>Aqara H2 2-Gang Switch</strong> (Entrance Box)<br>• 3x High-CRI Recessed Downlights<br>• 1x 3m 24V COB Warm White Strip (Under-Cabinet)",
+          automations: "• <strong>7:00 AM Coffee Routine:</strong> Switch press between 06:00–08:30 AM turns on ONLY under-cabinet warm strip at 30%. Glare-free morning coffee before sunrise.<br>• <strong>Meal Prep:</strong> Full 4000K crisp downlights + counter task light.<br>• <strong>Double-Click Override:</strong> Instant 100% full brightness anytime.",
+          filterRoom: "Kitchen"
+        },
+        "Bedroom 2 / Study": {
+          icon: "💻",
+          type: "Private • WFH Office & Guest Room",
+          zoneId: "zone-Bedroom-2",
+          sensors: "• Manual Aqara H2 Switch Control<br>• High reliability manual switch presses<br>• Avoids annoying Zoom auto-offs",
+          lighting: "• <strong>Aqara H2 2-Gang Switch</strong> (Door Box)<br>• 3x High-CRI Recessed Downlights<br>• Mitsubishi Electric Starmex 9k BTU AC",
+          automations: "• <strong>WFH Focus Scene:</strong> Single click energizes full 4500K bright white for desk work and Zoom calls.<br>• <strong>Guest Mode:</strong> Double click sets downlights to 3000K relaxed warm white.",
+          filterRoom: "Bedroom 2 / Study"
+        },
+        "Dining": {
+          icon: "🍽️",
+          type: "High Traffic • Sintered Stone Dining Table",
+          zoneId: "zone-Dining",
+          sensors: "• Living Room mmWave auxiliary zone<br>• Integrated with open-concept living area",
+          lighting: "• <strong>Aqara H2 1-Gang Switch</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Decoupled</span>)<br>• 2x Aqara T2 CCT Pendant Bulbs (2700K–6500K)<br>• Smooth CCT & Brightness dimming",
+          automations: "• <strong>Dinner Scene:</strong> Pendant tunes to 2500K intimate warm glow at 50% while living spots softly dim.<br>• <strong>Laptop Mode:</strong> Shifts to 4000K neutral daylight at 100% for dining table work.",
+          filterRoom: "Dining"
+        },
+        "Balcony": {
+          icon: "🌅",
+          type: "Utility & Outdoor • Alfresco & Zip Track",
+          zoneId: "zone-Balcony",
+          sensors: "• Solar Elevation & Weather Sync<br>• Sliding Door Contact Sensor (Optional)",
+          lighting: "• <strong>Aqara H2 2-Gang Switch</strong> (Light + Fan Isolator)<br>• 1x Outdoor High-CRI Downlight<br>• Dooya DM45S Zip Track (3 Sides) + Fanco DC Fan",
+          automations: "• <strong>Sunset Balcony Glow:</strong> Sliding door open after dark turns on soft warm downlight (30%).<br>• <strong>Zip Track Enclosure:</strong> Lowering zip blinds creates an enclosed outdoor room with fan on gentle breeze (Speed 2).",
+          filterRoom: "Balcony"
+        }
+      };
+
+      function selectMapRoom(roomName) {
+        currentSelectedMapRoom = roomName;
+        const data = roomDataMap[roomName];
+        if (!data) return;
+
+        // Highlight SVG zone
+        document.querySelectorAll(".map-room-zone").forEach(z => z.classList.remove("selected"));
+        const targetZone = document.getElementById(data.zoneId);
+        if (targetZone) targetZone.classList.add("selected");
+
+        // Update inspector sidebar
+        document.getElementById("inspectIcon").innerText = data.icon;
+        document.getElementById("inspectRoomName").innerText = roomName;
+        document.getElementById("inspectRoomType").innerText = data.type;
+        document.getElementById("inspectSensorsBox").innerHTML = data.sensors;
+        document.getElementById("inspectLightingBox").innerHTML = data.lighting;
+        document.getElementById("inspectAutomationsBox").innerHTML = data.automations;
+
+        // Filter and display procurement items in this room
+        const roomItems = itemsData.filter(i => {
+          if (data.filterRoom === "Bathrooms") return i.room === "Bathrooms";
+          return i.room === data.filterRoom || (data.filterRoom === "Living Room" && i.room === "Living Room");
+        });
+
+        let totalCost = 0;
+        let itemsHtml = "";
+        roomItems.forEach(item => {
+          totalCost += item.price || 0;
+          itemsHtml += `
+            <div class="inspector-item-row">
+              <span style="font-weight: 600;">${item.name}</span>
+              <span style="color: var(--sage-primary); font-weight: 700;">${item.priceDisplay || '$' + item.price}</span>
+            </div>
+          `;
+        });
+
+        if (roomItems.length === 0) {
+          itemsHtml = "<div style='color: var(--text-muted); font-size: 0.75rem;'>No specific items allocated yet.</div>";
+        } else {
+          itemsHtml += `
+            <div class="inspector-item-row" style="margin-top: 6px; border-top: 2px solid var(--border-subtle); padding-top: 6px; font-weight: 800;">
+              <span>Total Room Spend:</span>
+              <span style="color: var(--text-primary); font-size: 0.85rem;">$${totalCost.toLocaleString()}</span>
+            </div>
+          `;
+        }
+        document.getElementById("inspectProcurementBox").innerHTML = itemsHtml;
+      }
+
+      function filterProcurementFromMap() {
+        const data = roomDataMap[currentSelectedMapRoom];
+        if (!data) return;
+        switchTab("procurement");
+        setTimeout(() => {
+          const roomBtn = Array.from(document.querySelectorAll("#tabViewProcurement .filter-btn"))
+            .find(btn => btn.innerText.includes(data.filterRoom));
+          if (roomBtn) setRoomFilter(data.filterRoom, roomBtn);
+          document.getElementById("procurementTable").scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100);
+      }
+
+      function toggleMapLayer(layerName, btnEl) {
+        btnEl.classList.toggle("active");
+        const isActive = btnEl.classList.contains("active");
+
+        if (layerName === "sensors") {
+          const el = document.getElementById("layerSensorsGroup");
+          if (el) el.style.display = isActive ? "inline" : "none";
+        } else if (layerName === "lighting") {
+          const el = document.getElementById("layerLightingGroup");
+          if (el) el.style.display = isActive ? "inline" : "none";
+        } else if (layerName === "climate") {
+          const el = document.getElementById("layerClimateGroup");
+          if (el) el.style.display = isActive ? "inline" : "none";
+        } else if (layerName === "drawing") {
+          const el = document.getElementById("mapFloorPlanImg");
+          if (el) el.style.opacity = isActive ? "0.95" : "0.2";
+        }
+      }
+
+      function simulateMapTime(timeOfDay, btnEl) {
+        if (btnEl && btnEl.parentElement) {
+          btnEl.parentElement.querySelectorAll(".map-tool-btn").forEach(b => b.classList.remove("active"));
+          btnEl.classList.add("active");
+        }
+
+        const banner = document.getElementById("mapSimStatusText");
+        const livingSpots = document.getElementById("light-living-spots");
+        const diningPendant = document.getElementById("light-dining-pendant");
+        const kitchenStrip = document.getElementById("light-kitchen-strip");
+        const entranceStrip = document.getElementById("light-entrance-strip");
+        const masterSpots = document.getElementById("light-master-spots");
+        const masterVanity = document.getElementById("light-master-vanity");
+
+        if (timeOfDay === "morning") {
+          if (banner) banner.innerHTML = "<strong>07:00 AM Coffee Routine:</strong> Kitchen under-cabinet strip softly illuminated at 2700K (30%). Living & bedroom remain glare-free.";
+          if (kitchenStrip) { kitchenStrip.style.stroke = "#ff9e3b"; kitchenStrip.style.opacity = "1"; kitchenStrip.setAttribute("stroke-width", "12"); }
+          if (entranceStrip) { entranceStrip.style.opacity = "0.2"; }
+          if (livingSpots) livingSpots.style.opacity = "0.1";
+          if (diningPendant) diningPendant.style.opacity = "0.1";
+          if (masterSpots) masterSpots.style.opacity = "0.05";
+        } else if (timeOfDay === "day") {
+          if (banner) banner.innerHTML = "<strong>12:00 PM Focus Mode:</strong> Whole house illuminated in crisp 5000K daylight at 100% brightness for WFH productivity.";
+          if (kitchenStrip) { kitchenStrip.style.stroke = "#e6f4fa"; kitchenStrip.style.opacity = "1"; kitchenStrip.setAttribute("stroke-width", "8"); }
+          if (livingSpots) { livingSpots.style.opacity = "1"; livingSpots.querySelectorAll("circle").forEach(c => c.setAttribute("fill", "#e6f4fa")); }
+          if (diningPendant) { diningPendant.style.opacity = "1"; diningPendant.setAttribute("fill", "#e6f4fa"); }
+          if (masterSpots) { masterSpots.style.opacity = "0.9"; masterSpots.querySelectorAll("circle").forEach(c => c.setAttribute("fill", "#e6f4fa")); }
+        } else if (timeOfDay === "evening") {
+          if (banner) banner.innerHTML = "<strong>19:00 PM Evening Dinner:</strong> Dining pendant & living spotlights tuned to 3000K cozy warm white at 60%.";
+          if (diningPendant) { diningPendant.style.opacity = "1"; diningPendant.setAttribute("fill", "#ffa834"); }
+          if (livingSpots) { livingSpots.style.opacity = "0.6"; livingSpots.querySelectorAll("circle").forEach(c => c.setAttribute("fill", "#ffd080")); }
+          if (kitchenStrip) { kitchenStrip.style.stroke = "#ffd080"; kitchenStrip.style.opacity = "0.6"; kitchenStrip.setAttribute("stroke-width", "8"); }
+        } else if (timeOfDay === "night") {
+          if (banner) banner.innerHTML = "<strong>23:00 PM Night Wind-Down / Piddle:</strong> Master bath vanity mirror illuminated at 15% warm amber (2200K). All main lights OFF.";
+          if (livingSpots) livingSpots.style.opacity = "0";
+          if (diningPendant) diningPendant.style.opacity = "0";
+          if (kitchenStrip) kitchenStrip.style.opacity = "0";
+          if (entranceStrip) entranceStrip.style.opacity = "0";
+          if (masterSpots) masterSpots.style.opacity = "0";
+          if (masterVanity) { masterVanity.style.opacity = "1"; masterVanity.setAttribute("fill", "#ff7a22"); }
+        } else {
+          // Reset
+          if (banner) banner.innerText = "Simulation: Normal Ambient Mode. Click any room or time of day.";
+          if (kitchenStrip) { kitchenStrip.style.stroke = "#ffbb55"; kitchenStrip.style.opacity = "0.8"; kitchenStrip.setAttribute("stroke-width", "8"); }
+          if (entranceStrip) { entranceStrip.style.opacity = "0.8"; }
+          if (livingSpots) { livingSpots.style.opacity = "0.85"; livingSpots.querySelectorAll("circle").forEach(c => c.setAttribute("fill", "#ffd080")); }
+          if (diningPendant) { diningPendant.style.opacity = "0.85"; diningPendant.setAttribute("fill", "#ffa834"); }
+          if (masterSpots) { masterSpots.style.opacity = "0.75"; masterSpots.querySelectorAll("circle").forEach(c => c.setAttribute("fill", "#ffd080")); }
+          if (masterVanity) { masterVanity.style.opacity = "0.75"; masterVanity.setAttribute("fill", "#ffd080"); }
+        }
       }
 
       // Initialize
