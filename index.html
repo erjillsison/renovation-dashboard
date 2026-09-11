@@ -663,6 +663,27 @@
         white-space: nowrap;
       }
 
+      .badge-store {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.72rem;
+        font-weight: 600;
+        padding: 2px 7px;
+        background: #f1f5f9;
+        color: #334155;
+        border-radius: var(--radius-full);
+        border: 1px solid #e2e8f0;
+        white-space: nowrap;
+      }
+
+      .badge-store.badge-courts {
+        background: #eff6ff;
+        color: #1d4ed8;
+        border-color: #bfdbfe;
+        font-weight: 700;
+      }
+
       .badge-priority {
         display: inline-block;
         font-size: 0.68rem;
@@ -840,7 +861,8 @@
         }
         .items-table td:nth-child(3),
         .items-table td:nth-child(4),
-        .items-table td:nth-child(5) {
+        .items-table td:nth-child(5),
+        .items-table td:nth-child(6) {
           display: inline-block;
           margin-right: 4px;
           margin-top: 2px;
@@ -1218,29 +1240,36 @@
               <th
                 class="sortable"
                 onclick="handleSort('name')"
-                style="width: 25%"
+                style="width: 20%"
               >
                 Item & Category <span class="sort-icon" id="sort-name">⇅</span>
               </th>
-              <th style="width: 31%">Selected / Recommendation</th>
+              <th style="width: 26%">Selected / Recommendation</th>
+              <th
+                class="sortable"
+                onclick="handleSort('availableAt')"
+                style="width: 15%"
+              >
+                Available At <span class="sort-icon" id="sort-availableAt">⇅</span>
+              </th>
               <th
                 class="sortable"
                 onclick="handleSort('room')"
-                style="width: 14%"
+                style="width: 12%"
               >
                 Room <span class="sort-icon" id="sort-room">⇅</span>
               </th>
               <th
                 class="sortable"
                 onclick="handleSort('priority')"
-                style="width: 10%"
+                style="width: 9%"
               >
                 Priority <span class="sort-icon" id="sort-priority">⇅</span>
               </th>
               <th
                 class="sortable"
                 onclick="handleSort('status')"
-                style="width: 10%"
+                style="width: 8%"
               >
                 Status <span class="sort-icon" id="sort-status">⇅</span>
               </th>
@@ -1366,6 +1395,7 @@
             "status": "Selected",
             "price": 3650,
             "priceDisplay": "$3,650",
+            "availableAt": "Courts",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1373,11 +1403,12 @@
             "name": "Smart Switch (Entrance)",
             "choice": "Aqara H2 2-Gang (Main entry downlight + Shoe cabinet LED)",
             "notes": "Selected choice for Entrance.",
-            "room": "Entrance & Dining",
-            "priority": "P1",
+            "room": "Entrance",
+            "priority": "P0",
             "status": "Selected",
             "price": 50,
             "priceDisplay": "$50",
+            "availableAt": "Aqara Official / Souky",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1386,10 +1417,11 @@
             "choice": "Aqara H2 3-Gang (Ambient CCT, Accent, Ceiling fan)",
             "notes": "Selected choice for Living Room.",
             "room": "Living Room",
-            "priority": "P1",
+            "priority": "P0",
             "status": "Selected",
             "price": 56,
             "priceDisplay": "$56",
+            "availableAt": "Aqara Official / Souky",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1397,11 +1429,12 @@
             "name": "Smart Switch (Dining)",
             "choice": "Aqara H2 1-Gang (Dining pendant light)",
             "notes": "Selected choice for Dining.",
-            "room": "Entrance & Dining",
-            "priority": "P1",
+            "room": "Dining",
+            "priority": "P0",
             "status": "Selected",
             "price": 47,
             "priceDisplay": "$47",
+            "availableAt": "Aqara Official / Souky",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1410,10 +1443,11 @@
             "choice": "Aqara H2 2-Gang (Main ceiling downlights + Under-cabinet LED)",
             "notes": "Selected choice for Kitchen.",
             "room": "Kitchen",
-            "priority": "P1",
+            "priority": "P0",
             "status": "Selected",
             "price": 50,
             "priceDisplay": "$50",
+            "availableAt": "Aqara Official / Souky",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1422,10 +1456,11 @@
             "choice": "Aqara H2 2-Gang (Balcony light + Outdoor fan isolator)",
             "notes": "Selected choice for Balcony.",
             "room": "Balcony",
-            "priority": "P1",
+            "priority": "P0",
             "status": "Selected",
             "price": 50,
             "priceDisplay": "$50",
+            "availableAt": "Aqara Official / Souky",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1434,10 +1469,11 @@
             "choice": "Aqara H2 1-Gang (Corridor downlights)",
             "notes": "Selected choice for Whole House.",
             "room": "Whole House",
-            "priority": "P1",
+            "priority": "P0",
             "status": "Selected",
             "price": 47,
             "priceDisplay": "$47",
+            "availableAt": "Aqara Official / Souky",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1446,10 +1482,11 @@
             "choice": "Aqara H2 2-Gang (Main entry + Bedside ambient CCT)",
             "notes": "Selected choice for Master Bed.",
             "room": "Master Bed",
-            "priority": "P1",
+            "priority": "P0",
             "status": "Selected",
             "price": 50,
             "priceDisplay": "$50",
+            "availableAt": "Aqara Official / Souky",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1457,11 +1494,12 @@
             "name": "Smart Switch (Bedroom 2)",
             "choice": "Aqara H2 2-Gang (Main room lights + Study desk zone)",
             "notes": "Selected choice for Bedroom 2.",
-            "room": "Bedroom 2",
-            "priority": "P1",
+            "room": "Bedroom 2 / Study",
+            "priority": "P0",
             "status": "Selected",
             "price": 50,
             "priceDisplay": "$50",
+            "availableAt": "Aqara Official / Souky",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1470,10 +1508,11 @@
             "choice": "Aqara H2 2-Gang (Main downlight + Vanity mirror light)",
             "notes": "Selected choice for Bathrooms.",
             "room": "Bathrooms",
-            "priority": "P1",
+            "priority": "P0",
             "status": "Selected",
             "price": 50,
             "priceDisplay": "$50",
+            "availableAt": "Aqara Official / Souky",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1482,10 +1521,11 @@
             "choice": "Aqara H2 2-Gang (Main downlight + Vanity mirror light)",
             "notes": "Selected choice for Bathrooms.",
             "room": "Bathrooms",
-            "priority": "P1",
+            "priority": "P0",
             "status": "Selected",
             "price": 50,
             "priceDisplay": "$50",
+            "availableAt": "Aqara Official / Souky",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1498,6 +1538,7 @@
             "status": "Selected",
             "price": 210,
             "priceDisplay": "$210",
+            "availableAt": "Aqara Official / Souky",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1505,11 +1546,12 @@
             "name": "Smart CCT Bulbs (Dining)",
             "choice": "2x Aqara T2 Dimmable Tunable White Pendant Bulbs",
             "notes": "Selected choice for Dining.",
-            "room": "Entrance & Dining",
+            "room": "Dining",
             "priority": "P1",
             "status": "Selected",
             "price": 70,
             "priceDisplay": "$70",
+            "availableAt": "Aqara Official / Souky",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1522,6 +1564,7 @@
             "status": "Selected",
             "price": 140,
             "priceDisplay": "$140",
+            "availableAt": "Aqara Official / Souky",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1529,11 +1572,12 @@
             "name": "Dumb Downlights (Entrance)",
             "choice": "1x High-CRI (>90) Recessed Downlight",
             "notes": "Selected choice for Entrance.",
-            "room": "Entrance & Dining",
+            "room": "Entrance",
             "priority": "P1",
             "status": "Selected",
             "price": 20,
             "priceDisplay": "$20",
+            "availableAt": "Sembawang Lighting House",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1546,6 +1590,7 @@
             "status": "Selected",
             "price": 65,
             "priceDisplay": "$65",
+            "availableAt": "Sembawang Lighting House",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1558,6 +1603,7 @@
             "status": "Selected",
             "price": 25,
             "priceDisplay": "$25",
+            "availableAt": "Sembawang Lighting House",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1570,6 +1616,7 @@
             "status": "Selected",
             "price": 45,
             "priceDisplay": "$45",
+            "availableAt": "Sembawang Lighting House",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1577,11 +1624,12 @@
             "name": "Dumb Downlights (Bedroom 2)",
             "choice": "3x High-CRI (>90) Recessed Downlights",
             "notes": "Selected choice for Bedroom 2.",
-            "room": "Bedroom 2",
+            "room": "Bedroom 2 / Study",
             "priority": "P1",
             "status": "Selected",
             "price": 65,
             "priceDisplay": "$65",
+            "availableAt": "Sembawang Lighting House",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1594,6 +1642,7 @@
             "status": "Selected",
             "price": 85,
             "priceDisplay": "$85",
+            "availableAt": "Sembawang Lighting House",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1601,11 +1650,12 @@
             "name": "Accent LED Strip (Entrance)",
             "choice": "1x 2m 24V COB Warm White Strip + Driver (Shoe Cabinet)",
             "notes": "Selected choice for Entrance.",
-            "room": "Entrance & Dining",
+            "room": "Entrance",
             "priority": "P1",
             "status": "Selected",
             "price": 60,
             "priceDisplay": "$60",
+            "availableAt": "Electrical Specialist / Taobao",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1618,6 +1668,7 @@
             "status": "Selected",
             "price": 90,
             "priceDisplay": "$90",
+            "availableAt": "Electrical Specialist / Taobao",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1630,6 +1681,7 @@
             "status": "Selected",
             "price": 350,
             "priceDisplay": "$350",
+            "availableAt": "Sembawang Lighting House",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1642,6 +1694,7 @@
             "status": "Selected",
             "price": 250,
             "priceDisplay": "$250",
+            "availableAt": "Sembawang Lighting House",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1654,6 +1707,7 @@
             "status": "Selected",
             "price": 250,
             "priceDisplay": "$250",
+            "availableAt": "Nabu Casa / Seeed Studio",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1666,6 +1720,7 @@
             "status": "Selected",
             "price": 650,
             "priceDisplay": "$650",
+            "availableAt": "Courts",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1678,6 +1733,7 @@
             "status": "Selected",
             "price": 1200,
             "priceDisplay": "$1,200",
+            "availableAt": "Courts",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1690,6 +1746,7 @@
             "status": "Selected",
             "price": 1385,
             "priceDisplay": "$1,385",
+            "availableAt": "Courts",
             "sellerDeductible": true,
             "sellerSavings": 1385
       },
@@ -1702,6 +1759,7 @@
             "status": "Selected",
             "price": 650,
             "priceDisplay": "$650",
+            "availableAt": "Courts",
             "sellerDeductible": true,
             "sellerSavings": 650
       },
@@ -1709,11 +1767,12 @@
             "name": "Smart Door Lock",
             "choice": "Aqara U400 UWB Smart Lock",
             "notes": "Hands-free UWB proximity walk-up unlock.",
-            "room": "Entrance & Dining",
+            "room": "Entrance",
             "priority": "P0",
             "status": "Selected",
             "price": 650,
             "priceDisplay": "$650",
+            "availableAt": "Aqara Official / Souky",
             "sellerDeductible": true,
             "sellerSavings": 650
       },
@@ -1726,6 +1785,7 @@
             "status": "Selected",
             "price": 1200,
             "priceDisplay": "$1,200",
+            "availableAt": "Sim Siang Choon / Panasonic Store",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1738,6 +1798,7 @@
             "status": "Selected",
             "price": 1100,
             "priceDisplay": "$1,100",
+            "availableAt": "Curtain Specialist / Contractor",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1750,6 +1811,7 @@
             "status": "Selected",
             "price": 2800,
             "priceDisplay": "$2,800",
+            "availableAt": "Courts",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1762,6 +1824,7 @@
             "status": "Selected",
             "price": 1600,
             "priceDisplay": "$1,600",
+            "availableAt": "Blafink",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1774,18 +1837,20 @@
             "status": "Selected",
             "price": 1100,
             "priceDisplay": "$1,100",
+            "availableAt": "Curtain Specialist / Contractor",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
       {
             "name": "Sofa",
             "choice": "Cozmo 3-Seater Modular Sofa with Chaise",
-            "notes": "Configurable theater-pit layout. Contenders: Sammie/Cozmo ($1,750), Son & Bear Milo Double ($1,388), IKEA Söderhamn ($850).",
+            "notes": "Configurable theater-pit layout. Contenders: Sammie/Cozmo ($1,750), Son & Bear Milo Double ($1,388), IKEA S\u00f6derhamn ($850).",
             "room": "Living Room",
             "priority": "P1",
             "status": "Selected",
             "price": 1750,
             "priceDisplay": "$1,750",
+            "availableAt": "Cozmo",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1798,6 +1863,7 @@
             "status": "Selected",
             "price": 700,
             "priceDisplay": "$700",
+            "availableAt": "Castlery",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1810,6 +1876,7 @@
             "status": "Selected",
             "price": 5000,
             "priceDisplay": "$5,000",
+            "availableAt": "Courts",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1822,6 +1889,7 @@
             "status": "Selected",
             "price": 1750,
             "priceDisplay": "$1,750",
+            "availableAt": "Courts",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1829,11 +1897,12 @@
             "name": "Shoe Bench",
             "choice": "Castlery Nathan Shoe Bench",
             "notes": "Measure entryway walkway clearance and swing.",
-            "room": "Entrance & Dining",
+            "room": "Entrance",
             "priority": "P2",
             "status": "Selected",
             "price": 325,
             "priceDisplay": "$325",
+            "availableAt": "Castlery",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1841,11 +1910,12 @@
             "name": "Dining Table",
             "choice": "Comfort Furniture Sintered Stone Dining Table",
             "notes": "Modular and movable (no fixed kitchen island).",
-            "room": "Entrance & Dining",
+            "room": "Dining",
             "priority": "P1",
             "status": "Selected",
             "price": 750,
             "priceDisplay": "$750",
+            "availableAt": "Comfort Furniture",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1853,11 +1923,12 @@
             "name": "Dining Chairs",
             "choice": "Castlery Classic Dining Chairs (Set of 4)",
             "notes": "Comfortable for multi-use WFH dining.",
-            "room": "Entrance & Dining",
+            "room": "Dining",
             "priority": "P1",
             "status": "Selected",
             "price": 600,
             "priceDisplay": "$600",
+            "availableAt": "Castlery",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1870,6 +1941,7 @@
             "status": "Selected",
             "price": 2800,
             "priceDisplay": "$2,800",
+            "availableAt": "Zip Track Specialist / Contractor",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1882,6 +1954,7 @@
             "status": "TBD",
             "price": 950,
             "priceDisplay": "$700-$1,200",
+            "availableAt": "-",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1894,6 +1967,7 @@
             "status": "TBD",
             "price": 750,
             "priceDisplay": "$500-$1,000",
+            "availableAt": "-",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1906,6 +1980,7 @@
             "status": "TBD",
             "price": 650,
             "priceDisplay": "$400-$900",
+            "availableAt": "-",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1918,6 +1993,7 @@
             "status": "TBD",
             "price": 325,
             "priceDisplay": "$150-$500",
+            "availableAt": "-",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1930,6 +2006,7 @@
             "status": "TBD",
             "price": 550,
             "priceDisplay": "$300-$800",
+            "availableAt": "-",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1942,6 +2019,7 @@
             "status": "TBD",
             "price": 650,
             "priceDisplay": "$400-$900",
+            "availableAt": "-",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1954,6 +2032,7 @@
             "status": "TBD",
             "price": 1850,
             "priceDisplay": "$1,200-$2,500",
+            "availableAt": "-",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1966,6 +2045,7 @@
             "status": "TBD",
             "price": 550,
             "priceDisplay": "$300-$800",
+            "availableAt": "-",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1978,6 +2058,7 @@
             "status": "TBD",
             "price": 1300,
             "priceDisplay": "$800-$1,800",
+            "availableAt": "-",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -1990,6 +2071,7 @@
             "status": "TBD",
             "price": 1300,
             "priceDisplay": "$800-$1,800",
+            "availableAt": "-",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -2002,6 +2084,7 @@
             "status": "TBD",
             "price": 600,
             "priceDisplay": "$300-$900",
+            "availableAt": "-",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -2014,6 +2097,7 @@
             "status": "TBD",
             "price": 600,
             "priceDisplay": "$300-$900",
+            "availableAt": "-",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -2026,6 +2110,7 @@
             "status": "TBD",
             "price": 1200,
             "priceDisplay": "$600-$1,800",
+            "availableAt": "-",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -2033,11 +2118,12 @@
             "name": "Entrance Mirror / Drop Zone",
             "choice": "Full-length mirror + drop shelf + charging for EDC",
             "notes": "Full-length mirror + drop shelf + charging for EDC.",
-            "room": "Entrance & Dining",
+            "room": "Entrance",
             "priority": "P2",
             "status": "TBD",
             "price": 475,
             "priceDisplay": "$250-$700",
+            "availableAt": "-",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -2050,6 +2136,7 @@
             "status": "TBD",
             "price": 1000,
             "priceDisplay": "$600-$1,400",
+            "availableAt": "-",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -2062,6 +2149,7 @@
             "status": "TBD",
             "price": 1350,
             "priceDisplay": "$700-$2,000",
+            "availableAt": "-",
             "sellerDeductible": false,
             "sellerSavings": 0
       }
@@ -2094,7 +2182,7 @@
       }
 
       function updateSortIcons() {
-        const columns = ["name", "room", "priority", "status", "price"];
+        const columns = ["name", "availableAt", "room", "priority", "status", "price"];
         columns.forEach((col) => {
           const iconEl = document.getElementById(`sort-${col}`);
           const thEl = iconEl ? iconEl.closest("th") : null;
@@ -2133,6 +2221,7 @@
             item.choice.toLowerCase().includes(currentSearchTerm) ||
             item.notes.toLowerCase().includes(currentSearchTerm) ||
             item.room.toLowerCase().includes(currentSearchTerm) ||
+            (item.availableAt && item.availableAt.toLowerCase().includes(currentSearchTerm)) ||
             item.priority.toLowerCase().includes(currentSearchTerm);
           return (
             matchesRoom && matchesPriority && matchesStatus && matchesSearch
@@ -2190,6 +2279,13 @@
               item.status === "Selected" ? "status-selected" : "status-tbd";
             let statusIcon = item.status === "Selected" ? "●" : "○";
 
+            const isCourts = item.availableAt && item.availableAt.toLowerCase().includes("courts");
+            const courtsIcon = isCourts ? "🏬 " : "";
+            const storeClass = isCourts ? "badge-store badge-courts" : "badge-store";
+            const storeDisplay = item.availableAt && item.availableAt !== "-" 
+              ? `<span class="${storeClass}">${courtsIcon}${item.availableAt}</span>` 
+              : `<span style="color: var(--text-muted); font-size: 0.75rem;">—</span>`;
+
             row.innerHTML = `
             <td>
               <div class="item-name-cell">${item.name}</div>
@@ -2198,6 +2294,7 @@
               <div class="item-choice-cell"><strong>${item.choice}</strong></div>
               <div class="item-notes">${item.notes}</div>
             </td>
+            <td>${storeDisplay}</td>
             <td><span class="badge-room">${item.room}</span></td>
             <td><span class="badge-priority ${priorityClass}">${item.priority}</span></td>
             <td><span class="status-badge ${statusClass}">${statusIcon} ${item.status}</span></td>
