@@ -1275,17 +1275,53 @@
     </style>
   </head>
   <body>
-    <!-- Header -->
+    <!-- Global Master Header -->
     <header>
       <div class="container">
-        <div class="header-top">
+        <div class="header-top" style="margin-bottom: 8px;">
           <div>
             <div class="badge-tag">House Renovation 2026</div>
-            <h1>Procurement & Budget Visualizer</h1>
+            <h1>Condominium Renovation Master Plan</h1>
             <div class="header-subtitle">
-              Comprehensive breakdown of research, selections, and estimated TBD
-              fixtures
+              Integrated master plan: procurement, budget analytics, and smart home automation
             </div>
+          </div>
+        </div>
+
+        <!-- Top Main Tab Navigation Bar -->
+        <div class="nav-tabs-bar" style="margin-top: 14px; margin-bottom: 0px;">
+          <button
+            class="nav-tab-btn active"
+            id="tabBtnProcurement"
+            onclick="switchTab('procurement')"
+          >
+            <span style="font-size: 1.1rem">💰</span>
+            <span>Procurement & Budget</span>
+          </button>
+          <button
+            class="nav-tab-btn"
+            id="tabBtnSensors"
+            onclick="switchTab('sensors')"
+          >
+            <span style="font-size: 1.1rem">💡</span>
+            <span>Sensors & Lighting Architecture</span>
+            <span class="tab-badge">Zone Plan</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" style="padding-top: 16px;">
+      <!-- Tab View 1: Procurement & Budget -->
+      <div id="tabViewProcurement" class="tab-view">
+        <div style="margin-bottom: 12px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 8px;">
+          <div>
+            <h2 style="font-family: var(--font-heading); font-size: 1.28rem; font-weight: 700; color: var(--text-primary); margin-bottom: 2px;">
+              Procurement & Budget Visualizer
+            </h2>
+            <p style="font-size: 0.8rem; color: var(--text-secondary);">
+              Comprehensive breakdown of research, finalized selections, and estimated TBD fixtures
+            </p>
           </div>
         </div>
 
@@ -1295,6 +1331,7 @@
           style="
             background: linear-gradient(135deg, #fdfbf7 0%, #f4efe7 100%);
             border-color: #d9cbba;
+            margin-bottom: 16px;
           "
         >
           <div class="seller-banner-content">
@@ -1329,33 +1366,6 @@
             </label>
           </div>
         </div>
-      </div>
-    </header>
-
-    <main class="container">
-      <!-- Top Main Tab Navigation -->
-      <div class="nav-tabs-bar">
-        <button
-          class="nav-tab-btn active"
-          id="tabBtnProcurement"
-          onclick="switchTab('procurement')"
-        >
-          <span style="font-size: 1.1rem">💰</span>
-          <span>Procurement & Budget</span>
-        </button>
-        <button
-          class="nav-tab-btn"
-          id="tabBtnSensors"
-          onclick="switchTab('sensors')"
-        >
-          <span style="font-size: 1.1rem">💡</span>
-          <span>Sensors & Lighting Architecture</span>
-          <span class="tab-badge">Zone Plan</span>
-        </button>
-      </div>
-
-      <!-- Tab View 1: Procurement & Budget -->
-      <div id="tabViewProcurement" class="tab-view">
       <!-- KPI Summary Cards -->
       <div class="kpi-grid">
         <div class="kpi-card selected">
@@ -1764,6 +1774,14 @@
 
       <!-- Tab View 2: Sensors & Smart Lighting Architecture -->
       <div id="tabViewSensors" class="tab-view" style="display: none;">
+        <div style="margin-bottom: 14px;">
+          <h2 style="font-family: var(--font-heading); font-size: 1.28rem; font-weight: 700; color: var(--text-primary); margin-bottom: 2px;">
+            Sensors & Smart Lighting Architecture
+          </h2>
+          <p style="font-size: 0.8rem; color: var(--text-secondary);">
+            Pragmatic, low-power sensor layout and decoupled smart lighting routines by zone
+          </p>
+        </div>
         <!-- Core Architecture Principles -->
         <div class="arch-principles-grid">
           <div class="principle-card">
