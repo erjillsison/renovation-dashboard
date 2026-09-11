@@ -3394,16 +3394,6 @@ automation:
           <!-- Main Map Viewport & Controls -->
           <div class="map-main-card">
             <div class="map-toolbar">
-              <!-- View Mode Switcher -->
-              <div class="map-controls-group">
-                <span class="filter-label" style="font-size: 0.75rem;">Floor Plan:</span>
-                <button class="map-tool-btn active" id="btnModeSchematic" onclick="setMapMode('schematic', this)">
-                  <span>📐</span> Schematic (Clean Boxes)
-                </button>
-                <button class="map-tool-btn" id="btnModeSketch" onclick="setMapMode('sketch', this)">
-                  <span>🖼️</span> Sketch Photo (JPG)
-                </button>
-              </div>
 
               <!-- Layer Toggles -->
               <div class="map-controls-group">
@@ -3479,18 +3469,6 @@ automation:
                 <rect width="1600" height="1251" fill="#faf9f6" />
                 <rect width="1600" height="1251" fill="url(#cadGrid)" />
 
-                <!-- Layer 1: Hand-drawn Sketch Image (Hidden by default in Schematic mode) -->
-                <image
-                  id="mapFloorPlanImg"
-                  href="floor_plan.jpeg"
-                  x="0"
-                  y="0"
-                  width="1600"
-                  height="1251"
-                  preserveAspectRatio="xMidYMid meet"
-                  opacity="0.95"
-                  style="display: none;"
-                />
 
                 <!-- Layer 1b: Schematic Room Fills (Clean Solid Rectangles) -->
                 <g id="layerSchematicFills">
@@ -5909,32 +5887,6 @@ automation:
         }, 100);
       }
 
-      function setMapMode(mode, btnEl) {
-        if (btnEl && btnEl.parentElement) {
-          btnEl.parentElement.querySelectorAll(".map-tool-btn").forEach(b => b.classList.remove("active"));
-          btnEl.classList.add("active");
-        }
-
-        const imgEl = document.getElementById("mapFloorPlanImg");
-        const wallsEl = document.getElementById("layerSchematicWalls");
-        const furnitureEl = document.getElementById("layerSchematicFurniture");
-        const fillsEl = document.getElementById("layerSchematicFills");
-
-        if (mode === "schematic") {
-          if (imgEl) imgEl.style.display = "none";
-          if (wallsEl) wallsEl.style.display = "inline";
-          if (furnitureEl) furnitureEl.style.display = "inline";
-          if (fillsEl) fillsEl.style.display = "inline";
-        } else if (mode === "sketch") {
-          if (imgEl) {
-            imgEl.style.display = "inline";
-            imgEl.style.opacity = "0.95";
-          }
-          if (fillsEl) fillsEl.style.display = "none";
-          if (wallsEl) wallsEl.style.display = "inline";
-          if (furnitureEl) furnitureEl.style.display = "inline";
-        }
-      }
 
       function toggleMapLayer(layerName, btnEl) {
         btnEl.classList.toggle("active");
