@@ -1299,10 +1299,10 @@
         gap: 16px;
         align-items: start;
         margin-bottom: 24px;
-        min-height: 820px;
+        min-height: 800px;
       }
 
-      @media (max-width: 1080px) {
+      @media (max-width: 860px) {
         .map-wrapper {
           grid-template-columns: 1fr;
           min-height: auto;
@@ -1323,7 +1323,7 @@
         top: 16px;
       }
 
-      @media (max-width: 1080px) {
+      @media (max-width: 860px) {
         .map-main-card {
           position: static;
         }
@@ -1464,19 +1464,19 @@
         flex-direction: column;
         gap: 12px;
         align-self: start;
-        height: 760px;
-        max-height: calc(100vh - 40px);
+        height: 750px;
+        max-height: calc(100vh - 32px);
         min-height: 600px;
         overflow-y: auto;
         position: sticky;
         top: 16px;
       }
 
-      @media (max-width: 1080px) {
+      @media (max-width: 860px) {
         .inspector-card {
-          height: auto;
-          min-height: auto;
-          max-height: none;
+          height: 600px;
+          min-height: 500px;
+          max-height: 80vh;
           position: static;
         }
       }
