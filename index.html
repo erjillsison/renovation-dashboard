@@ -3549,13 +3549,39 @@ automation:
                   <circle cx="715" cy="465" r="48" fill="none" stroke="#d5ddd6" stroke-width="1.5" stroke-dasharray="4 3" />
                   <circle cx="715" cy="465" r="25" fill="#ffffff" fill-opacity="0.8" stroke-width="1.5" />
 
-                  <!-- Dining Table & Chairs -->
-                  <rect x="670" y="745" width="95" height="85" rx="6" fill="#ffffff" fill-opacity="0.85" stroke-width="2" />
-                  <rect x="698" y="725" width="40" height="15" rx="3" fill="#ffffff" fill-opacity="0.7" />
-                  <rect x="698" y="835" width="40" height="15" rx="3" fill="#ffffff" fill-opacity="0.7" />
-                  <rect x="650" y="768" width="15" height="40" rx="3" fill="#ffffff" fill-opacity="0.7" />
-                  <rect x="770" y="768" width="15" height="40" rx="3" fill="#ffffff" fill-opacity="0.7" />
-                  <text x="717" y="792" font-size="9" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">DINING</text>
+                  <!-- Folding Dining Table (Arch-topped folding table backed against South wall y=878) -->
+                  <path
+                    d="M 750 878 L 750 760 A 54.5 54.5 0 0 1 859 760 L 859 878 Z"
+                    fill="#ffffff" fill-opacity="0.9" stroke="#8a9e8f" stroke-width="2"
+                  />
+                  <!-- Folding Leaf Seam -->
+                  <line x1="750" y1="778" x2="859" y2="778" stroke="#8a9e8f" stroke-width="1.5" stroke-dasharray="4 3" />
+                  <text x="804.5" y="816" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">FOLDING</text>
+                  <text x="804.5" y="834" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">DINING</text>
+
+                  <!-- Left Chair (facing East towards table) -->
+                  <g transform="translate(716, 792)">
+                    <rect x="0" y="0" width="40" height="44" rx="4" fill="#ffffff" fill-opacity="0.8" stroke="#8a9e8f" stroke-width="1.5" />
+                    <line x1="8" y1="0" x2="8" y2="44" stroke="#8a9e8f" stroke-width="1.5" />
+                  </g>
+
+                  <!-- Right Chair (facing West towards table) -->
+                  <g transform="translate(862, 792)">
+                    <rect x="0" y="0" width="40" height="44" rx="4" fill="#ffffff" fill-opacity="0.8" stroke="#8a9e8f" stroke-width="1.5" />
+                    <line x1="32" y1="0" x2="32" y2="44" stroke="#8a9e8f" stroke-width="1.5" />
+                  </g>
+
+                  <!-- Top-Left Angled Chair (facing arched top) -->
+                  <g transform="translate(755, 735) rotate(-45)">
+                    <rect x="-20" y="-22" width="40" height="44" rx="4" fill="#ffffff" fill-opacity="0.8" stroke="#8a9e8f" stroke-width="1.5" />
+                    <line x1="-20" y1="-14" x2="20" y2="-14" stroke="#8a9e8f" stroke-width="1.5" />
+                  </g>
+
+                  <!-- Top-Right Angled Chair (facing arched top) -->
+                  <g transform="translate(850, 735) rotate(45)">
+                    <rect x="-20" y="-22" width="40" height="44" rx="4" fill="#ffffff" fill-opacity="0.8" stroke="#8a9e8f" stroke-width="1.5" />
+                    <line x1="-20" y1="-14" x2="20" y2="-14" stroke="#8a9e8f" stroke-width="1.5" />
+                  </g>
 
                   <!-- Foyer Narrow Corridor: Storage / Pegboard & Hanging Shoe Bench -->
                   <rect x="735" y="890" width="30" height="175" rx="3" fill="#ffffff" fill-opacity="0.9" stroke="#3b82f6" stroke-width="1.5" />
@@ -3782,7 +3808,7 @@ automation:
                   <circle
                     id="light-dining-pendant"
                     class="light-glow"
-                    cx="795" cy="800" r="20"
+                    cx="805" cy="780" r="20"
                     fill="#ffa834" filter="url(#lightGlowFilter)" opacity="0.85"
                   />
 
@@ -3801,10 +3827,10 @@ automation:
 
                 <!-- Layer 4: Climate & Motors (No Wall Overlaps) -->
                 <g id="layerClimateGroup">
-                  <!-- Living Room Starmex 18k AC (south wall of living room above dining opening) -->
-                  <g transform="translate(680, 694)">
-                    <rect width="65" height="18" rx="4" fill="#eaf4f8" stroke="#3a7d99" stroke-width="2" />
-                    <text x="32" y="13" font-size="10" font-weight="700" fill="#2d6b85" text-anchor="middle">AC 18k</text>
+                  <!-- Living/Dining Starmex 18k AC (above walkway corridor west of dining table) -->
+                  <g transform="translate(650, 815)">
+                    <rect width="68" height="22" rx="4" fill="#eaf4f8" stroke="#3a7d99" stroke-width="2" stroke-dasharray="4 3" />
+                    <text x="34" y="15" font-size="9.5" font-weight="700" fill="#2d6b85" text-anchor="middle">AC 18k</text>
                   </g>
 
                   <!-- Master Bed Starmex 9k AC (above master bath door) -->
@@ -4017,7 +4043,7 @@ automation:
                   </g>
 
                   <!-- Dining -->
-                  <g transform="translate(765, 795)">
+                  <g transform="translate(805, 665)">
                     <rect x="-95" y="-18" width="190" height="38" rx="6" fill="#ffffff" fill-opacity="0.92" stroke="#d5ddd6" stroke-width="1.5" filter="url(#badgeShadow)" />
                     <text x="0" y="-1" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1">DINING</text>
                     <text x="0" y="13" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#66776b" text-anchor="middle">4-Seater • mmWave Zone • CCT Pendant</text>
