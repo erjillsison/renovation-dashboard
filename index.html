@@ -2131,12 +2131,12 @@
         <div class="arch-principles-grid">
           <div class="principle-card">
             <div class="principle-header">
-              <span>🛋️</span> 1 mmWave Only (Living Room)
+              <span>🛋️</span> 1 mmWave (Living + Dining Coverage)
             </div>
             <div class="principle-desc">
-              mmWave presence is strictly reserved for the sofa/TV lounge where
-              people sit motionless for hours. Avoids $600+ cost, ghost wall
-              penetration, and messy USB cords in other rooms.
+              mmWave presence is mounted high at the curtain pelmet pointing
+              lengthwise South through both Living Room and Dining Room. Covers
+              both lounge and dining table without false triggers through bedroom walls.
             </div>
           </div>
 
@@ -2209,7 +2209,7 @@
               <span class="kpi-pill">Concealed Wire</span>
             </div>
             <div class="kpi-value">1 Device</div>
-            <div class="kpi-meta">Living Room mmWave behind TV console</div>
+            <div class="kpi-meta">Curtain Pelmet USB (Living + Dining)</div>
           </div>
 
           <div class="kpi-card p2">
@@ -2462,10 +2462,10 @@
                   <span>📡</span> Sensors Deployed
                 </div>
                 <div class="zone-subcol-content">
-                  • <strong>1x Aqara FP1E mmWave Sensor</strong><br />
-                  • Placed on TV Console facing sofa<br />
+                  • <strong>1x Aqara mmWave Sensor (FP1E / FP2)</strong><br />
+                  • North Curtain Pelmet pointing lengthwise South<br />
                   <span style="color: var(--accent-p0); font-weight: 600"
-                    >5V USB-C (Concealed behind console)</span
+                    >5V USB-C (Concealed in curtain pelmet)</span
                   >
                 </div>
               </div>
@@ -2513,11 +2513,11 @@
 
             <div class="zone-why-box">
               <div class="zone-why-title">
-                <span>💡</span> Why mmWave belongs ONLY here:
+                <span>💡</span> Why Lengthwise mmWave Placement Works:
               </div>
-              Living room is the only space where people remain still for hours.
-              TV console provides an invisible USB-C power source without
-              exposed cords.
+              Mounted high at the window curtain pelmet, the 120° radar sweeps lengthwise
+              South down the entire living and dining hall. It covers sofa micro-movements
+              and dining occupancy simultaneously, powered cleanly from the motorized curtain AC socket.
             </div>
           </div>
 
@@ -2913,9 +2913,9 @@
                   <span>📡</span> Sensors Deployed
                 </div>
                 <div class="zone-subcol-content">
-                  • Living Room mmWave auxiliary zone<br />
+                  • Covered by lengthwise mmWave radar<br />
                   <span style="color: var(--text-secondary)"
-                    >Integrated with open living area</span
+                    >North pelmet sweeps entire dining zone</span
                   >
                 </div>
               </div>
@@ -3645,7 +3645,7 @@ automation:
                     points="590,268 940,268 940,710 590,710"
                     onclick="selectMapRoom('Living Room')"
                   >
-                    <title>Living Room: Sofa, 65" TV, mmWave Sensor, 6x CCT Spotlights</title>
+                    <title>Living Room: Sofa, 65" TV, Lengthwise mmWave, 6x CCT Spotlights</title>
                   </polygon>
 
                   <!-- Dining Room -->
@@ -3812,26 +3812,26 @@ automation:
                 <!-- Layer 5: Sensors Markers (Pins with pulse & icons) -->
                   <!-- Radar Beam Field (Non-blocking, elegant concentric waves) -->
                   <g id="radarField" pointer-events="none">
-                    <!-- Soft translucent coverage cone towards modular sofa -->
+                    <!-- Soft translucent coverage cone pointing lengthwise down through Living + Dining -->
                     <path
-                      d="M 615 395 L 890 320 A 290 290 0 0 1 870 570 Z"
+                      d="M 765 280 L 620 850 A 588 588 0 0 0 910 850 Z"
                       fill="rgba(74, 107, 87, 0.08)"
                       stroke="rgba(74, 107, 87, 0.25)"
                       stroke-width="1.5"
                       stroke-dasharray="6 4"
                     />
-                    <!-- Concentric Radar Wave Arcs -->
-                    <path d="M 685 375 A 75 75 0 0 1 680 445" fill="none" stroke="#4a6b57" stroke-width="2.5" stroke-linecap="round" opacity="0.8" class="radar-pulse-ring" />
-                    <path d="M 755 355 A 150 150 0 0 1 745 500" fill="none" stroke="#4a6b57" stroke-width="2" stroke-linecap="round" opacity="0.55" class="radar-pulse-ring" style="animation-delay: 0.6s;" />
-                    <path d="M 825 338 A 225 225 0 0 1 810 545" fill="none" stroke="#4a6b57" stroke-width="1.5" stroke-linecap="round" opacity="0.35" class="radar-pulse-ring" style="animation-delay: 1.2s;" />
+                    <!-- Concentric Radar Wave Arcs radiating South -->
+                    <path d="M 705 470 A 200 200 0 0 0 825 470" fill="none" stroke="#4a6b57" stroke-width="2.5" stroke-linecap="round" opacity="0.8" class="radar-pulse-ring" />
+                    <path d="M 665 630 A 360 360 0 0 0 865 630" fill="none" stroke="#4a6b57" stroke-width="2" stroke-linecap="round" opacity="0.55" class="radar-pulse-ring" style="animation-delay: 0.6s;" />
+                    <path d="M 635 785 A 520 520 0 0 0 895 785" fill="none" stroke="#4a6b57" stroke-width="1.5" stroke-linecap="round" opacity="0.35" class="radar-pulse-ring" style="animation-delay: 1.2s;" />
                   </g>
 
-                  <!-- 1. Living Room mmWave Sensor (Aqara FP1E on TV Console) -->
-                  <g class="sensor-pin" transform="translate(615, 395)" onclick="selectMapRoom('Living Room')">
+                  <!-- 1. Living & Dining mmWave Sensor (North Pelmet pointing South) -->
+                  <g class="sensor-pin" transform="translate(765, 280)" onclick="selectMapRoom('Living Room')">
                     <circle cx="0" cy="0" r="13" fill="#4a6b57" stroke="#ffffff" stroke-width="2.5" />
                     <text x="0" y="4" font-size="9" fill="#ffffff" font-weight="800" text-anchor="middle" pointer-events="none">📡</text>
-                    <rect x="16" y="-10" width="138" height="20" rx="4" fill="#1e221f" opacity="0.9" />
-                    <text x="22" y="3" font-size="9" fill="#ffffff" font-weight="700" pointer-events="none">FP1E mmWave (Sofa)</text>
+                    <rect x="16" y="-10" width="168" height="20" rx="4" fill="#1e221f" opacity="0.9" />
+                    <text x="22" y="3" font-size="9" fill="#ffffff" font-weight="700" pointer-events="none">mmWave (Living + Dining)</text>
                   </g>
 
                   <!-- 2. Entrance Main Door Contact Sensor (T1) -->
@@ -3904,16 +3904,16 @@ automation:
 
                   <!-- Living Room -->
                   <g transform="translate(765, 480)">
-                    <rect x="-105" y="-20" width="210" height="42" rx="6" fill="#ffffff" fill-opacity="0.95" stroke="#d5ddd6" stroke-width="1.5" filter="url(#badgeShadow)" />
+                    <rect x="-115" y="-20" width="230" height="42" rx="6" fill="#ffffff" fill-opacity="0.95" stroke="#d5ddd6" stroke-width="1.5" filter="url(#badgeShadow)" />
                     <text x="0" y="-2" font-family="'Space Grotesk', sans-serif" font-size="15" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1.2">LIVING ROOM</text>
-                    <text x="0" y="14" font-family="'Inter', sans-serif" font-size="9.5" font-weight="600" fill="#66776b" text-anchor="middle">65" TV • Sofa Lounge • mmWave</text>
+                    <text x="0" y="14" font-family="'Inter', sans-serif" font-size="9.5" font-weight="600" fill="#66776b" text-anchor="middle">65" TV • Sofa • Lengthwise mmWave</text>
                   </g>
 
                   <!-- Dining -->
                   <g transform="translate(765, 795)">
-                    <rect x="-80" y="-18" width="160" height="38" rx="6" fill="#ffffff" fill-opacity="0.92" stroke="#d5ddd6" stroke-width="1.5" filter="url(#badgeShadow)" />
+                    <rect x="-95" y="-18" width="190" height="38" rx="6" fill="#ffffff" fill-opacity="0.92" stroke="#d5ddd6" stroke-width="1.5" filter="url(#badgeShadow)" />
                     <text x="0" y="-1" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="800" fill="#1e221f" text-anchor="middle" letter-spacing="1">DINING</text>
-                    <text x="0" y="13" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#66776b" text-anchor="middle">4-Seater • CCT Pendant</text>
+                    <text x="0" y="13" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#66776b" text-anchor="middle">4-Seater • mmWave Zone • CCT Pendant</text>
                   </g>
 
                   <!-- Entrance / Foyer -->
@@ -3978,9 +3978,9 @@ automation:
                 <span>📡</span> Sensors Deployed
               </div>
               <div class="inspector-box" id="inspectSensorsBox">
-                • <strong>1x Aqara FP1E mmWave Sensor</strong> (TV Console)<br>
-                • Protocol: Zigbee 3.0 • 5V USB-C (Concealed)<br>
-                • Micro-movement radar covers sofa without false triggers.
+                • <strong>1x Aqara mmWave Sensor</strong> (Curtain Pelmet)<br>
+                • Protocol: Zigbee 3.0 / Wi-Fi • 5V USB-C in Pelmet<br>
+                • Lengthwise radar sweeps south across Living & Dining.
               </div>
             </div>
 
@@ -5743,7 +5743,7 @@ automation:
           icon: "🛋️",
           type: "High Traffic • Sofa Lounge & Cinema",
           zoneId: "zone-Living-Room",
-          sensors: "• <strong>1x Aqara FP1E mmWave Sensor</strong> (TV Console)<br>• Protocol: Zigbee 3.0 • 5V USB-C (Concealed)<br>• Micro-movement radar covers sofa without false triggers.",
+          sensors: "• <strong>1x Aqara mmWave Sensor (FP1E / FP2)</strong> (North Pelmet)<br>• Protocol: Zigbee 3.0 / Wi-Fi • 5V USB-C in Pelmet<br>• Lengthwise radar sweeps south across Living & Dining.",
           lighting: "• <strong>Aqara H2 3-Gang Switch</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Decoupled Mode</span>)<br>• 6x Aqara T2 CCT Spotlights (2700K–6500K)<br>• Fanco DC Ceiling Fan (RF Bond Bridge)",
           automations: "• <strong>Sofa Presence:</strong> Keeps ambient lights & AC active while reading or watching TV.<br>• <strong>Cinema Bias Mode:</strong> Dims spotlights to 20% warm when TV plays after dark.<br>• <strong>15-Min Auto-Powerdown:</strong> Auto-dims lights and sets AC to eco when room clears.",
           filterRoom: "Living Room"
@@ -5806,7 +5806,7 @@ automation:
           icon: "🍽️",
           type: "High Traffic • Sintered Stone Dining Table",
           zoneId: "zone-Dining",
-          sensors: "• Living Room mmWave auxiliary zone<br>• Integrated with open-concept living area",
+          sensors: "• Covered by lengthwise mmWave radar from Living pelmet<br>• Multi-zone presence (Aqara FP2) or unified open-concept zone (FP1E)",
           lighting: "• <strong>Aqara H2 1-Gang Switch</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Decoupled</span>)<br>• 2x Aqara T2 CCT Pendant Bulbs (2700K–6500K)<br>• Smooth CCT & Brightness dimming",
           automations: "• <strong>Dinner Scene:</strong> Pendant tunes to 2500K intimate warm glow at 50% while living spots softly dim.<br>• <strong>Laptop Mode:</strong> Shifts to 4000K neutral daylight at 100% for dining table work.",
           filterRoom: "Dining"
