@@ -889,6 +889,389 @@
           margin-bottom: 2px;
         }
       }
+
+      /* Top Tab Navigation */
+      .nav-tabs-bar {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 18px;
+        border-bottom: 2px solid var(--border-subtle);
+        padding-bottom: 0px;
+      }
+
+      .nav-tab-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 9px 18px;
+        font-family: var(--font-heading);
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: var(--text-secondary);
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid transparent;
+        margin-bottom: -2px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+      }
+
+      .nav-tab-btn:hover {
+        color: var(--text-primary);
+        background: rgba(0, 0, 0, 0.025);
+      }
+
+      .nav-tab-btn.active {
+        color: var(--sage-primary);
+        border-bottom: 2px solid var(--sage-primary);
+        background: var(--sage-light);
+      }
+
+      .nav-tab-btn .tab-badge {
+        font-size: 0.68rem;
+        font-weight: 700;
+        padding: 2px 7px;
+        border-radius: var(--radius-full);
+        background: rgba(74, 107, 87, 0.15);
+        color: var(--sage-primary);
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+
+      .tab-view {
+        display: block;
+      }
+
+      /* Architecture Hero Principles Grid */
+      .arch-principles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .principle-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 14px;
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        border-left: 4px solid var(--sage-primary);
+      }
+
+      .principle-card.taupe {
+        border-left-color: var(--taupe-primary);
+      }
+
+      .principle-card.p0 {
+        border-left-color: var(--accent-p0);
+      }
+
+      .principle-card.p2 {
+        border-left-color: var(--accent-p2);
+      }
+
+      .principle-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font-heading);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--text-primary);
+      }
+
+      .principle-desc {
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        line-height: 1.45;
+      }
+
+      /* Sensor Fleet KPI Grid */
+      .sensor-kpi-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr));
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      /* Circadian Rhythm Timeline */
+      .circadian-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 16px;
+        box-shadow: var(--shadow-sm);
+        margin-bottom: 20px;
+      }
+
+      .circadian-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 14px;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .circadian-timeline {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+        gap: 10px;
+      }
+
+      .circadian-step {
+        border-radius: var(--radius-sm);
+        padding: 12px;
+        border: 1px solid var(--border-subtle);
+        background: var(--bg-main);
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .circadian-step::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+      }
+
+      .circadian-step.morning::before { background: #e09b53; }
+      .circadian-step.day::before { background: #5798b3; }
+      .circadian-step.evening::before { background: #c27c59; }
+      .circadian-step.night::before { background: #735994; }
+
+      .circadian-time {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 0.88rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .circadian-temp {
+        font-size: 0.76rem;
+        font-weight: 700;
+        padding: 1px 6px;
+        border-radius: var(--radius-full);
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+      }
+
+      .circadian-routine {
+        font-size: 0.78rem;
+        color: var(--text-secondary);
+        line-height: 1.35;
+      }
+
+      /* Zone Architecture Cards */
+      .zone-section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .zone-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+        gap: 14px;
+        margin-bottom: 22px;
+      }
+
+      .zone-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 16px;
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .zone-card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .zone-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-bottom: 1px solid var(--border-subtle);
+        padding-bottom: 8px;
+      }
+
+      .zone-title-wrap {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .zone-icon {
+        font-size: 1.25rem;
+      }
+
+      .zone-name {
+        font-family: var(--font-heading);
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--text-primary);
+      }
+
+      .zone-badge {
+        font-size: 0.7rem;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: var(--radius-full);
+        background: var(--bg-surface-alt);
+        color: var(--text-secondary);
+      }
+
+      .zone-badge.high-traffic { background: #fdf3e7; color: #b86a1f; }
+      .zone-badge.private { background: #eaf4f8; color: #2d6b85; }
+      .zone-badge.utility { background: #e8efe9; color: #3b5f49; }
+
+      .zone-subgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        background: var(--bg-surface-alt);
+        border-radius: var(--radius-sm);
+        padding: 10px;
+        font-size: 0.78rem;
+      }
+
+      .zone-subcol-title {
+        font-weight: 700;
+        color: var(--text-secondary);
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        font-size: 0.68rem;
+        letter-spacing: 0.03em;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .zone-subcol-content {
+        color: var(--text-primary);
+        line-height: 1.35;
+      }
+
+      .zone-automations {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .zone-auto-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 6px;
+        font-size: 0.78rem;
+        color: var(--text-primary);
+        line-height: 1.35;
+      }
+
+      .zone-auto-bullet {
+        color: var(--sage-primary);
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      .zone-why-box {
+        background: #fdfbf7;
+        border: 1px dashed var(--border-medium);
+        border-radius: var(--radius-sm);
+        padding: 8px 10px;
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+        line-height: 1.35;
+      }
+
+      .zone-why-title {
+        font-weight: 700;
+        color: var(--taupe-primary);
+        margin-bottom: 2px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      /* Sensor BOM Table */
+      .sensor-bom-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.8rem;
+      }
+
+      .sensor-bom-table th {
+        background: var(--bg-surface-alt);
+        text-align: left;
+        padding: 8px 12px;
+        font-weight: 700;
+        color: var(--text-secondary);
+        border-bottom: 1px solid var(--border-subtle);
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+
+      .sensor-bom-table td {
+        padding: 8px 12px;
+        border-bottom: 1px solid var(--border-subtle);
+        color: var(--text-primary);
+      }
+
+      .sensor-bom-table tr:hover {
+        background: var(--bg-card-hover);
+      }
+
+      .ha-code-accordion {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        margin-bottom: 16px;
+        overflow: hidden;
+      }
+
+      .ha-code-summary {
+        padding: 12px 16px;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 0.88rem;
+        cursor: pointer;
+        background: var(--bg-surface-alt);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .ha-code-pre {
+        background: #1e221f;
+        color: #e5e2d9;
+        padding: 14px;
+        font-size: 0.75rem;
+        line-height: 1.4;
+        overflow-x: auto;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      }
+
     </style>
   </head>
   <body>
@@ -950,6 +1333,29 @@
     </header>
 
     <main class="container">
+      <!-- Top Main Tab Navigation -->
+      <div class="nav-tabs-bar">
+        <button
+          class="nav-tab-btn active"
+          id="tabBtnProcurement"
+          onclick="switchTab('procurement')"
+        >
+          <span style="font-size: 1.1rem">💰</span>
+          <span>Procurement & Budget</span>
+        </button>
+        <button
+          class="nav-tab-btn"
+          id="tabBtnSensors"
+          onclick="switchTab('sensors')"
+        >
+          <span style="font-size: 1.1rem">💡</span>
+          <span>Sensors & Lighting Architecture</span>
+          <span class="tab-badge">Zone Plan</span>
+        </button>
+      </div>
+
+      <!-- Tab View 1: Procurement & Budget -->
+      <div id="tabViewProcurement" class="tab-view">
       <!-- KPI Summary Cards -->
       <div class="kpi-grid">
         <div class="kpi-card selected">
@@ -1353,6 +1759,874 @@
           </ul>
         </div>
       </div>
+      </div>
+      <!-- End Tab View 1: Procurement & Budget -->
+
+      <!-- Tab View 2: Sensors & Smart Lighting Architecture -->
+      <div id="tabViewSensors" class="tab-view" style="display: none;">
+        <!-- Core Architecture Principles -->
+        <div class="arch-principles-grid">
+          <div class="principle-card">
+            <div class="principle-header">
+              <span>🛋️</span> 1 mmWave Only (Living Room)
+            </div>
+            <div class="principle-desc">
+              mmWave presence is strictly reserved for the sofa/TV lounge where people sit motionless for hours. Avoids $600+ cost, ghost wall penetration, and messy USB cords in other rooms.
+            </div>
+          </div>
+
+          <div class="principle-card taupe">
+            <div class="principle-header">
+              <span>🚿</span> "Wasp in a Box" (Bathrooms)
+            </div>
+            <div class="principle-desc">
+              Uses battery Door Contact + PIR Motion. When motion is detected and the door closes, occupancy locks ON indefinitely. Lights NEVER shut off while showering or on the toilet!
+            </div>
+          </div>
+
+          <div class="principle-card p2">
+            <div class="principle-header">
+              <span>⚡</span> Aqara H2 Decoupled Mode
+            </div>
+            <div class="principle-desc">
+              Neutral-wire 230V mains is permanently supplied to smart CCT bulbs & fans. Physical switch presses trigger Zigbee automations without cutting power to downstream radios.
+            </div>
+          </div>
+
+          <div class="principle-card p0">
+            <div class="principle-header">
+              <span>☀️</span> Adaptive Circadian Rhythm
+            </div>
+            <div class="principle-desc">
+              Home Assistant shifts color temperatures seamlessly throughout the day (2200K amber candlelight &rarr; 5000K crisp daylight &rarr; 2700K warm relax) to protect sleep cycles.
+            </div>
+          </div>
+        </div>
+
+        <!-- Sensor Fleet KPI Summary -->
+        <div class="sensor-kpi-grid">
+          <div class="kpi-card selected">
+            <div class="kpi-title">
+              <span>Total Sensor Fleet</span>
+              <span class="kpi-pill">Complete Scope</span>
+            </div>
+            <div class="kpi-value">9 Devices</div>
+            <div class="kpi-meta">Whole-house targeted coverage</div>
+          </div>
+
+          <div class="kpi-card total">
+            <div class="kpi-title">
+              <span>Total Hardware Cost</span>
+              <span class="kpi-pill">Est. Budget</span>
+            </div>
+            <div class="kpi-value">$188 SGD</div>
+            <div class="kpi-meta">Saves ~$500 vs mmWave everywhere</div>
+          </div>
+
+          <div class="kpi-card tbd">
+            <div class="kpi-title">
+              <span>Battery Powered</span>
+              <span class="kpi-pill">Zero Wiring</span>
+            </div>
+            <div class="kpi-value">8 Devices</div>
+            <div class="kpi-meta">2 to 5 years coin-cell battery life</div>
+          </div>
+
+          <div class="kpi-card p0">
+            <div class="kpi-title">
+              <span>USB-C Powered</span>
+              <span class="kpi-pill">Concealed Wire</span>
+            </div>
+            <div class="kpi-value">1 Device</div>
+            <div class="kpi-meta">Living Room mmWave behind TV console</div>
+          </div>
+
+          <div class="kpi-card p2">
+            <div class="kpi-title">
+              <span>Control Protocol</span>
+              <span class="kpi-pill">100% Local</span>
+            </div>
+            <div class="kpi-value">Zigbee 3.0</div>
+            <div class="kpi-meta">Zero cloud lag • Home Assistant Green</div>
+          </div>
+        </div>
+
+        <!-- Circadian Rhythm Visual Timeline -->
+        <div class="circadian-card">
+          <div class="circadian-header">
+            <div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-primary); margin-bottom: 2px;">
+                ☀️ 24-Hour Circadian Lighting Engine
+              </h3>
+              <div style="font-size: 0.8rem; color: var(--text-secondary);">
+                Automatic Kelvin color temperature and brightness transitions synced to the solar cycle
+              </div>
+            </div>
+            <span class="badge-tag">Home Assistant Adaptive Lighting</span>
+          </div>
+
+          <div class="circadian-timeline">
+            <div class="circadian-step morning">
+              <div class="circadian-time">
+                <span>06:00 – 08:30</span>
+                <span class="circadian-temp" style="color: #c27c59;">2700K • 30%</span>
+              </div>
+              <strong style="font-size: 0.82rem; color: var(--text-primary);">🌅 Gentle Wakeup & Coffee</strong>
+              <div class="circadian-routine">
+                Kitchen under-cabinet warm strip only. Glare-free soft light while making early morning coffee before sunrise.
+              </div>
+            </div>
+
+            <div class="circadian-step day">
+              <div class="circadian-time">
+                <span>08:30 – 18:00</span>
+                <span class="circadian-temp" style="color: #2d6b85;">5000K • 100%</span>
+              </div>
+              <strong style="font-size: 0.82rem; color: var(--text-primary);">☀️ Focus & High Productivity</strong>
+              <div class="circadian-routine">
+                Crisp daylight in Study/Bedrooms and Kitchen. Maximizes alertness, color accuracy, and energy for WFH tasks.
+              </div>
+            </div>
+
+            <div class="circadian-step evening">
+              <div class="circadian-time">
+                <span>18:00 – 22:00</span>
+                <span class="circadian-temp" style="color: #b86a1f;">3000K • 60%</span>
+              </div>
+              <strong style="font-size: 0.82rem; color: var(--text-primary);">🌇 Dinner & Lounging Relax</strong>
+              <div class="circadian-routine">
+                Warm ambient downlights and intimate dining pendant. Signals the brain to produce natural melatonin.
+              </div>
+            </div>
+
+            <div class="circadian-step night">
+              <div class="circadian-time">
+                <span>22:00 – 06:00</span>
+                <span class="circadian-temp" style="color: #735994;">2200K • 15%</span>
+              </div>
+              <strong style="font-size: 0.82rem; color: var(--text-primary);">🌙 Night Wind-Down / Piddle</strong>
+              <div class="circadian-routine">
+                Bathroom mirror light and hallway downlights dimmed to amber candle glow. Zero eye shock during midnight runs.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zone Architecture Interactive Cards Header -->
+        <div class="zone-section-header">
+          <div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary);">
+              🏡 Zone-by-Zone Sensor & Lighting Layout
+            </h3>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;">
+              Tailored sensor hardware, switch decoupling, and real daily routine automations
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <button class="filter-btn active" onclick="filterZoneCards('all', this)">All Zones (9)</button>
+            <button class="filter-btn" onclick="filterZoneCards('high-traffic', this)">High Traffic (3)</button>
+            <button class="filter-btn" onclick="filterZoneCards('private', this)">Private & Baths (4)</button>
+            <button class="filter-btn" onclick="filterZoneCards('utility', this)">Utility & Outdoor (2)</button>
+          </div>
+        </div>
+
+        <!-- Zone Cards Grid -->
+        <div class="zone-grid" id="zoneCardsGrid">
+          <!-- 1. Entrance / Foyer -->
+          <div class="zone-card" data-category="high-traffic">
+            <div class="zone-card-header">
+              <div class="zone-title-wrap">
+                <span class="zone-icon">🚪</span>
+                <div>
+                  <div class="zone-name">Entrance & Foyer</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted);">Drop-zone & Shoe Bench</div>
+                </div>
+              </div>
+              <span class="zone-badge high-traffic">High Traffic</span>
+            </div>
+
+            <div class="zone-subgrid">
+              <div>
+                <div class="zone-subcol-title"><span>📡</span> Sensors Deployed</div>
+                <div class="zone-subcol-content">
+                  • <strong>1x Aqara Door Contact T1</strong> (Main Door)<br>
+                  • <strong>1x Aqara PIR Motion P1</strong> (Shoe Bench)<br>
+                  <span style="color: var(--sage-primary); font-weight: 600;">100% Battery Powered (CR1632 / CR2450)</span>
+                </div>
+              </div>
+              <div>
+                <div class="zone-subcol-title"><span>💡</span> Switches & Lights</div>
+                <div class="zone-subcol-content">
+                  • <strong>Aqara H2 2-Gang</strong> (Neutral Wire)<br>
+                  • 1x High-CRI Ceiling Downlight<br>
+                  • 1x 2m 24V COB Warm Strip (Shoe Cabinet)
+                </div>
+              </div>
+            </div>
+
+            <div class="zone-automations">
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>0ms Instant Welcome Home:</strong> Door cracks open &rarr; 0ms trigger instantly illuminates floating shoe cabinet LED + downlight (after sunset).</div>
+              </div>
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Hands-Free Gear-Up Departure:</strong> Walking to the foyer triggers PIR, turning on shoe bench light for 3 mins while tying boots & buckling helmet before touching the door.</div>
+              </div>
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Departure Complete:</strong> Door closes + no motion for 2 mins &rarr; entrance lights turn off automatically.</div>
+              </div>
+            </div>
+
+            <div class="zone-why-box">
+              <div class="zone-why-title"><span>💡</span> Why Door Contact + PIR Motion?</div>
+              Door contact eliminates the 1–2s lag of motion sensors when entering with heavy moto gear. PIR detects movement inside before the door opens. Zero dangling USB cables.
+            </div>
+          </div>
+
+          <!-- 2. Living Room -->
+          <div class="zone-card" data-category="high-traffic">
+            <div class="zone-card-header">
+              <div class="zone-title-wrap">
+                <span class="zone-icon">🛋️</span>
+                <div>
+                  <div class="zone-name">Living Room</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted);">Sofa Lounge & Home Theater</div>
+                </div>
+              </div>
+              <span class="zone-badge high-traffic">High Traffic</span>
+            </div>
+
+            <div class="zone-subgrid">
+              <div>
+                <div class="zone-subcol-title"><span>📡</span> Sensors Deployed</div>
+                <div class="zone-subcol-content">
+                  • <strong>1x Aqara FP1E mmWave Sensor</strong><br>
+                  • Placed on TV Console facing sofa<br>
+                  <span style="color: var(--accent-p0); font-weight: 600;">5V USB-C (Concealed behind console)</span>
+                </div>
+              </div>
+              <div>
+                <div class="zone-subcol-title"><span>💡</span> Switches & Lights</div>
+                <div class="zone-subcol-content">
+                  • <strong>Aqara H2 3-Gang</strong> (<span style="color: var(--sage-primary); font-weight: 700;">Decoupled</span>)<br>
+                  • 6x Aqara T2 CCT Spotlights (2700K-6500K)<br>
+                  • Fanco DC Fan (Bond Bridge RF)
+                </div>
+              </div>
+            </div>
+
+            <div class="zone-automations">
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Micro-Movement Presence:</strong> Detects chest breathing while watching TV or reading. Lights stay active for hours without waving arms.</div>
+              </div>
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Cinema / Bias Lighting:</strong> When LG OLED TV turns on after dark, spotlights dim to 20% warm white (2700K) for comfortable viewing.</div>
+              </div>
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>15-Min Auto-Powerdown:</strong> 15 minutes of zero presence shuts off lights, sets AC to eco, and pauses soundbar.</div>
+              </div>
+            </div>
+
+            <div class="zone-why-box">
+              <div class="zone-why-title"><span>💡</span> Why mmWave belongs ONLY here:</div>
+              Living room is the only space where people remain still for hours. TV console provides an invisible USB-C power source without exposed cords.
+            </div>
+          </div>
+
+          <!-- 3. Master Bathroom -->
+          <div class="zone-card" data-category="private">
+            <div class="zone-card-header">
+              <div class="zone-title-wrap">
+                <span class="zone-icon">🚿</span>
+                <div>
+                  <div class="zone-name">Master Bathroom</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted);">En-suite Wet/Dry Zone</div>
+                </div>
+              </div>
+              <span class="zone-badge private">Private</span>
+            </div>
+
+            <div class="zone-subgrid">
+              <div>
+                <div class="zone-subcol-title"><span>📡</span> Sensors Deployed</div>
+                <div class="zone-subcol-content">
+                  • <strong>1x Aqara Door Contact T1</strong> (Door frame)<br>
+                  • <strong>1x Aqara PIR Motion P1</strong> (Ceiling/Corner)<br>
+                  <span style="color: var(--sage-primary); font-weight: 600;">100% Battery ("Wasp in a Box")</span>
+                </div>
+              </div>
+              <div>
+                <div class="zone-subcol-title"><span>💡</span> Switches & Lights</div>
+                <div class="zone-subcol-content">
+                  • <strong>Aqara H2 2-Gang</strong> (Outside Bath Box)<br>
+                  • 2x IP44 Splash-Rated Downlights<br>
+                  • 1x Vanity Mirror LED Light
+                </div>
+              </div>
+            </div>
+
+            <div class="zone-automations">
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Wasp in a Box Occupancy:</strong> Motion detected + Door closed = Occupancy locked ON. Lights NEVER turn off while showering behind glass or on toilet!</div>
+              </div>
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Late-Night Piddle Mode (11PM–6AM):</strong> Motion turns on ONLY the vanity mirror light at 15% warm amber (2200K). Zero blinding glare.</div>
+              </div>
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Exit & Exhaust:</strong> Opening door starts 90s timer. Auto-off when room clears.</div>
+              </div>
+            </div>
+
+            <div class="zone-why-box">
+              <div class="zone-why-title"><span>💡</span> The "Wasp in a Box" Secret:</div>
+              mmWave in bathrooms frequently false-triggers through partition walls or detects hot shower steam. Door Contact + PIR provides 100% reliability for $35 total.
+            </div>
+          </div>
+
+          <!-- 4. Common Bathroom -->
+          <div class="zone-card" data-category="private">
+            <div class="zone-card-header">
+              <div class="zone-title-wrap">
+                <span class="zone-icon">🚿</span>
+                <div>
+                  <div class="zone-name">Common Bathroom</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted);">Guest & Living Area Access</div>
+                </div>
+              </div>
+              <span class="zone-badge private">Private</span>
+            </div>
+
+            <div class="zone-subgrid">
+              <div>
+                <div class="zone-subcol-title"><span>📡</span> Sensors Deployed</div>
+                <div class="zone-subcol-content">
+                  • <strong>1x Aqara Door Contact T1</strong> (Door frame)<br>
+                  • <strong>1x Aqara PIR Motion P1</strong> (Interior)<br>
+                  <span style="color: var(--sage-primary); font-weight: 600;">100% Battery ("Wasp in a Box")</span>
+                </div>
+              </div>
+              <div>
+                <div class="zone-subcol-title"><span>💡</span> Switches & Lights</div>
+                <div class="zone-subcol-content">
+                  • <strong>Aqara H2 2-Gang</strong> (Outside Door Box)<br>
+                  • 2x IP44 Splash-Rated Downlights<br>
+                  • 1x Vanity Mirror LED Light
+                </div>
+              </div>
+            </div>
+
+            <div class="zone-automations">
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Guest Hands-Free Walk-In:</strong> Walking in triggers instant illumination without guests fumbling for outside switches.</div>
+              </div>
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Shower Safe:</strong> Door closed keeps lights on indefinitely until guest exits.</div>
+              </div>
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Night Auto-Dim:</strong> After 11 PM, automatically switches to warm dimmed path mode.</div>
+              </div>
+            </div>
+
+            <div class="zone-why-box">
+              <div class="zone-why-title"><span>💡</span> Guest Friendly:</div>
+              Guests never have to guess which gang controls what outside the door. Walking in works automatically.
+            </div>
+          </div>
+
+          <!-- 5. Kitchen -->
+          <div class="zone-card" data-category="utility">
+            <div class="zone-card-header">
+              <div class="zone-title-wrap">
+                <span class="zone-icon">🍳</span>
+                <div>
+                  <div class="zone-name">Kitchen</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted);">Cooking & Morning Coffee</div>
+                </div>
+              </div>
+              <span class="zone-badge utility">Utility</span>
+            </div>
+
+            <div class="zone-subgrid">
+              <div>
+                <div class="zone-subcol-title"><span>📡</span> Sensors Deployed</div>
+                <div class="zone-subcol-content">
+                  • <strong>Time-Conditioned Switch</strong><br>
+                  • (Optional Under-Cabinet PIR)<br>
+                  <span style="color: var(--text-secondary);">Relies on smart button logic</span>
+                </div>
+              </div>
+              <div>
+                <div class="zone-subcol-title"><span>💡</span> Switches & Lights</div>
+                <div class="zone-subcol-content">
+                  • <strong>Aqara H2 2-Gang</strong> (Entrance Box)<br>
+                  • 3x High-CRI Recessed Downlights<br>
+                  • 1x 3m 24V COB Warm Strip (Under-Cabinet)
+                </div>
+              </div>
+            </div>
+
+            <div class="zone-automations">
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>7:00 AM Coffee Routine:</strong> Pressing switch between 06:00–08:30 AM turns on ONLY the under-cabinet warm strip at 30%. Glare-free soft light before sunrise.</div>
+              </div>
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Meal Prep (Day/Evening):</strong> Wall switch energizes full 4000K crisp downlights + counter strip for shadowless cutting and cooking.</div>
+              </div>
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Double-Click Override:</strong> Double tap at any hour instantly forces 100% full brightness.</div>
+              </div>
+            </div>
+
+            <div class="zone-why-box">
+              <div class="zone-why-title"><span>💡</span> Why no motion sensor?</div>
+              In open kitchens, motion sensors accidentally trigger whenever someone walks to the fridge or balcony. Time-conditioned switch presses deliver exact routine needs.
+            </div>
+          </div>
+
+          <!-- 6. Master Bedroom -->
+          <div class="zone-card" data-category="private">
+            <div class="zone-card-header">
+              <div class="zone-title-wrap">
+                <span class="zone-icon">🛏️</span>
+                <div>
+                  <div class="zone-name">Master Bedroom</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted);">Sleep Sanctuary & Wardrobe</div>
+                </div>
+              </div>
+              <span class="zone-badge private">Private</span>
+            </div>
+
+            <div class="zone-subgrid">
+              <div>
+                <div class="zone-subcol-title"><span>📡</span> Sensors Deployed</div>
+                <div class="zone-subcol-content">
+                  • <strong>1x Bedside Wireless Mini Switch</strong><br>
+                  • <strong>1x Wardrobe Door Contact T1</strong><br>
+                  <span style="color: var(--accent-p0); font-weight: 600;">NO motion/presence sensors!</span>
+                </div>
+              </div>
+              <div>
+                <div class="zone-subcol-title"><span>💡</span> Switches & Lights</div>
+                <div class="zone-subcol-content">
+                  • <strong>Aqara H2 2-Gang</strong> (<span style="color: var(--sage-primary); font-weight: 700;">Decoupled</span>)<br>
+                  • 4x Aqara T2 CCT Spotlights (2700K-6500K)<br>
+                  • Aqara C3 Motorized Curtains
+                </div>
+              </div>
+            </div>
+
+            <div class="zone-automations">
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Circadian Adaptive Dimming:</strong> Light color automatically tracks the sun (5000K daylight &rarr; 3000K warm &rarr; 2200K candlelight).</div>
+              </div>
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Bedside Single / Double Tap:</strong> Single tap toggles reading light. Double tap triggers 10% amber wind-down mode and closes curtains.</div>
+              </div>
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Whole-House Goodnight Kill Switch:</strong> Long-pressing bedside button shuts off ALL lights condo-wide, closes curtains, locks door, sets AC to 25°C.</div>
+              </div>
+            </div>
+
+            <div class="zone-why-box">
+              <div class="zone-why-title"><span>💡</span> Why strictly NO presence sensor?</div>
+              mmWave sensors detect tossing, turning, and ceiling fan breezes, causing phantom light triggers at 3:00 AM. A bedside wireless button provides flawless sleep control.
+            </div>
+          </div>
+
+          <!-- 7. Bedroom 2 / Study -->
+          <div class="zone-card" data-category="private">
+            <div class="zone-card-header">
+              <div class="zone-title-wrap">
+                <span class="zone-icon">💻</span>
+                <div>
+                  <div class="zone-name">Bedroom 2 / Study</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted);">WFH Office & Guest Room</div>
+                </div>
+              </div>
+              <span class="zone-badge private">Private</span>
+            </div>
+
+            <div class="zone-subgrid">
+              <div>
+                <div class="zone-subcol-title"><span>📡</span> Sensors Deployed</div>
+                <div class="zone-subcol-content">
+                  • Manual Wall Switch Control<br>
+                  • (Optional desk motion if desired)<br>
+                  <span style="color: var(--text-secondary);">High reliability manual control</span>
+                </div>
+              </div>
+              <div>
+                <div class="zone-subcol-title"><span>💡</span> Switches & Lights</div>
+                <div class="zone-subcol-content">
+                  • <strong>Aqara H2 2-Gang</strong> (Door Box)<br>
+                  • 3x High-CRI Recessed Downlights<br>
+                  • AC Split Unit (Starmex 9k)
+                </div>
+              </div>
+            </div>
+
+            <div class="zone-automations">
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>WFH Focus Scene:</strong> Single click energizes full 4500K bright white for Zoom calls and desk concentration.</div>
+              </div>
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Guest Ambient Scene:</strong> Double click sets downlights to 3000K relaxed warm white for overnight guests.</div>
+              </div>
+            </div>
+
+            <div class="zone-why-box">
+              <div class="zone-why-title"><span>💡</span> Work Practicality:</div>
+              Automated shutoffs during static WFH meetings are infuriating. Simple, reliable switch presses are best for home offices.
+            </div>
+          </div>
+
+          <!-- 8. Dining Room -->
+          <div class="zone-card" data-category="high-traffic">
+            <div class="zone-card-header">
+              <div class="zone-title-wrap">
+                <span class="zone-icon">🍽️</span>
+                <div>
+                  <div class="zone-name">Dining Room</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted);">Sintered Stone Table & Meals</div>
+                </div>
+              </div>
+              <span class="zone-badge high-traffic">High Traffic</span>
+            </div>
+
+            <div class="zone-subgrid">
+              <div>
+                <div class="zone-subcol-title"><span>📡</span> Sensors Deployed</div>
+                <div class="zone-subcol-content">
+                  • Living Room mmWave auxiliary zone<br>
+                  <span style="color: var(--text-secondary);">Integrated with open living area</span>
+                </div>
+              </div>
+              <div>
+                <div class="zone-subcol-title"><span>💡</span> Switches & Lights</div>
+                <div class="zone-subcol-content">
+                  • <strong>Aqara H2 1-Gang</strong> (<span style="color: var(--sage-primary); font-weight: 700;">Decoupled</span>)<br>
+                  • 2x Aqara T2 CCT Pendant Bulbs<br>
+                  • Smooth CCT & Brightness dimming
+                </div>
+              </div>
+            </div>
+
+            <div class="zone-automations">
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Dinner Mode:</strong> Pendant tunes to 2500K intimate warm white at 50% brightness while living room spots softly dim.</div>
+              </div>
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Dining Table Laptop Mode:</strong> Shifts to 4000K neutral daylight at 100% for working on the dining table.</div>
+              </div>
+            </div>
+
+            <div class="zone-why-box">
+              <div class="zone-why-title"><span>💡</span> Decoupled Pendant:</div>
+              Allows physical wall switch presses or app scenes to adjust pendant mood without cutting electrical power to smart bulbs.
+            </div>
+          </div>
+
+          <!-- 9. Balcony -->
+          <div class="zone-card" data-category="utility">
+            <div class="zone-card-header">
+              <div class="zone-title-wrap">
+                <span class="zone-icon">🌅</span>
+                <div>
+                  <div class="zone-name">Balcony</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted);">Outdoor Dining & Zip Track</div>
+                </div>
+              </div>
+              <span class="zone-badge utility">Utility</span>
+            </div>
+
+            <div class="zone-subgrid">
+              <div>
+                <div class="zone-subcol-title"><span>📡</span> Sensors Deployed</div>
+                <div class="zone-subcol-content">
+                  • (Optional Sliding Door Contact)<br>
+                  • Weather & Sunset Sun Sync<br>
+                  <span style="color: var(--text-secondary);">Automated via Solar Elevation</span>
+                </div>
+              </div>
+              <div>
+                <div class="zone-subcol-title"><span>💡</span> Switches & Lights</div>
+                <div class="zone-subcol-content">
+                  • <strong>Aqara H2 2-Gang</strong> (Light + Fan Isolator)<br>
+                  • 1x Outdoor High-CRI Downlight<br>
+                  • Dooya Zip Track + Fanco DC Fan
+                </div>
+              </div>
+            </div>
+
+            <div class="zone-automations">
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Sunset Balcony Glow:</strong> Sliding door opening after dark illuminates outdoor downlight at 30% warm white.</div>
+              </div>
+              <div class="zone-auto-item">
+                <span class="zone-auto-bullet">▶</span>
+                <div><strong>Zip Track Enclosure:</strong> Lowering zip blinds creates an enclosed outdoor room with fan on gentle breeze (Speed 2).</div>
+              </div>
+            </div>
+
+            <div class="zone-why-box">
+              <div class="zone-why-title"><span>💡</span> Outdoor Resilient:</div>
+              Uses IP-rated outdoor fixtures and RF Bond Bridge control, completely isolated from indoor moisture risks.
+            </div>
+          </div>
+        </div>
+
+        <!-- Sensor Hardware BOM Table -->
+        <div class="table-card" style="margin-bottom: 20px;">
+          <div class="card-header" style="padding: 14px 16px; border-bottom: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.05rem; color: var(--text-primary);">
+                📦 Sensor Hardware Bill of Materials (BOM)
+              </h3>
+              <div style="font-size: 0.78rem; color: var(--text-secondary);">
+                All 9 targeted sensors, protocols, battery types, and verified Shopee links
+              </div>
+            </div>
+            <span class="kpi-pill" style="font-size: 0.75rem; background: var(--sage-light); color: var(--sage-primary); font-weight: 700;">
+              Total: $188 SGD
+            </span>
+          </div>
+
+          <div style="overflow-x: auto;">
+            <table class="sensor-bom-table">
+              <thead>
+                <tr>
+                  <th>Device</th>
+                  <th>Zone / Placement</th>
+                  <th>Model / Protocol</th>
+                  <th>Power Source</th>
+                  <th>Qty</th>
+                  <th>Unit Price</th>
+                  <th>Total</th>
+                  <th>Direct Link</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Aqara Presence Sensor FP1E</strong></td>
+                  <td>Living Room (TV Console)</td>
+                  <td>FP1E • Zigbee 3.0</td>
+                  <td>5V USB-C (Concealed)</td>
+                  <td>1</td>
+                  <td>$50</td>
+                  <td><strong>$50</strong></td>
+                  <td><a href="https://shopee.sg/product/1245098924/55259558090" target="_blank" class="store-link">Shopee</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Aqara Door Contact Sensor T1</strong></td>
+                  <td>Entrance Main Door</td>
+                  <td>MCCGQ12LM • Zigbee 3.0</td>
+                  <td>CR1632 Battery (2+ yrs)</td>
+                  <td>1</td>
+                  <td>$15</td>
+                  <td><strong>$15</strong></td>
+                  <td><a href="https://shopee.sg/product/1245098924/50459563309" target="_blank" class="store-link">Shopee</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Aqara Door Contact Sensor T1</strong></td>
+                  <td>Master Bathroom Door</td>
+                  <td>MCCGQ12LM • Zigbee 3.0</td>
+                  <td>CR1632 Battery (2+ yrs)</td>
+                  <td>1</td>
+                  <td>$15</td>
+                  <td><strong>$15</strong></td>
+                  <td><a href="https://shopee.sg/product/1245098924/50459563309" target="_blank" class="store-link">Shopee</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Aqara Door Contact Sensor T1</strong></td>
+                  <td>Common Bathroom Door</td>
+                  <td>MCCGQ12LM • Zigbee 3.0</td>
+                  <td>CR1632 Battery (2+ yrs)</td>
+                  <td>1</td>
+                  <td>$15</td>
+                  <td><strong>$15</strong></td>
+                  <td><a href="https://shopee.sg/product/1245098924/50459563309" target="_blank" class="store-link">Shopee</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Aqara Door Contact Sensor T1</strong></td>
+                  <td>Master Wardrobe Doors</td>
+                  <td>MCCGQ12LM • Zigbee 3.0</td>
+                  <td>CR1632 Battery (2+ yrs)</td>
+                  <td>1</td>
+                  <td>$15</td>
+                  <td><strong>$15</strong></td>
+                  <td><a href="https://shopee.sg/product/1245098924/50459563309" target="_blank" class="store-link">Shopee</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Aqara PIR Motion Sensor P1</strong></td>
+                  <td>Entrance / Shoe Bench</td>
+                  <td>MS-S02 • Zigbee 3.0</td>
+                  <td>CR2450 Battery (5 yrs)</td>
+                  <td>1</td>
+                  <td>$20</td>
+                  <td><strong>$20</strong></td>
+                  <td><a href="https://shopee.sg/product/1245098924/50459563309" target="_blank" class="store-link">Shopee</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Aqara PIR Motion Sensor P1</strong></td>
+                  <td>Master Bathroom Interior</td>
+                  <td>MS-S02 • Zigbee 3.0</td>
+                  <td>CR2450 Battery (5 yrs)</td>
+                  <td>1</td>
+                  <td>$20</td>
+                  <td><strong>$20</strong></td>
+                  <td><a href="https://shopee.sg/product/1245098924/50459563309" target="_blank" class="store-link">Shopee</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Aqara PIR Motion Sensor P1</strong></td>
+                  <td>Common Bathroom Interior</td>
+                  <td>MS-S02 • Zigbee 3.0</td>
+                  <td>CR2450 Battery (5 yrs)</td>
+                  <td>1</td>
+                  <td>$20</td>
+                  <td><strong>$20</strong></td>
+                  <td><a href="https://shopee.sg/product/1245098924/50459563309" target="_blank" class="store-link">Shopee</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Aqara Wireless Mini Switch</strong></td>
+                  <td>Master Bedside Table</td>
+                  <td>WXKG11LM • Zigbee 3.0</td>
+                  <td>CR2032 Battery (2+ yrs)</td>
+                  <td>1</td>
+                  <td>$18</td>
+                  <td><strong>$18</strong></td>
+                  <td><a href="https://shopee.sg/product/1245098924/50459563309" target="_blank" class="store-link">Shopee</a></td>
+                </tr>
+                <tr style="background: var(--sage-light); font-weight: 700;">
+                  <td colspan="4" style="color: var(--sage-primary);">TOTAL SENSOR FLEET</td>
+                  <td>9 Units</td>
+                  <td>—</td>
+                  <td style="color: var(--sage-primary); font-size: 0.95rem;">$188 SGD</td>
+                  <td>—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Home Assistant Logic Blueprints / Code Snippets -->
+        <div class="ha-code-accordion">
+          <details>
+            <summary class="ha-code-summary">
+              <span>🛠️ View Home Assistant Blueprint: "Wasp in a Box" Bathroom Occupancy</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500;">Click to expand YAML</span>
+            </summary>
+            <pre class="ha-code-pre"># Home Assistant Template Binary Sensor: Bathroom Occupancy (Wasp in a Box)
+# Combines Door Contact Sensor + PIR Motion Sensor
+template:
+  - binary_sensor:
+      - name: "Master Bath Occupied"
+        device_class: occupancy
+        state: >
+          {{ is_state('binary_sensor.master_bath_door', 'off') or is_state('binary_sensor.master_bath_motion', 'on') }}
+        auto_off:
+          seconds: 90
+
+# Automation: Turn ON lights with Time-Conditioned Nightlight
+automation:
+  - alias: "Master Bath: Light Occupancy Trigger"
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.master_bath_motion
+        to: "on"
+    action:
+      - choose:
+          # Late-Night Piddle Mode (11PM - 6:30AM) -> Dim mirror light only
+          - conditions:
+              - condition: time
+                after: "23:00:00"
+                before: "06:30:00"
+            sequence:
+              - service: light.turn_on
+                target:
+                  entity_id: light.master_bath_mirror
+                data:
+                  brightness_pct: 15
+                  color_temp_kelvin: 2200
+        # Daytime / Normal -> Full Downlights
+        default:
+          - service: light.turn_on
+            target:
+              entity_id: light.master_bath_downlights
+            data:
+              brightness_pct: 100
+              color_temp_kelvin: 4000
+</pre>
+          </details>
+        </div>
+
+        <div class="ha-code-accordion">
+          <details>
+            <summary class="ha-code-summary">
+              <span>🛠️ View Home Assistant Blueprint: 7:00 AM Coffee Scene (Time-Conditioned Switch)</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500;">Click to expand YAML</span>
+            </summary>
+            <pre class="ha-code-pre"># Automation: Kitchen Wall Switch (Aqara H2 Decoupled Single-Click)
+automation:
+  - alias: "Kitchen: Smart Button Scene Controller"
+    trigger:
+      - platform: event
+        event_type: zha_event
+        event_data:
+          device_ieee: "00:15:8d:00:xx:xx:xx:xx"
+          command: "single"
+    action:
+      - choose:
+          # Morning Coffee Window (6:00 AM - 8:30 AM) -> Warm Cabinet Strip Only
+          - conditions:
+              - condition: time
+                after: "06:00:00"
+                before: "08:30:00"
+            sequence:
+              - service: light.toggle
+                target:
+                  entity_id: light.kitchen_under_cabinet_strip
+                data:
+                  brightness_pct: 30
+                  color_temp_kelvin: 2700
+        # Cooking / Evening Hours -> Full Crisp Task Lighting
+        default:
+          - service: light.toggle
+            target:
+              entity_id:
+                - light.kitchen_ceiling_downlights
+                - light.kitchen_under_cabinet_strip
+            data:
+              brightness_pct: 100
+              color_temp_kelvin: 4000
+</pre>
+          </details>
+        </div>
+      </div>
+      <!-- End Tab View 2: Sensors & Smart Lighting -->
+
     </main>
 
     <script>
@@ -1969,6 +3243,21 @@
             "availableAt": "Zip Track Specialist / Contractor",
             "linkText": "Shopee",
             "linkUrl": "https://shopee.sg/product/1878598027/52765706758",
+            "sellerDeductible": false,
+            "sellerSavings": 0
+      },
+      {
+            "name": "Sensors Fleet (Whole House)",
+            "choice": "1x FP1E mmWave + 4x Door Contact T1 + 3x PIR Motion P1 + 1x Bedside Switch",
+            "notes": "Selected choice for Whole House.",
+            "room": "Whole House",
+            "priority": "P0",
+            "status": "Selected",
+            "price": 188,
+            "priceDisplay": "$188",
+            "availableAt": "Aqara Official / Shopee",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/product/1245098924/50459563309",
             "sellerDeductible": false,
             "sellerSavings": 0
       },
@@ -2957,6 +4246,57 @@
           }
         };
         reader.readAsText(file);
+      }
+
+
+      function switchTab(tabId) {
+        const tabProcurement = document.getElementById("tabViewProcurement");
+        const tabSensors = document.getElementById("tabViewSensors");
+        const btnProcurement = document.getElementById("tabBtnProcurement");
+        const btnSensors = document.getElementById("tabBtnSensors");
+
+        if (tabId === "procurement") {
+          if (tabProcurement) tabProcurement.style.display = "block";
+          if (tabSensors) tabSensors.style.display = "none";
+          if (btnProcurement) btnProcurement.classList.add("active");
+          if (btnSensors) btnSensors.classList.remove("active");
+          try {
+            if (typeof roomSpendChartInstance !== "undefined" && roomSpendChartInstance) roomSpendChartInstance.resize();
+            if (typeof priorityChartInstance !== "undefined" && priorityChartInstance) priorityChartInstance.resize();
+          } catch (e) {}
+          if (history.replaceState) history.replaceState(null, null, "#procurement");
+        } else if (tabId === "sensors") {
+          if (tabProcurement) tabProcurement.style.display = "none";
+          if (tabSensors) tabSensors.style.display = "block";
+          if (btnProcurement) btnProcurement.classList.remove("active");
+          if (btnSensors) btnSensors.classList.add("active");
+          if (history.replaceState) history.replaceState(null, null, "#sensors");
+        }
+      }
+
+      function filterZoneCards(category, btnElement) {
+        if (btnElement && btnElement.parentElement) {
+          btnElement.parentElement.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
+          btnElement.classList.add("active");
+        }
+        const cards = document.querySelectorAll(".zone-card");
+        cards.forEach(card => {
+          if (category === "all") {
+            card.style.display = "flex";
+          } else {
+            const cardCat = card.getAttribute("data-category");
+            if (cardCat === category) {
+              card.style.display = "flex";
+            } else {
+              card.style.display = "none";
+            }
+          }
+        });
+      }
+
+      // Check URL hash on load
+      if (window.location.hash === "#sensors") {
+        setTimeout(() => switchTab("sensors"), 50);
       }
 
       // Initialize

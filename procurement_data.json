@@ -615,6 +615,21 @@
     "sellerSavings": 0
   },
   {
+    "name": "Sensors Fleet (Whole House)",
+    "choice": "1x FP1E mmWave + 4x Door Contact T1 + 3x PIR Motion P1 + 1x Bedside Switch",
+    "notes": "Selected choice for Whole House.",
+    "room": "Whole House",
+    "priority": "P0",
+    "status": "Selected",
+    "price": 188,
+    "priceDisplay": "$188",
+    "availableAt": "Aqara Official / Shopee",
+    "linkText": "Shopee",
+    "linkUrl": "https://shopee.sg/product/1245098924/50459563309",
+    "sellerDeductible": false,
+    "sellerSavings": 0
+  },
+  {
     "name": "Bedroom 2 Mattress / Bedding",
     "choice": "Origin Hybrid / Noa Lite / IKEA VALEVAG",
     "notes": "Origin Hybrid / Noa Lite / IKEA VALEVAG.",
