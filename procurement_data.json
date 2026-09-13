@@ -1,20 +1,98 @@
 [
   {
+    "id": "aircon-system-3",
     "name": "Aircon (System 3)",
-    "choice": "Mitsubishi Electric Starmex 5-Tick (18k+9k+9k) + Full Condo Install (Free Upgraded Materials)",
-    "notes": "SWG 22 copper + 1/2\" Armaflex installation required.",
+    "choice": "Mitsubishi Electric Starmex 28 (5-Tick Condenser)",
+    "notes": "18k+9k+9k. SWG 22 copper + 1/2\" Armaflex Class 0 mandatory.",
     "room": "Whole House",
     "priority": "P0",
     "status": "Selected",
-    "price": 4173,
-    "priceDisplay": "$4,173",
-    "availableAt": "Shopee / Courts",
-    "linkText": "Shopee",
-    "linkUrl": "<https://shopee.sg/MITSUBISHI-ELECTRIC-STARMEX-R32-NEW-SYSTEM-3-(INSTALLATION-INCLUDED-FREE-UPGRADED-MATERIALS",
+    "price": 3839,
+    "priceDisplay": "$3,839.00",
+    "availableAt": "Courts Megastore",
+    "linkText": "Courts SG",
+    "linkUrl": "https://www.courts.com.sg",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Mitsubishi Electric Starmex 28 (5-Tick Condenser)",
+        "notes": "18k+9k+9k. SWG 22 copper + 1/2\" Armaflex Class 0 mandatory.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 3839,
+            "priceDisplay": "$3,839.00",
+            "promo": "VIP 6% promo",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          },
+          {
+            "store": "Shopee SG (Monster923 / Aircon Express)",
+            "price": 3280,
+            "priceDisplay": "$3,280.00",
+            "promo": "Free Upgraded Materials",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/MITSUBISHI-STARMEX-SYSTEM-3-INVERTER-5-Tick-R32-FREE-UPGRADE-MATERIAL-i.239554013.17720065093"
+          },
+          {
+            "store": "Gain City",
+            "price": 3999,
+            "priceDisplay": "$3,999.00",
+            "promo": "3-Yr Workmanship Warranty",
+            "linkText": "Gain City",
+            "linkUrl": "https://www.gaincity.com"
+          }
+        ]
+      },
+      {
+        "model": "ME Starmex 33 Condenser (Larger Outdoor Unit)",
+        "notes": "Higher BTU outdoor unit for simultaneous heavy cooling in all 3 rooms.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 4121,
+            "priceDisplay": "$4,121.00",
+            "promo": "VIP 6% promo",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      },
+      {
+        "model": "MHI Rocket SR 30 (3D Airflow)",
+        "notes": "Mitsubishi Heavy Industries with motorized 3D horizontal/vertical airflow.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 3332,
+            "priceDisplay": "$3,332.30",
+            "promo": "VIP 6% promo",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      },
+      {
+        "model": "Midea MCE Series (System 3)",
+        "notes": "Budget alternative with 6-year full equipment warranty.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 3068,
+            "priceDisplay": "$3,068.16",
+            "promo": "VIP 6% promo",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "aircon-wi-fi-adapters-x3",
     "name": "Aircon Wi-Fi Adapters (x3)",
     "choice": "Mitsubishi Electric CN105 Wi-Fi Interface Modules (3x Indoor Units)",
     "notes": "SWG 22 copper + 1/2\" Armaflex installation required.",
@@ -27,9 +105,28 @@
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Mitsubishi Electric CN105 Wi-Fi Interface Modules (3x Indoor Units)",
+        "notes": "SWG 22 copper + 1/2\" Armaflex installation required.",
+        "stores": [
+          {
+            "store": "Shopee / Smart Home Vendor",
+            "price": 255,
+            "priceDisplay": "$255",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "smart-switch-entrance",
     "name": "Smart Switch (Entrance)",
     "choice": "Aqara H2 2-Gang (Main entry downlight + Shoe cabinet LED)",
     "notes": "Selected choice for Entrance.",
@@ -42,9 +139,28 @@
     "linkText": "Shopee (Souky)",
     "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Aqara H2 2-Gang (Main entry downlight + Shoe cabinet LED)",
+        "notes": "Selected choice for Entrance.",
+        "stores": [
+          {
+            "store": "Aqara Official / Souky",
+            "price": 50,
+            "priceDisplay": "$50",
+            "promo": "",
+            "linkText": "Shopee (Souky)",
+            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "smart-switch-living-room",
     "name": "Smart Switch (Living Room)",
     "choice": "Aqara H2 3-Gang (Main downlights, Accent, Ceiling fan)",
     "notes": "Selected choice for Living Room.",
@@ -57,9 +173,28 @@
     "linkText": "Shopee (Souky)",
     "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Aqara H2 3-Gang (Main downlights, Accent, Ceiling fan)",
+        "notes": "Selected choice for Living Room.",
+        "stores": [
+          {
+            "store": "Aqara Official / Souky",
+            "price": 56,
+            "priceDisplay": "$56",
+            "promo": "",
+            "linkText": "Shopee (Souky)",
+            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "smart-switch-dining",
     "name": "Smart Switch (Dining)",
     "choice": "Aqara Dimmer Switch H2 EU (Rotary Dimmer Dial)",
     "notes": "Selected choice for Dining.",
@@ -72,9 +207,28 @@
     "linkText": "PassionHome",
     "linkUrl": "https://passionhome.sg",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Aqara Dimmer Switch H2 EU (Rotary Dimmer Dial)",
+        "notes": "Selected choice for Dining.",
+        "stores": [
+          {
+            "store": "PassionHome / HomeSmart / Shopee",
+            "price": 88,
+            "priceDisplay": "$88",
+            "promo": "",
+            "linkText": "PassionHome",
+            "linkUrl": "https://passionhome.sg"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "smart-switch-kitchen",
     "name": "Smart Switch (Kitchen)",
     "choice": "Aqara H2 2-Gang (Main ceiling downlights + Under-cabinet LED)",
     "notes": "Selected choice for Kitchen.",
@@ -87,9 +241,28 @@
     "linkText": "Shopee (Souky)",
     "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Aqara H2 2-Gang (Main ceiling downlights + Under-cabinet LED)",
+        "notes": "Selected choice for Kitchen.",
+        "stores": [
+          {
+            "store": "Aqara Official / Souky",
+            "price": 50,
+            "priceDisplay": "$50",
+            "promo": "",
+            "linkText": "Shopee (Souky)",
+            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "smart-switch-balcony",
     "name": "Smart Switch (Balcony)",
     "choice": "Aqara H2 2-Gang (Balcony light + Outdoor fan isolator)",
     "notes": "Selected choice for Balcony.",
@@ -102,9 +275,28 @@
     "linkText": "Shopee (Souky)",
     "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Aqara H2 2-Gang (Balcony light + Outdoor fan isolator)",
+        "notes": "Selected choice for Balcony.",
+        "stores": [
+          {
+            "store": "Aqara Official / Souky",
+            "price": 50,
+            "priceDisplay": "$50",
+            "promo": "",
+            "linkText": "Shopee (Souky)",
+            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "smart-switch-hallway",
     "name": "Smart Switch (Hallway)",
     "choice": "Aqara H2 1-Gang (Corridor downlights)",
     "notes": "Selected choice for Whole House.",
@@ -117,9 +309,28 @@
     "linkText": "Shopee (Souky)",
     "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Aqara H2 1-Gang (Corridor downlights)",
+        "notes": "Selected choice for Whole House.",
+        "stores": [
+          {
+            "store": "Aqara Official / Souky",
+            "price": 47,
+            "priceDisplay": "$47",
+            "promo": "",
+            "linkText": "Shopee (Souky)",
+            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "smart-switch-master-bed",
     "name": "Smart Switch (Master Bed)",
     "choice": "Aqara H2 2-Gang (Main entry downlights + Bedside downlight)",
     "notes": "Selected choice for Master Bed.",
@@ -132,9 +343,28 @@
     "linkText": "Shopee (Souky)",
     "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Aqara H2 2-Gang (Main entry downlights + Bedside downlight)",
+        "notes": "Selected choice for Master Bed.",
+        "stores": [
+          {
+            "store": "Aqara Official / Souky",
+            "price": 50,
+            "priceDisplay": "$50",
+            "promo": "",
+            "linkText": "Shopee (Souky)",
+            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "smart-switch-bedroom-2",
     "name": "Smart Switch (Bedroom 2)",
     "choice": "Aqara H2 2-Gang (Main room lights + Study desk zone)",
     "notes": "Selected choice for Bedroom 2.",
@@ -147,9 +377,28 @@
     "linkText": "Shopee (Souky)",
     "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Aqara H2 2-Gang (Main room lights + Study desk zone)",
+        "notes": "Selected choice for Bedroom 2.",
+        "stores": [
+          {
+            "store": "Aqara Official / Souky",
+            "price": 50,
+            "priceDisplay": "$50",
+            "promo": "",
+            "linkText": "Shopee (Souky)",
+            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "smart-switch-master-bath",
     "name": "Smart Switch (Master Bath)",
     "choice": "Aqara H2 2-Gang (Main downlight + Vanity mirror light)",
     "notes": "Selected choice for Bathrooms.",
@@ -162,9 +411,28 @@
     "linkText": "Shopee (Souky)",
     "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Aqara H2 2-Gang (Main downlight + Vanity mirror light)",
+        "notes": "Selected choice for Bathrooms.",
+        "stores": [
+          {
+            "store": "Aqara Official / Souky",
+            "price": 50,
+            "priceDisplay": "$50",
+            "promo": "",
+            "linkText": "Shopee (Souky)",
+            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "smart-switch-common-bath",
     "name": "Smart Switch (Common Bath)",
     "choice": "Aqara H2 2-Gang (Main downlight + Vanity mirror light)",
     "notes": "Selected choice for Bathrooms.",
@@ -177,9 +445,28 @@
     "linkText": "Shopee (Souky)",
     "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Aqara H2 2-Gang (Main downlight + Vanity mirror light)",
+        "notes": "Selected choice for Bathrooms.",
+        "stores": [
+          {
+            "store": "Aqara Official / Souky",
+            "price": 50,
+            "priceDisplay": "$50",
+            "promo": "",
+            "linkText": "Shopee (Souky)",
+            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "dumb-downlights-living-room",
     "name": "Dumb Downlights (Living Room)",
     "choice": "6x High-CRI (>90) Recessed Downlights",
     "notes": "Selected choice for Living Room.",
@@ -192,9 +479,28 @@
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "6x High-CRI (>90) Recessed Downlights",
+        "notes": "Selected choice for Living Room.",
+        "stores": [
+          {
+            "store": "Sembawang Lighting House / Shopee",
+            "price": 130,
+            "priceDisplay": "$130",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "dumb-bulbs-dining-pendant",
     "name": "Dumb Bulbs (Dining Pendant)",
     "choice": "2x Triac Dimmable Warm White E27 LED Bulbs",
     "notes": "Selected choice for Dining.",
@@ -207,9 +513,28 @@
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "2x Triac Dimmable Warm White E27 LED Bulbs",
+        "notes": "Selected choice for Dining.",
+        "stores": [
+          {
+            "store": "Sembawang Lighting House / Shopee",
+            "price": 20,
+            "priceDisplay": "$20",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "dumb-downlights-master-bed",
     "name": "Dumb Downlights (Master Bed)",
     "choice": "4x High-CRI (>90) Recessed Downlights",
     "notes": "Selected choice for Master Bed.",
@@ -222,9 +547,28 @@
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "4x High-CRI (>90) Recessed Downlights",
+        "notes": "Selected choice for Master Bed.",
+        "stores": [
+          {
+            "store": "Sembawang Lighting House / Shopee",
+            "price": 85,
+            "priceDisplay": "$85",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "dumb-downlights-entrance",
     "name": "Dumb Downlights (Entrance)",
     "choice": "1x High-CRI (>90) Recessed Downlight",
     "notes": "Selected choice for Entrance.",
@@ -237,9 +581,28 @@
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "1x High-CRI (>90) Recessed Downlight",
+        "notes": "Selected choice for Entrance.",
+        "stores": [
+          {
+            "store": "Sembawang Lighting House / Shopee",
+            "price": 20,
+            "priceDisplay": "$20",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "dumb-downlights-kitchen",
     "name": "Dumb Downlights (Kitchen)",
     "choice": "3x High-CRI (>90) Recessed Downlights",
     "notes": "Selected choice for Kitchen.",
@@ -252,9 +615,28 @@
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "3x High-CRI (>90) Recessed Downlights",
+        "notes": "Selected choice for Kitchen.",
+        "stores": [
+          {
+            "store": "Sembawang Lighting House / Shopee",
+            "price": 65,
+            "priceDisplay": "$65",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "dumb-downlights-balcony",
     "name": "Dumb Downlights (Balcony)",
     "choice": "1x High-CRI (>90) Outdoor-Rated Downlight",
     "notes": "Selected choice for Balcony.",
@@ -267,9 +649,28 @@
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/IP65-LED-Downlight-7W-9W-12W-15W-Waterproof-LED-DownLights-AC220V-230V-240V-Recessed-Downlight-LED-Spot-For-Bathroom-i.800728237.19715736986",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "1x High-CRI (>90) Outdoor-Rated Downlight",
+        "notes": "Selected choice for Balcony.",
+        "stores": [
+          {
+            "store": "Sembawang Lighting House / Shopee",
+            "price": 25,
+            "priceDisplay": "$25",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/IP65-LED-Downlight-7W-9W-12W-15W-Waterproof-LED-DownLights-AC220V-230V-240V-Recessed-Downlight-LED-Spot-For-Bathroom-i.800728237.19715736986"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "dumb-downlights-hallway",
     "name": "Dumb Downlights (Hallway)",
     "choice": "2x High-CRI (>90) Recessed Downlights",
     "notes": "Selected choice for Whole House.",
@@ -282,9 +683,28 @@
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "2x High-CRI (>90) Recessed Downlights",
+        "notes": "Selected choice for Whole House.",
+        "stores": [
+          {
+            "store": "Sembawang Lighting House / Shopee",
+            "price": 45,
+            "priceDisplay": "$45",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "dumb-downlights-bedroom-2",
     "name": "Dumb Downlights (Bedroom 2)",
     "choice": "3x High-CRI (>90) Recessed Downlights",
     "notes": "Selected choice for Bedroom 2.",
@@ -297,9 +717,28 @@
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "3x High-CRI (>90) Recessed Downlights",
+        "notes": "Selected choice for Bedroom 2.",
+        "stores": [
+          {
+            "store": "Sembawang Lighting House / Shopee",
+            "price": 65,
+            "priceDisplay": "$65",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "dumb-downlights-bathrooms-x2",
     "name": "Dumb Downlights (Bathrooms x2)",
     "choice": "4x High-CRI (>90) IP44 Splash-Rated Downlights",
     "notes": "Selected choice for Bathrooms.",
@@ -312,9 +751,28 @@
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/IP65-LED-Downlight-7W-9W-12W-15W-Waterproof-LED-DownLights-AC220V-230V-240V-Recessed-Downlight-LED-Spot-For-Bathroom-i.800728237.19715736986",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "4x High-CRI (>90) IP44 Splash-Rated Downlights",
+        "notes": "Selected choice for Bathrooms.",
+        "stores": [
+          {
+            "store": "Sembawang Lighting House / Shopee",
+            "price": 85,
+            "priceDisplay": "$85",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/IP65-LED-Downlight-7W-9W-12W-15W-Waterproof-LED-DownLights-AC220V-230V-240V-Recessed-Downlight-LED-Spot-For-Bathroom-i.800728237.19715736986"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "accent-led-strip-entrance",
     "name": "Accent LED Strip (Entrance)",
     "choice": "1x 2m 24V COB Warm White Strip + Driver (Shoe Cabinet)",
     "notes": "Selected choice for Entrance.",
@@ -327,9 +785,28 @@
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/SG%F0%9F%87%B8%F0%9F%87%ACStock-5M%E2%80%BC%EF%B8%8F24V-COB-Led-Strip-White-Warm-White-COB-LED-Strip-High-Density-480-LEDs-m-Flexible-COB-LED-Lights-LED-Tape-i.774896381.24390527773",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "1x 2m 24V COB Warm White Strip + Driver (Shoe Cabinet)",
+        "notes": "Selected choice for Entrance.",
+        "stores": [
+          {
+            "store": "Electrical Specialist / Shopee",
+            "price": 60,
+            "priceDisplay": "$60",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/SG%F0%9F%87%B8%F0%9F%87%ACStock-5M%E2%80%BC%EF%B8%8F24V-COB-Led-Strip-White-Warm-White-COB-LED-Strip-High-Density-480-LEDs-m-Flexible-COB-LED-Lights-LED-Tape-i.774896381.24390527773"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "accent-led-strip-kitchen",
     "name": "Accent LED Strip (Kitchen)",
     "choice": "1x 3m 24V COB Warm White Strip + Driver (Under-Cabinet)",
     "notes": "Selected choice for Kitchen.",
@@ -342,294 +819,1212 @@
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/MEANWELL-24V-LED-Strip-Driver-35W-50W-75W-100W-150W-200W-Mean-Well-LRS-Series-Switching-Power-Supply-COB-SMD-Light-i.1147665864.25059494446",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "1x 3m 24V COB Warm White Strip + Driver (Under-Cabinet)",
+        "notes": "Selected choice for Kitchen.",
+        "stores": [
+          {
+            "store": "Electrical Specialist / Shopee",
+            "price": 90,
+            "priceDisplay": "$90",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/MEANWELL-24V-LED-Strip-Driver-35W-50W-75W-100W-150W-200W-Mean-Well-LRS-Series-Switching-Power-Supply-COB-SMD-Light-i.1147665864.25059494446"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "ceiling-fan-living",
     "name": "Ceiling Fan (Living)",
     "choice": "Fanco DC (RF) + Bond Bridge (Living Room)",
-    "notes": "1x unit confirmed for Living Room. Bond Bridge gives local HA RF control.",
+    "notes": "Minimalist ultra-quiet DC ceiling fan paired with Bond Bridge for local Home Assistant control.",
     "room": "Living Room",
     "priority": "P0",
     "status": "Selected",
     "price": 350,
-    "priceDisplay": "$350",
+    "priceDisplay": "$350.00",
     "availableAt": "Sembawang Lighting House / Shopee",
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/FANCO-B-Star-DC-Ceiling-Fan-Minimalist-Design-Ultra-Quiet-Energy-Efficient-Smart-Wifi-Option-i.185398922.29588260126",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Fanco DC (RF) + Bond Bridge (Living Room)",
+        "notes": "Minimalist ultra-quiet DC ceiling fan paired with Bond Bridge for local Home Assistant control.",
+        "stores": [
+          {
+            "store": "Sembawang Lighting House / Shopee",
+            "price": 350,
+            "priceDisplay": "$350.00",
+            "promo": "DC Fan + Remote",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/FANCO-B-Star-DC-Ceiling-Fan-Minimalist-Design-Ultra-Quiet-Energy-Efficient-Smart-Wifi-Option-i.185398922.29588260126"
+          }
+        ]
+      },
+      {
+        "model": "KDK U48FP DC Ceiling Fan",
+        "notes": "Standard benchmark KDK reliability with LED light kit.",
+        "stores": [
+          {
+            "store": "Sembawang Lighting House",
+            "price": 480,
+            "priceDisplay": "$480.00",
+            "promo": "KDK Authorized",
+            "linkText": "Sembawang Lighting",
+            "linkUrl": "https://sembawanglighting.com.sg"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "ceiling-fan-balcony",
     "name": "Ceiling Fan (Balcony)",
     "choice": "Fanco DC 38\" (RF) Compact Outdoor",
-    "notes": "Compact outdoor-rated DC fan. Shares Bond Bridge RF integration.",
+    "notes": "Compact outdoor-rated 38-inch DC ceiling fan for covered balcony.",
     "room": "Balcony",
     "priority": "P0",
     "status": "Selected",
     "price": 250,
-    "priceDisplay": "$250",
+    "priceDisplay": "$250.00",
     "availableAt": "Sembawang Lighting House / Shopee",
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/Fanco-Heli-DC-Motor-Ceiling-Fan-with-24W-3-Tone-LED-and-Remote-i.311742409.9016176030",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Fanco DC 38\" (RF) Compact Outdoor",
+        "notes": "Compact outdoor-rated 38-inch DC ceiling fan for covered balcony.",
+        "stores": [
+          {
+            "store": "Sembawang Lighting House / Shopee",
+            "price": 250,
+            "priceDisplay": "$250.00",
+            "promo": "Compact 38-inch",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/Fanco-Heli-DC-Motor-Ceiling-Fan-with-24W-3-Tone-LED-and-Remote-i.311742409.9016176030"
+          }
+        ]
+      },
+      {
+        "model": "PO Eco Tornado 36\" Compact DC Fan",
+        "notes": "High-airflow compact balcony fan.",
+        "stores": [
+          {
+            "store": "Sembawang Lighting House",
+            "price": 280,
+            "priceDisplay": "$280.00",
+            "promo": "High Airflow 36\"",
+            "linkText": "Sembawang Lighting",
+            "linkUrl": "https://sembawanglighting.com.sg"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "smart-home-hub",
     "name": "Smart Home Hub",
     "choice": "Home Assistant Green + Connect ZBT-1",
-    "notes": "Local-first Zigbee/Matter hub on wired Ethernet.",
+    "notes": "Dedicated local-first Home Assistant hub with Zigbee & Matter-over-Thread.",
     "room": "Whole House",
     "priority": "P2",
     "status": "Selected",
     "price": 250,
-    "priceDisplay": "$250",
+    "priceDisplay": "$250.00",
     "availableAt": "Nabu Casa / Seeed Studio",
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/Home-Assistant-Green-SLZB-MR1U-ZBT-2-ZWA-2-SLZB-zigbee-zwave-dongle-thread-matter-ZHA-zigbee2mqtt-Smart-Hub-i.276775767.28556820419",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Home Assistant Green + Connect ZBT-1",
+        "notes": "Dedicated local-first Home Assistant hub with Zigbee & Matter-over-Thread.",
+        "stores": [
+          {
+            "store": "Nabu Casa / Seeed Studio",
+            "price": 250,
+            "priceDisplay": "$250.00",
+            "promo": "Hub + Dongle Bundle",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/Home-Assistant-Green-SLZB-MR1U-ZBT-2-ZWA-2-SLZB-zigbee-zwave-dongle-thread-matter-ZHA-zigbee2mqtt-Smart-Hub-i.276775767.28556820419"
+          }
+        ]
+      },
+      {
+        "model": "Aqara Hub M3",
+        "notes": "Plug-and-play Matter controller with IR blaster and PoE support.",
+        "stores": [
+          {
+            "store": "Aqara Official / Shopee",
+            "price": 169,
+            "priceDisplay": "$169.00",
+            "promo": "Matter Bridge + IR",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "mesh-wifi",
     "name": "Mesh Wifi",
     "choice": "TP-Link Deco BE65 Pro Wi-Fi 7 (2-Pack)",
-    "notes": "Wi-Fi 7 mesh with multi-gig wired backhaul.",
+    "notes": "Tri-band Wi-Fi 7 with dual 5Gbps multi-gig Ethernet backhaul.",
     "room": "Whole House",
     "priority": "P2",
     "status": "Selected",
     "price": 650,
-    "priceDisplay": "$650",
+    "priceDisplay": "$650.00",
     "availableAt": "Courts / Shopee Mall",
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/TP-Link-Deco-BE65-BE11000-Whole-Home-Mesh-WiFi-7-System-Range-Extender-11-Gbps-Tri-Band-WiFi-i.215539604.24519568419",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "TP-Link Deco BE65 Pro Wi-Fi 7 (2-Pack)",
+        "notes": "Tri-band Wi-Fi 7 with dual 5Gbps multi-gig Ethernet backhaul.",
+        "stores": [
+          {
+            "store": "Courts / Shopee Mall",
+            "price": 650,
+            "priceDisplay": "$650.00",
+            "promo": "Promo Price",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/TP-Link-Deco-BE65-BE11000-Whole-Home-Mesh-WiFi-7-System-Range-Extender-11-Gbps-Tri-Band-WiFi-i.215539604.24519568419"
+          },
+          {
+            "store": "Courts Megastore",
+            "price": 699,
+            "priceDisplay": "$699.00",
+            "promo": "Megastore Stock",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      },
+      {
+        "model": "Xiaomi Mesh BE3600 Pro (2-Pack)",
+        "notes": "Budget Wi-Fi 7 mesh with 2.5Gbps backhaul.",
+        "stores": [
+          {
+            "store": "Shopee SG",
+            "price": 200,
+            "priceDisplay": "$200.00",
+            "promo": "Budget Value",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg"
+          }
+        ]
+      },
+      {
+        "model": "TP-Link Deco BE85 (2-Pack Flagship)",
+        "notes": "Quad-band BE22000 multi-gig powerhouse for 10Gbps fibre.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 1399,
+            "priceDisplay": "$1,399.00",
+            "promo": "10G Multi-Gig",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "robot-vacuum-mop",
     "name": "Robot Vacuum / Mop",
-    "choice": "Roborock Q Revo Master (SG Set, Heated Mop Drying)",
-    "notes": "Auto-empty dock with mop washing & drying. Dreame L50 Ultra CE benchmark.",
+    "choice": "Roborock Saros 20 (Direct Plumbing Model)",
+    "notes": "Solid-state LiDAR in bumper (~7.98cm height), 36k Pa, auto water & sewer plumbing.",
     "room": "Whole House",
     "priority": "P2",
     "status": "Selected",
-    "price": 1200,
-    "priceDisplay": "$1,200",
-    "availableAt": "Courts / Shopee Mall",
-    "linkText": "Shopee",
-    "linkUrl": "https://shopee.sg/product/1203302685/27062210372",
+    "price": 1710,
+    "priceDisplay": "$1,709.91",
+    "availableAt": "Courts Megastore",
+    "linkText": "Courts SG",
+    "linkUrl": "https://www.courts.com.sg",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Roborock Saros 20 (Direct Plumbing Model)",
+        "notes": "Solid-state LiDAR in bumper (~7.98cm height), 36k Pa, auto water & sewer plumbing.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 1710,
+            "priceDisplay": "$1,709.91",
+            "promo": "10% VIP promo",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          },
+          {
+            "store": "Roborock Official SG",
+            "price": 1899,
+            "priceDisplay": "$1,899.90",
+            "promo": "Flagship list $2,539.90",
+            "linkText": "Roborock SG",
+            "linkUrl": "https://sg.roborock.com/pages/roborock-saros-20"
+          }
+        ]
+      },
+      {
+        "model": "Dreame X60 Master (Embedded Dock)",
+        "notes": "Ultra-low 24.9cm dock for sink kerb carcass, 100\u00b0C hot mop wash, 36k Pa, direct plumbing.",
+        "stores": [
+          {
+            "store": "Dreame SG Official",
+            "price": 1599,
+            "priceDisplay": "$1,599.00",
+            "promo": "Includes Auto Kit + Install",
+            "linkText": "Dreame SG",
+            "linkUrl": "https://dreame.sg/products/dreame-x60-ultra-master?variant=52296811938101"
+          }
+        ]
+      },
+      {
+        "model": "Dreame X60 Ultra (Freestanding Dock)",
+        "notes": "49.9cm tall dock with 4.2L/3.0L tanks, convertible to auto water kit.",
+        "stores": [
+          {
+            "store": "Dreame SG Official",
+            "price": 1499,
+            "priceDisplay": "$1,499.00",
+            "promo": "Includes Auto Kit + Install",
+            "linkText": "Dreame SG",
+            "linkUrl": "https://dreame.sg/products/dreame-x60-ultra-master?variant=52296811905333"
+          },
+          {
+            "store": "Courts Megastore",
+            "price": 1599,
+            "priceDisplay": "$1,599.00",
+            "promo": "Robotic arm, 75\u00b0C wash",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          },
+          {
+            "store": "Shopee SG (Dreame Official)",
+            "price": 1362,
+            "priceDisplay": "$1,362 \u2013 $1,699",
+            "promo": "Campaign vouchers",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/dreame_official_store"
+          },
+          {
+            "store": "Gain City",
+            "price": 1699,
+            "priceDisplay": "$1,699.00",
+            "promo": "List $2,099",
+            "linkText": "Gain City",
+            "linkUrl": "https://www.gaincity.com/dreame-x60-ultra-robot-vacuum-mop-dm-x60u-gl-tb0017381"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "washer-dryer",
     "name": "Washer / Dryer",
-    "choice": "Samsung WD11DB9B84GDSP Bespoke AI (11kg wash / 7kg dry)",
-    "notes": "11kg wash / 7kg dry 2-in-1 combo. Potential seller inclusion savings.",
+    "choice": "Samsung Bespoke AI Stack (Washer + Heat Pump Dryer + Kit)",
+    "notes": "Dedicated stack with 12kg AI washer + 9kg heat pump dryer. Potential seller inclusion savings.",
     "room": "Kitchen",
-    "priority": "P1",
+    "priority": "P0",
     "status": "Selected",
-    "price": 1385,
-    "priceDisplay": "$1,385",
-    "availableAt": "Courts / Shopee",
-    "linkText": "Shopee",
-    "linkUrl": "https://shopee.sg/SAMSUNG-WD11DB9B84GDSP-11-7KG-BESPOKE-AI-WASHER-DRYER-4-Ticks-i.182624414.3292414355",
+    "price": 2000,
+    "priceDisplay": "$2,000.00",
+    "availableAt": "Courts Megastore",
+    "linkText": "Courts",
+    "linkUrl": "https://www.courts.com.sg",
     "sellerDeductible": true,
-    "sellerSavings": 1385
+    "sellerSavings": 2000,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Samsung Bespoke AI Stack (Washer + Heat Pump Dryer + Kit)",
+        "notes": "Dedicated stack with 12kg AI washer + 9kg heat pump dryer. Potential seller inclusion savings.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 2000,
+            "priceDisplay": "$2,000.00",
+            "promo": "Bundle Promo",
+            "linkText": "Courts",
+            "linkUrl": "https://www.courts.com.sg"
+          },
+          {
+            "store": "Gain City / Harvey Norman",
+            "price": 2599,
+            "priceDisplay": "$2,599.00",
+            "promo": "Stack Package",
+            "linkText": "Gain City",
+            "linkUrl": "https://www.gaincity.com"
+          },
+          {
+            "store": "Shopee SG (Samsung Official)",
+            "price": 2698,
+            "priceDisplay": "$2,698.00",
+            "promo": "Separate Units",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/samsung_official_store"
+          }
+        ]
+      },
+      {
+        "model": "LG WashTower (Single Unit Inverter Heat Pump)",
+        "notes": "Unified center control panel for both drum and dryer at ergonomic eye level.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 2899,
+            "priceDisplay": "$2,899.00",
+            "promo": "Showroom Price",
+            "linkText": "Courts",
+            "linkUrl": "https://www.courts.com.sg"
+          },
+          {
+            "store": "Best Denki",
+            "price": 2999,
+            "priceDisplay": "$2,999.00",
+            "promo": "Special Package",
+            "linkText": "Best Denki",
+            "linkUrl": "https://www.bestdenki.com.sg"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "fridge",
     "name": "Fridge",
-    "choice": "Panasonic 400L+ 5-Tick / Hisense 2-door",
-    "notes": "400L+ high efficiency. Potential seller inclusion savings.",
+    "choice": "Samsung RB34T6054B1 325L SpaceMax Bottom Mount",
+    "notes": "325L high-efficiency bottom freezer. Potential seller inclusion savings.",
     "room": "Kitchen",
     "priority": "P1",
     "status": "Selected",
-    "price": 650,
-    "priceDisplay": "$650",
-    "availableAt": "Courts / Shopee",
-    "linkText": "Shopee",
-    "linkUrl": "https://shopee.sg/Panasonic-Premium-Bottom-Freezer-2D-Refrigerator-with-PrimeFresh-NR-BX471WGWS-CV-Eligible--i.165734283.25019927736",
+    "price": 1000,
+    "priceDisplay": "$1,000.00",
+    "availableAt": "Courts Megastore",
+    "linkText": "Courts",
+    "linkUrl": "https://www.courts.com.sg",
     "sellerDeductible": true,
-    "sellerSavings": 650
+    "sellerSavings": 1000,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Samsung RB34T6054B1 325L SpaceMax Bottom Mount",
+        "notes": "325L high-efficiency bottom freezer. Potential seller inclusion savings.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 1000,
+            "priceDisplay": "$1,000.00",
+            "promo": "Special Promo",
+            "linkText": "Courts",
+            "linkUrl": "https://www.courts.com.sg"
+          },
+          {
+            "store": "Shopee SG (Parisilk / Flagship)",
+            "price": 1049,
+            "priceDisplay": "$1,049.00",
+            "promo": "Free Delivery",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg"
+          },
+          {
+            "store": "Gain City",
+            "price": 1099,
+            "priceDisplay": "$1,099.00",
+            "promo": "List $1,199",
+            "linkText": "Gain City",
+            "linkUrl": "https://www.gaincity.com"
+          }
+        ]
+      },
+      {
+        "model": "LG GB-B4451GV 451L Bottom Mount",
+        "notes": "451L larger storage capacity with linear cooling.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 1299,
+            "priceDisplay": "$1,299.00",
+            "promo": "Store Promo",
+            "linkText": "Courts",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      },
+      {
+        "model": "Mitsubishi Electric MR-V45E 3-Door (Vegetable Drawer)",
+        "notes": "Japanese ergonomics with dedicated vegetable humidity drawer.",
+        "stores": [
+          {
+            "store": "Gain City",
+            "price": 1199,
+            "priceDisplay": "$1,199.00",
+            "promo": "Showroom Price",
+            "linkText": "Gain City",
+            "linkUrl": "https://www.gaincity.com"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "smart-door-lock",
     "name": "Smart Door Lock",
-    "choice": "Aqara U400 UWB Smart Lock",
-    "notes": "Hands-free UWB proximity walk-up unlock.",
+    "choice": "Aqara D200i 3D Facial Recognition Smart Lock",
+    "notes": "Hands-free walk-up facial unlock with Apple Home Key & lithium backup.",
     "room": "Entrance",
     "priority": "P0",
     "status": "Selected",
-    "price": 650,
-    "priceDisplay": "$650",
-    "availableAt": "Aqara Official / Souky",
+    "price": 703,
+    "priceDisplay": "$703.00",
+    "availableAt": "Shopee (SmartSG) / Courts",
     "linkText": "Shopee",
-    "linkUrl": "https://shopee.sg/AQARA-U200-Smart-Door-Lock-i.120781880.27605055931",
+    "linkUrl": "https://shopee.sg/AQARA-D200i-Smart-Door-Lock-3D-Facial-Unlock-Digital-Lock-Lithium-Battery-Apple-HomeKit-Home-Key-i.489606704.21193462058?extraParams=%7B%22display_model_id%22%3A137712779110%2C%22model_selection_logic%22%3A3%7D",
     "sellerDeductible": true,
-    "sellerSavings": 650
+    "sellerSavings": 703,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Aqara D200i 3D Facial Recognition Smart Lock",
+        "notes": "Hands-free walk-up facial unlock with Apple Home Key & lithium backup.",
+        "stores": [
+          {
+            "store": "Shopee (SmartSG) / Courts",
+            "price": 703,
+            "priceDisplay": "$703.00",
+            "promo": "Voucher Promo (List $1,099)",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/AQARA-D200i-Smart-Door-Lock-3D-Facial-Unlock-Digital-Lock-Lithium-Battery-Apple-HomeKit-Home-Key-i.489606704.21193462058?extraParams=%7B%22display_model_id%22%3A137712779110%2C%22model_selection_logic%22%3A3%7D"
+          },
+          {
+            "store": "Courts Megastore",
+            "price": 899,
+            "priceDisplay": "$899.00",
+            "promo": "Installation Included",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      },
+      {
+        "model": "Aqara U200 Smart Lock (Retrofit)",
+        "notes": "Matter-over-Thread retrofit over existing cylinder; retains physical key mortise.",
+        "stores": [
+          {
+            "store": "Shopee SG",
+            "price": 369,
+            "priceDisplay": "$369.00",
+            "promo": "DIY Retrofit",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg"
+          }
+        ]
+      },
+      {
+        "model": "Philips EasyKey 9300",
+        "notes": "Push-pull biometric smart lock with fingerprint scanner on handle.",
+        "stores": [
+          {
+            "store": "Courts / Philips Flagship",
+            "price": 1199,
+            "priceDisplay": "$1,199.00",
+            "promo": "Official SG Set",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "smart-curtains-master",
     "name": "Smart Curtains (Master)",
     "choice": "Aqara C3 Motorised Tracks + Custom Day/Night Curtains",
-    "notes": "2x motorised tracks with custom day & night drapery.",
+    "notes": "High-torque 2Nm ultra-quiet motor with custom dual curtain tracks.",
     "room": "Master Bed",
     "priority": "P0",
     "status": "Selected",
     "price": 1100,
-    "priceDisplay": "$1,100",
+    "priceDisplay": "$1,100.00",
     "availableAt": "Curtain Specialist / Contractor",
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/Aqara-C3-curtain-motor-International-version-Strong-traction-2Nm-Manual-stop-Customize-pulling-speed-Smooth-operation-Smart-curtain-i.1006110165.40872608563",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Aqara C3 Motorised Tracks + Custom Day/Night Curtains",
+        "notes": "High-torque 2Nm ultra-quiet motor with custom dual curtain tracks.",
+        "stores": [
+          {
+            "store": "Curtain Specialist / Contractor",
+            "price": 1100,
+            "priceDisplay": "$1,100.00",
+            "promo": "Tracks + Custom Drapery",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/Aqara-C3-curtain-motor-International-version-Strong-traction-2Nm-Manual-stop-Customize-pulling-speed-Smooth-operation-Smart-curtain-i.1006110165.40872608563"
+          }
+        ]
+      },
+      {
+        "model": "Aqara Curtain Driver E1 (Rod / Track Clip-on)",
+        "notes": "Rechargeable battery clip-on motor without replacing existing tracks.",
+        "stores": [
+          {
+            "store": "Shopee SG",
+            "price": 450,
+            "priceDisplay": "$450.00",
+            "promo": "Clip-on Pair",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "mattress",
     "name": "Mattress",
-    "choice": "Simmons Beautyrest Pocketed Coil (Tangs/Taka Promo)",
-    "notes": "Queen hybrid pocket-spring mattress (Target ~$3k).",
+    "choice": "Simmons Beautyrest Platinum Prima Grand (Super Pillow Top)",
+    "notes": "Queen hybrid pocket-spring mattress. Master bedroom flagship comfort.",
     "room": "Master Bed",
     "priority": "P0",
     "status": "Selected",
-    "price": 2800,
-    "priceDisplay": "$2,800",
-    "availableAt": "Courts / Simmons Gallery",
-    "linkText": "Simmons SG",
-    "linkUrl": "https://simmons.com.sg/products/beautyrest/",
+    "price": 4900,
+    "priceDisplay": "$4,900.00",
+    "availableAt": "Courts Megastore",
+    "linkText": "Courts SG",
+    "linkUrl": "https://www.courts.com.sg",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Simmons Beautyrest Platinum Prima Grand (Super Pillow Top)",
+        "notes": "Queen hybrid pocket-spring mattress. Master bedroom flagship comfort.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 4900,
+            "priceDisplay": "$4,900.00",
+            "promo": "Megastore Promo (List $5,903)",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          },
+          {
+            "store": "Simmons Gallery / Tangs",
+            "price": 5200,
+            "priceDisplay": "$5,200.00",
+            "promo": "Gallery Promotion",
+            "linkText": "Simmons SG",
+            "linkUrl": "https://simmons.com.sg"
+          }
+        ]
+      },
+      {
+        "model": "Simmons BackCare Advanced S4500 (Canada / Display Promo)",
+        "notes": "Extra firm lumbar support series.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 3600,
+            "priceDisplay": "$3,600.00",
+            "promo": "Floor Display Promo",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      },
+      {
+        "model": "Four Star Detense ArcticSilk Queen",
+        "notes": "Cooling fabric pocketed coil mattress with anti-static protection.",
+        "stores": [
+          {
+            "store": "Four Star Showroom",
+            "price": 1699,
+            "priceDisplay": "$1,699.00",
+            "promo": "Direct Factory Price",
+            "linkText": "Four Star",
+            "linkUrl": "https://www.fourstar.com.sg"
+          }
+        ]
+      },
+      {
+        "model": "Tilam King 100% Natural Latex Queen",
+        "notes": "High-durability open-cell latex, mold and dust-mite resistant for SG climate.",
+        "stores": [
+          {
+            "store": "Tilam King Showroom",
+            "price": 1599,
+            "priceDisplay": "$1,599.00",
+            "promo": "Direct Maker Price",
+            "linkText": "Tilam King",
+            "linkUrl": "https://tilamking.sg"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "bed-frame",
     "name": "Bed Frame",
-    "choice": "Blafink Custom Heavy-Duty Hydraulic Storage Bed (Bansbach Struts)",
-    "notes": "Standard frame ~$1,150; hydraulic gas-lift version ~$1,550.",
+    "choice": "Courts Hydraulic Storage Bed Frame (Add-on Bundle Promo)",
+    "notes": "Heavy-duty gas-lift storage bed frame paired with Simmons mattress purchase.",
     "room": "Master Bed",
     "priority": "P0",
     "status": "Selected",
-    "price": 1600,
-    "priceDisplay": "$1,600",
-    "availableAt": "Blafink",
-    "linkText": "Blafink",
-    "linkUrl": "https://www.blafink.com",
+    "price": 590,
+    "priceDisplay": "$590.00",
+    "availableAt": "Courts Megastore / Simmons",
+    "linkText": "Courts SG",
+    "linkUrl": "https://www.courts.com.sg",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Courts Hydraulic Storage Bed Frame (Add-on Bundle Promo)",
+        "notes": "Heavy-duty gas-lift storage bed frame paired with Simmons mattress purchase.",
+        "stores": [
+          {
+            "store": "Courts Megastore / Simmons",
+            "price": 590,
+            "priceDisplay": "$590.00",
+            "promo": "Bundle Add-on Promo",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      },
+      {
+        "model": "Castlery Dawson Gas-Lift Storage Bed",
+        "notes": "Contemporary upholstered frame with front-lift gas struts.",
+        "stores": [
+          {
+            "store": "Castlery SG",
+            "price": 1550,
+            "priceDisplay": "$1,550.00",
+            "promo": "Standard Retail",
+            "linkText": "Castlery SG",
+            "linkUrl": "https://www.castlery.com/sg"
+          }
+        ]
+      },
+      {
+        "model": "Blafink Custom Struts Hydraulic Storage Bed",
+        "notes": "Bespoke German Bansbach gas struts calibrated to heavy pocket spring mattress weight.",
+        "stores": [
+          {
+            "store": "Blafink Showroom",
+            "price": 1950,
+            "priceDisplay": "$1,950.00",
+            "promo": "Custom Handcrafted",
+            "linkText": "Blafink SG",
+            "linkUrl": "https://www.blafink.com"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "smart-curtains-living",
     "name": "Smart Curtains (Living)",
     "choice": "Aqara C3 Motorised Tracks + Custom Day/Night Curtains",
-    "notes": "Priority 1 for motorized living room window pelmet.",
+    "notes": "High-torque 2Nm ultra-quiet motor with custom dual curtain tracks for living room pelmet.",
     "room": "Living Room",
     "priority": "P0",
     "status": "Selected",
     "price": 1100,
-    "priceDisplay": "$1,100",
+    "priceDisplay": "$1,100.00",
     "availableAt": "Curtain Specialist / Contractor",
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/Aqara-C3-curtain-motor-International-version-Strong-traction-2Nm-Manual-stop-Customize-pulling-speed-Smooth-operation-Smart-curtain-i.1006110165.40872608563",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Aqara C3 Motorised Tracks + Custom Day/Night Curtains",
+        "notes": "High-torque 2Nm ultra-quiet motor with custom dual curtain tracks for living room pelmet.",
+        "stores": [
+          {
+            "store": "Curtain Specialist / Contractor",
+            "price": 1100,
+            "priceDisplay": "$1,100.00",
+            "promo": "Tracks + Custom Drapery",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/Aqara-C3-curtain-motor-International-version-Strong-traction-2Nm-Manual-stop-Customize-pulling-speed-Smooth-operation-Smart-curtain-i.1006110165.40872608563"
+          }
+        ]
+      },
+      {
+        "model": "Aqara Curtain Driver E1 (Rod / Track Clip-on)",
+        "notes": "Rechargeable battery clip-on motor without replacing existing tracks.",
+        "stores": [
+          {
+            "store": "Shopee SG",
+            "price": 450,
+            "priceDisplay": "$450.00",
+            "promo": "Clip-on Pair",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "sofa",
     "name": "Sofa",
     "choice": "Cozmo 3-Seater Modular Sofa with Chaise",
-    "notes": "Configurable theater-pit layout. Contenders: Sammie/Cozmo ($1,750), Son & Bear Milo Double ($1,388), IKEA S\u00f6derhamn ($850).",
+    "notes": "Configurable theater-pit layout with interchangeable stain-resistant covers.",
     "room": "Living Room",
     "priority": "P1",
     "status": "Selected",
     "price": 1750,
-    "priceDisplay": "$1,750",
+    "priceDisplay": "$1,750.00",
     "availableAt": "Cozmo",
     "linkText": "Cozmo",
     "linkUrl": "https://cozmo.sg",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Cozmo 3-Seater Modular Sofa with Chaise",
+        "notes": "Configurable theater-pit layout with interchangeable stain-resistant covers.",
+        "stores": [
+          {
+            "store": "Cozmo",
+            "price": 1750,
+            "priceDisplay": "$1,750.00",
+            "promo": "Modular Chaise",
+            "linkText": "Cozmo",
+            "linkUrl": "https://cozmo.sg"
+          }
+        ]
+      },
+      {
+        "model": "Son & Bear Milo Double",
+        "notes": "Deep-seat lounging sofa with high-density resilient foam cushions.",
+        "stores": [
+          {
+            "store": "Son & Bear",
+            "price": 1388,
+            "priceDisplay": "$1,388.00",
+            "promo": "Deep Lounge Fit",
+            "linkText": "Son & Bear",
+            "linkUrl": "https://sonandbear.com"
+          }
+        ]
+      },
+      {
+        "model": "IKEA S\u00f6derhamn 3-Seater Sectional",
+        "notes": "Deep, low-slung minimalist sofa with washable covers.",
+        "stores": [
+          {
+            "store": "IKEA SG",
+            "price": 850,
+            "priceDisplay": "$850.00",
+            "promo": "Washable Covers",
+            "linkText": "IKEA",
+            "linkUrl": "https://www.ikea.com/sg/en"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "tv-console",
     "name": "TV Console",
     "choice": "Castlery Seb TV Console (150cm)",
-    "notes": "Ensure deep top surface for soundbar and cable grommets.",
+    "notes": "Muted solid acacia with slatted cabinet doors for IR pass-through.",
     "room": "Living Room",
     "priority": "P2",
     "status": "Selected",
     "price": 700,
-    "priceDisplay": "$700",
+    "priceDisplay": "$700.00",
     "availableAt": "Castlery",
     "linkText": "Castlery",
     "linkUrl": "https://www.castlery.com/sg/products/seb-tv-console",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Castlery Seb TV Console (150cm)",
+        "notes": "Muted solid acacia with slatted cabinet doors for IR pass-through.",
+        "stores": [
+          {
+            "store": "Castlery",
+            "price": 700,
+            "priceDisplay": "$700.00",
+            "promo": "150cm Solid Acacia",
+            "linkText": "Castlery",
+            "linkUrl": "https://www.castlery.com/sg/products/seb-tv-console"
+          }
+        ]
+      },
+      {
+        "model": "IKEA Stockholm TV Bench (160cm)",
+        "notes": "Walnut veneer with cord management and drop-down mesh front.",
+        "stores": [
+          {
+            "store": "IKEA SG",
+            "price": 599,
+            "priceDisplay": "$599.00",
+            "promo": "Walnut Veneer",
+            "linkText": "IKEA",
+            "linkUrl": "https://www.ikea.com/sg/en"
+          }
+        ]
+      },
+      {
+        "model": "Nitori Solid Wood TV Console (150cm)",
+        "notes": "Japanese compact living media cabinet with soft-close drawers.",
+        "stores": [
+          {
+            "store": "Nitori SG",
+            "price": 499,
+            "priceDisplay": "$499.00",
+            "promo": "Japanese Compact",
+            "linkText": "Nitori",
+            "linkUrl": "https://www.nitori.com.sg"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "tv",
     "name": "TV",
-    "choice": "LG OLED 65\" G-Series",
-    "notes": "4K 120Hz HDMI 2.1 gaming & high-end movie cinema.",
+    "choice": "Samsung 65\" OLED S90H (Glare Free 2026)",
+    "notes": "Anti-reflective matte OLED screen, 4K 144Hz HDMI 2.1 gaming & cinema.",
     "room": "Living Room",
-    "priority": "P2",
+    "priority": "P1",
     "status": "Selected",
-    "price": 5000,
-    "priceDisplay": "$5,000",
-    "availableAt": "Courts / Shopee",
-    "linkText": "Shopee",
-    "linkUrl": "https://shopee.sg/LG-65-55-Inch-65G4-55G4-Class-OLED-evo-G4-Series-Smart-TV-4K-Processor-Flat-Screen-with-Magic-Remote-AI-Powered-i.306170703.42362839029",
+    "price": 3199,
+    "priceDisplay": "$3,199.00",
+    "availableAt": "Courts Megastore",
+    "linkText": "Courts",
+    "linkUrl": "https://www.courts.com.sg",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Samsung 65\" OLED S90H (Glare Free 2026)",
+        "notes": "Anti-reflective matte OLED screen, 4K 144Hz HDMI 2.1 gaming & cinema.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 3199,
+            "priceDisplay": "$3,199.00",
+            "promo": "Promo Price (List $3,699)",
+            "linkText": "Courts",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      },
+      {
+        "model": "Samsung 65\" OLED S85F (Glossy OLED)",
+        "notes": "Standard glossy 4K 120Hz OLED panel.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 2399,
+            "priceDisplay": "$2,399.00",
+            "promo": "Value OLED Tier",
+            "linkText": "Courts",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      },
+      {
+        "model": "Samsung 77\" OLED S85H (77-inch Big Screen)",
+        "notes": "Maximum immersive 77-inch display for living room cinematic scale.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 4814,
+            "priceDisplay": "$4,814.00",
+            "promo": "Promo (List $5,349)",
+            "linkText": "Courts",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      },
+      {
+        "model": "LG 65\" OLED C4",
+        "notes": "Benchmark Dolby Vision & webOS OLED favorite for film enthusiasts.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 2899,
+            "priceDisplay": "$2,899.00",
+            "promo": "Showroom Deal",
+            "linkText": "Courts",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "soundbar",
     "name": "Soundbar",
-    "choice": "Samsung HW-Q990F 11.1.4",
-    "notes": "Industry benchmark flagship immersive soundbar.",
+    "choice": "Samsung HW-Q990H 11.1.4 Dolby Atmos (TV Bundle)",
+    "notes": "Flagship 11.1.4ch with wireless rear surround speakers and subwoofer. Q-Symphony with TV.",
     "room": "Living Room",
     "priority": "P2",
     "status": "Selected",
-    "price": 1750,
-    "priceDisplay": "$1,750",
-    "availableAt": "Courts / Shopee",
-    "linkText": "Shopee",
-    "linkUrl": "https://shopee.sg/SAMSUNG-HW-Q990D-XS-11.1.4CH-SUBWOOFER-Q-SERIES-SOUNDBAR-i.182624414.28805096157",
+    "price": 1399,
+    "priceDisplay": "$1,399.00",
+    "availableAt": "Courts Megastore",
+    "linkText": "Courts",
+    "linkUrl": "https://www.courts.com.sg",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Samsung HW-Q990H 11.1.4 Dolby Atmos (TV Bundle)",
+        "notes": "Flagship 11.1.4ch with wireless rear surround speakers and subwoofer. Q-Symphony with TV.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 1399,
+            "priceDisplay": "$1,399.00",
+            "promo": "TV Bundle Promo",
+            "linkText": "Courts",
+            "linkUrl": "https://www.courts.com.sg"
+          },
+          {
+            "store": "Harvey Norman / Gain City",
+            "price": 2199,
+            "priceDisplay": "$2,199.00",
+            "promo": "Standalone Price",
+            "linkText": "Gain City",
+            "linkUrl": "https://www.gaincity.com"
+          }
+        ]
+      },
+      {
+        "model": "Samsung HW-Q800F (5.1.2ch, No Rears)",
+        "notes": "Compact soundbar + sub setup without rear satellite cables.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 1099,
+            "priceDisplay": "$1,099.00",
+            "promo": "Standalone Unit",
+            "linkText": "Courts",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "dining-table",
     "name": "Dining Table",
-    "choice": "Comfort Furniture Sintered Stone Dining Table",
-    "notes": "Modular and movable (no fixed kitchen island).",
+    "choice": "IKEA Norden Gateleg Folding Table (Solid Birch)",
+    "notes": "Drop-leaf space saver with 6 built-in storage drawers. Highly versatile.",
     "room": "Dining",
     "priority": "P1",
     "status": "Selected",
-    "price": 750,
-    "priceDisplay": "$750",
-    "availableAt": "Comfort Furniture",
-    "linkText": "Comfort Furniture",
-    "linkUrl": "https://www.comfort-furniture.com.sg",
+    "price": 299,
+    "priceDisplay": "$299.00",
+    "availableAt": "IKEA SG",
+    "linkText": "IKEA",
+    "linkUrl": "https://www.ikea.com/sg/en/p/norden-gateleg-table-birch-80422383/",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "IKEA Norden Gateleg Folding Table (Solid Birch)",
+        "notes": "Drop-leaf space saver with 6 built-in storage drawers. Highly versatile.",
+        "stores": [
+          {
+            "store": "IKEA SG",
+            "price": 299,
+            "priceDisplay": "$299.00",
+            "promo": "Solid Birch Drop-leaf",
+            "linkText": "IKEA",
+            "linkUrl": "https://www.ikea.com/sg/en/p/norden-gateleg-table-birch-80422383/"
+          }
+        ]
+      },
+      {
+        "model": "Castlery Seb Extendable Dining Table (Solid Acacia)",
+        "notes": "Solid wood Scandinavian warmth with smooth center leaf extension.",
+        "stores": [
+          {
+            "store": "Castlery SG",
+            "price": 1199,
+            "priceDisplay": "$1,199.00",
+            "promo": "Solid Acacia",
+            "linkText": "Castlery",
+            "linkUrl": "https://www.castlery.com/sg"
+          }
+        ]
+      },
+      {
+        "model": "Comfort Design Sintered Stone Table (1.4m)",
+        "notes": "Heat, scratch, and stain-proof sintered stone dining slab.",
+        "stores": [
+          {
+            "store": "Comfort Design",
+            "price": 899,
+            "priceDisplay": "$899.00",
+            "promo": "Heat & Scratch Resistant",
+            "linkText": "Comfort Design",
+            "linkUrl": "https://www.comfort-b.com.sg"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "dining-chairs",
     "name": "Dining Chairs",
     "choice": "Castlery Classic Dining Chairs (Set of 4)",
-    "notes": "Comfortable for multi-use WFH dining.",
+    "notes": "Tapered legs and curved backrest for comfortable dining and WFH.",
     "room": "Dining",
     "priority": "P1",
     "status": "Selected",
     "price": 600,
-    "priceDisplay": "$600",
+    "priceDisplay": "$600.00",
     "availableAt": "Castlery",
     "linkText": "Castlery",
     "linkUrl": "https://www.castlery.com/sg/products/classic-dining-chair",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Castlery Classic Dining Chairs (Set of 4)",
+        "notes": "Tapered legs and curved backrest for comfortable dining and WFH.",
+        "stores": [
+          {
+            "store": "Castlery",
+            "price": 600,
+            "priceDisplay": "$600.00",
+            "promo": "Set of 4",
+            "linkText": "Castlery",
+            "linkUrl": "https://www.castlery.com/sg/products/classic-dining-chair"
+          }
+        ]
+      },
+      {
+        "model": "IKEA Odger Chairs (Set of 4)",
+        "notes": "Renewable wood-plastic composite molded ergonomic bucket chairs.",
+        "stores": [
+          {
+            "store": "IKEA SG",
+            "price": 440,
+            "priceDisplay": "$440.00",
+            "promo": "Set of 4",
+            "linkText": "IKEA",
+            "linkUrl": "https://www.ikea.com/sg/en"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "zip-track",
     "name": "Zip Track",
     "choice": "Dooya DM45S AC Motor + Aqara T2 Zigbee Relay",
-    "notes": "Track-guided balcony outdoor blinds (~$28-$35 psf).",
+    "notes": "Track-guided balcony outdoor blinds (~$28-$35 psf) with local smart automation.",
     "room": "Balcony",
     "priority": "P0",
     "status": "Selected",
     "price": 2800,
-    "priceDisplay": "$2,800",
+    "priceDisplay": "$2,800.00",
     "availableAt": "Zip Track Specialist / Contractor",
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/product/1878598027/52765706758",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Dooya DM45S AC Motor + Aqara T2 Zigbee Relay",
+        "notes": "Track-guided balcony outdoor blinds (~$28-$35 psf) with local smart automation.",
+        "stores": [
+          {
+            "store": "Zip Track Specialist / Contractor",
+            "price": 2800,
+            "priceDisplay": "$2,800.00",
+            "promo": "Custom Balcony Track",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/product/1878598027/52765706758"
+          }
+        ]
+      },
+      {
+        "model": "Somfy Altus 50 RTS Motorized Zip Screen",
+        "notes": "French Somfy motorized outdoor screen with premium sun & rain mesh.",
+        "stores": [
+          {
+            "store": "Balcony Specialist SG",
+            "price": 3400,
+            "priceDisplay": "$3,400.00",
+            "promo": "Somfy Motor Package",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg"
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "sensors-fleet-whole-house",
     "name": "Sensors Fleet (Whole House)",
     "choice": "1x Aqara FP2 mmWave (Multi-Zone) + 4x Door Contact T1 + 3x PIR P1 + 1x Bedside Switch",
     "notes": "Selected choice for Whole House.",
@@ -642,24 +2037,62 @@
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/product/1245098924/55259558090",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "1x Aqara FP2 mmWave (Multi-Zone) + 4x Door Contact T1 + 3x PIR P1 + 1x Bedside Switch",
+        "notes": "Selected choice for Whole House.",
+        "stores": [
+          {
+            "store": "Aqara Official / Shopee",
+            "price": 268,
+            "priceDisplay": "$268",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/product/1245098924/55259558090"
+          }
+        ]
+      }
+    ]
   },
   {
-    "name": "Bedroom 2 Mattress / Bedding",
-    "choice": "Origin Hybrid / Noa Lite / IKEA VALEVAG",
-    "notes": "Origin Hybrid / Noa Lite / IKEA VALEVAG.",
+    "id": "study-room-pullout-bed-bedding",
+    "name": "Study Room Pullout Bed & Bedding",
+    "choice": "IKEA Friheten Sofa Bed / Hemnes daybed with pull-out trundle & guest mattress",
+    "notes": "IKEA Friheten Sofa Bed / Hemnes daybed with pull-out trundle & guest mattress.",
     "room": "Bedroom 2 / Study",
     "priority": "P2",
     "status": "TBD",
-    "price": 950,
-    "priceDisplay": "$700-$1,200",
+    "price": 1125,
+    "priceDisplay": "$750-$1,500",
     "availableAt": "-",
     "linkText": "",
     "linkUrl": "",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "IKEA Friheten Sofa Bed / Hemnes daybed with pull-out trundle & guest mattress",
+        "notes": "IKEA Friheten Sofa Bed / Hemnes daybed with pull-out trundle & guest mattress.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 1125,
+            "priceDisplay": "$750-$1,500",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "study-wfh-desk",
     "name": "Study / WFH Desk",
     "choice": "140-160cm dual-motor standing desk (Omnidesk / EverDesk / Magnus Evo)",
     "notes": "140-160cm dual-motor standing desk (Omnidesk / EverDesk / Magnus Evo).",
@@ -672,9 +2105,28 @@
     "linkText": "",
     "linkUrl": "",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "140-160cm dual-motor standing desk (Omnidesk / EverDesk / Magnus Evo)",
+        "notes": "140-160cm dual-motor standing desk (Omnidesk / EverDesk / Magnus Evo).",
+        "stores": [
+          {
+            "store": "-",
+            "price": 750,
+            "priceDisplay": "$500-$1,000",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "office-chair",
     "name": "Office Chair",
     "choice": "Boulies EP200 / Sihoo C300 / Steelcase Leap",
     "notes": "Boulies EP200 / Sihoo C300 / Steelcase Leap.",
@@ -687,9 +2139,28 @@
     "linkText": "",
     "linkUrl": "",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Boulies EP200 / Sihoo C300 / Steelcase Leap",
+        "notes": "Boulies EP200 / Sihoo C300 / Steelcase Leap.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 650,
+            "priceDisplay": "$400-$900",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "monitor-arm-desk-accessories",
     "name": "Monitor Arm / Desk Accessories",
     "choice": "NB / Brateck / Ergotron LX",
     "notes": "NB / Brateck / Ergotron LX.",
@@ -702,12 +2173,31 @@
     "linkText": "",
     "linkUrl": "",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "NB / Brateck / Ergotron LX",
+        "notes": "NB / Brateck / Ergotron LX.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 325,
+            "priceDisplay": "$150-$500",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
   },
   {
-    "name": "Bedside Tables / Lamps",
-    "choice": "Slim bedside tables with reachable USB-C/power",
-    "notes": "Slim bedside tables with reachable USB-C/power.",
+    "id": "bedside-tables-lamps-2-no",
+    "name": "Bedside Tables / Lamps (2 No.)",
+    "choice": "2 No",
+    "notes": "2 No. slim bedside tables with reachable USB-C/power + bedside reading lamps.",
     "room": "Master Bed",
     "priority": "P2",
     "status": "TBD",
@@ -717,9 +2207,28 @@
     "linkText": "",
     "linkUrl": "",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "2 No",
+        "notes": "2 No. slim bedside tables with reachable USB-C/power + bedside reading lamps.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 550,
+            "priceDisplay": "$300-$800",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "bedroom-2-curtains-blinds",
     "name": "Bedroom 2 Curtains / Blinds",
     "choice": "Manual double track day & night curtains",
     "notes": "Manual double track day & night curtains.",
@@ -732,24 +2241,28 @@
     "linkText": "",
     "linkUrl": "",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Manual double track day & night curtains",
+        "notes": "Manual double track day & night curtains.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 650,
+            "priceDisplay": "$400-$900",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
   },
   {
-    "name": "Bathroom Vanities / Mirror Cabinets",
-    "choice": "Wall-hung plywood + mirrored storage cabinet",
-    "notes": "Wall-hung plywood + mirrored storage cabinet.",
-    "room": "Bathrooms",
-    "priority": "P1",
-    "status": "TBD",
-    "price": 1850,
-    "priceDisplay": "$1,200-$2,500",
-    "availableAt": "-",
-    "linkText": "",
-    "linkUrl": "",
-    "sellerDeductible": false,
-    "sellerSavings": 0
-  },
-  {
+    "id": "bathroom-accessories",
     "name": "Bathroom Accessories",
     "choice": "304 stainless steel / solid brass screw-mounted hardware",
     "notes": "304 stainless steel / solid brass screw-mounted hardware.",
@@ -762,9 +2275,28 @@
     "linkText": "",
     "linkUrl": "",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "304 stainless steel / solid brass screw-mounted hardware",
+        "notes": "304 stainless steel / solid brass screw-mounted hardware.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 550,
+            "priceDisplay": "$300-$800",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "shower-screens",
     "name": "Shower Screens",
     "choice": "Fixed tempered glass panels / sliding screen",
     "notes": "Fixed tempered glass panels / sliding screen.",
@@ -777,13 +2309,32 @@
     "linkText": "",
     "linkUrl": "",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Fixed tempered glass panels / sliding screen",
+        "notes": "Fixed tempered glass panels / sliding screen.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 1300,
+            "priceDisplay": "$800-$1,800",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "master-toilet-manual-bidet-seat",
     "name": "Master Toilet & Manual Bidet Seat",
     "choice": "Standard 1-piece ceramic WC + non-electric manual bidet seat (e",
     "notes": "Standard 1-piece ceramic WC + non-electric manual bidet seat (e.g. Kohler / TOTO Eco-washer). Common bath toilet retained ($0).",
-    "room": "Master Bath",
+    "room": "Bathrooms",
     "priority": "P1",
     "status": "TBD",
     "price": 550,
@@ -792,9 +2343,28 @@
     "linkText": "",
     "linkUrl": "",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Standard 1-piece ceramic WC + non-electric manual bidet seat (e",
+        "notes": "Standard 1-piece ceramic WC + non-electric manual bidet seat (e.g. Kohler / TOTO Eco-washer). Common bath toilet retained ($0).",
+        "stores": [
+          {
+            "store": "-",
+            "price": 550,
+            "priceDisplay": "$350-$750",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "kitchen-small-appliances",
     "name": "Kitchen Small Appliances",
     "choice": "Induction cookware, rice cooker, kettle, air fryer, coffee setup",
     "notes": "Induction cookware, rice cooker, kettle, air fryer, coffee setup.",
@@ -807,9 +2377,28 @@
     "linkText": "",
     "linkUrl": "",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Induction cookware, rice cooker, kettle, air fryer, coffee setup",
+        "notes": "Induction cookware, rice cooker, kettle, air fryer, coffee setup.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 1300,
+            "priceDisplay": "$800-$1,800",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "kitchen-storage-bins",
     "name": "Kitchen Storage / Bins",
     "choice": "Under-sink pull-outs, drawer dividers, spice racks",
     "notes": "Under-sink pull-outs, drawer dividers, spice racks.",
@@ -822,12 +2411,31 @@
     "linkText": "",
     "linkUrl": "",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Under-sink pull-outs, drawer dividers, spice racks",
+        "notes": "Under-sink pull-outs, drawer dividers, spice racks.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 600,
+            "priceDisplay": "$300-$900",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "living-room-coffee-side-tables",
     "name": "Living Room Coffee / Side Tables",
-    "choice": "Nesting side tables to match modular sofa pit",
-    "notes": "Nesting side tables to match modular sofa pit.",
+    "choice": "Nesting side tables / DIY coffee table to match modular sofa pit",
+    "notes": "Nesting side tables / DIY coffee table to match modular sofa pit.",
     "room": "Living Room",
     "priority": "P2",
     "status": "TBD",
@@ -837,9 +2445,28 @@
     "linkText": "",
     "linkUrl": "",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Nesting side tables / DIY coffee table to match modular sofa pit",
+        "notes": "Nesting side tables / DIY coffee table to match modular sofa pit.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 600,
+            "priceDisplay": "$300-$900",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "living-room-rug-lamps-shelving",
     "name": "Living Room Rug / Lamps / Shelving",
     "choice": "Washable low-pile rug (anchors sofa & aids acoustics), floor lamp",
     "notes": "Washable low-pile rug (anchors sofa & aids acoustics), floor lamp.",
@@ -852,9 +2479,28 @@
     "linkText": "",
     "linkUrl": "",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Washable low-pile rug (anchors sofa & aids acoustics), floor lamp",
+        "notes": "Washable low-pile rug (anchors sofa & aids acoustics), floor lamp.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 1200,
+            "priceDisplay": "$600-$1,800",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "entrance-mirror-drop-zone",
     "name": "Entrance Mirror / Drop Zone",
     "choice": "Full-length mirror + drop shelf + charging for EDC",
     "notes": "Full-length mirror + drop shelf + charging for EDC.",
@@ -867,9 +2513,28 @@
     "linkText": "",
     "linkUrl": "",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Full-length mirror + drop shelf + charging for EDC",
+        "notes": "Full-length mirror + drop shelf + charging for EDC.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 475,
+            "priceDisplay": "$250-$700",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "shoe-bench",
     "name": "Shoe Bench",
     "choice": "Compact shoe bench with cushion / shoe storage shelf (open for alternatives)",
     "notes": "Compact shoe bench with cushion / shoe storage shelf (open for alternatives).",
@@ -882,9 +2547,28 @@
     "linkText": "",
     "linkUrl": "",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Compact shoe bench with cushion / shoe storage shelf (open for alternatives)",
+        "notes": "Compact shoe bench with cushion / shoe storage shelf (open for alternatives).",
+        "stores": [
+          {
+            "store": "-",
+            "price": 325,
+            "priceDisplay": "$150-$500",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "cleaning-laundry-basics",
     "name": "Cleaning / Laundry Basics",
     "choice": "Cordless stick vacuum (Dreame R20) + spin mop",
     "notes": "Cordless stick vacuum (Dreame R20) + spin mop.",
@@ -897,9 +2581,28 @@
     "linkText": "",
     "linkUrl": "",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Cordless stick vacuum (Dreame R20) + spin mop",
+        "notes": "Cordless stick vacuum (Dreame R20) + spin mop.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 1000,
+            "priceDisplay": "$600-$1,400",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
   },
   {
+    "id": "linen-general-storage",
     "name": "Linen / General Storage",
     "choice": "Full-height linen/storage cabinet with labeled pull-out bins",
     "notes": "Full-height linen/storage cabinet with labeled pull-out bins.",
@@ -912,6 +2615,534 @@
     "linkText": "",
     "linkUrl": "",
     "sellerDeductible": false,
-    "sellerSavings": 0
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Full-height linen/storage cabinet with labeled pull-out bins",
+        "notes": "Full-height linen/storage cabinet with labeled pull-out bins.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 1350,
+            "priceDisplay": "$700-$2,000",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "living-loose-stools-4-no",
+    "name": "Living Loose Stools (4 No.)",
+    "choice": "Stackable wooden / cushioned stools (IKEA Kyrre or Frosta, 4 No",
+    "notes": "Stackable wooden / cushioned stools (IKEA Kyrre or Frosta, 4 No.) for flexible living & dining seating.",
+    "room": "Living Room",
+    "priority": "P2",
+    "status": "TBD",
+    "price": 200,
+    "priceDisplay": "$120-$280",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Stackable wooden / cushioned stools (IKEA Kyrre or Frosta, 4 No",
+        "notes": "Stackable wooden / cushioned stools (IKEA Kyrre or Frosta, 4 No.) for flexible living & dining seating.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 200,
+            "priceDisplay": "$120-$280",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "living-lounge-chair",
+    "name": "Living Lounge Chair",
+    "choice": "Compact single-seater accent armchair / reading lounge chair to complement 2",
+    "notes": "Compact single-seater accent armchair / reading lounge chair to complement 2.5-seater sofa.",
+    "room": "Living Room",
+    "priority": "P2",
+    "status": "TBD",
+    "price": 550,
+    "priceDisplay": "$300-$800",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Compact single-seater accent armchair / reading lounge chair to complement 2",
+        "notes": "Compact single-seater accent armchair / reading lounge chair to complement 2.5-seater sofa.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 550,
+            "priceDisplay": "$300-$800",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "balcony-chairs-2-no",
+    "name": "Balcony Chairs (2 No.)",
+    "choice": "Weather-resistant outdoor chairs (2 No",
+    "notes": "Weather-resistant outdoor chairs (2 No.) for balcony coffee & relaxation.",
+    "room": "Balcony",
+    "priority": "P1",
+    "status": "TBD",
+    "price": 275,
+    "priceDisplay": "$150-$400",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Weather-resistant outdoor chairs (2 No",
+        "notes": "Weather-resistant outdoor chairs (2 No.) for balcony coffee & relaxation.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 275,
+            "priceDisplay": "$150-$400",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "balcony-table",
+    "name": "Balcony Table",
+    "choice": "Compact weather-resistant outdoor caf\u00e9 / bistro table (aluminum or treated wood)",
+    "notes": "Compact weather-resistant outdoor caf\u00e9 / bistro table (aluminum or treated wood).",
+    "room": "Balcony",
+    "priority": "P1",
+    "status": "TBD",
+    "price": 300,
+    "priceDisplay": "$150-$450",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Compact weather-resistant outdoor caf\u00e9 / bistro table (aluminum or treated wood)",
+        "notes": "Compact weather-resistant outdoor caf\u00e9 / bistro table (aluminum or treated wood).",
+        "stores": [
+          {
+            "store": "-",
+            "price": 300,
+            "priceDisplay": "$150-$450",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "balcony-bench-diy-loose",
+    "name": "Balcony Bench (DIY / Loose)",
+    "choice": "Outdoor wooden slat bench / DIY bench for balcony relaxation corner",
+    "notes": "Outdoor wooden slat bench / DIY bench for balcony relaxation corner.",
+    "room": "Balcony",
+    "priority": "P2",
+    "status": "TBD",
+    "price": 250,
+    "priceDisplay": "$150-$350",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Outdoor wooden slat bench / DIY bench for balcony relaxation corner",
+        "notes": "Outdoor wooden slat bench / DIY bench for balcony relaxation corner.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 250,
+            "priceDisplay": "$150-$350",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "balcony-clothes-rack",
+    "name": "Balcony Clothes Rack",
+    "choice": "Freestanding folding clothes drying rack / airer (supplementing ceiling smart dryer)",
+    "notes": "Freestanding folding clothes drying rack / airer (supplementing ceiling smart dryer).",
+    "room": "Balcony",
+    "priority": "P2",
+    "status": "TBD",
+    "price": 100,
+    "priceDisplay": "$50-$150",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Freestanding folding clothes drying rack / airer (supplementing ceiling smart dryer)",
+        "notes": "Freestanding folding clothes drying rack / airer (supplementing ceiling smart dryer).",
+        "stores": [
+          {
+            "store": "-",
+            "price": 100,
+            "priceDisplay": "$50-$150",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "balcony-shelving-storage-rack",
+    "name": "Balcony Shelving / Storage Rack",
+    "choice": "Outdoor-rated powder-coated metal or teak shelving unit for gear & plants",
+    "notes": "Outdoor-rated powder-coated metal or teak shelving unit for gear & plants.",
+    "room": "Balcony",
+    "priority": "P2",
+    "status": "TBD",
+    "price": 200,
+    "priceDisplay": "$100-$300",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Outdoor-rated powder-coated metal or teak shelving unit for gear & plants",
+        "notes": "Outdoor-rated powder-coated metal or teak shelving unit for gear & plants.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 200,
+            "priceDisplay": "$100-$300",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "smart-security-camera-cctv",
+    "name": "Smart Security Camera (CCTV)",
+    "choice": "Indoor / entrance smart camera (Aqara Camera Hub G3 / E1 or Eufy 2K) for security & presence",
+    "notes": "Indoor / entrance smart camera (Aqara Camera Hub G3 / E1 or Eufy 2K) for security & presence.",
+    "room": "Entrance",
+    "priority": "P2",
+    "status": "TBD",
+    "price": 165,
+    "priceDisplay": "$80-$250",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Indoor / entrance smart camera (Aqara Camera Hub G3 / E1 or Eufy 2K) for security & presence",
+        "notes": "Indoor / entrance smart camera (Aqara Camera Hub G3 / E1 or Eufy 2K) for security & presence.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 165,
+            "priceDisplay": "$80-$250",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "power-socket-faceplates-whole-house",
+    "name": "Power Socket Faceplates (Whole House)",
+    "choice": "Standard 13A single/double switched socket faceplates (Legrand Mallia Senses / Schneider AvatarOn)",
+    "notes": "Standard 13A single/double switched socket faceplates (Legrand Mallia Senses / Schneider AvatarOn).",
+    "room": "Whole House",
+    "priority": "P1",
+    "status": "TBD",
+    "price": 500,
+    "priceDisplay": "$300-$700",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Standard 13A single/double switched socket faceplates (Legrand Mallia Senses / Schneider AvatarOn)",
+        "notes": "Standard 13A single/double switched socket faceplates (Legrand Mallia Senses / Schneider AvatarOn).",
+        "stores": [
+          {
+            "store": "-",
+            "price": 500,
+            "priceDisplay": "$300-$700",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dining-pendant-light-fixture",
+    "name": "Dining Pendant Light Fixture",
+    "choice": "Minimalist 2-drop or 3-drop dining pendant fitting (powers the selected dimmable E27 bulbs)",
+    "notes": "Minimalist 2-drop or 3-drop dining pendant fitting (powers the selected dimmable E27 bulbs).",
+    "room": "Dining",
+    "priority": "P1",
+    "status": "TBD",
+    "price": 225,
+    "priceDisplay": "$100-$350",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Minimalist 2-drop or 3-drop dining pendant fitting (powers the selected dimmable E27 bulbs)",
+        "notes": "Minimalist 2-drop or 3-drop dining pendant fitting (powers the selected dimmable E27 bulbs).",
+        "stores": [
+          {
+            "store": "-",
+            "price": 225,
+            "priceDisplay": "$100-$350",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "balcony-plants-plant-pots",
+    "name": "Balcony Plants & Plant Pots",
+    "choice": "Tropical indoor/outdoor potted plants and planters (contractor exclusion list; homeowner purchase)",
+    "notes": "Tropical indoor/outdoor potted plants and planters (contractor exclusion list; homeowner purchase).",
+    "room": "Balcony",
+    "priority": "P2",
+    "status": "TBD",
+    "price": 200,
+    "priceDisplay": "$100-$300",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Tropical indoor/outdoor potted plants and planters (contractor exclusion list; homeowner purchase)",
+        "notes": "Tropical indoor/outdoor potted plants and planters (contractor exclusion list; homeowner purchase).",
+        "stores": [
+          {
+            "store": "-",
+            "price": 200,
+            "priceDisplay": "$100-$300",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kitchen-bathroom-venetian-blinds-x3",
+    "name": "Kitchen & Bathroom Venetian Blinds (x3)",
+    "choice": "Moisture-resistant aluminium or faux-wood venetian blinds for Kitchen, Master Bath, and Common Bath",
+    "notes": "Moisture-resistant aluminium or faux-wood venetian blinds for Kitchen, Master Bath, and Common Bath.",
+    "room": "Whole House",
+    "priority": "P1",
+    "status": "TBD",
+    "price": 425,
+    "priceDisplay": "$250-$600",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Moisture-resistant aluminium or faux-wood venetian blinds for Kitchen, Master Bath, and Common Bath",
+        "notes": "Moisture-resistant aluminium or faux-wood venetian blinds for Kitchen, Master Bath, and Common Bath.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 425,
+            "priceDisplay": "$250-$600",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "master-bedroom-projector-shelf",
+    "name": "Master Bedroom Projector Shelf",
+    "choice": "Wall or headboard mounted shelf / bracket for BenQ GV50 portable projector",
+    "notes": "Wall or headboard mounted shelf / bracket for BenQ GV50 portable projector.",
+    "room": "Master Bed",
+    "priority": "P2",
+    "status": "TBD",
+    "price": 100,
+    "priceDisplay": "$50-$150",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Wall or headboard mounted shelf / bracket for BenQ GV50 portable projector",
+        "notes": "Wall or headboard mounted shelf / bracket for BenQ GV50 portable projector.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 100,
+            "priceDisplay": "$50-$150",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "master-bedroom-projector",
+    "name": "Master Bedroom Projector",
+    "choice": "BenQ GV50 portable laser projector (already owned by homeowner; $0 procurement budget)",
+    "notes": "BenQ GV50 portable laser projector (already owned by homeowner; $0 procurement budget).",
+    "room": "Master Bed",
+    "priority": "P2",
+    "status": "TBD",
+    "price": 0,
+    "priceDisplay": "$0 (Retained)",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "BenQ GV50 portable laser projector (already owned by homeowner; $0 procurement budget)",
+        "notes": "BenQ GV50 portable laser projector (already owned by homeowner; $0 procurement budget).",
+        "stores": [
+          {
+            "store": "-",
+            "price": 0,
+            "priceDisplay": "$0 (Retained)",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kitchen-sliding-door-fluted-glass-film",
+    "name": "Kitchen Sliding Door Fluted Glass Film",
+    "choice": "DIY reeded / fluted window film roll for kitchen sliding door viewing panel",
+    "notes": "DIY reeded / fluted window film roll for kitchen sliding door viewing panel.",
+    "room": "Kitchen",
+    "priority": "P2",
+    "status": "TBD",
+    "price": 28,
+    "priceDisplay": "$15-$40",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "DIY reeded / fluted window film roll for kitchen sliding door viewing panel",
+        "notes": "DIY reeded / fluted window film roll for kitchen sliding door viewing panel.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 28,
+            "priceDisplay": "$15-$40",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
+          }
+        ]
+      }
+    ]
   }
 ]
