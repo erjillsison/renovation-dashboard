@@ -1974,54 +1974,6 @@
     ]
   },
   {
-    "id": "dining-chairs",
-    "name": "Dining Chairs",
-    "choice": "Castlery Classic Dining Chairs (Set of 4)",
-    "notes": "Tapered legs and curved backrest for comfortable dining and WFH.",
-    "room": "Dining",
-    "priority": "P1",
-    "status": "Selected",
-    "price": 600,
-    "priceDisplay": "$600.00",
-    "availableAt": "Castlery",
-    "linkText": "Castlery",
-    "linkUrl": "https://www.castlery.com/sg/products/classic-dining-chair",
-    "sellerDeductible": false,
-    "sellerSavings": 0,
-    "selectedOptionIndex": 0,
-    "selectedStoreIndex": 0,
-    "options": [
-      {
-        "model": "Castlery Classic Dining Chairs (Set of 4)",
-        "notes": "Tapered legs and curved backrest for comfortable dining and WFH.",
-        "stores": [
-          {
-            "store": "Castlery",
-            "price": 600,
-            "priceDisplay": "$600.00",
-            "promo": "Set of 4",
-            "linkText": "Castlery",
-            "linkUrl": "https://www.castlery.com/sg/products/classic-dining-chair"
-          }
-        ]
-      },
-      {
-        "model": "IKEA Odger Chairs (Set of 4)",
-        "notes": "Renewable wood-plastic composite molded ergonomic bucket chairs.",
-        "stores": [
-          {
-            "store": "IKEA SG",
-            "price": 440,
-            "priceDisplay": "$440.00",
-            "promo": "Set of 4",
-            "linkText": "IKEA",
-            "linkUrl": "https://www.ikea.com/sg/en"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "id": "zip-track",
     "name": "Zip Track",
     "choice": "Dooya DM45S AC Motor + Aqara T2 Zigbee Relay",
@@ -2098,6 +2050,40 @@
             "promo": "",
             "linkText": "Shopee",
             "linkUrl": "https://shopee.sg/product/1245098924/55259558090"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dining-chairs-2-no",
+    "name": "Dining Chairs (2 No.)",
+    "choice": "Select two chairs after sit-testing; scope calls for 2 No",
+    "notes": "Select two chairs after sit-testing; scope calls for 2 No. Compatible local references include IKEA LISABO / SKOGSTA.",
+    "room": "Dining",
+    "priority": "P1",
+    "status": "TBD",
+    "price": 200,
+    "priceDisplay": "$100-$300",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Select two chairs after sit-testing; scope calls for 2 No",
+        "notes": "Select two chairs after sit-testing; scope calls for 2 No. Compatible local references include IKEA LISABO / SKOGSTA.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 200,
+            "priceDisplay": "$100-$300",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
           }
         ]
       }
