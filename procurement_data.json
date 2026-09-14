@@ -1330,24 +1330,38 @@
   {
     "id": "smart-door-lock",
     "name": "Smart Door Lock",
-    "choice": "Aqara D200i 3D Facial Recognition Smart Lock",
-    "notes": "Hands-free walk-up facial unlock with Apple Home Key & lithium backup.",
+    "choice": "Aqara D100 fully automatic mortise lock",
+    "notes": "Preferred selection. Fingerprint, PIN, NFC and Apple Home Key work with helmet/mask use. Do not purchase until the installer confirms the existing door's mortise, backset, thickness and clearances.",
     "room": "Entrance",
     "priority": "P0",
     "status": "Selected",
-    "price": 703,
-    "priceDisplay": "$703.00",
-    "availableAt": "Shopee (SmartSG) / Courts",
-    "linkText": "Shopee",
-    "linkUrl": "https://shopee.sg/AQARA-D200i-Smart-Door-Lock-3D-Facial-Unlock-Digital-Lock-Lithium-Battery-Apple-HomeKit-Home-Key-i.489606704.21193462058?extraParams=%7B%22display_model_id%22%3A137712779110%2C%22model_selection_logic%22%3A3%7D",
+    "price": 869,
+    "priceDisplay": "$869.00",
+    "availableAt": "Smart Innovations",
+    "linkText": "Aqara D100",
+    "linkUrl": "https://smartinnovations.sg/product/aqara-smart-lock-d100/",
     "sellerDeductible": true,
-    "sellerSavings": 703,
+    "sellerSavings": 869,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
+        "model": "Aqara D100 fully automatic mortise lock",
+        "notes": "Preferred selection. Fingerprint, PIN, NFC and Apple Home Key work with helmet/mask use. Do not purchase until the installer confirms the existing door's mortise, backset, thickness and clearances.",
+        "stores": [
+          {
+            "store": "Smart Innovations",
+            "price": 869,
+            "priceDisplay": "$869.00",
+            "promo": "Standard installation included on compatible doors; compatibility confirmation is required before purchase.",
+            "linkText": "Aqara D100",
+            "linkUrl": "https://smartinnovations.sg/product/aqara-smart-lock-d100/"
+          }
+        ]
+      },
+      {
         "model": "Aqara D200i 3D Facial Recognition Smart Lock",
-        "notes": "Hands-free walk-up facial unlock with Apple Home Key & lithium backup.",
+        "notes": "Facial unlock can fail with a helmet, mask or covered facial features; PIN, NFC, Apple Home Key and key remain fallbacks.",
         "stores": [
           {
             "store": "Shopee (SmartSG) / Courts",
@@ -1364,6 +1378,20 @@
             "promo": "Installation Included",
             "linkText": "Courts SG",
             "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      },
+      {
+        "model": "Aqara U400 UWB Smart Deadbolt Lock",
+        "notes": "Matter-over-Thread and UWB approach unlock with compatible iPhone/Apple Watch. Suitable only for a verified tubular-deadbolt door preparation; it does not replace a separate handle latch.",
+        "stores": [
+          {
+            "store": "PassionHome / Local Aqara dealer",
+            "price": 649,
+            "priceDisplay": "$649.00",
+            "promo": "Professional door-compatibility check required before purchase.",
+            "linkText": "U400 compatibility",
+            "linkUrl": "https://passionhome.sg/uwb-smart-lock-aqara-u400-singapore/"
           }
         ]
       },
