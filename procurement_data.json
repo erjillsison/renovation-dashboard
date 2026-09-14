@@ -1359,7 +1359,7 @@
     "choice": "2x Aqara C3 Curtain Motor + 2m Track + Free Installation (fabric separate)",
     "notes": "Day/night pair: two C3 motors with 2m tracks and installation. Curtain fabric is separate; confirm any extra-length surcharge.",
     "room": "Master Bed",
-    "priority": "P0",
+    "priority": "P1",
     "status": "Selected",
     "price": 818,
     "priceDisplay": "$818.00",
