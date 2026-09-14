@@ -63,15 +63,23 @@
       },
       {
         "model": "MHI Rocket SR 30 (3D Airflow)",
-        "notes": "Mitsubishi Heavy Industries with motorized 3D horizontal/vertical airflow.",
+        "notes": "SCM30YS-W, 18k+9k+9k. Motorized 3D horizontal/vertical airflow and built-in app Wi-Fi; no native Home Assistant confirmation.",
         "stores": [
           {
-            "store": "Courts Megastore",
+            "store": "Courts Tampines (earlier visit)",
             "price": 3332,
             "priceDisplay": "$3,332.30",
             "promo": "VIP 6% promo",
             "linkText": "Courts SG",
             "linkUrl": "https://www.courts.com.sg"
+          },
+          {
+            "store": "Courts Ang Mo Kio",
+            "price": 4435,
+            "priceDisplay": "$4,435.00",
+            "promo": "Visit price: SCM30YS-W + SRK10YYS2-W8 x2 + SRK18YYS-W8; confirm installation scope.",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg/mitsubishi-heavy-industries?p=2"
           }
         ]
       },
@@ -80,7 +88,7 @@
         "notes": "Budget alternative with 6-year full equipment warranty.",
         "stores": [
           {
-            "store": "Courts Megastore",
+            "store": "Courts Tampines (earlier visit)",
             "price": 3068,
             "priceDisplay": "$3,068.16",
             "promo": "VIP 6% promo",
@@ -100,6 +108,14 @@
             "promo": "System 3: CTKM25ZVMG x2 + CTKM50ZVMG; 5-Tick; installation package terms to confirm.",
             "linkText": "Courts SG",
             "linkUrl": "https://www.courts.com.sg/on/demandware.store/Sites-courts-sg-Site/en_SG/Search-ShowAjax?cgid=daikin-air-conditioners&srule=price-high-to-low&start=0&sz=20"
+          },
+          {
+            "store": "Courts Ang Mo Kio",
+            "price": 4485,
+            "priceDisplay": "$4,485.00",
+            "promo": "Visit price: MKM75ZVMG + CTKM25ZVMG x2 + CTKM50ZVMG. BRP072C42 Wi-Fi hardware is optional per indoor unit.",
+            "linkText": "Daikin SG",
+            "linkUrl": "https://www.daikin.com.sg/air-conditioners/"
           },
           {
             "store": "Aircold E-Mart Shopee",
@@ -1226,6 +1242,48 @@
         ]
       },
       {
+        "model": "Hitachi BD-100YFVEM + TD-100XFVEM (10kg + 10kg)",
+        "notes": "Courts Ang Mo Kio visit pair. Heat-pump dryer with direct drain; confirm the separate official stacking kit, delivery and installation in the final quotation.",
+        "stores": [
+          {
+            "store": "Courts Ang Mo Kio",
+            "price": 2228,
+            "priceDisplay": "$2,228.00",
+            "promo": "Before further store/card discount; Climate Vouchers not used.",
+            "linkText": "Hitachi dryer",
+            "linkUrl": "https://www.hitachi-homeappliances.com/sg/products/washing-machine/tumble-dryer/td-100xfvem.html"
+          }
+        ]
+      },
+      {
+        "model": "Samsung WW11CB944DGHSP + DV10BB9440GHSP (11kg + 10kg)",
+        "notes": "Courts Ang Mo Kio visit pair. Existing preferred Samsung ecosystem option; confirm matching stacking kit, delivery and final discount.",
+        "stores": [
+          {
+            "store": "Courts Ang Mo Kio",
+            "price": 2968,
+            "priceDisplay": "$2,968.00",
+            "promo": "Before further store/card discount; Climate Vouchers not used.",
+            "linkText": "Samsung SG",
+            "linkUrl": "https://www.samsung.com/sg/bundles/washer-and-dryer-set/bespoke-11kg-front-load-washing-machine-and-10kg-heatpump-dryer-f-ww11c-dv10gh/"
+          }
+        ]
+      },
+      {
+        "model": "LG FX1410S3GA + TD-H10VBD (10kg + 10kg)",
+        "notes": "Courts Ang Mo Kio visit pair. Wi-Fi and auto-cleaning condenser; its 660mm-deep dryer requires a deeper-than-650mm niche after service clearance.",
+        "stores": [
+          {
+            "store": "Courts Ang Mo Kio",
+            "price": 3448,
+            "priceDisplay": "$3,448.00",
+            "promo": "Before further store/card discount; Climate Vouchers not used.",
+            "linkText": "LG dryer",
+            "linkUrl": "https://www.lg.com/sg/washing-machines/dryers/td-h10vbd/"
+          }
+        ]
+      },
+      {
         "model": "LG WashTower (Single Unit Inverter Heat Pump)",
         "notes": "Unified center control panel for both drum and dryer at ergonomic eye level.",
         "stores": [
@@ -1516,146 +1574,76 @@
     ]
   },
   {
-    "id": "mattress",
-    "name": "Mattress",
-    "choice": "Simmons Beautyrest Platinum Prima Grand (Super Pillow Top)",
-    "notes": "Queen hybrid pocket-spring mattress. Master bedroom flagship comfort.",
+    "id": "mattress-storage-bed-headboard",
+    "name": "Mattress + Storage Bed & Headboard",
+    "choice": "King Koil Cool Extreme Polaris Queen package",
+    "notes": "Selected. Medium-soft, non-flip plush pillow-top with 5-zone pocket springs, natural latex and cooling fabric; storage bed and headboard are included.",
     "room": "Master Bed",
     "priority": "P0",
     "status": "Selected",
-    "price": 4900,
-    "priceDisplay": "$4,900.00",
-    "availableAt": "Courts Megastore",
-    "linkText": "Courts SG",
-    "linkUrl": "https://www.courts.com.sg",
+    "price": 4055,
+    "priceDisplay": "$4,055.00",
+    "availableAt": "Courts Ang Mo Kio",
+    "linkText": "Polaris",
+    "linkUrl": "https://www.courts.com.sg/kingkoil-cool-extreme-polaris-queen-size-mattress-cool-extreme-polaris-IP186422.html",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Simmons Beautyrest Platinum Prima Grand (Super Pillow Top)",
-        "notes": "Queen hybrid pocket-spring mattress. Master bedroom flagship comfort.",
+        "model": "King Koil Cool Extreme Polaris Queen package",
+        "notes": "Selected. Medium-soft, non-flip plush pillow-top with 5-zone pocket springs, natural latex and cooling fabric; storage bed and headboard are included.",
         "stores": [
           {
-            "store": "Courts Megastore",
-            "price": 4900,
-            "priceDisplay": "$4,900.00",
-            "promo": "Megastore Promo (List $5,903)",
+            "store": "Courts Ang Mo Kio",
+            "price": 4055,
+            "priceDisplay": "$4,055.00",
+            "promo": "Queen package includes storage bed and headboard; rotate head-to-foot every 3\u20136 months.",
+            "linkText": "Polaris",
+            "linkUrl": "https://www.courts.com.sg/kingkoil-cool-extreme-polaris-queen-size-mattress-cool-extreme-polaris-IP186422.html"
+          }
+        ]
+      },
+      {
+        "model": "King Koil Cool Extreme Aurora Queen package",
+        "notes": "Courts Ang Mo Kio alternative. Storage bed and headboard included; confirm firmness and construction from the sales order before purchase.",
+        "stores": [
+          {
+            "store": "Courts Ang Mo Kio",
+            "price": 3585,
+            "priceDisplay": "$3,585.00",
+            "promo": "Queen package includes storage bed and headboard.",
             "linkText": "Courts SG",
             "linkUrl": "https://www.courts.com.sg"
-          },
+          }
+        ]
+      },
+      {
+        "model": "King Koil Green Nature Marshland Queen package",
+        "notes": "Courts Ang Mo Kio value alternative. Storage bed and headboard included; confirm firmness and construction from the sales order before purchase.",
+        "stores": [
           {
-            "store": "Simmons Gallery / Tangs",
-            "price": 5200,
-            "priceDisplay": "$5,200.00",
-            "promo": "Gallery Promotion",
+            "store": "Courts Ang Mo Kio",
+            "price": 3129,
+            "priceDisplay": "$3,129.00",
+            "promo": "Queen package includes storage bed and headboard.",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      },
+      {
+        "model": "Simmons Prima Grand + Courts storage frame",
+        "notes": "Earlier Courts Tampines reference: luxury super pillow-top plus separate storage frame. Replaced by the selected Polaris package.",
+        "stores": [
+          {
+            "store": "Courts Tampines (earlier visit)",
+            "price": 5490,
+            "priceDisplay": "$5,490.00",
+            "promo": "$4,900 mattress plus $590 frame.",
             "linkText": "Simmons SG",
             "linkUrl": "https://simmons.com.sg"
-          }
-        ]
-      },
-      {
-        "model": "Simmons BackCare Advanced S4500 (Canada / Display Promo)",
-        "notes": "Extra firm lumbar support series.",
-        "stores": [
-          {
-            "store": "Courts Megastore",
-            "price": 3600,
-            "priceDisplay": "$3,600.00",
-            "promo": "Floor Display Promo",
-            "linkText": "Courts SG",
-            "linkUrl": "https://www.courts.com.sg"
-          }
-        ]
-      },
-      {
-        "model": "Four Star Detense ArcticSilk Queen",
-        "notes": "Cooling fabric pocketed coil mattress with anti-static protection.",
-        "stores": [
-          {
-            "store": "Four Star Showroom",
-            "price": 1699,
-            "priceDisplay": "$1,699.00",
-            "promo": "Direct Factory Price",
-            "linkText": "Four Star",
-            "linkUrl": "https://www.fourstar.com.sg"
-          }
-        ]
-      },
-      {
-        "model": "Tilam King 100% Natural Latex Queen",
-        "notes": "High-durability open-cell latex, mold and dust-mite resistant for SG climate.",
-        "stores": [
-          {
-            "store": "Tilam King Showroom",
-            "price": 1599,
-            "priceDisplay": "$1,599.00",
-            "promo": "Direct Maker Price",
-            "linkText": "Tilam King",
-            "linkUrl": "https://tilamking.sg"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "bed-frame",
-    "name": "Bed Frame",
-    "choice": "Courts Hydraulic Storage Bed Frame (Add-on Bundle Promo)",
-    "notes": "Heavy-duty gas-lift storage bed frame paired with Simmons mattress purchase.",
-    "room": "Master Bed",
-    "priority": "P0",
-    "status": "Selected",
-    "price": 590,
-    "priceDisplay": "$590.00",
-    "availableAt": "Courts Megastore / Simmons",
-    "linkText": "Courts SG",
-    "linkUrl": "https://www.courts.com.sg",
-    "sellerDeductible": false,
-    "sellerSavings": 0,
-    "selectedOptionIndex": 0,
-    "selectedStoreIndex": 0,
-    "options": [
-      {
-        "model": "Courts Hydraulic Storage Bed Frame (Add-on Bundle Promo)",
-        "notes": "Heavy-duty gas-lift storage bed frame paired with Simmons mattress purchase.",
-        "stores": [
-          {
-            "store": "Courts Megastore / Simmons",
-            "price": 590,
-            "priceDisplay": "$590.00",
-            "promo": "Bundle Add-on Promo",
-            "linkText": "Courts SG",
-            "linkUrl": "https://www.courts.com.sg"
-          }
-        ]
-      },
-      {
-        "model": "Castlery Dawson Gas-Lift Storage Bed",
-        "notes": "Contemporary upholstered frame with front-lift gas struts.",
-        "stores": [
-          {
-            "store": "Castlery SG",
-            "price": 1550,
-            "priceDisplay": "$1,550.00",
-            "promo": "Standard Retail",
-            "linkText": "Castlery SG",
-            "linkUrl": "https://www.castlery.com/sg"
-          }
-        ]
-      },
-      {
-        "model": "Blafink Custom Struts Hydraulic Storage Bed",
-        "notes": "Bespoke German Bansbach gas struts calibrated to heavy pocket spring mattress weight.",
-        "stores": [
-          {
-            "store": "Blafink Showroom",
-            "price": 1950,
-            "priceDisplay": "$1,950.00",
-            "promo": "Custom Handcrafted",
-            "linkText": "Blafink SG",
-            "linkUrl": "https://www.blafink.com"
           }
         ]
       }
