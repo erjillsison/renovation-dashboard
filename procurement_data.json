@@ -1370,32 +1370,40 @@
   {
     "id": "smart-curtains-master",
     "name": "Smart Curtains (Master)",
-    "choice": "Aqara C3 Motorised Tracks + Custom Day/Night Curtains",
-    "notes": "High-torque 2Nm ultra-quiet motor with custom dual curtain tracks.",
+    "choice": "2x Aqara C3 Curtain Motor + 2m Track + Free Installation (fabric separate)",
+    "notes": "Day/night pair: two C3 motors with 2m tracks and installation. Curtain fabric is separate; confirm any extra-length surcharge.",
     "room": "Master Bed",
     "priority": "P0",
     "status": "Selected",
-    "price": 1100,
-    "priceDisplay": "$1,100.00",
-    "availableAt": "Curtain Specialist / Contractor",
-    "linkText": "Shopee",
-    "linkUrl": "https://shopee.sg/Aqara-C3-curtain-motor-International-version-Strong-traction-2Nm-Manual-stop-Customize-pulling-speed-Smooth-operation-Smart-curtain-i.1006110165.40872608563",
+    "price": 818,
+    "priceDisplay": "$818.00",
+    "availableAt": "Smart Innovations",
+    "linkText": "Smart Innovations",
+    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara C3 Motorised Tracks + Custom Day/Night Curtains",
-        "notes": "High-torque 2Nm ultra-quiet motor with custom dual curtain tracks.",
+        "model": "2x Aqara C3 Curtain Motor + 2m Track + Free Installation (fabric separate)",
+        "notes": "Day/night pair: two C3 motors with 2m tracks and installation. Curtain fabric is separate; confirm any extra-length surcharge.",
         "stores": [
           {
-            "store": "Curtain Specialist / Contractor",
-            "price": 1100,
-            "priceDisplay": "$1,100.00",
-            "promo": "Tracks + Custom Drapery",
+            "store": "Smart Innovations",
+            "price": 818,
+            "priceDisplay": "$818.00",
+            "promo": "2 \u00d7 $409: motor + 2m track + free installation; fabric separate",
+            "linkText": "Smart Innovations",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
+          },
+          {
+            "store": "Shopee SG",
+            "price": 903,
+            "priceDisplay": "$902.98",
+            "promo": "2 \u00d7 $451.49 after voucher: C3 + 2\u20133m track + installation; fabric separate",
             "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg/Aqara-C3-curtain-motor-International-version-Strong-traction-2Nm-Manual-stop-Customize-pulling-speed-Smooth-operation-Smart-curtain-i.1006110165.40872608563"
+            "linkUrl": "https://shopee.sg/AQARA-Smart-Electric-Curtain-Motor-and-Track-C3-ZigBee-Fully-Automatic-Track-Voice-Control-Timing-i.489606704.29705595493?extraParams=%7B%22display_model_id%22%3A246435861695%2C%22model_selection_logic%22%3A3%7D"
           }
         ]
       },
@@ -1564,32 +1572,40 @@
   {
     "id": "smart-curtains-living",
     "name": "Smart Curtains (Living)",
-    "choice": "Aqara C3 Motorised Tracks + Custom Day/Night Curtains",
-    "notes": "High-torque 2Nm ultra-quiet motor with custom dual curtain tracks for living room pelmet.",
+    "choice": "2x Aqara C3 Curtain Motor + 2m Track + Free Installation (fabric separate)",
+    "notes": "Day/night pair for the living-room pelmet: two C3 motors with 2m tracks and installation. Curtain fabric is separate; confirm any extra-length surcharge.",
     "room": "Living Room",
     "priority": "P0",
     "status": "Selected",
-    "price": 1100,
-    "priceDisplay": "$1,100.00",
-    "availableAt": "Curtain Specialist / Contractor",
-    "linkText": "Shopee",
-    "linkUrl": "https://shopee.sg/Aqara-C3-curtain-motor-International-version-Strong-traction-2Nm-Manual-stop-Customize-pulling-speed-Smooth-operation-Smart-curtain-i.1006110165.40872608563",
+    "price": 818,
+    "priceDisplay": "$818.00",
+    "availableAt": "Smart Innovations",
+    "linkText": "Smart Innovations",
+    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara C3 Motorised Tracks + Custom Day/Night Curtains",
-        "notes": "High-torque 2Nm ultra-quiet motor with custom dual curtain tracks for living room pelmet.",
+        "model": "2x Aqara C3 Curtain Motor + 2m Track + Free Installation (fabric separate)",
+        "notes": "Day/night pair for the living-room pelmet: two C3 motors with 2m tracks and installation. Curtain fabric is separate; confirm any extra-length surcharge.",
         "stores": [
           {
-            "store": "Curtain Specialist / Contractor",
-            "price": 1100,
-            "priceDisplay": "$1,100.00",
-            "promo": "Tracks + Custom Drapery",
+            "store": "Smart Innovations",
+            "price": 818,
+            "priceDisplay": "$818.00",
+            "promo": "2 \u00d7 $409: motor + 2m track + free installation; fabric separate",
+            "linkText": "Smart Innovations",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
+          },
+          {
+            "store": "Shopee SG",
+            "price": 903,
+            "priceDisplay": "$902.98",
+            "promo": "2 \u00d7 $451.49 after voucher: C3 + 2\u20133m track + installation; fabric separate",
             "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg/Aqara-C3-curtain-motor-International-version-Strong-traction-2Nm-Manual-stop-Customize-pulling-speed-Smooth-operation-Smart-curtain-i.1006110165.40872608563"
+            "linkUrl": "https://shopee.sg/AQARA-Smart-Electric-Curtain-Motor-and-Track-C3-ZigBee-Fully-Automatic-Track-Voice-Control-Timing-i.489606704.29705595493?extraParams=%7B%22display_model_id%22%3A246435861695%2C%22model_selection_logic%22%3A3%7D"
           }
         ]
       },
