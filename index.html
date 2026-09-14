@@ -3620,7 +3620,7 @@ automation:
                   id="btnLayerSwitches"
                   onclick="toggleMapLayer('switches', this)"
                 >
-                  <span>⚡</span> Wall Switches (10)
+                  <span>⚡</span> Wall Switches (9)
                 </button>
                 <button
                   class="map-tool-btn active"
@@ -7602,7 +7602,7 @@ automation:
                   <path class="switch-connection" d="M 724 855 C 742 832, 772 811, 805 800" marker-end="url(#switchPathArrow)" />
                   <text class="switch-connection-label" x="745" y="841">PENDANT</text>
 
-                  <path class="switch-connection" d="M 577 735 C 595 720, 617 704, 645 692" marker-end="url(#switchPathArrow)" />
+                  <path class="switch-connection" d="M 574 900 C 590 832, 614 750, 645 692" marker-end="url(#switchPathArrow)" />
                   <circle class="switch-connection-target" cx="645" cy="692" r="6" />
                   <text class="switch-connection-label" x="593" y="705">HALL DL</text>
 
@@ -7801,67 +7801,20 @@ automation:
                     <circle cx="19" cy="16" r="1.5" fill="#f59e0b" />
                   </g>
 
-                  <!-- Hallway: H1 1-Gang, Corridor Downlights -->
-                  <g
-                    class="switch-pin"
-                    transform="translate(560, 735)"
-                    onclick="selectMapRoom('Living Room')"
-                  >
-                    <title>
-                      Hallway: Aqara H1 1-Gang Smart Switch (Corridor
-                      Downlights)
-                    </title>
-                    <rect
-                      x="0"
-                      y="-14"
-                      width="34"
-                      height="12"
-                      rx="3"
-                      fill="#0f172a"
-                      fill-opacity="0.95"
-                      stroke="#38bdf8"
-                      stroke-width="0.8"
-                    />
-                    <text
-                      x="17"
-                      y="-5"
-                      font-family="'Space Grotesk', sans-serif"
-                      font-size="8"
-                      font-weight="800"
-                      fill="#38bdf8"
-                      text-anchor="middle"
-                      letter-spacing="0.5"
-                    >
-                      1-GANG
-                    </text>
-                    <rect
-                      x="0"
-                      y="0"
-                      width="34"
-                      height="20"
-                      rx="3.5"
-                      fill="#1e293b"
-                      stroke="#ffffff"
-                      stroke-width="1.4"
-                      filter="url(#badgeShadow)"
-                    />
-                    <circle cx="17" cy="15.5" r="1.5" fill="#38bdf8" />
-                  </g>
-
-                  <!-- Kitchen: H1 2-Gang, Kitchen Partition Frame -->
+                  <!-- Kitchen / Hall: H1 3-Gang, Kitchen Partition Frame -->
                   <g
                     class="switch-pin"
                     transform="translate(555, 900)"
                     onclick="selectMapRoom('Kitchen')"
                   >
                     <title>
-                      Kitchen: Aqara H1 2-Gang Smart Switch (Ceiling Downlights
-                      + Under-Cabinet LED)
+                      Kitchen / Hall: Aqara H1 3-Gang Smart Switch (Kitchen
+                      downlights, under-cabinet LED + Corridor downlights)
                     </title>
                     <rect
                       x="0"
                       y="-14"
-                      width="38"
+                      width="48"
                       height="12"
                       rx="3"
                       fill="#0f172a"
@@ -7870,7 +7823,7 @@ automation:
                       stroke-width="0.8"
                     />
                     <text
-                      x="19"
+                      x="24"
                       y="-5"
                       font-family="'Space Grotesk', sans-serif"
                       font-size="8"
@@ -7879,12 +7832,12 @@ automation:
                       text-anchor="middle"
                       letter-spacing="0.5"
                     >
-                      2-GANG
+                      3-GANG
                     </text>
                     <rect
                       x="0"
                       y="0"
-                      width="38"
+                      width="48"
                       height="20"
                       rx="3.5"
                       fill="#1e293b"
@@ -7893,15 +7846,17 @@ automation:
                       filter="url(#badgeShadow)"
                     />
                     <line
-                      x1="19"
+                      x1="16"
                       y1="2"
-                      x2="19"
+                      x2="16"
                       y2="18"
                       stroke="#475569"
                       stroke-width="1"
                     />
-                    <circle cx="9.5" cy="15.5" r="1.5" fill="#38bdf8" />
-                    <circle cx="28.5" cy="15.5" r="1.5" fill="#38bdf8" />
+                    <line x1="32" y1="2" x2="32" y2="18" stroke="#475569" stroke-width="1" />
+                    <circle cx="8" cy="15.5" r="1.5" fill="#38bdf8" />
+                    <circle cx="24" cy="15.5" r="1.5" fill="#38bdf8" />
+                    <circle cx="40" cy="15.5" r="1.5" fill="#38bdf8" />
                   </g>
 
                   <!-- Balcony: H1 2-Gang, Inside Sliding Door Frame -->
@@ -8873,15 +8828,15 @@ automation:
             ]
       },
       {
-            "id": "smart-switch-kitchen",
-            "name": "Smart Switch (Kitchen)",
-            "choice": "Aqara H1 2-Gang (Main ceiling downlights + Under-cabinet LED)",
+            "id": "smart-switch-kitchen-hall",
+            "name": "Smart Switch (Kitchen + Hall)",
+            "choice": "Aqara H1 3-Gang (Kitchen downlights + Under-cabinet LED + Corridor downlights)",
             "notes": "Selected choice for Kitchen.",
             "room": "Kitchen",
             "priority": "P0",
             "status": "Selected",
-            "price": 60,
-            "priceDisplay": "$60",
+            "price": 75,
+            "priceDisplay": "$75",
             "availableAt": "Smart Innovations",
             "linkText": "Price brochure",
             "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
@@ -8891,13 +8846,13 @@ automation:
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Aqara H1 2-Gang (Main ceiling downlights + Under-cabinet LED)",
+                        "model": "Aqara H1 3-Gang (Kitchen downlights + Under-cabinet LED + Corridor downlights)",
                         "notes": "Selected choice for Kitchen.",
                         "stores": [
                               {
                                     "store": "Smart Innovations",
-                                    "price": 60,
-                                    "priceDisplay": "$60",
+                                    "price": 75,
+                                    "priceDisplay": "$75",
                                     "promo": "",
                                     "linkText": "Price brochure",
                                     "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
@@ -8932,40 +8887,6 @@ automation:
                                     "store": "Smart Innovations",
                                     "price": 60,
                                     "priceDisplay": "$60",
-                                    "promo": "",
-                                    "linkText": "Price brochure",
-                                    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
-                              }
-                        ]
-                  }
-            ]
-      },
-      {
-            "id": "smart-switch-hallway",
-            "name": "Smart Switch (Hallway)",
-            "choice": "Aqara H1 1-Gang (Corridor downlights)",
-            "notes": "Selected choice for Whole House.",
-            "room": "Whole House",
-            "priority": "P0",
-            "status": "Selected",
-            "price": 55,
-            "priceDisplay": "$55",
-            "availableAt": "Smart Innovations",
-            "linkText": "Price brochure",
-            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
-            "sellerDeductible": false,
-            "sellerSavings": 0,
-            "selectedOptionIndex": 0,
-            "selectedStoreIndex": 0,
-            "options": [
-                  {
-                        "model": "Aqara H1 1-Gang (Corridor downlights)",
-                        "notes": "Selected choice for Whole House.",
-                        "stores": [
-                              {
-                                    "store": "Smart Innovations",
-                                    "price": 55,
-                                    "priceDisplay": "$55",
                                     "promo": "",
                                     "linkText": "Price brochure",
                                     "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
@@ -13182,7 +13103,7 @@ automation:
           sensors:
             "• <strong>Time-Conditioned Smart Switch</strong><br>• Optional Under-Cabinet PIR Sensor<br>• Context-aware routine automation",
           lighting:
-            "• <strong>Aqara H1 2-Gang Switch</strong> (Entrance Box)<br>• 3x High-CRI Recessed Downlights<br>• 1x 3m 24V COB Warm White Strip (Under-Cabinet)",
+            "• <strong>Aqara H1 3-Gang Switch</strong> (Shared Kitchen / Hall entrance box)<br>• 3x High-CRI Recessed Downlights + 2x Corridor Downlights<br>• 1x 3m 24V COB Warm White Strip (Under-Cabinet)",
           automations:
             "• <strong>7:00 AM Coffee Routine:</strong> Switch press between 06:00–08:30 AM turns on ONLY under-cabinet warm strip at 30%. Glare-free morning coffee before sunrise.<br>• <strong>Meal Prep:</strong> Full 4000K crisp downlights + counter task light.<br>• <strong>Double-Click Override:</strong> Instant 100% full brightness anytime.",
           filterRoom: "Kitchen",
