@@ -1,169 +1,5 @@
 [
   {
-    "id": "aircon-system-3",
-    "name": "Aircon (System 3)",
-    "choice": "Mitsubishi Electric Starmex 28 (5-Tick Condenser)",
-    "notes": "18k+9k+9k. Quote exact indoor models for Wi-Fi: FP*VGK-SG2 is built in; FP*VG-SG2 needs MAC-589IF-E. Home Assistant needs a separate local-controller compatibility check.",
-    "room": "Whole House",
-    "priority": "P0",
-    "status": "Selected",
-    "price": 3839,
-    "priceDisplay": "$3,839.00",
-    "availableAt": "Courts Megastore",
-    "linkText": "Courts SG",
-    "linkUrl": "https://www.courts.com.sg",
-    "sellerDeductible": false,
-    "sellerSavings": 0,
-    "selectedOptionIndex": 0,
-    "selectedStoreIndex": 0,
-    "options": [
-      {
-        "model": "Mitsubishi Electric Starmex 28 (5-Tick Condenser)",
-        "notes": "18k+9k+9k. Quote exact indoor models for Wi-Fi: FP*VGK-SG2 is built in; FP*VG-SG2 needs MAC-589IF-E. Home Assistant needs a separate local-controller compatibility check.",
-        "stores": [
-          {
-            "store": "Courts Megastore",
-            "price": 3839,
-            "priceDisplay": "$3,839.00",
-            "promo": "VIP 6% promo",
-            "linkText": "Courts SG",
-            "linkUrl": "https://www.courts.com.sg"
-          },
-          {
-            "store": "Shopee SG (Monster923 / Aircon Express)",
-            "price": 3280,
-            "priceDisplay": "$3,280.00",
-            "promo": "Free Upgraded Materials",
-            "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg/MITSUBISHI-STARMEX-SYSTEM-3-INVERTER-5-Tick-R32-FREE-UPGRADE-MATERIAL-i.239554013.17720065093"
-          },
-          {
-            "store": "Gain City",
-            "price": 3999,
-            "priceDisplay": "$3,999.00",
-            "promo": "3-Yr Workmanship Warranty",
-            "linkText": "Gain City",
-            "linkUrl": "https://www.gaincity.com"
-          }
-        ]
-      },
-      {
-        "model": "ME Starmex 33 Condenser (Larger Outdoor Unit)",
-        "notes": "Higher BTU outdoor unit for simultaneous heavy cooling in all 3 rooms.",
-        "stores": [
-          {
-            "store": "Courts Megastore",
-            "price": 4121,
-            "priceDisplay": "$4,121.00",
-            "promo": "VIP 6% promo",
-            "linkText": "Courts SG",
-            "linkUrl": "https://www.courts.com.sg"
-          }
-        ]
-      },
-      {
-        "model": "MHI Rocket SR 30 (3D Airflow)",
-        "notes": "SCM30YS-W, 18k+9k+9k. Motorized 3D horizontal/vertical airflow and built-in app Wi-Fi; no native Home Assistant confirmation.",
-        "stores": [
-          {
-            "store": "Courts Tampines (earlier visit)",
-            "price": 3332,
-            "priceDisplay": "$3,332.30",
-            "promo": "VIP 6% promo",
-            "linkText": "Courts SG",
-            "linkUrl": "https://www.courts.com.sg"
-          },
-          {
-            "store": "Courts Ang Mo Kio",
-            "price": 4435,
-            "priceDisplay": "$4,435.00",
-            "promo": "Visit price: SCM30YS-W + SRK10YYS2-W8 x2 + SRK18YYS-W8; confirm installation scope.",
-            "linkText": "Courts SG",
-            "linkUrl": "https://www.courts.com.sg/mitsubishi-heavy-industries?p=2"
-          }
-        ]
-      },
-      {
-        "model": "Midea MCE Series (System 3)",
-        "notes": "Budget alternative with 6-year full equipment warranty. Wi-Fi is unconfirmed: require exact indoor model numbers and a written Midea SmartHome/Wi-Fi statement.",
-        "stores": [
-          {
-            "store": "Courts Tampines (earlier visit)",
-            "price": 3068,
-            "priceDisplay": "$3,068.16",
-            "promo": "VIP 6% promo",
-            "linkText": "Courts SG",
-            "linkUrl": "https://www.courts.com.sg"
-          }
-        ]
-      },
-      {
-        "model": "Daikin iSmile Eco+ MKM75ZVMG (5-Tick Condenser)",
-        "notes": "18k+9k+9k with CTKM25ZVMG x2 + CTKM50ZVMG. These quoted wall-mounted indoor units list built-in Wi-Fi for Daikin Mobile Controller; Home Assistant still needs a separate test.",
-        "stores": [
-          {
-            "store": "Courts Megastore",
-            "price": 4185,
-            "priceDisplay": "$4,185.00",
-            "promo": "System 3: CTKM25ZVMG x2 + CTKM50ZVMG; 5-Tick; installation package terms to confirm.",
-            "linkText": "Courts SG",
-            "linkUrl": "https://www.courts.com.sg/on/demandware.store/Sites-courts-sg-Site/en_SG/Search-ShowAjax?cgid=daikin-air-conditioners&srule=price-high-to-low&start=0&sz=20"
-          },
-          {
-            "store": "Courts Ang Mo Kio",
-            "price": 4485,
-            "priceDisplay": "$4,485.00",
-            "promo": "Visit price: MKM75ZVMG + CTKM25ZVMG x2 + CTKM50ZVMG. Wi-Fi is built into the quoted indoor units; validate Home Assistant separately.",
-            "linkText": "Daikin SG",
-            "linkUrl": "https://www.daikin.com.sg/air-conditioners/"
-          },
-          {
-            "store": "Aircold E-Mart Shopee",
-            "price": 3270,
-            "priceDisplay": "$3,269.90",
-            "promo": "After voucher; System 3: CTKM25ZVMG x2 + CTKM35ZVMG (12k living room, not the 18k design brief).",
-            "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg/Daikin-Inverter-Multi-Split-AirCon-MKM75ZVMG-CTKM25ZVMG-x-2-CTKM35ZVMG-i.820820633.42556977077"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "aircon-wi-fi-adapters-x3",
-    "name": "Aircon Wi-Fi Adapters (x3)",
-    "choice": "Mitsubishi Electric CN105 Wi-Fi Interface Modules (3x Indoor Units)",
-    "notes": "SWG 22 copper + 1/2\" Armaflex installation required.",
-    "room": "Whole House",
-    "priority": "P0",
-    "status": "Selected",
-    "price": 255,
-    "priceDisplay": "$255",
-    "availableAt": "Shopee / Smart Home Vendor",
-    "linkText": "Shopee",
-    "linkUrl": "https://shopee.sg",
-    "sellerDeductible": false,
-    "sellerSavings": 0,
-    "selectedOptionIndex": 0,
-    "selectedStoreIndex": 0,
-    "options": [
-      {
-        "model": "Mitsubishi Electric CN105 Wi-Fi Interface Modules (3x Indoor Units)",
-        "notes": "SWG 22 copper + 1/2\" Armaflex installation required.",
-        "stores": [
-          {
-            "store": "Shopee / Smart Home Vendor",
-            "price": 255,
-            "priceDisplay": "$255",
-            "promo": "",
-            "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "id": "smart-switch-entrance",
     "name": "Smart Switch (Entrance)",
     "choice": "Aqara H1 2-Gang (Main entry downlight + Shoe cabinet LED)",
@@ -2100,6 +1936,136 @@
             "promo": "",
             "linkText": "Shopee",
             "linkUrl": "https://shopee.sg/product/1245098924/55259558090"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aircon-system-3",
+    "name": "Aircon (System 3)",
+    "choice": "Daikin iSmile Eco+ MKM75ZVMG (5-Tick Condenser)",
+    "notes": "Daikin iSmile Eco+ MKM75ZVMG + CTKM25ZVMG x2 + CTKM50ZVMG, Courts Tampines. Provisional choice: before payment, confirm the physical indoor-unit model labels, built-in Wi-Fi for all three units, and pairing in Daikin Mobile Controller; no separate Wi-Fi module budgeted.",
+    "room": "Whole House",
+    "priority": "P0",
+    "status": "TBD",
+    "price": 4185,
+    "priceDisplay": "$4,185",
+    "availableAt": "Courts Tampines",
+    "linkText": "Daikin SG",
+    "linkUrl": "https://www.daikin.com.sg/air-conditioners/",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 4,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Mitsubishi Electric Starmex 28 (5-Tick Condenser)",
+        "notes": "18k+9k+9k. Quote exact indoor models for Wi-Fi: FP*VGK-SG2 is built in; FP*VG-SG2 needs MAC-589IF-E. Home Assistant needs a separate local-controller compatibility check.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 3839,
+            "priceDisplay": "$3,839.00",
+            "promo": "VIP 6% promo",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          },
+          {
+            "store": "Shopee SG (Monster923 / Aircon Express)",
+            "price": 3280,
+            "priceDisplay": "$3,280.00",
+            "promo": "Free Upgraded Materials",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/MITSUBISHI-STARMEX-SYSTEM-3-INVERTER-5-Tick-R32-FREE-UPGRADE-MATERIAL-i.239554013.17720065093"
+          },
+          {
+            "store": "Gain City",
+            "price": 3999,
+            "priceDisplay": "$3,999.00",
+            "promo": "3-Yr Workmanship Warranty",
+            "linkText": "Gain City",
+            "linkUrl": "https://www.gaincity.com"
+          }
+        ]
+      },
+      {
+        "model": "ME Starmex 33 Condenser (Larger Outdoor Unit)",
+        "notes": "Higher BTU outdoor unit for simultaneous heavy cooling in all 3 rooms.",
+        "stores": [
+          {
+            "store": "Courts Megastore",
+            "price": 4121,
+            "priceDisplay": "$4,121.00",
+            "promo": "VIP 6% promo",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      },
+      {
+        "model": "MHI Rocket SR 30 (3D Airflow)",
+        "notes": "SCM30YS-W, 18k+9k+9k. Motorized 3D horizontal/vertical airflow and built-in app Wi-Fi; no native Home Assistant confirmation.",
+        "stores": [
+          {
+            "store": "Courts Tampines (earlier visit)",
+            "price": 3332,
+            "priceDisplay": "$3,332.30",
+            "promo": "VIP 6% promo",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          },
+          {
+            "store": "Courts Ang Mo Kio",
+            "price": 4435,
+            "priceDisplay": "$4,435.00",
+            "promo": "Visit price: SCM30YS-W + SRK10YYS2-W8 x2 + SRK18YYS-W8; confirm installation scope.",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg/mitsubishi-heavy-industries?p=2"
+          }
+        ]
+      },
+      {
+        "model": "Midea MCE Series (System 3)",
+        "notes": "Budget alternative with 6-year full equipment warranty. Wi-Fi is unconfirmed: require exact indoor model numbers and a written Midea SmartHome/Wi-Fi statement.",
+        "stores": [
+          {
+            "store": "Courts Tampines (earlier visit)",
+            "price": 3068,
+            "priceDisplay": "$3,068.16",
+            "promo": "VIP 6% promo",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      },
+      {
+        "model": "Daikin iSmile Eco+ MKM75ZVMG (5-Tick Condenser)",
+        "notes": "18k+9k+9k with CTKM25ZVMG x2 + CTKM50ZVMG. These quoted wall-mounted indoor units list built-in Wi-Fi for Daikin Mobile Controller; Home Assistant still needs a separate test.",
+        "stores": [
+          {
+            "store": "Courts Tampines",
+            "price": 4185,
+            "priceDisplay": "$4,185.00",
+            "promo": "Provisional Courts Tampines price: CTKM25ZVMG x2 + CTKM50ZVMG; confirm physical labels, built-in Wi-Fi and Daikin Mobile Controller pairing before payment.",
+            "linkText": "Daikin SG",
+            "linkUrl": "https://www.daikin.com.sg/air-conditioners/"
+          },
+          {
+            "store": "Courts Ang Mo Kio",
+            "price": 4485,
+            "priceDisplay": "$4,485.00",
+            "promo": "Visit price: MKM75ZVMG + CTKM25ZVMG x2 + CTKM50ZVMG. Wi-Fi is built into the quoted indoor units; validate Home Assistant separately.",
+            "linkText": "Daikin SG",
+            "linkUrl": "https://www.daikin.com.sg/air-conditioners/"
+          },
+          {
+            "store": "Aircold E-Mart Shopee",
+            "price": 3270,
+            "priceDisplay": "$3,269.90",
+            "promo": "After voucher; System 3: CTKM25ZVMG x2 + CTKM35ZVMG (12k living room, not the 18k design brief).",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/Daikin-Inverter-Multi-Split-AirCon-MKM75ZVMG-CTKM25ZVMG-x-2-CTKM35ZVMG-i.820820633.42556977077"
           }
         ]
       }
