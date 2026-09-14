@@ -128,32 +128,32 @@
   {
     "id": "smart-switch-entrance",
     "name": "Smart Switch (Entrance)",
-    "choice": "Aqara H2 2-Gang (Main entry downlight + Shoe cabinet LED)",
+    "choice": "Aqara H1 2-Gang (Main entry downlight + Shoe cabinet LED)",
     "notes": "Selected choice for Entrance.",
     "room": "Entrance",
     "priority": "P0",
     "status": "Selected",
-    "price": 50,
-    "priceDisplay": "$50",
-    "availableAt": "Aqara Official / Souky",
-    "linkText": "Shopee (Souky)",
-    "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+    "price": 60,
+    "priceDisplay": "$60",
+    "availableAt": "Smart Innovations",
+    "linkText": "Price brochure",
+    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H2 2-Gang (Main entry downlight + Shoe cabinet LED)",
+        "model": "Aqara H1 2-Gang (Main entry downlight + Shoe cabinet LED)",
         "notes": "Selected choice for Entrance.",
         "stores": [
           {
-            "store": "Aqara Official / Souky",
-            "price": 50,
-            "priceDisplay": "$50",
+            "store": "Smart Innovations",
+            "price": 60,
+            "priceDisplay": "$60",
             "promo": "",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+            "linkText": "Price brochure",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
           }
         ]
       }
@@ -162,32 +162,32 @@
   {
     "id": "smart-switch-living-room",
     "name": "Smart Switch (Living Room)",
-    "choice": "Aqara H2 3-Gang (Main downlights, Accent, Ceiling fan)",
+    "choice": "Aqara Z1 Pro 4-Rocker (Downlights, Accent, Fan control + Movie scene)",
     "notes": "Selected choice for Living Room.",
     "room": "Living Room",
     "priority": "P0",
     "status": "Selected",
-    "price": 56,
-    "priceDisplay": "$56",
-    "availableAt": "Aqara Official / Souky",
-    "linkText": "Shopee (Souky)",
-    "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+    "price": 105,
+    "priceDisplay": "$105",
+    "availableAt": "Smart Innovations",
+    "linkText": "Z1 Pro",
+    "linkUrl": "https://smartinnovations.sg/product/aqara-wall-switch-z1-pro/",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H2 3-Gang (Main downlights, Accent, Ceiling fan)",
+        "model": "Aqara Z1 Pro 4-Rocker (Downlights, Accent, Fan control + Movie scene)",
         "notes": "Selected choice for Living Room.",
         "stores": [
           {
-            "store": "Aqara Official / Souky",
-            "price": 56,
-            "priceDisplay": "$56",
+            "store": "Smart Innovations",
+            "price": 105,
+            "priceDisplay": "$105",
             "promo": "",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+            "linkText": "Z1 Pro",
+            "linkUrl": "https://smartinnovations.sg/product/aqara-wall-switch-z1-pro/"
           }
         ]
       }
@@ -230,32 +230,32 @@
   {
     "id": "smart-switch-kitchen",
     "name": "Smart Switch (Kitchen)",
-    "choice": "Aqara H2 2-Gang (Main ceiling downlights + Under-cabinet LED)",
+    "choice": "Aqara H1 2-Gang (Main ceiling downlights + Under-cabinet LED)",
     "notes": "Selected choice for Kitchen.",
     "room": "Kitchen",
     "priority": "P0",
     "status": "Selected",
-    "price": 50,
-    "priceDisplay": "$50",
-    "availableAt": "Aqara Official / Souky",
-    "linkText": "Shopee (Souky)",
-    "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+    "price": 60,
+    "priceDisplay": "$60",
+    "availableAt": "Smart Innovations",
+    "linkText": "Price brochure",
+    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H2 2-Gang (Main ceiling downlights + Under-cabinet LED)",
+        "model": "Aqara H1 2-Gang (Main ceiling downlights + Under-cabinet LED)",
         "notes": "Selected choice for Kitchen.",
         "stores": [
           {
-            "store": "Aqara Official / Souky",
-            "price": 50,
-            "priceDisplay": "$50",
+            "store": "Smart Innovations",
+            "price": 60,
+            "priceDisplay": "$60",
             "promo": "",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+            "linkText": "Price brochure",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
           }
         ]
       }
@@ -264,32 +264,32 @@
   {
     "id": "smart-switch-balcony",
     "name": "Smart Switch (Balcony)",
-    "choice": "Aqara H2 2-Gang (Balcony light + Outdoor fan isolator)",
+    "choice": "Aqara H1 2-Gang (Balcony light + decoupled outdoor fan control)",
     "notes": "Selected choice for Balcony.",
     "room": "Balcony",
     "priority": "P0",
     "status": "Selected",
-    "price": 50,
-    "priceDisplay": "$50",
-    "availableAt": "Aqara Official / Souky",
-    "linkText": "Shopee (Souky)",
-    "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+    "price": 60,
+    "priceDisplay": "$60",
+    "availableAt": "Smart Innovations",
+    "linkText": "Price brochure",
+    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H2 2-Gang (Balcony light + Outdoor fan isolator)",
+        "model": "Aqara H1 2-Gang (Balcony light + decoupled outdoor fan control)",
         "notes": "Selected choice for Balcony.",
         "stores": [
           {
-            "store": "Aqara Official / Souky",
-            "price": 50,
-            "priceDisplay": "$50",
+            "store": "Smart Innovations",
+            "price": 60,
+            "priceDisplay": "$60",
             "promo": "",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+            "linkText": "Price brochure",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
           }
         ]
       }
@@ -298,32 +298,32 @@
   {
     "id": "smart-switch-hallway",
     "name": "Smart Switch (Hallway)",
-    "choice": "Aqara H2 1-Gang (Corridor downlights)",
+    "choice": "Aqara H1 1-Gang (Corridor downlights)",
     "notes": "Selected choice for Whole House.",
     "room": "Whole House",
     "priority": "P0",
     "status": "Selected",
-    "price": 47,
-    "priceDisplay": "$47",
-    "availableAt": "Aqara Official / Souky",
-    "linkText": "Shopee (Souky)",
-    "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+    "price": 55,
+    "priceDisplay": "$55",
+    "availableAt": "Smart Innovations",
+    "linkText": "Price brochure",
+    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H2 1-Gang (Corridor downlights)",
+        "model": "Aqara H1 1-Gang (Corridor downlights)",
         "notes": "Selected choice for Whole House.",
         "stores": [
           {
-            "store": "Aqara Official / Souky",
-            "price": 47,
-            "priceDisplay": "$47",
+            "store": "Smart Innovations",
+            "price": 55,
+            "priceDisplay": "$55",
             "promo": "",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+            "linkText": "Price brochure",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
           }
         ]
       }
@@ -332,32 +332,32 @@
   {
     "id": "smart-switch-master-bed",
     "name": "Smart Switch (Master Bed)",
-    "choice": "Aqara H2 2-Gang (Main entry downlights + Bedside downlight)",
+    "choice": "Aqara Z1 Pro 3-Rocker (Entry, bedside + curtain / Goodnight scene)",
     "notes": "Selected choice for Master Bed.",
     "room": "Master Bed",
     "priority": "P0",
     "status": "Selected",
-    "price": 50,
-    "priceDisplay": "$50",
-    "availableAt": "Aqara Official / Souky",
-    "linkText": "Shopee (Souky)",
-    "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+    "price": 95,
+    "priceDisplay": "$95",
+    "availableAt": "Smart Innovations",
+    "linkText": "Z1 Pro",
+    "linkUrl": "https://smartinnovations.sg/product/aqara-wall-switch-z1-pro/",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H2 2-Gang (Main entry downlights + Bedside downlight)",
+        "model": "Aqara Z1 Pro 3-Rocker (Entry, bedside + curtain / Goodnight scene)",
         "notes": "Selected choice for Master Bed.",
         "stores": [
           {
-            "store": "Aqara Official / Souky",
-            "price": 50,
-            "priceDisplay": "$50",
+            "store": "Smart Innovations",
+            "price": 95,
+            "priceDisplay": "$95",
             "promo": "",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+            "linkText": "Z1 Pro",
+            "linkUrl": "https://smartinnovations.sg/product/aqara-wall-switch-z1-pro/"
           }
         ]
       }
@@ -366,32 +366,32 @@
   {
     "id": "smart-switch-bedroom-2",
     "name": "Smart Switch (Bedroom 2)",
-    "choice": "Aqara H2 2-Gang (Main room lights + Study desk zone)",
+    "choice": "Aqara H1 2-Gang (Main room lights + Study desk zone)",
     "notes": "Selected choice for Bedroom 2.",
     "room": "Bedroom 2 / Study",
     "priority": "P0",
     "status": "Selected",
-    "price": 50,
-    "priceDisplay": "$50",
-    "availableAt": "Aqara Official / Souky",
-    "linkText": "Shopee (Souky)",
-    "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+    "price": 60,
+    "priceDisplay": "$60",
+    "availableAt": "Smart Innovations",
+    "linkText": "Price brochure",
+    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H2 2-Gang (Main room lights + Study desk zone)",
+        "model": "Aqara H1 2-Gang (Main room lights + Study desk zone)",
         "notes": "Selected choice for Bedroom 2.",
         "stores": [
           {
-            "store": "Aqara Official / Souky",
-            "price": 50,
-            "priceDisplay": "$50",
+            "store": "Smart Innovations",
+            "price": 60,
+            "priceDisplay": "$60",
             "promo": "",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+            "linkText": "Price brochure",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
           }
         ]
       }
@@ -400,32 +400,32 @@
   {
     "id": "smart-switch-master-bath",
     "name": "Smart Switch (Master Bath)",
-    "choice": "Aqara H2 2-Gang (Main downlight + Vanity mirror light)",
+    "choice": "Aqara H1 2-Gang (Main downlight + Vanity mirror light)",
     "notes": "Selected choice for Bathrooms.",
     "room": "Bathrooms",
     "priority": "P0",
     "status": "Selected",
-    "price": 50,
-    "priceDisplay": "$50",
-    "availableAt": "Aqara Official / Souky",
-    "linkText": "Shopee (Souky)",
-    "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+    "price": 60,
+    "priceDisplay": "$60",
+    "availableAt": "Smart Innovations",
+    "linkText": "Price brochure",
+    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H2 2-Gang (Main downlight + Vanity mirror light)",
+        "model": "Aqara H1 2-Gang (Main downlight + Vanity mirror light)",
         "notes": "Selected choice for Bathrooms.",
         "stores": [
           {
-            "store": "Aqara Official / Souky",
-            "price": 50,
-            "priceDisplay": "$50",
+            "store": "Smart Innovations",
+            "price": 60,
+            "priceDisplay": "$60",
             "promo": "",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+            "linkText": "Price brochure",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
           }
         ]
       }
@@ -434,32 +434,32 @@
   {
     "id": "smart-switch-common-bath",
     "name": "Smart Switch (Common Bath)",
-    "choice": "Aqara H2 2-Gang (Main downlight + Vanity mirror light)",
+    "choice": "Aqara H1 2-Gang (Main downlight + Vanity mirror light)",
     "notes": "Selected choice for Bathrooms.",
     "room": "Bathrooms",
     "priority": "P0",
     "status": "Selected",
-    "price": 50,
-    "priceDisplay": "$50",
-    "availableAt": "Aqara Official / Souky",
-    "linkText": "Shopee (Souky)",
-    "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+    "price": 60,
+    "priceDisplay": "$60",
+    "availableAt": "Smart Innovations",
+    "linkText": "Price brochure",
+    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H2 2-Gang (Main downlight + Vanity mirror light)",
+        "model": "Aqara H1 2-Gang (Main downlight + Vanity mirror light)",
         "notes": "Selected choice for Bathrooms.",
         "stores": [
           {
-            "store": "Aqara Official / Souky",
-            "price": 50,
-            "priceDisplay": "$50",
+            "store": "Smart Innovations",
+            "price": 60,
+            "priceDisplay": "$60",
             "promo": "",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+            "linkText": "Price brochure",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
           }
         ]
       }

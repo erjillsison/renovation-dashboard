@@ -1540,13 +1540,38 @@
       .switch-pin {
         cursor: pointer;
         transition:
-          transform 0.2s ease,
           filter 0.2s ease;
       }
 
       .switch-pin:hover {
-        transform: scale(1.08);
         filter: drop-shadow(0 2px 10px rgba(56, 189, 248, 0.6));
+      }
+
+      .switch-pin:hover rect {
+        stroke: #7dd3fc;
+        stroke-width: 2px;
+      }
+
+      .switch-connection {
+        fill: none;
+        stroke: #38bdf8;
+        stroke-width: 2;
+        stroke-dasharray: 6 5;
+        opacity: 0.76;
+      }
+
+      .switch-connection-target {
+        fill: #38bdf8;
+        stroke: #ffffff;
+        stroke-width: 2;
+      }
+
+      .switch-connection-label {
+        fill: #0369a1;
+        font-family: var(--font-body);
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 0.6px;
       }
 
       /* Animated Radar Wave Pulse */
@@ -2093,7 +2118,7 @@
               </div>
               <div class="stack-mini-card">
                 <div class="mini-title">Switches / Lighting</div>
-                <div class="mini-choice">Aqara H2 + T2</div>
+                <div class="mini-choice">Aqara H1 + Z1 Pro + T2</div>
                 <div class="mini-cost">$800 • Neutral Wire</div>
               </div>
               <div class="stack-mini-card">
@@ -2192,7 +2217,7 @@
             <ul class="reno-list">
               <li>
                 <strong>Pull neutral wire to all wall boxes:</strong> Critical
-                for Aqara H2 reliability and long-term smart switches.
+                for Aqara H1 and Z1 Pro reliability and long-term smart switches.
               </li>
               <li>
                 <strong>Power to windows:</strong> Pull power for Living Room &
@@ -3496,7 +3521,7 @@ automation:
               >
             </summary>
             <pre class="ha-code-pre">
-# Automation: Kitchen Wall Switch (Aqara H2 Decoupled Single-Click)
+# Automation: Kitchen Wall Switch (Aqara H1 Decoupled Single-Click)
 automation:
   - alias: "Kitchen: Smart Button Scene Controller"
     trigger:
@@ -3596,6 +3621,14 @@ automation:
                   onclick="toggleMapLayer('switches', this)"
                 >
                   <span>⚡</span> Wall Switches (10)
+                </button>
+                <button
+                  class="map-tool-btn active"
+                  id="btnLayerConnections"
+                  onclick="toggleMapLayer('connections', this)"
+                  title="Show suggested wall-switch-to-light circuits"
+                >
+                  <span>↝</span> Switch Paths
                 </button>
                 <button
                   class="map-tool-btn active"
@@ -3724,6 +3757,18 @@ automation:
                       flood-opacity="0.1"
                     />
                   </filter>
+
+                  <marker
+                    id="switchPathArrow"
+                    viewBox="0 0 10 10"
+                    refX="8"
+                    refY="5"
+                    markerWidth="6"
+                    markerHeight="6"
+                    orient="auto-start-reverse"
+                  >
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8" />
+                  </marker>
                 </defs>
 
                 <!-- Background Blueprint Grid -->
@@ -7546,16 +7591,52 @@ automation:
                   </g>
                 </g>
 
+                <!-- Layer 5b: Suggested switch-to-light paths. These are schematic circuits, not conduit routes. -->
+                <g id="layerSwitchConnections" pointer-events="none">
+                  <path class="switch-connection" d="M 744 1160 C 715 1115, 735 1035, 760 1004" marker-end="url(#switchPathArrow)" />
+                  <text class="switch-connection-label" x="718" y="1080">FOYER LED</text>
+
+                  <path class="switch-connection" d="M 629 580 C 635 563, 651 543, 670 530" marker-end="url(#switchPathArrow)" />
+                  <text class="switch-connection-label" x="636" y="554">LIVING DL</text>
+
+                  <path class="switch-connection" d="M 724 855 C 742 832, 772 811, 805 800" marker-end="url(#switchPathArrow)" />
+                  <text class="switch-connection-label" x="745" y="841">PENDANT</text>
+
+                  <path class="switch-connection" d="M 577 735 C 595 720, 617 704, 645 692" marker-end="url(#switchPathArrow)" />
+                  <circle class="switch-connection-target" cx="645" cy="692" r="6" />
+                  <text class="switch-connection-label" x="593" y="705">HALL DL</text>
+
+                  <path class="switch-connection" d="M 574 900 C 540 888, 512 862, 480 840" marker-end="url(#switchPathArrow)" />
+                  <text class="switch-connection-label" x="493" y="882">KITCHEN LED</text>
+
+                  <path class="switch-connection" d="M 644 380 C 660 358, 677 338, 700 322" marker-end="url(#switchPathArrow)" />
+                  <circle class="switch-connection-target" cx="700" cy="322" r="6" />
+                  <text class="switch-connection-label" x="655" y="347">BALCONY DL</text>
+
+                  <path class="switch-connection" d="M 564 545 C 548 523, 531 494, 510 470" marker-end="url(#switchPathArrow)" />
+                  <circle class="switch-connection-target" cx="510" cy="470" r="6" />
+                  <text class="switch-connection-label" x="505" y="508">BED 2 DL</text>
+
+                  <path class="switch-connection" d="M 569 620 C 564 646, 556 678, 550 708" marker-end="url(#switchPathArrow)" />
+                  <text class="switch-connection-label" x="572" y="665">VANITY</text>
+
+                  <path class="switch-connection" d="M 969 600 C 985 582, 1002 564, 1020 550" marker-end="url(#switchPathArrow)" />
+                  <text class="switch-connection-label" x="978" y="579">MASTER DL</text>
+
+                  <path class="switch-connection" d="M 1104 675 C 1065 694, 1022 724, 990 745" marker-end="url(#switchPathArrow)" />
+                  <text class="switch-connection-label" x="1022" y="713">VANITY</text>
+                </g>
+
                 <!-- Layer 6: Wall Switches (High-Contrast Smart Switches at Door Frames) -->
                 <g id="layerWallSwitches">
-                  <!-- Entrance: 2-Gang (Aqara H2, Foyer Corridor East Wall) -->
+                  <!-- Entrance: H1 2-Gang, Foyer Corridor East Wall -->
                   <g
                     class="switch-pin"
                     transform="translate(725, 1160)"
                     onclick="selectMapRoom('Entrance')"
                   >
                     <title>
-                      Entrance: Aqara H2 2-Gang Smart Switch (Downlight + Shoe
+                      Entrance: Aqara H1 2-Gang Smart Switch (Downlight + Shoe
                       Cabinet LED)
                     </title>
                     <rect
@@ -7604,20 +7685,20 @@ automation:
                     <circle cx="28.5" cy="15.5" r="1.5" fill="#38bdf8" />
                   </g>
 
-                  <!-- Living Room: 3-Gang (Aqara H2, West Wall at Hallway Entry) -->
+                  <!-- Living Room: Z1 Pro 4-Rocker, West Wall at Hallway Entry -->
                   <g
                     class="switch-pin"
                     transform="translate(605, 570)"
                     onclick="selectMapRoom('Living Room')"
                   >
                     <title>
-                      Living Room: Aqara H2 3-Gang Smart Switch (Main
-                      Downlights, Accent, Ceiling Fan)
+                      Living Room: Aqara Z1 Pro 4-Rocker (Downlights, Accent,
+                      fan control, Movie scene)
                     </title>
                     <rect
                       x="0"
                       y="-14"
-                      width="48"
+                      width="60"
                       height="12"
                       rx="3"
                       fill="#0f172a"
@@ -7626,7 +7707,7 @@ automation:
                       stroke-width="0.8"
                     />
                     <text
-                      x="24"
+                      x="30"
                       y="-5"
                       font-family="'Space Grotesk', sans-serif"
                       font-size="8"
@@ -7635,12 +7716,12 @@ automation:
                       text-anchor="middle"
                       letter-spacing="0.5"
                     >
-                      3-GANG
+                      Z1 • 4-RKR
                     </text>
                     <rect
                       x="0"
                       y="0"
-                      width="48"
+                      width="60"
                       height="20"
                       rx="3.5"
                       fill="#1e293b"
@@ -7648,25 +7729,13 @@ automation:
                       stroke-width="1.4"
                       filter="url(#badgeShadow)"
                     />
-                    <line
-                      x1="16"
-                      y1="2"
-                      x2="16"
-                      y2="18"
-                      stroke="#475569"
-                      stroke-width="1"
-                    />
-                    <line
-                      x1="32"
-                      y1="2"
-                      x2="32"
-                      y2="18"
-                      stroke="#475569"
-                      stroke-width="1"
-                    />
-                    <circle cx="8" cy="15.5" r="1.5" fill="#38bdf8" />
-                    <circle cx="24" cy="15.5" r="1.5" fill="#38bdf8" />
-                    <circle cx="40" cy="15.5" r="1.5" fill="#38bdf8" />
+                    <line x1="15" y1="2" x2="15" y2="18" stroke="#475569" stroke-width="1" />
+                    <line x1="30" y1="2" x2="30" y2="18" stroke="#475569" stroke-width="1" />
+                    <line x1="45" y1="2" x2="45" y2="18" stroke="#475569" stroke-width="1" />
+                    <circle cx="7.5" cy="15.5" r="1.5" fill="#38bdf8" />
+                    <circle cx="22.5" cy="15.5" r="1.5" fill="#38bdf8" />
+                    <circle cx="37.5" cy="15.5" r="1.5" fill="#38bdf8" />
+                    <circle cx="52.5" cy="15.5" r="1.5" fill="#38bdf8" />
                   </g>
 
                   <!-- Dining: Rotary Dimmer H2 EU (CCT Pendant Dimmer Dial) -->
@@ -7732,14 +7801,14 @@ automation:
                     <circle cx="19" cy="16" r="1.5" fill="#f59e0b" />
                   </g>
 
-                  <!-- Hallway: 1-Gang (Aqara H2, Corridor Downlights) -->
+                  <!-- Hallway: H1 1-Gang, Corridor Downlights -->
                   <g
                     class="switch-pin"
                     transform="translate(560, 735)"
                     onclick="selectMapRoom('Living Room')"
                   >
                     <title>
-                      Hallway: Aqara H2 1-Gang Smart Switch (Corridor
+                      Hallway: Aqara H1 1-Gang Smart Switch (Corridor
                       Downlights)
                     </title>
                     <rect
@@ -7779,14 +7848,14 @@ automation:
                     <circle cx="17" cy="15.5" r="1.5" fill="#38bdf8" />
                   </g>
 
-                  <!-- Kitchen: 2-Gang (Aqara H2, Kitchen Partition Frame) -->
+                  <!-- Kitchen: H1 2-Gang, Kitchen Partition Frame -->
                   <g
                     class="switch-pin"
                     transform="translate(555, 900)"
                     onclick="selectMapRoom('Kitchen')"
                   >
                     <title>
-                      Kitchen: Aqara H2 2-Gang Smart Switch (Ceiling Downlights
+                      Kitchen: Aqara H1 2-Gang Smart Switch (Ceiling Downlights
                       + Under-Cabinet LED)
                     </title>
                     <rect
@@ -7835,15 +7904,15 @@ automation:
                     <circle cx="28.5" cy="15.5" r="1.5" fill="#38bdf8" />
                   </g>
 
-                  <!-- Balcony: 2-Gang (Aqara H2, Inside Sliding Door Frame) -->
+                  <!-- Balcony: H1 2-Gang, Inside Sliding Door Frame -->
                   <g
                     class="switch-pin"
                     transform="translate(625, 370)"
                     onclick="selectMapRoom('Balcony')"
                   >
                     <title>
-                      Balcony: Aqara H2 2-Gang Smart Switch (Balcony Light +
-                      Outdoor Fan Isolator)
+                      Balcony: Aqara H1 2-Gang Smart Switch (Balcony Light +
+                      decoupled Outdoor Fan control)
                     </title>
                     <rect
                       x="0"
@@ -7891,14 +7960,14 @@ automation:
                     <circle cx="28.5" cy="15.5" r="1.5" fill="#38bdf8" />
                   </g>
 
-                  <!-- Bedroom 2: 2-Gang (Aqara H2, Inside Bedroom 2 Door) -->
+                  <!-- Bedroom 2: H1 2-Gang, Inside Bedroom 2 Door -->
                   <g
                     class="switch-pin"
                     transform="translate(545, 535)"
-                    onclick="selectMapRoom('Bedroom 2')"
+                    onclick="selectMapRoom('Bedroom 2 / Study')"
                   >
                     <title>
-                      Bedroom 2: Aqara H2 2-Gang Smart Switch (Main Room Lights
+                      Bedroom 2: Aqara H1 2-Gang Smart Switch (Main Room Lights
                       + Study Desk Zone)
                     </title>
                     <rect
@@ -7947,14 +8016,14 @@ automation:
                     <circle cx="28.5" cy="15.5" r="1.5" fill="#38bdf8" />
                   </g>
 
-                  <!-- Common Bath: 2-Gang (Aqara H2, Outside Common Bath Door) -->
+                  <!-- Common Bath: H1 2-Gang, Outside Common Bath Door -->
                   <g
                     class="switch-pin"
                     transform="translate(550, 620)"
                     onclick="selectMapRoom('Common Bath')"
                   >
                     <title>
-                      Common Bath: Aqara H2 2-Gang Smart Switch (Main Downlight
+                      Common Bath: Aqara H1 2-Gang Smart Switch (Main Downlight
                       + Vanity Mirror Light)
                     </title>
                     <rect
@@ -8003,15 +8072,15 @@ automation:
                     <circle cx="28.5" cy="15.5" r="1.5" fill="#38bdf8" />
                   </g>
 
-                  <!-- Master Bedroom: 2-Gang (Aqara H2, Inside Master Bed Door) -->
+                  <!-- Master Bedroom: Z1 Pro 3-Rocker, Inside Master Bed Door -->
                   <g
                     class="switch-pin"
                     transform="translate(950, 600)"
                     onclick="selectMapRoom('Master Bed')"
                   >
                     <title>
-                      Master Bedroom: Aqara H2 2-Gang Smart Switch (Main Entry
-                      Downlights + Bedside Downlight)
+                      Master Bedroom: Aqara Z1 Pro 3-Rocker (Main Entry
+                      Downlights, Bedside Downlight + Curtain / Goodnight scene)
                     </title>
                     <rect
                       x="0"
@@ -8034,7 +8103,7 @@ automation:
                       text-anchor="middle"
                       letter-spacing="0.5"
                     >
-                      2-GANG
+                      Z1 • 3-RKR
                     </text>
                     <rect
                       x="0"
@@ -8059,14 +8128,14 @@ automation:
                     <circle cx="28.5" cy="15.5" r="1.5" fill="#38bdf8" />
                   </g>
 
-                  <!-- Master Bath: 2-Gang (Aqara H2, Outside Master Bath Door on Bedroom Wall) -->
+                  <!-- Master Bath: H1 2-Gang, Outside Master Bath Door on Bedroom Wall -->
                   <g
                     class="switch-pin"
                     transform="translate(1085, 675)"
                     onclick="selectMapRoom('Master Bath')"
                   >
                     <title>
-                      Master Bath: Aqara H2 2-Gang Smart Switch (Main Downlight
+                      Master Bath: Aqara H1 2-Gang Smart Switch (Main Downlight
                       + Vanity Mirror Light)
                     </title>
                     <rect
@@ -8704,32 +8773,32 @@ automation:
       {
             "id": "smart-switch-entrance",
             "name": "Smart Switch (Entrance)",
-            "choice": "Aqara H2 2-Gang (Main entry downlight + Shoe cabinet LED)",
+            "choice": "Aqara H1 2-Gang (Main entry downlight + Shoe cabinet LED)",
             "notes": "Selected choice for Entrance.",
             "room": "Entrance",
             "priority": "P0",
             "status": "Selected",
-            "price": 50,
-            "priceDisplay": "$50",
-            "availableAt": "Aqara Official / Souky",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+            "price": 60,
+            "priceDisplay": "$60",
+            "availableAt": "Smart Innovations",
+            "linkText": "Price brochure",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
             "sellerDeductible": false,
             "sellerSavings": 0,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Aqara H2 2-Gang (Main entry downlight + Shoe cabinet LED)",
+                        "model": "Aqara H1 2-Gang (Main entry downlight + Shoe cabinet LED)",
                         "notes": "Selected choice for Entrance.",
                         "stores": [
                               {
-                                    "store": "Aqara Official / Souky",
-                                    "price": 50,
-                                    "priceDisplay": "$50",
+                                    "store": "Smart Innovations",
+                                    "price": 60,
+                                    "priceDisplay": "$60",
                                     "promo": "",
-                                    "linkText": "Shopee (Souky)",
-                                    "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+                                    "linkText": "Price brochure",
+                                    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
                               }
                         ]
                   }
@@ -8738,32 +8807,32 @@ automation:
       {
             "id": "smart-switch-living-room",
             "name": "Smart Switch (Living Room)",
-            "choice": "Aqara H2 3-Gang (Main downlights, Accent, Ceiling fan)",
+            "choice": "Aqara Z1 Pro 4-Rocker (Downlights, Accent, Fan control + Movie scene)",
             "notes": "Selected choice for Living Room.",
             "room": "Living Room",
             "priority": "P0",
             "status": "Selected",
-            "price": 56,
-            "priceDisplay": "$56",
-            "availableAt": "Aqara Official / Souky",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+            "price": 105,
+            "priceDisplay": "$105",
+            "availableAt": "Smart Innovations",
+            "linkText": "Z1 Pro",
+            "linkUrl": "https://smartinnovations.sg/product/aqara-wall-switch-z1-pro/",
             "sellerDeductible": false,
             "sellerSavings": 0,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Aqara H2 3-Gang (Main downlights, Accent, Ceiling fan)",
+                        "model": "Aqara Z1 Pro 4-Rocker (Downlights, Accent, Fan control + Movie scene)",
                         "notes": "Selected choice for Living Room.",
                         "stores": [
                               {
-                                    "store": "Aqara Official / Souky",
-                                    "price": 56,
-                                    "priceDisplay": "$56",
+                                    "store": "Smart Innovations",
+                                    "price": 105,
+                                    "priceDisplay": "$105",
                                     "promo": "",
-                                    "linkText": "Shopee (Souky)",
-                                    "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+                                    "linkText": "Z1 Pro",
+                                    "linkUrl": "https://smartinnovations.sg/product/aqara-wall-switch-z1-pro/"
                               }
                         ]
                   }
@@ -8806,32 +8875,32 @@ automation:
       {
             "id": "smart-switch-kitchen",
             "name": "Smart Switch (Kitchen)",
-            "choice": "Aqara H2 2-Gang (Main ceiling downlights + Under-cabinet LED)",
+            "choice": "Aqara H1 2-Gang (Main ceiling downlights + Under-cabinet LED)",
             "notes": "Selected choice for Kitchen.",
             "room": "Kitchen",
             "priority": "P0",
             "status": "Selected",
-            "price": 50,
-            "priceDisplay": "$50",
-            "availableAt": "Aqara Official / Souky",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+            "price": 60,
+            "priceDisplay": "$60",
+            "availableAt": "Smart Innovations",
+            "linkText": "Price brochure",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
             "sellerDeductible": false,
             "sellerSavings": 0,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Aqara H2 2-Gang (Main ceiling downlights + Under-cabinet LED)",
+                        "model": "Aqara H1 2-Gang (Main ceiling downlights + Under-cabinet LED)",
                         "notes": "Selected choice for Kitchen.",
                         "stores": [
                               {
-                                    "store": "Aqara Official / Souky",
-                                    "price": 50,
-                                    "priceDisplay": "$50",
+                                    "store": "Smart Innovations",
+                                    "price": 60,
+                                    "priceDisplay": "$60",
                                     "promo": "",
-                                    "linkText": "Shopee (Souky)",
-                                    "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+                                    "linkText": "Price brochure",
+                                    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
                               }
                         ]
                   }
@@ -8840,32 +8909,32 @@ automation:
       {
             "id": "smart-switch-balcony",
             "name": "Smart Switch (Balcony)",
-            "choice": "Aqara H2 2-Gang (Balcony light + Outdoor fan isolator)",
+            "choice": "Aqara H1 2-Gang (Balcony light + decoupled outdoor fan control)",
             "notes": "Selected choice for Balcony.",
             "room": "Balcony",
             "priority": "P0",
             "status": "Selected",
-            "price": 50,
-            "priceDisplay": "$50",
-            "availableAt": "Aqara Official / Souky",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+            "price": 60,
+            "priceDisplay": "$60",
+            "availableAt": "Smart Innovations",
+            "linkText": "Price brochure",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
             "sellerDeductible": false,
             "sellerSavings": 0,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Aqara H2 2-Gang (Balcony light + Outdoor fan isolator)",
+                        "model": "Aqara H1 2-Gang (Balcony light + decoupled outdoor fan control)",
                         "notes": "Selected choice for Balcony.",
                         "stores": [
                               {
-                                    "store": "Aqara Official / Souky",
-                                    "price": 50,
-                                    "priceDisplay": "$50",
+                                    "store": "Smart Innovations",
+                                    "price": 60,
+                                    "priceDisplay": "$60",
                                     "promo": "",
-                                    "linkText": "Shopee (Souky)",
-                                    "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+                                    "linkText": "Price brochure",
+                                    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
                               }
                         ]
                   }
@@ -8874,32 +8943,32 @@ automation:
       {
             "id": "smart-switch-hallway",
             "name": "Smart Switch (Hallway)",
-            "choice": "Aqara H2 1-Gang (Corridor downlights)",
+            "choice": "Aqara H1 1-Gang (Corridor downlights)",
             "notes": "Selected choice for Whole House.",
             "room": "Whole House",
             "priority": "P0",
             "status": "Selected",
-            "price": 47,
-            "priceDisplay": "$47",
-            "availableAt": "Aqara Official / Souky",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+            "price": 55,
+            "priceDisplay": "$55",
+            "availableAt": "Smart Innovations",
+            "linkText": "Price brochure",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
             "sellerDeductible": false,
             "sellerSavings": 0,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Aqara H2 1-Gang (Corridor downlights)",
+                        "model": "Aqara H1 1-Gang (Corridor downlights)",
                         "notes": "Selected choice for Whole House.",
                         "stores": [
                               {
-                                    "store": "Aqara Official / Souky",
-                                    "price": 47,
-                                    "priceDisplay": "$47",
+                                    "store": "Smart Innovations",
+                                    "price": 55,
+                                    "priceDisplay": "$55",
                                     "promo": "",
-                                    "linkText": "Shopee (Souky)",
-                                    "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+                                    "linkText": "Price brochure",
+                                    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
                               }
                         ]
                   }
@@ -8908,32 +8977,32 @@ automation:
       {
             "id": "smart-switch-master-bed",
             "name": "Smart Switch (Master Bed)",
-            "choice": "Aqara H2 2-Gang (Main entry downlights + Bedside downlight)",
+            "choice": "Aqara Z1 Pro 3-Rocker (Entry, bedside + curtain / Goodnight scene)",
             "notes": "Selected choice for Master Bed.",
             "room": "Master Bed",
             "priority": "P0",
             "status": "Selected",
-            "price": 50,
-            "priceDisplay": "$50",
-            "availableAt": "Aqara Official / Souky",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+            "price": 95,
+            "priceDisplay": "$95",
+            "availableAt": "Smart Innovations",
+            "linkText": "Z1 Pro",
+            "linkUrl": "https://smartinnovations.sg/product/aqara-wall-switch-z1-pro/",
             "sellerDeductible": false,
             "sellerSavings": 0,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Aqara H2 2-Gang (Main entry downlights + Bedside downlight)",
+                        "model": "Aqara Z1 Pro 3-Rocker (Entry, bedside + curtain / Goodnight scene)",
                         "notes": "Selected choice for Master Bed.",
                         "stores": [
                               {
-                                    "store": "Aqara Official / Souky",
-                                    "price": 50,
-                                    "priceDisplay": "$50",
+                                    "store": "Smart Innovations",
+                                    "price": 95,
+                                    "priceDisplay": "$95",
                                     "promo": "",
-                                    "linkText": "Shopee (Souky)",
-                                    "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+                                    "linkText": "Z1 Pro",
+                                    "linkUrl": "https://smartinnovations.sg/product/aqara-wall-switch-z1-pro/"
                               }
                         ]
                   }
@@ -8942,32 +9011,32 @@ automation:
       {
             "id": "smart-switch-bedroom-2",
             "name": "Smart Switch (Bedroom 2)",
-            "choice": "Aqara H2 2-Gang (Main room lights + Study desk zone)",
+            "choice": "Aqara H1 2-Gang (Main room lights + Study desk zone)",
             "notes": "Selected choice for Bedroom 2.",
             "room": "Bedroom 2 / Study",
             "priority": "P0",
             "status": "Selected",
-            "price": 50,
-            "priceDisplay": "$50",
-            "availableAt": "Aqara Official / Souky",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+            "price": 60,
+            "priceDisplay": "$60",
+            "availableAt": "Smart Innovations",
+            "linkText": "Price brochure",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
             "sellerDeductible": false,
             "sellerSavings": 0,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Aqara H2 2-Gang (Main room lights + Study desk zone)",
+                        "model": "Aqara H1 2-Gang (Main room lights + Study desk zone)",
                         "notes": "Selected choice for Bedroom 2.",
                         "stores": [
                               {
-                                    "store": "Aqara Official / Souky",
-                                    "price": 50,
-                                    "priceDisplay": "$50",
+                                    "store": "Smart Innovations",
+                                    "price": 60,
+                                    "priceDisplay": "$60",
                                     "promo": "",
-                                    "linkText": "Shopee (Souky)",
-                                    "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+                                    "linkText": "Price brochure",
+                                    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
                               }
                         ]
                   }
@@ -8976,32 +9045,32 @@ automation:
       {
             "id": "smart-switch-master-bath",
             "name": "Smart Switch (Master Bath)",
-            "choice": "Aqara H2 2-Gang (Main downlight + Vanity mirror light)",
+            "choice": "Aqara H1 2-Gang (Main downlight + Vanity mirror light)",
             "notes": "Selected choice for Bathrooms.",
             "room": "Bathrooms",
             "priority": "P0",
             "status": "Selected",
-            "price": 50,
-            "priceDisplay": "$50",
-            "availableAt": "Aqara Official / Souky",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+            "price": 60,
+            "priceDisplay": "$60",
+            "availableAt": "Smart Innovations",
+            "linkText": "Price brochure",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
             "sellerDeductible": false,
             "sellerSavings": 0,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Aqara H2 2-Gang (Main downlight + Vanity mirror light)",
+                        "model": "Aqara H1 2-Gang (Main downlight + Vanity mirror light)",
                         "notes": "Selected choice for Bathrooms.",
                         "stores": [
                               {
-                                    "store": "Aqara Official / Souky",
-                                    "price": 50,
-                                    "priceDisplay": "$50",
+                                    "store": "Smart Innovations",
+                                    "price": 60,
+                                    "priceDisplay": "$60",
                                     "promo": "",
-                                    "linkText": "Shopee (Souky)",
-                                    "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+                                    "linkText": "Price brochure",
+                                    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
                               }
                         ]
                   }
@@ -9010,32 +9079,32 @@ automation:
       {
             "id": "smart-switch-common-bath",
             "name": "Smart Switch (Common Bath)",
-            "choice": "Aqara H2 2-Gang (Main downlight + Vanity mirror light)",
+            "choice": "Aqara H1 2-Gang (Main downlight + Vanity mirror light)",
             "notes": "Selected choice for Bathrooms.",
             "room": "Bathrooms",
             "priority": "P0",
             "status": "Selected",
-            "price": 50,
-            "priceDisplay": "$50",
-            "availableAt": "Aqara Official / Souky",
-            "linkText": "Shopee (Souky)",
-            "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309",
+            "price": 60,
+            "priceDisplay": "$60",
+            "availableAt": "Smart Innovations",
+            "linkText": "Price brochure",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
             "sellerDeductible": false,
             "sellerSavings": 0,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Aqara H2 2-Gang (Main downlight + Vanity mirror light)",
+                        "model": "Aqara H1 2-Gang (Main downlight + Vanity mirror light)",
                         "notes": "Selected choice for Bathrooms.",
                         "stores": [
                               {
-                                    "store": "Aqara Official / Souky",
-                                    "price": 50,
-                                    "priceDisplay": "$50",
+                                    "store": "Smart Innovations",
+                                    "price": 60,
+                                    "priceDisplay": "$60",
                                     "promo": "",
-                                    "linkText": "Shopee (Souky)",
-                                    "linkUrl": "https://shopee.sg/Aqara-Light-Switch-H2-%E2%80%93-Zigbee-Thread-Smart-Switch-Neutral-Optional-Smart-Manual-Control-Homekit-i.1245098924.50459563309"
+                                    "linkText": "Price brochure",
+                                    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
                               }
                         ]
                   }
@@ -13043,7 +13112,7 @@ automation:
           sensors:
             "• <strong>1x Aqara Presence Sensor FP2 (Multi-Zone)</strong> (North Pelmet)<br>• Wi-Fi 2.4GHz • 5V USB-C in Pelmet<br>• Lengthwise radar sweeps South across Living (Zone 1) & Dining (Zone 2).<br>• <strong>Through-Wall Conduit:</strong> 32mm sleeve to Bed 2 PC rig for 4K 120Hz TV & USB wireless dongles.",
           lighting:
-            "• <strong>Aqara H2 3-Gang Switch</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Relay Mode</span>)<br>• 6x High-CRI (>90) Recessed Downlights<br>• Fanco DC Ceiling Fan (RF Bond Bridge)",
+            "• <strong>Aqara Z1 Pro 4-Rocker</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Relay + scenes</span>)<br>• 6x High-CRI (>90) Recessed Downlights<br>• Fanco DC Ceiling Fan (RF Bond Bridge)",
           automations:
             "• <strong>Sofa Presence (FP2 Zone 1):</strong> Keeps ambient lights & AC active while reading or watching TV.<br>• <strong>15-Min Auto-Powerdown:</strong> Auto-dims lights and sets AC to eco when room clears.",
           filterRoom: "Living Room",
@@ -13057,7 +13126,7 @@ automation:
           sensors:
             "• <strong>1x Aqara Door Contact Sensor T1</strong> (Main Door Frame)<br>• <strong>1x Aqara PIR Motion Sensor P1</strong> (Shoe Bench)<br>• 100% Battery Powered (CR1632 & CR2450, 2-5 yrs)",
           lighting:
-            "• <strong>Aqara H2 2-Gang Switch</strong> (Neutral Wire)<br>• 1x High-CRI Ceiling Downlight<br>• 1x 2m 24V COB Warm White Strip (Floating Shoe Cabinet)",
+            "• <strong>Aqara H1 2-Gang Switch</strong> (Neutral Wire)<br>• 1x High-CRI Ceiling Downlight<br>• 1x 2m 24V COB Warm White Strip (Floating Shoe Cabinet)",
           automations:
             "• <strong>0ms Instant Welcome:</strong> Door cracks open &rarr; 0ms trigger illuminates shoe cabinet bottom float + warm downlight.<br>• <strong>Gear-Up Departure:</strong> Walking into foyer triggers PIR, illuminating bench while tying riding boots.<br>• <strong>Auto-Off:</strong> Door closes + 2 min no motion turns off lights.",
           filterRoom: "Entrance",
@@ -13071,7 +13140,7 @@ automation:
           sensors:
             "• <strong>1x Bedside Wireless Mini Switch</strong> (Nightstand)<br>• <strong>1x Wardrobe Door Contact T1</strong> (Wardrobe Door)<br>• <span style='color: var(--accent-p0); font-weight: 700;'>Strictly NO motion/presence sensors!</span>",
           lighting:
-            "• <strong>Aqara H2 2-Gang Switch</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Relay Mode</span>)<br>• 4x High-CRI (>90) Recessed Downlights<br>• Aqara C3 Motorized Day/Night Curtains",
+            "• <strong>Aqara Z1 Pro 3-Rocker</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Relay + curtain scene</span>)<br>• 4x High-CRI (>90) Recessed Downlights<br>• Aqara C3 Motorized Day/Night Curtains",
           automations:
             "• <strong>Bedside Tap:</strong> Single tap toggles reading light / main lights.<br>• <strong>Whole-House Kill Switch:</strong> Long-press shuts off ALL condo lights, closes curtains, locks door, sets AC to 25°C.",
           filterRoom: "Master Bed",
@@ -13085,7 +13154,7 @@ automation:
           sensors:
             "• <strong>1x Aqara Door Contact T1</strong> (Door Frame)<br>• <strong>1x Aqara PIR Motion P1</strong> (Interior Ceiling)<br>• 100% Battery Powered ('Wasp in a Box' Pair)",
           lighting:
-            "• <strong>Aqara H2 2-Gang Switch</strong> (Outside Door Box)<br>• 2x IP44 Splash-Rated Downlights<br>• 1x Vanity Mirror LED Light",
+            "• <strong>Aqara H1 2-Gang Switch</strong> (Outside Door Box)<br>• 2x IP44 Splash-Rated Downlights<br>• 1x Vanity Mirror LED Light",
           automations:
             "• <strong>Wasp in a Box:</strong> Motion + Door Closed locks occupancy ON indefinitely. Lights NEVER shut off in shower or toilet!<br>• <strong>Late-Night Piddle Mode (11PM-6AM):</strong> Vanity mirror turns on at 15% dim warm (2200K). Zero blinding glare.<br>• <strong>Auto-Off:</strong> Door opens &rarr; 90s countdown.",
           filterRoom: "Bathrooms",
@@ -13113,7 +13182,7 @@ automation:
           sensors:
             "• <strong>Time-Conditioned Smart Switch</strong><br>• Optional Under-Cabinet PIR Sensor<br>• Context-aware routine automation",
           lighting:
-            "• <strong>Aqara H2 2-Gang Switch</strong> (Entrance Box)<br>• 3x High-CRI Recessed Downlights<br>• 1x 3m 24V COB Warm White Strip (Under-Cabinet)",
+            "• <strong>Aqara H1 2-Gang Switch</strong> (Entrance Box)<br>• 3x High-CRI Recessed Downlights<br>• 1x 3m 24V COB Warm White Strip (Under-Cabinet)",
           automations:
             "• <strong>7:00 AM Coffee Routine:</strong> Switch press between 06:00–08:30 AM turns on ONLY under-cabinet warm strip at 30%. Glare-free morning coffee before sunrise.<br>• <strong>Meal Prep:</strong> Full 4000K crisp downlights + counter task light.<br>• <strong>Double-Click Override:</strong> Instant 100% full brightness anytime.",
           filterRoom: "Kitchen",
@@ -13125,9 +13194,9 @@ automation:
           dimensions:
             "• <strong>Clear Width:</strong> ±2,450 mm<br>• <strong>Clear Length:</strong> ±3,090 mm<br>• <strong>Floor Area:</strong> ~7.6 m² (~81 sq ft)<br>• <strong>RC Ledge:</strong> ±2,450 mm exterior window ledge<br>• <strong>Features:</strong> Wardrobe niche + study workstation with 32mm conduit.",
           sensors:
-            "• Manual Aqara H2 Switch Control (Zero Zoom dropouts)<br>• <strong>High-Performance PC Rig:</strong> Backed onto shared wall with 32mm conduit pass-through sleeve directly to Living Room TV console.",
+            "• Manual Aqara H1 Switch Control (Zero Zoom dropouts)<br>• <strong>High-Performance PC Rig:</strong> Backed onto shared wall with 32mm conduit pass-through sleeve directly to Living Room TV console.",
           lighting:
-            "• <strong>Aqara H2 2-Gang Switch</strong> (Door Box)<br>• 3x High-CRI Recessed Downlights<br>• Mitsubishi Electric Starmex 9k BTU AC",
+            "• <strong>Aqara H1 2-Gang Switch</strong> (Door Box)<br>• 3x High-CRI Recessed Downlights<br>• Mitsubishi Electric Starmex 9k BTU AC",
           automations:
             "• <strong>WFH Focus Scene:</strong> Single click energizes full 4500K bright white for desk work and Zoom calls.<br>• <strong>Guest Mode:</strong> Double click sets downlights to 3000K relaxed warm white.",
           filterRoom: "Bedroom 2 / Study",
@@ -13155,7 +13224,7 @@ automation:
           sensors:
             "• Solar Elevation & Weather Sync<br>• Sliding Door Contact Sensor (Optional)",
           lighting:
-            "• <strong>Aqara H2 2-Gang Switch</strong> (Light + Fan Isolator)<br>• 1x Outdoor High-CRI Downlight<br>• Dooya DM45S Zip Track (3 Sides) + Fanco DC Fan",
+            "• <strong>Aqara H1 2-Gang Switch</strong> (Light + decoupled Fan control)<br>• 1x Outdoor High-CRI Downlight<br>• Dooya DM45S Zip Track (3 Sides) + Fanco DC Fan",
           automations:
             "• <strong>Sunset Balcony Glow:</strong> Sliding door open after dark turns on soft warm downlight (30%).<br>• <strong>Zip Track Enclosure:</strong> Lowering zip blinds creates an enclosed outdoor room with fan on gentle breeze (Speed 2).",
           filterRoom: "Balcony",
@@ -13255,6 +13324,9 @@ automation:
           if (el) el.style.display = isActive ? "inline" : "none";
         } else if (layerName === "switches") {
           const el = document.getElementById("layerWallSwitches");
+          if (el) el.style.display = isActive ? "inline" : "none";
+        } else if (layerName === "connections") {
+          const el = document.getElementById("layerSwitchConnections");
           if (el) el.style.display = isActive ? "inline" : "none";
         } else if (layerName === "climate") {
           const el = document.getElementById("layerClimateGroup");
