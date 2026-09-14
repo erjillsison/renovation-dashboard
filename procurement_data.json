@@ -196,30 +196,58 @@
   {
     "id": "smart-switch-dining",
     "name": "Smart Switch (Dining)",
-    "choice": "Aqara Dimmer Switch H2 EU (Rotary Dimmer Dial)",
-    "notes": "Selected choice for Dining.",
+    "choice": "Aqara H1 1-Gang with Neutral",
+    "notes": "Use in Decoupled Mode: the pendant circuit remains permanently powered and the rocker calls dining smart-bulb scenes.",
     "room": "Dining",
     "priority": "P0",
     "status": "Selected",
-    "price": 88,
-    "priceDisplay": "$88",
-    "availableAt": "PassionHome / HomeSmart / Shopee",
-    "linkText": "PassionHome",
-    "linkUrl": "https://passionhome.sg",
+    "price": 55,
+    "priceDisplay": "$55.00",
+    "availableAt": "Smart Innovations",
+    "linkText": "Aqara brochure",
+    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara Dimmer Switch H2 EU (Rotary Dimmer Dial)",
-        "notes": "Selected choice for Dining.",
+        "model": "Aqara H1 1-Gang with Neutral",
+        "notes": "Use in Decoupled Mode: the pendant circuit remains permanently powered and the rocker calls dining smart-bulb scenes.",
+        "stores": [
+          {
+            "store": "Smart Innovations",
+            "price": 55,
+            "priceDisplay": "$55.00",
+            "promo": "With-neutral, Zigbee; H1 1/2/3-gang brochure pricing.",
+            "linkText": "Aqara brochure",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
+          }
+        ]
+      },
+      {
+        "model": "Aqara Z1 Pro 1-Rocker",
+        "notes": "Premium scene-control alternative. It adds no useful capability for this single dining circuit over the selected H1.",
+        "stores": [
+          {
+            "store": "Smart Innovations",
+            "price": 75,
+            "priceDisplay": "$75.00",
+            "promo": "Zigbee scene plate.",
+            "linkText": "Aqara brochure",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
+          }
+        ]
+      },
+      {
+        "model": "Aqara Dimmer Switch H2 EU",
+        "notes": "Hard-wired rotary dimmer for ordinary triac bulbs; retained only as the non-smart-bulb alternative.",
         "stores": [
           {
             "store": "PassionHome / HomeSmart / Shopee",
             "price": 88,
-            "priceDisplay": "$88",
-            "promo": "",
+            "priceDisplay": "$88.00",
+            "promo": "Requires triac-dimmable bulbs.",
             "linkText": "PassionHome",
             "linkUrl": "https://passionhome.sg"
           }
@@ -466,34 +494,48 @@
     ]
   },
   {
-    "id": "dumb-bulbs-dining-pendant",
-    "name": "Dumb Bulbs (Dining Pendant)",
-    "choice": "2x Triac Dimmable Warm White E27 LED Bulbs",
-    "notes": "Selected choice for Dining.",
+    "id": "smart-bulbs-dining-pendant",
+    "name": "Smart Bulbs (Dining Pendant)",
+    "choice": "2x Aqara LED Bulb T2 E27 RGB+CCT",
+    "notes": "Selected. Run in Zigbee mode for local mesh control; keep the pendant circuit permanently powered.",
     "room": "Dining",
     "priority": "P1",
     "status": "Selected",
-    "price": 20,
-    "priceDisplay": "$20",
-    "availableAt": "Sembawang Lighting House / Shopee",
+    "price": 72,
+    "priceDisplay": "$71.72",
+    "availableAt": "Aqara Singapore Official Shopee",
     "linkText": "Shopee",
-    "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
+    "linkUrl": "https://shopee.sg/AQARA-Smart-T2-LED-Bulbs-E27-RGB-CCT-Support-Apple-home-Google-Home-Thread-Zigbee-i.489606704.26974325394",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "2x Triac Dimmable Warm White E27 LED Bulbs",
-        "notes": "Selected choice for Dining.",
+        "model": "2x Aqara LED Bulb T2 E27 RGB+CCT",
+        "notes": "Selected. Run in Zigbee mode for local mesh control; keep the pendant circuit permanently powered.",
         "stores": [
           {
-            "store": "Sembawang Lighting House / Shopee",
-            "price": 20,
-            "priceDisplay": "$20",
-            "promo": "",
+            "store": "Aqara Singapore Official Shopee",
+            "price": 72,
+            "priceDisplay": "$71.72",
+            "promo": "$35.86 each after current voucher; price is voucher-dependent.",
             "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813"
+            "linkUrl": "https://shopee.sg/AQARA-Smart-T2-LED-Bulbs-E27-RGB-CCT-Support-Apple-home-Google-Home-Thread-Zigbee-i.489606704.26974325394"
+          }
+        ]
+      },
+      {
+        "model": "2x Aqara LED Bulb T2 E27 CCT",
+        "notes": "White-tunable only alternative; appropriate if coloured light is not wanted.",
+        "stores": [
+          {
+            "store": "PFE Technologies Shopee",
+            "price": 90,
+            "priceDisplay": "$89.80",
+            "promo": "$44.90 each listed price.",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/Aqara-LED-Bulb-T2-E27-Version-i.572488808.27872610325"
           }
         ]
       }
@@ -2926,8 +2968,8 @@
   {
     "id": "dining-pendant-light-fixture",
     "name": "Dining Pendant Light Fixture",
-    "choice": "Minimalist 2-drop or 3-drop dining pendant fitting (powers the selected dimmable E27 bulbs)",
-    "notes": "Minimalist 2-drop or 3-drop dining pendant fitting (powers the selected dimmable E27 bulbs).",
+    "choice": "Minimalist 2-drop or 3-drop dining pendant fitting; use with the two selected Aqara T2 E27 smart bulbs",
+    "notes": "Minimalist 2-drop or 3-drop dining pendant fitting; use with the two selected Aqara T2 E27 smart bulbs.",
     "room": "Dining",
     "priority": "P1",
     "status": "TBD",
@@ -2942,8 +2984,8 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Minimalist 2-drop or 3-drop dining pendant fitting (powers the selected dimmable E27 bulbs)",
-        "notes": "Minimalist 2-drop or 3-drop dining pendant fitting (powers the selected dimmable E27 bulbs).",
+        "model": "Minimalist 2-drop or 3-drop dining pendant fitting; use with the two selected Aqara T2 E27 smart bulbs",
+        "notes": "Minimalist 2-drop or 3-drop dining pendant fitting; use with the two selected Aqara T2 E27 smart bulbs.",
         "stores": [
           {
             "store": "-",
