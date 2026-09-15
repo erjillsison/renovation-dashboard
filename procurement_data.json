@@ -1930,15 +1930,15 @@
     ]
   },
   {
-    "id": "sensors-fleet-whole-house",
-    "name": "Sensors Fleet (Whole House)",
-    "choice": "1x Aqara FP2 mmWave (Multi-Zone) + 4x Door Contact T1 + 3x PIR P1 + 1x Bedside Switch",
-    "notes": "Selected choice for Whole House.",
-    "room": "Whole House",
+    "id": "presence-sensor-living-dining",
+    "name": "Presence Sensor (Living / Dining)",
+    "choice": "1x Aqara Presence Sensor FP2 mmWave (multi-zone; North pelmet)",
+    "notes": "Selected choice for Living Room.",
+    "room": "Living Room",
     "priority": "P0",
     "status": "Selected",
-    "price": 268,
-    "priceDisplay": "$268",
+    "price": 130,
+    "priceDisplay": "$130",
     "availableAt": "Aqara Official / Shopee",
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/product/1245098924/55259558090",
@@ -1948,16 +1948,288 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "1x Aqara FP2 mmWave (Multi-Zone) + 4x Door Contact T1 + 3x PIR P1 + 1x Bedside Switch",
-        "notes": "Selected choice for Whole House.",
+        "model": "1x Aqara Presence Sensor FP2 mmWave (multi-zone; North pelmet)",
+        "notes": "Selected choice for Living Room.",
         "stores": [
           {
             "store": "Aqara Official / Shopee",
-            "price": 268,
-            "priceDisplay": "$268",
+            "price": 130,
+            "priceDisplay": "$130",
             "promo": "",
             "linkText": "Shopee",
             "linkUrl": "https://shopee.sg/product/1245098924/55259558090"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "door-contact-main-entrance",
+    "name": "Door Contact (Main Entrance)",
+    "choice": "1x Aqara Door and Window Sensor T1",
+    "notes": "Selected choice for Entrance.",
+    "room": "Entrance",
+    "priority": "P1",
+    "status": "Selected",
+    "price": 15,
+    "priceDisplay": "$15",
+    "availableAt": "Aqara Official / Shopee",
+    "linkText": "Shopee",
+    "linkUrl": "https://shopee.sg/product/1245098924/50459563309",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "1x Aqara Door and Window Sensor T1",
+        "notes": "Selected choice for Entrance.",
+        "stores": [
+          {
+            "store": "Aqara Official / Shopee",
+            "price": 15,
+            "priceDisplay": "$15",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/product/1245098924/50459563309"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pir-motion-sensor-entrance",
+    "name": "PIR Motion Sensor (Entrance)",
+    "choice": "1x Aqara Motion and Light Sensor P1 (shoe bench)",
+    "notes": "Selected choice for Entrance.",
+    "room": "Entrance",
+    "priority": "P0",
+    "status": "Selected",
+    "price": 20,
+    "priceDisplay": "$20",
+    "availableAt": "Aqara Official / Shopee",
+    "linkText": "Shopee",
+    "linkUrl": "https://shopee.sg/product/1245098924/50459563309",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "1x Aqara Motion and Light Sensor P1 (shoe bench)",
+        "notes": "Selected choice for Entrance.",
+        "stores": [
+          {
+            "store": "Aqara Official / Shopee",
+            "price": 20,
+            "priceDisplay": "$20",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/product/1245098924/50459563309"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "door-contact-master-bath",
+    "name": "Door Contact (Master Bath)",
+    "choice": "1x Aqara Door and Window Sensor T1",
+    "notes": "Selected choice for Bathrooms.",
+    "room": "Bathrooms",
+    "priority": "P1",
+    "status": "Selected",
+    "price": 15,
+    "priceDisplay": "$15",
+    "availableAt": "Aqara Official / Shopee",
+    "linkText": "Shopee",
+    "linkUrl": "https://shopee.sg/product/1245098924/50459563309",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "1x Aqara Door and Window Sensor T1",
+        "notes": "Selected choice for Bathrooms.",
+        "stores": [
+          {
+            "store": "Aqara Official / Shopee",
+            "price": 15,
+            "priceDisplay": "$15",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/product/1245098924/50459563309"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pir-motion-sensor-master-bath",
+    "name": "PIR Motion Sensor (Master Bath)",
+    "choice": "1x Aqara Motion and Light Sensor P1",
+    "notes": "Selected choice for Bathrooms.",
+    "room": "Bathrooms",
+    "priority": "P0",
+    "status": "Selected",
+    "price": 20,
+    "priceDisplay": "$20",
+    "availableAt": "Aqara Official / Shopee",
+    "linkText": "Shopee",
+    "linkUrl": "https://shopee.sg/product/1245098924/50459563309",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "1x Aqara Motion and Light Sensor P1",
+        "notes": "Selected choice for Bathrooms.",
+        "stores": [
+          {
+            "store": "Aqara Official / Shopee",
+            "price": 20,
+            "priceDisplay": "$20",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/product/1245098924/50459563309"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "door-contact-common-bath",
+    "name": "Door Contact (Common Bath)",
+    "choice": "1x Aqara Door and Window Sensor T1",
+    "notes": "Selected choice for Bathrooms.",
+    "room": "Bathrooms",
+    "priority": "P1",
+    "status": "Selected",
+    "price": 15,
+    "priceDisplay": "$15",
+    "availableAt": "Aqara Official / Shopee",
+    "linkText": "Shopee",
+    "linkUrl": "https://shopee.sg/product/1245098924/50459563309",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "1x Aqara Door and Window Sensor T1",
+        "notes": "Selected choice for Bathrooms.",
+        "stores": [
+          {
+            "store": "Aqara Official / Shopee",
+            "price": 15,
+            "priceDisplay": "$15",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/product/1245098924/50459563309"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pir-motion-sensor-common-bath",
+    "name": "PIR Motion Sensor (Common Bath)",
+    "choice": "1x Aqara Motion and Light Sensor P1",
+    "notes": "Selected choice for Bathrooms.",
+    "room": "Bathrooms",
+    "priority": "P0",
+    "status": "Selected",
+    "price": 20,
+    "priceDisplay": "$20",
+    "availableAt": "Aqara Official / Shopee",
+    "linkText": "Shopee",
+    "linkUrl": "https://shopee.sg/product/1245098924/50459563309",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "1x Aqara Motion and Light Sensor P1",
+        "notes": "Selected choice for Bathrooms.",
+        "stores": [
+          {
+            "store": "Aqara Official / Shopee",
+            "price": 20,
+            "priceDisplay": "$20",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/product/1245098924/50459563309"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "door-contact-master-wardrobe",
+    "name": "Door Contact (Master Wardrobe)",
+    "choice": "1x Aqara Door and Window Sensor T1",
+    "notes": "Selected choice for Master Bed.",
+    "room": "Master Bed",
+    "priority": "P1",
+    "status": "Selected",
+    "price": 15,
+    "priceDisplay": "$15",
+    "availableAt": "Aqara Official / Shopee",
+    "linkText": "Shopee",
+    "linkUrl": "https://shopee.sg/product/1245098924/50459563309",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "1x Aqara Door and Window Sensor T1",
+        "notes": "Selected choice for Master Bed.",
+        "stores": [
+          {
+            "store": "Aqara Official / Shopee",
+            "price": 15,
+            "priceDisplay": "$15",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/product/1245098924/50459563309"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wireless-mini-switch-master-bed",
+    "name": "Wireless Mini Switch (Master Bed)",
+    "choice": "1x Aqara Wireless Mini Switch (bedside table)",
+    "notes": "Selected choice for Master Bed.",
+    "room": "Master Bed",
+    "priority": "P0",
+    "status": "Selected",
+    "price": 18,
+    "priceDisplay": "$18",
+    "availableAt": "Aqara Official / Shopee",
+    "linkText": "Shopee",
+    "linkUrl": "https://shopee.sg/product/1245098924/50459563309",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "1x Aqara Wireless Mini Switch (bedside table)",
+        "notes": "Selected choice for Master Bed.",
+        "stores": [
+          {
+            "store": "Aqara Official / Shopee",
+            "price": 18,
+            "priceDisplay": "$18",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/product/1245098924/50459563309"
           }
         ]
       }
