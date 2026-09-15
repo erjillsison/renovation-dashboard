@@ -36,30 +36,38 @@
   {
     "id": "smart-switch-living-room",
     "name": "Smart Switch (Living Room)",
-    "choice": "Aqara Z1 Pro 4-Rocker (Downlights, Accent, Fan control + Movie scene)",
-    "notes": "Selected choice for Living Room.",
+    "choice": "Aqara Z1 Pro 4-Rocker",
+    "notes": "Selected scene-control plate: relay control for downlights and accent lighting, with decoupled fan and Movie-scene buttons.",
     "room": "Living Room",
     "priority": "P0",
     "status": "Selected",
-    "price": 105,
-    "priceDisplay": "$105",
-    "availableAt": "Smart Innovations",
-    "linkText": "Z1 Pro",
-    "linkUrl": "https://smartinnovations.sg/product/aqara-wall-switch-z1-pro/",
+    "price": 82,
+    "priceDisplay": "$82.00",
+    "availableAt": "Shopee SG",
+    "linkText": "Shopee Z1 Pro 4-button",
+    "linkUrl": "https://shopee.sg/AQARA-Smart-Wall-Switch-Z1-Pro-Compatibility-for-No-With-Neutral-Easy-Control-i.489606704.25453904614?xptdk=ea96e946-fa62-4ff0-9ff7-64450caf2996",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara Z1 Pro 4-Rocker (Downlights, Accent, Fan control + Movie scene)",
-        "notes": "Selected choice for Living Room.",
+        "model": "Aqara Z1 Pro 4-Rocker",
+        "notes": "Selected scene-control plate: relay control for downlights and accent lighting, with decoupled fan and Movie-scene buttons.",
         "stores": [
+          {
+            "store": "Shopee SG",
+            "price": 82,
+            "priceDisplay": "$82.00",
+            "promo": "User-recorded Z1 Pro 4-button listing price; confirm seller warranty and the no-neutral/with-neutral variant before purchase.",
+            "linkText": "Shopee Z1 Pro 4-button",
+            "linkUrl": "https://shopee.sg/AQARA-Smart-Wall-Switch-Z1-Pro-Compatibility-for-No-With-Neutral-Easy-Control-i.489606704.25453904614?xptdk=ea96e946-fa62-4ff0-9ff7-64450caf2996"
+          },
           {
             "store": "Smart Innovations",
             "price": 105,
-            "priceDisplay": "$105",
-            "promo": "",
+            "priceDisplay": "$105.00",
+            "promo": "Reference showroom price.",
             "linkText": "Z1 Pro",
             "linkUrl": "https://smartinnovations.sg/product/aqara-wall-switch-z1-pro/"
           }
