@@ -1937,11 +1937,11 @@
     "room": "Living Room",
     "priority": "P0",
     "status": "Selected",
-    "price": 130,
-    "priceDisplay": "$130",
+    "price": 124,
+    "priceDisplay": "$124",
     "availableAt": "Aqara Official / Shopee",
-    "linkText": "Shopee",
-    "linkUrl": "https://shopee.sg/product/1245098924/55259558090",
+    "linkText": "Shopee FP2 listing",
+    "linkUrl": "https://shopee.sg/Aqara-FP2-Presence-Sensor-WiFi-Bluetooth-USB-C-Smart-Home-i.1269135806.29813791931?extraParams=%7B%22display_model_id%22%3A300703923077%2C%22model_selection_logic%22%3A3%7D",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
@@ -1953,11 +1953,11 @@
         "stores": [
           {
             "store": "Aqara Official / Shopee",
-            "price": 130,
-            "priceDisplay": "$130",
+            "price": 124,
+            "priceDisplay": "$124",
             "promo": "",
-            "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg/product/1245098924/55259558090"
+            "linkText": "Shopee FP2 listing",
+            "linkUrl": "https://shopee.sg/Aqara-FP2-Presence-Sensor-WiFi-Bluetooth-USB-C-Smart-Home-i.1269135806.29813791931?extraParams=%7B%22display_model_id%22%3A300703923077%2C%22model_selection_logic%22%3A3%7D"
           }
         ]
       }
