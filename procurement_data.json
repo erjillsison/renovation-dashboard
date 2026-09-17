@@ -140,13 +140,13 @@
   {
     "id": "smart-switch-kitchen",
     "name": "Smart Switch (Kitchen)",
-    "choice": "Aqara H1 1-Gang (Black / Space Grey; Dedicated switch for kitchen ceiling downlights)",
+    "choice": "Aqara H1 2-Gang (Black / Space Grey; Dedicated switch for kitchen downlights + under-cabinet LED)",
     "notes": "Selected choice for Kitchen.",
     "room": "Kitchen",
     "priority": "P0",
     "status": "Selected",
-    "price": 55,
-    "priceDisplay": "$55",
+    "price": 60,
+    "priceDisplay": "$60",
     "availableAt": "Smart Innovations",
     "linkText": "Price brochure",
     "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
@@ -156,13 +156,13 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H1 1-Gang (Black / Space Grey; Dedicated switch for kitchen ceiling downlights)",
+        "model": "Aqara H1 2-Gang (Black / Space Grey; Dedicated switch for kitchen downlights + under-cabinet LED)",
         "notes": "Selected choice for Kitchen.",
         "stores": [
           {
             "store": "Smart Innovations",
-            "price": 55,
-            "priceDisplay": "$55",
+            "price": 60,
+            "priceDisplay": "$60",
             "promo": "",
             "linkText": "Price brochure",
             "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"

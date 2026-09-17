@@ -7771,20 +7771,20 @@ automation:
                     <circle cx="17" cy="15.5" r="1.5" fill="#38bdf8" />
                   </g>
 
-                  <!-- Kitchen: 1-Gang Dedicated Switch -->
+                  <!-- Kitchen: 2-Gang Dedicated Switch -->
                   <g
                     class="switch-pin"
                     transform="translate(555, 900)"
                     onclick="selectMapRoom('Kitchen')"
                   >
                     <title>
-                      Kitchen: Aqara H1 1-Gang Dedicated Smart Switch (Kitchen
-                      Ceiling Downlights)
+                      Kitchen: Aqara H1 2-Gang Dedicated Smart Switch (Ceiling
+                      Downlights + Under-Cabinet LED)
                     </title>
                     <rect
                       x="0"
                       y="-14"
-                      width="34"
+                      width="38"
                       height="12"
                       rx="3"
                       fill="#0f172a"
@@ -7793,7 +7793,7 @@ automation:
                       stroke-width="0.8"
                     />
                     <text
-                      x="17"
+                      x="19"
                       y="-5"
                       font-family="'Space Grotesk', sans-serif"
                       font-size="8"
@@ -7802,12 +7802,12 @@ automation:
                       text-anchor="middle"
                       letter-spacing="0.5"
                     >
-                      1-GANG
+                      2-GANG
                     </text>
                     <rect
                       x="0"
                       y="0"
-                      width="34"
+                      width="38"
                       height="20"
                       rx="3.5"
                       fill="#1e293b"
@@ -7815,7 +7815,16 @@ automation:
                       stroke-width="1.4"
                       filter="url(#badgeShadow)"
                     />
-                    <circle cx="17" cy="15.5" r="1.5" fill="#38bdf8" />
+                    <line
+                      x1="19"
+                      y1="2"
+                      x2="19"
+                      y2="18"
+                      stroke="#475569"
+                      stroke-width="1"
+                    />
+                    <circle cx="9.5" cy="15.5" r="1.5" fill="#38bdf8" />
+                    <circle cx="28.5" cy="15.5" r="1.5" fill="#38bdf8" />
                   </g>
 
                   <!-- Balcony: H1 2-Gang, Inside Sliding Door Frame -->
@@ -8791,13 +8800,13 @@ automation:
       {
             "id": "smart-switch-kitchen",
             "name": "Smart Switch (Kitchen)",
-            "choice": "Aqara H1 1-Gang (Black / Space Grey; Dedicated switch for kitchen ceiling downlights)",
+            "choice": "Aqara H1 2-Gang (Black / Space Grey; Dedicated switch for kitchen downlights + under-cabinet LED)",
             "notes": "Selected choice for Kitchen.",
             "room": "Kitchen",
             "priority": "P0",
             "status": "Selected",
-            "price": 55,
-            "priceDisplay": "$55",
+            "price": 60,
+            "priceDisplay": "$60",
             "availableAt": "Smart Innovations",
             "linkText": "Price brochure",
             "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
@@ -8807,13 +8816,13 @@ automation:
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Aqara H1 1-Gang (Black / Space Grey; Dedicated switch for kitchen ceiling downlights)",
+                        "model": "Aqara H1 2-Gang (Black / Space Grey; Dedicated switch for kitchen downlights + under-cabinet LED)",
                         "notes": "Selected choice for Kitchen.",
                         "stores": [
                               {
                                     "store": "Smart Innovations",
-                                    "price": 55,
-                                    "priceDisplay": "$55",
+                                    "price": 60,
+                                    "priceDisplay": "$60",
                                     "promo": "",
                                     "linkText": "Price brochure",
                                     "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
@@ -13616,7 +13625,7 @@ automation:
           sensors:
             "• <strong>Time-Conditioned Smart Switch</strong><br>• Optional Under-Cabinet PIR Sensor<br>• Context-aware routine automation",
           lighting:
-            "• <strong>Aqara H1 1-Gang Dedicated Switch</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Black / Space Grey</span>)<br>• <strong>Wall Sockets:</strong> Legrand Mallia Senses (<span style='color: var(--sage-primary); font-weight: 700;'>Matt White</span> - blends into backsplash tiles)<br>• 3x High-CRI Recessed Downlights<br>• 1x 3m 24V COB Warm White Strip (Under-Cabinet)",
+            "• <strong>Aqara H1 2-Gang Dedicated Switch</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Black / Space Grey</span>)<br>• <strong>Dual Rockers:</strong> Rocker 1 (Downlights), Rocker 2 (Under-Cabinet Task LED)<br>• <strong>Wall Sockets:</strong> Legrand Mallia Senses (<span style='color: var(--sage-primary); font-weight: 700;'>Matt White</span> - blends into backsplash tiles)<br>• 3x High-CRI Recessed Downlights<br>• 1x 3m 24V COB Warm White Strip (Under-Cabinet)",
           automations:
             "• <strong>7:00 AM Coffee Routine:</strong> Switch press between 06:00–08:30 AM turns on ONLY under-cabinet warm strip at 30%. Glare-free morning coffee before sunrise.<br>• <strong>Meal Prep:</strong> Full 4000K crisp downlights + counter task light.<br>• <strong>Double-Click Override:</strong> Instant 100% full brightness anytime.",
           filterRoom: "Kitchen",
