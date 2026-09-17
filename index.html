@@ -4289,6 +4289,45 @@ automation:
                     STORAGE / PEGBOARD
                   </text>
 
+                  <!-- Guest Wi-Fi QR Code Plaque on Pegboard -->
+                  <g transform="translate(738, 895)">
+                    <rect
+                      x="0"
+                      y="0"
+                      width="24"
+                      height="20"
+                      rx="3"
+                      fill="#0f172a"
+                      stroke="#38bdf8"
+                      stroke-width="1"
+                    />
+                    <text
+                      x="12"
+                      y="11"
+                      font-size="7.5"
+                      font-family="'Space Grotesk', sans-serif"
+                      font-weight="800"
+                      fill="#38bdf8"
+                      text-anchor="middle"
+                    >
+                      QR
+                    </text>
+                    <text
+                      x="12"
+                      y="18"
+                      font-size="5.5"
+                      font-family="'Space Grotesk', sans-serif"
+                      font-weight="700"
+                      fill="#94a3b8"
+                      text-anchor="middle"
+                    >
+                      WI-FI
+                    </text>
+                    <title>
+                      Guest Wi-Fi QR Code Plaque (Hallway / Entryway Pegboard)
+                    </title>
+                  </g>
+
                   <rect
                     x="735"
                     y="1075"
@@ -11032,6 +11071,40 @@ automation:
             ]
       },
       {
+            "id": "guest-wi-fi-qr-display-sign",
+            "name": "Guest Wi-Fi QR Display Sign",
+            "choice": "Custom Acrylic / Wood QR Code Plaque with Pegboard Mount (Hallway / Entryway Pegboard)",
+            "notes": "Selected choice for Whole House.",
+            "room": "Whole House",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 18,
+            "priceDisplay": "$18",
+            "availableAt": "Shopee SG",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/search?keyword=custom%20wifi%20qr%20code%20acrylic%20sign",
+            "sellerDeductible": false,
+            "sellerSavings": 0,
+            "selectedOptionIndex": 0,
+            "selectedStoreIndex": 0,
+            "options": [
+                  {
+                        "model": "Custom Acrylic / Wood QR Code Plaque with Pegboard Mount (Hallway / Entryway Pegboard)",
+                        "notes": "Selected choice for Whole House.",
+                        "stores": [
+                              {
+                                    "store": "Shopee SG",
+                                    "price": 18,
+                                    "priceDisplay": "$18",
+                                    "promo": "",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg/search?keyword=custom%20wifi%20qr%20code%20acrylic%20sign"
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
             "id": "aircon-system-3",
             "name": "Aircon (System 3)",
             "choice": "Daikin iSmile Eco+ MKM75ZVMG (5-Tick Condenser)",
@@ -13567,7 +13640,7 @@ automation:
           dimensions:
             "• <strong>Corridor Length:</strong> ±2,940 mm<br>• <strong>Entrance Width:</strong> ±1,620 mm (includes shoe cabinet / DB recess)<br>• <strong>Floor Area:</strong> ~4.8 m² (~51 sq ft)<br>• <strong>Features:</strong> Main door inward swing, 1500mm shoe cabinet + pegboard drop zone.",
           sensors:
-            "• <strong>1x Aqara Door Contact Sensor T1</strong> (Main Door Frame)<br>• <strong>1x Aqara PIR Motion Sensor P1</strong> (Shoe Bench)<br>• 100% Battery Powered (CR1632 & CR2450, 2-5 yrs)",
+            "• <strong>1x Aqara Door Contact Sensor T1</strong> (Main Door Frame)<br>• <strong>1x Aqara PIR Motion Sensor P1</strong> (Shoe Bench)<br>• <strong>Guest Wi-Fi QR Sign:</strong> Custom acrylic/wood QR plaque on hallway pegboard for instant guest Wi-Fi scan-to-connect.<br>• 100% Battery Powered (CR1632 & CR2450, 2-5 yrs)",
           lighting:
             "• <strong>Aqara H1 2-Gang Switch</strong> (Neutral Wire)<br>• 1x High-CRI Ceiling Downlight<br>• 1x 2m 24V COB Warm White Strip (Floating Shoe Cabinet)",
           automations:
@@ -13636,7 +13709,8 @@ automation:
           zoneId: "zone-Hallway",
           dimensions:
             "• <strong>Corridor Width:</strong> ±1,500 mm<br>• <strong>Clear Length:</strong> ±1,505 mm<br>• <strong>Floor Area:</strong> ~2.3 m² (~25 sq ft)<br>• <strong>Features:</strong> Central corridor connecting Living, Kitchen, Bathrooms, and Bedrooms.",
-          sensors: "• PIR Motion Sensor / Pathway Lighting Sync",
+          sensors:
+            "• PIR Motion Sensor / Pathway Lighting Sync<br>• <strong>Guest Wi-Fi:</strong> Quick-scan QR plaque located on adjacent corridor pegboard.",
           lighting:
             "• <strong>Aqara H1 1-Gang Dedicated Switch</strong> (Corridor wall beside door to the right)<br>• 2x High-CRI Recessed Downlights",
           automations:

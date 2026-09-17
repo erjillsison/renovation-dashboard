@@ -185,6 +185,14 @@
                   <rect x="735" y="890" width="30" height="175" rx="3" fill="#ffffff" fill-opacity="0.9" stroke="#3b82f6" stroke-width="1.5" />
                   <text x="752" y="978" font-size="8" font-weight="700" fill="#2563eb" text-anchor="middle" stroke="none" transform="rotate(90 752 978)">STORAGE / PEGBOARD</text>
 
+                  <!-- Guest Wi-Fi QR Code Plaque on Pegboard -->
+                  <g transform="translate(738, 895)">
+                    <rect x="0" y="0" width="24" height="20" rx="3" fill="#0f172a" stroke="#38bdf8" stroke-width="1" />
+                    <text x="12" y="11" font-size="7.5" font-family="'Space Grotesk', sans-serif" font-weight="800" fill="#38bdf8" text-anchor="middle">QR</text>
+                    <text x="12" y="18" font-size="5.5" font-family="'Space Grotesk', sans-serif" font-weight="700" fill="#94a3b8" text-anchor="middle">WI-FI</text>
+                    <title>Guest Wi-Fi QR Code Plaque (Hallway / Entryway Pegboard)</title>
+                  </g>
+
                   <rect x="735" y="1075" width="30" height="125" rx="3" fill="#ffffff" fill-opacity="0.9" stroke="#3b82f6" stroke-width="1.5" />
                   <text x="752" y="1138" font-size="8" font-weight="700" fill="#2563eb" text-anchor="middle" stroke="none" transform="rotate(90 752 1138)">HANGING / SHOE</text>
 

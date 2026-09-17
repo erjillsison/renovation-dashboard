@@ -2372,6 +2372,40 @@
     ]
   },
   {
+    "id": "guest-wi-fi-qr-display-sign",
+    "name": "Guest Wi-Fi QR Display Sign",
+    "choice": "Custom Acrylic / Wood QR Code Plaque with Pegboard Mount (Hallway / Entryway Pegboard)",
+    "notes": "Selected choice for Whole House.",
+    "room": "Whole House",
+    "priority": "P1",
+    "status": "Selected",
+    "price": 18,
+    "priceDisplay": "$18",
+    "availableAt": "Shopee SG",
+    "linkText": "Shopee",
+    "linkUrl": "https://shopee.sg/search?keyword=custom%20wifi%20qr%20code%20acrylic%20sign",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Custom Acrylic / Wood QR Code Plaque with Pegboard Mount (Hallway / Entryway Pegboard)",
+        "notes": "Selected choice for Whole House.",
+        "stores": [
+          {
+            "store": "Shopee SG",
+            "price": 18,
+            "priceDisplay": "$18",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/search?keyword=custom%20wifi%20qr%20code%20acrylic%20sign"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "aircon-system-3",
     "name": "Aircon (System 3)",
     "choice": "Daikin iSmile Eco+ MKM75ZVMG (5-Tick Condenser)",
