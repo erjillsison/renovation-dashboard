@@ -138,15 +138,15 @@
     ]
   },
   {
-    "id": "smart-switch-kitchen-hall",
-    "name": "Smart Switch (Kitchen + Hall)",
-    "choice": "Aqara H1 3-Gang (Kitchen downlights + Under-cabinet LED + Corridor downlights)",
+    "id": "smart-switch-kitchen",
+    "name": "Smart Switch (Kitchen)",
+    "choice": "Aqara H1 1-Gang (Dedicated switch for kitchen ceiling downlights)",
     "notes": "Selected choice for Kitchen.",
     "room": "Kitchen",
     "priority": "P0",
     "status": "Selected",
-    "price": 75,
-    "priceDisplay": "$75",
+    "price": 55,
+    "priceDisplay": "$55",
     "availableAt": "Smart Innovations",
     "linkText": "Price brochure",
     "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
@@ -156,13 +156,47 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H1 3-Gang (Kitchen downlights + Under-cabinet LED + Corridor downlights)",
+        "model": "Aqara H1 1-Gang (Dedicated switch for kitchen ceiling downlights)",
         "notes": "Selected choice for Kitchen.",
         "stores": [
           {
             "store": "Smart Innovations",
-            "price": 75,
-            "priceDisplay": "$75",
+            "price": 55,
+            "priceDisplay": "$55",
+            "promo": "",
+            "linkText": "Price brochure",
+            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "smart-switch-hallway",
+    "name": "Smart Switch (Hallway)",
+    "choice": "Aqara H1 1-Gang (Dedicated corridor downlights switch, beside door to the right)",
+    "notes": "Selected choice for Whole House.",
+    "room": "Whole House",
+    "priority": "P0",
+    "status": "Selected",
+    "price": 55,
+    "priceDisplay": "$55",
+    "availableAt": "Smart Innovations",
+    "linkText": "Price brochure",
+    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Aqara H1 1-Gang (Dedicated corridor downlights switch, beside door to the right)",
+        "notes": "Selected choice for Whole House.",
+        "stores": [
+          {
+            "store": "Smart Innovations",
+            "price": 55,
+            "priceDisplay": "$55",
             "promo": "",
             "linkText": "Price brochure",
             "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
@@ -242,13 +276,13 @@
   {
     "id": "smart-switch-bedroom-2",
     "name": "Smart Switch (Bedroom 2)",
-    "choice": "Aqara H1 2-Gang (Main room lights + Study desk zone)",
+    "choice": "Aqara H1 1-Gang (Dedicated switch for bedroom study downlights)",
     "notes": "Selected choice for Bedroom 2.",
     "room": "Bedroom 2 / Study",
     "priority": "P0",
     "status": "Selected",
-    "price": 60,
-    "priceDisplay": "$60",
+    "price": 55,
+    "priceDisplay": "$55",
     "availableAt": "Smart Innovations",
     "linkText": "Price brochure",
     "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
@@ -258,13 +292,13 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H1 2-Gang (Main room lights + Study desk zone)",
+        "model": "Aqara H1 1-Gang (Dedicated switch for bedroom study downlights)",
         "notes": "Selected choice for Bedroom 2.",
         "stores": [
           {
             "store": "Smart Innovations",
-            "price": 60,
-            "priceDisplay": "$60",
+            "price": 55,
+            "priceDisplay": "$55",
             "promo": "",
             "linkText": "Price brochure",
             "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
@@ -310,13 +344,13 @@
   {
     "id": "smart-switch-common-bath",
     "name": "Smart Switch (Common Bath)",
-    "choice": "Aqara H1 2-Gang (Main downlight + Vanity mirror light)",
+    "choice": "Aqara H1 1-Gang (Dedicated switch for common bathroom downlights)",
     "notes": "Selected choice for Bathrooms.",
     "room": "Bathrooms",
     "priority": "P0",
     "status": "Selected",
-    "price": 60,
-    "priceDisplay": "$60",
+    "price": 55,
+    "priceDisplay": "$55",
     "availableAt": "Smart Innovations",
     "linkText": "Price brochure",
     "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
@@ -326,13 +360,13 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H1 2-Gang (Main downlight + Vanity mirror light)",
+        "model": "Aqara H1 1-Gang (Dedicated switch for common bathroom downlights)",
         "notes": "Selected choice for Bathrooms.",
         "stores": [
           {
             "store": "Smart Innovations",
-            "price": 60,
-            "priceDisplay": "$60",
+            "price": 55,
+            "priceDisplay": "$55",
             "promo": "",
             "linkText": "Price brochure",
             "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
@@ -628,15 +662,15 @@
     ]
   },
   {
-    "id": "dumb-downlights-bathrooms-x2",
-    "name": "Dumb Downlights (Bathrooms x2)",
-    "choice": "4x High-CRI (>90) IP44 Splash-Rated Downlights",
+    "id": "dumb-downlights-master-bath",
+    "name": "Dumb Downlights (Master Bath)",
+    "choice": "2x High-CRI (>90) IP44 Waterproof Downlights",
     "notes": "Selected choice for Bathrooms.",
     "room": "Bathrooms",
     "priority": "P1",
     "status": "Selected",
-    "price": 85,
-    "priceDisplay": "$85",
+    "price": 50,
+    "priceDisplay": "$50",
     "availableAt": "Sembawang Lighting House / Shopee",
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/IP65-LED-Downlight-7W-9W-12W-15W-Waterproof-LED-DownLights-AC220V-230V-240V-Recessed-Downlight-LED-Spot-For-Bathroom-i.800728237.19715736986",
@@ -646,13 +680,13 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "4x High-CRI (>90) IP44 Splash-Rated Downlights",
+        "model": "2x High-CRI (>90) IP44 Waterproof Downlights",
         "notes": "Selected choice for Bathrooms.",
         "stores": [
           {
             "store": "Sembawang Lighting House / Shopee",
-            "price": 85,
-            "priceDisplay": "$85",
+            "price": 50,
+            "priceDisplay": "$50",
             "promo": "",
             "linkText": "Shopee",
             "linkUrl": "https://shopee.sg/IP65-LED-Downlight-7W-9W-12W-15W-Waterproof-LED-DownLights-AC220V-230V-240V-Recessed-Downlight-LED-Spot-For-Bathroom-i.800728237.19715736986"
@@ -662,116 +696,136 @@
     ]
   },
   {
-    "id": "accent-led-strip-entrance",
-    "name": "Accent LED Strip (Entrance)",
-    "choice": "1x 2m 24V COB Warm White Strip + Driver (Shoe Cabinet)",
-    "notes": "Selected choice for Entrance.",
-    "room": "Entrance",
+    "id": "dumb-downlights-common-bath",
+    "name": "Dumb Downlights (Common Bath)",
+    "choice": "2x High-CRI (>90) IP44 Waterproof Downlights",
+    "notes": "Selected choice for Bathrooms.",
+    "room": "Bathrooms",
     "priority": "P1",
     "status": "Selected",
-    "price": 60,
-    "priceDisplay": "$60",
-    "availableAt": "Electrical Specialist / Shopee",
+    "price": 50,
+    "priceDisplay": "$50",
+    "availableAt": "Sembawang Lighting House / Shopee",
     "linkText": "Shopee",
-    "linkUrl": "https://shopee.sg/SG%F0%9F%87%B8%F0%9F%87%ACStock-5M%E2%80%BC%EF%B8%8F24V-COB-Led-Strip-White-Warm-White-COB-LED-Strip-High-Density-480-LEDs-m-Flexible-COB-LED-Lights-LED-Tape-i.774896381.24390527773",
+    "linkUrl": "https://shopee.sg/IP65-LED-Downlight-7W-9W-12W-15W-Waterproof-LED-DownLights-AC220V-230V-240V-Recessed-Downlight-LED-Spot-For-Bathroom-i.800728237.19715736986",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "1x 2m 24V COB Warm White Strip + Driver (Shoe Cabinet)",
-        "notes": "Selected choice for Entrance.",
+        "model": "2x High-CRI (>90) IP44 Waterproof Downlights",
+        "notes": "Selected choice for Bathrooms.",
         "stores": [
           {
-            "store": "Electrical Specialist / Shopee",
-            "price": 60,
-            "priceDisplay": "$60",
+            "store": "Sembawang Lighting House / Shopee",
+            "price": 50,
+            "priceDisplay": "$50",
             "promo": "",
             "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg/SG%F0%9F%87%B8%F0%9F%87%ACStock-5M%E2%80%BC%EF%B8%8F24V-COB-Led-Strip-White-Warm-White-COB-LED-Strip-High-Density-480-LEDs-m-Flexible-COB-LED-Lights-LED-Tape-i.774896381.24390527773"
+            "linkUrl": "https://shopee.sg/IP65-LED-Downlight-7W-9W-12W-15W-Waterproof-LED-DownLights-AC220V-230V-240V-Recessed-Downlight-LED-Spot-For-Bathroom-i.800728237.19715736986"
           }
         ]
       }
     ]
   },
   {
-    "id": "accent-led-strip-kitchen",
-    "name": "Accent LED Strip (Kitchen)",
-    "choice": "1x 3m 24V COB Warm White Strip + Driver (Under-Cabinet)",
+    "id": "under-cabinet-led-strip-kitchen",
+    "name": "Under-Cabinet LED Strip (Kitchen)",
+    "choice": "3m 24V COB Warm White LED Strip (3000K, >90 CRI) + Driver",
     "notes": "Selected choice for Kitchen.",
     "room": "Kitchen",
     "priority": "P1",
     "status": "Selected",
-    "price": 90,
-    "priceDisplay": "$90",
-    "availableAt": "Electrical Specialist / Shopee",
+    "price": 55,
+    "priceDisplay": "$55",
+    "availableAt": "Sembawang Lighting House / Shopee",
     "linkText": "Shopee",
-    "linkUrl": "https://shopee.sg/MEANWELL-24V-LED-Strip-Driver-35W-50W-75W-100W-150W-200W-Mean-Well-LRS-Series-Switching-Power-Supply-COB-SMD-Light-i.1147665864.25059494446",
+    "linkUrl": "https://shopee.sg/COB-LED-Strip-Light-12V-24V-Warm-White-High-Density-Flexible-LED-Tape-Kitchen-Under-Cabinet-Lighting-i.1013019863.24143888921",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "1x 3m 24V COB Warm White Strip + Driver (Under-Cabinet)",
+        "model": "3m 24V COB Warm White LED Strip (3000K, >90 CRI) + Driver",
         "notes": "Selected choice for Kitchen.",
         "stores": [
           {
-            "store": "Electrical Specialist / Shopee",
-            "price": 90,
-            "priceDisplay": "$90",
+            "store": "Sembawang Lighting House / Shopee",
+            "price": 55,
+            "priceDisplay": "$55",
             "promo": "",
             "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg/MEANWELL-24V-LED-Strip-Driver-35W-50W-75W-100W-150W-200W-Mean-Well-LRS-Series-Switching-Power-Supply-COB-SMD-Light-i.1147665864.25059494446"
+            "linkUrl": "https://shopee.sg/COB-LED-Strip-Light-12V-24V-Warm-White-High-Density-Flexible-LED-Tape-Kitchen-Under-Cabinet-Lighting-i.1013019863.24143888921"
           }
         ]
       }
     ]
   },
   {
-    "id": "ceiling-fan-living",
-    "name": "Ceiling Fan (Living)",
-    "choice": "Fanco DC (RF) + Bond Bridge (Living Room)",
-    "notes": "Minimalist ultra-quiet DC ceiling fan paired with Bond Bridge for local Home Assistant control.",
-    "room": "Living Room",
-    "priority": "P0",
+    "id": "floating-shoe-bench-led-strip",
+    "name": "Floating Shoe Bench LED Strip",
+    "choice": "2m 24V COB Warm White LED Strip (3000K, >90 CRI) + Driver",
+    "notes": "Measure entryway walkway clearance and swing.",
+    "room": "Entrance",
+    "priority": "P2",
     "status": "Selected",
-    "price": 350,
-    "priceDisplay": "$350.00",
+    "price": 40,
+    "priceDisplay": "$40",
     "availableAt": "Sembawang Lighting House / Shopee",
     "linkText": "Shopee",
-    "linkUrl": "https://shopee.sg/FANCO-B-Star-DC-Ceiling-Fan-Minimalist-Design-Ultra-Quiet-Energy-Efficient-Smart-Wifi-Option-i.185398922.29588260126",
+    "linkUrl": "https://shopee.sg/COB-LED-Strip-Light-12V-24V-Warm-White-High-Density-Flexible-LED-Tape-Kitchen-Under-Cabinet-Lighting-i.1013019863.24143888921",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Fanco DC (RF) + Bond Bridge (Living Room)",
-        "notes": "Minimalist ultra-quiet DC ceiling fan paired with Bond Bridge for local Home Assistant control.",
+        "model": "2m 24V COB Warm White LED Strip (3000K, >90 CRI) + Driver",
+        "notes": "Measure entryway walkway clearance and swing.",
+        "stores": [
+          {
+            "store": "Sembawang Lighting House / Shopee",
+            "price": 40,
+            "priceDisplay": "$40",
+            "promo": "",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg/COB-LED-Strip-Light-12V-24V-Warm-White-High-Density-Flexible-LED-Tape-Kitchen-Under-Cabinet-Lighting-i.1013019863.24143888921"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ceiling-fan-living-room",
+    "name": "Ceiling Fan (Living Room)",
+    "choice": "Fanco DC 52\" (RF) with LED + Bond Bridge Pro integration",
+    "notes": "1x unit confirmed for Living Room. Bond Bridge gives local HA RF control.",
+    "room": "Living Room",
+    "priority": "P0",
+    "status": "Selected",
+    "price": 350,
+    "priceDisplay": "$350",
+    "availableAt": "Sembawang Lighting House / Shopee",
+    "linkText": "Shopee",
+    "linkUrl": "https://shopee.sg/Fanco-Heli-DC-Motor-Ceiling-Fan-with-24W-3-Tone-LED-and-Remote-i.311742409.9016176030",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Fanco DC 52\" (RF) with LED + Bond Bridge Pro integration",
+        "notes": "1x unit confirmed for Living Room. Bond Bridge gives local HA RF control.",
         "stores": [
           {
             "store": "Sembawang Lighting House / Shopee",
             "price": 350,
-            "priceDisplay": "$350.00",
-            "promo": "DC Fan + Remote",
+            "priceDisplay": "$350",
+            "promo": "",
             "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg/FANCO-B-Star-DC-Ceiling-Fan-Minimalist-Design-Ultra-Quiet-Energy-Efficient-Smart-Wifi-Option-i.185398922.29588260126"
-          }
-        ]
-      },
-      {
-        "model": "KDK U48FP DC Ceiling Fan",
-        "notes": "Standard benchmark KDK reliability with LED light kit.",
-        "stores": [
-          {
-            "store": "Sembawang Lighting House",
-            "price": 480,
-            "priceDisplay": "$480.00",
-            "promo": "KDK Authorized",
-            "linkText": "Sembawang Lighting",
-            "linkUrl": "https://sembawanglighting.com.sg"
+            "linkUrl": "https://shopee.sg/Fanco-Heli-DC-Motor-Ceiling-Fan-with-24W-3-Tone-LED-and-Remote-i.311742409.9016176030"
           }
         ]
       }
