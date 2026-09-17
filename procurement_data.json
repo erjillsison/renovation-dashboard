@@ -1884,13 +1884,13 @@
   {
     "id": "zip-track",
     "name": "Zip Track",
-    "choice": "Dooya DM45S AC Motor + Aqara T2 Zigbee Relay",
-    "notes": "Track-guided balcony outdoor blinds (~$28-$35 psf) with local smart automation.",
+    "choice": "Dooya Bi-Directional Motor (DM45EQ/R) + DD7002B Bridge",
+    "notes": "Selected. 45mm electronic-limit motor with true 0-100% encoder position reporting via local LAN Motionblinds HA integration.",
     "room": "Balcony",
     "priority": "P0",
     "status": "Selected",
-    "price": 2800,
-    "priceDisplay": "$2,800.00",
+    "price": 2850,
+    "priceDisplay": "$2,850.00",
     "availableAt": "Zip Track Specialist / Contractor",
     "linkText": "Shopee",
     "linkUrl": "https://shopee.sg/product/1878598027/52765706758",
@@ -1900,16 +1900,30 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Dooya DM45S AC Motor + Aqara T2 Zigbee Relay",
-        "notes": "Track-guided balcony outdoor blinds (~$28-$35 psf) with local smart automation.",
+        "model": "Dooya Bi-Directional Motor (DM45EQ/R) + DD7002B Bridge",
+        "notes": "Selected. 45mm electronic-limit motor with true 0-100% encoder position reporting via local LAN Motionblinds HA integration.",
         "stores": [
           {
             "store": "Zip Track Specialist / Contractor",
-            "price": 2800,
-            "priceDisplay": "$2,800.00",
-            "promo": "Custom Balcony Track",
+            "price": 2850,
+            "priceDisplay": "$2,850.00",
+            "promo": "Bi-Directional RF + DD7002B Hub",
             "linkText": "Shopee",
             "linkUrl": "https://shopee.sg/product/1878598027/52765706758"
+          }
+        ]
+      },
+      {
+        "model": "Dooya DM45EQ/Z Native Zigbee 3.0 Motor",
+        "notes": "Direct Zigbee2MQTT/ZHA integration with zero extra bridges. Doubles as a permanent 230V Zigbee router on the balcony.",
+        "stores": [
+          {
+            "store": "Smart Blinds Specialist / Contractor",
+            "price": 2900,
+            "priceDisplay": "$2,900.00",
+            "promo": "Direct Zigbee 3.0",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg"
           }
         ]
       },
