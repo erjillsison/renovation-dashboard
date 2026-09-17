@@ -2406,6 +2406,76 @@
     ]
   },
   {
+    "id": "climbing-hangboard",
+    "name": "Climbing Hangboard",
+    "choice": "Beastmaker 1000 Series (FSC Beech Wood)",
+    "notes": "Industry benchmark wooden fingerboard. Fine-grain skin-friendly beech wood with jugs, slopers, and 20-30mm edges. Mount on RC lintel with 18mm birch backer.",
+    "room": "Bedroom 2 / Study",
+    "priority": "P1",
+    "status": "Selected",
+    "price": 195,
+    "priceDisplay": "$195.00",
+    "availableAt": "Boulder Planet SG",
+    "linkText": "Boulder Planet",
+    "linkUrl": "https://boulderplanet.sg",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Beastmaker 1000 Series (FSC Beech Wood)",
+        "notes": "Industry benchmark wooden fingerboard. Fine-grain skin-friendly beech wood with jugs, slopers, and 20-30mm edges. Mount on RC lintel with 18mm birch backer.",
+        "stores": [
+          {
+            "store": "Boulder Planet SG",
+            "price": 195,
+            "priceDisplay": "$195.00",
+            "promo": "Official SG climbing gym stock; pickup at Sembawang / MacPherson or local delivery.",
+            "linkText": "Boulder Planet",
+            "linkUrl": "https://boulderplanet.sg"
+          },
+          {
+            "store": "Shopee SG",
+            "price": 195,
+            "priceDisplay": "$195.00",
+            "promo": "Authentic Beastmaker distribution.",
+            "linkText": "Shopee SG",
+            "linkUrl": "https://shopee.sg/search?keyword=beastmaker%201000"
+          }
+        ]
+      },
+      {
+        "model": "Beastmaker 2000 Series (Advanced / Elite)",
+        "notes": "Pro-tier training board for V5/6C+ athletes: 45\u00b0 slopers, asymmetrical pockets, monos, and 10-15mm micro-edges (no jugs).",
+        "stores": [
+          {
+            "store": "Boulder Planet SG",
+            "price": 195,
+            "priceDisplay": "$195.00",
+            "promo": "Official SG climbing gym stock.",
+            "linkText": "Boulder Planet",
+            "linkUrl": "https://boulderplanet.sg"
+          }
+        ]
+      },
+      {
+        "model": "Solid Beechwood Multi-Depth Board (Value Alternative)",
+        "notes": "High-value 55cm solid hardwood training board with 15/20/25mm progressive edges and dual jugs.",
+        "stores": [
+          {
+            "store": "Shopee SG",
+            "price": 75,
+            "priceDisplay": "$75.00",
+            "promo": "Budget wooden fingerboard with mounting screws.",
+            "linkText": "Shopee SG",
+            "linkUrl": "https://shopee.sg/search?keyword=climbing%20hangboard%20wood"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "aircon-system-3",
     "name": "Aircon (System 3)",
     "choice": "Daikin iSmile Eco+ MKM75ZVMG (5-Tick Condenser)",

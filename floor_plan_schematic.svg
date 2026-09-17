@@ -806,7 +806,7 @@
                 </g>
 
                 <!-- 6. Common Bathroom Door Contact (T1) -->
-                <g class="sensor-pin" transform="translate(540, 580)" onclick="selectMapRoom('Common Bath')">
+                <g class="sensor-pin" transform="translate(540, 635)" onclick="selectMapRoom('Common Bath')">
                   <circle cx="0" cy="0" r="11" fill="#c95d46" stroke="#ffffff" stroke-width="2" />
                   <text x="0" y="3.5" font-size="8.5" fill="#ffffff" font-weight="800" text-anchor="middle">🚪</text>
                 </g>
@@ -830,6 +830,13 @@
                   <circle cx="0" cy="0" r="10" fill="#c95d46" stroke="#ffffff" stroke-width="1.5" />
                   <text x="0" y="3" font-size="8.5" fill="#ffffff" font-weight="800" text-anchor="middle">👗</text>
                 </g>
+                </g>
+
+                <!-- Overhead Fixtures: Climbing Hangboard (Bedroom 2 Doorway Lintel) -->
+                <g id="fixture-climbing-hangboard" transform="translate(534, 558)">
+                  <rect x="0" y="0" width="52" height="14" rx="3.5" fill="#2d1a0e" stroke="#f59e0b" stroke-width="1.2" filter="url(#badgeShadow)" />
+                  <text x="26" y="10" font-size="6.5" font-family="'Space Grotesk', sans-serif" font-weight="800" fill="#fef3c7" text-anchor="middle" stroke="none" letter-spacing="0.4">HANGBOARD</text>
+                  <title>Climbing Hangboard: Beastmaker 1000 Series (Mounted on Reinforced Concrete Doorway Lintel with 18mm Birch Backer)</title>
                 </g>
 
                 <!-- Layer 6: Wall Switches (High-Contrast Smart Switches at Door Frames) -->

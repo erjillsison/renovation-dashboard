@@ -7339,7 +7339,7 @@ automation:
                   <!-- 6. Common Bathroom Door Contact (T1) -->
                   <g
                     class="sensor-pin"
-                    transform="translate(540, 580)"
+                    transform="translate(540, 635)"
                     onclick="selectMapRoom('Common Bath')"
                   >
                     <circle
@@ -7457,6 +7457,35 @@ automation:
                       👗
                     </text>
                   </g>
+                </g>
+
+                <!-- Overhead Fixtures: Climbing Hangboard (Bedroom 2 Doorway Lintel) -->
+                <g id="fixture-climbing-hangboard" transform="translate(534, 558)">
+                  <rect
+                    x="0"
+                    y="0"
+                    width="52"
+                    height="14"
+                    rx="3.5"
+                    fill="#2d1a0e"
+                    stroke="#f59e0b"
+                    stroke-width="1.2"
+                    filter="url(#badgeShadow)"
+                  />
+                  <text
+                    x="26"
+                    y="10"
+                    font-size="6.5"
+                    font-family="'Space Grotesk', sans-serif"
+                    font-weight="800"
+                    fill="#fef3c7"
+                    text-anchor="middle"
+                    stroke="none"
+                    letter-spacing="0.4"
+                  >
+                    HANGBOARD
+                  </text>
+                  <title>Climbing Hangboard: Beastmaker 1000 Series (Mounted on Reinforced Concrete Doorway Lintel with 18mm Birch Backer)</title>
                 </g>
 
                 <!-- Layer 5b: Suggested switch-to-light paths. These are schematic circuits, not conduit routes. -->
@@ -11107,6 +11136,76 @@ automation:
             ]
       },
       {
+            "id": "climbing-hangboard",
+            "name": "Climbing Hangboard",
+            "choice": "Beastmaker 1000 Series (FSC Beech Wood)",
+            "notes": "Industry benchmark wooden fingerboard. Fine-grain skin-friendly beech wood with jugs, slopers, and 20-30mm edges. Mount on RC lintel with 18mm birch backer.",
+            "room": "Bedroom 2 / Study",
+            "priority": "P1",
+            "status": "Selected",
+            "price": 195,
+            "priceDisplay": "$195.00",
+            "availableAt": "Boulder Planet SG",
+            "linkText": "Boulder Planet",
+            "linkUrl": "https://boulderplanet.sg",
+            "sellerDeductible": false,
+            "sellerSavings": 0,
+            "selectedOptionIndex": 0,
+            "selectedStoreIndex": 0,
+            "options": [
+                  {
+                        "model": "Beastmaker 1000 Series (FSC Beech Wood)",
+                        "notes": "Industry benchmark wooden fingerboard. Fine-grain skin-friendly beech wood with jugs, slopers, and 20-30mm edges. Mount on RC lintel with 18mm birch backer.",
+                        "stores": [
+                              {
+                                    "store": "Boulder Planet SG",
+                                    "price": 195,
+                                    "priceDisplay": "$195.00",
+                                    "promo": "Official SG climbing gym stock; pickup at Sembawang / MacPherson or local delivery.",
+                                    "linkText": "Boulder Planet",
+                                    "linkUrl": "https://boulderplanet.sg"
+                              },
+                              {
+                                    "store": "Shopee SG",
+                                    "price": 195,
+                                    "priceDisplay": "$195.00",
+                                    "promo": "Authentic Beastmaker distribution.",
+                                    "linkText": "Shopee SG",
+                                    "linkUrl": "https://shopee.sg/search?keyword=beastmaker%201000"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Beastmaker 2000 Series (Advanced / Elite)",
+                        "notes": "Pro-tier training board for V5/6C+ athletes: 45\u00b0 slopers, asymmetrical pockets, monos, and 10-15mm micro-edges (no jugs).",
+                        "stores": [
+                              {
+                                    "store": "Boulder Planet SG",
+                                    "price": 195,
+                                    "priceDisplay": "$195.00",
+                                    "promo": "Official SG climbing gym stock.",
+                                    "linkText": "Boulder Planet",
+                                    "linkUrl": "https://boulderplanet.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Solid Beechwood Multi-Depth Board (Value Alternative)",
+                        "notes": "High-value 55cm solid hardwood training board with 15/20/25mm progressive edges and dual jugs.",
+                        "stores": [
+                              {
+                                    "store": "Shopee SG",
+                                    "price": 75,
+                                    "priceDisplay": "$75.00",
+                                    "promo": "Budget wooden fingerboard with mounting screws.",
+                                    "linkText": "Shopee SG",
+                                    "linkUrl": "https://shopee.sg/search?keyword=climbing%20hangboard%20wood"
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
             "id": "aircon-system-3",
             "name": "Aircon (System 3)",
             "choice": "Daikin iSmile Eco+ MKM75ZVMG (5-Tick Condenser)",
@@ -13710,9 +13809,9 @@ automation:
           type: "Transition • Bedroom & Bath Corridor",
           zoneId: "zone-Hallway",
           dimensions:
-            "• <strong>Corridor Width:</strong> ±1,500 mm<br>• <strong>Clear Length:</strong> ±1,505 mm<br>• <strong>Floor Area:</strong> ~2.3 m² (~25 sq ft)<br>• <strong>Features:</strong> Central corridor connecting Living, Kitchen, Bathrooms, and Bedrooms.",
+            "• <strong>Corridor Width:</strong> ±1,500 mm<br>• <strong>Clear Length:</strong> ±1,505 mm<br>• <strong>Floor Area:</strong> ~2.3 m² (~25 sq ft)<br>• <strong>Features:</strong> Central corridor connecting Living, Kitchen, Bathrooms, and Bedrooms. Overhead RC doorway lintel with Beastmaker 1000 climbing hangboard.",
           sensors:
-            "• PIR Motion Sensor / Pathway Lighting Sync<br>• <strong>Guest Wi-Fi:</strong> Quick-scan QR plaque located on adjacent corridor pegboard.",
+            "• PIR Motion Sensor / Pathway Lighting Sync<br>• <strong>Guest Wi-Fi:</strong> Quick-scan QR plaque located on adjacent corridor pegboard.<br>• <strong>Training Lintel:</strong> Overhead climbing hangboard across Bedroom 2 doorway opening.",
           lighting:
             "• <strong>Aqara H1 1-Gang Dedicated Switch</strong> (Corridor wall beside door to the right)<br>• 2x High-CRI Recessed Downlights",
           automations:
@@ -13724,9 +13823,9 @@ automation:
           type: "Private • WFH Office & Guest Room",
           zoneId: "zone-Bedroom-2",
           dimensions:
-            "• <strong>Clear Width:</strong> ±2,450 mm<br>• <strong>Clear Length:</strong> ±3,090 mm<br>• <strong>Floor Area:</strong> ~7.6 m² (~81 sq ft)<br>• <strong>RC Ledge:</strong> ±2,450 mm exterior window ledge<br>• <strong>Features:</strong> Wardrobe niche + study workstation with 32mm conduit.",
+            "• <strong>Clear Width:</strong> ±2,450 mm<br>• <strong>Clear Length:</strong> ±3,090 mm<br>• <strong>Floor Area:</strong> ~7.6 m² (~81 sq ft)<br>• <strong>RC Ledge:</strong> ±2,450 mm exterior window ledge<br>• <strong>Features:</strong> Wardrobe niche + study workstation with 32mm conduit + doorway lintel climbing hangboard.",
           sensors:
-            "• Manual Aqara H1 Switch Control (Zero Zoom dropouts)<br>• <strong>High-Performance PC Rig:</strong> Backed onto shared wall with 32mm conduit pass-through sleeve directly to Living Room TV console.",
+            "• Manual Aqara H1 Switch Control (Zero Zoom dropouts)<br>• <strong>High-Performance PC Rig:</strong> Backed onto shared wall with 32mm conduit pass-through sleeve directly to Living Room TV console.<br>• <strong>Climbing Hangboard:</strong> Beastmaker 1000 Series (FSC Beech Wood) anchored into doorway RC lintel with 18mm birch backer.",
           lighting:
             "• <strong>Aqara H1 1-Gang Dedicated Switch</strong> (Door Box)<br>• 3x High-CRI Recessed Downlights<br>• Mitsubishi Electric Starmex 9k BTU AC",
           automations:
