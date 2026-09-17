@@ -1104,89 +1104,6 @@
         margin-bottom: 18px;
       }
 
-      /* Circadian Rhythm Timeline */
-      .circadian-card {
-        background: var(--bg-surface);
-        border: 1px solid var(--border-subtle);
-        border-radius: var(--radius-md);
-        padding: 16px;
-        box-shadow: var(--shadow-sm);
-        margin-bottom: 20px;
-      }
-
-      .circadian-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 14px;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-
-      .circadian-timeline {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
-        gap: 10px;
-      }
-
-      .circadian-step {
-        border-radius: var(--radius-sm);
-        padding: 12px;
-        border: 1px solid var(--border-subtle);
-        background: var(--bg-main);
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .circadian-step::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3px;
-      }
-
-      .circadian-step.morning::before {
-        background: #e09b53;
-      }
-      .circadian-step.day::before {
-        background: #5798b3;
-      }
-      .circadian-step.evening::before {
-        background: #c27c59;
-      }
-      .circadian-step.night::before {
-        background: #735994;
-      }
-
-      .circadian-time {
-        font-family: var(--font-heading);
-        font-weight: 700;
-        font-size: 0.88rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .circadian-temp {
-        font-size: 0.76rem;
-        font-weight: 700;
-        padding: 1px 6px;
-        border-radius: var(--radius-full);
-        background: var(--bg-surface);
-        border: 1px solid var(--border-subtle);
-      }
-
-      .circadian-routine {
-        font-size: 0.78rem;
-        color: var(--text-secondary);
-        line-height: 1.35;
-      }
-
       /* Zone Architecture Cards */
       .zone-section-header {
         display: flex;
@@ -1539,8 +1456,7 @@
       /* SVG Switch Markers */
       .switch-pin {
         cursor: pointer;
-        transition:
-          filter 0.2s ease;
+        transition: filter 0.2s ease;
       }
 
       .switch-pin:hover {
@@ -2217,7 +2133,8 @@
             <ul class="reno-list">
               <li>
                 <strong>Pull neutral wire to all wall boxes:</strong> Critical
-                for Aqara H1 and Z1 Pro reliability and long-term smart switches.
+                for Aqara H1 and Z1 Pro reliability and long-term smart
+                switches.
               </li>
               <li>
                 <strong>Power to windows:</strong> Pull power for Living Room &
@@ -2349,12 +2266,12 @@
 
           <div class="principle-card p0">
             <div class="principle-header">
-              <span>☀️</span> Adaptive Circadian Rhythm
+              <span>🔒</span> 100% Local-First Control
             </div>
             <div class="principle-desc">
-              Home Assistant shifts color temperatures seamlessly throughout the
-              day (2200K amber candlelight &rarr; 5000K crisp daylight &rarr;
-              2700K warm relax) to protect sleep cycles.
+              All sensors, relays, and automations run 100% locally on Home
+              Assistant Green + Zigbee 3.0. Zero cloud lag, zero subscriptions,
+              and fully operational even during internet outages.
             </div>
           </div>
         </div>
@@ -2404,95 +2321,6 @@
             </div>
             <div class="kpi-value">Zigbee 3.0</div>
             <div class="kpi-meta">Zero cloud lag • Home Assistant Green</div>
-          </div>
-        </div>
-
-        <!-- Circadian Rhythm Visual Timeline -->
-        <div class="circadian-card">
-          <div class="circadian-header">
-            <div>
-              <h3
-                style="
-                  font-family: var(--font-heading);
-                  font-size: 1.1rem;
-                  color: var(--text-primary);
-                  margin-bottom: 2px;
-                "
-              >
-                ☀️ 24-Hour Circadian Lighting Engine
-              </h3>
-              <div style="font-size: 0.8rem; color: var(--text-secondary)">
-                Automatic Kelvin color temperature and brightness transitions
-                synced to the solar cycle
-              </div>
-            </div>
-            <span class="badge-tag">Home Assistant Adaptive Lighting</span>
-          </div>
-
-          <div class="circadian-timeline">
-            <div class="circadian-step morning">
-              <div class="circadian-time">
-                <span>06:00 – 08:30</span>
-                <span class="circadian-temp" style="color: #c27c59"
-                  >2700K • 30%</span
-                >
-              </div>
-              <strong style="font-size: 0.82rem; color: var(--text-primary)"
-                >🌅 Gentle Wakeup & Coffee</strong
-              >
-              <div class="circadian-routine">
-                Kitchen under-cabinet warm strip only. Glare-free soft light
-                while making early morning coffee before sunrise.
-              </div>
-            </div>
-
-            <div class="circadian-step day">
-              <div class="circadian-time">
-                <span>08:30 – 18:00</span>
-                <span class="circadian-temp" style="color: #2d6b85"
-                  >5000K • 100%</span
-                >
-              </div>
-              <strong style="font-size: 0.82rem; color: var(--text-primary)"
-                >☀️ Focus & High Productivity</strong
-              >
-              <div class="circadian-routine">
-                Crisp daylight in Study/Bedrooms and Kitchen. Maximizes
-                alertness, color accuracy, and energy for WFH tasks.
-              </div>
-            </div>
-
-            <div class="circadian-step evening">
-              <div class="circadian-time">
-                <span>18:00 – 22:00</span>
-                <span class="circadian-temp" style="color: #b86a1f"
-                  >3000K • 60%</span
-                >
-              </div>
-              <strong style="font-size: 0.82rem; color: var(--text-primary)"
-                >🌇 Dinner & Lounging Relax</strong
-              >
-              <div class="circadian-routine">
-                Warm ambient downlights and intimate dining pendant. Signals the
-                brain to produce natural melatonin.
-              </div>
-            </div>
-
-            <div class="circadian-step night">
-              <div class="circadian-time">
-                <span>22:00 – 06:00</span>
-                <span class="circadian-temp" style="color: #735994"
-                  >2200K • 15%</span
-                >
-              </div>
-              <strong style="font-size: 0.82rem; color: var(--text-primary)"
-                >🌙 Night Wind-Down / Piddle</strong
-              >
-              <div class="circadian-routine">
-                Bathroom mirror light and hallway downlights dimmed to amber
-                candle glow. Zero eye shock during midnight runs.
-              </div>
-            </div>
           </div>
         </div>
 
@@ -2980,9 +2808,8 @@
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
                 <div>
-                  <strong>Circadian Adaptive Dimming:</strong> Light color
-                  automatically tracks the sun (5000K daylight &rarr; 3000K warm
-                  &rarr; 2200K candlelight).
+                  <strong>Late-Night Wind-Down:</strong> Soft warm lighting
+                  dims automatically after 10:00 PM to prepare for restful sleep.
                 </div>
               </div>
               <div class="zone-auto-item">
@@ -7593,38 +7420,113 @@ automation:
 
                 <!-- Layer 5b: Suggested switch-to-light paths. These are schematic circuits, not conduit routes. -->
                 <g id="layerSwitchConnections" pointer-events="none">
-                  <path class="switch-connection" d="M 744 1160 C 715 1115, 735 1035, 760 1004" marker-end="url(#switchPathArrow)" />
-                  <text class="switch-connection-label" x="718" y="1080">FOYER LED</text>
+                  <path
+                    class="switch-connection"
+                    d="M 744 1160 C 715 1115, 735 1035, 760 1004"
+                    marker-end="url(#switchPathArrow)"
+                  />
+                  <text class="switch-connection-label" x="718" y="1080">
+                    FOYER LED
+                  </text>
 
-                  <path class="switch-connection" d="M 629 580 C 635 563, 651 543, 670 530" marker-end="url(#switchPathArrow)" />
-                  <text class="switch-connection-label" x="636" y="554">LIVING DL</text>
+                  <path
+                    class="switch-connection"
+                    d="M 629 580 C 635 563, 651 543, 670 530"
+                    marker-end="url(#switchPathArrow)"
+                  />
+                  <text class="switch-connection-label" x="636" y="554">
+                    LIVING DL
+                  </text>
 
-                  <path class="switch-connection" d="M 724 855 C 742 832, 772 811, 805 800" marker-end="url(#switchPathArrow)" />
-                  <text class="switch-connection-label" x="745" y="841">PENDANT</text>
+                  <path
+                    class="switch-connection"
+                    d="M 724 855 C 742 832, 772 811, 805 800"
+                    marker-end="url(#switchPathArrow)"
+                  />
+                  <text class="switch-connection-label" x="745" y="841">
+                    PENDANT
+                  </text>
 
-                  <path class="switch-connection" d="M 574 900 C 590 832, 614 750, 645 692" marker-end="url(#switchPathArrow)" />
-                  <circle class="switch-connection-target" cx="645" cy="692" r="6" />
-                  <text class="switch-connection-label" x="593" y="705">HALL DL</text>
+                  <path
+                    class="switch-connection"
+                    d="M 574 900 C 590 832, 614 750, 645 692"
+                    marker-end="url(#switchPathArrow)"
+                  />
+                  <circle
+                    class="switch-connection-target"
+                    cx="645"
+                    cy="692"
+                    r="6"
+                  />
+                  <text class="switch-connection-label" x="593" y="705">
+                    HALL DL
+                  </text>
 
-                  <path class="switch-connection" d="M 574 900 C 540 888, 512 862, 480 840" marker-end="url(#switchPathArrow)" />
-                  <text class="switch-connection-label" x="493" y="882">KITCHEN LED</text>
+                  <path
+                    class="switch-connection"
+                    d="M 574 900 C 540 888, 512 862, 480 840"
+                    marker-end="url(#switchPathArrow)"
+                  />
+                  <text class="switch-connection-label" x="493" y="882">
+                    KITCHEN LED
+                  </text>
 
-                  <path class="switch-connection" d="M 644 380 C 660 358, 677 338, 700 322" marker-end="url(#switchPathArrow)" />
-                  <circle class="switch-connection-target" cx="700" cy="322" r="6" />
-                  <text class="switch-connection-label" x="655" y="347">BALCONY DL</text>
+                  <path
+                    class="switch-connection"
+                    d="M 644 380 C 660 358, 677 338, 700 322"
+                    marker-end="url(#switchPathArrow)"
+                  />
+                  <circle
+                    class="switch-connection-target"
+                    cx="700"
+                    cy="322"
+                    r="6"
+                  />
+                  <text class="switch-connection-label" x="655" y="347">
+                    BALCONY DL
+                  </text>
 
-                  <path class="switch-connection" d="M 564 545 C 548 523, 531 494, 510 470" marker-end="url(#switchPathArrow)" />
-                  <circle class="switch-connection-target" cx="510" cy="470" r="6" />
-                  <text class="switch-connection-label" x="505" y="508">BED 2 DL</text>
+                  <path
+                    class="switch-connection"
+                    d="M 564 545 C 548 523, 531 494, 510 470"
+                    marker-end="url(#switchPathArrow)"
+                  />
+                  <circle
+                    class="switch-connection-target"
+                    cx="510"
+                    cy="470"
+                    r="6"
+                  />
+                  <text class="switch-connection-label" x="505" y="508">
+                    BED 2 DL
+                  </text>
 
-                  <path class="switch-connection" d="M 569 620 C 564 646, 556 678, 550 708" marker-end="url(#switchPathArrow)" />
-                  <text class="switch-connection-label" x="572" y="665">VANITY</text>
+                  <path
+                    class="switch-connection"
+                    d="M 569 620 C 564 646, 556 678, 550 708"
+                    marker-end="url(#switchPathArrow)"
+                  />
+                  <text class="switch-connection-label" x="572" y="665">
+                    VANITY
+                  </text>
 
-                  <path class="switch-connection" d="M 969 600 C 985 582, 1002 564, 1020 550" marker-end="url(#switchPathArrow)" />
-                  <text class="switch-connection-label" x="978" y="579">MASTER DL</text>
+                  <path
+                    class="switch-connection"
+                    d="M 969 600 C 985 582, 1002 564, 1020 550"
+                    marker-end="url(#switchPathArrow)"
+                  />
+                  <text class="switch-connection-label" x="978" y="579">
+                    MASTER DL
+                  </text>
 
-                  <path class="switch-connection" d="M 1104 675 C 1065 694, 1022 724, 990 745" marker-end="url(#switchPathArrow)" />
-                  <text class="switch-connection-label" x="1022" y="713">VANITY</text>
+                  <path
+                    class="switch-connection"
+                    d="M 1104 675 C 1065 694, 1022 724, 990 745"
+                    marker-end="url(#switchPathArrow)"
+                  />
+                  <text class="switch-connection-label" x="1022" y="713">
+                    VANITY
+                  </text>
                 </g>
 
                 <!-- Layer 6: Wall Switches (High-Contrast Smart Switches at Door Frames) -->
@@ -7729,9 +7631,30 @@ automation:
                       stroke-width="1.4"
                       filter="url(#badgeShadow)"
                     />
-                    <line x1="15" y1="2" x2="15" y2="18" stroke="#475569" stroke-width="1" />
-                    <line x1="30" y1="2" x2="30" y2="18" stroke="#475569" stroke-width="1" />
-                    <line x1="45" y1="2" x2="45" y2="18" stroke="#475569" stroke-width="1" />
+                    <line
+                      x1="15"
+                      y1="2"
+                      x2="15"
+                      y2="18"
+                      stroke="#475569"
+                      stroke-width="1"
+                    />
+                    <line
+                      x1="30"
+                      y1="2"
+                      x2="30"
+                      y2="18"
+                      stroke="#475569"
+                      stroke-width="1"
+                    />
+                    <line
+                      x1="45"
+                      y1="2"
+                      x2="45"
+                      y2="18"
+                      stroke="#475569"
+                      stroke-width="1"
+                    />
                     <circle cx="7.5" cy="15.5" r="1.5" fill="#38bdf8" />
                     <circle cx="22.5" cy="15.5" r="1.5" fill="#38bdf8" />
                     <circle cx="37.5" cy="15.5" r="1.5" fill="#38bdf8" />
@@ -7853,7 +7776,14 @@ automation:
                       stroke="#475569"
                       stroke-width="1"
                     />
-                    <line x1="32" y1="2" x2="32" y2="18" stroke="#475569" stroke-width="1" />
+                    <line
+                      x1="32"
+                      y1="2"
+                      x2="32"
+                      y2="18"
+                      stroke="#475569"
+                      stroke-width="1"
+                    />
                     <circle cx="8" cy="15.5" r="1.5" fill="#38bdf8" />
                     <circle cx="24" cy="15.5" r="1.5" fill="#38bdf8" />
                     <circle cx="40" cy="15.5" r="1.5" fill="#38bdf8" />
