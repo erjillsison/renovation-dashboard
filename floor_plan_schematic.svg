@@ -29,6 +29,12 @@
                   <filter id="badgeShadow" x="-15%" y="-15%" width="130%" height="130%">
                     <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1" />
                   </filter>
+
+                  <style>
+                    .map-room-zone { fill: transparent; stroke: transparent; cursor: pointer; }
+                    .map-room-zone:hover { fill: rgba(74, 107, 87, 0.12); stroke: #4a6b57; stroke-width: 2; }
+                    .map-room-zone.active { fill: rgba(74, 107, 87, 0.2); stroke: #4a6b57; stroke-width: 2.5; }
+                  </style>
                 </defs>
 
                 <!-- Background Blueprint Grid -->
@@ -188,8 +194,8 @@
                   <!-- Guest Wi-Fi QR Code Plaque on Pegboard -->
                   <g transform="translate(738, 895)">
                     <rect x="0" y="0" width="24" height="20" rx="3" fill="#0f172a" stroke="#38bdf8" stroke-width="1" />
-                    <text x="12" y="11" font-size="7.5" font-family="'Space Grotesk', sans-serif" font-weight="800" fill="#38bdf8" text-anchor="middle">QR</text>
-                    <text x="12" y="18" font-size="5.5" font-family="'Space Grotesk', sans-serif" font-weight="700" fill="#94a3b8" text-anchor="middle">WI-FI</text>
+                    <text x="12" y="11" font-size="7.5" font-family="'Space Grotesk', sans-serif" font-weight="800" fill="#38bdf8" text-anchor="middle" stroke="none">QR</text>
+                    <text x="12" y="18" font-size="5.5" font-family="'Space Grotesk', sans-serif" font-weight="700" fill="#94a3b8" text-anchor="middle" stroke="none">WI-FI</text>
                     <title>Guest Wi-Fi QR Code Plaque (Hallway / Entryway Pegboard)</title>
                   </g>
 
