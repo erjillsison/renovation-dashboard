@@ -2,7 +2,7 @@
   {
     "id": "smart-switch-entrance",
     "name": "Smart Switch (Entrance)",
-    "choice": "Aqara H1 2-Gang (Main entry downlight + Shoe cabinet LED)",
+    "choice": "Aqara H1 2-Gang (Black / Space Grey; Main entry downlight + Shoe cabinet LED)",
     "notes": "Selected choice for Entrance.",
     "room": "Entrance",
     "priority": "P0",
@@ -18,7 +18,7 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H1 2-Gang (Main entry downlight + Shoe cabinet LED)",
+        "model": "Aqara H1 2-Gang (Black / Space Grey; Main entry downlight + Shoe cabinet LED)",
         "notes": "Selected choice for Entrance.",
         "stores": [
           {
@@ -140,7 +140,7 @@
   {
     "id": "smart-switch-kitchen",
     "name": "Smart Switch (Kitchen)",
-    "choice": "Aqara H1 1-Gang (Dedicated switch for kitchen ceiling downlights)",
+    "choice": "Aqara H1 1-Gang (Black / Space Grey; Dedicated switch for kitchen ceiling downlights)",
     "notes": "Selected choice for Kitchen.",
     "room": "Kitchen",
     "priority": "P0",
@@ -156,7 +156,7 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H1 1-Gang (Dedicated switch for kitchen ceiling downlights)",
+        "model": "Aqara H1 1-Gang (Black / Space Grey; Dedicated switch for kitchen ceiling downlights)",
         "notes": "Selected choice for Kitchen.",
         "stores": [
           {
@@ -174,7 +174,7 @@
   {
     "id": "smart-switch-hallway",
     "name": "Smart Switch (Hallway)",
-    "choice": "Aqara H1 1-Gang (Dedicated corridor downlights switch, beside door to the right)",
+    "choice": "Aqara H1 1-Gang (Black / Space Grey; Dedicated corridor switch, beside door to right)",
     "notes": "Selected choice for Whole House.",
     "room": "Whole House",
     "priority": "P0",
@@ -190,7 +190,7 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H1 1-Gang (Dedicated corridor downlights switch, beside door to the right)",
+        "model": "Aqara H1 1-Gang (Black / Space Grey; Dedicated corridor switch, beside door to right)",
         "notes": "Selected choice for Whole House.",
         "stores": [
           {
@@ -208,7 +208,7 @@
   {
     "id": "smart-switch-balcony",
     "name": "Smart Switch (Balcony)",
-    "choice": "Aqara H1 2-Gang (Balcony light + decoupled outdoor fan control)",
+    "choice": "Aqara H1 2-Gang (Black / Space Grey; Balcony light + decoupled outdoor fan control)",
     "notes": "Selected choice for Balcony.",
     "room": "Balcony",
     "priority": "P0",
@@ -224,7 +224,7 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H1 2-Gang (Balcony light + decoupled outdoor fan control)",
+        "model": "Aqara H1 2-Gang (Black / Space Grey; Balcony light + decoupled outdoor fan control)",
         "notes": "Selected choice for Balcony.",
         "stores": [
           {
@@ -242,7 +242,7 @@
   {
     "id": "smart-switch-master-bed",
     "name": "Smart Switch (Master Bed)",
-    "choice": "Aqara Z1 Pro 3-Rocker (Entry, bedside + curtain / Goodnight scene)",
+    "choice": "Aqara Z1 Pro 3-Rocker (Dark Slate / Black; Entry, bedside + curtain / Goodnight scene)",
     "notes": "Selected choice for Master Bed.",
     "room": "Master Bed",
     "priority": "P0",
@@ -258,7 +258,7 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara Z1 Pro 3-Rocker (Entry, bedside + curtain / Goodnight scene)",
+        "model": "Aqara Z1 Pro 3-Rocker (Dark Slate / Black; Entry, bedside + curtain / Goodnight scene)",
         "notes": "Selected choice for Master Bed.",
         "stores": [
           {
@@ -276,7 +276,7 @@
   {
     "id": "smart-switch-bedroom-2",
     "name": "Smart Switch (Bedroom 2)",
-    "choice": "Aqara H1 1-Gang (Dedicated switch for bedroom study downlights)",
+    "choice": "Aqara H1 1-Gang (Black / Space Grey; Dedicated switch for bedroom study downlights)",
     "notes": "Selected choice for Bedroom 2.",
     "room": "Bedroom 2 / Study",
     "priority": "P0",
@@ -292,7 +292,7 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H1 1-Gang (Dedicated switch for bedroom study downlights)",
+        "model": "Aqara H1 1-Gang (Black / Space Grey; Dedicated switch for bedroom study downlights)",
         "notes": "Selected choice for Bedroom 2.",
         "stores": [
           {
@@ -310,7 +310,7 @@
   {
     "id": "smart-switch-master-bath",
     "name": "Smart Switch (Master Bath)",
-    "choice": "Aqara H1 2-Gang (Main downlight + Vanity mirror light)",
+    "choice": "Aqara H1 2-Gang (Black / Space Grey; Main downlight + Vanity mirror light)",
     "notes": "Selected choice for Bathrooms.",
     "room": "Bathrooms",
     "priority": "P0",
@@ -326,7 +326,7 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H1 2-Gang (Main downlight + Vanity mirror light)",
+        "model": "Aqara H1 2-Gang (Black / Space Grey; Main downlight + Vanity mirror light)",
         "notes": "Selected choice for Bathrooms.",
         "stores": [
           {
@@ -344,7 +344,7 @@
   {
     "id": "smart-switch-common-bath",
     "name": "Smart Switch (Common Bath)",
-    "choice": "Aqara H1 1-Gang (Dedicated switch for common bathroom downlights)",
+    "choice": "Aqara H1 1-Gang (Black / Space Grey; Dedicated switch for common bathroom downlights)",
     "notes": "Selected choice for Bathrooms.",
     "room": "Bathrooms",
     "priority": "P0",
@@ -360,7 +360,7 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H1 1-Gang (Dedicated switch for common bathroom downlights)",
+        "model": "Aqara H1 1-Gang (Black / Space Grey; Dedicated switch for common bathroom downlights)",
         "notes": "Selected choice for Bathrooms.",
         "stores": [
           {
@@ -1466,7 +1466,7 @@
   {
     "id": "power-socket-faceplates-whole-house",
     "name": "Power Socket Faceplates (Whole House)",
-    "choice": "Legrand Mallia Senses: standard BS 13A outlets + 2x bedside USB-C + TV/study data & brush plates",
+    "choice": "Legrand Mallia Senses: Visible sockets in Matt Black (MB); Kitchen sockets in Matt White (MW). Count TBD ($500 allowance)",
     "notes": "Selected allowance: standard BS 13A outlets, two master-bed USB-C points, and TV/study data, HDMI and brush plates. Final point count and finish require electrician confirmation.",
     "room": "Whole House",
     "priority": "P1",
@@ -1482,7 +1482,7 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Legrand Mallia Senses: standard BS 13A outlets + 2x bedside USB-C + TV/study data & brush plates",
+        "model": "Legrand Mallia Senses: Visible sockets in Matt Black (MB); Kitchen sockets in Matt White (MW). Count TBD ($500 allowance)",
         "notes": "Selected allowance: standard BS 13A outlets, two master-bed USB-C points, and TV/study data, HDMI and brush plates. Final point count and finish require electrician confirmation.",
         "stores": [
           {
