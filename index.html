@@ -3447,7 +3447,7 @@ automation:
                   id="btnLayerSwitches"
                   onclick="toggleMapLayer('switches', this)"
                 >
-                  <span>⚡</span> Wall Switches (9)
+                  <span>⚡</span> Wall Switches (12)
                 </button>
                 <button
                   class="map-tool-btn active"
@@ -7968,6 +7968,61 @@ automation:
                     <circle cx="17" cy="15.5" r="1.5" fill="#38bdf8" />
                   </g>
 
+                  <!-- Common Bath: 20A Double-Pole Smart Water Heater Switch (Matt Black) -->
+                  <g
+                    class="switch-pin"
+                    transform="translate(550, 655)"
+                    onclick="selectMapRoom('Common Bath')"
+                  >
+                    <title>
+                      Common Bath: 20A Double-Pole Smart Water Heater Switch
+                      (Zigbee, Matt Black, 4400W max)
+                    </title>
+                    <rect
+                      x="0"
+                      y="-14"
+                      width="46"
+                      height="12"
+                      rx="3"
+                      fill="#09090b"
+                      fill-opacity="0.95"
+                      stroke="#ef4444"
+                      stroke-width="0.8"
+                    />
+                    <text
+                      x="23"
+                      y="-5"
+                      font-family="'Space Grotesk', sans-serif"
+                      font-size="7.5"
+                      font-weight="800"
+                      fill="#f87171"
+                      text-anchor="middle"
+                      letter-spacing="0.5"
+                    >
+                      20A • HTR
+                    </text>
+                    <rect
+                      x="0"
+                      y="0"
+                      width="46"
+                      height="20"
+                      rx="3.5"
+                      fill="#09090b"
+                      stroke="#ffffff"
+                      stroke-width="1.4"
+                      filter="url(#badgeShadow)"
+                    />
+                    <circle
+                      cx="23"
+                      cy="10"
+                      r="4.5"
+                      fill="#18181b"
+                      stroke="#71717a"
+                      stroke-width="0.8"
+                    />
+                    <circle cx="23" cy="15.5" r="1.5" fill="#ef4444" />
+                  </g>
+
                   <!-- Master Bedroom: Z1 Pro 3-Rocker, Inside Master Bed Door -->
                   <g
                     class="switch-pin"
@@ -8078,6 +8133,61 @@ automation:
                     />
                     <circle cx="9.5" cy="15.5" r="1.5" fill="#38bdf8" />
                     <circle cx="28.5" cy="15.5" r="1.5" fill="#38bdf8" />
+                  </g>
+
+                  <!-- Master Bath: 20A Double-Pole Smart Water Heater Switch (Matt Black) -->
+                  <g
+                    class="switch-pin"
+                    transform="translate(1030, 675)"
+                    onclick="selectMapRoom('Master Bath')"
+                  >
+                    <title>
+                      Master Bath: 20A Double-Pole Smart Water Heater Switch
+                      (Zigbee, Matt Black, 4400W max)
+                    </title>
+                    <rect
+                      x="0"
+                      y="-14"
+                      width="46"
+                      height="12"
+                      rx="3"
+                      fill="#09090b"
+                      fill-opacity="0.95"
+                      stroke="#ef4444"
+                      stroke-width="0.8"
+                    />
+                    <text
+                      x="23"
+                      y="-5"
+                      font-family="'Space Grotesk', sans-serif"
+                      font-size="7.5"
+                      font-weight="800"
+                      fill="#f87171"
+                      text-anchor="middle"
+                      letter-spacing="0.5"
+                    >
+                      20A • HTR
+                    </text>
+                    <rect
+                      x="0"
+                      y="0"
+                      width="46"
+                      height="20"
+                      rx="3.5"
+                      fill="#09090b"
+                      stroke="#ffffff"
+                      stroke-width="1.4"
+                      filter="url(#badgeShadow)"
+                    />
+                    <circle
+                      cx="23"
+                      cy="10"
+                      r="4.5"
+                      fill="#18181b"
+                      stroke="#71717a"
+                      stroke-width="0.8"
+                    />
+                    <circle cx="23" cy="15.5" r="1.5" fill="#ef4444" />
                   </g>
                 </g>
 
@@ -8911,6 +9021,74 @@ automation:
                                     "promo": "",
                                     "linkText": "Price brochure",
                                     "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
+            "id": "smart-switch-water-heater-master-bath",
+            "name": "Smart Switch - Water Heater (Master Bath)",
+            "choice": "20A Double-Pole Zigbee Smart Switch (Matt Black, 4400W max load)",
+            "notes": "Selected choice for Bathrooms.",
+            "room": "Bathrooms",
+            "priority": "P0",
+            "status": "Selected",
+            "price": 35,
+            "priceDisplay": "$35",
+            "availableAt": "Shopee SG",
+            "linkText": "Shopee 20A Black Heater Switch",
+            "linkUrl": "https://shopee.sg/search?keyword=zigbee%20water%20heater%20switch%2020a%20black",
+            "sellerDeductible": false,
+            "sellerSavings": 0,
+            "selectedOptionIndex": 0,
+            "selectedStoreIndex": 0,
+            "options": [
+                  {
+                        "model": "20A Double-Pole Zigbee Smart Switch (Matt Black, 4400W max load)",
+                        "notes": "Selected choice for Bathrooms.",
+                        "stores": [
+                              {
+                                    "store": "Shopee SG",
+                                    "price": 35,
+                                    "priceDisplay": "$35",
+                                    "promo": "",
+                                    "linkText": "Shopee 20A Black Heater Switch",
+                                    "linkUrl": "https://shopee.sg/search?keyword=zigbee%20water%20heater%20switch%2020a%20black"
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
+            "id": "smart-switch-water-heater-common-bath",
+            "name": "Smart Switch - Water Heater (Common Bath)",
+            "choice": "20A Double-Pole Zigbee Smart Switch (Matt Black, 4400W max load)",
+            "notes": "Selected choice for Bathrooms.",
+            "room": "Bathrooms",
+            "priority": "P0",
+            "status": "Selected",
+            "price": 35,
+            "priceDisplay": "$35",
+            "availableAt": "Shopee SG",
+            "linkText": "Shopee 20A Black Heater Switch",
+            "linkUrl": "https://shopee.sg/search?keyword=zigbee%20water%20heater%20switch%2020a%20black",
+            "sellerDeductible": false,
+            "sellerSavings": 0,
+            "selectedOptionIndex": 0,
+            "selectedStoreIndex": 0,
+            "options": [
+                  {
+                        "model": "20A Double-Pole Zigbee Smart Switch (Matt Black, 4400W max load)",
+                        "notes": "Selected choice for Bathrooms.",
+                        "stores": [
+                              {
+                                    "store": "Shopee SG",
+                                    "price": 35,
+                                    "priceDisplay": "$35",
+                                    "promo": "",
+                                    "linkText": "Shopee 20A Black Heater Switch",
+                                    "linkUrl": "https://shopee.sg/search?keyword=zigbee%20water%20heater%20switch%2020a%20black"
                               }
                         ]
                   }
@@ -13410,9 +13588,9 @@ automation:
           sensors:
             "• <strong>1x Aqara Door Contact T1</strong> (Door Frame)<br>• <strong>1x Aqara PIR Motion P1</strong> (Interior Ceiling)<br>• 100% Battery Powered ('Wasp in a Box' Pair)",
           lighting:
-            "• <strong>Aqara H1 2-Gang Switch</strong> (Outside Door Box)<br>• 2x IP44 Splash-Rated Downlights<br>• 1x Vanity Mirror LED Light",
+            "• <strong>Aqara H1 2-Gang Switch (Lights)</strong> (Outside Door Box)<br>• <strong>Zigbee 20A Double-Pole Switch (Water Heater)</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Matt Black</span>)<br>• 2x IP44 Splash-Rated Downlights<br>• 1x Vanity Mirror LED Light",
           automations:
-            "• <strong>Wasp in a Box:</strong> Motion + Door Closed locks occupancy ON indefinitely. Lights NEVER shut off in shower or toilet!<br>• <strong>Late-Night Piddle Mode (11PM-6AM):</strong> Vanity mirror turns on at 15% dim warm (2200K). Zero blinding glare.<br>• <strong>Auto-Off:</strong> Door opens &rarr; 90s countdown.",
+            "• <strong>Wasp in a Box:</strong> Motion + Door Closed locks occupancy ON indefinitely. Lights NEVER shut off in shower or toilet!<br>• <strong>Late-Night Piddle Mode (11PM-6AM):</strong> Vanity mirror turns on at 15% dim warm (2200K). Zero blinding glare.<br>• <strong>Water Heater Auto-Off:</strong> 20-min countdown timer automatically shuts off heater after shower.<br>• <strong>Auto-Off:</strong> Door opens &rarr; 90s countdown.",
           filterRoom: "Bathrooms",
         },
         "Common Bath": {
@@ -13424,9 +13602,9 @@ automation:
           sensors:
             "• <strong>1x Aqara Door Contact T1</strong> (Door Frame)<br>• <strong>1x Aqara PIR Motion P1</strong> (Interior Ceiling)<br>• 100% Battery Powered ('Wasp in a Box')",
           lighting:
-            "• <strong>Aqara H1 1-Gang Dedicated Switch</strong> (Outside Door Box)<br>• 2x IP44 Splash-Rated Downlights",
+            "• <strong>Aqara H1 1-Gang Dedicated Switch (Lights)</strong> (Outside Door Box)<br>• <strong>Zigbee 20A Double-Pole Switch (Water Heater)</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Matt Black</span>)<br>• 2x IP44 Splash-Rated Downlights",
           automations:
-            "• <strong>Hands-Free Guest Access:</strong> Walk in &rarr; lights turn on instantly.<br>• <strong>Shower Safe:</strong> Door closed keeps lights on indefinitely.<br>• <strong>Night Path:</strong> Dimmed warm path after 11 PM.",
+            "• <strong>Hands-Free Guest Access:</strong> Walk in &rarr; lights turn on instantly.<br>• <strong>Shower Safe:</strong> Door closed keeps lights on indefinitely.<br>• <strong>Water Heater Auto-Off:</strong> 20-min countdown timer prevents wasted power.<br>• <strong>Night Path:</strong> Dimmed warm path after 11 PM.",
           filterRoom: "Bathrooms",
         },
         Kitchen: {
@@ -13449,8 +13627,7 @@ automation:
           zoneId: "zone-Hallway",
           dimensions:
             "• <strong>Corridor Width:</strong> ±1,500 mm<br>• <strong>Clear Length:</strong> ±1,505 mm<br>• <strong>Floor Area:</strong> ~2.3 m² (~25 sq ft)<br>• <strong>Features:</strong> Central corridor connecting Living, Kitchen, Bathrooms, and Bedrooms.",
-          sensors:
-            "• PIR Motion Sensor / Pathway Lighting Sync",
+          sensors: "• PIR Motion Sensor / Pathway Lighting Sync",
           lighting:
             "• <strong>Aqara H1 1-Gang Dedicated Switch</strong> (Corridor wall beside door to the right)<br>• 2x High-CRI Recessed Downlights",
           automations:
