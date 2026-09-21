@@ -13042,6 +13042,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
       let roomSpendChartInstance = null;
       let itemPriceChartInstance = null;
       let priorityChartInstance = null;
+      const openDrawers = new Set();
 
       function handleSort(column) {
         if (currentSortColumn === column) {
@@ -13234,74 +13235,45 @@ wall-switch action event exposed by the selected Home Assistant integration.
             const safeItemName = item.name.replace(/'/g, "\\'");
 
             // 1. Choice / Model Column
-            let choiceDisplay = "";
-            if (item.options && item.options.length > 1) {
-              const modelOptionsHtml = item.options
-                .map((opt, idx) => {
-                  const isSel = idx === optIdx ? "selected" : "";
-                  return `<option value="${idx}" ${isSel}>${opt.model}</option>`;
-                })
-                .join("");
+            const hasOtherOptions =
+              (item.options && item.options.length > 1) ||
+              (item.options &&
+                item.options[0] &&
+                item.options[0].stores &&
+                item.options[0].stores.length > 1);
 
-              choiceDisplay = `
-                <div class="model-select-wrapper">
-                  <div class="model-badge-header">
-                    <span class="opt-count-tag">${item.options.length} models available</span>
-                  </div>
-                  <select class="config-select model-select" onchange="handleModelChange('${safeItemName}', this.value)" title="Choose model variant">
-                    ${modelOptionsHtml}
-                  </select>
-                  <div class="item-notes">${currentModel.notes || item.notes}</div>
+            const optCount =
+              item.options && item.options.length > 1
+                ? item.options.length
+                : item.options && item.options[0] && item.options[0].stores
+                ? item.options[0].stores.length
+                : 0;
+
+            const isDrawerOpen = openDrawers.has(item.id);
+            const drawerBtnActive = isDrawerOpen ? "active" : "";
+
+            const modelName = currentModel ? currentModel.model : item.choice;
+            const modelNotes =
+              (currentModel && currentModel.notes) || item.notes || "";
+
+            const choiceDisplay = `
+              <div class="item-choice-cell">
+                <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
+                  <strong style="color: var(--text-primary); font-size: 0.84rem; line-height: 1.35;">${modelName}</strong>
+                  ${
+                    hasOtherOptions
+                      ? `<button type="button" class="btn-table-pill btn-drawer-pill ${drawerBtnActive}" id="toggleBtn-${item.id}" onclick="toggleItemDrawer('${item.id}')" title="View all candidate options & store deals">📋 Other Options (${optCount})</button>`
+                      : ""
+                  }
                 </div>
-              `;
-            } else {
-              choiceDisplay = `
-                <div class="item-choice-cell"><strong>${item.choice}</strong></div>
-                <div class="item-notes">${item.notes}</div>
-              `;
-            }
+                ${modelNotes ? `<div class="item-notes">${modelNotes}</div>` : ""}
+              </div>
+            `;
 
             // 2. Available At / Store Column
-            let storeDisplay = "";
-            if (
-              currentModel &&
-              currentModel.stores &&
-              currentModel.stores.length > 1
-            ) {
-              const storeOptionsHtml = currentModel.stores
-                .map((s, idx) => {
-                  const isSel = idx === storeIdx ? "selected" : "";
-                  const pDisplay =
-                    s.priceDisplay ||
-                    (s.price ? `$${s.price.toLocaleString()}` : "");
-                  const promoText = s.promo ? ` • ${s.promo}` : "";
-                  return `<option value="${idx}" ${isSel}>${s.store} (${pDisplay}${promoText})</option>`;
-                })
-                .join("");
-
-              storeDisplay = `
-                <div class="store-select-wrapper">
-                  <div class="model-badge-header">
-                    <span class="opt-count-tag" style="background:#f3efe9; color:var(--taupe-primary); border-color:rgba(148,126,107,0.25);">${currentModel.stores.length} store prices</span>
-                  </div>
-                  <select class="config-select store-select" onchange="handleStoreChange('${safeItemName}', this.value)" title="Choose store / pricing option">
-                    ${storeOptionsHtml}
-                  </select>
-                </div>
-              `;
-            } else {
-              const storeName = currentStore.store || item.availableAt;
-              const isCourts =
-                storeName && storeName.toLowerCase().includes("courts");
-              const courtsIcon = isCourts ? "🏬 " : "";
-              const storeClass = isCourts
-                ? "badge-store badge-courts"
-                : "badge-store";
-              storeDisplay =
-                storeName && storeName !== "-"
-                  ? `<span class="${storeClass}">${courtsIcon}${storeName}</span>`
-                  : `<span style="color: var(--text-muted); font-size: 0.75rem;">—</span>`;
-            }
+            const storeDisplay = getStoreBadgeHtml(
+              currentStore.store || item.availableAt
+            );
 
             // 3. Link Column
             const activeLinkUrl = currentStore.linkUrl || item.linkUrl;
@@ -13326,9 +13298,6 @@ wall-switch action event exposed by the selected Home Assistant integration.
             if (item.comparisonCategory) {
               nameActionsHtml += `<button type="button" class="btn-table-pill btn-showroom-pill" onclick="viewCategoryComparison('${item.comparisonCategory}')" title="View Showroom Comparison Table">🏬 Quotes</button>`;
             }
-            if (item.options && item.options.length > 1) {
-              nameActionsHtml += `<button type="button" class="btn-table-pill btn-drawer-pill" id="toggleBtn-${item.id}" onclick="toggleItemDrawer('${item.id}')" title="View all candidate options & store deals">📋 All Deals (${item.options.length})</button>`;
-            }
 
             row.innerHTML = `
               <td>
@@ -13345,22 +13314,42 @@ wall-switch action event exposed by the selected Home Assistant integration.
             `;
             tbody.appendChild(row);
 
-            // If item has multiple options, append the interactive drawer row
-            if (item.options && item.options.length > 1) {
+            // If item has multiple options or multiple stores, append the interactive drawer row
+            if (hasOtherOptions) {
               const drawerRow = document.createElement("tr");
               drawerRow.id = `drawer-${item.id}`;
               drawerRow.className = "item-drawer-row";
-              drawerRow.style.display = "none";
+              drawerRow.style.display = isDrawerOpen ? "table-row" : "none";
 
               let optionRowsHtml = "";
               item.options.forEach((mOpt, mIdx) => {
                 const isModelSelected = mIdx === optIdx;
-                const mStores = mOpt.stores && mOpt.stores.length > 0 ? mOpt.stores : [{ store: "-", price: 0, priceDisplay: "-", promo: "", linkText: "", linkUrl: "" }];
+                const mStores =
+                  mOpt.stores && mOpt.stores.length > 0
+                    ? mOpt.stores
+                    : [
+                        {
+                          store: "-",
+                          price: 0,
+                          priceDisplay: "-",
+                          promo: "",
+                          linkText: "",
+                          linkUrl: "",
+                        },
+                      ];
                 mStores.forEach((sOpt, sIdx) => {
                   const isStoreSelected = isModelSelected && sIdx === storeIdx;
                   const storeBadge = getStoreBadgeHtml(sOpt.store);
                   const optLinkHtml = sOpt.linkUrl
-                    ? `<a href="${sOpt.linkUrl}" target="_blank" rel="noopener noreferrer" class="item-link-btn ${sOpt.store && sOpt.store.toLowerCase().includes("shopee") ? "" : "brand-link"}">${sOpt.store && sOpt.store.toLowerCase().includes("shopee") ? "🛒" : "🔗"} ${sOpt.linkText || "View Deal"}</a>`
+                    ? `<a href="${sOpt.linkUrl}" target="_blank" rel="noopener noreferrer" class="item-link-btn ${
+                        sOpt.store && sOpt.store.toLowerCase().includes("shopee")
+                          ? ""
+                          : "brand-link"
+                      }">${
+                        sOpt.store && sOpt.store.toLowerCase().includes("shopee")
+                          ? "🛒"
+                          : "🔗"
+                      } ${sOpt.linkText || "View Deal"}</a>`
                     : '<span style="color:var(--text-muted); font-size:0.75rem;">—</span>';
                   const rowClass = isStoreSelected ? "active-option-row" : "";
                   const btnClass = isStoreSelected
@@ -13373,13 +13362,20 @@ wall-switch action event exposed by the selected Home Assistant integration.
                   optionRowsHtml += `
                     <tr class="${rowClass}">
                       <td style="font-weight:600;">${mOpt.model}</td>
-                      <td style="color:var(--text-secondary); font-size:0.75rem;">${mOpt.notes || item.notes || "—"}</td>
+                      <td style="color:var(--text-secondary); font-size:0.75rem;">${
+                        mOpt.notes || item.notes || "—"
+                      }</td>
                       <td style="white-space:nowrap;">${storeBadge}</td>
-                      <td style="font-weight:700; white-space:nowrap;">${sOpt.priceDisplay || (sOpt.price ? `$${sOpt.price.toLocaleString()}` : "—")}</td>
-                      <td style="color:#15803d; font-weight:600; font-size:0.74rem;">${sOpt.promo ? `✨ ${sOpt.promo}` : "—"}</td>
+                      <td style="font-weight:700; white-space:nowrap;">${
+                        sOpt.priceDisplay ||
+                        (sOpt.price ? `$${sOpt.price.toLocaleString()}` : "—")
+                      }</td>
+                      <td style="color:#15803d; font-weight:600; font-size:0.74rem;">${
+                        sOpt.promo ? `✨ ${sOpt.promo}` : "—"
+                      }</td>
                       <td style="white-space:nowrap;">${optLinkHtml}</td>
                       <td style="white-space:nowrap; text-align:center;">
-                        <button type="button" class="${btnClass}" onclick="handleModelChange('${safeItemName}', '${mIdx}'); handleStoreChange('${safeItemName}', '${sIdx}');">
+                        <button type="button" class="${btnClass}" onclick="selectCandidateOption('${safeItemName}', ${mIdx}, ${sIdx});">
                           ${btnText}
                         </button>
                       </td>
@@ -13426,17 +13422,20 @@ wall-switch action event exposed by the selected Home Assistant integration.
         }
       }
 
-      function handleModelChange(itemName, optionIndexStr) {
-        const optionIdx = parseInt(optionIndexStr, 10);
+      function selectCandidateOption(itemName, optionIndex, storeIndex) {
+        const optionIdx = parseInt(optionIndex, 10);
+        const storeIdx = parseInt(storeIndex, 10);
         const item = itemsData.find((i) => i.name === itemName);
         if (!item || !item.options || !item.options[optionIdx]) return;
 
         item.selectedOptionIndex = optionIdx;
-        item.selectedStoreIndex = 0; // Default to first store for newly chosen model
+        item.selectedStoreIndex = storeIdx;
 
         const selectedModel = item.options[optionIdx];
         const selectedStore =
-          selectedModel.stores && selectedModel.stores[0]
+          selectedModel.stores && selectedModel.stores[storeIdx]
+            ? selectedModel.stores[storeIdx]
+            : selectedModel.stores && selectedModel.stores[0]
             ? selectedModel.stores[0]
             : null;
 
@@ -13457,43 +13456,24 @@ wall-switch action event exposed by the selected Home Assistant integration.
           item.sellerSavings = item.price;
         }
 
+        openDrawers.add(item.id);
+
         renderTable();
         updateKPIs();
+      }
+
+      function handleModelChange(itemName, optionIndexStr) {
+        selectCandidateOption(itemName, optionIndexStr, 0);
       }
 
       function handleStoreChange(itemName, storeIndexStr) {
-        const storeIdx = parseInt(storeIndexStr, 10);
         const item = itemsData.find((i) => i.name === itemName);
-        if (!item || !item.options) return;
-
-        const currentModel = item.options[item.selectedOptionIndex || 0];
-        if (
-          !currentModel ||
-          !currentModel.stores ||
-          !currentModel.stores[storeIdx]
-        )
-          return;
-
-        item.selectedStoreIndex = storeIdx;
-        const selectedStore = currentModel.stores[storeIdx];
-
-        item.price = selectedStore.price;
-        item.priceDisplay =
-          selectedStore.priceDisplay ||
-          `$${selectedStore.price.toLocaleString()}`;
-        item.availableAt = selectedStore.store;
-        item.linkText = selectedStore.linkText;
-        item.linkUrl = selectedStore.linkUrl;
-
-        if (item.sellerDeductible) {
-          item.sellerSavings = item.price;
-        }
-
-        renderTable();
-        updateKPIs();
+        if (!item) return;
+        selectCandidateOption(itemName, item.selectedOptionIndex || 0, storeIndexStr);
       }
 
       function resetAllOptions() {
+        openDrawers.clear();
         itemsData.forEach((item) => {
           if (item.options && item.options.length > 0) {
             item.selectedOptionIndex = 0;
@@ -14515,12 +14495,14 @@ wall-switch action event exposed by the selected Home Assistant integration.
         const btn = document.getElementById(`toggleBtn-${itemId}`);
         if (!drawer) return;
 
-        if (drawer.style.display === "none" || drawer.style.display === "") {
-          drawer.style.display = "table-row";
-          if (btn) btn.classList.add("active");
-        } else {
+        if (openDrawers.has(itemId)) {
+          openDrawers.delete(itemId);
           drawer.style.display = "none";
           if (btn) btn.classList.remove("active");
+        } else {
+          openDrawers.add(itemId);
+          drawer.style.display = "table-row";
+          if (btn) btn.classList.add("active");
         }
       }
 
