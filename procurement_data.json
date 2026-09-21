@@ -2425,8 +2425,8 @@
     "id": "climbing-hangboard",
     "name": "Climbing Hangboard",
     "choice": "Beastmaker 1000 Series (FSC Beech Wood)",
-    "notes": "Industry benchmark wooden fingerboard. Fine-grain skin-friendly beech wood with jugs, slopers, and 20-30mm edges. Mount on RC lintel with 18mm birch backer.",
-    "room": "Bedroom 2 / Study",
+    "notes": "Industry benchmark wooden fingerboard. Planned above Master Bedroom door, omitted from floor layout. Installer to verify substrate, mounting method, and clearance on site.",
+    "room": "Master Bed",
     "priority": "P1",
     "status": "Selected",
     "price": 195,
@@ -2441,7 +2441,7 @@
     "options": [
       {
         "model": "Beastmaker 1000 Series (FSC Beech Wood)",
-        "notes": "Industry benchmark wooden fingerboard. Fine-grain skin-friendly beech wood with jugs, slopers, and 20-30mm edges. Mount on RC lintel with 18mm birch backer.",
+        "notes": "Industry benchmark wooden fingerboard. Planned above Master Bedroom door, omitted from floor layout. Installer to verify substrate, mounting method, and clearance on site.",
         "stores": [
           {
             "store": "Boulder Planet SG",

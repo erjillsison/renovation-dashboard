@@ -852,13 +852,6 @@
                 </g>
                 </g>
 
-                <!-- Overhead Fixtures: Climbing Hangboard (Bedroom 2 Doorway Lintel) -->
-                <g id="fixture-climbing-hangboard" transform="translate(534, 558)">
-                  <rect x="0" y="0" width="52" height="14" rx="3.5" fill="#2d1a0e" stroke="#f59e0b" stroke-width="1.2" filter="url(#badgeShadow)" />
-                  <text x="26" y="10" font-size="6.5" font-family="'Space Grotesk', sans-serif" font-weight="800" fill="#fef3c7" text-anchor="middle" stroke="none" letter-spacing="0.4">HANGBOARD</text>
-                  <title>Climbing Hangboard: Beastmaker 1000 Series (Mounted on Reinforced Concrete Doorway Lintel with 18mm Birch Backer)</title>
-                </g>
-
                 <!-- Suggested switch-to-load relationships, not physical conduit routes. Dashed amber paths are wireless scenes. -->
                 <g id="layerSwitchConnections" pointer-events="none">
                   <g class="switch-connection-group" data-switch-id="entrance">

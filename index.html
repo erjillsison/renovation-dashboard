@@ -7277,41 +7277,6 @@ automation:
                   </g>
                 </g>
 
-                <!-- Overhead Fixtures: Climbing Hangboard (Bedroom 2 Doorway Lintel) -->
-                <g
-                  id="fixture-climbing-hangboard"
-                  transform="translate(534, 558)"
-                >
-                  <rect
-                    x="0"
-                    y="0"
-                    width="52"
-                    height="14"
-                    rx="3.5"
-                    fill="#2d1a0e"
-                    stroke="#f59e0b"
-                    stroke-width="1.2"
-                    filter="url(#badgeShadow)"
-                  />
-                  <text
-                    x="26"
-                    y="10"
-                    font-size="6.5"
-                    font-family="'Space Grotesk', sans-serif"
-                    font-weight="800"
-                    fill="#fef3c7"
-                    text-anchor="middle"
-                    stroke="none"
-                    letter-spacing="0.4"
-                  >
-                    HANGBOARD
-                  </text>
-                  <title>
-                    Climbing Hangboard: Beastmaker 1000 Series (Mounted on
-                    Reinforced Concrete Doorway Lintel with 18mm Birch Backer)
-                  </title>
-                </g>
-
                 <!-- Suggested switch-to-load relationships, not physical conduit routes. Dashed amber paths are wireless scenes. -->
                 <g id="layerSwitchConnections" pointer-events="none">
                   <g class="switch-connection-group" data-switch-id="entrance">
@@ -10076,8 +10041,8 @@ automation:
             "id": "climbing-hangboard",
             "name": "Climbing Hangboard",
             "choice": "Beastmaker 1000 Series (FSC Beech Wood)",
-            "notes": "Industry benchmark wooden fingerboard. Fine-grain skin-friendly beech wood with jugs, slopers, and 20-30mm edges. Mount on RC lintel with 18mm birch backer.",
-            "room": "Bedroom 2 / Study",
+            "notes": "Industry benchmark wooden fingerboard. Planned above Master Bedroom door, omitted from floor layout. Installer to verify substrate, mounting method, and clearance on site.",
+            "room": "Master Bed",
             "priority": "P1",
             "status": "Selected",
             "price": 195,
@@ -10092,7 +10057,7 @@ automation:
             "options": [
                   {
                         "model": "Beastmaker 1000 Series (FSC Beech Wood)",
-                        "notes": "Industry benchmark wooden fingerboard. Fine-grain skin-friendly beech wood with jugs, slopers, and 20-30mm edges. Mount on RC lintel with 18mm birch backer.",
+                        "notes": "Industry benchmark wooden fingerboard. Planned above Master Bedroom door, omitted from floor layout. Installer to verify substrate, mounting method, and clearance on site.",
                         "stores": [
                               {
                                     "store": "Boulder Planet SG",
@@ -12690,7 +12655,7 @@ automation:
           type: "Private • Sleep Sanctuary & Wardrobe",
           zoneId: "zone-Master-Bed",
           dimensions:
-            "• <strong>Clear Width:</strong> ±3,005 mm<br>• <strong>Sleeping Depth:</strong> ±2,085 mm (Window to wardrobe face)<br>• <strong>Wardrobe Corridor Aisle:</strong> ±890 mm<br>• <strong>Overall Length:</strong> ±3,200 mm<br>• <strong>Floor Area:</strong> ~9.6 m² (~103 sq ft)<br>• <strong>RC Ledge:</strong> ±3,005 mm exterior ledge<br>• <strong>Fit:</strong> Queen mattress fits with 740mm side walkaways.",
+            "• <strong>Clear Width:</strong> ±3,005 mm<br>• <strong>Sleeping Depth:</strong> ±2,085 mm (Window to wardrobe face)<br>• <strong>Wardrobe Corridor Aisle:</strong> ±890 mm<br>• <strong>Overall Length:</strong> ±3,200 mm<br>• <strong>Floor Area:</strong> ~9.6 m² (~103 sq ft)<br>• <strong>RC Ledge:</strong> ±3,005 mm exterior ledge<br>• <strong>Fit:</strong> Queen mattress fits with 740mm side walkaways.<br>• <strong>Hangboard:</strong> planned above Master Bedroom door; mounting clearance and substrate to confirm on site.",
           sensors:
             "• <strong>1x Bedside Wireless Mini Switch</strong> (Nightstand)<br>• <strong>1x Wardrobe Door Contact T1</strong> (Wardrobe Door)<br>• <span style='color: var(--accent-p0); font-weight: 700;'>Strictly NO motion/presence sensors!</span>",
           lighting:
@@ -12746,9 +12711,9 @@ automation:
           type: "Transition • Bedroom & Bath Corridor",
           zoneId: "zone-Hallway",
           dimensions:
-            "• <strong>Corridor Width:</strong> ±1,500 mm<br>• <strong>Clear Length:</strong> ±1,505 mm<br>• <strong>Floor Area:</strong> ~2.3 m² (~25 sq ft)<br>• <strong>Features:</strong> Central corridor connecting Living, Kitchen, Bathrooms, and Bedrooms. Overhead RC doorway lintel with Beastmaker 1000 climbing hangboard.",
+            "• <strong>Corridor Width:</strong> ±1,500 mm<br>• <strong>Clear Length:</strong> ±1,505 mm<br>• <strong>Floor Area:</strong> ~2.3 m² (~25 sq ft)<br>• <strong>Features:</strong> Central corridor connecting Living, Kitchen, Bathrooms, and Bedrooms.",
           sensors:
-            "• PIR Motion Sensor / Pathway Lighting Sync<br>• <strong>Guest Wi-Fi:</strong> Quick-scan QR plaque located on adjacent corridor pegboard.<br>• <strong>Training Lintel:</strong> Overhead climbing hangboard across Bedroom 2 doorway opening.",
+            "• PIR Motion Sensor / Pathway Lighting Sync<br>• <strong>Guest Wi-Fi:</strong> Quick-scan QR plaque located on adjacent corridor pegboard.",
         lighting:
             "• <strong>Aqara H1 1-Gang Dedicated Switch</strong> (foyer wall beside kitchen doorway; hallway lights only)<br>• 2x High-CRI Recessed Downlights",
           automations:
@@ -12760,9 +12725,9 @@ automation:
           type: "Private • WFH Office & Guest Room",
           zoneId: "zone-Bedroom-2",
           dimensions:
-            "• <strong>Clear Width:</strong> ±2,450 mm<br>• <strong>Clear Length:</strong> ±3,090 mm<br>• <strong>Floor Area:</strong> ~7.6 m² (~81 sq ft)<br>• <strong>RC Ledge:</strong> ±2,450 mm exterior window ledge<br>• <strong>Features:</strong> Wardrobe niche + study workstation with 32mm conduit + doorway lintel climbing hangboard.",
+            "• <strong>Clear Width:</strong> ±2,450 mm<br>• <strong>Clear Length:</strong> ±3,090 mm<br>• <strong>Floor Area:</strong> ~7.6 m² (~81 sq ft)<br>• <strong>RC Ledge:</strong> ±2,450 mm exterior window ledge<br>• <strong>Features:</strong> Wardrobe niche + study workstation with 32mm conduit.",
           sensors:
-            "• Manual Aqara H1 Switch Control (Zero Zoom dropouts)<br>• <strong>High-Performance PC Rig:</strong> Backed onto shared wall with 32mm conduit pass-through sleeve directly to Living Room TV console.<br>• <strong>Climbing Hangboard:</strong> Beastmaker 1000 Series (FSC Beech Wood) anchored into doorway RC lintel with 18mm birch backer.",
+            "• Manual Aqara H1 Switch Control (Zero Zoom dropouts)<br>• <strong>High-Performance PC Rig:</strong> Backed onto shared wall with 32mm conduit pass-through sleeve directly to Living Room TV console.",
           lighting:
             "• <strong>Aqara H1 1-Gang Dedicated Switch</strong> (Door Box)<br>• 3x High-CRI Recessed Downlights<br>• Mitsubishi Electric Starmex 9k BTU AC",
           automations:
