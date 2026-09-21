@@ -254,12 +254,13 @@
                     "
                     fill="none" stroke="#232724" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"
                   />
-                  <!-- Interior Dividing Walls (Clear doorway openings, no stray segments) -->
+                  <!-- Interior dividing walls; openings follow the Bedroom 2 and Common Bath doors in the reference plan -->
                   <path
                     d="
                       M 300 565 L 590 565
                       M 300 772 L 590 772
-                      M 590 268 L 590 565
+                      M 590 268 L 590 505
+                      M 590 685 L 590 772
                       M 590 772 L 590 890 M 590 970 L 590 1135
                       M 940 355 L 940 590
                       M 940 700 L 1140 700 M 1210 700 L 1320 700
@@ -883,7 +884,7 @@
                     <path d="M 595 615 Q 520 590 445 625"/><circle cx="445" cy="625" r="5"/><text x="470" y="608">BATH DL</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="common-bath-heater">
-                    <path d="M 595 655 Q 530 710 450 735"/><circle cx="450" cy="735" r="7"/><text x="464" y="750">HEATER</text>
+                    <path d="M 595 720 Q 530 740 450 735"/><circle cx="450" cy="735" r="7"/><text x="464" y="750">HEATER</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="master-bed">
                     <path d="M 969 600 Q 1000 575 1020 550"/><circle cx="1020" cy="550" r="5"/><text x="983" y="570">MASTER DL</text>
@@ -986,7 +987,7 @@
                   </g>
 
                   <!-- Common Bath: Aqara H1 20A smart heater control; separate DP isolator -->
-                  <g class="switch-pin" data-switch-id="common-bath-heater" transform="translate(595, 645)">
+                  <g class="switch-pin" data-switch-id="common-bath-heater" transform="translate(595, 710)">
                     <title>Common Bath: Aqara H1 20A water-heater control (white); separate DP isolator required</title>
                     <rect x="0" y="-14" width="46" height="12" rx="3" fill="#09090b" fill-opacity="0.95" stroke="#ef4444" stroke-width="0.8" />
                     <text x="23" y="-5" font-family="'Space Grotesk', sans-serif" font-size="7.5" font-weight="800" fill="#f87171" text-anchor="middle" letter-spacing="0.5">20A • HTR</text>

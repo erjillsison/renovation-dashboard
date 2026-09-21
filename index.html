@@ -4558,171 +4558,60 @@ wall-switch action event exposed by the selected Home Assistant integration.
                       M 590 355 L 590 25 L 940 25 L 940 355 L 1278 355 L 1278 700 L 1320 700 L 1320 878 L 770 878 L 770 1213 L 710 1213
                       M 620 1213 L 590 1213 L 590 1135 L 510 1135 L 510 1088 L 300 1088 L 300 268 L 590 268 L 590 355
                     "
-                    fill="none"
-                    stroke="#232724"
-                    stroke-width="7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    fill="none" stroke="#232724" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"
                   />
-                  <!-- Interior Dividing Walls (Clear doorway openings, no stray segments) -->
+                  <!-- Interior dividing walls; openings follow the Bedroom 2 and Common Bath doors in the reference plan -->
                   <path
                     d="
                       M 300 565 L 590 565
                       M 300 772 L 590 772
-                      M 590 268 L 590 565
+                      M 590 268 L 590 505
+                      M 590 685 L 590 772
                       M 590 772 L 590 890 M 590 970 L 590 1135
                       M 940 355 L 940 590
                       M 940 700 L 1140 700 M 1210 700 L 1320 700
                       M 940 700 L 940 878
                     "
-                    fill="none"
-                    stroke="#333b35"
-                    stroke-width="4.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    fill="none" stroke="#333b35" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"
                   />
 
                   <!-- Door Swings & Leaves -->
                   <!-- Main Entrance Door (at bottom of narrow foyer, swinging inward) -->
-                  <line
-                    x1="620"
-                    y1="1213"
-                    x2="620"
-                    y2="1138"
-                    stroke="#232724"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                  />
-                  <path
-                    d="M 620 1138 A 75 75 0 0 1 695 1213"
-                    fill="none"
-                    stroke="#688070"
-                    stroke-width="2"
-                    stroke-dasharray="4 3"
-                  />
+                  <line x1="620" y1="1213" x2="620" y2="1138" stroke="#232724" stroke-width="3" stroke-linecap="round" />
+                  <path d="M 620 1138 A 75 75 0 0 1 695 1213" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
 
                   <!-- Bedroom 2 Door (swinging into Bed 2 from hallway) -->
-                  <line
-                    x1="585"
-                    y1="565"
-                    x2="540"
-                    y2="565"
-                    stroke="#232724"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                  />
-                  <path
-                    d="M 585 565 A 45 45 0 0 0 540 520"
-                    fill="none"
-                    stroke="#688070"
-                    stroke-width="2"
-                    stroke-dasharray="4 3"
-                  />
+                  <line x1="585" y1="565" x2="540" y2="565" stroke="#232724" stroke-width="3" stroke-linecap="round" />
+                  <path d="M 585 565 A 45 45 0 0 0 540 520" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
 
                   <!-- Common Bath Door (swinging into Common Bath) -->
-                  <line
-                    x1="585"
-                    y1="640"
-                    x2="540"
-                    y2="640"
-                    stroke="#232724"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                  />
-                  <path
-                    d="M 585 640 A 45 45 0 0 1 540 685"
-                    fill="none"
-                    stroke="#688070"
-                    stroke-width="2"
-                    stroke-dasharray="4 3"
-                  />
+                  <line x1="585" y1="640" x2="540" y2="640" stroke="#232724" stroke-width="3" stroke-linecap="round" />
+                  <path d="M 585 640 A 45 45 0 0 1 540 685" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
 
                   <!-- Master Bedroom Door (swinging into Master Bed against wardrobe) -->
-                  <line
-                    x1="940"
-                    y1="595"
-                    x2="990"
-                    y2="595"
-                    stroke="#232724"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                  />
-                  <path
-                    d="M 940 595 A 50 50 0 0 1 990 645"
-                    fill="none"
-                    stroke="#688070"
-                    stroke-width="2"
-                    stroke-dasharray="4 3"
-                  />
+                  <line x1="940" y1="595" x2="990" y2="595" stroke="#232724" stroke-width="3" stroke-linecap="round" />
+                  <path d="M 940 595 A 50 50 0 0 1 990 645" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
 
                   <!-- Master Bath Door (swinging into Master Bath) -->
-                  <line
-                    x1="1140"
-                    y1="700"
-                    x2="1140"
-                    y2="750"
-                    stroke="#232724"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                  />
-                  <path
-                    d="M 1140 700 A 50 50 0 0 1 1190 750"
-                    fill="none"
-                    stroke="#688070"
-                    stroke-width="2"
-                    stroke-dasharray="4 3"
-                  />
+                  <line x1="1140" y1="700" x2="1140" y2="750" stroke="#232724" stroke-width="3" stroke-linecap="round" />
+                  <path d="M 1140 700 A 50 50 0 0 1 1190 750" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
 
                   <!-- Balcony Sliding Doors (at y=355) -->
-                  <line
-                    x1="600"
-                    y1="352"
-                    x2="770"
-                    y2="352"
-                    stroke="#5a8b9e"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                  />
-                  <line
-                    x1="760"
-                    y1="358"
-                    x2="930"
-                    y2="358"
-                    stroke="#5a8b9e"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                  />
+                  <line x1="600" y1="352" x2="770" y2="352" stroke="#5a8b9e" stroke-width="3" stroke-linecap="round" />
+                  <line x1="760" y1="358" x2="930" y2="358" stroke="#5a8b9e" stroke-width="3" stroke-linecap="round" />
 
                   <!-- Structural Concrete Columns & Piers -->
                   <rect x="584" y="345" width="14" height="20" fill="#232724" />
                   <rect x="933" y="345" width="14" height="24" fill="#232724" />
                   <rect x="293" y="261" width="14" height="14" fill="#232724" />
-                  <rect
-                    x="293"
-                    y="1081"
-                    width="14"
-                    height="14"
-                    fill="#232724"
-                  />
-                  <rect
-                    x="763"
-                    y="1206"
-                    width="14"
-                    height="14"
-                    fill="#232724"
-                  />
+                  <rect x="293" y="1081" width="14" height="14" fill="#232724" />
+                  <rect x="763" y="1206" width="14" height="14" fill="#232724" />
                   <rect x="763" y="871" width="14" height="14" fill="#232724" />
-                  <rect
-                    x="1313"
-                    y="871"
-                    width="14"
-                    height="14"
-                    fill="#232724"
-                  />
+                  <rect x="1313" y="871" width="14" height="14" fill="#232724" />
                 </g>
 
                 <!-- ================================================================= -->
-                <!-- Layer: Architectural CAD Dimensions (ALTS DWG 101 Measurements) -->
+<!-- Layer: Architectural CAD Dimensions (ALTS DWG 101 Measurements) -->
                 <!-- ================================================================= -->
                 <g
                   id="layerDimensionsGroup"
@@ -7306,7 +7195,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                     <path d="M 595 615 Q 520 590 445 625"/><circle cx="445" cy="625" r="5"/><text x="470" y="608">BATH DL</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="common-bath-heater">
-                    <path d="M 595 655 Q 530 710 450 735"/><circle cx="450" cy="735" r="7"/><text x="464" y="750">HEATER</text>
+                    <path d="M 595 720 Q 530 740 450 735"/><circle cx="450" cy="735" r="7"/><text x="464" y="750">HEATER</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="master-bed">
                     <path d="M 969 600 Q 1000 575 1020 550"/><circle cx="1020" cy="550" r="5"/><text x="983" y="570">MASTER DL</text>
@@ -7409,7 +7298,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                   </g>
 
                   <!-- Common Bath: Aqara H1 20A smart heater control; separate DP isolator -->
-                  <g class="switch-pin" data-switch-id="common-bath-heater" transform="translate(595, 645)">
+                  <g class="switch-pin" data-switch-id="common-bath-heater" transform="translate(595, 710)">
                     <title>Common Bath: Aqara H1 20A water-heater control (white); separate DP isolator required</title>
                     <rect x="0" y="-14" width="46" height="12" rx="3" fill="#09090b" fill-opacity="0.95" stroke="#ef4444" stroke-width="0.8" />
                     <text x="23" y="-5" font-family="'Space Grotesk', sans-serif" font-size="7.5" font-weight="800" fill="#f87171" text-anchor="middle" letter-spacing="0.5">20A • HTR</text>
