@@ -1017,6 +1017,17 @@
         font-weight: 700;
       }
 
+      .badge-store-link {
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.15s ease;
+      }
+      .badge-store-link:hover {
+        opacity: 0.85;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+      }
+
       .badge-priority {
         display: inline-block;
         font-size: 0.68rem;
@@ -2428,50 +2439,48 @@
                 <th
                   class="sortable"
                   onclick="handleSort('name')"
-                  style="width: 18%; min-width: 170px"
+                  style="width: 18%; min-width: 160px"
                 >
                   Item & Category
                   <span class="sort-icon" id="sort-name">⇅</span>
                 </th>
-                <th style="width: 24%; min-width: 250px">
-                  Configured Model / Option
+                <th
+                  class="sortable"
+                  onclick="handleSort('choice')"
+                  style="width: 28%; min-width: 240px"
+                >
+                  Selected Model
+                  <span class="sort-icon" id="sort-choice">⇅</span>
                 </th>
                 <th
                   class="sortable"
-                  onclick="handleSort('availableAt')"
-                  style="width: 15%; min-width: 140px"
+                  onclick="handleSort('price')"
+                  style="width: 11%; min-width: 105px; text-align: right"
                 >
-                  Store / Platform
-                  <span class="sort-icon" id="sort-availableAt">⇅</span>
+                  Price
+                  <span class="sort-icon" id="sort-price">⇅</span>
                 </th>
-                <th style="width: 11%; min-width: 105px">Store Link</th>
                 <th
                   class="sortable"
                   onclick="handleSort('room')"
-                  style="width: 10%; min-width: 110px"
+                  style="width: 11%; min-width: 105px"
                 >
                   Room <span class="sort-icon" id="sort-room">⇅</span>
                 </th>
                 <th
                   class="sortable"
                   onclick="handleSort('priority')"
-                  style="width: 8%; min-width: 80px"
+                  style="width: 9%; min-width: 80px"
                 >
                   Priority <span class="sort-icon" id="sort-priority">⇅</span>
                 </th>
                 <th
                   class="sortable"
-                  onclick="handleSort('status')"
-                  style="width: 7%; min-width: 80px"
+                  onclick="handleSort('availableAt')"
+                  style="width: 23%; min-width: 210px"
                 >
-                  Status <span class="sort-icon" id="sort-status">⇅</span>
-                </th>
-                <th
-                  class="sortable"
-                  onclick="handleSort('price')"
-                  style="width: 9%; min-width: 110px; text-align: right"
-                >
-                  Cost (SGD) <span class="sort-icon" id="sort-price">⇅</span>
+                  Details and Options
+                  <span class="sort-icon" id="sort-availableAt">⇅</span>
                 </th>
               </tr>
             </thead>
@@ -13061,11 +13070,11 @@ wall-switch action event exposed by the selected Home Assistant integration.
       function updateSortIcons() {
         const columns = [
           "name",
-          "availableAt",
+          "choice",
+          "price",
           "room",
           "priority",
-          "status",
-          "price",
+          "availableAt",
         ];
         columns.forEach((col) => {
           const iconEl = document.getElementById(`sort-${col}`);
@@ -13084,8 +13093,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
         });
       }
 
-      
-      function getStoreBadgeHtml(storeName) {
+      function getStoreBadgeHtml(storeName, linkUrl = "") {
         if (!storeName || storeName === "-") {
           return '<span style="color: var(--text-muted); font-size: 0.75rem;">—</span>';
         }
@@ -13119,6 +13127,13 @@ wall-switch action event exposed by the selected Home Assistant integration.
         } else if (sn.includes("smart innovations") || sn.includes("homesmart")) {
           cls += " badge-smartinnovations";
           icon = "⚡ ";
+        } else if (sn.includes("dreame")) {
+          cls += " badge-courts";
+          icon = "🤖 ";
+        }
+
+        if (linkUrl) {
+          return `<a href="${linkUrl}" target="_blank" rel="noopener noreferrer" class="${cls} badge-store-link" title="Open ${storeName} deal page">${icon}${storeName} <span style="font-size:0.65rem;">↗</span></a>`;
         }
         return `<span class="${cls}">${icon}${storeName}</span>`;
       }
@@ -13234,7 +13249,35 @@ wall-switch action event exposed by the selected Home Assistant integration.
 
             const safeItemName = item.name.replace(/'/g, "\\'");
 
-            // 1. Choice / Model Column
+            // 1. Model Column
+            const modelName = currentModel ? currentModel.model : item.choice;
+            const modelNotes =
+              (currentModel && currentModel.notes) || item.notes || "";
+
+            const modelDisplay = `
+              <div class="item-choice-cell">
+                <strong style="color: var(--text-primary); font-size: 0.84rem; line-height: 1.35;">${modelName}</strong>
+                ${modelNotes ? `<div class="item-notes">${modelNotes}</div>` : ""}
+              </div>
+            `;
+
+            // 2. Price Column
+            const activePriceDisplay =
+              currentStore.priceDisplay ||
+              item.priceDisplay ||
+              `$${(item.price || 0).toLocaleString()}`;
+
+            // 3. Room Column
+            const roomDisplay = `<span class="badge-room">${item.room}</span>`;
+
+            // 4. Priority Column
+            const priorityDisplay = `<span class="badge-priority ${priorityClass}">${item.priority}</span>`;
+
+            // 5. Details and Options Column (combines Store / Platform + Deal Link + All Deals Drawer Toggle)
+            const activeLinkUrl = currentStore.linkUrl || item.linkUrl;
+            const storeName = currentStore.store || item.availableAt;
+            const storeBadgeWithLink = getStoreBadgeHtml(storeName, activeLinkUrl);
+
             const hasOtherOptions =
               (item.options && item.options.length > 1) ||
               (item.options &&
@@ -13252,65 +13295,32 @@ wall-switch action event exposed by the selected Home Assistant integration.
             const isDrawerOpen = openDrawers.has(item.id);
             const drawerBtnActive = isDrawerOpen ? "active" : "";
 
-            const modelName = currentModel ? currentModel.model : item.choice;
-            const modelNotes =
-              (currentModel && currentModel.notes) || item.notes || "";
+            let actionsHtml = "";
+            if (hasOtherOptions) {
+              actionsHtml += `<button type="button" class="btn-table-pill btn-drawer-pill ${drawerBtnActive}" id="toggleBtn-${item.id}" onclick="toggleItemDrawer('${item.id}')" title="View all candidate options & store deals">📋 All Deals (${optCount})</button>`;
+            }
+            if (item.comparisonCategory) {
+              actionsHtml += `<button type="button" class="btn-table-pill btn-showroom-pill" onclick="viewCategoryComparison('${item.comparisonCategory}')" title="View Showroom Comparison Table">🏬 Quotes</button>`;
+            }
 
-            const choiceDisplay = `
-              <div class="item-choice-cell">
-                <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
-                  <strong style="color: var(--text-primary); font-size: 0.84rem; line-height: 1.35;">${modelName}</strong>
-                  ${
-                    hasOtherOptions
-                      ? `<button type="button" class="btn-table-pill btn-drawer-pill ${drawerBtnActive}" id="toggleBtn-${item.id}" onclick="toggleItemDrawer('${item.id}')" title="View all candidate options & store deals">📋 Other Options (${optCount})</button>`
-                      : ""
-                  }
+            const detailsAndOptionsDisplay = `
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
+                <div class="store-badge-container">
+                  ${storeBadgeWithLink}
                 </div>
-                ${modelNotes ? `<div class="item-notes">${modelNotes}</div>` : ""}
+                ${actionsHtml ? `<div style="display: flex; gap: 4px; align-items: center; flex-wrap: wrap;">${actionsHtml}</div>` : ""}
               </div>
             `;
-
-            // 2. Available At / Store Column
-            const storeDisplay = getStoreBadgeHtml(
-              currentStore.store || item.availableAt
-            );
-
-            // 3. Link Column
-            const activeLinkUrl = currentStore.linkUrl || item.linkUrl;
-            const activeLinkText = currentStore.linkText || item.linkText;
-            const isShopee =
-              activeLinkText && activeLinkText.toLowerCase().includes("shopee");
-            const linkBtnClass = isShopee
-              ? "item-link-btn"
-              : "item-link-btn brand-link";
-            const linkIcon = isShopee ? "🛒" : "🔗";
-            const linkDisplay = activeLinkUrl
-              ? `<a href="${activeLinkUrl}" target="_blank" rel="noopener noreferrer" class="${linkBtnClass}">${linkIcon} ${activeLinkText || "View Deal"}</a>`
-              : `<span style="color: var(--text-muted); font-size: 0.75rem;">—</span>`;
-
-            // 4. Price Column
-            const activePriceDisplay =
-              currentStore.priceDisplay ||
-              item.priceDisplay ||
-              `$${(item.price || 0).toLocaleString()}`;
-
-            let nameActionsHtml = "";
-            if (item.comparisonCategory) {
-              nameActionsHtml += `<button type="button" class="btn-table-pill btn-showroom-pill" onclick="viewCategoryComparison('${item.comparisonCategory}')" title="View Showroom Comparison Table">🏬 Quotes</button>`;
-            }
 
             row.innerHTML = `
               <td>
                 <div class="item-name-cell">${item.name}</div>
-                ${nameActionsHtml ? `<div style="display: flex; gap: 4px; margin-top: 4px; flex-wrap: wrap;">${nameActionsHtml}</div>` : ""}
               </td>
-              <td>${choiceDisplay}</td>
-              <td>${storeDisplay}</td>
-              <td>${linkDisplay}</td>
-              <td><span class="badge-room">${item.room}</span></td>
-              <td><span class="badge-priority ${priorityClass}">${item.priority}</span></td>
-              <td><span class="status-badge ${statusClass}">${item.status}</span></td>
+              <td>${modelDisplay}</td>
               <td style="text-align: right;"><span class="price-tag">${activePriceDisplay}</span></td>
+              <td>${roomDisplay}</td>
+              <td>${priorityDisplay}</td>
+              <td>${detailsAndOptionsDisplay}</td>
             `;
             tbody.appendChild(row);
 
@@ -13339,18 +13349,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                       ];
                 mStores.forEach((sOpt, sIdx) => {
                   const isStoreSelected = isModelSelected && sIdx === storeIdx;
-                  const storeBadge = getStoreBadgeHtml(sOpt.store);
-                  const optLinkHtml = sOpt.linkUrl
-                    ? `<a href="${sOpt.linkUrl}" target="_blank" rel="noopener noreferrer" class="item-link-btn ${
-                        sOpt.store && sOpt.store.toLowerCase().includes("shopee")
-                          ? ""
-                          : "brand-link"
-                      }">${
-                        sOpt.store && sOpt.store.toLowerCase().includes("shopee")
-                          ? "🛒"
-                          : "🔗"
-                      } ${sOpt.linkText || "View Deal"}</a>`
-                    : '<span style="color:var(--text-muted); font-size:0.75rem;">—</span>';
+                  const storeBadge = getStoreBadgeHtml(sOpt.store, sOpt.linkUrl);
                   const rowClass = isStoreSelected ? "active-option-row" : "";
                   const btnClass = isStoreSelected
                     ? "btn-select-option is-active"
@@ -13373,7 +13372,6 @@ wall-switch action event exposed by the selected Home Assistant integration.
                       <td style="color:#15803d; font-weight:600; font-size:0.74rem;">${
                         sOpt.promo ? `✨ ${sOpt.promo}` : "—"
                       }</td>
-                      <td style="white-space:nowrap;">${optLinkHtml}</td>
                       <td style="white-space:nowrap; text-align:center;">
                         <button type="button" class="${btnClass}" onclick="selectCandidateOption('${safeItemName}', ${mIdx}, ${sIdx});">
                           ${btnText}
@@ -13385,22 +13383,21 @@ wall-switch action event exposed by the selected Home Assistant integration.
               });
 
               drawerRow.innerHTML = `
-                <td colspan="8">
+                <td colspan="6">
                   <div class="drawer-container">
                     <div class="drawer-header">
                       <span class="drawer-title">📋 Evaluated Models & Store Deals for <strong>${item.name}</strong></span>
-                      <span class="drawer-hint">Select any option to set it as your active plan choice.</span>
+                      <span class="drawer-hint">Select any option to set it as your active plan choice. Click store name to open deal page.</span>
                     </div>
                     <div style="overflow-x: auto;">
                       <table class="drawer-table">
                         <thead>
                           <tr>
                             <th style="width: 25%;">Model Variant</th>
-                            <th style="width: 28%;">Key Notes / Specs</th>
-                            <th style="width: 15%;">Store / Retailer</th>
+                            <th style="width: 33%;">Key Notes / Specs</th>
+                            <th style="width: 17%;">Store / Platform</th>
                             <th style="width: 10%;">Price</th>
-                            <th style="width: 12%;">Promo / Terms</th>
-                            <th style="width: 5%;">Link</th>
+                            <th style="width: 10%;">Promo / Terms</th>
                             <th style="width: 5%; text-align: center;">Action</th>
                           </tr>
                         </thead>
