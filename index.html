@@ -8656,22 +8656,36 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "ceiling-fan-balcony",
             "name": "Ceiling Fan (Balcony)",
-            "choice": "Fanco DC 38\" (RF) Compact Outdoor",
-            "notes": "Compact outdoor-rated 38-inch DC ceiling fan for covered balcony.",
+            "choice": "Existing Seller Fan (Retained / Reused)",
+            "notes": "Reusing existing ceiling fan from seller on covered balcony ($0 procurement). Exact model TBD upon handover inspection.",
             "room": "Balcony",
             "priority": "P0",
             "status": "Selected",
-            "price": 250,
-            "priceDisplay": "$250.00",
-            "availableAt": "Sembawang Lighting House / Shopee",
-            "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg/Fanco-Heli-DC-Motor-Ceiling-Fan-with-24W-3-Tone-LED-and-Remote-i.311742409.9016176030",
+            "price": 0,
+            "priceDisplay": "$0.00 (Owned)",
+            "availableAt": "Existing (Seller Inclusion)",
+            "linkText": "",
+            "linkUrl": "",
             "sellerDeductible": false,
             "sellerSavings": 0,
             "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
+                  {
+                        "model": "Existing Seller Fan (Retained / Reused)",
+                        "notes": "Reusing existing ceiling fan from seller on covered balcony ($0 procurement). Exact model TBD upon handover inspection.",
+                        "stores": [
+                              {
+                                    "store": "Existing (Seller Inclusion)",
+                                    "price": 0,
+                                    "priceDisplay": "$0.00 (Owned)",
+                                    "promo": "Retained Seller Inclusion",
+                                    "linkText": "",
+                                    "linkUrl": ""
+                              }
+                        ]
+                  },
                   {
                         "model": "Fanco DC 38\" (RF) Compact Outdoor",
                         "notes": "Compact outdoor-rated 38-inch DC ceiling fan for covered balcony.",
@@ -14773,7 +14787,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
           sensors:
             "• Solar Elevation & Weather Sync<br>• Sliding Door Contact Sensor (Optional)",
           lighting:
-            "• <strong>Aqara H1 2-Gang Switch</strong> (Light + decoupled Fan control)<br>• 1x Outdoor High-CRI Downlight<br>• Dooya Bi-Dir Zip Track + DD7002B (3 Sides) + Fanco DC Fan",
+            "• <strong>Aqara H1 2-Gang Switch</strong> (Light + decoupled Fan control)<br>• 1x Outdoor High-CRI Downlight<br>• Dooya Bi-Dir Zip Track + DD7002B (3 Sides) + Existing Seller Fan (Retained)",
           automations:
             "• <strong>Sunset Balcony Glow:</strong> Sliding door open after dark turns on soft warm downlight (30%).<br>• <strong>Zip Track Enclosure:</strong> Lowering zip blinds creates an enclosed outdoor room with fan on gentle breeze (Speed 2).",
           filterRoom: "Balcony",
