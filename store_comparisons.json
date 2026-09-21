@@ -1,0 +1,688 @@
+[
+  {
+    "category": "System 3 Aircon",
+    "icon": "\u2744\ufe0f",
+    "title": "Store & Price Comparison (System 3 Aircon)",
+    "headers": [
+      "Store / Platform",
+      "Model & Inclusions",
+      "Listed / Promo Price",
+      "Effective Net Price",
+      "Store Link"
+    ],
+    "rows": [
+      {
+        "store": "Courts Megastore",
+        "model": "ME Starmex 28 (5-Tick) + Standard Installation",
+        "listedPrice": "$4,084.00",
+        "netPrice": "**$3,839.00** _(VIP 6% promo)_",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Courts Megastore",
+        "model": "ME Starmex 33 Condenser + Standard Installation",
+        "listedPrice": "$4,384.00",
+        "netPrice": "**$4,121.00** _(VIP 6% promo)_",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Courts Megastore",
+        "model": "MHI Rocket SR 30 (3D Airflow) + Standard Installation",
+        "listedPrice": "$3,545.00",
+        "netPrice": "**$3,332.30** _(VIP 6% promo)_",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Shopee SG (Monster923 / Aircon Express)",
+        "model": "ME Starmex 28 + Free Upgraded Materials (Armaflex Cl 0, G22)",
+        "listedPrice": "$3,500.00",
+        "netPrice": "**$3,280.00** _(~$3,180 w/ vouchers)_",
+        "linkText": "Shopee",
+        "linkUrl": "https://shopee.sg/MITSUBISHI-STARMEX-SYSTEM-3-INVERTER-5-Tick-R32-FREE-UPGRADE-MATERIAL-i.239554013.17720065093"
+      },
+      {
+        "store": "Gain City",
+        "model": "ME Starmex 28 + Gain City 3-Yr Workmanship Warranty",
+        "listedPrice": "$4,199.00",
+        "netPrice": "**$3,999.00** _(Showroom promo)_",
+        "linkText": "Gain City",
+        "linkUrl": "https://www.gaincity.com"
+      },
+      {
+        "store": "Gain City (Ang Mo Kio)",
+        "model": "Daikin iSmile Eco+ (Confirmed Indoor Model: CTKM25ZVM)",
+        "listedPrice": "Showroom Quote",
+        "netPrice": "**Showroom visit** _(Indoor model confirmed as CTKM25ZVM)_",
+        "linkText": "Gain City",
+        "linkUrl": "https://www.gaincity.com"
+      },
+      {
+        "store": "Courts Megastore",
+        "model": "Midea MCE Series (System 3, 6-Yr Full Warranty)",
+        "listedPrice": "$3,264.00",
+        "netPrice": "**$3,068.16** _(VIP 6% promo)_",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Courts Tampines",
+        "model": "Daikin iSmile Eco+ MKM75ZVMG + CTKM25ZVMG x2 + CTKM50ZVMG",
+        "listedPrice": "$4,185.00",
+        "netPrice": "**$4,185.00** _(provisional; confirm built-in Wi-Fi/app pairing before payment)_",
+        "linkText": "Daikin SG",
+        "linkUrl": "https://www.daikin.com.sg/air-conditioners/"
+      },
+      {
+        "store": "Courts Ang Mo Kio",
+        "model": "Daikin iSmile Eco+ MKM75ZVMG + CTKM25ZVMG x2 + CTKM50ZVMG",
+        "listedPrice": "$4,485.00",
+        "netPrice": "**$4,485.00** _(visit price; Wi-Fi built into quoted indoor units)_",
+        "linkText": "Daikin SG",
+        "linkUrl": "https://www.daikin.com.sg/air-conditioners/"
+      },
+      {
+        "store": "Courts Ang Mo Kio",
+        "model": "MHI Rocket SCM30YS-W + SRK10YYS2-W8 x2 + SRK18YYS-W8",
+        "listedPrice": "$4,435.00",
+        "netPrice": "**$4,435.00** _(visit price; built-in app Wi-Fi)_",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg/mitsubishi-heavy-industries?p=2"
+      }
+    ]
+  },
+  {
+    "category": "Robot Vacuums",
+    "icon": "\ud83e\udd16",
+    "title": "Store & Price Comparison (Robot Vacuums)",
+    "headers": [
+      "Store / Platform",
+      "Model & Inclusions",
+      "Listed / Promo Price",
+      "Effective Net Price",
+      "Store Link"
+    ],
+    "rows": [
+      {
+        "store": "Courts Megastore",
+        "model": "Roborock Saros 20 (Direct Plumbing Model)",
+        "listedPrice": "$1,899.90",
+        "netPrice": "**$1,709.91** _(10% promo)_",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Roborock Official SG",
+        "model": "Roborock Saros 20 (Direct Water Hookup)",
+        "listedPrice": "$2,539.90",
+        "netPrice": "**$1,899.90**",
+        "linkText": "Roborock SG",
+        "linkUrl": "https://sg.roborock.com/pages/roborock-saros-20"
+      },
+      {
+        "store": "Dreame SG Official",
+        "model": "Dreame X60 Master (Built-in Dock + Auto Water Kit)",
+        "listedPrice": "$1,671.00",
+        "netPrice": "**$1,599.00**",
+        "linkText": "Dreame SG",
+        "linkUrl": "https://dreame.sg/products/dreame-x60-ultra-master?variant=52296811938101"
+      },
+      {
+        "store": "Dreame SG Official",
+        "model": "Dreame X60 Ultra (Freestanding + Auto Water Kit)",
+        "listedPrice": "$1,571.00",
+        "netPrice": "**$1,499.00**",
+        "linkText": "Dreame SG",
+        "linkUrl": "https://dreame.sg/products/dreame-x60-ultra-master?variant=52296811905333"
+      },
+      {
+        "store": "Courts Megastore",
+        "model": "Dreame X60 Ultra (Robotic Arm, Hot Wash)",
+        "listedPrice": "$1,799.00",
+        "netPrice": "**$1,599.00**",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Shopee SG (Dreame Official)",
+        "model": "Dreame X60 Ultra (Local Set, 2-Yr Warranty)",
+        "listedPrice": "$2,099.00",
+        "netPrice": "**$1,362 \u2013 $1,699** _(Campaign vouchers)_",
+        "linkText": "Shopee",
+        "linkUrl": "https://shopee.sg/dreame_official_store"
+      },
+      {
+        "store": "Gain City",
+        "model": "Dreame X60 Ultra Robot Vacuum Mop",
+        "listedPrice": "$2,099.00",
+        "netPrice": "**$1,699.00**",
+        "linkText": "Gain City",
+        "linkUrl": "https://www.gaincity.com/dreame-x60-ultra-robot-vacuum-mop-dm-x60u-gl-tb0017381"
+      }
+    ]
+  },
+  {
+    "category": "Washer & Dryer Stack",
+    "icon": "\ud83e\uddfa",
+    "title": "Store & Price Comparison (Washer & Dryer Stack)",
+    "headers": [
+      "Store / Platform",
+      "Model & Inclusions",
+      "Listed / Promo Price",
+      "Effective Net Price",
+      "Store Link"
+    ],
+    "rows": [
+      {
+        "store": "Courts Megastore",
+        "model": "Samsung Bespoke AI Stack (Washer + Dryer + Kit)",
+        "listedPrice": "$2,499.00",
+        "netPrice": "**$2,000.00** _(Bundle Promo)_",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Gain City / Harvey Norman",
+        "model": "Samsung Bespoke AI Stack Package",
+        "listedPrice": "$2,599.00",
+        "netPrice": "**$2,199 \u2013 $2,399**",
+        "linkText": "Gain City",
+        "linkUrl": "https://www.gaincity.com"
+      },
+      {
+        "store": "Shopee SG (Samsung Official)",
+        "model": "Samsung Bespoke Washer + Dryer (Separate Units)",
+        "listedPrice": "$2,698.00",
+        "netPrice": "**~$2,298.00**",
+        "linkText": "Shopee",
+        "linkUrl": "https://shopee.sg"
+      },
+      {
+        "store": "Courts Megastore",
+        "model": "Midea 9.5kg Washer + Heat Pump Dryer Stack",
+        "listedPrice": "$2,199.00",
+        "netPrice": "**$1,900.00**",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Courts Megastore",
+        "model": "Hisense 10.5kg Washer + Heat Pump Dryer Stack",
+        "listedPrice": "$2,899.00",
+        "netPrice": "**$2,498.00**",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Courts Ang Mo Kio",
+        "model": "Hitachi BD-100YFVEM 10kg Washer + TD-100XFVEM 10kg Heat Pump Dryer",
+        "listedPrice": "$2,228.00",
+        "netPrice": "**$2,228.00 before further discount**",
+        "linkText": "Hitachi Dryer",
+        "linkUrl": "https://www.hitachi-homeappliances.com/sg/products/washing-machine/tumble-dryer/td-100xfvem.html"
+      },
+      {
+        "store": "Courts Ang Mo Kio",
+        "model": "Samsung WW11CB944DGHSP 11kg Washer + DV10BB9440GHSP 10kg Heat Pump Dryer",
+        "listedPrice": "$2,968.00",
+        "netPrice": "**$2,968.00 before further discount**",
+        "linkText": "Samsung SG",
+        "linkUrl": "https://www.samsung.com/sg/bundles/washer-and-dryer-set/bespoke-11kg-front-load-washing-machine-and-10kg-heatpump-dryer-f-ww11c-dv10gh/"
+      },
+      {
+        "store": "Courts Ang Mo Kio",
+        "model": "LG FX1410S3GA 10kg Washer + TD-H10VBD 10kg Heat Pump Dryer",
+        "listedPrice": "$3,448.00",
+        "netPrice": "**$3,448.00 before further discount**",
+        "linkText": "LG SG",
+        "linkUrl": "https://www.lg.com/sg/washing-machines/dryers/td-h10vbd/"
+      }
+    ]
+  },
+  {
+    "category": "Refrigerator",
+    "icon": "\ud83e\uddca",
+    "title": "Store & Price Comparison (Refrigerator)",
+    "headers": [
+      "Store / Platform",
+      "Model & Inclusions",
+      "Listed / Promo Price",
+      "Effective Net Price",
+      "Store Link"
+    ],
+    "rows": [
+      {
+        "store": "Courts Megastore",
+        "model": "Samsung RB34T6054B1 325L Bottom Mount",
+        "listedPrice": "$1,199.00",
+        "netPrice": "**$1,000.00** _(Courts Promo)_",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Gain City",
+        "model": "Samsung RB34T6054B1 325L SpaceMax Fridge",
+        "listedPrice": "$1,199.00",
+        "netPrice": "**$1,049.00**",
+        "linkText": "Gain City",
+        "linkUrl": "https://www.gaincity.com"
+      },
+      {
+        "store": "Shopee SG (Samsung Official / Parisilk)",
+        "model": "Samsung RB34T6054B1 325L Bottom Mount Fridge",
+        "listedPrice": "$1,199.00",
+        "netPrice": "**~$1,019 \u2013 $1,079**",
+        "linkText": "Shopee",
+        "linkUrl": "https://shopee.sg"
+      },
+      {
+        "store": "Gain City / Mega Discount",
+        "model": "Hisense / Panasonic 400L 2-Door Fridge",
+        "listedPrice": "$799.00",
+        "netPrice": "**$650.00**",
+        "linkText": "Gain City",
+        "linkUrl": "https://www.gaincity.com"
+      }
+    ]
+  },
+  {
+    "category": "Mattress & Bed Frame",
+    "icon": "\ud83d\ude34",
+    "title": "Store & Price Comparison (Mattress & Bed Frame)",
+    "headers": [
+      "Store / Platform",
+      "Model & Inclusions",
+      "Listed / Promo Price",
+      "Effective Net Price",
+      "Store Link"
+    ],
+    "rows": [
+      {
+        "store": "Courts Megastore",
+        "model": "Simmons Beautyrest Platinum Prima Grand (Non-Flip)",
+        "listedPrice": "$5,903.00",
+        "netPrice": "**$4,900.00** _(Courts Showroom Promo)_",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Simmons Gallery / Tangs",
+        "model": "Simmons Beautyrest Platinum Prima Grand",
+        "listedPrice": "$5,903.00",
+        "netPrice": "**$5,312.70** _(10% DBS Card Promo)_",
+        "linkText": "Simmons SG",
+        "linkUrl": "https://simmons.com.sg"
+      },
+      {
+        "store": "Courts (Display Unit)",
+        "model": "_Simmons BackCare Advanced S4500 (Canada)_",
+        "listedPrice": "_$3,600.00_",
+        "netPrice": "_Rejected (1-Year Display Unit)_",
+        "linkText": "",
+        "linkUrl": ""
+      },
+      {
+        "store": "Sealy Gallery",
+        "model": "Sealy Posturepedic Camelot Luxury Medium",
+        "listedPrice": "$6,800.00+",
+        "netPrice": "**~$6,000+**",
+        "linkText": "Sealy SG",
+        "linkUrl": "https://sealy.com.sg"
+      },
+      {
+        "store": "Sealy Gallery",
+        "model": "Sealy Posturepedic Lancelot Lush",
+        "listedPrice": "$4,800.00+",
+        "netPrice": "**~$4,000+**",
+        "linkText": "Sealy SG",
+        "linkUrl": "https://sealy.com.sg"
+      },
+      {
+        "store": "Tilam King (Local Factory)",
+        "model": "Tilam King 100% Natural Latex Queen (10-Yr Sag Proof)",
+        "listedPrice": "$1,800.00",
+        "netPrice": "**$1,600 \u2013 $1,800**",
+        "linkText": "Tilam King",
+        "linkUrl": "https://tilamking.sg"
+      },
+      {
+        "store": "Courts (Frame Bundle)",
+        "model": "Hydraulic Storage Bed Frame (Add-on with Mattress)",
+        "listedPrice": "$1,299.00",
+        "netPrice": "**$590.00** _(Bundle Promo)_",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Blafink (Bespoke SG)",
+        "model": "Custom Heavy-Duty Hydraulic Bed (Bansbach Struts)",
+        "listedPrice": "$1,800.00",
+        "netPrice": "**$1,600.00**",
+        "linkText": "Blafink",
+        "linkUrl": "https://www.blafink.com"
+      },
+      {
+        "store": "Courts Ang Mo Kio",
+        "model": "King Koil Cool Extreme Aurora Queen + storage bed + headboard",
+        "listedPrice": "$3,585.00",
+        "netPrice": "**$3,585.00**",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Courts Ang Mo Kio",
+        "model": "King Koil Green Nature Mashland Queen + storage bed + headboard",
+        "listedPrice": "$3,129.00",
+        "netPrice": "**$3,129.00**",
+        "linkText": "Courts specs",
+        "linkUrl": "https://www.courts.com.sg/kingkoil-green-nature-mashland-super-single-size-mattress-w-ss193-storage-divan-and-headboard-ip193532"
+      },
+      {
+        "store": "Courts Ang Mo Kio",
+        "model": "King Koil Cool Extreme Polaris Queen + storage bed + headboard",
+        "listedPrice": "$4,055.00",
+        "netPrice": "**$4,055.00 \u2014 selected**",
+        "linkText": "Polaris",
+        "linkUrl": "https://www.courts.com.sg/kingkoil-cool-extreme-polaris-queen-size-mattress-cool-extreme-polaris-IP186422.html"
+      }
+    ]
+  },
+  {
+    "category": "OLED TV",
+    "icon": "\ud83d\udda5\ufe0f",
+    "title": "Store & Price Comparison (OLED TV)",
+    "headers": [
+      "Store / Platform",
+      "Model & Size",
+      "Listed / Promo Price",
+      "Effective Net Price",
+      "Store Link"
+    ],
+    "rows": [
+      {
+        "store": "Best Denki (VivoCity)",
+        "model": "Samsung 65\" OLED S95F (Flagship QD-OLED Glare Free)",
+        "listedPrice": "$3,199.00",
+        "netPrice": "**$2,999.00** _(Showroom promo price: $3,199 - $200 promo)_",
+        "linkText": "Best Denki",
+        "linkUrl": "https://www.bestdenki.com.sg"
+      },
+      {
+        "store": "Courts Megastore",
+        "model": "Samsung 65\" OLED S90H (Glare Free 2026)",
+        "listedPrice": "$3,699.00",
+        "netPrice": "**$3,199.00** _(Net w/ $500 voucher)_",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Gain City (Ang Mo Kio)",
+        "model": "Samsung 65\" OLED S90H + HW-S800D Soundbar + Tab S10 Lite",
+        "listedPrice": "$4,099.00",
+        "netPrice": "**$4,099.00** _(Showroom Bundle: TV + Soundbar + Tab S10 Lite)_",
+        "linkText": "Gain City",
+        "linkUrl": "https://www.gaincity.com"
+      },
+      {
+        "store": "Courts Megastore",
+        "model": "Samsung 65\" OLED S85F",
+        "listedPrice": "$2,399.00",
+        "netPrice": "**$2,199.00** _(Net w/ $200 voucher)_",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Best Denki (VivoCity)",
+        "model": "Samsung 65\" OLED S85F",
+        "listedPrice": "$2,699.00",
+        "netPrice": "**$2,699.00**",
+        "linkText": "Best Denki",
+        "linkUrl": "https://www.bestdenki.com.sg"
+      },
+      {
+        "store": "Best Denki (VivoCity)",
+        "model": "Samsung 77\" OLED S85F",
+        "listedPrice": "$4,199.00",
+        "netPrice": "**$4,199.00** _(77\" big screen deal)_",
+        "linkText": "Best Denki",
+        "linkUrl": "https://www.bestdenki.com.sg"
+      },
+      {
+        "store": "Courts Megastore",
+        "model": "Samsung 77\" OLED S85H",
+        "listedPrice": "$5,349.00",
+        "netPrice": "**$5,349.00**",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Courts Megastore",
+        "model": "Samsung 77\" OLED S95F (Flagship QD-OLED)",
+        "listedPrice": "$6,399.00",
+        "netPrice": "**$6,399.00**",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Courts (Display Unit)",
+        "model": "_Samsung 65\" OLED S95F (1-Year Display)_",
+        "listedPrice": "_$2,399.00_",
+        "netPrice": "_Rejected (OLED Burn-in Risk)_",
+        "linkText": "",
+        "linkUrl": ""
+      },
+      {
+        "store": "Harvey Norman",
+        "model": "Samsung 55\" OLED S90H",
+        "listedPrice": "$3,299.00",
+        "netPrice": "**$3,299.00**",
+        "linkText": "Harvey Norman",
+        "linkUrl": "https://www.harveynorman.com.sg"
+      },
+      {
+        "store": "Shopee SG (Samsung Official)",
+        "model": "Samsung 55\" OLED S90H",
+        "listedPrice": "$3,299.00",
+        "netPrice": "**~$3,150.00** _(With platform vouchers)_",
+        "linkText": "Shopee",
+        "linkUrl": "https://shopee.sg/SAMSUNG-QA55S90HAK-OLED-S90H-4K-Vision-AI-Smart-TV-55inch-i.421584608.47811015001"
+      }
+    ]
+  },
+  {
+    "category": "Dolby Atmos Soundbar",
+    "icon": "\ud83d\udd0a",
+    "title": "Store & Price Comparison (Dolby Atmos Soundbar)",
+    "headers": [
+      "Store / Platform",
+      "Model & Inclusions",
+      "Listed / Promo Price",
+      "Effective Net Price",
+      "Store Link"
+    ],
+    "rows": [
+      {
+        "store": "Courts Megastore",
+        "model": "Samsung HW-Q990H (11.1.4ch + Rears + Sub)",
+        "listedPrice": "$1,899.00",
+        "netPrice": "**$1,399.00** _(TV Purchase Bundle PWP)_",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Gain City (Ang Mo Kio)",
+        "model": "Samsung HW-S800D (Ultra-Slim 3.1.2ch, w/ 65\" S90H & Tab S10 Lite)",
+        "listedPrice": "$4,099.00 (Combo)",
+        "netPrice": "**$4,099.00 Bundle** _(Includes 65\" S90H TV + Tab S10 Lite)_",
+        "linkText": "Gain City",
+        "linkUrl": "https://www.gaincity.com"
+      },
+      {
+        "store": "Courts Megastore",
+        "model": "Samsung HW-Q800F (5.1.2ch, No Rears)",
+        "listedPrice": "$1,099.00",
+        "netPrice": "**$899.00**",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Harvey Norman / Gain City",
+        "model": "Samsung HW-Q990H (Standalone Unit)",
+        "listedPrice": "$2,199.00",
+        "netPrice": "**$1,899.00**",
+        "linkText": "Harvey Norman",
+        "linkUrl": "https://www.harveynorman.com.sg"
+      },
+      {
+        "store": "Shopee SG (Samsung Official)",
+        "model": "Samsung HW-Q990H (Standalone Unit)",
+        "listedPrice": "$2,099.00",
+        "netPrice": "**~$1,799 \u2013 $1,899**",
+        "linkText": "Shopee",
+        "linkUrl": "https://shopee.sg"
+      },
+      {
+        "store": "Samsung SG Direct",
+        "model": "Samsung HW-Q990H (Official List)",
+        "listedPrice": "$2,099.00",
+        "netPrice": "**$2,099.00**",
+        "linkText": "Samsung SG",
+        "linkUrl": "https://www.samsung.com/sg/audio-devices/soundbar/q990h-black-hw-q990h-xs/"
+      }
+    ]
+  },
+  {
+    "category": "Smart Door Locks",
+    "icon": "\ud83d\udd10",
+    "title": "Store & Price Comparison (Smart Door Locks)",
+    "headers": [
+      "Store / Platform",
+      "Model & Inclusions",
+      "Listed / Promo Price",
+      "Effective Net Price",
+      "Store Link"
+    ],
+    "rows": [
+      {
+        "store": "Shopee SG (SmartSG)",
+        "model": "Aqara D200i (Installation Included, SG Warranty)",
+        "listedPrice": "$1,099.00",
+        "netPrice": "**$703.00** _(Verified Direct Link Deal)_",
+        "linkText": "Shopee (SmartSG)",
+        "linkUrl": "https://shopee.sg/AQARA-D200i-Smart-Door-Lock-3D-Facial-Unlock-Digital-Lock-Lithium-Battery-Apple-HomeKit-Home-Key-i.489606704.21193462058?extraParams=%7B%22display_model_id%22%3A137712779110%2C%22model_selection_logic%22%3A3%7D"
+      },
+      {
+        "store": "Courts Megastore",
+        "model": "Aqara D200i (Face ID + Mortise + Free Installation)",
+        "listedPrice": "$1,099.00",
+        "netPrice": "**$1,099.00**",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "HomeSmart SG (Official)",
+        "model": "Aqara D200i (2-Yr Onsite Warranty + Installation)",
+        "listedPrice": "$1,099.00",
+        "netPrice": "**$1,020.00**",
+        "linkText": "HomeSmart SG",
+        "linkUrl": "https://homesmart.sg/product/aqara-smart-lock-d200i/"
+      },
+      {
+        "store": "Shopee SG (HOZ Digital Lock)",
+        "model": "Aqara D200i (Authorized Set + Installation)",
+        "listedPrice": "$1,099.00",
+        "netPrice": "**$1,099.00**",
+        "linkText": "Shopee (HOZ)",
+        "linkUrl": "https://shopee.sg/Aqara-Smart-Lock-D200i-Hoz-digital-lock-i.103694085.42871284443"
+      },
+      {
+        "store": "Courts Megastore",
+        "model": "Aqara D100 (Push-Pull Mortise + Installation)",
+        "listedPrice": "$869.00",
+        "netPrice": "**$869.00**",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Shopee SG (Official)",
+        "model": "Aqara D100 (Free Installation + 2-Yr Warranty)",
+        "listedPrice": "$869.00",
+        "netPrice": "**$782.10** _(~$710\u2013$730 w/ vouchers)_",
+        "linkText": "Shopee",
+        "linkUrl": "https://shopee.sg"
+      },
+      {
+        "store": "Shopee SG",
+        "model": "Aqara A100 (listing / installation scope unconfirmed)",
+        "listedPrice": "$417.45",
+        "netPrice": "**$417.45** _(user-recorded listing price)_",
+        "linkText": "Shopee A100 listing",
+        "linkUrl": "https://shopee.sg/Aqara-A100-Smart-digital-Door-lock-Fire-Rated-Security-Fingerprint-Electronic-Keyless-Entry-Knobs-Hardware-home-i.489606704.17292845336?xptdk=08522475-6b41-44d1-8fce-ce4bc26c5ed8"
+      },
+      {
+        "store": "Courts Megastore",
+        "model": "Aqara U400 (UWB Auto-Unlock + Installation)",
+        "listedPrice": "$649.00",
+        "netPrice": "**$649.00**",
+        "linkText": "Courts SG",
+        "linkUrl": "https://www.courts.com.sg"
+      },
+      {
+        "store": "Shopee SG (Official)",
+        "model": "Aqara U400 (Lock Only w/o Installation)",
+        "listedPrice": "$469.00",
+        "netPrice": "**$469.00**",
+        "linkText": "Shopee",
+        "linkUrl": "https://shopee.sg"
+      }
+    ]
+  },
+  {
+    "category": "Dining Table",
+    "icon": "\ud83c\udf7d\ufe0f",
+    "title": "Store & Price Comparison (Dining Table)",
+    "headers": [
+      "Store / Platform",
+      "Model & Material",
+      "Listed / Promo Price",
+      "Effective Net Price",
+      "Store Link"
+    ],
+    "rows": [
+      {
+        "store": "IKEA SG",
+        "model": "IKEA Norden Gateleg Table (Solid Birch)",
+        "listedPrice": "$299.00",
+        "netPrice": "**$299.00**",
+        "linkText": "IKEA SG",
+        "linkUrl": "https://www.ikea.com/sg/en/p/norden-gateleg-table-birch-80422383/"
+      },
+      {
+        "store": "Castlery SG",
+        "model": "Seb Extendable Dining Table (Solid Acacia)",
+        "listedPrice": "$1,199.00",
+        "netPrice": "**$999 \u2013 $1,099**",
+        "linkText": "Castlery SG",
+        "linkUrl": "https://www.castlery.com/sg/products/seb-extendable-dining-table"
+      },
+      {
+        "store": "Comfort Design / Furniture",
+        "model": "Sintered Stone Dining Table (1.4m Fixed)",
+        "listedPrice": "$899.00",
+        "netPrice": "**$750.00**",
+        "linkText": "Comfort Furniture",
+        "linkUrl": "https://www.comfort-4u.com.sg"
+      },
+      {
+        "store": "Shopee SG",
+        "model": "Foldable Solid Wood Dining Table (Nordic Style)",
+        "listedPrice": "$350.00",
+        "netPrice": "**~$260 \u2013 $320**",
+        "linkText": "Shopee",
+        "linkUrl": "https://shopee.sg"
+      }
+    ]
+  }
+]

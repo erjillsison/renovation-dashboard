@@ -133,6 +133,331 @@
         margin-top: 2px;
       }
 
+
+      /* --- Tab View 4: Store & Price Comparisons Styling --- */
+      .comparison-view-header {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 16px 20px;
+        margin-bottom: 16px;
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .comparison-view-title-wrap h2 {
+        font-family: var(--font-heading);
+        font-size: 1.35rem;
+        color: var(--text-primary);
+        margin-bottom: 4px;
+      }
+
+      .comparison-view-title-wrap p {
+        font-size: 0.82rem;
+        color: var(--text-secondary);
+        margin: 0;
+        max-width: 760px;
+        line-height: 1.45;
+      }
+
+      .category-pills-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+
+      .category-pill-btn {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-full);
+        padding: 6px 14px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+      }
+
+      .category-pill-btn:hover {
+        background: var(--bg-surface-alt);
+        color: var(--text-primary);
+        border-color: var(--border-medium);
+        transform: translateY(-1px);
+      }
+
+      .category-pill-btn.active {
+        background: var(--sage-primary);
+        color: #ffffff;
+        border-color: var(--sage-primary);
+        box-shadow: 0 2px 6px rgba(74, 107, 94, 0.25);
+      }
+
+      .category-pill-count {
+        font-size: 0.7rem;
+        opacity: 0.85;
+        background: rgba(0,0,0,0.08);
+        padding: 1px 6px;
+        border-radius: 10px;
+      }
+
+      .category-pill-btn.active .category-pill-count {
+        background: rgba(255,255,255,0.25);
+        color: #ffffff;
+      }
+
+      .comparison-cards-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 36px;
+      }
+
+      .comparison-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        overflow: hidden;
+        transition: box-shadow 0.2s ease;
+      }
+
+      .comparison-card:hover {
+        box-shadow: var(--shadow-md);
+      }
+
+      .comparison-card-header {
+        padding: 14px 18px;
+        background: var(--bg-surface-alt);
+        border-bottom: 1px solid var(--border-medium);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .comparison-card-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .comparison-card-title h3 {
+        font-family: var(--font-heading);
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin: 0;
+      }
+
+      .comparison-card-meta {
+        font-size: 0.74rem;
+        font-weight: 600;
+        color: var(--sage-primary);
+        background: var(--sage-light);
+        padding: 2px 10px;
+        border-radius: var(--radius-full);
+      }
+
+      .comparison-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.82rem;
+        text-align: left;
+      }
+
+      .comparison-table th {
+        background: #fdfbf7;
+        color: var(--text-secondary);
+        font-weight: 700;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--border-medium);
+        white-space: nowrap;
+      }
+
+      .comparison-table td {
+        padding: 11px 14px;
+        border-bottom: 1px solid var(--border-subtle);
+        vertical-align: middle;
+      }
+
+      .comparison-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .comparison-table tr:hover {
+        background: rgba(244, 240, 234, 0.45);
+      }
+
+      /* Store Badges */
+      .badge-bestdenki { background: #fef2f2 !important; color: #dc2626 !important; border-color: #fecaca !important; }
+      .badge-gaincity { background: #ecfeff !important; color: #0891b2 !important; border-color: #a5f3fc !important; }
+      .badge-courts { background: #eff6ff !important; color: #1d4ed8 !important; border-color: #bfdbfe !important; }
+      .badge-harveynorman { background: #e0e7ff !important; color: #4338ca !important; border-color: #c7d2fe !important; }
+      .badge-shopee { background: #fff7ed !important; color: #ea580c !important; border-color: #fed7aa !important; }
+      .badge-ikea { background: #fefce8 !important; color: #854d0e !important; border-color: #fef08a !important; }
+      .badge-simmons { background: #f5f3ff !important; color: #6d28d9 !important; border-color: #ddd6fe !important; }
+      .badge-castlery { background: #fbf7f4 !important; color: #7c5843 !important; border-color: #ebdcd0 !important; }
+      .badge-smartinnovations { background: #f0fdf4 !important; color: #15803d !important; border-color: #bbf7d0 !important; }
+
+      .net-price-cell {
+        font-weight: 700;
+        color: #1e293b;
+        font-size: 0.86rem;
+      }
+      .net-price-promo {
+        color: #15803d;
+        font-size: 0.74rem;
+        font-weight: 600;
+        display: block;
+      }
+
+      /* Table Pill Buttons */
+      .btn-table-pill {
+        font-size: 0.68rem;
+        font-weight: 600;
+        border-radius: var(--radius-full);
+        padding: 2px 8px;
+        cursor: pointer;
+        transition: all 0.15s ease;
+        border: 1px solid transparent;
+        display: inline-flex;
+        align-items: center;
+        gap: 3px;
+        white-space: nowrap;
+      }
+
+      .btn-showroom-pill {
+        background: #eff6ff;
+        color: #1d4ed8;
+        border-color: #bfdbfe;
+      }
+      .btn-showroom-pill:hover {
+        background: #dbeafe;
+        color: #1e40af;
+      }
+
+      .btn-drawer-pill {
+        background: #faf5ee;
+        color: #854d0e;
+        border-color: #fef08a;
+      }
+      .btn-drawer-pill:hover,
+      .btn-drawer-pill.active {
+        background: #fef08a;
+        color: #713f12;
+      }
+
+      /* Item Inline Drawer Row */
+      .item-drawer-row td {
+        padding: 0 !important;
+        border-bottom: 2px solid #e2d9cd !important;
+      }
+
+      .drawer-container {
+        padding: 14px 18px;
+        background: #faf8f4;
+        border-top: 1px dashed #e2d9cd;
+        box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+      }
+
+      .drawer-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .drawer-title {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #4a3e35;
+      }
+
+      .drawer-hint {
+        font-size: 0.72rem;
+        color: var(--text-muted);
+      }
+
+      .drawer-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #ffffff;
+        border: 1px solid #e5dfd5;
+        border-radius: var(--radius-sm);
+        overflow: hidden;
+        font-size: 0.78rem;
+      }
+
+      .drawer-table th {
+        background: #f5f0e8;
+        color: #61554a;
+        padding: 7px 10px;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        border-bottom: 1px solid #e5dfd5;
+        text-align: left;
+      }
+
+      .drawer-table td {
+        padding: 8px 10px;
+        border-bottom: 1px solid #f0eae1;
+        vertical-align: middle;
+      }
+
+      .drawer-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .drawer-table tr.active-option-row {
+        background: #f0fdf4;
+      }
+
+      .btn-select-option {
+        padding: 3px 8px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        border-radius: var(--radius-full);
+        border: 1px solid #d1d5db;
+        background: #ffffff;
+        color: #374151;
+        cursor: pointer;
+        transition: all 0.15s ease;
+      }
+
+      .btn-select-option:hover {
+        background: var(--sage-primary);
+        color: #ffffff;
+        border-color: var(--sage-primary);
+      }
+
+      .btn-select-option.is-active {
+        background: #15803d;
+        color: #ffffff;
+        border-color: #15803d;
+        pointer-events: none;
+      }
+
       /* Quick Seller Notice Banner */
       .seller-banner {
         background: linear-gradient(135deg, #fbf7ec 0%, #f4ede0 100%);
@@ -1691,6 +2016,22 @@
                 color: var(--accent-p2);
               "
               >Interactive</span
+            >
+          </button>
+          <button
+            class="nav-tab-btn"
+            id="tabBtnComparisons"
+            onclick="switchTab('comparisons')"
+          >
+            <span style="font-size: 1.1rem">🏬</span>
+            <span>Store Comparisons</span>
+            <span
+              class="tab-badge"
+              style="
+                background: rgba(224, 122, 95, 0.15);
+                color: #d05d3b;
+              "
+              >70 Quotes</span
             >
           </button>
         </div>
@@ -7440,6 +7781,38 @@ wall-switch action event exposed by the selected Home Assistant integration.
         </div>
       </div>
       <!-- End Tab View 3: Interactive Floor Plan Map -->
+
+      <!-- Tab View 4: Store & Price Comparisons -->
+      <div id="tabViewComparisons" class="tab-view" style="display: none">
+        <div class="comparison-view-header">
+          <div class="comparison-view-title-wrap">
+            <h2>🏬 Showroom & Retail Store Comparisons</h2>
+            <p>
+              Benchmarking Singapore showroom walk-in quotes, megastore packages (Courts Megastore, Best Denki VivoCity, Gain City AMK, Harvey Norman), and official online deals across 70 verified quotations.
+            </p>
+          </div>
+          <div class="comparison-search-wrap">
+            <input
+              type="text"
+              id="comparisonSearchInput"
+              class="search-input"
+              style="width: 260px;"
+              placeholder="Search stores, models, quotes..."
+              oninput="handleComparisonSearch(this.value)"
+            />
+          </div>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="category-pills-bar" id="comparisonPillsBar">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <!-- Container for comparison cards -->
+        <div id="comparisonCardsContainer" class="comparison-cards-grid">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
     </main>
 
     <script>
@@ -7459,6 +7832,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -7493,6 +7867,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/AQARA-Smart-Wall-Switch-Z1-Pro-Compatibility-for-No-With-Neutral-Easy-Control-i.489606704.25453904614?xptdk=ea96e946-fa62-4ff0-9ff7-64450caf2996",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -7535,6 +7910,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -7597,6 +7973,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -7631,6 +8008,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -7665,6 +8043,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://smartinnovations.sg/product/aqara-wall-switch-z1-pro/",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -7699,6 +8078,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -7733,6 +8113,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -7767,6 +8148,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -7801,6 +8183,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://smartinnovations.sg/product/aqara-smart-20a-switch-h1/",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -7843,6 +8226,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://smartinnovations.sg/product/aqara-smart-20a-switch-h1/",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -7885,6 +8269,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -7919,6 +8304,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/AQARA-Smart-T2-LED-Bulbs-E27-RGB-CCT-Support-Apple-home-Google-Home-Thread-Zigbee-i.489606704.26974325394",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -7967,6 +8353,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -8001,6 +8388,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -8035,6 +8423,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -8069,6 +8458,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/IP65-LED-Downlight-7W-9W-12W-15W-Waterproof-LED-DownLights-AC220V-230V-240V-Recessed-Downlight-LED-Spot-For-Bathroom-i.800728237.19715736986",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -8103,6 +8493,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -8137,6 +8528,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/IP65-LED-Downlight-7W-9W-12W-15W-Waterproof-LED-DownLights-AC220V-230V-240V-Recessed-Downlight-LED-Spot-For-Bathroom-i.800728237.19715736986",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -8171,6 +8563,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/IP65-LED-Downlight-7W-9W-12W-15W-Waterproof-LED-DownLights-AC220V-230V-240V-Recessed-Downlight-LED-Spot-For-Bathroom-i.800728237.19715736986",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -8205,6 +8598,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/COB-LED-Strip-Light-12V-24V-Warm-White-High-Density-Flexible-LED-Tape-Kitchen-Under-Cabinet-Lighting-i.1013019863.24143888921",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -8239,6 +8633,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/Fanco-Heli-DC-Motor-Ceiling-Fan-with-24W-3-Tone-LED-and-Remote-i.311742409.9016176030",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -8273,6 +8668,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/Fanco-Heli-DC-Motor-Ceiling-Fan-with-24W-3-Tone-LED-and-Remote-i.311742409.9016176030",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -8321,6 +8717,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/Home-Assistant-Green-SLZB-MR1U-ZBT-2-ZWA-2-SLZB-zigbee-zwave-dongle-thread-matter-ZHA-zigbee2mqtt-Smart-Hub-i.276775767.28556820419",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -8369,6 +8766,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/TP-Link-Deco-BE65-BE11000-Whole-Home-Mesh-WiFi-7-System-Range-Extender-11-Gbps-Tri-Band-WiFi-i.215539604.24519568419",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -8439,6 +8837,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://dreame.sg/products/dreame-x60-ultra-master?variant=52296811938101",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": "Robot Vacuums",
             "selectedOptionIndex": 1,
             "selectedStoreIndex": 0,
             "options": [
@@ -8533,6 +8932,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://www.courts.com.sg",
             "sellerDeductible": true,
             "sellerSavings": 2000,
+            "comparisonCategory": "Washer & Dryer Stack",
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -8647,6 +9047,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://www.courts.com.sg",
             "sellerDeductible": true,
             "sellerSavings": 1000,
+            "comparisonCategory": "Refrigerator",
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -8725,6 +9126,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://smartinnovations.sg/product/aqara-smart-lock-d100/",
             "sellerDeductible": true,
             "sellerSavings": 869,
+            "comparisonCategory": "Smart Door Locks",
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -8837,6 +9239,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://www.legrand.com.sg/en/catalog/products/mallia-senses-1-gang-bs-unswitched-socket-outlet-13a-matt-white-281110mw",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -8871,6 +9274,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -8927,6 +9331,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://www.courts.com.sg/kingkoil-cool-extreme-polaris-queen-size-mattress-cool-extreme-polaris-IP186422.html",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": "Mattress & Bed Frame",
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9003,6 +9408,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9059,6 +9465,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://sonandbear.com",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9121,6 +9528,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://www.castlery.com/sg/products/seb-tv-console",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9183,6 +9591,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://www.courts.com.sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": "OLED TV",
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9305,6 +9714,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://www.courts.com.sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": "Dolby Atmos Soundbar",
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9383,6 +9793,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://www.ikea.com/sg/en/p/norden-gateleg-table-birch-80422383/",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": "Dining Table",
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9445,6 +9856,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/product/1878598027/52765706758",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9507,6 +9919,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/Aqara-FP2-Presence-Sensor-WiFi-Bluetooth-USB-C-Smart-Home-i.1269135806.29813791931?extraParams=%7B%22display_model_id%22%3A300703923077%2C%22model_selection_logic%22%3A3%7D",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9541,6 +9954,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/product/1245098924/50459563309",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9575,6 +9989,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/AQARA-Motion-Sensor-P1-Smart-Home-Human-Body-Induction-Security-System-Device-ZigBee-HomeKit-i.489606704.17560706215?extraParams=%7B%22display_model_id%22%3A246104085810%2C%22model_selection_logic%22%3A3%7D",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9609,6 +10024,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/product/1245098924/50459563309",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9643,6 +10059,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/AQARA-Motion-Sensor-P1-Smart-Home-Human-Body-Induction-Security-System-Device-ZigBee-HomeKit-i.489606704.17560706215?extraParams=%7B%22display_model_id%22%3A246104085810%2C%22model_selection_logic%22%3A3%7D",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9677,6 +10094,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/product/1245098924/50459563309",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9711,6 +10129,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/AQARA-Motion-Sensor-P1-Smart-Home-Human-Body-Induction-Security-System-Device-ZigBee-HomeKit-i.489606704.17560706215?extraParams=%7B%22display_model_id%22%3A246104085810%2C%22model_selection_logic%22%3A3%7D",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9745,6 +10164,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/product/1245098924/50459563309",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9779,6 +10199,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/product/1245098924/50459563309",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9813,6 +10234,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://shopee.sg/search?keyword=custom%20wifi%20qr%20code%20acrylic%20sign",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9847,6 +10269,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://boulderplanet.sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -9917,6 +10340,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "https://www.daikin.com.sg/air-conditioners/",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": "System 3 Aircon",
             "selectedOptionIndex": 4,
             "selectedStoreIndex": 0,
             "options": [
@@ -10043,32 +10467,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "dining-chairs-2-no",
             "name": "Dining Chairs (2 No.)",
-            "choice": "Select two chairs after sit-testing; scope calls for 2 No",
+            "choice": "IKEA Lisabo / Odger Ergonomic Dining Chairs (Pair)",
             "notes": "Select two chairs after sit-testing; scope calls for 2 No. Compatible local references include IKEA LISABO / SKOGSTA.",
             "room": "Dining",
             "priority": "P1",
             "status": "TBD",
             "price": 200,
             "priceDisplay": "$100-$300",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "IKEA SG",
+            "linkText": "IKEA SG",
+            "linkUrl": "https://www.ikea.com/sg/en",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Select two chairs after sit-testing; scope calls for 2 No",
-                        "notes": "Select two chairs after sit-testing; scope calls for 2 No. Compatible local references include IKEA LISABO / SKOGSTA.",
+                        "model": "IKEA Lisabo / Odger Ergonomic Dining Chairs (Pair)",
+                        "notes": "Comfortable curved back support suitable for both dining and extended WFH laptop sessions.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 200,
-                                    "priceDisplay": "$100-$300",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "IKEA SG",
+                                    "price": 150,
+                                    "priceDisplay": "$150.00",
+                                    "promo": "Ergonomic Wood Pair",
+                                    "linkText": "IKEA SG",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Castlery Vincent / Seb Upholstered Dining Chairs (Pair)",
+                        "notes": "Padded upholstered dining seating with solid wood legs.",
+                        "stores": [
+                              {
+                                    "store": "Castlery SG",
+                                    "price": 400,
+                                    "priceDisplay": "$400.00",
+                                    "promo": "Premium Fabric Pair",
+                                    "linkText": "Castlery SG",
+                                    "linkUrl": "https://www.castlery.com/sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Nitori Solid Japanese Rubberwood Dining Chairs (Pair)",
+                        "notes": "Compact lightweight Japanese craft dining chairs.",
+                        "stores": [
+                              {
+                                    "store": "Nitori SG",
+                                    "price": 280,
+                                    "priceDisplay": "$280.00",
+                                    "promo": "Japanese Compact Pair",
+                                    "linkText": "Nitori SG",
+                                    "linkUrl": "https://www.nitori.com.sg"
                               }
                         ]
                   }
@@ -10077,32 +10530,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "study-room-pullout-bed-bedding",
             "name": "Study Room Pullout Bed & Bedding",
-            "choice": "IKEA Friheten Sofa Bed / Hemnes daybed with pull-out trundle & guest mattress",
+            "choice": "IKEA Hemnes Daybed with 3 Storage Drawers & Twin Mattresses",
             "notes": "IKEA Friheten Sofa Bed / Hemnes daybed with pull-out trundle & guest mattress.",
             "room": "Bedroom 2 / Study",
             "priority": "P2",
             "status": "TBD",
             "price": 1125,
             "priceDisplay": "$750-$1,500",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "IKEA SG",
+            "linkText": "IKEA SG",
+            "linkUrl": "https://www.ikea.com/sg/en",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "IKEA Friheten Sofa Bed / Hemnes daybed with pull-out trundle & guest mattress",
-                        "notes": "IKEA Friheten Sofa Bed / Hemnes daybed with pull-out trundle & guest mattress.",
+                        "model": "IKEA Hemnes Daybed with 3 Storage Drawers & Twin Mattresses",
+                        "notes": "Sofa by day and single or double guest bed by night, with 3 deep under-bed storage drawers.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 1125,
-                                    "priceDisplay": "$750-$1,500",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "IKEA SG",
+                                    "price": 499,
+                                    "priceDisplay": "$499.00",
+                                    "promo": "Daybed + Storage",
+                                    "linkText": "IKEA SG",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Custom Platform Carpentry Bed with Hydraulic Lift-Up",
+                        "notes": "Bespoke carpentry platform bed maximizing study room footprint with integrated drawers.",
+                        "stores": [
+                              {
+                                    "store": "Contractor Carpentry Scope",
+                                    "price": 1200,
+                                    "priceDisplay": "$1,200.00",
+                                    "promo": "Bespoke Carpentry",
+                                    "linkText": "Contractor Scope",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Foldable Guest Trundle / Single Slat Bed Frame",
+                        "notes": "Lightweight fold-away spare bed for occasional weekend guests.",
+                        "stores": [
+                              {
+                                    "store": "Shopee / HipVan",
+                                    "price": 250,
+                                    "priceDisplay": "$250.00",
+                                    "promo": "Compact Folding Pick",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
                               }
                         ]
                   }
@@ -10111,32 +10593,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "study-wfh-desk",
             "name": "Study / WFH Desk",
-            "choice": "140-160cm dual-motor standing desk (Omnidesk / EverDesk / Magnus Evo)",
+            "choice": "Omnidesk Ascent / EverDesk Max Motorized Sit-Stand Desk (150cm)",
             "notes": "140-160cm dual-motor standing desk (Omnidesk / EverDesk / Magnus Evo).",
             "room": "Bedroom 2 / Study",
             "priority": "P2",
             "status": "TBD",
             "price": 750,
             "priceDisplay": "$500-$1,000",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "Omnidesk SG / EverDesk",
+            "linkText": "Omnidesk SG",
+            "linkUrl": "https://theomnidesk.com",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "140-160cm dual-motor standing desk (Omnidesk / EverDesk / Magnus Evo)",
-                        "notes": "140-160cm dual-motor standing desk (Omnidesk / EverDesk / Magnus Evo).",
+                        "model": "Omnidesk Ascent / EverDesk Max Motorized Sit-Stand Desk (150cm)",
+                        "notes": "Dual-motor motorized standing desk with anti-collision, integrated cable tray, and memory keypad.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 750,
-                                    "priceDisplay": "$500-$1,000",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "Omnidesk SG / EverDesk",
+                                    "price": 800,
+                                    "priceDisplay": "$800.00",
+                                    "promo": "Motorized Sit-Stand",
+                                    "linkText": "Omnidesk SG",
+                                    "linkUrl": "https://theomnidesk.com"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "IKEA Trotten / Bekant Sit-Stand Desk (140cm)",
+                        "notes": "Clean Scandinavian standing desk with solid underframe.",
+                        "stores": [
+                              {
+                                    "store": "IKEA SG",
+                                    "price": 300,
+                                    "priceDisplay": "$300.00",
+                                    "promo": "Budget Value",
+                                    "linkText": "IKEA SG",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Custom Solid Wood Motorized Sit-Stand Desk (160cm Walnut / Oak)",
+                        "notes": "Solid American Walnut slab mounted on heavy-duty Linak or Ascent lifting columns.",
+                        "stores": [
+                              {
+                                    "store": "Custom Wood Studio SG",
+                                    "price": 1200,
+                                    "priceDisplay": "$1,200.00",
+                                    "promo": "Custom Solid Wood",
+                                    "linkText": "The Table Guy SG",
+                                    "linkUrl": "https://thetableguy.com"
                               }
                         ]
                   }
@@ -10145,32 +10656,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "office-chair",
             "name": "Office Chair",
-            "choice": "Boulies EP200 / Sihoo C300 / Steelcase Leap",
+            "choice": "Hinomi H1 Pro / Secretlab Titan Evo Ergonomic Chair",
             "notes": "Boulies EP200 / Sihoo C300 / Steelcase Leap.",
             "room": "Bedroom 2 / Study",
             "priority": "P2",
             "status": "TBD",
             "price": 650,
             "priceDisplay": "$400-$900",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "Hinomi SG / Secretlab",
+            "linkText": "Hinomi SG",
+            "linkUrl": "https://www.hinomi.sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Boulies EP200 / Sihoo C300 / Steelcase Leap",
-                        "notes": "Boulies EP200 / Sihoo C300 / Steelcase Leap.",
+                        "model": "Hinomi H1 Pro / Secretlab Titan Evo Ergonomic Chair",
+                        "notes": "High backrest with 3D lumbar support, breathable mesh, and multi-tilt lock.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 650,
-                                    "priceDisplay": "$400-$900",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "Hinomi SG / Secretlab",
+                                    "price": 600,
+                                    "priceDisplay": "$600.00",
+                                    "promo": "Ergonomic Performance",
+                                    "linkText": "Hinomi SG",
+                                    "linkUrl": "https://www.hinomi.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Sihoo M57 Ergonomic Mesh Chair",
+                        "notes": "Budget-friendly full mesh ergonomic chair with adjustable headrest and lumbar pad.",
+                        "stores": [
+                              {
+                                    "store": "Shopee SG (Sihoo Official)",
+                                    "price": 250,
+                                    "priceDisplay": "$250.00",
+                                    "promo": "Budget Value Pick",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Herman Miller Aeron / Steelcase Gesture Ergonomic Chair",
+                        "notes": "Gold-standard 12-year warranty posture fit ergonomic chair for 10+ hour WFH daily productivity.",
+                        "stores": [
+                              {
+                                    "store": "Xtra Singapore / Herman Miller",
+                                    "price": 1500,
+                                    "priceDisplay": "$1,500.00",
+                                    "promo": "Industry Benchmark",
+                                    "linkText": "Xtra SG",
+                                    "linkUrl": "https://xtrastore.cn"
                               }
                         ]
                   }
@@ -10179,32 +10719,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "monitor-arm-desk-accessories",
             "name": "Monitor Arm / Desk Accessories",
-            "choice": "NB / Brateck / Ergotron LX",
+            "choice": "Dual Gas-Spring Heavy-Duty Monitor Arm (17\"-35\")",
             "notes": "NB / Brateck / Ergotron LX.",
             "room": "Bedroom 2 / Study",
             "priority": "P2",
             "status": "TBD",
             "price": 325,
             "priceDisplay": "$150-$500",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "Shopee / Prism+ / Flight",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "NB / Brateck / Ergotron LX",
-                        "notes": "NB / Brateck / Ergotron LX.",
+                        "model": "Dual Gas-Spring Heavy-Duty Monitor Arm (17\"-35\")",
+                        "notes": "Full-motion dual screen articulation with built-in cable management channels.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 325,
-                                    "priceDisplay": "$150-$500",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "Shopee / Prism+ / Flight",
+                                    "price": 80,
+                                    "priceDisplay": "$80.00",
+                                    "promo": "Dual Screen Value",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Ergotron LX Dual Stacking Arm",
+                        "notes": "Constant Force patented spring suspension engineered for zero-sag heavy professional displays.",
+                        "stores": [
+                              {
+                                    "store": "Amazon SG / Ergotron Official",
+                                    "price": 350,
+                                    "priceDisplay": "$350.00",
+                                    "promo": "Professional Studio Spec",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Desk Cable Spine + Under-Desk Power Rail & Felt Desk Mat",
+                        "notes": "Clean cable management wire tray, multi-socket surge protector, and desk organizing kit.",
+                        "stores": [
+                              {
+                                    "store": "Shopee SG",
+                                    "price": 50,
+                                    "priceDisplay": "$50.00",
+                                    "promo": "Desk Organizer Kit",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
                               }
                         ]
                   }
@@ -10213,32 +10782,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "bedside-tables-lamps-2-no",
             "name": "Bedside Tables / Lamps (2 No.)",
-            "choice": "2 No",
+            "choice": "IKEA Vikhammer / Nordli Bedside Tables (Pair)",
             "notes": "2 No. slim bedside tables with reachable USB-C/power + bedside reading lamps.",
             "room": "Master Bed",
             "priority": "P1",
             "status": "TBD",
             "price": 550,
             "priceDisplay": "$300-$800",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "IKEA SG",
+            "linkText": "IKEA SG",
+            "linkUrl": "https://www.ikea.com/sg/en",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "2 No",
-                        "notes": "2 No. slim bedside tables with reachable USB-C/power + bedside reading lamps.",
+                        "model": "IKEA Vikhammer / Nordli Bedside Tables (Pair)",
+                        "notes": "Compact minimalist bedside nightstands with cable passthrough and soft-close drawers.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 550,
-                                    "priceDisplay": "$300-$800",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "IKEA SG",
+                                    "price": 120,
+                                    "priceDisplay": "$120.00",
+                                    "promo": "Clean Minimalist Pair",
+                                    "linkText": "IKEA SG",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Castlery Seb Bedside Tables (Solid Acacia, Pair)",
+                        "notes": "Solid wood Scandinavian bedside tables matching master bedroom warmth.",
+                        "stores": [
+                              {
+                                    "store": "Castlery SG",
+                                    "price": 350,
+                                    "priceDisplay": "$350.00",
+                                    "promo": "Solid Acacia Pair",
+                                    "linkText": "Castlery SG",
+                                    "linkUrl": "https://www.castlery.com/sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Bespoke Floating Wall-Mounted Nightstands (Pair)",
+                        "notes": "Wall-hung fluted timber nightstands freeing up floor clearance for robot vacuum navigation.",
+                        "stores": [
+                              {
+                                    "store": "Custom Carpentry / Studio",
+                                    "price": 600,
+                                    "priceDisplay": "$600.00",
+                                    "promo": "Floating Carpentry",
+                                    "linkText": "Castlery SG",
+                                    "linkUrl": "https://www.castlery.com/sg"
                               }
                         ]
                   }
@@ -10247,32 +10845,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "bedroom-2-curtains-blinds",
             "name": "Bedroom 2 Curtains / Blinds",
-            "choice": "Manual double track day & night curtains",
+            "choice": "Custom 100% Blackout Roller Blind (Study Room)",
             "notes": "Manual double track day & night curtains.",
             "room": "Bedroom 2 / Study",
             "priority": "P1",
             "status": "TBD",
             "price": 650,
             "priceDisplay": "$400-$900",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "Direct Blinds SG / Shopee",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Manual double track day & night curtains",
-                        "notes": "Manual double track day & night curtains.",
+                        "model": "Custom 100% Blackout Roller Blind (Study Room)",
+                        "notes": "Thermal-insulated blackout roller fabric preventing monitor glare during afternoon WFH calls.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 650,
-                                    "priceDisplay": "$400-$900",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "Direct Blinds SG / Shopee",
+                                    "price": 150,
+                                    "priceDisplay": "$150.00",
+                                    "promo": "100% Blackout Roller",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Faux-Wood Venetian Blinds (Study Room)",
+                        "notes": "Adjustable tilt louvers for directional daylighting without screen reflections.",
+                        "stores": [
+                              {
+                                    "store": "Direct Blinds SG",
+                                    "price": 250,
+                                    "priceDisplay": "$250.00",
+                                    "promo": "Faux-Wood Venetian",
+                                    "linkText": "Direct Blinds SG",
+                                    "linkUrl": "https://www.directblindssingapore.com"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Aqara Smart Roller Shade E1 Motorized Blind",
+                        "notes": "Rechargeable Zigbee motorized blind with automated scheduled lowering during peak sunlight.",
+                        "stores": [
+                              {
+                                    "store": "Smart Innovations / Shopee",
+                                    "price": 450,
+                                    "priceDisplay": "$450.00",
+                                    "promo": "Smart Zigbee Roller",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
                               }
                         ]
                   }
@@ -10281,32 +10908,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "bathroom-accessories",
             "name": "Bathroom Accessories",
-            "choice": "304 stainless steel / solid brass screw-mounted hardware",
+            "choice": "Stainless Steel Bathroom Accessories Set (Towels, Robe Hooks, Paper Holders x2)",
             "notes": "304 stainless steel / solid brass screw-mounted hardware.",
             "room": "Bathrooms",
             "priority": "P1",
             "status": "TBD",
             "price": 550,
             "priceDisplay": "$300-$800",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "Hoe Kee / Sim Siang Choon",
+            "linkText": "Hoe Kee",
+            "linkUrl": "https://www.hoekee.com.sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "304 stainless steel / solid brass screw-mounted hardware",
-                        "notes": "304 stainless steel / solid brass screw-mounted hardware.",
+                        "model": "Stainless Steel Bathroom Accessories Set (Towels, Robe Hooks, Paper Holders x2)",
+                        "notes": "SUS304 brushed stainless steel fittings for Master and Common bathrooms.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 550,
-                                    "priceDisplay": "$300-$800",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "Hoe Kee / Sim Siang Choon",
+                                    "price": 100,
+                                    "priceDisplay": "$100.00",
+                                    "promo": "SUS304 Hardware Set",
+                                    "linkText": "Hoe Kee",
+                                    "linkUrl": "https://www.hoekee.com.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Hansgrohe / Grohe Matte Black Bathroom Accessories Set",
+                        "notes": "Architectural matte black metal accessories matching black mixer taps and door handles.",
+                        "stores": [
+                              {
+                                    "store": "Bathroom Warehouse",
+                                    "price": 250,
+                                    "priceDisplay": "$250.00",
+                                    "promo": "Matte Black Set",
+                                    "linkText": "Bathroom Warehouse",
+                                    "linkUrl": "https://bathroomwarehouse.com.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Brabantia / Yamazaki Minimalist White/Steel Bath Hardware",
+                        "notes": "Japanese design minimalist bathroom organizers and magnetic soap caddies.",
+                        "stores": [
+                              {
+                                    "store": "Nitori / Amazon SG",
+                                    "price": 180,
+                                    "priceDisplay": "$180.00",
+                                    "promo": "Minimalist Hardware",
+                                    "linkText": "Nitori SG",
+                                    "linkUrl": "https://www.nitori.com.sg"
                               }
                         ]
                   }
@@ -10315,32 +10971,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "shower-screens",
             "name": "Shower Screens",
-            "choice": "Fixed tempered glass panels / sliding screen",
+            "choice": "10mm Toughened Glass Fixed Panel Shower Screen (x2)",
             "notes": "Fixed tempered glass panels / sliding screen.",
             "room": "Bathrooms",
             "priority": "P1",
             "status": "TBD",
             "price": 1300,
             "priceDisplay": "$800-$1,800",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "Glass Contractor / Bathroom Warehouse",
+            "linkText": "Bathroom Warehouse",
+            "linkUrl": "https://bathroomwarehouse.com.sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Fixed tempered glass panels / sliding screen",
-                        "notes": "Fixed tempered glass panels / sliding screen.",
+                        "model": "10mm Toughened Glass Fixed Panel Shower Screen (x2)",
+                        "notes": "Frameless minimalist fixed glass divider with nano anti-limescale easy-clean coating.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 1300,
-                                    "priceDisplay": "$800-$1,800",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "Glass Contractor / Bathroom Warehouse",
+                                    "price": 400,
+                                    "priceDisplay": "$400.00",
+                                    "promo": "Frameless Fixed Panel",
+                                    "linkText": "Bathroom Warehouse",
+                                    "linkUrl": "https://bathroomwarehouse.com.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Sliding Glass Enclosure with Soft-Close Track (x2)",
+                        "notes": "Double sliding glass doors containing water splash within shower stall.",
+                        "stores": [
+                              {
+                                    "store": "Glass Contractor Scope",
+                                    "price": 800,
+                                    "priceDisplay": "$800.00",
+                                    "promo": "Sliding Soft-Close",
+                                    "linkText": "Bathroom Warehouse",
+                                    "linkUrl": "https://bathroomwarehouse.com.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Black Powder-Coated Grid Frame French Style Glass Enclosure (x2)",
+                        "notes": "Industrial grid line aesthetic with heavy-duty anodized aluminium muntin bars.",
+                        "stores": [
+                              {
+                                    "store": "Custom Glass Specialist",
+                                    "price": 1100,
+                                    "priceDisplay": "$1,100.00",
+                                    "promo": "Architectural Grid Frame",
+                                    "linkText": "Bathroom Warehouse",
+                                    "linkUrl": "https://bathroomwarehouse.com.sg"
                               }
                         ]
                   }
@@ -10349,32 +11034,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "master-toilet-manual-bidet-seat",
             "name": "Master Toilet & Manual Bidet Seat",
-            "choice": "Standard 1-piece ceramic WC + non-electric manual bidet seat (e",
+            "choice": "Standard 1-Piece Ceramic Toilet + Kohler Puretide Manual Bidet Seat",
             "notes": "Standard 1-piece ceramic WC + non-electric manual bidet seat (e.g. Kohler / TOTO Eco-washer). Common bath toilet retained ($0).",
             "room": "Bathrooms",
             "priority": "P1",
             "status": "TBD",
             "price": 550,
             "priceDisplay": "$350-$750",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "Bathroom Warehouse / Hoe Kee",
+            "linkText": "Bathroom Warehouse",
+            "linkUrl": "https://bathroomwarehouse.com.sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Standard 1-piece ceramic WC + non-electric manual bidet seat (e",
-                        "notes": "Standard 1-piece ceramic WC + non-electric manual bidet seat (e.g. Kohler / TOTO Eco-washer). Common bath toilet retained ($0).",
+                        "model": "Standard 1-Piece Ceramic Toilet + Kohler Puretide Manual Bidet Seat",
+                        "notes": "Clean 1-piece vitreous china bowl with cold water T-valve non-electric bidet seat (no power point needed).",
                         "stores": [
                               {
-                                    "store": "-",
+                                    "store": "Bathroom Warehouse / Hoe Kee",
+                                    "price": 350,
+                                    "priceDisplay": "$350.00",
+                                    "promo": "Mid-Range Practical Set",
+                                    "linkText": "Bathroom Warehouse",
+                                    "linkUrl": "https://bathroomwarehouse.com.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "1-Piece Ceramic Toilet + TOTO Eco-Washer / American Standard Slim Washer",
+                        "notes": "High-efficiency dual-flush bowl with premium slim hygienic washlet nozzle.",
+                        "stores": [
+                              {
+                                    "store": "W.Atelier / TOTO Dealer",
                                     "price": 550,
-                                    "priceDisplay": "$350-$750",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "priceDisplay": "$550.00",
+                                    "promo": "TOTO Hygiene Package",
+                                    "linkText": "W.Atelier TOTO",
+                                    "linkUrl": "https://watelier.com"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Premium Rimless Tornado-Flush Toilet + TOTO Eco-Washer",
+                        "notes": "Rimless glazed bowl with cyclonic flush and ergonomic slow-closing manual bidet seat.",
+                        "stores": [
+                              {
+                                    "store": "W.Atelier TOTO Showroom",
+                                    "price": 750,
+                                    "priceDisplay": "$750.00",
+                                    "promo": "Flagship Rimless Spec",
+                                    "linkText": "W.Atelier TOTO",
+                                    "linkUrl": "https://watelier.com"
                               }
                         ]
                   }
@@ -10383,32 +11097,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "kitchen-small-appliances",
             "name": "Kitchen Small Appliances",
-            "choice": "Induction cookware, rice cooker, kettle, air fryer, coffee setup",
+            "choice": "Philips XXL Connected Airfryer + Nespresso Essenza Mini",
             "notes": "Induction cookware, rice cooker, kettle, air fryer, coffee setup.",
             "room": "Kitchen",
             "priority": "P1",
             "status": "TBD",
             "price": 1300,
             "priceDisplay": "$800-$1,800",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "Courts / Gain City",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Induction cookware, rice cooker, kettle, air fryer, coffee setup",
-                        "notes": "Induction cookware, rice cooker, kettle, air fryer, coffee setup.",
+                        "model": "Philips XXL Connected Airfryer + Nespresso Essenza Mini",
+                        "notes": "High-efficiency rapid hot air cooking and compact single-serve espresso maker.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 1300,
-                                    "priceDisplay": "$800-$1,800",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "Courts / Gain City",
+                                    "price": 350,
+                                    "priceDisplay": "$350.00",
+                                    "promo": "Everyday Kitchen Pick",
+                                    "linkText": "Courts SG",
+                                    "linkUrl": "https://www.courts.com.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Essential Electric Kettle + 2-Slice Toaster Set",
+                        "notes": "Rapid-boil stainless steel kettle and defrost toaster.",
+                        "stores": [
+                              {
+                                    "store": "Shopee / Courts",
+                                    "price": 100,
+                                    "priceDisplay": "$100.00",
+                                    "promo": "Budget Essentials",
+                                    "linkText": "Courts SG",
+                                    "linkUrl": "https://www.courts.com.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Balmuda The Toaster + De'Longhi Dedica Espresso Machine",
+                        "notes": "Japanese steam micro-toasting and 15-bar Italian espresso extraction.",
+                        "stores": [
+                              {
+                                    "store": "Takashimaya / Tangs / Courts",
+                                    "price": 800,
+                                    "priceDisplay": "$800.00",
+                                    "promo": "Specialty Gourmet Set",
+                                    "linkText": "Courts SG",
+                                    "linkUrl": "https://www.courts.com.sg"
                               }
                         ]
                   }
@@ -10417,32 +11160,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "kitchen-storage-bins",
             "name": "Kitchen Storage / Bins",
-            "choice": "Under-sink pull-outs, drawer dividers, spice racks",
+            "choice": "Joseph Joseph Totem Compact 40L Multi-Waste & Recycling Bin",
             "notes": "Under-sink pull-outs, drawer dividers, spice racks.",
             "room": "Kitchen",
             "priority": "P1",
             "status": "TBD",
             "price": 600,
             "priceDisplay": "$300-$900",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "Takashimaya / Amazon SG / Shopee",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Under-sink pull-outs, drawer dividers, spice racks",
-                        "notes": "Under-sink pull-outs, drawer dividers, spice racks.",
+                        "model": "Joseph Joseph Totem Compact 40L Multi-Waste & Recycling Bin",
+                        "notes": "Dual-compartment vertical waste and recycling separator with integrated odor carbon filter.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 600,
-                                    "priceDisplay": "$300-$900",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "Takashimaya / Amazon SG / Shopee",
+                                    "price": 180,
+                                    "priceDisplay": "$180.00",
+                                    "promo": "Dual Recycling Sorter",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Simplehuman 58L Dual Compartment Step Recycler (Fingerprint-Proof)",
+                        "notes": "Brushed stainless steel pedal bin with silent soft-close lid and liner pocket.",
+                        "stores": [
+                              {
+                                    "store": "Tangs / Robinsons / Amazon SG",
+                                    "price": 220,
+                                    "priceDisplay": "$220.00",
+                                    "promo": "Premium Steel Step Bin",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "IKEA H\u00e5llbar Modular Waste Sorting Bins (Cabinet Integrated)",
+                        "notes": "Under-sink sliding bin organizers for trash, compost, and recyclables.",
+                        "stores": [
+                              {
+                                    "store": "IKEA SG",
+                                    "price": 60,
+                                    "priceDisplay": "$60.00",
+                                    "promo": "Under-Sink Bins",
+                                    "linkText": "IKEA SG",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
                               }
                         ]
                   }
@@ -10451,32 +11223,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "living-room-coffee-side-tables",
             "name": "Living Room Coffee / Side Tables",
-            "choice": "Nesting side tables / DIY coffee table to match modular sofa pit",
+            "choice": "IKEA Gladom / L\u00f6vbacken Minimalist Side Tables",
             "notes": "Nesting side tables / DIY coffee table to match modular sofa pit.",
             "room": "Living Room",
             "priority": "P2",
             "status": "TBD",
             "price": 600,
             "priceDisplay": "$300-$900",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "IKEA SG",
+            "linkText": "IKEA SG",
+            "linkUrl": "https://www.ikea.com/sg/en",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Nesting side tables / DIY coffee table to match modular sofa pit",
-                        "notes": "Nesting side tables / DIY coffee table to match modular sofa pit.",
+                        "model": "IKEA Gladom / L\u00f6vbacken Minimalist Side Tables",
+                        "notes": "Removable tray top and mid-century rounded wood lines for easy repositioning.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 600,
-                                    "priceDisplay": "$300-$900",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "IKEA SG",
+                                    "price": 80,
+                                    "priceDisplay": "$80.00",
+                                    "promo": "Tray Table Minimalist",
+                                    "linkText": "IKEA SG",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Castlery Seb Coffee Table with Storage Drawers",
+                        "notes": "Solid acacia coffee table with low profile and open cubbies for remote controls and books.",
+                        "stores": [
+                              {
+                                    "store": "Castlery SG",
+                                    "price": 350,
+                                    "priceDisplay": "$350.00",
+                                    "promo": "Solid Acacia Storage",
+                                    "linkText": "Castlery SG",
+                                    "linkUrl": "https://www.castlery.com/sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Sintered Stone Nesting Coffee Tables (Set of 2)",
+                        "notes": "Scratch and heat resistant sintered stone nesting tables with slim black iron legs.",
+                        "stores": [
+                              {
+                                    "store": "Comfort Design / Shopee",
+                                    "price": 250,
+                                    "priceDisplay": "$250.00",
+                                    "promo": "Sintered Stone Nesting",
+                                    "linkText": "Comfort Design",
+                                    "linkUrl": "https://www.comfort-b.com.sg"
                               }
                         ]
                   }
@@ -10485,32 +11286,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "living-room-rug-lamps-shelving",
             "name": "Living Room Rug / Lamps / Shelving",
-            "choice": "Washable low-pile rug (anchors sofa & aids acoustics), floor lamp",
+            "choice": "Castlery Wool Blend Area Rug (200x300cm) + Minimalist Floor Arc Lamp",
             "notes": "Washable low-pile rug (anchors sofa & aids acoustics), floor lamp.",
             "room": "Living Room",
             "priority": "P2",
             "status": "TBD",
             "price": 1200,
             "priceDisplay": "$600-$1,800",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "Castlery SG",
+            "linkText": "Castlery SG",
+            "linkUrl": "https://www.castlery.com/sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Washable low-pile rug (anchors sofa & aids acoustics), floor lamp",
-                        "notes": "Washable low-pile rug (anchors sofa & aids acoustics), floor lamp.",
+                        "model": "Castlery Wool Blend Area Rug (200x300cm) + Minimalist Floor Arc Lamp",
+                        "notes": "Durable textured wool blend rug grounding the living room conversation area with warm diffused floor lighting.",
                         "stores": [
                               {
-                                    "store": "-",
+                                    "store": "Castlery SG",
+                                    "price": 750,
+                                    "priceDisplay": "$750.00",
+                                    "promo": "Wool Rug + Arc Lamp",
+                                    "linkText": "Castlery SG",
+                                    "linkUrl": "https://www.castlery.com/sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "IKEA Stockholm 2017 Flatwoven Rug (170x240cm) + Standing Lamp",
+                        "notes": "Reversible 100% pure wool flatwoven rug with dirt-repellent surface and dimmable corner lamp.",
+                        "stores": [
+                              {
+                                    "store": "IKEA SG",
+                                    "price": 300,
+                                    "priceDisplay": "$300.00",
+                                    "promo": "Flatwoven Pure Wool",
+                                    "linkText": "IKEA SG",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Bespoke Hand-Knotted New Zealand Wool Rug + Modular Floating Shelves",
+                        "notes": "High-density plush hand-tufted wool rug custom dyed to match living room earth-tones.",
+                        "stores": [
+                              {
+                                    "store": "Custom Rug Studio / Grafunkt",
                                     "price": 1200,
-                                    "priceDisplay": "$600-$1,800",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "priceDisplay": "$1,200.00",
+                                    "promo": "Custom Hand-Tufted",
+                                    "linkText": "Castlery SG",
+                                    "linkUrl": "https://www.castlery.com/sg"
                               }
                         ]
                   }
@@ -10519,32 +11349,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "entrance-mirror-drop-zone",
             "name": "Entrance Mirror / Drop Zone",
-            "choice": "Full-length mirror + drop shelf + charging for EDC",
+            "choice": "IKEA Lindbyn Round Mirror (80cm) + Floating Key Shelf",
             "notes": "Full-length mirror + drop shelf + charging for EDC.",
             "room": "Entrance",
             "priority": "P2",
             "status": "TBD",
             "price": 475,
             "priceDisplay": "$250-$700",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "IKEA SG",
+            "linkText": "IKEA SG",
+            "linkUrl": "https://www.ikea.com/sg/en",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Full-length mirror + drop shelf + charging for EDC",
-                        "notes": "Full-length mirror + drop shelf + charging for EDC.",
+                        "model": "IKEA Lindbyn Round Mirror (80cm) + Floating Key Shelf",
+                        "notes": "Clean matte black aluminum circular mirror paired with slim entry key/mail floating shelf.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 475,
-                                    "priceDisplay": "$250-$700",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "IKEA SG",
+                                    "price": 90,
+                                    "priceDisplay": "$90.00",
+                                    "promo": "Round Mirror + Shelf",
+                                    "linkText": "IKEA SG",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Custom Fluted Wood Pegboard Entry Drop Unit",
+                        "notes": "Modular wood pegboard with shelf attachments for motorcycle helmets, climbing chalk, and sunglasses.",
+                        "stores": [
+                              {
+                                    "store": "Custom Studio SG / Shopee",
+                                    "price": 250,
+                                    "priceDisplay": "$250.00",
+                                    "promo": "Modular Entry Pegboard",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Ferm Living Architectural Full-Length Mirror",
+                        "notes": "Sculptural organic curved full-length entrance mirror.",
+                        "stores": [
+                              {
+                                    "store": "Danish Design Co / Grafunkt",
+                                    "price": 450,
+                                    "priceDisplay": "$450.00",
+                                    "promo": "Architectural Design Mirror",
+                                    "linkText": "IKEA SG",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
                               }
                         ]
                   }
@@ -10553,32 +11412,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "shoe-bench",
             "name": "Shoe Bench",
-            "choice": "Compact shoe bench with cushion / shoe storage shelf (open for alternatives)",
+            "choice": "IKEA Hemnes / Mackap\u00e4r Shoe Bench with Storage",
             "notes": "Compact shoe bench with cushion / shoe storage shelf (open for alternatives).",
             "room": "Entrance",
             "priority": "P1",
             "status": "TBD",
             "price": 325,
             "priceDisplay": "$150-$500",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "IKEA SG",
+            "linkText": "IKEA SG",
+            "linkUrl": "https://www.ikea.com/sg/en",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Compact shoe bench with cushion / shoe storage shelf (open for alternatives)",
-                        "notes": "Compact shoe bench with cushion / shoe storage shelf (open for alternatives).",
+                        "model": "IKEA Hemnes / Mackap\u00e4r Shoe Bench with Storage",
+                        "notes": "Entryway solid bench with integrated shoe storage racks beneath comfortable seating.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 325,
-                                    "priceDisplay": "$150-$500",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "IKEA SG",
+                                    "price": 120,
+                                    "priceDisplay": "$120.00",
+                                    "promo": "Entryway Bench + Rack",
+                                    "linkText": "IKEA SG",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Custom Built-in Floating Shoe Bench with Upholstered Cushion",
+                        "notes": "Bespoke carpentry bench floating 15cm off the floor with 24V COB LED strip underneath.",
+                        "stores": [
+                              {
+                                    "store": "Contractor Carpentry Scope",
+                                    "price": 350,
+                                    "priceDisplay": "$350.00",
+                                    "promo": "Custom Built-in Bench",
+                                    "linkText": "Contractor Scope",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Castlery Seb Shoe Bench (Solid Acacia)",
+                        "notes": "Solid acacia timber entryway bench with slatted shelf and padded top.",
+                        "stores": [
+                              {
+                                    "store": "Castlery SG",
+                                    "price": 450,
+                                    "priceDisplay": "$450.00",
+                                    "promo": "Solid Wood Scandinavian",
+                                    "linkText": "Castlery SG",
+                                    "linkUrl": "https://www.castlery.com/sg"
                               }
                         ]
                   }
@@ -10599,6 +11487,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -10633,6 +11522,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -10655,32 +11545,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "living-loose-stools-4-no",
             "name": "Living Loose Stools (4 No.)",
-            "choice": "Stackable wooden / cushioned stools (IKEA Kyrre or Frosta, 4 No",
+            "choice": "IKEA Kyrre / Frosta Stackable Birch Stools (Set of 4)",
             "notes": "Stackable wooden / cushioned stools (IKEA Kyrre or Frosta, 4 No.) for flexible living & dining seating.",
             "room": "Living Room",
             "priority": "P2",
             "status": "TBD",
             "price": 200,
             "priceDisplay": "$120-$280",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "IKEA SG",
+            "linkText": "IKEA SG",
+            "linkUrl": "https://www.ikea.com/sg/en",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Stackable wooden / cushioned stools (IKEA Kyrre or Frosta, 4 No",
-                        "notes": "Stackable wooden / cushioned stools (IKEA Kyrre or Frosta, 4 No.) for flexible living & dining seating.",
+                        "model": "IKEA Kyrre / Frosta Stackable Birch Stools (Set of 4)",
+                        "notes": "Three-legged triangular stackable stools that tuck away into a corner when not in use.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 200,
-                                    "priceDisplay": "$120-$280",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "IKEA SG",
+                                    "price": 60,
+                                    "priceDisplay": "$60.00",
+                                    "promo": "Set of 4 Stackable Stools",
+                                    "linkText": "IKEA SG",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Nitori Compact Padded Round Stools (Set of 4)",
+                        "notes": "Fabric cushioned compact stools for dining overflow and casual living room gatherings.",
+                        "stores": [
+                              {
+                                    "store": "Nitori SG",
+                                    "price": 100,
+                                    "priceDisplay": "$100.00",
+                                    "promo": "Set of 4 Padded Stools",
+                                    "linkText": "Nitori SG",
+                                    "linkUrl": "https://www.nitori.com.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Muji Solid Oak Low Stools (Set of 4)",
+                        "notes": "Solid White Oak minimalist stools with natural timber grain.",
+                        "stores": [
+                              {
+                                    "store": "Muji SG",
+                                    "price": 180,
+                                    "priceDisplay": "$180.00",
+                                    "promo": "Muji Solid Oak Set",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
                               }
                         ]
                   }
@@ -10689,32 +11608,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "living-lounge-chair",
             "name": "Living Lounge Chair",
-            "choice": "Compact single-seater accent armchair / reading lounge chair to complement 2",
+            "choice": "Castlery Adams / Todd Armchair (High Resilience Foam)",
             "notes": "Compact single-seater accent armchair / reading lounge chair to complement 2.5-seater sofa.",
             "room": "Living Room",
             "priority": "P2",
             "status": "TBD",
             "price": 550,
             "priceDisplay": "$300-$800",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "Castlery SG",
+            "linkText": "Castlery SG",
+            "linkUrl": "https://www.castlery.com/sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Compact single-seater accent armchair / reading lounge chair to complement 2",
-                        "notes": "Compact single-seater accent armchair / reading lounge chair to complement 2.5-seater sofa.",
+                        "model": "Castlery Adams / Todd Armchair (High Resilience Foam)",
+                        "notes": "Deep sculptural lounge accent chair with removable washable covers.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 550,
-                                    "priceDisplay": "$300-$800",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "Castlery SG",
+                                    "price": 600,
+                                    "priceDisplay": "$600.00",
+                                    "promo": "Accent Lounge Pick",
+                                    "linkText": "Castlery SG",
+                                    "linkUrl": "https://www.castlery.com/sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "IKEA Po\u00e4ng / Strandmon Wing Armchair",
+                        "notes": "High neck support and ergonomic curved frame for relaxed reading and lounging.",
+                        "stores": [
+                              {
+                                    "store": "IKEA SG",
+                                    "price": 250,
+                                    "priceDisplay": "$250.00",
+                                    "promo": "Classic High-Back Comfort",
+                                    "linkText": "IKEA SG",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Mid-Century Modern Lounge Chair & Ottoman (Replica)",
+                        "notes": "Molded walnut plywood shell with full-grain leather upholstery and matching ottoman.",
+                        "stores": [
+                              {
+                                    "store": "Comfort Design / Designer Replica",
+                                    "price": 1200,
+                                    "priceDisplay": "$1,200.00",
+                                    "promo": "Luxury Leather Icon",
+                                    "linkText": "Comfort Design",
+                                    "linkUrl": "https://www.comfort-b.com.sg"
                               }
                         ]
                   }
@@ -10723,32 +11671,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "balcony-chairs-2-no",
             "name": "Balcony Chairs (2 No.)",
-            "choice": "Weather-resistant outdoor chairs (2 No",
+            "choice": "IKEA Sunds\u00f6 / T\u00e4rn\u00f6 Foldable Outdoor Chairs (Pair)",
             "notes": "Weather-resistant outdoor chairs (2 No.) for balcony coffee & relaxation.",
             "room": "Balcony",
             "priority": "P1",
             "status": "TBD",
             "price": 275,
             "priceDisplay": "$150-$400",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "IKEA SG",
+            "linkText": "IKEA SG",
+            "linkUrl": "https://www.ikea.com/sg/en",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Weather-resistant outdoor chairs (2 No",
-                        "notes": "Weather-resistant outdoor chairs (2 No.) for balcony coffee & relaxation.",
+                        "model": "IKEA Sunds\u00f6 / T\u00e4rn\u00f6 Foldable Outdoor Chairs (Pair)",
+                        "notes": "Fold-flat weatherproof steel & solid acacia chairs for easy balcony storage.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 275,
-                                    "priceDisplay": "$150-$400",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "IKEA SG",
+                                    "price": 90,
+                                    "priceDisplay": "$90.00",
+                                    "promo": "Foldable Weatherproof Pair",
+                                    "linkText": "IKEA SG",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Castlery Outdoor Armchairs with Quick-Dry Cushions (Pair)",
+                        "notes": "Rust-free powder-coated aluminium frames with UV-resistant olefine cushions.",
+                        "stores": [
+                              {
+                                    "store": "Castlery SG",
+                                    "price": 380,
+                                    "priceDisplay": "$380.00",
+                                    "promo": "Outdoor Lounge Pair",
+                                    "linkText": "Castlery SG",
+                                    "linkUrl": "https://www.castlery.com/sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Nitori Weatherproof Woven Outdoor Chairs (Pair)",
+                        "notes": "Resin wicker breathable balcony seating.",
+                        "stores": [
+                              {
+                                    "store": "Nitori SG",
+                                    "price": 180,
+                                    "priceDisplay": "$180.00",
+                                    "promo": "Weatherproof Resin Pair",
+                                    "linkText": "Nitori SG",
+                                    "linkUrl": "https://www.nitori.com.sg"
                               }
                         ]
                   }
@@ -10757,32 +11734,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "balcony-table",
             "name": "Balcony Table",
-            "choice": "Compact weather-resistant outdoor caf\u00e9 / bistro table (aluminum or treated wood)",
+            "choice": "IKEA T\u00e4rn\u00f6 Outdoor Bistro Table (Foldable)",
             "notes": "Compact weather-resistant outdoor caf\u00e9 / bistro table (aluminum or treated wood).",
             "room": "Balcony",
             "priority": "P1",
             "status": "TBD",
             "price": 300,
             "priceDisplay": "$150-$450",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "IKEA SG",
+            "linkText": "IKEA SG",
+            "linkUrl": "https://www.ikea.com/sg/en",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Compact weather-resistant outdoor caf\u00e9 / bistro table (aluminum or treated wood)",
-                        "notes": "Compact weather-resistant outdoor caf\u00e9 / bistro table (aluminum or treated wood).",
+                        "model": "IKEA T\u00e4rn\u00f6 Outdoor Bistro Table (Foldable)",
+                        "notes": "Compact 55x54cm powder-coated steel & acacia folding balcony table.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 300,
-                                    "priceDisplay": "$150-$450",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "IKEA SG",
+                                    "price": 45,
+                                    "priceDisplay": "$45.00",
+                                    "promo": "Compact Bistro Table",
+                                    "linkText": "IKEA SG",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Castlery Outdoor Bistro Table (60cm Sintered Top)",
+                        "notes": "Weather-sealed round bistro table with rust-proof aluminium base.",
+                        "stores": [
+                              {
+                                    "store": "Castlery SG",
+                                    "price": 200,
+                                    "priceDisplay": "$200.00",
+                                    "promo": "Modern Bistro Pick",
+                                    "linkText": "Castlery SG",
+                                    "linkUrl": "https://www.castlery.com/sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Nitori Compact Outdoor Balcony Table",
+                        "notes": "Space-efficient outdoor cafe table.",
+                        "stores": [
+                              {
+                                    "store": "Nitori SG",
+                                    "price": 99,
+                                    "priceDisplay": "$99.00",
+                                    "promo": "Cafe Table Value",
+                                    "linkText": "Nitori SG",
+                                    "linkUrl": "https://www.nitori.com.sg"
                               }
                         ]
                   }
@@ -10791,32 +11797,47 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "balcony-bench-diy-loose",
             "name": "Balcony Bench (DIY / Loose)",
-            "choice": "Outdoor wooden slat bench / DIY bench for balcony relaxation corner",
+            "choice": "IKEA \u00c4pplar\u00f6 / N\u00c4MMAR\u00d6 Outdoor Storage Bench (80cm)",
             "notes": "Outdoor wooden slat bench / DIY bench for balcony relaxation corner.",
             "room": "Balcony",
             "priority": "P2",
             "status": "TBD",
             "price": 250,
             "priceDisplay": "$150-$350",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "IKEA SG",
+            "linkText": "IKEA SG",
+            "linkUrl": "https://www.ikea.com/sg/en",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Outdoor wooden slat bench / DIY bench for balcony relaxation corner",
-                        "notes": "Outdoor wooden slat bench / DIY bench for balcony relaxation corner.",
+                        "model": "IKEA \u00c4pplar\u00f6 / N\u00c4MMAR\u00d6 Outdoor Storage Bench (80cm)",
+                        "notes": "Solid acacia outdoor bench with lidded waterproof storage underneath for gardening & sports gear.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 250,
-                                    "priceDisplay": "$150-$350",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "IKEA SG",
+                                    "price": 120,
+                                    "priceDisplay": "$120.00",
+                                    "promo": "Bench + Under-Seat Storage",
+                                    "linkText": "IKEA SG",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Custom Teak Balcony Slat Bench",
+                        "notes": "Naturally weather-resistant Grade-A teak bench tailored to balcony niche.",
+                        "stores": [
+                              {
+                                    "store": "Teak Specialist SG",
+                                    "price": 280,
+                                    "priceDisplay": "$280.00",
+                                    "promo": "Grade-A Teak Slat",
+                                    "linkText": "The Table Guy SG",
+                                    "linkUrl": "https://thetableguy.com"
                               }
                         ]
                   }
@@ -10825,32 +11846,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "balcony-clothes-rack",
             "name": "Balcony Clothes Rack",
-            "choice": "Freestanding folding clothes drying rack / airer (supplementing ceiling smart dryer)",
+            "choice": "Automated Smart Ceiling Drying Rack (Remote / App Lift + Solar Fan)",
             "notes": "Freestanding folding clothes drying rack / airer (supplementing ceiling smart dryer).",
             "room": "Balcony",
             "priority": "P2",
             "status": "TBD",
             "price": 100,
             "priceDisplay": "$50-$150",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "Shopee SG / YuHome / Steigen Alternative",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Freestanding folding clothes drying rack / airer (supplementing ceiling smart dryer)",
-                        "notes": "Freestanding folding clothes drying rack / airer (supplementing ceiling smart dryer).",
+                        "model": "Automated Smart Ceiling Drying Rack (Remote / App Lift + Solar Fan)",
+                        "notes": "Motorized ceiling-mounted laundry rack with dual blowers and LED illumination, leaving balcony floor clear.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 100,
-                                    "priceDisplay": "$50-$150",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "Shopee SG / YuHome / Steigen Alternative",
+                                    "price": 450,
+                                    "priceDisplay": "$450.00",
+                                    "promo": "Motorized Solar Lift",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Wall-Mounted Retractable Stainless Steel Clothes Rack",
+                        "notes": "Heavy-duty SUS304 folding concertina rack that collapses flush to the wall.",
+                        "stores": [
+                              {
+                                    "store": "Shopee SG",
+                                    "price": 120,
+                                    "priceDisplay": "$120.00",
+                                    "promo": "Heavy-Duty Retractable",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "IKEA Mulig / Frost Foldable Clothes Horse",
+                        "notes": "Lightweight movable drying horse for balcony and indoor use.",
+                        "stores": [
+                              {
+                                    "store": "IKEA SG",
+                                    "price": 60,
+                                    "priceDisplay": "$60.00",
+                                    "promo": "Budget Movable Rack",
+                                    "linkText": "IKEA SG",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
                               }
                         ]
                   }
@@ -10859,32 +11909,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "balcony-shelving-storage-rack",
             "name": "Balcony Shelving / Storage Rack",
-            "choice": "Outdoor-rated powder-coated metal or teak shelving unit for gear & plants",
+            "choice": "IKEA Kolbj\u00f6rn Galvanised Shelving Unit (Outdoor Rated)",
             "notes": "Outdoor-rated powder-coated metal or teak shelving unit for gear & plants.",
             "room": "Balcony",
             "priority": "P2",
             "status": "TBD",
             "price": 200,
             "priceDisplay": "$100-$300",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "IKEA SG",
+            "linkText": "IKEA SG",
+            "linkUrl": "https://www.ikea.com/sg/en",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Outdoor-rated powder-coated metal or teak shelving unit for gear & plants",
-                        "notes": "Outdoor-rated powder-coated metal or teak shelving unit for gear & plants.",
+                        "model": "IKEA Kolbj\u00f6rn Galvanised Shelving Unit (Outdoor Rated)",
+                        "notes": "Weather-resistant powder-coated galvanised steel shelving designed for balcony storage.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 200,
-                                    "priceDisplay": "$100-$300",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "IKEA SG",
+                                    "price": 120,
+                                    "priceDisplay": "$120.00",
+                                    "promo": "Galvanised Steel",
+                                    "linkText": "IKEA SG",
+                                    "linkUrl": "https://www.ikea.com/sg/en"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Heavy-Duty Boltless Metal Storage Rack (4 Tiers)",
+                        "notes": "Epoxy coated heavy-duty shelving for climbing gear, toolbox, and balcony utility storage.",
+                        "stores": [
+                              {
+                                    "store": "Shopee / Rack Specialist SG",
+                                    "price": 80,
+                                    "priceDisplay": "$80.00",
+                                    "promo": "Boltless Epoxy Rack",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Keter Weatherproof Outdoor Utility Cabinet",
+                        "notes": "Lockable all-weather resin storage cabinet shielding contents from driving rain.",
+                        "stores": [
+                              {
+                                    "store": "Amazon SG / Courts",
+                                    "price": 250,
+                                    "priceDisplay": "$250.00",
+                                    "promo": "Weatherproof Sealed Cabinet",
+                                    "linkText": "Courts SG",
+                                    "linkUrl": "https://www.courts.com.sg"
                               }
                         ]
                   }
@@ -10893,32 +11972,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "smart-security-camera-cctv",
             "name": "Smart Security Camera (CCTV)",
-            "choice": "Indoor / entrance smart camera (Aqara Camera Hub G3 / E1 or Eufy 2K) for security & presence",
+            "choice": "Aqara Camera Hub G3 (2K Pan-Tilt, AI Gesture & HomeKit Secure Video)",
             "notes": "Indoor / entrance smart camera (Aqara Camera Hub G3 / E1 or Eufy 2K) for security & presence.",
             "room": "Entrance",
             "priority": "P2",
             "status": "TBD",
             "price": 165,
             "priceDisplay": "$80-$250",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "Smart Innovations / Shopee",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Indoor / entrance smart camera (Aqara Camera Hub G3 / E1 or Eufy 2K) for security & presence",
-                        "notes": "Indoor / entrance smart camera (Aqara Camera Hub G3 / E1 or Eufy 2K) for security & presence.",
+                        "model": "Aqara Camera Hub G3 (2K Pan-Tilt, AI Gesture & HomeKit Secure Video)",
+                        "notes": "2K resolution, local RTSP streaming, AI facial/pet recognition, Zigbee 3.0 bridge, and Apple HomeKit Secure Video.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 165,
-                                    "priceDisplay": "$80-$250",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "Smart Innovations / Shopee",
+                                    "price": 159,
+                                    "priceDisplay": "$159.00",
+                                    "promo": "Flagship 2K AI Hub",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Aqara Camera E1 (2K Indoor Camera)",
+                        "notes": "Compact Wi-Fi 6 2K indoor security camera with HomeKit support.",
+                        "stores": [
+                              {
+                                    "store": "Shopee SG (SmartSG)",
+                                    "price": 80,
+                                    "priceDisplay": "$80.00",
+                                    "promo": "Compact 2K Cam",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Eufy Security 2K Indoor Pan & Tilt",
+                        "notes": "Independent local microSD storage with zero subscription and Home Assistant RTSP integration.",
+                        "stores": [
+                              {
+                                    "store": "Shopee / Amazon SG",
+                                    "price": 99,
+                                    "priceDisplay": "$99.00",
+                                    "promo": "Local Storage Pick",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
                               }
                         ]
                   }
@@ -10927,32 +12035,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "dining-pendant-light-fixture",
             "name": "Dining Pendant Light Fixture",
-            "choice": "Minimalist 2-drop or 3-drop dining pendant fitting; use with the two selected Aqara T2 E27 smart bulbs",
+            "choice": "Minimalist Linear 2-Bulb Dining Pendant Fixture",
             "notes": "Minimalist 2-drop or 3-drop dining pendant fitting; use with the two selected Aqara T2 E27 smart bulbs.",
             "room": "Dining",
             "priority": "P1",
             "status": "TBD",
             "price": 225,
             "priceDisplay": "$100-$350",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "Sembawang Lighting / Taobao",
+            "linkText": "Sembawang Lighting",
+            "linkUrl": "https://sembawanglighting.com.sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Minimalist 2-drop or 3-drop dining pendant fitting; use with the two selected Aqara T2 E27 smart bulbs",
-                        "notes": "Minimalist 2-drop or 3-drop dining pendant fitting; use with the two selected Aqara T2 E27 smart bulbs.",
+                        "model": "Minimalist Linear 2-Bulb Dining Pendant Fixture",
+                        "notes": "Clean matte black or dark slate architectural fixture suspended over gateleg table. Fits 2x Aqara T2 E27 bulbs.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 225,
-                                    "priceDisplay": "$100-$350",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "Sembawang Lighting / Taobao",
+                                    "price": 150,
+                                    "priceDisplay": "$150.00",
+                                    "promo": "Linear Architecture",
+                                    "linkText": "Sembawang Lighting",
+                                    "linkUrl": "https://sembawanglighting.com.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Multi-Drop Frosted Glass Globe Dining Pendant",
+                        "notes": "Contemporary Nordic dual-globe pendant offering diffused 360-degree ambient dining illumination.",
+                        "stores": [
+                              {
+                                    "store": "Lighting Store SG / Shopee",
+                                    "price": 280,
+                                    "priceDisplay": "$280.00",
+                                    "promo": "Frosted Glass Nordic",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Designer Fluted Ceramic / Brass Architectural Pendant",
+                        "notes": "Custom handmade fluted shade providing warm focal lighting over dining table centerpiece.",
+                        "stores": [
+                              {
+                                    "store": "Designer Studio SG",
+                                    "price": 350,
+                                    "priceDisplay": "$350.00",
+                                    "promo": "Designer Fluted Finish",
+                                    "linkText": "Sembawang Lighting",
+                                    "linkUrl": "https://sembawanglighting.com.sg"
                               }
                         ]
                   }
@@ -10973,6 +12110,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -10995,32 +12133,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "kitchen-bathroom-venetian-blinds-x3",
             "name": "Kitchen & Bathroom Venetian Blinds (x3)",
-            "choice": "Moisture-resistant aluminium or faux-wood venetian blinds for Kitchen, Master Bath, and Common Bath",
+            "choice": "Waterproof Faux-Wood PVC Venetian Blinds (Set of 3: Kitchen + 2x Baths)",
             "notes": "Moisture-resistant aluminium or faux-wood venetian blinds for Kitchen, Master Bath, and Common Bath.",
             "room": "Whole House",
             "priority": "P1",
             "status": "TBD",
             "price": 425,
             "priceDisplay": "$250-$600",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "Direct Blinds Fabricator / Shopee",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Moisture-resistant aluminium or faux-wood venetian blinds for Kitchen, Master Bath, and Common Bath",
-                        "notes": "Moisture-resistant aluminium or faux-wood venetian blinds for Kitchen, Master Bath, and Common Bath.",
+                        "model": "Waterproof Faux-Wood PVC Venetian Blinds (Set of 3: Kitchen + 2x Baths)",
+                        "notes": "100% waterproof and oil-resistant 50mm slats that do not warp, rust, or peel in wet bathroom zones.",
                         "stores": [
                               {
-                                    "store": "-",
-                                    "price": 425,
-                                    "priceDisplay": "$250-$600",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "store": "Direct Blinds Fabricator / Shopee",
+                                    "price": 350,
+                                    "priceDisplay": "$350.00",
+                                    "promo": "Moisture-Resistant PVC Set",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Heavy-Gauge Aluminium Venetian Blinds (Set of 3)",
+                        "notes": "Baked enamel anti-corrosion aluminium louvers designed for high heat and steam kitchen splash zones.",
+                        "stores": [
+                              {
+                                    "store": "Curtain Specialist SG",
+                                    "price": 450,
+                                    "priceDisplay": "$450.00",
+                                    "promo": "Heavy-Duty Enamel Alum",
+                                    "linkText": "Direct Blinds SG",
+                                    "linkUrl": "https://www.directblindssingapore.com"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Custom Moisture-Resistant Motorized Slat Blinds (Set of 3)",
+                        "notes": "Custom sized motorized moisture blinds integrated with bathroom smart switches.",
+                        "stores": [
+                              {
+                                    "store": "Smart Blinds Specialist",
+                                    "price": 600,
+                                    "priceDisplay": "$600.00",
+                                    "promo": "Smart Motorized Set",
+                                    "linkText": "Direct Blinds SG",
+                                    "linkUrl": "https://www.directblindssingapore.com"
                               }
                         ]
                   }
@@ -11041,6 +12208,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -11063,32 +12231,61 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "master-bedroom-projector",
             "name": "Master Bedroom Projector",
-            "choice": "BenQ GV50 portable laser projector (already owned by homeowner; $0 procurement budget)",
+            "choice": "BenQ GV50 Laser 1080p Smart Projector (Existing / Retained)",
             "notes": "BenQ GV50 portable laser projector (already owned by homeowner; $0 procurement budget).",
             "room": "Master Bed",
             "priority": "P2",
             "status": "TBD",
             "price": 0,
             "priceDisplay": "$0 (Retained)",
-            "availableAt": "-",
-            "linkText": "",
-            "linkUrl": "",
+            "availableAt": "Existing Unit (Retained)",
+            "linkText": "BenQ SG",
+            "linkUrl": "https://www.benq.com/en-sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "BenQ GV50 portable laser projector (already owned by homeowner; $0 procurement budget)",
-                        "notes": "BenQ GV50 portable laser projector (already owned by homeowner; $0 procurement budget).",
+                        "model": "BenQ GV50 Laser 1080p Smart Projector (Existing / Retained)",
+                        "notes": "Pre-owned 1080p laser projector with ceiling swivel mount and built-in battery. Fulfills zero-procurement-cost bedroom cinema.",
                         "stores": [
                               {
-                                    "store": "-",
+                                    "store": "Existing Unit (Retained)",
                                     "price": 0,
-                                    "priceDisplay": "$0 (Retained)",
-                                    "promo": "",
-                                    "linkText": "",
-                                    "linkUrl": ""
+                                    "priceDisplay": "$0.00 (Owned)",
+                                    "promo": "Retained Pre-Owned",
+                                    "linkText": "BenQ SG",
+                                    "linkUrl": "https://www.benq.com/en-sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "XGIMI Horizon Pro 4K Smart Projector",
+                        "notes": "High-brightness 2200 ANSI lumen 4K home theater projector with Harman Kardon sound.",
+                        "stores": [
+                              {
+                                    "store": "Courts / Shopee Official",
+                                    "price": 1499,
+                                    "priceDisplay": "$1,499.00",
+                                    "promo": "4K Laser Upgrade",
+                                    "linkText": "Courts SG",
+                                    "linkUrl": "https://www.courts.com.sg"
+                              }
+                        ]
+                  },
+                  {
+                        "model": "Anker Nebula Capsule 3 Laser 1080p",
+                        "notes": "Ultra-portable soda-can form factor with Google TV and autofocus.",
+                        "stores": [
+                              {
+                                    "store": "Shopee SG (Anker Official)",
+                                    "price": 899,
+                                    "priceDisplay": "$899.00",
+                                    "promo": "Ultra-Portable 1080p",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg"
                               }
                         ]
                   }
@@ -11109,6 +12306,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "linkUrl": "",
             "sellerDeductible": false,
             "sellerSavings": 0,
+            "comparisonCategory": null,
             "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
@@ -11125,6 +12323,694 @@ wall-switch action event exposed by the selected Home Assistant integration.
                                     "linkUrl": ""
                               }
                         ]
+                  }
+            ]
+      }
+];
+      const comparisonData = [
+      {
+            "category": "System 3 Aircon",
+            "icon": "\u2744\ufe0f",
+            "title": "Store & Price Comparison (System 3 Aircon)",
+            "headers": [
+                  "Store / Platform",
+                  "Model & Inclusions",
+                  "Listed / Promo Price",
+                  "Effective Net Price",
+                  "Store Link"
+            ],
+            "rows": [
+                  {
+                        "store": "Courts Megastore",
+                        "model": "ME Starmex 28 (5-Tick) + Standard Installation",
+                        "listedPrice": "$4,084.00",
+                        "netPrice": "**$3,839.00** _(VIP 6% promo)_",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Courts Megastore",
+                        "model": "ME Starmex 33 Condenser + Standard Installation",
+                        "listedPrice": "$4,384.00",
+                        "netPrice": "**$4,121.00** _(VIP 6% promo)_",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Courts Megastore",
+                        "model": "MHI Rocket SR 30 (3D Airflow) + Standard Installation",
+                        "listedPrice": "$3,545.00",
+                        "netPrice": "**$3,332.30** _(VIP 6% promo)_",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Shopee SG (Monster923 / Aircon Express)",
+                        "model": "ME Starmex 28 + Free Upgraded Materials (Armaflex Cl 0, G22)",
+                        "listedPrice": "$3,500.00",
+                        "netPrice": "**$3,280.00** _(~$3,180 w/ vouchers)_",
+                        "linkText": "Shopee",
+                        "linkUrl": "https://shopee.sg/MITSUBISHI-STARMEX-SYSTEM-3-INVERTER-5-Tick-R32-FREE-UPGRADE-MATERIAL-i.239554013.17720065093"
+                  },
+                  {
+                        "store": "Gain City",
+                        "model": "ME Starmex 28 + Gain City 3-Yr Workmanship Warranty",
+                        "listedPrice": "$4,199.00",
+                        "netPrice": "**$3,999.00** _(Showroom promo)_",
+                        "linkText": "Gain City",
+                        "linkUrl": "https://www.gaincity.com"
+                  },
+                  {
+                        "store": "Gain City (Ang Mo Kio)",
+                        "model": "Daikin iSmile Eco+ (Confirmed Indoor Model: CTKM25ZVM)",
+                        "listedPrice": "Showroom Quote",
+                        "netPrice": "**Showroom visit** _(Indoor model confirmed as CTKM25ZVM)_",
+                        "linkText": "Gain City",
+                        "linkUrl": "https://www.gaincity.com"
+                  },
+                  {
+                        "store": "Courts Megastore",
+                        "model": "Midea MCE Series (System 3, 6-Yr Full Warranty)",
+                        "listedPrice": "$3,264.00",
+                        "netPrice": "**$3,068.16** _(VIP 6% promo)_",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Courts Tampines",
+                        "model": "Daikin iSmile Eco+ MKM75ZVMG + CTKM25ZVMG x2 + CTKM50ZVMG",
+                        "listedPrice": "$4,185.00",
+                        "netPrice": "**$4,185.00** _(provisional; confirm built-in Wi-Fi/app pairing before payment)_",
+                        "linkText": "Daikin SG",
+                        "linkUrl": "https://www.daikin.com.sg/air-conditioners/"
+                  },
+                  {
+                        "store": "Courts Ang Mo Kio",
+                        "model": "Daikin iSmile Eco+ MKM75ZVMG + CTKM25ZVMG x2 + CTKM50ZVMG",
+                        "listedPrice": "$4,485.00",
+                        "netPrice": "**$4,485.00** _(visit price; Wi-Fi built into quoted indoor units)_",
+                        "linkText": "Daikin SG",
+                        "linkUrl": "https://www.daikin.com.sg/air-conditioners/"
+                  },
+                  {
+                        "store": "Courts Ang Mo Kio",
+                        "model": "MHI Rocket SCM30YS-W + SRK10YYS2-W8 x2 + SRK18YYS-W8",
+                        "listedPrice": "$4,435.00",
+                        "netPrice": "**$4,435.00** _(visit price; built-in app Wi-Fi)_",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg/mitsubishi-heavy-industries?p=2"
+                  }
+            ]
+      },
+      {
+            "category": "Robot Vacuums",
+            "icon": "\ud83e\udd16",
+            "title": "Store & Price Comparison (Robot Vacuums)",
+            "headers": [
+                  "Store / Platform",
+                  "Model & Inclusions",
+                  "Listed / Promo Price",
+                  "Effective Net Price",
+                  "Store Link"
+            ],
+            "rows": [
+                  {
+                        "store": "Courts Megastore",
+                        "model": "Roborock Saros 20 (Direct Plumbing Model)",
+                        "listedPrice": "$1,899.90",
+                        "netPrice": "**$1,709.91** _(10% promo)_",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Roborock Official SG",
+                        "model": "Roborock Saros 20 (Direct Water Hookup)",
+                        "listedPrice": "$2,539.90",
+                        "netPrice": "**$1,899.90**",
+                        "linkText": "Roborock SG",
+                        "linkUrl": "https://sg.roborock.com/pages/roborock-saros-20"
+                  },
+                  {
+                        "store": "Dreame SG Official",
+                        "model": "Dreame X60 Master (Built-in Dock + Auto Water Kit)",
+                        "listedPrice": "$1,671.00",
+                        "netPrice": "**$1,599.00**",
+                        "linkText": "Dreame SG",
+                        "linkUrl": "https://dreame.sg/products/dreame-x60-ultra-master?variant=52296811938101"
+                  },
+                  {
+                        "store": "Dreame SG Official",
+                        "model": "Dreame X60 Ultra (Freestanding + Auto Water Kit)",
+                        "listedPrice": "$1,571.00",
+                        "netPrice": "**$1,499.00**",
+                        "linkText": "Dreame SG",
+                        "linkUrl": "https://dreame.sg/products/dreame-x60-ultra-master?variant=52296811905333"
+                  },
+                  {
+                        "store": "Courts Megastore",
+                        "model": "Dreame X60 Ultra (Robotic Arm, Hot Wash)",
+                        "listedPrice": "$1,799.00",
+                        "netPrice": "**$1,599.00**",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Shopee SG (Dreame Official)",
+                        "model": "Dreame X60 Ultra (Local Set, 2-Yr Warranty)",
+                        "listedPrice": "$2,099.00",
+                        "netPrice": "**$1,362 \u2013 $1,699** _(Campaign vouchers)_",
+                        "linkText": "Shopee",
+                        "linkUrl": "https://shopee.sg/dreame_official_store"
+                  },
+                  {
+                        "store": "Gain City",
+                        "model": "Dreame X60 Ultra Robot Vacuum Mop",
+                        "listedPrice": "$2,099.00",
+                        "netPrice": "**$1,699.00**",
+                        "linkText": "Gain City",
+                        "linkUrl": "https://www.gaincity.com/dreame-x60-ultra-robot-vacuum-mop-dm-x60u-gl-tb0017381"
+                  }
+            ]
+      },
+      {
+            "category": "Washer & Dryer Stack",
+            "icon": "\ud83e\uddfa",
+            "title": "Store & Price Comparison (Washer & Dryer Stack)",
+            "headers": [
+                  "Store / Platform",
+                  "Model & Inclusions",
+                  "Listed / Promo Price",
+                  "Effective Net Price",
+                  "Store Link"
+            ],
+            "rows": [
+                  {
+                        "store": "Courts Megastore",
+                        "model": "Samsung Bespoke AI Stack (Washer + Dryer + Kit)",
+                        "listedPrice": "$2,499.00",
+                        "netPrice": "**$2,000.00** _(Bundle Promo)_",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Gain City / Harvey Norman",
+                        "model": "Samsung Bespoke AI Stack Package",
+                        "listedPrice": "$2,599.00",
+                        "netPrice": "**$2,199 \u2013 $2,399**",
+                        "linkText": "Gain City",
+                        "linkUrl": "https://www.gaincity.com"
+                  },
+                  {
+                        "store": "Shopee SG (Samsung Official)",
+                        "model": "Samsung Bespoke Washer + Dryer (Separate Units)",
+                        "listedPrice": "$2,698.00",
+                        "netPrice": "**~$2,298.00**",
+                        "linkText": "Shopee",
+                        "linkUrl": "https://shopee.sg"
+                  },
+                  {
+                        "store": "Courts Megastore",
+                        "model": "Midea 9.5kg Washer + Heat Pump Dryer Stack",
+                        "listedPrice": "$2,199.00",
+                        "netPrice": "**$1,900.00**",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Courts Megastore",
+                        "model": "Hisense 10.5kg Washer + Heat Pump Dryer Stack",
+                        "listedPrice": "$2,899.00",
+                        "netPrice": "**$2,498.00**",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Courts Ang Mo Kio",
+                        "model": "Hitachi BD-100YFVEM 10kg Washer + TD-100XFVEM 10kg Heat Pump Dryer",
+                        "listedPrice": "$2,228.00",
+                        "netPrice": "**$2,228.00 before further discount**",
+                        "linkText": "Hitachi Dryer",
+                        "linkUrl": "https://www.hitachi-homeappliances.com/sg/products/washing-machine/tumble-dryer/td-100xfvem.html"
+                  },
+                  {
+                        "store": "Courts Ang Mo Kio",
+                        "model": "Samsung WW11CB944DGHSP 11kg Washer + DV10BB9440GHSP 10kg Heat Pump Dryer",
+                        "listedPrice": "$2,968.00",
+                        "netPrice": "**$2,968.00 before further discount**",
+                        "linkText": "Samsung SG",
+                        "linkUrl": "https://www.samsung.com/sg/bundles/washer-and-dryer-set/bespoke-11kg-front-load-washing-machine-and-10kg-heatpump-dryer-f-ww11c-dv10gh/"
+                  },
+                  {
+                        "store": "Courts Ang Mo Kio",
+                        "model": "LG FX1410S3GA 10kg Washer + TD-H10VBD 10kg Heat Pump Dryer",
+                        "listedPrice": "$3,448.00",
+                        "netPrice": "**$3,448.00 before further discount**",
+                        "linkText": "LG SG",
+                        "linkUrl": "https://www.lg.com/sg/washing-machines/dryers/td-h10vbd/"
+                  }
+            ]
+      },
+      {
+            "category": "Refrigerator",
+            "icon": "\ud83e\uddca",
+            "title": "Store & Price Comparison (Refrigerator)",
+            "headers": [
+                  "Store / Platform",
+                  "Model & Inclusions",
+                  "Listed / Promo Price",
+                  "Effective Net Price",
+                  "Store Link"
+            ],
+            "rows": [
+                  {
+                        "store": "Courts Megastore",
+                        "model": "Samsung RB34T6054B1 325L Bottom Mount",
+                        "listedPrice": "$1,199.00",
+                        "netPrice": "**$1,000.00** _(Courts Promo)_",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Gain City",
+                        "model": "Samsung RB34T6054B1 325L SpaceMax Fridge",
+                        "listedPrice": "$1,199.00",
+                        "netPrice": "**$1,049.00**",
+                        "linkText": "Gain City",
+                        "linkUrl": "https://www.gaincity.com"
+                  },
+                  {
+                        "store": "Shopee SG (Samsung Official / Parisilk)",
+                        "model": "Samsung RB34T6054B1 325L Bottom Mount Fridge",
+                        "listedPrice": "$1,199.00",
+                        "netPrice": "**~$1,019 \u2013 $1,079**",
+                        "linkText": "Shopee",
+                        "linkUrl": "https://shopee.sg"
+                  },
+                  {
+                        "store": "Gain City / Mega Discount",
+                        "model": "Hisense / Panasonic 400L 2-Door Fridge",
+                        "listedPrice": "$799.00",
+                        "netPrice": "**$650.00**",
+                        "linkText": "Gain City",
+                        "linkUrl": "https://www.gaincity.com"
+                  }
+            ]
+      },
+      {
+            "category": "Mattress & Bed Frame",
+            "icon": "\ud83d\ude34",
+            "title": "Store & Price Comparison (Mattress & Bed Frame)",
+            "headers": [
+                  "Store / Platform",
+                  "Model & Inclusions",
+                  "Listed / Promo Price",
+                  "Effective Net Price",
+                  "Store Link"
+            ],
+            "rows": [
+                  {
+                        "store": "Courts Megastore",
+                        "model": "Simmons Beautyrest Platinum Prima Grand (Non-Flip)",
+                        "listedPrice": "$5,903.00",
+                        "netPrice": "**$4,900.00** _(Courts Showroom Promo)_",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Simmons Gallery / Tangs",
+                        "model": "Simmons Beautyrest Platinum Prima Grand",
+                        "listedPrice": "$5,903.00",
+                        "netPrice": "**$5,312.70** _(10% DBS Card Promo)_",
+                        "linkText": "Simmons SG",
+                        "linkUrl": "https://simmons.com.sg"
+                  },
+                  {
+                        "store": "Courts (Display Unit)",
+                        "model": "_Simmons BackCare Advanced S4500 (Canada)_",
+                        "listedPrice": "_$3,600.00_",
+                        "netPrice": "_Rejected (1-Year Display Unit)_",
+                        "linkText": "",
+                        "linkUrl": ""
+                  },
+                  {
+                        "store": "Sealy Gallery",
+                        "model": "Sealy Posturepedic Camelot Luxury Medium",
+                        "listedPrice": "$6,800.00+",
+                        "netPrice": "**~$6,000+**",
+                        "linkText": "Sealy SG",
+                        "linkUrl": "https://sealy.com.sg"
+                  },
+                  {
+                        "store": "Sealy Gallery",
+                        "model": "Sealy Posturepedic Lancelot Lush",
+                        "listedPrice": "$4,800.00+",
+                        "netPrice": "**~$4,000+**",
+                        "linkText": "Sealy SG",
+                        "linkUrl": "https://sealy.com.sg"
+                  },
+                  {
+                        "store": "Tilam King (Local Factory)",
+                        "model": "Tilam King 100% Natural Latex Queen (10-Yr Sag Proof)",
+                        "listedPrice": "$1,800.00",
+                        "netPrice": "**$1,600 \u2013 $1,800**",
+                        "linkText": "Tilam King",
+                        "linkUrl": "https://tilamking.sg"
+                  },
+                  {
+                        "store": "Courts (Frame Bundle)",
+                        "model": "Hydraulic Storage Bed Frame (Add-on with Mattress)",
+                        "listedPrice": "$1,299.00",
+                        "netPrice": "**$590.00** _(Bundle Promo)_",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Blafink (Bespoke SG)",
+                        "model": "Custom Heavy-Duty Hydraulic Bed (Bansbach Struts)",
+                        "listedPrice": "$1,800.00",
+                        "netPrice": "**$1,600.00**",
+                        "linkText": "Blafink",
+                        "linkUrl": "https://www.blafink.com"
+                  },
+                  {
+                        "store": "Courts Ang Mo Kio",
+                        "model": "King Koil Cool Extreme Aurora Queen + storage bed + headboard",
+                        "listedPrice": "$3,585.00",
+                        "netPrice": "**$3,585.00**",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Courts Ang Mo Kio",
+                        "model": "King Koil Green Nature Mashland Queen + storage bed + headboard",
+                        "listedPrice": "$3,129.00",
+                        "netPrice": "**$3,129.00**",
+                        "linkText": "Courts specs",
+                        "linkUrl": "https://www.courts.com.sg/kingkoil-green-nature-mashland-super-single-size-mattress-w-ss193-storage-divan-and-headboard-ip193532"
+                  },
+                  {
+                        "store": "Courts Ang Mo Kio",
+                        "model": "King Koil Cool Extreme Polaris Queen + storage bed + headboard",
+                        "listedPrice": "$4,055.00",
+                        "netPrice": "**$4,055.00 \u2014 selected**",
+                        "linkText": "Polaris",
+                        "linkUrl": "https://www.courts.com.sg/kingkoil-cool-extreme-polaris-queen-size-mattress-cool-extreme-polaris-IP186422.html"
+                  }
+            ]
+      },
+      {
+            "category": "OLED TV",
+            "icon": "\ud83d\udda5\ufe0f",
+            "title": "Store & Price Comparison (OLED TV)",
+            "headers": [
+                  "Store / Platform",
+                  "Model & Size",
+                  "Listed / Promo Price",
+                  "Effective Net Price",
+                  "Store Link"
+            ],
+            "rows": [
+                  {
+                        "store": "Best Denki (VivoCity)",
+                        "model": "Samsung 65\" OLED S95F (Flagship QD-OLED Glare Free)",
+                        "listedPrice": "$3,199.00",
+                        "netPrice": "**$2,999.00** _(Showroom promo price: $3,199 - $200 promo)_",
+                        "linkText": "Best Denki",
+                        "linkUrl": "https://www.bestdenki.com.sg"
+                  },
+                  {
+                        "store": "Courts Megastore",
+                        "model": "Samsung 65\" OLED S90H (Glare Free 2026)",
+                        "listedPrice": "$3,699.00",
+                        "netPrice": "**$3,199.00** _(Net w/ $500 voucher)_",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Gain City (Ang Mo Kio)",
+                        "model": "Samsung 65\" OLED S90H + HW-S800D Soundbar + Tab S10 Lite",
+                        "listedPrice": "$4,099.00",
+                        "netPrice": "**$4,099.00** _(Showroom Bundle: TV + Soundbar + Tab S10 Lite)_",
+                        "linkText": "Gain City",
+                        "linkUrl": "https://www.gaincity.com"
+                  },
+                  {
+                        "store": "Courts Megastore",
+                        "model": "Samsung 65\" OLED S85F",
+                        "listedPrice": "$2,399.00",
+                        "netPrice": "**$2,199.00** _(Net w/ $200 voucher)_",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Best Denki (VivoCity)",
+                        "model": "Samsung 65\" OLED S85F",
+                        "listedPrice": "$2,699.00",
+                        "netPrice": "**$2,699.00**",
+                        "linkText": "Best Denki",
+                        "linkUrl": "https://www.bestdenki.com.sg"
+                  },
+                  {
+                        "store": "Best Denki (VivoCity)",
+                        "model": "Samsung 77\" OLED S85F",
+                        "listedPrice": "$4,199.00",
+                        "netPrice": "**$4,199.00** _(77\" big screen deal)_",
+                        "linkText": "Best Denki",
+                        "linkUrl": "https://www.bestdenki.com.sg"
+                  },
+                  {
+                        "store": "Courts Megastore",
+                        "model": "Samsung 77\" OLED S85H",
+                        "listedPrice": "$5,349.00",
+                        "netPrice": "**$5,349.00**",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Courts Megastore",
+                        "model": "Samsung 77\" OLED S95F (Flagship QD-OLED)",
+                        "listedPrice": "$6,399.00",
+                        "netPrice": "**$6,399.00**",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Courts (Display Unit)",
+                        "model": "_Samsung 65\" OLED S95F (1-Year Display)_",
+                        "listedPrice": "_$2,399.00_",
+                        "netPrice": "_Rejected (OLED Burn-in Risk)_",
+                        "linkText": "",
+                        "linkUrl": ""
+                  },
+                  {
+                        "store": "Harvey Norman",
+                        "model": "Samsung 55\" OLED S90H",
+                        "listedPrice": "$3,299.00",
+                        "netPrice": "**$3,299.00**",
+                        "linkText": "Harvey Norman",
+                        "linkUrl": "https://www.harveynorman.com.sg"
+                  },
+                  {
+                        "store": "Shopee SG (Samsung Official)",
+                        "model": "Samsung 55\" OLED S90H",
+                        "listedPrice": "$3,299.00",
+                        "netPrice": "**~$3,150.00** _(With platform vouchers)_",
+                        "linkText": "Shopee",
+                        "linkUrl": "https://shopee.sg/SAMSUNG-QA55S90HAK-OLED-S90H-4K-Vision-AI-Smart-TV-55inch-i.421584608.47811015001"
+                  }
+            ]
+      },
+      {
+            "category": "Dolby Atmos Soundbar",
+            "icon": "\ud83d\udd0a",
+            "title": "Store & Price Comparison (Dolby Atmos Soundbar)",
+            "headers": [
+                  "Store / Platform",
+                  "Model & Inclusions",
+                  "Listed / Promo Price",
+                  "Effective Net Price",
+                  "Store Link"
+            ],
+            "rows": [
+                  {
+                        "store": "Courts Megastore",
+                        "model": "Samsung HW-Q990H (11.1.4ch + Rears + Sub)",
+                        "listedPrice": "$1,899.00",
+                        "netPrice": "**$1,399.00** _(TV Purchase Bundle PWP)_",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Gain City (Ang Mo Kio)",
+                        "model": "Samsung HW-S800D (Ultra-Slim 3.1.2ch, w/ 65\" S90H & Tab S10 Lite)",
+                        "listedPrice": "$4,099.00 (Combo)",
+                        "netPrice": "**$4,099.00 Bundle** _(Includes 65\" S90H TV + Tab S10 Lite)_",
+                        "linkText": "Gain City",
+                        "linkUrl": "https://www.gaincity.com"
+                  },
+                  {
+                        "store": "Courts Megastore",
+                        "model": "Samsung HW-Q800F (5.1.2ch, No Rears)",
+                        "listedPrice": "$1,099.00",
+                        "netPrice": "**$899.00**",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Harvey Norman / Gain City",
+                        "model": "Samsung HW-Q990H (Standalone Unit)",
+                        "listedPrice": "$2,199.00",
+                        "netPrice": "**$1,899.00**",
+                        "linkText": "Harvey Norman",
+                        "linkUrl": "https://www.harveynorman.com.sg"
+                  },
+                  {
+                        "store": "Shopee SG (Samsung Official)",
+                        "model": "Samsung HW-Q990H (Standalone Unit)",
+                        "listedPrice": "$2,099.00",
+                        "netPrice": "**~$1,799 \u2013 $1,899**",
+                        "linkText": "Shopee",
+                        "linkUrl": "https://shopee.sg"
+                  },
+                  {
+                        "store": "Samsung SG Direct",
+                        "model": "Samsung HW-Q990H (Official List)",
+                        "listedPrice": "$2,099.00",
+                        "netPrice": "**$2,099.00**",
+                        "linkText": "Samsung SG",
+                        "linkUrl": "https://www.samsung.com/sg/audio-devices/soundbar/q990h-black-hw-q990h-xs/"
+                  }
+            ]
+      },
+      {
+            "category": "Smart Door Locks",
+            "icon": "\ud83d\udd10",
+            "title": "Store & Price Comparison (Smart Door Locks)",
+            "headers": [
+                  "Store / Platform",
+                  "Model & Inclusions",
+                  "Listed / Promo Price",
+                  "Effective Net Price",
+                  "Store Link"
+            ],
+            "rows": [
+                  {
+                        "store": "Shopee SG (SmartSG)",
+                        "model": "Aqara D200i (Installation Included, SG Warranty)",
+                        "listedPrice": "$1,099.00",
+                        "netPrice": "**$703.00** _(Verified Direct Link Deal)_",
+                        "linkText": "Shopee (SmartSG)",
+                        "linkUrl": "https://shopee.sg/AQARA-D200i-Smart-Door-Lock-3D-Facial-Unlock-Digital-Lock-Lithium-Battery-Apple-HomeKit-Home-Key-i.489606704.21193462058?extraParams=%7B%22display_model_id%22%3A137712779110%2C%22model_selection_logic%22%3A3%7D"
+                  },
+                  {
+                        "store": "Courts Megastore",
+                        "model": "Aqara D200i (Face ID + Mortise + Free Installation)",
+                        "listedPrice": "$1,099.00",
+                        "netPrice": "**$1,099.00**",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "HomeSmart SG (Official)",
+                        "model": "Aqara D200i (2-Yr Onsite Warranty + Installation)",
+                        "listedPrice": "$1,099.00",
+                        "netPrice": "**$1,020.00**",
+                        "linkText": "HomeSmart SG",
+                        "linkUrl": "https://homesmart.sg/product/aqara-smart-lock-d200i/"
+                  },
+                  {
+                        "store": "Shopee SG (HOZ Digital Lock)",
+                        "model": "Aqara D200i (Authorized Set + Installation)",
+                        "listedPrice": "$1,099.00",
+                        "netPrice": "**$1,099.00**",
+                        "linkText": "Shopee (HOZ)",
+                        "linkUrl": "https://shopee.sg/Aqara-Smart-Lock-D200i-Hoz-digital-lock-i.103694085.42871284443"
+                  },
+                  {
+                        "store": "Courts Megastore",
+                        "model": "Aqara D100 (Push-Pull Mortise + Installation)",
+                        "listedPrice": "$869.00",
+                        "netPrice": "**$869.00**",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Shopee SG (Official)",
+                        "model": "Aqara D100 (Free Installation + 2-Yr Warranty)",
+                        "listedPrice": "$869.00",
+                        "netPrice": "**$782.10** _(~$710\u2013$730 w/ vouchers)_",
+                        "linkText": "Shopee",
+                        "linkUrl": "https://shopee.sg"
+                  },
+                  {
+                        "store": "Shopee SG",
+                        "model": "Aqara A100 (listing / installation scope unconfirmed)",
+                        "listedPrice": "$417.45",
+                        "netPrice": "**$417.45** _(user-recorded listing price)_",
+                        "linkText": "Shopee A100 listing",
+                        "linkUrl": "https://shopee.sg/Aqara-A100-Smart-digital-Door-lock-Fire-Rated-Security-Fingerprint-Electronic-Keyless-Entry-Knobs-Hardware-home-i.489606704.17292845336?xptdk=08522475-6b41-44d1-8fce-ce4bc26c5ed8"
+                  },
+                  {
+                        "store": "Courts Megastore",
+                        "model": "Aqara U400 (UWB Auto-Unlock + Installation)",
+                        "listedPrice": "$649.00",
+                        "netPrice": "**$649.00**",
+                        "linkText": "Courts SG",
+                        "linkUrl": "https://www.courts.com.sg"
+                  },
+                  {
+                        "store": "Shopee SG (Official)",
+                        "model": "Aqara U400 (Lock Only w/o Installation)",
+                        "listedPrice": "$469.00",
+                        "netPrice": "**$469.00**",
+                        "linkText": "Shopee",
+                        "linkUrl": "https://shopee.sg"
+                  }
+            ]
+      },
+      {
+            "category": "Dining Table",
+            "icon": "\ud83c\udf7d\ufe0f",
+            "title": "Store & Price Comparison (Dining Table)",
+            "headers": [
+                  "Store / Platform",
+                  "Model & Material",
+                  "Listed / Promo Price",
+                  "Effective Net Price",
+                  "Store Link"
+            ],
+            "rows": [
+                  {
+                        "store": "IKEA SG",
+                        "model": "IKEA Norden Gateleg Table (Solid Birch)",
+                        "listedPrice": "$299.00",
+                        "netPrice": "**$299.00**",
+                        "linkText": "IKEA SG",
+                        "linkUrl": "https://www.ikea.com/sg/en/p/norden-gateleg-table-birch-80422383/"
+                  },
+                  {
+                        "store": "Castlery SG",
+                        "model": "Seb Extendable Dining Table (Solid Acacia)",
+                        "listedPrice": "$1,199.00",
+                        "netPrice": "**$999 \u2013 $1,099**",
+                        "linkText": "Castlery SG",
+                        "linkUrl": "https://www.castlery.com/sg/products/seb-extendable-dining-table"
+                  },
+                  {
+                        "store": "Comfort Design / Furniture",
+                        "model": "Sintered Stone Dining Table (1.4m Fixed)",
+                        "listedPrice": "$899.00",
+                        "netPrice": "**$750.00**",
+                        "linkText": "Comfort Furniture",
+                        "linkUrl": "https://www.comfort-4u.com.sg"
+                  },
+                  {
+                        "store": "Shopee SG",
+                        "model": "Foldable Solid Wood Dining Table (Nordic Style)",
+                        "listedPrice": "$350.00",
+                        "netPrice": "**~$260 \u2013 $320**",
+                        "linkText": "Shopee",
+                        "linkUrl": "https://shopee.sg"
                   }
             ]
       }
@@ -11181,6 +13067,45 @@ wall-switch action event exposed by the selected Home Assistant integration.
             }
           }
         });
+      }
+
+      
+      function getStoreBadgeHtml(storeName) {
+        if (!storeName || storeName === "-") {
+          return '<span style="color: var(--text-muted); font-size: 0.75rem;">—</span>';
+        }
+        const sn = storeName.toLowerCase();
+        let cls = "badge-store";
+        let icon = "🏬 ";
+        if (sn.includes("best denki")) {
+          cls += " badge-bestdenki";
+          icon = "🔴 ";
+        } else if (sn.includes("gain city")) {
+          cls += " badge-gaincity";
+          icon = "🏢 ";
+        } else if (sn.includes("courts")) {
+          cls += " badge-courts";
+          icon = "🏬 ";
+        } else if (sn.includes("harvey norman")) {
+          cls += " badge-harveynorman";
+          icon = "🏪 ";
+        } else if (sn.includes("shopee")) {
+          cls += " badge-shopee";
+          icon = "🛒 ";
+        } else if (sn.includes("ikea")) {
+          cls += " badge-ikea";
+          icon = "🛋️ ";
+        } else if (sn.includes("simmons")) {
+          cls += " badge-simmons";
+          icon = "😴 ";
+        } else if (sn.includes("castlery")) {
+          cls += " badge-castlery";
+          icon = "🪵 ";
+        } else if (sn.includes("smart innovations") || sn.includes("homesmart")) {
+          cls += " badge-smartinnovations";
+          icon = "⚡ ";
+        }
+        return `<span class="${cls}">${icon}${storeName}</span>`;
       }
 
       function renderTable() {
@@ -11383,9 +13308,18 @@ wall-switch action event exposed by the selected Home Assistant integration.
               item.priceDisplay ||
               `$${(item.price || 0).toLocaleString()}`;
 
+            let nameActionsHtml = "";
+            if (item.comparisonCategory) {
+              nameActionsHtml += `<button type="button" class="btn-table-pill btn-showroom-pill" onclick="viewCategoryComparison('${item.comparisonCategory}')" title="View Showroom Comparison Table">🏬 Quotes</button>`;
+            }
+            if (item.options && item.options.length > 1) {
+              nameActionsHtml += `<button type="button" class="btn-table-pill btn-drawer-pill" id="toggleBtn-${item.id}" onclick="toggleItemDrawer('${item.id}')" title="View all candidate options & store deals">📋 All Deals (${item.options.length})</button>`;
+            }
+
             row.innerHTML = `
               <td>
                 <div class="item-name-cell">${item.name}</div>
+                ${nameActionsHtml ? `<div style="display: flex; gap: 4px; margin-top: 4px; flex-wrap: wrap;">${nameActionsHtml}</div>` : ""}
               </td>
               <td>${choiceDisplay}</td>
               <td>${storeDisplay}</td>
@@ -11396,6 +13330,80 @@ wall-switch action event exposed by the selected Home Assistant integration.
               <td style="text-align: right;"><span class="price-tag">${activePriceDisplay}</span></td>
             `;
             tbody.appendChild(row);
+
+            // If item has multiple options, append the interactive drawer row
+            if (item.options && item.options.length > 1) {
+              const drawerRow = document.createElement("tr");
+              drawerRow.id = `drawer-${item.id}`;
+              drawerRow.className = "item-drawer-row";
+              drawerRow.style.display = "none";
+
+              let optionRowsHtml = "";
+              item.options.forEach((mOpt, mIdx) => {
+                const isModelSelected = mIdx === optIdx;
+                const mStores = mOpt.stores && mOpt.stores.length > 0 ? mOpt.stores : [{ store: "-", price: 0, priceDisplay: "-", promo: "", linkText: "", linkUrl: "" }];
+                mStores.forEach((sOpt, sIdx) => {
+                  const isStoreSelected = isModelSelected && sIdx === storeIdx;
+                  const storeBadge = getStoreBadgeHtml(sOpt.store);
+                  const optLinkHtml = sOpt.linkUrl
+                    ? `<a href="${sOpt.linkUrl}" target="_blank" rel="noopener noreferrer" class="item-link-btn ${sOpt.store && sOpt.store.toLowerCase().includes("shopee") ? "" : "brand-link"}">${sOpt.store && sOpt.store.toLowerCase().includes("shopee") ? "🛒" : "🔗"} ${sOpt.linkText || "View Deal"}</a>`
+                    : '<span style="color:var(--text-muted); font-size:0.75rem;">—</span>';
+                  const rowClass = isStoreSelected ? "active-option-row" : "";
+                  const btnClass = isStoreSelected
+                    ? "btn-select-option is-active"
+                    : "btn-select-option";
+                  const btnText = isStoreSelected
+                    ? "✓ Active Choice"
+                    : "Select";
+
+                  optionRowsHtml += `
+                    <tr class="${rowClass}">
+                      <td style="font-weight:600;">${mOpt.model}</td>
+                      <td style="color:var(--text-secondary); font-size:0.75rem;">${mOpt.notes || item.notes || "—"}</td>
+                      <td style="white-space:nowrap;">${storeBadge}</td>
+                      <td style="font-weight:700; white-space:nowrap;">${sOpt.priceDisplay || (sOpt.price ? `$${sOpt.price.toLocaleString()}` : "—")}</td>
+                      <td style="color:#15803d; font-weight:600; font-size:0.74rem;">${sOpt.promo ? `✨ ${sOpt.promo}` : "—"}</td>
+                      <td style="white-space:nowrap;">${optLinkHtml}</td>
+                      <td style="white-space:nowrap; text-align:center;">
+                        <button type="button" class="${btnClass}" onclick="handleModelChange('${safeItemName}', '${mIdx}'); handleStoreChange('${safeItemName}', '${sIdx}');">
+                          ${btnText}
+                        </button>
+                      </td>
+                    </tr>
+                  `;
+                });
+              });
+
+              drawerRow.innerHTML = `
+                <td colspan="8">
+                  <div class="drawer-container">
+                    <div class="drawer-header">
+                      <span class="drawer-title">📋 Evaluated Models & Store Deals for <strong>${item.name}</strong></span>
+                      <span class="drawer-hint">Select any option to set it as your active plan choice.</span>
+                    </div>
+                    <div style="overflow-x: auto;">
+                      <table class="drawer-table">
+                        <thead>
+                          <tr>
+                            <th style="width: 25%;">Model Variant</th>
+                            <th style="width: 28%;">Key Notes / Specs</th>
+                            <th style="width: 15%;">Store / Retailer</th>
+                            <th style="width: 10%;">Price</th>
+                            <th style="width: 12%;">Promo / Terms</th>
+                            <th style="width: 5%;">Link</th>
+                            <th style="width: 5%; text-align: center;">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          ${optionRowsHtml}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </td>
+              `;
+              tbody.appendChild(drawerRow);
+            }
           });
         }
 
@@ -12322,20 +14330,204 @@ wall-switch action event exposed by the selected Home Assistant integration.
         reader.readAsText(file);
       }
 
+      
+      let currentComparisonCategoryFilter = "all";
+      let currentComparisonSearchTerm = "";
+
+      function renderComparisonTables() {
+        const container = document.getElementById("comparisonCardsContainer");
+        const pillsBar = document.getElementById("comparisonPillsBar");
+        if (!container || typeof comparisonData === "undefined") return;
+
+        // 1. Render Category Pills if empty
+        if (pillsBar && pillsBar.children.length === 0) {
+          let allCount = comparisonData.reduce((acc, c) => acc + c.rows.length, 0);
+          let pillsHtml = `
+            <button class="category-pill-btn active" onclick="filterComparisonCategory('all', this)">
+              <span>All Showroom Deals</span>
+              <span class="category-pill-count">${allCount}</span>
+            </button>
+          `;
+          comparisonData.forEach((c) => {
+            pillsHtml += `
+              <button class="category-pill-btn" data-cat="${c.category}" onclick="filterComparisonCategory('${c.category}', this)">
+                <span>${c.icon} ${c.category}</span>
+                <span class="category-pill-count">${c.rows.length}</span>
+              </button>
+            `;
+          });
+          pillsBar.innerHTML = pillsHtml;
+        }
+
+        // 2. Filter comparisonData
+        let filteredComps = comparisonData
+          .map((catObj) => {
+            if (
+              currentComparisonCategoryFilter !== "all" &&
+              catObj.category !== currentComparisonCategoryFilter
+            ) {
+              return null;
+            }
+            let rows = catObj.rows;
+            if (currentComparisonSearchTerm) {
+              const q = currentComparisonSearchTerm.toLowerCase();
+              rows = rows.filter(
+                (r) =>
+                  r.store.toLowerCase().includes(q) ||
+                  r.model.toLowerCase().includes(q) ||
+                  r.listedPrice.toLowerCase().includes(q) ||
+                  r.netPrice.toLowerCase().includes(q) ||
+                  (r.linkText && r.linkText.toLowerCase().includes(q))
+              );
+            }
+            if (rows.length === 0) return null;
+            return {
+              ...catObj,
+              filteredRows: rows,
+            };
+          })
+          .filter(Boolean);
+
+        if (filteredComps.length === 0) {
+          container.innerHTML = `
+            <div style="text-align: center; padding: 48px 20px; color: var(--text-muted); background: var(--bg-surface); border-radius: var(--radius-md); border: 1px dashed var(--border-subtle);">
+              <div style="font-size: 2rem; margin-bottom: 8px;">🔍</div>
+              <div style="font-size: 0.95rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 4px;">No matching store quotes found</div>
+              <div style="font-size: 0.8rem;">Try clearing your search query or selecting a different category pill.</div>
+            </div>
+          `;
+          return;
+        }
+
+        // 3. Render Cards
+        container.innerHTML = filteredComps
+          .map((catObj) => {
+            const rowsHtml = catObj.filteredRows
+              .map((r) => {
+                const storeBadge = getStoreBadgeHtml(r.store);
+                const linkHtml = r.linkUrl
+                  ? `<a href="${r.linkUrl}" target="_blank" rel="noopener noreferrer" class="item-link-btn ${r.store.toLowerCase().includes("shopee") ? "" : "brand-link"}">${r.store.toLowerCase().includes("shopee") ? "🛒" : "🔗"} ${r.linkText || "View Deal"}</a>`
+                  : '<span style="color: var(--text-muted); font-size: 0.75rem;">—</span>';
+
+                let promoMatch = r.netPrice.match(/\((.*?)\)/);
+                let mainPrice = r.netPrice.replace(/\(.*?\)/, "").replace(/\*\*/g, "").trim();
+                let promoText = promoMatch ? promoMatch[1].replace(/_/g, "") : "";
+
+                return `
+                <tr>
+                  <td style="white-space: nowrap;">${storeBadge}</td>
+                  <td><strong>${r.model}</strong></td>
+                  <td style="white-space: nowrap; color: var(--text-muted);">${r.listedPrice}</td>
+                  <td style="white-space: nowrap;">
+                    <span class="net-price-cell">${mainPrice}</span>
+                    ${promoText ? `<span class="net-price-promo">✨ ${promoText}</span>` : ""}
+                  </td>
+                  <td style="white-space: nowrap; text-align: right;">${linkHtml}</td>
+                </tr>
+              `;
+              })
+              .join("");
+
+            return `
+              <div class="comparison-card" id="card-${catObj.category.replace(/[^a-zA-Z0-9]/g, "-")}">
+                <div class="comparison-card-header">
+                  <div class="comparison-card-title">
+                    <span style="font-size: 1.25rem;">${catObj.icon}</span>
+                    <h3>${catObj.category}</h3>
+                  </div>
+                  <div class="comparison-card-meta">
+                    ${catObj.filteredRows.length} verified quotes
+                  </div>
+                </div>
+                <div class="comparison-table-wrap">
+                  <table class="comparison-table">
+                    <thead>
+                      <tr>
+                        <th style="width: 22%;">Store / Retailer</th>
+                        <th style="width: 38%;">Model & Inclusions</th>
+                        <th style="width: 14%;">Listed Price</th>
+                        <th style="width: 16%;">Effective Net Price</th>
+                        <th style="width: 10%; text-align: right;">Link</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${rowsHtml}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            `;
+          })
+          .join("");
+      }
+
+      function filterComparisonCategory(category, btnElement) {
+        currentComparisonCategoryFilter = category;
+        const pillsBar = document.getElementById("comparisonPillsBar");
+        if (pillsBar) {
+          pillsBar
+            .querySelectorAll(".category-pill-btn")
+            .forEach((b) => b.classList.remove("active"));
+        }
+        if (btnElement) {
+          btnElement.classList.add("active");
+        } else if (pillsBar) {
+          const matchingBtn = pillsBar.querySelector(`[data-cat="${category}"]`);
+          if (matchingBtn) matchingBtn.classList.add("active");
+        }
+        renderComparisonTables();
+      }
+
+      function handleComparisonSearch(term) {
+        currentComparisonSearchTerm = term.trim();
+        renderComparisonTables();
+      }
+
+      function viewCategoryComparison(category) {
+        switchTab("comparisons");
+        filterComparisonCategory(category);
+        setTimeout(() => {
+          const card = document.getElementById(
+            `card-${category.replace(/[^a-zA-Z0-9]/g, "-")}`
+          );
+          if (card) {
+            card.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }, 100);
+      }
+
+      function toggleItemDrawer(itemId) {
+        const drawer = document.getElementById(`drawer-${itemId}`);
+        const btn = document.getElementById(`toggleBtn-${itemId}`);
+        if (!drawer) return;
+
+        if (drawer.style.display === "none" || drawer.style.display === "") {
+          drawer.style.display = "table-row";
+          if (btn) btn.classList.add("active");
+        } else {
+          drawer.style.display = "none";
+          if (btn) btn.classList.remove("active");
+        }
+      }
+
       function switchTab(tabId) {
         const tabProcurement = document.getElementById("tabViewProcurement");
         const tabSensors = document.getElementById("tabViewSensors");
         const tabMap = document.getElementById("tabViewMap");
+        const tabComparisons = document.getElementById("tabViewComparisons");
         const btnProcurement = document.getElementById("tabBtnProcurement");
         const btnSensors = document.getElementById("tabBtnSensors");
         const btnMap = document.getElementById("tabBtnMap");
+        const btnComparisons = document.getElementById("tabBtnComparisons");
 
         const activeBtn =
           tabId === "procurement"
             ? btnProcurement
             : tabId === "sensors"
               ? btnSensors
-              : btnMap;
+              : tabId === "map"
+                ? btnMap
+                : btnComparisons;
         if (activeBtn && typeof activeBtn.scrollIntoView === "function") {
           activeBtn.scrollIntoView({
             behavior: "smooth",
@@ -12348,9 +14540,11 @@ wall-switch action event exposed by the selected Home Assistant integration.
           if (tabProcurement) tabProcurement.style.display = "block";
           if (tabSensors) tabSensors.style.display = "none";
           if (tabMap) tabMap.style.display = "none";
+          if (tabComparisons) tabComparisons.style.display = "none";
           if (btnProcurement) btnProcurement.classList.add("active");
           if (btnSensors) btnSensors.classList.remove("active");
           if (btnMap) btnMap.classList.remove("active");
+          if (btnComparisons) btnComparisons.classList.remove("active");
           try {
             if (
               typeof roomSpendChartInstance !== "undefined" &&
@@ -12374,22 +14568,39 @@ wall-switch action event exposed by the selected Home Assistant integration.
           if (tabProcurement) tabProcurement.style.display = "none";
           if (tabSensors) tabSensors.style.display = "block";
           if (tabMap) tabMap.style.display = "none";
+          if (tabComparisons) tabComparisons.style.display = "none";
           if (btnProcurement) btnProcurement.classList.remove("active");
           if (btnSensors) btnSensors.classList.add("active");
           if (btnMap) btnMap.classList.remove("active");
+          if (btnComparisons) btnComparisons.classList.remove("active");
           if (history.replaceState)
             history.replaceState(null, null, "#sensors");
         } else if (tabId === "map") {
           if (tabProcurement) tabProcurement.style.display = "none";
           if (tabSensors) tabSensors.style.display = "none";
           if (tabMap) tabMap.style.display = "block";
+          if (tabComparisons) tabComparisons.style.display = "none";
           if (btnProcurement) btnProcurement.classList.remove("active");
           if (btnSensors) btnSensors.classList.remove("active");
           if (btnMap) btnMap.classList.add("active");
+          if (btnComparisons) btnComparisons.classList.remove("active");
           if (typeof selectMapRoom === "function") {
             selectMapRoom(currentSelectedMapRoom || "Living Room");
           }
           if (history.replaceState) history.replaceState(null, null, "#map");
+        } else if (tabId === "comparisons") {
+          if (tabProcurement) tabProcurement.style.display = "none";
+          if (tabSensors) tabSensors.style.display = "none";
+          if (tabMap) tabMap.style.display = "none";
+          if (tabComparisons) tabComparisons.style.display = "block";
+          if (btnProcurement) btnProcurement.classList.remove("active");
+          if (btnSensors) btnSensors.classList.remove("active");
+          if (btnMap) btnMap.classList.remove("active");
+          if (btnComparisons) btnComparisons.classList.add("active");
+          if (typeof renderComparisonTables === "function") {
+            renderComparisonTables();
+          }
+          if (history.replaceState) history.replaceState(null, null, "#comparisons");
         }
       }
 
@@ -12420,6 +14631,8 @@ wall-switch action event exposed by the selected Home Assistant integration.
         setTimeout(() => switchTab("sensors"), 50);
       } else if (window.location.hash === "#map") {
         setTimeout(() => switchTab("map"), 50);
+      } else if (window.location.hash === "#comparisons") {
+        setTimeout(() => switchTab("comparisons"), 50);
       }
 
       let currentSelectedMapRoom = "Living Room";
