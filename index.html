@@ -2287,10 +2287,10 @@
               <span>⚡</span> Smart Switches (Relay Mode)
             </div>
             <div class="principle-desc">
-              All rooms use smart wall switches with neutral wire controlling
-              standard High-CRI dumb lights. Simple, 100% reliable physical
-              operation, while neutral wires keep Zigbee automations online
-              24/7.
+              Most rooms use neutral-powered smart relays for standard
+              downlights. Dining is the exception: its H1 press controls
+              always-powered T2 smart bulbs wirelessly. Physical relay
+              operation remains available when automation is offline.
             </div>
           </div>
 
@@ -2304,6 +2304,14 @@
               and fully operational even during internet outages.
             </div>
           </div>
+        </div>
+
+        <div class="zone-why-box" style="margin: 16px 0 20px">
+          <div class="zone-why-title"><span>✋</span> Wall-switch manual bypass</div>
+          <strong>Press ON:</strong> keep that lighting circuit on for 2 hours, ignoring its normal vacancy-off timer. If a sensor already turned a relay light on, press OFF then ON to request the hold; do not assume double-press support. If the room is still occupied when the hold expires, leave the light on; otherwise start the normal vacancy delay then.
+          <br /><strong>Press OFF:</strong> turn it off immediately and block sensor auto-on until the zone clears and a new arrival occurs, or until another ON press.
+          <br /><strong>Scope:</strong> sensor-controlled lights only. Closed-door bathroom occupancy still prevents automatic shutoff during a shower; the heater's separate 20-minute auto-off is never bypassed. AC, fans, curtains, and manual-first bedrooms keep their own controls.
+          <br /><strong>Implementation:</strong> trigger the hold from a physical H1/Z1 switch action, not from a light state change caused by automation. Confirm action-event support for the chosen integration; use a per-circuit toggle and timer in Home Assistant.
         </div>
 
         <!-- Sensor Fleet KPI Summary -->
@@ -2441,7 +2449,7 @@
                   <span>💡</span> Switches & Lights
                 </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H2 2-Gang</strong> (Neutral Wire)<br />
+                  • <strong>Aqara H1 2-Gang</strong> (Neutral Wire)<br />
                   • 1x High-CRI Ceiling Downlight<br />
                   • 1x 2m 24V COB Warm Strip (Shoe Cabinet)
                 </div>
@@ -2469,7 +2477,8 @@
                 <span class="zone-auto-bullet">▶</span>
                 <div>
                   <strong>Departure Complete:</strong> Door closes + no motion
-                  for 2 mins &rarr; entrance lights turn off automatically.
+                  for 2 mins &rarr; entrance lights turn off automatically,
+                  unless the 2-hour wall-switch hold is active.
                 </div>
               </div>
             </div>
@@ -2518,7 +2527,7 @@
                   <span>💡</span> Switches & Lights
                 </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H2 3-Gang</strong> (<span
+                  • <strong>Aqara Z1 Pro 4-Rocker</strong> (<span
                     style="color: var(--sage-primary); font-weight: 700"
                     >Relay Mode</span
                   >)<br />
@@ -2550,7 +2559,7 @@
                 <div>
                   <strong>15-Min Auto-Powerdown:</strong> 15 minutes of zero
                   presence shuts off lights, sets AC to eco, and pauses
-                  soundbar.
+                  soundbar. A wall-switch lighting hold skips the light shutoff.
                 </div>
               </div>
             </div>
@@ -2600,7 +2609,8 @@
                   <span>💡</span> Switches & Lights
                 </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H2 2-Gang</strong> (Outside Bath Box)<br />
+                  • <strong>Aqara H1 2-Gang</strong> (Outside Bath Box)<br />
+                  • Aqara H1 20A heater switch (separate DP isolator)<br />
                   • 2x IP44 Splash-Rated Downlights<br />
                   • 1x Vanity Mirror LED Light
                 </div>
@@ -2628,7 +2638,7 @@
                 <span class="zone-auto-bullet">▶</span>
                 <div>
                   <strong>Exit & Exhaust:</strong> Opening door starts 90s
-                  timer. Auto-off when room clears.
+                  timer. Auto-off when room clears and no manual hold is active.
                 </div>
               </div>
             </div>
@@ -2676,7 +2686,8 @@
                   <span>💡</span> Switches & Lights
                 </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H2 2-Gang</strong> (Outside Door Box)<br />
+                  • <strong>Aqara H1 1-Gang</strong> (Outside Door Box)<br />
+                  • Aqara H1 20A heater switch (separate DP isolator)<br />
                   • 2x IP44 Splash-Rated Downlights<br />
                   • 1x Vanity Mirror LED Light
                 </div>
@@ -2748,7 +2759,7 @@
                   <span>💡</span> Switches & Lights
                 </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H2 2-Gang</strong> (Entrance Box)<br />
+                  • <strong>Aqara H1 2-Gang</strong> (Kitchen Door Box)<br />
                   • 3x High-CRI Recessed Downlights<br />
                   • 1x 3m 24V COB Warm Strip (Under-Cabinet)
                 </div>
@@ -2824,7 +2835,7 @@
                   <span>💡</span> Switches & Lights
                 </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H2 2-Gang</strong> (<span
+                  • <strong>Aqara Z1 Pro 3-Rocker</strong> (<span
                     style="color: var(--sage-primary); font-weight: 700"
                     >Relay Mode</span
                   >)<br />
@@ -2903,7 +2914,7 @@
                   <span>💡</span> Switches & Lights
                 </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H2 2-Gang</strong> (Door Box)<br />
+                  • <strong>Aqara H1 1-Gang</strong> (Door Box)<br />
                   • 3x High-CRI Recessed Downlights<br />
                   • AC Split Unit (Starmex 9k)
                 </div>
@@ -2968,11 +2979,11 @@
                   <span>💡</span> Switches & Lights
                 </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H2 1-Gang</strong> (<span
+                  • <strong>Aqara H1 1-Gang</strong> (<span
                     style="color: var(--sage-primary); font-weight: 700"
-                    >Relay Mode</span
+                    >Decoupled Mode</span
                   >)<br />
-                  • 2x High-CRI Warm White Pendant Bulbs<br />
+                  • 2x Aqara T2 Smart Pendant Bulbs<br />
                   • Auto on/off via lengthwise mmWave radar
                 </div>
               </div>
@@ -3000,9 +3011,9 @@
               <div class="zone-why-title">
                 <span>💡</span> Simple Smart Switch Control:
               </div>
-              Smart wall switch provides reliable physical on/off with zero
-              smart bulb reboots, automated automatically by the lengthwise
-              mmWave radar beam.
+              The H1 press controls the T2 bulb scene wirelessly while the pendant
+              circuit stays powered. The FP2 zone handles normal auto-on/off;
+              a wall press can hold the pendant on for 2 hours.
             </div>
           </div>
 
@@ -3039,7 +3050,7 @@
                   <span>💡</span> Switches & Lights
                 </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H2 2-Gang</strong> (Light + Fan Isolator)<br />
+                  • <strong>Aqara H1 2-Gang</strong> (Light relay + wireless fan scene)<br />
                   • 1x Outdoor High-CRI Downlight<br />
                   • Dooya Zip Track + Fanco DC Fan
                 </div>
@@ -3318,6 +3329,8 @@
             <pre class="ha-code-pre">
 # Home Assistant Template Binary Sensor: Bathroom Occupancy (Wasp in a Box)
 # Combines Door Contact Sensor + PIR Motion Sensor
+# Illustrative occupancy input only: add the manual-hold condition to any
+# light-off automation; never apply the lighting hold to the heater timer.
 template:
   - binary_sensor:
       - name: "Master Bath Occupied"
@@ -3365,8 +3378,7 @@ automation:
           <details>
             <summary class="ha-code-summary">
               <span
-                >🛠️ View Home Assistant Blueprint: 7:00 AM Coffee Scene
-                (Time-Conditioned Switch)</span
+                >🛠️ View manual switch bypass logic (implementation outline)</span
               >
               <span
                 style="
@@ -3378,39 +3390,25 @@ automation:
               >
             </summary>
             <pre class="ha-code-pre">
-# Automation: Kitchen Wall Switch (Aqara H1 Decoupled Single-Click)
-automation:
-  - alias: "Kitchen: Smart Button Scene Controller"
-    trigger:
-      - platform: event
-        event_type: zha_event
-        event_data:
-          device_ieee: "00:15:8d:00:xx:xx:xx:xx"
-          command: "single"
-    action:
-      - choose:
-          # Morning Coffee Window (6:00 AM - 8:30 AM) -> Warm Cabinet Strip Only
-          - conditions:
-              - condition: time
-                after: "06:00:00"
-                before: "08:30:00"
-            sequence:
-              - service: light.toggle
-                target:
-                  entity_id: light.kitchen_under_cabinet_strip
-                data:
-                  brightness_pct: 30
-                  color_temp_kelvin: 2700
-        # Cooking / Evening Hours -> Full Crisp Task Lighting
-        default:
-          - service: light.toggle
-            target:
-              entity_id:
-                - light.kitchen_ceiling_downlights
-                - light.kitchen_under_cabinet_strip
-            data:
-              brightness_pct: 100
-              color_temp_kelvin: 4000
+# Proposed logic outline — adapt to actual H1/Z1 events during commissioning
+# Apply to each sensor-controlled LIGHTING circuit, including dining's T2 bulbs.
+Physical wall ON action:
+  turn the circuit on; clear manual-OFF latch
+  start/restart its 2-hour manual-hold timer
+  if a sensor already lit a relay circuit, OFF then ON requests the hold
+Physical wall OFF action:
+  turn the circuit off immediately; cancel the hold
+  suppress sensor auto-ON until the zone clears and a new arrival occurs
+Vacancy auto-OFF:
+  run only when manual hold is inactive and the zone has been vacant
+  for its usual room-specific delay
+When hold expires:
+  if occupied, keep lights on; if vacant, start the normal vacancy delay
+Bathroom exception:
+  door closed + established occupancy blocks auto-OFF even after hold expiry
+Keep water-heater 20-minute auto-OFF independent of this lighting logic.
+Do not infer a physical press from a relay/light state change: verify the
+wall-switch action event exposed by the selected Home Assistant integration.
 </pre
             >
           </details>
@@ -12633,7 +12631,7 @@ automation:
           lighting:
             "• <strong>Aqara Z1 Pro 4-Rocker</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Relay + scenes</span>)<br>• 6x High-CRI (>90) Recessed Downlights<br>• Fanco DC Ceiling Fan (RF Bond Bridge)",
           automations:
-            "• <strong>Sofa Presence (FP2 Zone 1):</strong> Keeps ambient lights & AC active while reading or watching TV.<br>• <strong>15-Min Auto-Powerdown:</strong> Auto-dims lights and sets AC to eco when room clears.",
+            "• <strong>Sofa Presence (FP2 Zone 1):</strong> Keeps ambient lights & AC active while reading or watching TV.<br>• <strong>15-Min Auto-Powerdown:</strong> Lights turn off after vacancy unless a wall-switch hold is active; AC follows its own rule.<br>• <strong>Manual ON:</strong> hold lights for 2 hours.",
           filterRoom: "Living Room",
         },
         Entrance: {
@@ -12647,7 +12645,7 @@ automation:
           lighting:
             "• <strong>Aqara H1 2-Gang Switch</strong> (Neutral Wire)<br>• 1x High-CRI Ceiling Downlight<br>• 1x 2m 24V COB Warm White Strip (Floating Shoe Cabinet)",
           automations:
-            "• <strong>0ms Instant Welcome:</strong> Door cracks open &rarr; 0ms trigger illuminates shoe cabinet bottom float + warm downlight.<br>• <strong>Gear-Up Departure:</strong> Walking into foyer triggers PIR, illuminating bench while tying riding boots.<br>• <strong>Auto-Off:</strong> Door closes + 2 min no motion turns off lights.",
+            "• <strong>0ms Instant Welcome:</strong> Door cracks open &rarr; 0ms trigger illuminates shoe cabinet bottom float + warm downlight.<br>• <strong>Gear-Up Departure:</strong> Walking into foyer triggers PIR, illuminating bench while tying riding boots.<br>• <strong>Auto-Off:</strong> Door closes + 2 min no motion turns off lights unless manually held.<br>• <strong>Manual ON:</strong> hold lights for 2 hours.",
           filterRoom: "Entrance",
         },
         "Master Bed": {
@@ -12675,7 +12673,7 @@ automation:
           lighting:
             "• <strong>Aqara H1 2-Gang Switch (Lights)</strong> (Outside Door Box)<br>• <strong>Aqara H1 20A (Water Heater)</strong> (white; separate DP isolator required)<br>• 2x IP44 Splash-Rated Downlights<br>• 1x Vanity Mirror LED Light",
           automations:
-            "• <strong>Wasp in a Box:</strong> Motion + Door Closed locks occupancy ON indefinitely. Lights NEVER shut off in shower or toilet!<br>• <strong>Late-Night Piddle Mode (11PM-6AM):</strong> Vanity mirror turns on at 15% dim warm (2200K). Zero blinding glare.<br>• <strong>Water Heater Auto-Off:</strong> 20-min countdown timer automatically shuts off heater after shower.<br>• <strong>Auto-Off:</strong> Door opens &rarr; 90s countdown.",
+            "• <strong>Wasp in a Box:</strong> Motion + Door Closed locks occupancy ON indefinitely. Lights NEVER shut off in shower or toilet!<br>• <strong>Late-Night Piddle Mode (11PM-6AM):</strong> Vanity mirror turns on at 15% dim warm (2200K). Zero blinding glare.<br>• <strong>Water Heater Auto-Off:</strong> 20-min countdown timer automatically shuts off heater after shower.<br>• <strong>Auto-Off:</strong> Door opens &rarr; 90s countdown after the room clears, unless manually held. A closed, occupied bathroom stays lit even after the hold expires.",
           filterRoom: "Bathrooms",
         },
         "Common Bath": {
@@ -12689,7 +12687,7 @@ automation:
           lighting:
             "• <strong>Aqara H1 1-Gang Dedicated Switch (Lights)</strong> (Outside Door Box)<br>• <strong>Aqara H1 20A (Water Heater)</strong> (white; separate DP isolator required)<br>• 2x IP44 Splash-Rated Downlights",
           automations:
-            "• <strong>Hands-Free Guest Access:</strong> Walk in &rarr; lights turn on instantly.<br>• <strong>Shower Safe:</strong> Door closed keeps lights on indefinitely.<br>• <strong>Water Heater Auto-Off:</strong> 20-min countdown timer prevents wasted power.<br>• <strong>Night Path:</strong> Dimmed warm path after 11 PM.",
+            "• <strong>Hands-Free Guest Access:</strong> Walk in &rarr; lights turn on instantly.<br>• <strong>Shower Safe:</strong> Door closed keeps lights on indefinitely.<br>• <strong>Water Heater Auto-Off:</strong> 20-min countdown timer prevents wasted power.<br>• <strong>Night Path:</strong> Warm path after 11 PM.<br>• <strong>Manual ON:</strong> 2-hour light hold; closed-door occupancy stays lit beyond it.",
           filterRoom: "Bathrooms",
         },
         Kitchen: {
@@ -12717,7 +12715,7 @@ automation:
         lighting:
             "• <strong>Aqara H1 1-Gang Dedicated Switch</strong> (foyer wall beside kitchen doorway; hallway lights only)<br>• 2x High-CRI Recessed Downlights",
           automations:
-            "• <strong>Night Pathway:</strong> Soft illumination when moving between bedrooms and bathrooms.<br>• <strong>Auto-Off:</strong> Turns off after 2 minutes of inactivity.",
+            "• <strong>Night Pathway:</strong> Soft illumination when moving between bedrooms and bathrooms.<br>• <strong>Auto-Off:</strong> Turns off after 2 minutes of inactivity unless manually held.<br>• <strong>Manual ON:</strong> hold hallway lights for 2 hours.",
           filterRoom: "Whole House",
         },
         "Bedroom 2 / Study": {
@@ -12745,7 +12743,7 @@ automation:
         lighting:
             "• <strong>Aqara H1 1-Gang</strong> on the kitchen/dining dividing wall, decoupled from the pendant circuit<br>• 2x Aqara T2 smart pendant bulbs<br>• Wireless on/off and scene control through the hub<br>• 18k AC indoor unit mounted on the east dining wall; installer to confirm exact position",
           automations:
-            "• <strong>Mealtime Presence (FP2 Zone 2):</strong> mmWave turns on dining pendant automatically when table is occupied.<br>• <strong>Auto-Off:</strong> Shuts off automatically after table clears.",
+            "• <strong>Mealtime Presence (FP2 Zone 2):</strong> mmWave turns on dining pendant automatically when table is occupied.<br>• <strong>Auto-Off:</strong> Shuts off after the table clears unless manually held.<br>• <strong>Dining H1 press:</strong> hold smart pendant on for 2 hours.",
           filterRoom: "Dining",
         },
         Balcony: {
