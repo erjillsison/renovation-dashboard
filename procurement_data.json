@@ -378,32 +378,40 @@
   {
     "id": "smart-switch-water-heater-master-bath",
     "name": "Smart Switch - Water Heater (Master Bath)",
-    "choice": "20A Double-Pole Zigbee Smart Switch (Matt Black, 4400W max load)",
-    "notes": "Selected choice for Bathrooms.",
+    "choice": "Aqara Smart 20A Switch H1 (WS-K01D; white; double-pole isolator separately required, subject to electrician confirmation)",
+    "notes": "20A resistive-load Zigbee smart control with neutral and Aqara hub; white. Double-pole isolation is not verified for this model. Retain a separate DP isolator; installation and isolator costs excluded.",
     "room": "Bathrooms",
     "priority": "P0",
     "status": "Selected",
-    "price": 35,
-    "priceDisplay": "$35",
-    "availableAt": "Shopee SG",
-    "linkText": "Shopee 20A Black Heater Switch",
-    "linkUrl": "https://shopee.sg/search?keyword=zigbee%20water%20heater%20switch%2020a%20black",
+    "price": 67,
+    "priceDisplay": "$67",
+    "availableAt": "Smart Innovations",
+    "linkText": "Aqara Smart 20A Switch H1",
+    "linkUrl": "https://smartinnovations.sg/product/aqara-smart-20a-switch-h1/",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "20A Double-Pole Zigbee Smart Switch (Matt Black, 4400W max load)",
-        "notes": "Selected choice for Bathrooms.",
+        "model": "Aqara Smart 20A Switch H1 (WS-K01D; white; double-pole isolator separately required, subject to electrician confirmation)",
+        "notes": "20A resistive-load Zigbee smart control with neutral and Aqara hub; white. Double-pole isolation is not verified for this model. Retain a separate DP isolator; installation and isolator costs excluded.",
         "stores": [
           {
-            "store": "Shopee SG",
-            "price": 35,
-            "priceDisplay": "$35",
-            "promo": "",
-            "linkText": "Shopee 20A Black Heater Switch",
-            "linkUrl": "https://shopee.sg/search?keyword=zigbee%20water%20heater%20switch%2020a%20black"
+            "store": "Smart Innovations",
+            "price": 67,
+            "priceDisplay": "$67",
+            "promo": "Two-year warranty; installation excluded.",
+            "linkText": "Aqara Smart 20A Switch H1",
+            "linkUrl": "https://smartinnovations.sg/product/aqara-smart-20a-switch-h1/"
+          },
+          {
+            "store": "HomeSmart SG",
+            "price": 62,
+            "priceDisplay": "$62",
+            "promo": "Confirm current stock, warranty, and installation terms before purchase.",
+            "linkText": "Aqara H1 Smart 20A Switch",
+            "linkUrl": "https://homesmart.sg/product/aqara-h1-smart-20a-switch/"
           }
         ]
       }
@@ -412,32 +420,40 @@
   {
     "id": "smart-switch-water-heater-common-bath",
     "name": "Smart Switch - Water Heater (Common Bath)",
-    "choice": "20A Double-Pole Zigbee Smart Switch (Matt Black, 4400W max load)",
-    "notes": "Selected choice for Bathrooms.",
+    "choice": "Aqara Smart 20A Switch H1 (WS-K01D; white; double-pole isolator separately required, subject to electrician confirmation)",
+    "notes": "20A resistive-load Zigbee smart control with neutral and Aqara hub; white. Double-pole isolation is not verified for this model. Retain a separate DP isolator; installation and isolator costs excluded.",
     "room": "Bathrooms",
     "priority": "P0",
     "status": "Selected",
-    "price": 35,
-    "priceDisplay": "$35",
-    "availableAt": "Shopee SG",
-    "linkText": "Shopee 20A Black Heater Switch",
-    "linkUrl": "https://shopee.sg/search?keyword=zigbee%20water%20heater%20switch%2020a%20black",
+    "price": 67,
+    "priceDisplay": "$67",
+    "availableAt": "Smart Innovations",
+    "linkText": "Aqara Smart 20A Switch H1",
+    "linkUrl": "https://smartinnovations.sg/product/aqara-smart-20a-switch-h1/",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "20A Double-Pole Zigbee Smart Switch (Matt Black, 4400W max load)",
-        "notes": "Selected choice for Bathrooms.",
+        "model": "Aqara Smart 20A Switch H1 (WS-K01D; white; double-pole isolator separately required, subject to electrician confirmation)",
+        "notes": "20A resistive-load Zigbee smart control with neutral and Aqara hub; white. Double-pole isolation is not verified for this model. Retain a separate DP isolator; installation and isolator costs excluded.",
         "stores": [
           {
-            "store": "Shopee SG",
-            "price": 35,
-            "priceDisplay": "$35",
-            "promo": "",
-            "linkText": "Shopee 20A Black Heater Switch",
-            "linkUrl": "https://shopee.sg/search?keyword=zigbee%20water%20heater%20switch%2020a%20black"
+            "store": "Smart Innovations",
+            "price": 67,
+            "priceDisplay": "$67",
+            "promo": "Two-year warranty; installation excluded.",
+            "linkText": "Aqara Smart 20A Switch H1",
+            "linkUrl": "https://smartinnovations.sg/product/aqara-smart-20a-switch-h1/"
+          },
+          {
+            "store": "HomeSmart SG",
+            "price": 62,
+            "priceDisplay": "$62",
+            "promo": "Confirm current stock, warranty, and installation terms before purchase.",
+            "linkText": "Aqara H1 Smart 20A Switch",
+            "linkUrl": "https://homesmart.sg/product/aqara-h1-smart-20a-switch/"
           }
         ]
       }
