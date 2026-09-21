@@ -2439,6 +2439,7 @@
                 <th
                   class="sortable"
                   onclick="handleSort('name')"
+                  style="width: 18%; min-width: 160px"
                   style="width: 20%; min-width: 160px"
                 >
                   Item & Category
@@ -2447,6 +2448,7 @@
                 <th
                   class="sortable"
                   onclick="handleSort('choice')"
+                  style="width: 28%; min-width: 240px"
                   style="width: 32%; min-width: 240px"
                 >
                   Selected Model
@@ -2455,6 +2457,7 @@
                 <th
                   class="sortable"
                   onclick="handleSort('price')"
+                  style="width: 11%; min-width: 105px; text-align: right"
                   style="width: 12%; min-width: 105px; text-align: right"
                 >
                   Price
@@ -2463,6 +2466,7 @@
                 <th
                   class="sortable"
                   onclick="handleSort('room')"
+                  style="width: 11%; min-width: 105px"
                   style="width: 12%; min-width: 105px"
                 >
                   Room <span class="sort-icon" id="sort-room">⇅</span>
@@ -2474,6 +2478,13 @@
                 >
                   Priority <span class="sort-icon" id="sort-priority">⇅</span>
                 </th>
+                <th
+                  class="sortable"
+                  onclick="handleSort('availableAt')"
+                  style="width: 23%; min-width: 210px"
+                >
+                  Details and Options
+                  <span class="sort-icon" id="sort-availableAt">⇅</span>
                 <th style="width: 15%; min-width: 130px; text-align: center">
                   Action
                 </th>
@@ -2512,8 +2523,9 @@
                 switches.
               </li>
               <li>
-                <strong>Power to windows:</strong> Pull power for Living Room &
-                Master Bed motorized curtains before ceiling plastering.
+                <strong>Power to windows:</strong> Pull power for Living Room
+                motorized curtains before ceiling plastering. Master Bedroom
+                curtains remain manual for now.
               </li>
               <li>
                 <strong>4-wire AC power to Balcony:</strong> Required for
@@ -3182,7 +3194,7 @@
                     >Relay Mode</span
                   >)<br />
                   • 4x High-CRI (>90) Recessed Downlights<br />
-                  • Aqara C3 Motorized Curtains
+                  • Manual day/night curtains (no smart motor)
                 </div>
               </div>
             </div>
@@ -3200,7 +3212,7 @@
                 <div>
                   <strong>Bedside Single / Double Tap:</strong> Single tap
                   toggles reading light. Double tap triggers 10% amber wind-down
-                  mode and closes curtains.
+                  mode.
                 </div>
               </div>
               <div class="zone-auto-item">
@@ -3208,7 +3220,7 @@
                 <div>
                   <strong>Whole-House Goodnight Kill Switch:</strong>
                   Long-pressing bedside button shuts off ALL lights condo-wide,
-                  closes curtains, locks door, sets AC to 25°C.
+                  locks door, and sets AC to 25°C.
                 </div>
               </div>
             </div>
@@ -3392,9 +3404,9 @@
                   <span>💡</span> Switches & Lights
                 </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H1 2-Gang</strong> (Light relay + wireless fan scene)<br />
-                  • 1x Outdoor High-CRI Downlight<br />
-                  • Dooya Zip Track + Fanco DC Fan
+                  • <strong>Aqara Z1 Pro 4-Rocker</strong> (indoor command plate)<br />
+                  • 1: Balcony fan/light Bond scene; 2/3: Zip Track raise/lower<br />
+                  • 4: Living-room curtain scene
                 </div>
               </div>
             </div>
@@ -3403,16 +3415,16 @@
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
                 <div>
-                  <strong>Sunset Balcony Glow:</strong> Sliding door opening
-                  after dark illuminates outdoor downlight at 30% warm white.
+                  <strong>Balcony On:</strong> Rocker 1 sends a Bond RF scene
+                  for the fan/light after the seller fan remote is verified.
                 </div>
               </div>
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
                 <div>
-                  <strong>Zip Track Enclosure:</strong> Lowering zip blinds
-                  creates an enclosed outdoor room with fan on gentle breeze
-                  (Speed 2).
+                  <strong>Zip Track & Curtains:</strong> Rockers 2/3 use the
+                  Dooya bridge for raise/lower; rocker 4 controls living curtains.
+                  Keep the Dooya remote for stop and backup.
                 </div>
               </div>
             </div>
@@ -4083,813 +4095,151 @@ wall-switch action event exposed by the selected Home Assistant integration.
                 </g>
 
                 <!-- Layer 1c: Minimalist Architectural Furniture & Fixtures -->
-                <g
-                  id="layerSchematicFurniture"
-                  stroke="#8a9e8f"
-                  stroke-width="1.5"
-                  fill="none"
-                  opacity="0.75"
-                  pointer-events="none"
-                >
+                <g id="layerSchematicFurniture" stroke="#8a9e8f" stroke-width="1.5" fill="none" opacity="0.75" pointer-events="none">
                   <!-- Balcony Outdoor Dining Table & Chairs -->
-                  <rect
-                    x="685"
-                    y="90"
-                    width="115"
-                    height="75"
-                    rx="6"
-                    fill="#ffffff"
-                    fill-opacity="0.8"
-                    stroke-width="2"
-                  />
-                  <circle
-                    cx="660"
-                    cy="110"
-                    r="12"
-                    fill="#ffffff"
-                    fill-opacity="0.7"
-                  />
-                  <circle
-                    cx="660"
-                    cy="145"
-                    r="12"
-                    fill="#ffffff"
-                    fill-opacity="0.7"
-                  />
-                  <circle
-                    cx="825"
-                    cy="110"
-                    r="12"
-                    fill="#ffffff"
-                    fill-opacity="0.7"
-                  />
-                  <circle
-                    cx="825"
-                    cy="145"
-                    r="12"
-                    fill="#ffffff"
-                    fill-opacity="0.7"
-                  />
+                  <rect x="685" y="90" width="115" height="75" rx="6" fill="#ffffff" fill-opacity="0.8" stroke-width="2" />
+                  <circle cx="660" cy="110" r="12" fill="#ffffff" fill-opacity="0.7" />
+                  <circle cx="660" cy="145" r="12" fill="#ffffff" fill-opacity="0.7" />
+                  <circle cx="825" cy="110" r="12" fill="#ffffff" fill-opacity="0.7" />
+                  <circle cx="825" cy="145" r="12" fill="#ffffff" fill-opacity="0.7" />
                   <!-- Balcony Planters / Bench -->
-                  <rect
-                    x="850"
-                    y="85"
-                    width="75"
-                    height="115"
-                    rx="4"
-                    fill="#ffffff"
-                    fill-opacity="0.75"
-                    stroke-dasharray="4 3"
-                  />
-                  <text
-                    x="887"
-                    y="145"
-                    font-size="8.5"
-                    font-weight="700"
-                    fill="#4a6b57"
-                    text-anchor="middle"
-                    stroke="none"
-                  >
-                    PLANTERS
-                  </text>
+                  <rect x="850" y="85" width="75" height="115" rx="4" fill="#ffffff" fill-opacity="0.75" stroke-dasharray="4 3" />
+                  <text x="887" y="145" font-size="8.5" font-weight="700" fill="#4a6b57" text-anchor="middle" stroke="none">PLANTERS</text>
 
                   <!-- Bed 2 West Wall: Sofa Bed -->
-                  <rect
-                    x="315"
-                    y="325"
-                    width="105"
-                    height="165"
-                    rx="6"
-                    fill="#ffffff"
-                    fill-opacity="0.9"
-                    stroke-width="2"
-                  />
-                  <rect
-                    x="315"
-                    y="325"
-                    width="20"
-                    height="165"
-                    rx="3"
-                    fill="#ffffff"
-                    fill-opacity="0.95"
-                    stroke-width="1.5"
-                  />
-                  <line
-                    x1="335"
-                    y1="407"
-                    x2="420"
-                    y2="407"
-                    stroke-dasharray="3 3"
-                  />
-                  <text
-                    x="375"
-                    y="412"
-                    font-size="10"
-                    font-weight="700"
-                    fill="#5a6e60"
-                    text-anchor="middle"
-                    stroke="none"
-                    transform="rotate(-90 375 412)"
-                  >
-                    SOFA BED
-                  </text>
+                  <rect x="315" y="325" width="105" height="165" rx="6" fill="#ffffff" fill-opacity="0.9" stroke-width="2" />
+                  <rect x="315" y="325" width="20" height="165" rx="3" fill="#ffffff" fill-opacity="0.95" stroke-width="1.5" />
+                  <line x1="335" y1="407" x2="420" y2="407" stroke-dasharray="3 3" />
+                  <text x="375" y="412" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none" transform="rotate(-90 375 412)">SOFA BED</text>
 
                   <!-- Bed 2 East Wall: Study Desk, Chair & PC Workstation -->
-                  <rect
-                    x="525"
-                    y="325"
-                    width="60"
-                    height="165"
-                    rx="4"
-                    fill="#ffffff"
-                    fill-opacity="0.9"
-                    stroke-width="2"
-                  />
-                  <rect
-                    x="475"
-                    y="390"
-                    width="36"
-                    height="36"
-                    rx="4"
-                    fill="#ffffff"
-                    fill-opacity="0.8"
-                    stroke-width="1.5"
-                  />
+                  <rect x="525" y="325" width="60" height="165" rx="4" fill="#ffffff" fill-opacity="0.9" stroke-width="2" />
+                  <rect x="475" y="390" width="36" height="36" rx="4" fill="#ffffff" fill-opacity="0.8" stroke-width="1.5" />
                   <!-- PC Rig on desk -->
-                  <rect
-                    x="530"
-                    y="340"
-                    width="50"
-                    height="40"
-                    rx="3"
-                    fill="#ffffff"
-                    fill-opacity="0.95"
-                    stroke="#3b82f6"
-                    stroke-width="1.5"
-                  />
-                  <rect
-                    x="535"
-                    y="346"
-                    width="40"
-                    height="18"
-                    rx="2"
-                    fill="#3b82f6"
-                    fill-opacity="0.2"
-                    stroke="#3b82f6"
-                    stroke-width="1"
-                  />
-                  <text
-                    x="555"
-                    y="358"
-                    font-size="7.5"
-                    font-weight="800"
-                    fill="#2563eb"
-                    text-anchor="middle"
-                    stroke="none"
-                  >
-                    PC RIG
-                  </text>
+                  <rect x="530" y="340" width="50" height="40" rx="3" fill="#ffffff" fill-opacity="0.95" stroke="#3b82f6" stroke-width="1.5" />
+                  <rect x="535" y="346" width="40" height="18" rx="2" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="1" />
+                  <text x="555" y="358" font-size="7.5" font-weight="800" fill="#2563eb" text-anchor="middle" stroke="none">PC RIG</text>
                   <!-- 32mm Wall Pass-Through Conduit Sleeve to TV Console -->
-                  <line
-                    x1="580"
-                    y1="360"
-                    x2="600"
-                    y2="360"
-                    stroke="#2563eb"
-                    stroke-width="3.5"
-                    stroke-dasharray="3 2"
-                  />
-                  <circle
-                    cx="590"
-                    cy="360"
-                    r="4.5"
-                    fill="#2563eb"
-                    stroke="#ffffff"
-                    stroke-width="1.5"
-                  />
-                  <text
-                    x="582"
-                    y="335"
-                    font-size="7.5"
-                    font-weight="800"
-                    fill="#2563eb"
-                    text-anchor="end"
-                    stroke="none"
-                  >
-                    32mm CONDUIT
-                  </text>
+                  <line x1="580" y1="360" x2="600" y2="360" stroke="#2563eb" stroke-width="3.5" stroke-dasharray="3 2" />
+                  <circle cx="590" cy="360" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="1.5" />
+                  <text x="582" y="335" font-size="7.5" font-weight="800" fill="#2563eb" text-anchor="end" stroke="none">32mm CONDUIT</text>
 
                   <!-- Bed 2 Built-in Wardrobe (South Wall) -->
-                  <rect
-                    x="315"
-                    y="505"
-                    width="135"
-                    height="50"
-                    rx="4"
-                    fill="#ffffff"
-                    fill-opacity="0.9"
-                    stroke-width="2"
-                  />
-                  <text
-                    x="382"
-                    y="535"
-                    font-size="9"
-                    font-weight="700"
-                    fill="#5a6e60"
-                    text-anchor="middle"
-                    stroke="none"
-                  >
-                    WARDROBE
-                  </text>
+                  <rect x="315" y="505" width="135" height="50" rx="4" fill="#ffffff" fill-opacity="0.9" stroke-width="2" />
+                  <text x="382" y="535" font-size="9" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">WARDROBE</text>
 
                   <!-- Common Bathroom Fixtures -->
-                  <rect
-                    x="315"
-                    y="575"
-                    width="85"
-                    height="120"
-                    rx="4"
-                    stroke-dasharray="4 3"
-                  />
-                  <!-- Shower -->
-                  <rect
-                    x="430"
-                    y="575"
-                    width="45"
-                    height="65"
-                    rx="8"
-                    fill="#ffffff"
-                    fill-opacity="0.8"
-                  />
-                  <!-- WC -->
-                  <rect
-                    x="520"
-                    y="690"
-                    width="60"
-                    height="65"
-                    rx="4"
-                    fill="#ffffff"
-                    fill-opacity="0.8"
-                  />
-                  <!-- Vanity Basin -->
-                  <circle
-                    cx="550"
-                    cy="722"
-                    r="13"
-                    fill="#ffffff"
-                    fill-opacity="0.95"
-                  />
+                  <rect x="315" y="575" width="85" height="120" rx="4" stroke-dasharray="4 3" /> <!-- Shower -->
+                  <rect x="430" y="575" width="45" height="65" rx="8" fill="#ffffff" fill-opacity="0.8" /> <!-- WC -->
+                  <rect x="520" y="690" width="60" height="65" rx="4" fill="#ffffff" fill-opacity="0.8" /> <!-- Vanity Basin -->
+                  <circle cx="550" cy="722" r="13" fill="#ffffff" fill-opacity="0.95" />
 
                   <!-- Kitchen L-Counter & Appliances -->
-                  <path
-                    d="M 315 785 L 375 785 L 375 1075 L 500 1075 L 500 1015 L 375 1015 L 375 845 L 315 845 Z"
-                    fill="#ffffff"
-                    fill-opacity="0.75"
-                  />
-                  <rect
-                    x="322"
-                    y="900"
-                    width="42"
-                    height="68"
-                    rx="4"
-                    fill="#ffffff"
-                  />
-                  <text
-                    x="343"
-                    y="940"
-                    font-size="8"
-                    font-weight="700"
-                    fill="#5a6e60"
-                    text-anchor="middle"
-                    stroke="none"
-                    transform="rotate(-90 343 940)"
-                  >
-                    SINK
-                  </text>
+                  <path d="M 315 785 L 375 785 L 375 1075 L 500 1075 L 500 1015 L 375 1015 L 375 845 L 315 845 Z" fill="#ffffff" fill-opacity="0.75" />
+                  <rect x="322" y="900" width="42" height="68" rx="4" fill="#ffffff" />
+                  <text x="343" y="940" font-size="8" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none" transform="rotate(-90 343 940)">SINK</text>
                   <!-- Hob -->
-                  <rect
-                    x="322"
-                    y="800"
-                    width="42"
-                    height="60"
-                    rx="4"
-                    fill="#ffffff"
-                  />
+                  <rect x="322" y="800" width="42" height="60" rx="4" fill="#ffffff" />
                   <circle cx="335" cy="818" r="6" fill="#5a6e60" />
                   <circle cx="351" cy="818" r="6" fill="#5a6e60" />
                   <circle cx="335" cy="842" r="6" fill="#5a6e60" />
                   <circle cx="351" cy="842" r="6" fill="#5a6e60" />
                   <!-- Fridge -->
-                  <rect
-                    x="510"
-                    y="785"
-                    width="70"
-                    height="75"
-                    rx="4"
-                    fill="#ffffff"
-                    fill-opacity="0.9"
-                    stroke-width="2"
-                  />
-                  <text
-                    x="545"
-                    y="828"
-                    font-size="10"
-                    font-weight="700"
-                    fill="#5a6e60"
-                    text-anchor="middle"
-                    stroke="none"
-                  >
-                    FRIDGE
-                  </text>
+                  <rect x="510" y="785" width="70" height="75" rx="4" fill="#ffffff" fill-opacity="0.9" stroke-width="2" />
+                  <text x="545" y="828" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">FRIDGE</text>
                   <!-- Washer / Dryer -->
-                  <rect
-                    x="425"
-                    y="1025"
-                    width="68"
-                    height="55"
-                    rx="4"
-                    fill="#ffffff"
-                    fill-opacity="0.9"
-                    stroke-width="2"
-                  />
-                  <text
-                    x="459"
-                    y="1058"
-                    font-size="10"
-                    font-weight="700"
-                    fill="#5a6e60"
-                    text-anchor="middle"
-                    stroke="none"
-                  >
-                    W/D
-                  </text>
+                  <rect x="425" y="1025" width="68" height="55" rx="4" fill="#ffffff" fill-opacity="0.9" stroke-width="2" />
+                  <text x="459" y="1058" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">W/D</text>
 
                   <!-- Living Room 65" TV Console (West Wall) & Sofa (East Wall) -->
-                  <rect
-                    x="595"
-                    y="370"
-                    width="30"
-                    height="190"
-                    rx="4"
-                    fill="#ffffff"
-                    fill-opacity="0.9"
-                    stroke-width="2"
-                  />
-                  <line
-                    x1="608"
-                    y1="390"
-                    x2="608"
-                    y2="540"
-                    stroke="#1e293b"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                  />
-                  <text
-                    x="612"
-                    y="465"
-                    font-size="9.5"
-                    font-weight="700"
-                    fill="#5a6e60"
-                    text-anchor="middle"
-                    stroke="none"
-                    transform="rotate(-90 612 465)"
-                  >
-                    65" TV + CONSOLE
-                  </text>
-                  <path
-                    d="M 785 375 L 920 375 L 920 620 L 840 620 L 840 515 L 785 515 Z"
-                    fill="#ffffff"
-                    fill-opacity="0.85"
-                    stroke-width="2"
-                  />
-                  <text
-                    x="865"
-                    y="460"
-                    font-size="11"
-                    font-weight="700"
-                    fill="#5a6e60"
-                    text-anchor="middle"
-                    stroke="none"
-                  >
-                    MODULAR SOFA
-                  </text>
+                  <rect x="595" y="370" width="30" height="190" rx="4" fill="#ffffff" fill-opacity="0.9" stroke-width="2" />
+                  <line x1="608" y1="390" x2="608" y2="540" stroke="#1e293b" stroke-width="4" stroke-linecap="round" />
+                  <text x="612" y="465" font-size="9.5" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none" transform="rotate(-90 612 465)">65" TV + CONSOLE</text>
+                  <path d="M 785 375 L 920 375 L 920 620 L 840 620 L 840 515 L 785 515 Z" fill="#ffffff" fill-opacity="0.85" stroke-width="2" />
+                  <text x="865" y="460" font-size="11" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">MODULAR SOFA</text>
                   <!-- Living Room Circular Rug & Coffee Table -->
-                  <circle
-                    cx="715"
-                    cy="465"
-                    r="48"
-                    fill="none"
-                    stroke="#d5ddd6"
-                    stroke-width="1.5"
-                    stroke-dasharray="4 3"
-                  />
-                  <circle
-                    cx="715"
-                    cy="465"
-                    r="25"
-                    fill="#ffffff"
-                    fill-opacity="0.8"
-                    stroke-width="1.5"
-                  />
+                  <circle cx="715" cy="465" r="48" fill="none" stroke="#d5ddd6" stroke-width="1.5" stroke-dasharray="4 3" />
+                  <circle cx="715" cy="465" r="25" fill="#ffffff" fill-opacity="0.8" stroke-width="1.5" />
 
                   <!-- Folding Dining Table (Arch-topped folding table backed against South wall y=878) -->
                   <path
                     d="M 750 878 L 750 760 A 54.5 54.5 0 0 1 859 760 L 859 878 Z"
-                    fill="#ffffff"
-                    fill-opacity="0.9"
-                    stroke="#8a9e8f"
-                    stroke-width="2"
+                    fill="#ffffff" fill-opacity="0.9" stroke="#8a9e8f" stroke-width="2"
                   />
                   <!-- Folding Leaf Seam -->
-                  <line
-                    x1="750"
-                    y1="778"
-                    x2="859"
-                    y2="778"
-                    stroke="#8a9e8f"
-                    stroke-width="1.5"
-                    stroke-dasharray="4 3"
-                  />
-                  <text
-                    x="804.5"
-                    y="816"
-                    font-size="10"
-                    font-weight="700"
-                    fill="#5a6e60"
-                    text-anchor="middle"
-                    stroke="none"
-                  >
-                    FOLDING
-                  </text>
-                  <text
-                    x="804.5"
-                    y="834"
-                    font-size="10"
-                    font-weight="700"
-                    fill="#5a6e60"
-                    text-anchor="middle"
-                    stroke="none"
-                  >
-                    DINING
-                  </text>
+                  <line x1="750" y1="778" x2="859" y2="778" stroke="#8a9e8f" stroke-width="1.5" stroke-dasharray="4 3" />
+                  <text x="804.5" y="816" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">FOLDING</text>
+                  <text x="804.5" y="834" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">DINING</text>
 
                   <!-- Left Chair (facing East towards table) -->
                   <g transform="translate(716, 792)">
-                    <rect
-                      x="0"
-                      y="0"
-                      width="40"
-                      height="44"
-                      rx="4"
-                      fill="#ffffff"
-                      fill-opacity="0.8"
-                      stroke="#8a9e8f"
-                      stroke-width="1.5"
-                    />
-                    <line
-                      x1="8"
-                      y1="0"
-                      x2="8"
-                      y2="44"
-                      stroke="#8a9e8f"
-                      stroke-width="1.5"
-                    />
+                    <rect x="0" y="0" width="40" height="44" rx="4" fill="#ffffff" fill-opacity="0.8" stroke="#8a9e8f" stroke-width="1.5" />
+                    <line x1="8" y1="0" x2="8" y2="44" stroke="#8a9e8f" stroke-width="1.5" />
                   </g>
 
                   <!-- Right Chair (facing West towards table) -->
                   <g transform="translate(862, 792)">
-                    <rect
-                      x="0"
-                      y="0"
-                      width="40"
-                      height="44"
-                      rx="4"
-                      fill="#ffffff"
-                      fill-opacity="0.8"
-                      stroke="#8a9e8f"
-                      stroke-width="1.5"
-                    />
-                    <line
-                      x1="32"
-                      y1="0"
-                      x2="32"
-                      y2="44"
-                      stroke="#8a9e8f"
-                      stroke-width="1.5"
-                    />
+                    <rect x="0" y="0" width="40" height="44" rx="4" fill="#ffffff" fill-opacity="0.8" stroke="#8a9e8f" stroke-width="1.5" />
+                    <line x1="32" y1="0" x2="32" y2="44" stroke="#8a9e8f" stroke-width="1.5" />
                   </g>
 
                   <!-- Top-Left Angled Chair (facing arched top) -->
                   <g transform="translate(755, 735) rotate(-45)">
-                    <rect
-                      x="-20"
-                      y="-22"
-                      width="40"
-                      height="44"
-                      rx="4"
-                      fill="#ffffff"
-                      fill-opacity="0.8"
-                      stroke="#8a9e8f"
-                      stroke-width="1.5"
-                    />
-                    <line
-                      x1="-20"
-                      y1="-14"
-                      x2="20"
-                      y2="-14"
-                      stroke="#8a9e8f"
-                      stroke-width="1.5"
-                    />
+                    <rect x="-20" y="-22" width="40" height="44" rx="4" fill="#ffffff" fill-opacity="0.8" stroke="#8a9e8f" stroke-width="1.5" />
+                    <line x1="-20" y1="-14" x2="20" y2="-14" stroke="#8a9e8f" stroke-width="1.5" />
                   </g>
 
                   <!-- Top-Right Angled Chair (facing arched top) -->
                   <g transform="translate(850, 735) rotate(45)">
-                    <rect
-                      x="-20"
-                      y="-22"
-                      width="40"
-                      height="44"
-                      rx="4"
-                      fill="#ffffff"
-                      fill-opacity="0.8"
-                      stroke="#8a9e8f"
-                      stroke-width="1.5"
-                    />
-                    <line
-                      x1="-20"
-                      y1="-14"
-                      x2="20"
-                      y2="-14"
-                      stroke="#8a9e8f"
-                      stroke-width="1.5"
-                    />
+                    <rect x="-20" y="-22" width="40" height="44" rx="4" fill="#ffffff" fill-opacity="0.8" stroke="#8a9e8f" stroke-width="1.5" />
+                    <line x1="-20" y1="-14" x2="20" y2="-14" stroke="#8a9e8f" stroke-width="1.5" />
                   </g>
 
                   <!-- Foyer Narrow Corridor: Storage / Pegboard & Hanging Shoe Bench -->
-                  <rect
-                    x="735"
-                    y="890"
-                    width="30"
-                    height="175"
-                    rx="3"
-                    fill="#ffffff"
-                    fill-opacity="0.9"
-                    stroke="#3b82f6"
-                    stroke-width="1.5"
-                  />
-                  <text
-                    x="752"
-                    y="978"
-                    font-size="8"
-                    font-weight="700"
-                    fill="#2563eb"
-                    text-anchor="middle"
-                    stroke="none"
-                    transform="rotate(90 752 978)"
-                  >
-                    STORAGE / PEGBOARD
-                  </text>
+                  <rect x="735" y="890" width="30" height="175" rx="3" fill="#ffffff" fill-opacity="0.9" stroke="#3b82f6" stroke-width="1.5" />
+                  <text x="752" y="978" font-size="8" font-weight="700" fill="#2563eb" text-anchor="middle" stroke="none" transform="rotate(90 752 978)">STORAGE / PEGBOARD</text>
 
                   <!-- Guest Wi-Fi QR Code Plaque on Pegboard -->
                   <g transform="translate(738, 895)">
-                    <rect
-                      x="0"
-                      y="0"
-                      width="24"
-                      height="20"
-                      rx="3"
-                      fill="#0f172a"
-                      stroke="#38bdf8"
-                      stroke-width="1"
-                    />
-                    <text
-                      x="12"
-                      y="11"
-                      font-size="7.5"
-                      font-family="'Space Grotesk', sans-serif"
-                      font-weight="800"
-                      fill="#38bdf8"
-                      text-anchor="middle"
-                      stroke="none"
-                    >
-                      QR
-                    </text>
-                    <text
-                      x="12"
-                      y="18"
-                      font-size="5.5"
-                      font-family="'Space Grotesk', sans-serif"
-                      font-weight="700"
-                      fill="#94a3b8"
-                      text-anchor="middle"
-                      stroke="none"
-                    >
-                      WI-FI
-                    </text>
-                    <title>
-                      Guest Wi-Fi QR Code Plaque (Hallway / Entryway Pegboard)
-                    </title>
+                    <rect x="0" y="0" width="24" height="20" rx="3" fill="#0f172a" stroke="#38bdf8" stroke-width="1" />
+                    <text x="12" y="11" font-size="7.5" font-family="'Space Grotesk', sans-serif" font-weight="800" fill="#38bdf8" text-anchor="middle" stroke="none">QR</text>
+                    <text x="12" y="18" font-size="5.5" font-family="'Space Grotesk', sans-serif" font-weight="700" fill="#94a3b8" text-anchor="middle" stroke="none">WI-FI</text>
+                    <title>Guest Wi-Fi QR Code Plaque (Hallway / Entryway Pegboard)</title>
                   </g>
 
-                  <rect
-                    x="735"
-                    y="1075"
-                    width="30"
-                    height="125"
-                    rx="3"
-                    fill="#ffffff"
-                    fill-opacity="0.9"
-                    stroke="#3b82f6"
-                    stroke-width="1.5"
-                  />
-                  <text
-                    x="752"
-                    y="1138"
-                    font-size="8"
-                    font-weight="700"
-                    fill="#2563eb"
-                    text-anchor="middle"
-                    stroke="none"
-                    transform="rotate(90 752 1138)"
-                  >
-                    HANGING / SHOE
-                  </text>
+                  <rect x="735" y="1075" width="30" height="125" rx="3" fill="#ffffff" fill-opacity="0.9" stroke="#3b82f6" stroke-width="1.5" />
+                  <text x="752" y="1138" font-size="8" font-weight="700" fill="#2563eb" text-anchor="middle" stroke="none" transform="rotate(90 752 1138)">HANGING / SHOE</text>
 
                   <!-- Master Bed: Headboard against East Wall, projecting to West Wall -->
                   <!-- Queen Bed body -->
-                  <rect
-                    x="1035"
-                    y="403"
-                    width="200"
-                    height="167"
-                    rx="8"
-                    fill="#ffffff"
-                    fill-opacity="0.9"
-                    stroke-width="2"
-                  />
+                  <rect x="1035" y="403" width="200" height="167" rx="8" fill="#ffffff" fill-opacity="0.9" stroke-width="2" />
                   <!-- Headboard against East Wall -->
-                  <rect
-                    x="1225"
-                    y="403"
-                    width="10"
-                    height="167"
-                    rx="2"
-                    fill="#ffffff"
-                    fill-opacity="0.98"
-                    stroke-width="1.5"
-                  />
+                  <rect x="1225" y="403" width="10" height="167" rx="2" fill="#ffffff" fill-opacity="0.98" stroke-width="1.5" />
                   <!-- Two Pillows (stacked vertically along east headboard) -->
-                  <rect
-                    x="1172"
-                    y="415"
-                    width="45"
-                    height="62"
-                    rx="4"
-                    fill="#ffffff"
-                    fill-opacity="0.95"
-                    stroke-width="1.2"
-                  />
-                  <rect
-                    x="1172"
-                    y="493"
-                    width="45"
-                    height="62"
-                    rx="4"
-                    fill="#ffffff"
-                    fill-opacity="0.95"
-                    stroke-width="1.2"
-                  />
-                  <line
-                    x1="1085"
-                    y1="403"
-                    x2="1085"
-                    y2="570"
-                    stroke-dasharray="3 3"
-                  />
-                  <text
-                    x="1115"
-                    y="490"
-                    font-size="11"
-                    font-weight="700"
-                    fill="#5a6e60"
-                    text-anchor="middle"
-                    stroke="none"
-                  >
-                    QUEEN BED
-                  </text>
+                  <rect x="1172" y="415" width="45" height="62" rx="4" fill="#ffffff" fill-opacity="0.95" stroke-width="1.2" />
+                  <rect x="1172" y="493" width="45" height="62" rx="4" fill="#ffffff" fill-opacity="0.95" stroke-width="1.2" />
+                  <line x1="1085" y1="403" x2="1085" y2="570" stroke-dasharray="3 3" />
+                  <text x="1115" y="490" font-size="11" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">QUEEN BED</text>
 
                   <!-- Projector Beam Cone to West Wall -->
-                  <polygon
-                    points="1225,486 948,410 948,560"
-                    fill="rgba(201, 93, 70, 0.06)"
-                    stroke="#c95d46"
-                    stroke-width="1.2"
-                    stroke-dasharray="4 3"
-                    opacity="0.7"
-                  />
+                  <polygon points="1225,486 948,410 948,560" fill="rgba(201, 93, 70, 0.06)" stroke="#c95d46" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.7" />
                   <!-- Projection Screen on West Wall -->
-                  <line
-                    x1="946"
-                    y1="400"
-                    x2="946"
-                    y2="570"
-                    stroke="#c95d46"
-                    stroke-width="3.5"
-                    stroke-linecap="round"
-                  />
-                  <text
-                    x="956"
-                    y="485"
-                    font-size="8.5"
-                    font-weight="800"
-                    fill="#c95d46"
-                    text-anchor="middle"
-                    stroke="none"
-                    transform="rotate(-90 956 485)"
-                  >
-                    PROJECTION AREA
-                  </text>
+                  <line x1="946" y1="400" x2="946" y2="570" stroke="#c95d46" stroke-width="3.5" stroke-linecap="round" />
+                  <text x="956" y="485" font-size="8.5" font-weight="800" fill="#c95d46" text-anchor="middle" stroke="none" transform="rotate(-90 956 485)">PROJECTION AREA</text>
 
                   <!-- Master Bed Vanity / Nightstand below Bed on East Wall -->
-                  <rect
-                    x="1185"
-                    y="580"
-                    width="50"
-                    height="65"
-                    rx="4"
-                    fill="#ffffff"
-                    fill-opacity="0.9"
-                    stroke-width="1.5"
-                  />
-                  <circle
-                    cx="1145"
-                    cy="612"
-                    r="13"
-                    fill="#ffffff"
-                    fill-opacity="0.85"
-                    stroke-width="1.5"
-                  />
+                  <rect x="1185" y="580" width="50" height="65" rx="4" fill="#ffffff" fill-opacity="0.9" stroke-width="1.5" />
+                  <circle cx="1145" cy="612" r="13" fill="#ffffff" fill-opacity="0.85" stroke-width="1.5" />
 
                   <!-- Master Bed Built-in Wardrobe on South Wall -->
-                  <rect
-                    x="948"
-                    y="640"
-                    width="165"
-                    height="50"
-                    rx="4"
-                    fill="#ffffff"
-                    fill-opacity="0.9"
-                    stroke-width="2"
-                  />
-                  <text
-                    x="1030"
-                    y="670"
-                    font-size="10"
-                    font-weight="700"
-                    fill="#5a6e60"
-                    text-anchor="middle"
-                    stroke="none"
-                  >
-                    BUILT-IN WARDROBE
-                  </text>
+                  <rect x="948" y="640" width="165" height="50" rx="4" fill="#ffffff" fill-opacity="0.9" stroke-width="2" />
+                  <text x="1030" y="670" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">BUILT-IN WARDROBE</text>
 
                   <!-- Master Bath Fixtures -->
-                  <rect
-                    x="1235"
-                    y="715"
-                    width="75"
-                    height="150"
-                    rx="4"
-                    stroke-dasharray="4 3"
-                  />
-                  <!-- Shower -->
-                  <rect
-                    x="1145"
-                    y="715"
-                    width="45"
-                    height="65"
-                    rx="8"
-                    fill="#ffffff"
-                    fill-opacity="0.8"
-                  />
-                  <!-- WC -->
-                  <rect
-                    x="960"
-                    y="715"
-                    width="65"
-                    height="65"
-                    rx="4"
-                    fill="#ffffff"
-                    fill-opacity="0.8"
-                  />
-                  <!-- Vanity Basin -->
-                  <circle
-                    cx="992"
-                    cy="747"
-                    r="14"
-                    fill="#ffffff"
-                    fill-opacity="0.95"
-                  />
+                  <rect x="960" y="715" width="75" height="150" rx="4" stroke-dasharray="4 3" /> <!-- Shower (left) -->
+                  <rect x="1145" y="715" width="45" height="65" rx="8" fill="#ffffff" fill-opacity="0.8" /> <!-- WC -->
+                  <rect x="1235" y="715" width="65" height="65" rx="4" fill="#ffffff" fill-opacity="0.8" /> <!-- Vanity Basin (right) -->
+                  <circle cx="1267" cy="747" r="14" fill="#ffffff" fill-opacity="0.95" />
                 </g>
 
                 <!-- Layer 1d: Architectural Walls & Door Openings -->
@@ -6959,7 +6309,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                     points="940,355 1278,355 1278,700 940,700"
                     onclick="selectMapRoom('Master Bed')"
                   >
-                    <title>Master Bedroom: Queen Bed, Bedside Kill Switch, C3 Curtains</title>
+                    <title>Master Bedroom: Queen Bed, bedside controls, manual day/night curtains</title>
                   </polygon>
 
                   <!-- Master Bathroom -->
@@ -7017,7 +6367,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                   </g>
 
                   <!-- Bathrooms Vanity Mirror Lights -->
-                  <circle id="light-master-vanity" class="light-glow" cx="990" cy="745" r="12" fill="#ffd080" filter="url(#lightGlowFilter)" opacity="0.75" />
+                  <circle id="light-master-vanity" class="light-glow" cx="1267" cy="745" r="12" fill="#ffd080" filter="url(#lightGlowFilter)" opacity="0.75" />
                   <circle id="light-common-vanity" class="light-glow" cx="550" cy="722" r="12" fill="#ffd080" filter="url(#lightGlowFilter)" opacity="0.75" />
                   <!-- Indicative fixture clusters where individual downlights are not drawn -->
                   <g id="light-fixture-clusters" fill="#ffd080" stroke="#b7791f" stroke-width="1.5">
@@ -7058,7 +6408,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                   <text x="770" y="184" font-size="10" font-weight="700" fill="#3a7d99" text-anchor="middle">FAN</text>
 
                   <!-- Balcony Motorized Zip Blinds (3 sides, safely inset inside balcony perimeter) -->
-                  <polyline
+                  <polyline id="zip-track"
                     points="602,340 602,38 928,38 928,340"
                     fill="none" stroke="#d9822b" stroke-width="5" stroke-dasharray="8 4"
                   />
@@ -7066,9 +6416,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
 
                   <!-- Motorized Day & Night Curtains (Safely inset from walls, no overlap) -->
                   <!-- Balcony Sliding Door Curtain -->
-                  <line x1="605" y1="345" x2="925" y2="345" stroke="#4a6b57" stroke-width="4" stroke-dasharray="6 3" />
-                  <!-- Master Bed Window Curtain -->
-                  <line id="curtain-master" x1="955" y1="370" x2="1265" y2="370" stroke="#4a6b57" stroke-width="4" stroke-dasharray="6 3" />
+                  <line id="curtain-living" x1="605" y1="345" x2="925" y2="345" stroke="#4a6b57" stroke-width="4" stroke-dasharray="6 3" />
                   <!-- Bed 2 Window Curtain -->
                   <line x1="315" y1="282" x2="575" y2="282" stroke="#4a6b57" stroke-width="4" stroke-dasharray="6 3" />
                 </g>
@@ -7481,8 +6829,10 @@ wall-switch action event exposed by the selected Home Assistant integration.
                     <path d="M 600 865 Q 520 865 425 910"/><circle cx="425" cy="910" r="5"/><text x="440" y="898">KITCHEN DL</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="balcony">
-                    <path d="M 644 370 Q 670 330 700 300"/><circle cx="700" cy="300" r="5"/><text x="666" y="330">BALCONY LIGHT</text>
-                    <path class="wireless" d="M 644 370 Q 755 310 770 180"/><circle cx="770" cy="180" r="5"/><text x="778" y="273">FAN SCENE</text>
+                    <path class="wireless" d="M 685 370 Q 720 310 700 300"/><circle cx="700" cy="300" r="5"/><text x="658" y="330">FAN + LIGHT</text>
+                    <path class="wireless" d="M 685 370 Q 655 210 605 55"/><circle cx="605" cy="55" r="5"/><text x="612" y="70">ZIP RAISE</text>
+                    <path class="wireless" d="M 685 370 Q 850 220 925 55"/><circle cx="925" cy="55" r="5"/><text x="868" y="70">ZIP LOWER</text>
+                    <path class="wireless" d="M 685 370 Q 760 350 835 345"/><circle cx="835" cy="345" r="5"/><text x="780" y="330">CURTAINS</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="bed2">
                     <path d="M 562 535 Q 510 480 450 465"/><circle cx="450" cy="465" r="5"/><text x="455" y="485">BED 2 DL</text>
@@ -7495,11 +6845,10 @@ wall-switch action event exposed by the selected Home Assistant integration.
                   </g>
                   <g class="switch-connection-group" data-switch-id="master-bed">
                     <path d="M 969 600 Q 1000 575 1020 550"/><circle cx="1020" cy="550" r="5"/><text x="983" y="570">MASTER DL</text>
-                    <path class="wireless" d="M 969 600 Q 1050 480 1100 370"/><circle cx="1100" cy="370" r="5"/><text x="1048" y="438">CURTAIN SCENE</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="master-bath-light">
                     <path d="M 1154 675 Q 1140 725 1110 760"/><circle cx="1110" cy="760" r="5"/><text x="1140" y="750">BATH DL</text>
-                    <path d="M 1154 675 Q 1050 700 990 745"/><circle cx="990" cy="745" r="5"/><text x="1028" y="720">VANITY</text>
+                    <path d="M 1154 675 Q 1220 700 1267 745"/><circle cx="1267" cy="745" r="5"/><text x="1202" y="720">VANITY</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="master-bath-heater">
                     <path d="M 1098 675 Q 1190 735 1250 800"/><circle cx="1250" cy="800" r="7"/><text x="1210" y="778">HEATER</text>
@@ -7555,15 +6904,19 @@ wall-switch action event exposed by the selected Home Assistant integration.
                     <circle cx="28.5" cy="15.5" r="1.5" fill="#38bdf8" />
                   </g>
 
-                  <!-- Balcony: H1 2-gang inside sliding-door frame -->
+                  <!-- Balcony: Z1 Pro command plate inside sliding-door frame -->
                   <g class="switch-pin" data-switch-id="balcony" transform="translate(625, 370)">
-                    <title>Balcony: Aqara H1 2-Gang (outdoor light relay + wireless fan scene; fan circuit stays powered)</title>
-                    <rect x="0" y="-14" width="38" height="12" rx="3" fill="#0f172a" fill-opacity="0.95" stroke="#38bdf8" stroke-width="0.8" />
-                    <text x="19" y="-5" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">2-GANG</text>
-                    <rect x="0" y="0" width="38" height="20" rx="3.5" fill="#1e293b" stroke="#ffffff" stroke-width="1.4" filter="url(#badgeShadow)" />
-                    <line x1="19" y1="2" x2="19" y2="18" stroke="#475569" stroke-width="1" />
-                    <circle cx="9.5" cy="15.5" r="1.5" fill="#38bdf8" />
-                    <circle cx="28.5" cy="15.5" r="1.5" fill="#38bdf8" />
+                    <title>Balcony: Aqara Z1 Pro 4-Rocker — fan/light Bond scene, zip raise, zip lower, living curtains</title>
+                    <rect x="0" y="-14" width="60" height="12" rx="3" fill="#0f172a" fill-opacity="0.95" stroke="#38bdf8" stroke-width="0.8" />
+                    <text x="30" y="-5" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">Z1 • 4-RKR</text>
+                    <rect x="0" y="0" width="60" height="20" rx="3.5" fill="#1e293b" stroke="#ffffff" stroke-width="1.4" filter="url(#badgeShadow)" />
+                    <line x1="15" y1="2" x2="15" y2="18" stroke="#475569" stroke-width="1" />
+                    <line x1="30" y1="2" x2="30" y2="18" stroke="#475569" stroke-width="1" />
+                    <line x1="45" y1="2" x2="45" y2="18" stroke="#475569" stroke-width="1" />
+                    <circle cx="7.5" cy="15.5" r="1.5" fill="#38bdf8" />
+                    <circle cx="22.5" cy="15.5" r="1.5" fill="#38bdf8" />
+                    <circle cx="37.5" cy="15.5" r="1.5" fill="#38bdf8" />
+                    <circle cx="52.5" cy="15.5" r="1.5" fill="#38bdf8" />
                   </g>
 
                   <!-- Bedroom 2: 1-Gang (Aqara H1, Inside Bedroom 2 Door) -->
@@ -7596,7 +6949,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
 
                   <!-- Master Bedroom: Z1 Pro 3-Rocker, Inside Master Bed Door -->
                   <g class="switch-pin" data-switch-id="master-bed" transform="translate(950, 600)">
-                    <title>Master Bedroom: Aqara Z1 Pro 3-Rocker (Main Entry Downlights, Bedside Downlight + Curtain / Goodnight scene)</title>
+                    <title>Master Bedroom: Aqara Z1 Pro 3-Rocker (main lights, bedside light, Goodnight scene; no smart curtains)</title>
                     <rect x="0" y="-14" width="38" height="12" rx="3" fill="#0f172a" fill-opacity="0.95" stroke="#38bdf8" stroke-width="0.8" />
                     <text x="19" y="-5" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">Z1 • 3-RKR</text>
                     <rect x="0" y="0" width="38" height="20" rx="3.5" fill="#1e293b" stroke="#ffffff" stroke-width="1.4" filter="url(#badgeShadow)" />
@@ -8000,16 +7353,16 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "smart-switch-balcony",
             "name": "Smart Switch (Balcony)",
-            "choice": "Aqara H1 2-Gang (Black / Space Grey; Balcony light + decoupled outdoor fan control)",
+            "choice": "Aqara Z1 Pro 4-Rocker (Black; balcony fan/light scene via Bond, zip track raise, zip track lower, living-curtain scene; all command rockers to commission)",
             "notes": "Selected choice for Balcony.",
             "room": "Balcony",
             "priority": "P0",
             "status": "Selected",
-            "price": 60,
-            "priceDisplay": "$60",
-            "availableAt": "Smart Innovations",
-            "linkText": "Price brochure",
-            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
+            "price": 82,
+            "priceDisplay": "$82",
+            "availableAt": "Shopee SG",
+            "linkText": "Shopee Z1 Pro 4-button",
+            "linkUrl": "https://shopee.sg/AQARA-Smart-Wall-Switch-Z1-Pro-Compatibility-for-No-With-Neutral-Easy-Control-i.489606704.25453904614?xptdk=ea96e946-fa62-4ff0-9ff7-64450caf2996",
             "sellerDeductible": false,
             "sellerSavings": 0,
             "comparisonCategory": null,
@@ -8017,16 +7370,16 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Aqara H1 2-Gang (Black / Space Grey; Balcony light + decoupled outdoor fan control)",
+                        "model": "Aqara Z1 Pro 4-Rocker (Black; balcony fan/light scene via Bond, zip track raise, zip track lower, living-curtain scene; all command rockers to commission)",
                         "notes": "Selected choice for Balcony.",
                         "stores": [
                               {
-                                    "store": "Smart Innovations",
-                                    "price": 60,
-                                    "priceDisplay": "$60",
+                                    "store": "Shopee SG",
+                                    "price": 82,
+                                    "priceDisplay": "$82",
                                     "promo": "",
-                                    "linkText": "Price brochure",
-                                    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
+                                    "linkText": "Shopee Z1 Pro 4-button",
+                                    "linkUrl": "https://shopee.sg/AQARA-Smart-Wall-Switch-Z1-Pro-Compatibility-for-No-With-Neutral-Easy-Control-i.489606704.25453904614?xptdk=ea96e946-fa62-4ff0-9ff7-64450caf2996"
                               }
                         ]
                   }
@@ -8035,7 +7388,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "smart-switch-master-bed",
             "name": "Smart Switch (Master Bed)",
-            "choice": "Aqara Z1 Pro 3-Rocker (Dark Slate / Black; Entry, bedside + curtain / Goodnight scene)",
+            "choice": "Aqara Z1 Pro 3-Rocker (Dark Slate / Black; main lights, bedside light + Goodnight scene; no smart curtains)",
             "notes": "Selected choice for Master Bed.",
             "room": "Master Bed",
             "priority": "P0",
@@ -8052,7 +7405,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Aqara Z1 Pro 3-Rocker (Dark Slate / Black; Entry, bedside + curtain / Goodnight scene)",
+                        "model": "Aqara Z1 Pro 3-Rocker (Dark Slate / Black; main lights, bedside light + Goodnight scene; no smart curtains)",
                         "notes": "Selected choice for Master Bed.",
                         "stores": [
                               {
@@ -9272,63 +8625,6 @@ wall-switch action event exposed by the selected Home Assistant integration.
                                     "promo": "",
                                     "linkText": "Mallia Senses",
                                     "linkUrl": "https://www.legrand.com.sg/en/catalog/products/mallia-senses-1-gang-bs-unswitched-socket-outlet-13a-matt-white-281110mw"
-                              }
-                        ]
-                  }
-            ]
-      },
-      {
-            "id": "smart-curtains-master",
-            "name": "Smart Curtains (Master)",
-            "choice": "2x Aqara C3 Curtain Motor + 2m Track + Free Installation (fabric separate)",
-            "notes": "Day/night pair: two C3 motors with 2m tracks and installation. Curtain fabric is separate; confirm any extra-length surcharge.",
-            "room": "Master Bed",
-            "priority": "P1",
-            "status": "Selected",
-            "price": 818,
-            "priceDisplay": "$818.00",
-            "availableAt": "Smart Innovations",
-            "linkText": "Smart Innovations",
-            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
-            "sellerDeductible": false,
-            "sellerSavings": 0,
-            "comparisonCategory": null,
-            "selectedOptionIndex": 0,
-            "selectedStoreIndex": 0,
-            "options": [
-                  {
-                        "model": "2x Aqara C3 Curtain Motor + 2m Track + Free Installation (fabric separate)",
-                        "notes": "Day/night pair: two C3 motors with 2m tracks and installation. Curtain fabric is separate; confirm any extra-length surcharge.",
-                        "stores": [
-                              {
-                                    "store": "Smart Innovations",
-                                    "price": 818,
-                                    "priceDisplay": "$818.00",
-                                    "promo": "2 \u00d7 $409: motor + 2m track + free installation; fabric separate",
-                                    "linkText": "Smart Innovations",
-                                    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
-                              },
-                              {
-                                    "store": "Shopee SG",
-                                    "price": 903,
-                                    "priceDisplay": "$902.98",
-                                    "promo": "2 \u00d7 $451.49 after voucher: C3 + 2\u20133m track + installation; fabric separate",
-                                    "linkText": "Shopee",
-                                    "linkUrl": "https://shopee.sg/AQARA-Smart-Electric-Curtain-Motor-and-Track-C3-ZigBee-Fully-Automatic-Track-Voice-Control-Timing-i.489606704.29705595493?extraParams=%7B%22display_model_id%22%3A246435861695%2C%22model_selection_logic%22%3A3%7D"
-                              }
-                        ]
-                  },
-                  {
-                        "model": "Aqara Curtain Driver E1 (Rod / Track Clip-on)",
-                        "notes": "Rechargeable battery clip-on motor without replacing existing tracks.",
-                        "stores": [
-                              {
-                                    "store": "Shopee SG",
-                                    "price": 450,
-                                    "priceDisplay": "$450.00",
-                                    "promo": "Clip-on Pair",
-                                    "linkText": "Shopee",
-                                    "linkUrl": "https://shopee.sg"
                               }
                         ]
                   }
@@ -10918,6 +10214,41 @@ wall-switch action event exposed by the selected Home Assistant integration.
                                     "promo": "Smart Zigbee Roller",
                                     "linkText": "Shopee",
                                     "linkUrl": "https://shopee.sg"
+                              }
+                        ]
+                  }
+            ]
+      },
+      {
+            "id": "master-bedroom-curtains",
+            "name": "Master Bedroom Curtains",
+            "choice": "Manual day/night curtains on a normal double track; no smart motor for now",
+            "notes": "Manual day/night curtains on a normal double track; no smart motor for now.",
+            "room": "Master Bed",
+            "priority": "P1",
+            "status": "TBD",
+            "price": 650,
+            "priceDisplay": "$400-$900",
+            "availableAt": "-",
+            "linkText": "",
+            "linkUrl": "",
+            "sellerDeductible": false,
+            "sellerSavings": 0,
+            "comparisonCategory": null,
+            "selectedOptionIndex": 0,
+            "selectedStoreIndex": 0,
+            "options": [
+                  {
+                        "model": "Manual day/night curtains on a normal double track; no smart motor for now",
+                        "notes": "Manual day/night curtains on a normal double track; no smart motor for now.",
+                        "stores": [
+                              {
+                                    "store": "-",
+                                    "price": 650,
+                                    "priceDisplay": "$400-$900",
+                                    "promo": "",
+                                    "linkText": "",
+                                    "linkUrl": ""
                               }
                         ]
                   }
@@ -14666,9 +13997,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
           sensors:
             "• <strong>1x Bedside Wireless Mini Switch</strong> (Nightstand)<br>• <strong>1x Wardrobe Door Contact T1</strong> (Wardrobe Door)<br>• <span style='color: var(--accent-p0); font-weight: 700;'>Strictly NO motion/presence sensors!</span>",
           lighting:
-            "• <strong>Aqara Z1 Pro 3-Rocker</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Relay + curtain scene</span>)<br>• 4x High-CRI (>90) Recessed Downlights<br>• Aqara C3 Motorized Day/Night Curtains",
+            "• <strong>Aqara Z1 Pro 3-Rocker</strong> (main lights, bedside light, Goodnight scene)<br>• 4x High-CRI (>90) Recessed Downlights<br>• Manual day/night curtains; no smart motor for now",
           automations:
-            "• <strong>Bedside Tap:</strong> Single tap toggles reading light / main lights.<br>• <strong>Whole-House Kill Switch:</strong> Long-press shuts off ALL condo lights, closes curtains, locks door, sets AC to 25°C.",
+            "• <strong>Bedside Tap:</strong> Single tap toggles reading light / main lights.<br>• <strong>Whole-House Kill Switch:</strong> Long-press shuts off ALL condo lights, locks door, and sets AC to 25°C.",
           filterRoom: "Master Bed",
         },
         "Master Bath": {
@@ -14676,7 +14007,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
           type: "Private • En-suite Wet/Dry Zone",
           zoneId: "zone-Master-Bath",
           dimensions:
-            "• <strong>Length:</strong> ±3,200 mm<br>• <strong>Basin / WC Width:</strong> ±1,530 mm<br>• <strong>Shower Width:</strong> ±795 mm<br>• <strong>Floor Area:</strong> ~4.9 m² (~53 sq ft)<br>• <strong>Features:</strong> Full linear ensuite with dedicated walk-in shower.",
+            "• <strong>Length:</strong> ±3,200 mm<br>• <strong>Basin / WC Width:</strong> ±1,530 mm<br>• <strong>Shower Width:</strong> ±795 mm<br>• <strong>Floor Area:</strong> ~4.9 m² (~53 sq ft)<br>• <strong>Layout:</strong> Shower on the left, WC centrally, vanity and mirror on the right.",
           sensors:
             "• <strong>1x Aqara Door Contact T1</strong> (Door Frame)<br>• <strong>1x Aqara PIR Motion P1</strong> (Interior Ceiling)<br>• 100% Battery Powered ('Wasp in a Box' Pair)",
           lighting:
@@ -14764,9 +14095,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
           sensors:
             "• Solar Elevation & Weather Sync<br>• Sliding Door Contact Sensor (Optional)",
           lighting:
-            "• <strong>Aqara H1 2-Gang Switch</strong> (Light + decoupled Fan control)<br>• 1x Outdoor High-CRI Downlight<br>• Dooya Bi-Dir Zip Track + DD7002B (3 Sides) + Existing Seller Fan (Retained)",
+            "• <strong>Aqara Z1 Pro 4-Rocker</strong> on the indoor balcony wall<br>• Rocker 1: balcony fan/light scene through Bond; 2: zip raise; 3: zip lower; 4: living-curtain scene<br>• Dooya Bi-Dir Zip Track + DD7002B (3 Sides) + Existing Seller Fan (Retained)",
           automations:
-            "• <strong>Sunset Balcony Glow:</strong> Sliding door open after dark turns on soft warm downlight (30%).<br>• <strong>Zip Track Enclosure:</strong> Lowering zip blinds creates an enclosed outdoor room with fan on gentle breeze (Speed 2).",
+            "• <strong>Balcony On:</strong> Rocker 1 triggers the Bond scene for fan/light after RF learning is confirmed.<br>• <strong>Zip Track:</strong> Rockers 2/3 send raise/lower through DD7002B; retain the Dooya remote for stop and backup.<br>• <strong>Living Curtains:</strong> Rocker 4 triggers the paired day/night curtain scene.",
           filterRoom: "Balcony",
         },
       };
@@ -14893,11 +14224,11 @@ wall-switch action event exposed by the selected Home Assistant integration.
         living: ["light-living-track-a", "light-living-track-b", "fan-living", "scene-living"],
         dining: ["light-dining-pendant"],
         kitchen: ["light-kitchen-dl"],
-        balcony: ["light-balcony", "fan-balcony"],
+        balcony: ["light-balcony", "fan-balcony", "zip-track", "curtain-living"],
         bed2: ["light-bed2-dl"],
         "common-bath-light": ["light-common-dl"],
         "common-bath-heater": [],
-        "master-bed": ["light-master-spots", "curtain-master"],
+        "master-bed": ["light-master-spots"],
         "master-bath-light": ["light-master-bath-dl", "light-master-vanity"],
         "master-bath-heater": [],
       };

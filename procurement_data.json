@@ -178,16 +178,16 @@
   {
     "id": "smart-switch-balcony",
     "name": "Smart Switch (Balcony)",
-    "choice": "Aqara H1 2-Gang (Black / Space Grey; Balcony light + decoupled outdoor fan control)",
+    "choice": "Aqara Z1 Pro 4-Rocker (Black; balcony fan/light scene via Bond, zip track raise, zip track lower, living-curtain scene; all command rockers to commission)",
     "notes": "Selected choice for Balcony.",
     "room": "Balcony",
     "priority": "P0",
     "status": "Selected",
-    "price": 60,
-    "priceDisplay": "$60",
-    "availableAt": "Smart Innovations",
-    "linkText": "Price brochure",
-    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
+    "price": 82,
+    "priceDisplay": "$82",
+    "availableAt": "Shopee SG",
+    "linkText": "Shopee Z1 Pro 4-button",
+    "linkUrl": "https://shopee.sg/AQARA-Smart-Wall-Switch-Z1-Pro-Compatibility-for-No-With-Neutral-Easy-Control-i.489606704.25453904614?xptdk=ea96e946-fa62-4ff0-9ff7-64450caf2996",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "comparisonCategory": null,
@@ -195,16 +195,16 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H1 2-Gang (Black / Space Grey; Balcony light + decoupled outdoor fan control)",
+        "model": "Aqara Z1 Pro 4-Rocker (Black; balcony fan/light scene via Bond, zip track raise, zip track lower, living-curtain scene; all command rockers to commission)",
         "notes": "Selected choice for Balcony.",
         "stores": [
           {
-            "store": "Smart Innovations",
-            "price": 60,
-            "priceDisplay": "$60",
+            "store": "Shopee SG",
+            "price": 82,
+            "priceDisplay": "$82",
             "promo": "",
-            "linkText": "Price brochure",
-            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
+            "linkText": "Shopee Z1 Pro 4-button",
+            "linkUrl": "https://shopee.sg/AQARA-Smart-Wall-Switch-Z1-Pro-Compatibility-for-No-With-Neutral-Easy-Control-i.489606704.25453904614?xptdk=ea96e946-fa62-4ff0-9ff7-64450caf2996"
           }
         ]
       }
@@ -213,7 +213,7 @@
   {
     "id": "smart-switch-master-bed",
     "name": "Smart Switch (Master Bed)",
-    "choice": "Aqara Z1 Pro 3-Rocker (Dark Slate / Black; Entry, bedside + curtain / Goodnight scene)",
+    "choice": "Aqara Z1 Pro 3-Rocker (Dark Slate / Black; main lights, bedside light + Goodnight scene; no smart curtains)",
     "notes": "Selected choice for Master Bed.",
     "room": "Master Bed",
     "priority": "P0",
@@ -230,7 +230,7 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara Z1 Pro 3-Rocker (Dark Slate / Black; Entry, bedside + curtain / Goodnight scene)",
+        "model": "Aqara Z1 Pro 3-Rocker (Dark Slate / Black; main lights, bedside light + Goodnight scene; no smart curtains)",
         "notes": "Selected choice for Master Bed.",
         "stores": [
           {
@@ -1450,63 +1450,6 @@
             "promo": "",
             "linkText": "Mallia Senses",
             "linkUrl": "https://www.legrand.com.sg/en/catalog/products/mallia-senses-1-gang-bs-unswitched-socket-outlet-13a-matt-white-281110mw"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "smart-curtains-master",
-    "name": "Smart Curtains (Master)",
-    "choice": "2x Aqara C3 Curtain Motor + 2m Track + Free Installation (fabric separate)",
-    "notes": "Day/night pair: two C3 motors with 2m tracks and installation. Curtain fabric is separate; confirm any extra-length surcharge.",
-    "room": "Master Bed",
-    "priority": "P1",
-    "status": "Selected",
-    "price": 818,
-    "priceDisplay": "$818.00",
-    "availableAt": "Smart Innovations",
-    "linkText": "Smart Innovations",
-    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
-    "sellerDeductible": false,
-    "sellerSavings": 0,
-    "comparisonCategory": null,
-    "selectedOptionIndex": 0,
-    "selectedStoreIndex": 0,
-    "options": [
-      {
-        "model": "2x Aqara C3 Curtain Motor + 2m Track + Free Installation (fabric separate)",
-        "notes": "Day/night pair: two C3 motors with 2m tracks and installation. Curtain fabric is separate; confirm any extra-length surcharge.",
-        "stores": [
-          {
-            "store": "Smart Innovations",
-            "price": 818,
-            "priceDisplay": "$818.00",
-            "promo": "2 \u00d7 $409: motor + 2m track + free installation; fabric separate",
-            "linkText": "Smart Innovations",
-            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
-          },
-          {
-            "store": "Shopee SG",
-            "price": 903,
-            "priceDisplay": "$902.98",
-            "promo": "2 \u00d7 $451.49 after voucher: C3 + 2\u20133m track + installation; fabric separate",
-            "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg/AQARA-Smart-Electric-Curtain-Motor-and-Track-C3-ZigBee-Fully-Automatic-Track-Voice-Control-Timing-i.489606704.29705595493?extraParams=%7B%22display_model_id%22%3A246435861695%2C%22model_selection_logic%22%3A3%7D"
-          }
-        ]
-      },
-      {
-        "model": "Aqara Curtain Driver E1 (Rod / Track Clip-on)",
-        "notes": "Rechargeable battery clip-on motor without replacing existing tracks.",
-        "stores": [
-          {
-            "store": "Shopee SG",
-            "price": 450,
-            "priceDisplay": "$450.00",
-            "promo": "Clip-on Pair",
-            "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg"
           }
         ]
       }
@@ -3096,6 +3039,41 @@
             "promo": "Smart Zigbee Roller",
             "linkText": "Shopee",
             "linkUrl": "https://shopee.sg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "master-bedroom-curtains",
+    "name": "Master Bedroom Curtains",
+    "choice": "Manual day/night curtains on a normal double track; no smart motor for now",
+    "notes": "Manual day/night curtains on a normal double track; no smart motor for now.",
+    "room": "Master Bed",
+    "priority": "P1",
+    "status": "TBD",
+    "price": 650,
+    "priceDisplay": "$400-$900",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "comparisonCategory": null,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Manual day/night curtains on a normal double track; no smart motor for now",
+        "notes": "Manual day/night curtains on a normal double track; no smart motor for now.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 650,
+            "priceDisplay": "$400-$900",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
           }
         ]
       }

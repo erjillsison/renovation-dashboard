@@ -238,10 +238,10 @@
                   <text x="1030" y="670" font-size="10" font-weight="700" fill="#5a6e60" text-anchor="middle" stroke="none">BUILT-IN WARDROBE</text>
 
                   <!-- Master Bath Fixtures -->
-                  <rect x="1235" y="715" width="75" height="150" rx="4" stroke-dasharray="4 3" /> <!-- Shower -->
+                  <rect x="960" y="715" width="75" height="150" rx="4" stroke-dasharray="4 3" /> <!-- Shower (left) -->
                   <rect x="1145" y="715" width="45" height="65" rx="8" fill="#ffffff" fill-opacity="0.8" /> <!-- WC -->
-                  <rect x="960" y="715" width="65" height="65" rx="4" fill="#ffffff" fill-opacity="0.8" /> <!-- Vanity Basin -->
-                  <circle cx="992" cy="747" r="14" fill="#ffffff" fill-opacity="0.95" />
+                  <rect x="1235" y="715" width="65" height="65" rx="4" fill="#ffffff" fill-opacity="0.8" /> <!-- Vanity Basin (right) -->
+                  <circle cx="1267" cy="747" r="14" fill="#ffffff" fill-opacity="0.95" />
                 </g>
 
                 <!-- Layer 1d: Architectural Walls & Door Openings -->
@@ -627,7 +627,7 @@
                     points="940,355 1278,355 1278,700 940,700"
                     onclick="selectMapRoom('Master Bed')"
                   >
-                    <title>Master Bedroom: Queen Bed, Bedside Kill Switch, C3 Curtains</title>
+                    <title>Master Bedroom: Queen Bed, bedside controls, manual day/night curtains</title>
                   </polygon>
 
                   <!-- Master Bathroom -->
@@ -685,7 +685,7 @@
                   </g>
 
                   <!-- Bathrooms Vanity Mirror Lights -->
-                  <circle id="light-master-vanity" class="light-glow" cx="990" cy="745" r="12" fill="#ffd080" filter="url(#lightGlowFilter)" opacity="0.75" />
+                  <circle id="light-master-vanity" class="light-glow" cx="1267" cy="745" r="12" fill="#ffd080" filter="url(#lightGlowFilter)" opacity="0.75" />
                   <circle id="light-common-vanity" class="light-glow" cx="550" cy="722" r="12" fill="#ffd080" filter="url(#lightGlowFilter)" opacity="0.75" />
                   <!-- Indicative fixture clusters where individual downlights are not drawn -->
                   <g id="light-fixture-clusters" fill="#ffd080" stroke="#b7791f" stroke-width="1.5">
@@ -726,7 +726,7 @@
                   <text x="770" y="184" font-size="10" font-weight="700" fill="#3a7d99" text-anchor="middle">FAN</text>
 
                   <!-- Balcony Motorized Zip Blinds (3 sides, safely inset inside balcony perimeter) -->
-                  <polyline
+                  <polyline id="zip-track"
                     points="602,340 602,38 928,38 928,340"
                     fill="none" stroke="#d9822b" stroke-width="5" stroke-dasharray="8 4"
                   />
@@ -734,9 +734,7 @@
 
                   <!-- Motorized Day & Night Curtains (Safely inset from walls, no overlap) -->
                   <!-- Balcony Sliding Door Curtain -->
-                  <line x1="605" y1="345" x2="925" y2="345" stroke="#4a6b57" stroke-width="4" stroke-dasharray="6 3" />
-                  <!-- Master Bed Window Curtain -->
-                  <line id="curtain-master" x1="955" y1="370" x2="1265" y2="370" stroke="#4a6b57" stroke-width="4" stroke-dasharray="6 3" />
+                  <line id="curtain-living" x1="605" y1="345" x2="925" y2="345" stroke="#4a6b57" stroke-width="4" stroke-dasharray="6 3" />
                   <!-- Bed 2 Window Curtain -->
                   <line x1="315" y1="282" x2="575" y2="282" stroke="#4a6b57" stroke-width="4" stroke-dasharray="6 3" />
                 </g>
@@ -845,8 +843,10 @@
                     <path d="M 600 865 Q 520 865 425 910"/><circle cx="425" cy="910" r="5"/><text x="440" y="898">KITCHEN DL</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="balcony">
-                    <path d="M 644 370 Q 670 330 700 300"/><circle cx="700" cy="300" r="5"/><text x="666" y="330">BALCONY LIGHT</text>
-                    <path class="wireless" d="M 644 370 Q 755 310 770 180"/><circle cx="770" cy="180" r="5"/><text x="778" y="273">FAN SCENE</text>
+                    <path class="wireless" d="M 685 370 Q 720 310 700 300"/><circle cx="700" cy="300" r="5"/><text x="658" y="330">FAN + LIGHT</text>
+                    <path class="wireless" d="M 685 370 Q 655 210 605 55"/><circle cx="605" cy="55" r="5"/><text x="612" y="70">ZIP RAISE</text>
+                    <path class="wireless" d="M 685 370 Q 850 220 925 55"/><circle cx="925" cy="55" r="5"/><text x="868" y="70">ZIP LOWER</text>
+                    <path class="wireless" d="M 685 370 Q 760 350 835 345"/><circle cx="835" cy="345" r="5"/><text x="780" y="330">CURTAINS</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="bed2">
                     <path d="M 562 535 Q 510 480 450 465"/><circle cx="450" cy="465" r="5"/><text x="455" y="485">BED 2 DL</text>
@@ -859,11 +859,10 @@
                   </g>
                   <g class="switch-connection-group" data-switch-id="master-bed">
                     <path d="M 969 600 Q 1000 575 1020 550"/><circle cx="1020" cy="550" r="5"/><text x="983" y="570">MASTER DL</text>
-                    <path class="wireless" d="M 969 600 Q 1050 480 1100 370"/><circle cx="1100" cy="370" r="5"/><text x="1048" y="438">CURTAIN SCENE</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="master-bath-light">
                     <path d="M 1154 675 Q 1140 725 1110 760"/><circle cx="1110" cy="760" r="5"/><text x="1140" y="750">BATH DL</text>
-                    <path d="M 1154 675 Q 1050 700 990 745"/><circle cx="990" cy="745" r="5"/><text x="1028" y="720">VANITY</text>
+                    <path d="M 1154 675 Q 1220 700 1267 745"/><circle cx="1267" cy="745" r="5"/><text x="1202" y="720">VANITY</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="master-bath-heater">
                     <path d="M 1098 675 Q 1190 735 1250 800"/><circle cx="1250" cy="800" r="7"/><text x="1210" y="778">HEATER</text>
@@ -919,15 +918,19 @@
                     <circle cx="28.5" cy="15.5" r="1.5" fill="#38bdf8" />
                   </g>
 
-                  <!-- Balcony: H1 2-gang inside sliding-door frame -->
+                  <!-- Balcony: Z1 Pro command plate inside sliding-door frame -->
                   <g class="switch-pin" data-switch-id="balcony" transform="translate(625, 370)">
-                    <title>Balcony: Aqara H1 2-Gang (outdoor light relay + wireless fan scene; fan circuit stays powered)</title>
-                    <rect x="0" y="-14" width="38" height="12" rx="3" fill="#0f172a" fill-opacity="0.95" stroke="#38bdf8" stroke-width="0.8" />
-                    <text x="19" y="-5" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">2-GANG</text>
-                    <rect x="0" y="0" width="38" height="20" rx="3.5" fill="#1e293b" stroke="#ffffff" stroke-width="1.4" filter="url(#badgeShadow)" />
-                    <line x1="19" y1="2" x2="19" y2="18" stroke="#475569" stroke-width="1" />
-                    <circle cx="9.5" cy="15.5" r="1.5" fill="#38bdf8" />
-                    <circle cx="28.5" cy="15.5" r="1.5" fill="#38bdf8" />
+                    <title>Balcony: Aqara Z1 Pro 4-Rocker — fan/light Bond scene, zip raise, zip lower, living curtains</title>
+                    <rect x="0" y="-14" width="60" height="12" rx="3" fill="#0f172a" fill-opacity="0.95" stroke="#38bdf8" stroke-width="0.8" />
+                    <text x="30" y="-5" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">Z1 • 4-RKR</text>
+                    <rect x="0" y="0" width="60" height="20" rx="3.5" fill="#1e293b" stroke="#ffffff" stroke-width="1.4" filter="url(#badgeShadow)" />
+                    <line x1="15" y1="2" x2="15" y2="18" stroke="#475569" stroke-width="1" />
+                    <line x1="30" y1="2" x2="30" y2="18" stroke="#475569" stroke-width="1" />
+                    <line x1="45" y1="2" x2="45" y2="18" stroke="#475569" stroke-width="1" />
+                    <circle cx="7.5" cy="15.5" r="1.5" fill="#38bdf8" />
+                    <circle cx="22.5" cy="15.5" r="1.5" fill="#38bdf8" />
+                    <circle cx="37.5" cy="15.5" r="1.5" fill="#38bdf8" />
+                    <circle cx="52.5" cy="15.5" r="1.5" fill="#38bdf8" />
                   </g>
 
                   <!-- Bedroom 2: 1-Gang (Aqara H1, Inside Bedroom 2 Door) -->
@@ -960,7 +963,7 @@
 
                   <!-- Master Bedroom: Z1 Pro 3-Rocker, Inside Master Bed Door -->
                   <g class="switch-pin" data-switch-id="master-bed" transform="translate(950, 600)">
-                    <title>Master Bedroom: Aqara Z1 Pro 3-Rocker (Main Entry Downlights, Bedside Downlight + Curtain / Goodnight scene)</title>
+                    <title>Master Bedroom: Aqara Z1 Pro 3-Rocker (main lights, bedside light, Goodnight scene; no smart curtains)</title>
                     <rect x="0" y="-14" width="38" height="12" rx="3" fill="#0f172a" fill-opacity="0.95" stroke="#38bdf8" stroke-width="0.8" />
                     <text x="19" y="-5" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">Z1 • 3-RKR</text>
                     <rect x="0" y="0" width="38" height="20" rx="3.5" fill="#1e293b" stroke="#ffffff" stroke-width="1.4" filter="url(#badgeShadow)" />
