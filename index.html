@@ -2439,7 +2439,7 @@
                 <th
                   class="sortable"
                   onclick="handleSort('name')"
-                  style="width: 18%; min-width: 160px"
+                  style="width: 20%; min-width: 160px"
                 >
                   Item & Category
                   <span class="sort-icon" id="sort-name">⇅</span>
@@ -2447,7 +2447,7 @@
                 <th
                   class="sortable"
                   onclick="handleSort('choice')"
-                  style="width: 28%; min-width: 240px"
+                  style="width: 32%; min-width: 240px"
                 >
                   Selected Model
                   <span class="sort-icon" id="sort-choice">⇅</span>
@@ -2455,7 +2455,7 @@
                 <th
                   class="sortable"
                   onclick="handleSort('price')"
-                  style="width: 11%; min-width: 105px; text-align: right"
+                  style="width: 12%; min-width: 105px; text-align: right"
                 >
                   Price
                   <span class="sort-icon" id="sort-price">⇅</span>
@@ -2463,7 +2463,7 @@
                 <th
                   class="sortable"
                   onclick="handleSort('room')"
-                  style="width: 11%; min-width: 105px"
+                  style="width: 12%; min-width: 105px"
                 >
                   Room <span class="sort-icon" id="sort-room">⇅</span>
                 </th>
@@ -2474,13 +2474,8 @@
                 >
                   Priority <span class="sort-icon" id="sort-priority">⇅</span>
                 </th>
-                <th
-                  class="sortable"
-                  onclick="handleSort('availableAt')"
-                  style="width: 23%; min-width: 210px"
-                >
-                  Details and Options
-                  <span class="sort-icon" id="sort-availableAt">⇅</span>
+                <th style="width: 15%; min-width: 130px; text-align: center">
+                  Action
                 </th>
               </tr>
             </thead>
@@ -13074,7 +13069,6 @@ wall-switch action event exposed by the selected Home Assistant integration.
           "price",
           "room",
           "priority",
-          "availableAt",
         ];
         columns.forEach((col) => {
           const iconEl = document.getElementById(`sort-${col}`);
@@ -13273,42 +13267,28 @@ wall-switch action event exposed by the selected Home Assistant integration.
             // 4. Priority Column
             const priorityDisplay = `<span class="badge-priority ${priorityClass}">${item.priority}</span>`;
 
-            // 5. Details and Options Column (combines Store / Platform + Deal Link + All Deals Drawer Toggle)
-            const activeLinkUrl = currentStore.linkUrl || item.linkUrl;
-            const storeName = currentStore.store || item.availableAt;
-            const storeBadgeWithLink = getStoreBadgeHtml(storeName, activeLinkUrl);
-
-            const hasOtherOptions =
-              (item.options && item.options.length > 1) ||
-              (item.options &&
-                item.options[0] &&
-                item.options[0].stores &&
-                item.options[0].stores.length > 1);
-
+            // 5. Action Column (View Details button and optional Quotes button)
             const optCount =
               item.options && item.options.length > 1
                 ? item.options.length
                 : item.options && item.options[0] && item.options[0].stores
                 ? item.options[0].stores.length
-                : 0;
+                : 1;
 
             const isDrawerOpen = openDrawers.has(item.id);
             const drawerBtnActive = isDrawerOpen ? "active" : "";
+            const btnLabel = optCount > 1 ? `📋 View Details (${optCount})` : "📋 View Details";
 
-            let actionsHtml = "";
-            if (hasOtherOptions) {
-              actionsHtml += `<button type="button" class="btn-table-pill btn-drawer-pill ${drawerBtnActive}" id="toggleBtn-${item.id}" onclick="toggleItemDrawer('${item.id}')" title="View all candidate options & store deals">📋 All Deals (${optCount})</button>`;
-            }
+            let actionsHtml = `
+              <button type="button" class="btn-table-pill btn-drawer-pill ${drawerBtnActive}" id="toggleBtn-${item.id}" onclick="toggleItemDrawer('${item.id}')" title="View store platform, deals & item specifications">${btnLabel}</button>
+            `;
             if (item.comparisonCategory) {
               actionsHtml += `<button type="button" class="btn-table-pill btn-showroom-pill" onclick="viewCategoryComparison('${item.comparisonCategory}')" title="View Showroom Comparison Table">🏬 Quotes</button>`;
             }
 
-            const detailsAndOptionsDisplay = `
-              <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
-                <div class="store-badge-container">
-                  ${storeBadgeWithLink}
-                </div>
-                ${actionsHtml ? `<div style="display: flex; gap: 4px; align-items: center; flex-wrap: wrap;">${actionsHtml}</div>` : ""}
+            const actionCellDisplay = `
+              <div style="display: flex; gap: 4px; align-items: center; justify-content: center; flex-wrap: wrap;">
+                ${actionsHtml}
               </div>
             `;
 
@@ -13320,97 +13300,115 @@ wall-switch action event exposed by the selected Home Assistant integration.
               <td style="text-align: right;"><span class="price-tag">${activePriceDisplay}</span></td>
               <td>${roomDisplay}</td>
               <td>${priorityDisplay}</td>
-              <td>${detailsAndOptionsDisplay}</td>
+              <td style="text-align: center;">${actionCellDisplay}</td>
             `;
             tbody.appendChild(row);
 
-            // If item has multiple options or multiple stores, append the interactive drawer row
-            if (hasOtherOptions) {
-              const drawerRow = document.createElement("tr");
-              drawerRow.id = `drawer-${item.id}`;
-              drawerRow.className = "item-drawer-row";
-              drawerRow.style.display = isDrawerOpen ? "table-row" : "none";
+            // Append the interactive drawer row for every item
+            const drawerRow = document.createElement("tr");
+            drawerRow.id = `drawer-${item.id}`;
+            drawerRow.className = "item-drawer-row";
+            drawerRow.style.display = isDrawerOpen ? "table-row" : "none";
 
-              let optionRowsHtml = "";
-              item.options.forEach((mOpt, mIdx) => {
-                const isModelSelected = mIdx === optIdx;
-                const mStores =
-                  mOpt.stores && mOpt.stores.length > 0
-                    ? mOpt.stores
-                    : [
+            const availableOptions =
+              item.options && item.options.length > 0
+                ? item.options
+                : [
+                    {
+                      model: item.choice,
+                      notes: item.notes,
+                      stores: [
                         {
-                          store: "-",
-                          price: 0,
-                          priceDisplay: "-",
+                          store: item.availableAt,
+                          price: item.price,
+                          priceDisplay: item.priceDisplay,
                           promo: "",
-                          linkText: "",
-                          linkUrl: "",
+                          linkText: item.linkText,
+                          linkUrl: item.linkUrl,
                         },
-                      ];
-                mStores.forEach((sOpt, sIdx) => {
-                  const isStoreSelected = isModelSelected && sIdx === storeIdx;
-                  const storeBadge = getStoreBadgeHtml(sOpt.store, sOpt.linkUrl);
-                  const rowClass = isStoreSelected ? "active-option-row" : "";
-                  const btnClass = isStoreSelected
-                    ? "btn-select-option is-active"
-                    : "btn-select-option";
-                  const btnText = isStoreSelected
-                    ? "✓ Active Choice"
-                    : "Select";
+                      ],
+                    },
+                  ];
 
-                  optionRowsHtml += `
-                    <tr class="${rowClass}">
-                      <td style="font-weight:600;">${mOpt.model}</td>
-                      <td style="color:var(--text-secondary); font-size:0.75rem;">${
-                        mOpt.notes || item.notes || "—"
-                      }</td>
-                      <td style="white-space:nowrap;">${storeBadge}</td>
-                      <td style="font-weight:700; white-space:nowrap;">${
-                        sOpt.priceDisplay ||
-                        (sOpt.price ? `$${sOpt.price.toLocaleString()}` : "—")
-                      }</td>
-                      <td style="color:#15803d; font-weight:600; font-size:0.74rem;">${
-                        sOpt.promo ? `✨ ${sOpt.promo}` : "—"
-                      }</td>
-                      <td style="white-space:nowrap; text-align:center;">
-                        <button type="button" class="${btnClass}" onclick="selectCandidateOption('${safeItemName}', ${mIdx}, ${sIdx});">
-                          ${btnText}
-                        </button>
-                      </td>
-                    </tr>
-                  `;
-                });
+            let optionRowsHtml = "";
+            availableOptions.forEach((mOpt, mIdx) => {
+              const isModelSelected = mIdx === optIdx;
+              const mStores =
+                mOpt.stores && mOpt.stores.length > 0
+                  ? mOpt.stores
+                  : [
+                      {
+                        store: "-",
+                        price: 0,
+                        priceDisplay: "-",
+                        promo: "",
+                        linkText: "",
+                        linkUrl: "",
+                      },
+                    ];
+              mStores.forEach((sOpt, sIdx) => {
+                const isStoreSelected = isModelSelected && sIdx === storeIdx;
+                const storeBadge = getStoreBadgeHtml(sOpt.store, sOpt.linkUrl);
+                const rowClass = isStoreSelected ? "active-option-row" : "";
+                const btnClass = isStoreSelected
+                  ? "btn-select-option is-active"
+                  : "btn-select-option";
+                const btnText = isStoreSelected
+                  ? "✓ Active Choice"
+                  : "Select";
+
+                optionRowsHtml += `
+                  <tr class="${rowClass}">
+                    <td style="font-weight:600;">${mOpt.model}</td>
+                    <td style="color:var(--text-secondary); font-size:0.75rem;">${
+                      mOpt.notes || item.notes || "—"
+                    }</td>
+                    <td style="white-space:nowrap;">${storeBadge}</td>
+                    <td style="font-weight:700; white-space:nowrap;">${
+                      sOpt.priceDisplay ||
+                      (sOpt.price ? `$${sOpt.price.toLocaleString()}` : "—")
+                    }</td>
+                    <td style="color:#15803d; font-weight:600; font-size:0.74rem;">${
+                      sOpt.promo ? `✨ ${sOpt.promo}` : "—"
+                    }</td>
+                    <td style="white-space:nowrap; text-align:center;">
+                      <button type="button" class="${btnClass}" onclick="selectCandidateOption('${safeItemName}', ${mIdx}, ${sIdx});">
+                        ${btnText}
+                      </button>
+                    </td>
+                  </tr>
+                `;
               });
+            });
 
-              drawerRow.innerHTML = `
-                <td colspan="6">
-                  <div class="drawer-container">
-                    <div class="drawer-header">
-                      <span class="drawer-title">📋 Evaluated Models & Store Deals for <strong>${item.name}</strong></span>
-                      <span class="drawer-hint">Select any option to set it as your active plan choice. Click store name to open deal page.</span>
-                    </div>
-                    <div style="overflow-x: auto;">
-                      <table class="drawer-table">
-                        <thead>
-                          <tr>
-                            <th style="width: 25%;">Model Variant</th>
-                            <th style="width: 33%;">Key Notes / Specs</th>
-                            <th style="width: 17%;">Store / Platform</th>
-                            <th style="width: 10%;">Price</th>
-                            <th style="width: 10%;">Promo / Terms</th>
-                            <th style="width: 5%; text-align: center;">Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          ${optionRowsHtml}
-                        </tbody>
-                      </table>
-                    </div>
+            drawerRow.innerHTML = `
+              <td colspan="6">
+                <div class="drawer-container">
+                  <div class="drawer-header">
+                    <span class="drawer-title">📋 Item Details & Deals: <strong>${item.name}</strong></span>
+                    <span class="drawer-hint">Click the store link to open the retailer listing. Select an alternative option to switch your active choice.</span>
                   </div>
-                </td>
-              `;
-              tbody.appendChild(drawerRow);
-            }
+                  <div style="overflow-x: auto;">
+                    <table class="drawer-table">
+                      <thead>
+                        <tr>
+                          <th style="width: 25%;">Model Variant</th>
+                          <th style="width: 33%;">Key Notes / Specs</th>
+                          <th style="width: 17%;">Store / Platform</th>
+                          <th style="width: 10%;">Price</th>
+                          <th style="width: 10%;">Promo / Terms</th>
+                          <th style="width: 5%; text-align: center;">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        ${optionRowsHtml}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </td>
+            `;
+            tbody.appendChild(drawerRow);
           });
         }
 
