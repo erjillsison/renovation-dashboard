@@ -2,7 +2,7 @@
   {
     "id": "smart-switch-entrance",
     "name": "Smart Switch (Entrance)",
-    "choice": "Aqara H1 2-Gang (Black / Space Grey; Main entry downlight + Shoe cabinet LED)",
+    "choice": "Aqara H1 2-Gang (Black / Space Grey; one entrance-hall ceiling light + shoe-cabinet LED)",
     "notes": "Selected choice for Entrance.",
     "room": "Entrance",
     "priority": "P0",
@@ -18,7 +18,7 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H1 2-Gang (Black / Space Grey; Main entry downlight + Shoe cabinet LED)",
+        "model": "Aqara H1 2-Gang (Black / Space Grey; one entrance-hall ceiling light + shoe-cabinet LED)",
         "notes": "Selected choice for Entrance.",
         "stores": [
           {
@@ -140,7 +140,7 @@
   {
     "id": "smart-switch-kitchen",
     "name": "Smart Switch (Kitchen)",
-    "choice": "Aqara H1 2-Gang (Black / Space Grey; Dedicated switch for kitchen downlights + under-cabinet LED)",
+    "choice": "Aqara H1 2-Gang (Black / Space Grey; outside kitchen on dining-side wall; downlights + spare rocker)",
     "notes": "Selected choice for Kitchen.",
     "room": "Kitchen",
     "priority": "P0",
@@ -156,47 +156,13 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Aqara H1 2-Gang (Black / Space Grey; Dedicated switch for kitchen downlights + under-cabinet LED)",
+        "model": "Aqara H1 2-Gang (Black / Space Grey; outside kitchen on dining-side wall; downlights + spare rocker)",
         "notes": "Selected choice for Kitchen.",
         "stores": [
           {
             "store": "Smart Innovations",
             "price": 60,
             "priceDisplay": "$60",
-            "promo": "",
-            "linkText": "Price brochure",
-            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "smart-switch-hallway",
-    "name": "Smart Switch (Hallway)",
-    "choice": "Aqara H1 1-Gang (Black / Space Grey; Dedicated corridor switch, beside door to right)",
-    "notes": "Selected choice for Whole House.",
-    "room": "Whole House",
-    "priority": "P0",
-    "status": "Selected",
-    "price": 55,
-    "priceDisplay": "$55",
-    "availableAt": "Smart Innovations",
-    "linkText": "Price brochure",
-    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
-    "sellerDeductible": false,
-    "sellerSavings": 0,
-    "selectedOptionIndex": 0,
-    "selectedStoreIndex": 0,
-    "options": [
-      {
-        "model": "Aqara H1 1-Gang (Black / Space Grey; Dedicated corridor switch, beside door to right)",
-        "notes": "Selected choice for Whole House.",
-        "stores": [
-          {
-            "store": "Smart Innovations",
-            "price": 55,
-            "priceDisplay": "$55",
             "promo": "",
             "linkText": "Price brochure",
             "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
@@ -460,9 +426,9 @@
     ]
   },
   {
-    "id": "dumb-downlights-living-room",
-    "name": "Dumb Downlights (Living Room)",
-    "choice": "6x High-CRI (>90) Recessed Downlights",
+    "id": "track-lights-living-room",
+    "name": "Track Lights (Living Room)",
+    "choice": "2 independently switched ceiling tracks, provisionally 3x High-CRI heads each; $130 fixture allowance excludes track rails/installation (TBD)",
     "notes": "Selected choice for Living Room.",
     "room": "Living Room",
     "priority": "P1",
@@ -470,7 +436,7 @@
     "price": 130,
     "priceDisplay": "$130",
     "availableAt": "Sembawang Lighting House / Shopee",
-    "linkText": "Shopee",
+    "linkText": "Shopee fixture reference",
     "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
     "sellerDeductible": false,
     "sellerSavings": 0,
@@ -478,7 +444,7 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "6x High-CRI (>90) Recessed Downlights",
+        "model": "2 independently switched ceiling tracks, provisionally 3x High-CRI heads each; $130 fixture allowance excludes track rails/installation (TBD)",
         "notes": "Selected choice for Living Room.",
         "stores": [
           {
@@ -486,7 +452,7 @@
             "price": 130,
             "priceDisplay": "$130",
             "promo": "",
-            "linkText": "Shopee",
+            "linkText": "Shopee fixture reference",
             "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813"
           }
         ]
@@ -576,9 +542,9 @@
     ]
   },
   {
-    "id": "dumb-downlights-entrance",
-    "name": "Dumb Downlights (Entrance)",
-    "choice": "1x High-CRI (>90) Recessed Downlight",
+    "id": "ceiling-light-entrance-hallway",
+    "name": "Ceiling Light (Entrance / Hallway)",
+    "choice": "1x High-CRI (>90) ceiling light for the whole entrance hallway; controlled by entrance H1 2-gang",
     "notes": "Selected choice for Entrance.",
     "room": "Entrance",
     "priority": "P1",
@@ -586,7 +552,7 @@
     "price": 20,
     "priceDisplay": "$20",
     "availableAt": "Sembawang Lighting House / Shopee",
-    "linkText": "Shopee",
+    "linkText": "Shopee fixture reference",
     "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
     "sellerDeductible": false,
     "sellerSavings": 0,
@@ -594,7 +560,7 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "1x High-CRI (>90) Recessed Downlight",
+        "model": "1x High-CRI (>90) ceiling light for the whole entrance hallway; controlled by entrance H1 2-gang",
         "notes": "Selected choice for Entrance.",
         "stores": [
           {
@@ -602,7 +568,7 @@
             "price": 20,
             "priceDisplay": "$20",
             "promo": "",
-            "linkText": "Shopee",
+            "linkText": "Shopee fixture reference",
             "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813"
           }
         ]
@@ -672,40 +638,6 @@
             "promo": "",
             "linkText": "Shopee",
             "linkUrl": "https://shopee.sg/IP65-LED-Downlight-7W-9W-12W-15W-Waterproof-LED-DownLights-AC220V-230V-240V-Recessed-Downlight-LED-Spot-For-Bathroom-i.800728237.19715736986"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "dumb-downlights-hallway",
-    "name": "Dumb Downlights (Hallway)",
-    "choice": "2x High-CRI (>90) Recessed Downlights",
-    "notes": "Selected choice for Whole House.",
-    "room": "Whole House",
-    "priority": "P1",
-    "status": "Selected",
-    "price": 45,
-    "priceDisplay": "$45",
-    "availableAt": "Sembawang Lighting House / Shopee",
-    "linkText": "Shopee",
-    "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
-    "sellerDeductible": false,
-    "sellerSavings": 0,
-    "selectedOptionIndex": 0,
-    "selectedStoreIndex": 0,
-    "options": [
-      {
-        "model": "2x High-CRI (>90) Recessed Downlights",
-        "notes": "Selected choice for Whole House.",
-        "stores": [
-          {
-            "store": "Sembawang Lighting House / Shopee",
-            "price": 45,
-            "priceDisplay": "$45",
-            "promo": "",
-            "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813"
           }
         ]
       }
@@ -808,40 +740,6 @@
             "promo": "",
             "linkText": "Shopee",
             "linkUrl": "https://shopee.sg/IP65-LED-Downlight-7W-9W-12W-15W-Waterproof-LED-DownLights-AC220V-230V-240V-Recessed-Downlight-LED-Spot-For-Bathroom-i.800728237.19715736986"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "under-cabinet-led-strip-kitchen",
-    "name": "Under-Cabinet LED Strip (Kitchen)",
-    "choice": "3m 24V COB Warm White LED Strip (3000K, >90 CRI) + Driver",
-    "notes": "Selected choice for Kitchen.",
-    "room": "Kitchen",
-    "priority": "P1",
-    "status": "Selected",
-    "price": 55,
-    "priceDisplay": "$55",
-    "availableAt": "Sembawang Lighting House / Shopee",
-    "linkText": "Shopee",
-    "linkUrl": "https://shopee.sg/COB-LED-Strip-Light-12V-24V-Warm-White-High-Density-Flexible-LED-Tape-Kitchen-Under-Cabinet-Lighting-i.1013019863.24143888921",
-    "sellerDeductible": false,
-    "sellerSavings": 0,
-    "selectedOptionIndex": 0,
-    "selectedStoreIndex": 0,
-    "options": [
-      {
-        "model": "3m 24V COB Warm White LED Strip (3000K, >90 CRI) + Driver",
-        "notes": "Selected choice for Kitchen.",
-        "stores": [
-          {
-            "store": "Sembawang Lighting House / Shopee",
-            "price": 55,
-            "priceDisplay": "$55",
-            "promo": "",
-            "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg/COB-LED-Strip-Light-12V-24V-Warm-White-High-Density-Flexible-LED-Tape-Kitchen-Under-Cabinet-Lighting-i.1013019863.24143888921"
           }
         ]
       }

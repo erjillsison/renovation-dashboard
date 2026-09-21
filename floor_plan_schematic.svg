@@ -244,7 +244,7 @@
                   <circle cx="992" cy="747" r="14" fill="#ffffff" fill-opacity="0.95" />
                 </g>
 
-                <!-- Layer 1d: Architectural Walls & Door Swings (Exact Seamless Alignment) -->
+                <!-- Layer 1d: Architectural Walls & Door Openings -->
                 <g id="layerSchematicWalls" pointer-events="none">
                   <!-- Exterior Boundary Walls (Continuous structural perimeter, closing all intersections) -->
                   <path
@@ -260,7 +260,7 @@
                       M 300 565 L 590 565
                       M 300 772 L 590 772
                       M 590 268 L 590 505
-                      M 590 685 L 590 772
+                      M 590 675 L 590 772
                       M 590 772 L 590 890 M 590 970 L 590 1135
                       M 940 355 L 940 590
                       M 940 700 L 1140 700 M 1210 700 L 1320 700
@@ -269,30 +269,7 @@
                     fill="none" stroke="#333b35" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"
                   />
 
-                  <!-- Door Swings & Leaves -->
-                  <!-- Main Entrance Door (at bottom of narrow foyer, swinging inward) -->
-                  <line x1="620" y1="1213" x2="620" y2="1138" stroke="#232724" stroke-width="3" stroke-linecap="round" />
-                  <path d="M 620 1138 A 75 75 0 0 1 695 1213" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
-
-                  <!-- Bedroom 2 Door (swinging into Bed 2 from hallway) -->
-                  <line x1="585" y1="565" x2="540" y2="565" stroke="#232724" stroke-width="3" stroke-linecap="round" />
-                  <path d="M 585 565 A 45 45 0 0 0 540 520" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
-
-                  <!-- Common Bath Door (swinging into Common Bath) -->
-                  <line x1="585" y1="640" x2="540" y2="640" stroke="#232724" stroke-width="3" stroke-linecap="round" />
-                  <path d="M 585 640 A 45 45 0 0 1 540 685" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
-
-                  <!-- Master Bedroom Door (swinging into Master Bed against wardrobe) -->
-                  <line x1="940" y1="595" x2="990" y2="595" stroke="#232724" stroke-width="3" stroke-linecap="round" />
-                  <path d="M 940 595 A 50 50 0 0 1 990 645" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
-
-                  <!-- Master Bath Door (swinging into Master Bath) -->
-                  <line x1="1140" y1="700" x2="1140" y2="750" stroke="#232724" stroke-width="3" stroke-linecap="round" />
-                  <path d="M 1140 700 A 50 50 0 0 1 1190 750" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
-
-                  <!-- Balcony Sliding Doors (at y=355) -->
-                  <line x1="600" y1="352" x2="770" y2="352" stroke="#5a8b9e" stroke-width="3" stroke-linecap="round" />
-                  <line x1="760" y1="358" x2="930" y2="358" stroke="#5a8b9e" stroke-width="3" stroke-linecap="round" />
+                  <!-- Doors are shown only as wall openings, matching the clean floor plan. -->
 
                   <!-- Structural Concrete Columns & Piers -->
                   <rect x="584" y="345" width="14" height="20" fill="#232724" />
@@ -590,7 +567,7 @@
                     points="590,355 940,355 940,710 590,710"
                     onclick="selectMapRoom('Living Room')"
                   >
-                    <title>Living Room: Sofa, 65" TV, Lengthwise mmWave, 6x CCT Spotlights</title>
+                    <title>Living Room: sofa, TV, mmWave, two separately switched ceiling tracks</title>
                   </polygon>
 
                   <!-- Dining Room -->
@@ -620,7 +597,7 @@
                     points="300,772 590,772 590,1135 510,1135 510,1088 300,1088"
                     onclick="selectMapRoom('Kitchen')"
                   >
-                    <title>Kitchen: W/D, Fridge, Under-Cabinet LED Strip (7AM Coffee)</title>
+                    <title>Kitchen: W/D, Fridge, three ceiling downlights</title>
                   </polygon>
 
                   <!-- Common Bathroom -->
@@ -675,23 +652,20 @@
                     filter="url(#stripGlow)" opacity="0.8"
                   />
 
-                  <!-- Kitchen Under-Cabinet LED Strip -->
-                  <line
-                    id="light-kitchen-strip"
-                    class="light-glow"
-                    x1="320" y1="840" x2="480" y2="840"
-                    stroke="#ffbb55" stroke-width="8" stroke-linecap="round"
-                    filter="url(#stripGlow)" opacity="0.8"
-                  />
-
-                  <!-- Living Room Spotlights (6x glowing points) -->
+                  <!-- Two independently switched living-room ceiling tracks, three spots each -->
                   <g id="light-living-spots" class="light-glow" opacity="0.85">
-                    <circle cx="670" cy="410" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
-                    <circle cx="670" cy="530" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
-                    <circle cx="670" cy="650" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
-                    <circle cx="850" cy="410" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
-                    <circle cx="850" cy="530" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
-                    <circle cx="850" cy="650" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                    <g id="light-living-track-a">
+                      <line x1="670" y1="410" x2="670" y2="650" stroke="#6b7280" stroke-width="5" stroke-linecap="round" />
+                      <circle cx="670" cy="410" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                      <circle cx="670" cy="530" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                      <circle cx="670" cy="650" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                    </g>
+                    <g id="light-living-track-b">
+                      <line x1="850" y1="410" x2="850" y2="650" stroke="#6b7280" stroke-width="5" stroke-linecap="round" />
+                      <circle cx="850" cy="410" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                      <circle cx="850" cy="530" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                      <circle cx="850" cy="650" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                    </g>
                   </g>
 
                   <!-- Dining Pendant (Glowing amber orb) -->
@@ -715,9 +689,8 @@
                   <circle id="light-common-vanity" class="light-glow" cx="550" cy="722" r="12" fill="#ffd080" filter="url(#lightGlowFilter)" opacity="0.75" />
                   <!-- Indicative fixture clusters where individual downlights are not drawn -->
                   <g id="light-fixture-clusters" fill="#ffd080" stroke="#b7791f" stroke-width="1.5">
-                    <circle id="light-foyer-dl" cx="670" cy="1100" r="8"><title>Foyer downlight</title></circle>
+                    <circle id="light-foyer-dl" cx="670" cy="1015" r="8"><title>One ceiling light for the entrance hallway</title></circle>
                     <circle id="light-kitchen-dl" cx="425" cy="910" r="8"><title>Kitchen downlights</title></circle>
-                    <circle id="light-hall-dl" cx="680" cy="955" r="8"><title>Hallway downlights</title></circle>
                     <circle id="light-balcony" cx="700" cy="300" r="8"><title>Balcony light</title></circle>
                     <circle id="light-bed2-dl" cx="450" cy="465" r="8"><title>Bedroom 2 downlights</title></circle>
                     <circle id="light-common-dl" cx="445" cy="625" r="8"><title>Common bathroom downlights</title></circle>
@@ -856,22 +829,20 @@
                 <!-- Suggested switch-to-load relationships, not physical conduit routes. Dashed amber paths are wireless scenes. -->
                 <g id="layerSwitchConnections" pointer-events="none">
                   <g class="switch-connection-group" data-switch-id="entrance">
-                    <path d="M 744 1160 Q 710 1120 670 1100"/><circle cx="670" cy="1100" r="5"/><text x="645" y="1082">FOYER DL</text>
+                    <path d="M 744 1160 Q 710 1080 670 1015"/><circle cx="670" cy="1015" r="5"/><text x="640" y="1000">ENTRY / HALL LIGHT</text>
                     <path d="M 744 1160 Q 790 1100 760 1050"/><circle cx="760" cy="1050" r="5"/><text x="770" y="1082">SHOE LED</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="living">
-                    <path d="M 635 570 Q 650 545 670 530"/><circle cx="670" cy="530" r="5"/><text x="646" y="555">LIVING DL</text>
-                    <path class="wireless" d="M 635 570 Q 738 620 850 540"/><circle cx="850" cy="540" r="5"/><text x="742" y="602">FAN SCENE</text>
+                    <path d="M 635 570 Q 650 545 670 530"/><circle cx="670" cy="530" r="5"/><text x="638" y="550">TRACK 1</text>
+                    <path d="M 635 570 Q 740 455 850 530"/><circle cx="850" cy="530" r="5"/><text x="790" y="492">TRACK 2</text>
+                    <path class="wireless" d="M 635 570 Q 755 630 850 540"/><circle cx="850" cy="540" r="5"/><text x="793" y="591">FAN</text>
+                    <path class="wireless" d="M 635 570 Q 690 670 765 620"/><circle id="scene-living" cx="765" cy="620" r="5"/><text x="710" y="653">SCENE</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="dining">
                     <path class="wireless" d="M 638 815 Q 720 855 805 780"/><circle cx="805" cy="780" r="5"/><text x="704" y="835">T2 PENDANT</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="kitchen">
-                    <path d="M 545 875 Q 480 880 425 910"/><circle cx="425" cy="910" r="5"/><text x="440" y="898">KITCHEN DL</text>
-                    <path d="M 545 875 Q 475 810 400 840"/><circle cx="400" cy="840" r="5"/><text x="410" y="820">COUNTER LED</text>
-                  </g>
-                  <g class="switch-connection-group" data-switch-id="hall">
-                    <path d="M 617 985 Q 650 955 680 955"/><circle cx="680" cy="955" r="5"/><text x="642" y="941">HALL DL</text>
+                    <path d="M 600 865 Q 520 865 425 910"/><circle cx="425" cy="910" r="5"/><text x="440" y="898">KITCHEN DL</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="balcony">
                     <path d="M 644 370 Q 670 330 700 300"/><circle cx="700" cy="300" r="5"/><text x="666" y="330">BALCONY LIGHT</text>
@@ -881,10 +852,10 @@
                     <path d="M 562 535 Q 510 480 450 465"/><circle cx="450" cy="465" r="5"/><text x="455" y="485">BED 2 DL</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="common-bath-light">
-                    <path d="M 595 615 Q 520 590 445 625"/><circle cx="445" cy="625" r="5"/><text x="470" y="608">BATH DL</text>
+                    <path d="M 595 700 Q 520 675 445 625"/><circle cx="445" cy="625" r="5"/><text x="470" y="608">BATH DL</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="common-bath-heater">
-                    <path d="M 595 720 Q 530 740 450 735"/><circle cx="450" cy="735" r="7"/><text x="464" y="750">HEATER</text>
+                    <path d="M 595 745 Q 530 740 450 735"/><circle cx="450" cy="735" r="7"/><text x="464" y="750">HEATER</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="master-bed">
                     <path d="M 969 600 Q 1000 575 1020 550"/><circle cx="1020" cy="550" r="5"/><text x="983" y="570">MASTER DL</text>
@@ -903,7 +874,7 @@
                 <g id="layerWallSwitches">
                   <!-- Entrance: H1 2-Gang, foyer east wall -->
                   <g class="switch-pin" data-switch-id="entrance" transform="translate(725, 1160)">
-                    <title>Entrance: Aqara H1 2-Gang (foyer downlight + shoe cabinet LED)</title>
+                    <title>Entrance: Aqara H1 2-Gang (one entrance-hall ceiling light + shoe cabinet LED)</title>
                     <rect x="0" y="-14" width="38" height="12" rx="3" fill="#0f172a" fill-opacity="0.95" stroke="#38bdf8" stroke-width="0.8" />
                     <text x="19" y="-5" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">2-GANG</text>
                     <rect x="0" y="0" width="38" height="20" rx="3.5" fill="#1e293b" stroke="#ffffff" stroke-width="1.4" filter="url(#badgeShadow)" />
@@ -914,7 +885,7 @@
 
                   <!-- Living Room: Z1 Pro 4-Rocker, West Wall at Hallway Entry -->
                   <g class="switch-pin" data-switch-id="living" transform="translate(605, 570)">
-                    <title>Living Room: Aqara Z1 Pro 4-Rocker (downlights + wireless fan/movie scenes)</title>
+                    <title>Living Room: Aqara Z1 Pro 4-Rocker (track 1, track 2, fan, scene)</title>
                     <rect x="0" y="-14" width="60" height="12" rx="3" fill="#0f172a" fill-opacity="0.95" stroke="#38bdf8" stroke-width="0.8" />
                     <text x="30" y="-5" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">Z1 • 4-RKR</text>
                     <rect x="0" y="0" width="60" height="20" rx="3.5" fill="#1e293b" stroke="#ffffff" stroke-width="1.4" filter="url(#badgeShadow)" />
@@ -937,18 +908,9 @@
                     <circle cx="19" cy="16" r="1.5" fill="#f59e0b" />
                   </g>
 
-                  <!-- Hallway: H1 1-gang on foyer side of kitchen doorway, not the kitchen switch -->
-                  <g class="switch-pin" data-switch-id="hall" transform="translate(600, 985)">
-                    <title>Hallway: Aqara H1 1-Gang, foyer wall immediately beside kitchen doorway (hallway downlights only)</title>
-                    <rect x="0" y="-14" width="34" height="12" rx="3" fill="#0f172a" fill-opacity="0.95" stroke="#38bdf8" stroke-width="0.8" />
-                    <text x="17" y="-5" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">HALL</text>
-                    <rect x="0" y="0" width="34" height="20" rx="3.5" fill="#1e293b" stroke="#ffffff" stroke-width="1.4" filter="url(#badgeShadow)" />
-                    <circle cx="17" cy="15.5" r="1.5" fill="#38bdf8" />
-                  </g>
-
-                  <!-- Kitchen: 2-Gang (Aqara H1, Dedicated Kitchen Switch) -->
-                  <g class="switch-pin" data-switch-id="kitchen" transform="translate(545, 865)">
-                    <title>Kitchen: Aqara H1 2-Gang Dedicated Smart Switch (Ceiling Downlights + Under-Cabinet LED)</title>
+                  <!-- Kitchen: 2-Gang on dining/hall side of the kitchen's east wall; second rocker is spare -->
+                  <g class="switch-pin" data-switch-id="kitchen" transform="translate(600, 855)">
+                    <title>Kitchen: Aqara H1 2-Gang outside kitchen (ceiling downlights + spare rocker)</title>
                     <rect x="0" y="-14" width="38" height="12" rx="3" fill="#0f172a" fill-opacity="0.95" stroke="#38bdf8" stroke-width="0.8" />
                     <text x="19" y="-5" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">2-GANG</text>
                     <rect x="0" y="0" width="38" height="20" rx="3.5" fill="#1e293b" stroke="#ffffff" stroke-width="1.4" filter="url(#badgeShadow)" />
@@ -978,7 +940,7 @@
                   </g>
 
                   <!-- Common Bath: 1-Gang (Aqara H1, Outside Common Bath Door) -->
-                  <g class="switch-pin" data-switch-id="common-bath-light" transform="translate(595, 605)">
+                  <g class="switch-pin" data-switch-id="common-bath-light" transform="translate(595, 690)">
                     <title>Common Bath: Aqara H1 1-Gang Dedicated Smart Switch (Bathroom Downlights)</title>
                     <rect x="0" y="-14" width="34" height="12" rx="3" fill="#0f172a" fill-opacity="0.95" stroke="#38bdf8" stroke-width="0.8" />
                     <text x="17" y="-5" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">1-GANG</text>
@@ -987,7 +949,7 @@
                   </g>
 
                   <!-- Common Bath: Aqara H1 20A smart heater control; separate DP isolator -->
-                  <g class="switch-pin" data-switch-id="common-bath-heater" transform="translate(595, 710)">
+                  <g class="switch-pin" data-switch-id="common-bath-heater" transform="translate(595, 735)">
                     <title>Common Bath: Aqara H1 20A water-heater control (white); separate DP isolator required</title>
                     <rect x="0" y="-14" width="46" height="12" rx="3" fill="#09090b" fill-opacity="0.95" stroke="#ef4444" stroke-width="0.8" />
                     <text x="23" y="-5" font-family="'Space Grotesk', sans-serif" font-size="7.5" font-weight="800" fill="#f87171" text-anchor="middle" letter-spacing="0.5">20A • HTR</text>

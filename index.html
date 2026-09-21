@@ -2450,7 +2450,7 @@
                 </div>
                 <div class="zone-subcol-content">
                   • <strong>Aqara H1 2-Gang</strong> (Neutral Wire)<br />
-                  • 1x High-CRI Ceiling Downlight<br />
+                  • 1x High-CRI ceiling light for the whole entrance hallway<br />
                   • 1x 2m 24V COB Warm Strip (Shoe Cabinet)
                 </div>
               </div>
@@ -2529,10 +2529,10 @@
                 <div class="zone-subcol-content">
                   • <strong>Aqara Z1 Pro 4-Rocker</strong> (<span
                     style="color: var(--sage-primary); font-weight: 700"
-                    >Relay Mode</span
+                    >2 light circuits + 2 wireless commands</span
                   >)<br />
-                  • 6x High-CRI (>90) Recessed Downlights<br />
-                  • Fanco DC Fan (Bond Bridge RF)
+                  • Two independently switched ceiling tracks (3 heads each provisionally)<br />
+                  • Rocker 3 commands Fanco DC fan; rocker 4 triggers one scene
                 </div>
               </div>
             </div>
@@ -2549,9 +2549,9 @@
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
                 <div>
-                  <strong>Cinema / Bias Lighting:</strong> When LG OLED TV turns
-                  on after dark, spotlights dim to 20% warm white (2700K) for
-                  comfortable viewing.
+                  <strong>Cinema Scene:</strong> The fourth rocker can switch
+                  off one track and adjust compatible lights for viewing.
+                  Dimming requires separately specified dimmable hardware.
                 </div>
               </div>
               <div class="zone-auto-item">
@@ -2734,7 +2734,7 @@
                 <div>
                   <div class="zone-name">Kitchen</div>
                   <div style="font-size: 0.72rem; color: var(--text-muted)">
-                    Cooking & Morning Coffee
+                    Cooking & Ceiling Lighting
                   </div>
                 </div>
               </div>
@@ -2747,10 +2747,9 @@
                   <span>📡</span> Sensors Deployed
                 </div>
                 <div class="zone-subcol-content">
-                  • <strong>Time-Conditioned Switch</strong><br />
-                  • (Optional Under-Cabinet PIR)<br />
+                  • <strong>Switch on dining side of kitchen doorway</strong><br />
                   <span style="color: var(--text-secondary)"
-                    >Relies on smart button logic</span
+                    >No motion sensor required</span
                   >
                 </div>
               </div>
@@ -2759,9 +2758,9 @@
                   <span>💡</span> Switches & Lights
                 </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara H1 2-Gang</strong> (Kitchen Door Box)<br />
+                  • <strong>Aqara H1 2-Gang</strong> (Outside Kitchen)<br />
                   • 3x High-CRI Recessed Downlights<br />
-                  • 1x 3m 24V COB Warm Strip (Under-Cabinet)
+                  • Second rocker spare; no counter LED
                 </div>
               </div>
             </div>
@@ -2770,24 +2769,22 @@
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
                 <div>
-                  <strong>7:00 AM Coffee Routine:</strong> Pressing switch
-                  between 06:00–08:30 AM turns on ONLY the under-cabinet warm
-                  strip at 30%. Glare-free soft light before sunrise.
+                  <strong>Kitchen entry:</strong> Switch on the outside wall
+                  turns on the kitchen ceiling lights before stepping in.
                 </div>
               </div>
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
                 <div>
                   <strong>Meal Prep (Day/Evening):</strong> Wall switch
-                  energizes full 4000K crisp downlights + counter strip for
-                  shadowless cutting and cooking.
+                  energizes the ceiling lights for cooking.
                 </div>
               </div>
               <div class="zone-auto-item">
                 <span class="zone-auto-bullet">▶</span>
                 <div>
-                  <strong>Double-Click Override:</strong> Double tap at any hour
-                  instantly forces 100% full brightness.
+                  <strong>Spare rocker:</strong> Leave unassigned until the
+                  electrical and automation design is confirmed.
                 </div>
               </div>
             </div>
@@ -2796,9 +2793,9 @@
               <div class="zone-why-title">
                 <span>💡</span> Why no motion sensor?
               </div>
-              In open kitchens, motion sensors accidentally trigger whenever
-              someone walks to the fridge or balcony. Time-conditioned switch
-              presses deliver exact routine needs.
+              In open kitchens, motion sensors may trigger during pass-through
+              trips. The outside wall switch directly controls the planned
+              ceiling-light circuit.
             </div>
           </div>
 
@@ -4550,7 +4547,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                   />
                 </g>
 
-                <!-- Layer 1d: Architectural Walls & Door Swings (Exact Seamless Alignment) -->
+                <!-- Layer 1d: Architectural Walls & Door Openings -->
                 <g id="layerSchematicWalls" pointer-events="none">
                   <!-- Exterior Boundary Walls (Continuous structural perimeter, closing all intersections) -->
                   <path
@@ -4566,7 +4563,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                       M 300 565 L 590 565
                       M 300 772 L 590 772
                       M 590 268 L 590 505
-                      M 590 685 L 590 772
+                      M 590 675 L 590 772
                       M 590 772 L 590 890 M 590 970 L 590 1135
                       M 940 355 L 940 590
                       M 940 700 L 1140 700 M 1210 700 L 1320 700
@@ -4575,30 +4572,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                     fill="none" stroke="#333b35" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"
                   />
 
-                  <!-- Door Swings & Leaves -->
-                  <!-- Main Entrance Door (at bottom of narrow foyer, swinging inward) -->
-                  <line x1="620" y1="1213" x2="620" y2="1138" stroke="#232724" stroke-width="3" stroke-linecap="round" />
-                  <path d="M 620 1138 A 75 75 0 0 1 695 1213" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
-
-                  <!-- Bedroom 2 Door (swinging into Bed 2 from hallway) -->
-                  <line x1="585" y1="565" x2="540" y2="565" stroke="#232724" stroke-width="3" stroke-linecap="round" />
-                  <path d="M 585 565 A 45 45 0 0 0 540 520" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
-
-                  <!-- Common Bath Door (swinging into Common Bath) -->
-                  <line x1="585" y1="640" x2="540" y2="640" stroke="#232724" stroke-width="3" stroke-linecap="round" />
-                  <path d="M 585 640 A 45 45 0 0 1 540 685" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
-
-                  <!-- Master Bedroom Door (swinging into Master Bed against wardrobe) -->
-                  <line x1="940" y1="595" x2="990" y2="595" stroke="#232724" stroke-width="3" stroke-linecap="round" />
-                  <path d="M 940 595 A 50 50 0 0 1 990 645" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
-
-                  <!-- Master Bath Door (swinging into Master Bath) -->
-                  <line x1="1140" y1="700" x2="1140" y2="750" stroke="#232724" stroke-width="3" stroke-linecap="round" />
-                  <path d="M 1140 700 A 50 50 0 0 1 1190 750" fill="none" stroke="#688070" stroke-width="2" stroke-dasharray="4 3" />
-
-                  <!-- Balcony Sliding Doors (at y=355) -->
-                  <line x1="600" y1="352" x2="770" y2="352" stroke="#5a8b9e" stroke-width="3" stroke-linecap="round" />
-                  <line x1="760" y1="358" x2="930" y2="358" stroke="#5a8b9e" stroke-width="3" stroke-linecap="round" />
+                  <!-- Doors are shown only as wall openings, matching the clean floor plan. -->
 
                   <!-- Structural Concrete Columns & Piers -->
                   <rect x="584" y="345" width="14" height="20" fill="#232724" />
@@ -6580,10 +6554,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                     points="590,355 940,355 940,710 590,710"
                     onclick="selectMapRoom('Living Room')"
                   >
-                    <title>
-                      Living Room: Sofa, 65" TV, Lengthwise mmWave, 6x CCT
-                      Spotlights
-                    </title>
+                    <title>Living Room: sofa, TV, mmWave, two separately switched ceiling tracks</title>
                   </polygon>
 
                   <!-- Dining Room -->
@@ -6603,9 +6574,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                     points="590,878 770,878 770,1213 590,1213"
                     onclick="selectMapRoom('Entrance')"
                   >
-                    <title>
-                      Entrance: Door Contact (0ms), PIR Motion, Shoe Cabinet LED
-                    </title>
+                    <title>Entrance: Door Contact (0ms), PIR Motion, Shoe Cabinet LED</title>
                   </polygon>
 
                   <!-- Kitchen -->
@@ -6615,9 +6584,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                     points="300,772 590,772 590,1135 510,1135 510,1088 300,1088"
                     onclick="selectMapRoom('Kitchen')"
                   >
-                    <title>
-                      Kitchen: W/D, Fridge, Under-Cabinet LED Strip (7AM Coffee)
-                    </title>
+                    <title>Kitchen: W/D, Fridge, three ceiling downlights</title>
                   </polygon>
 
                   <!-- Common Bathroom -->
@@ -6627,9 +6594,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                     points="300,565 590,565 590,772 300,772"
                     onclick="selectMapRoom('Common Bath')"
                   >
-                    <title>
-                      Common Bathroom: Wasp in a Box Occupancy, IP44 Downlights
-                    </title>
+                    <title>Common Bathroom: Wasp in a Box Occupancy, IP44 Downlights</title>
                   </polygon>
 
                   <!-- Bedroom 2 / Study -->
@@ -6639,9 +6604,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                     points="300,268 590,268 590,565 300,565"
                     onclick="selectMapRoom('Bedroom 2 / Study')"
                   >
-                    <title>
-                      Bedroom 2 / Study: Sofa Bed, Study Desk, Starmex 9k AC
-                    </title>
+                    <title>Bedroom 2 / Study: Sofa Bed, Study Desk, Starmex 9k AC</title>
                   </polygon>
 
                   <!-- Master Bedroom -->
@@ -6651,10 +6614,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                     points="940,355 1278,355 1278,700 940,700"
                     onclick="selectMapRoom('Master Bed')"
                   >
-                    <title>
-                      Master Bedroom: Queen Bed, Bedside Kill Switch, C3
-                      Curtains
-                    </title>
+                    <title>Master Bedroom: Queen Bed, Bedside Kill Switch, C3 Curtains</title>
                   </polygon>
 
                   <!-- Master Bathroom -->
@@ -6664,10 +6624,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                     points="940,700 1320,700 1320,878 940,878"
                     onclick="selectMapRoom('Master Bath')"
                   >
-                    <title>
-                      Master Bathroom: Wasp in a Box, Manual Bidet Seat,
-                      Nightlight
-                    </title>
+                    <title>Master Bathroom: Wasp in a Box, Manual Bidet Seat, Nightlight</title>
                   </polygon>
                 </g>
 
@@ -6682,23 +6639,20 @@ wall-switch action event exposed by the selected Home Assistant integration.
                     filter="url(#stripGlow)" opacity="0.8"
                   />
 
-                  <!-- Kitchen Under-Cabinet LED Strip -->
-                  <line
-                    id="light-kitchen-strip"
-                    class="light-glow"
-                    x1="320" y1="840" x2="480" y2="840"
-                    stroke="#ffbb55" stroke-width="8" stroke-linecap="round"
-                    filter="url(#stripGlow)" opacity="0.8"
-                  />
-
-                  <!-- Living Room Spotlights (6x glowing points) -->
+                  <!-- Two independently switched living-room ceiling tracks, three spots each -->
                   <g id="light-living-spots" class="light-glow" opacity="0.85">
-                    <circle cx="670" cy="410" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
-                    <circle cx="670" cy="530" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
-                    <circle cx="670" cy="650" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
-                    <circle cx="850" cy="410" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
-                    <circle cx="850" cy="530" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
-                    <circle cx="850" cy="650" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                    <g id="light-living-track-a">
+                      <line x1="670" y1="410" x2="670" y2="650" stroke="#6b7280" stroke-width="5" stroke-linecap="round" />
+                      <circle cx="670" cy="410" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                      <circle cx="670" cy="530" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                      <circle cx="670" cy="650" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                    </g>
+                    <g id="light-living-track-b">
+                      <line x1="850" y1="410" x2="850" y2="650" stroke="#6b7280" stroke-width="5" stroke-linecap="round" />
+                      <circle cx="850" cy="410" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                      <circle cx="850" cy="530" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                      <circle cx="850" cy="650" r="14" fill="#ffd080" filter="url(#lightGlowFilter)" />
+                    </g>
                   </g>
 
                   <!-- Dining Pendant (Glowing amber orb) -->
@@ -6722,9 +6676,8 @@ wall-switch action event exposed by the selected Home Assistant integration.
                   <circle id="light-common-vanity" class="light-glow" cx="550" cy="722" r="12" fill="#ffd080" filter="url(#lightGlowFilter)" opacity="0.75" />
                   <!-- Indicative fixture clusters where individual downlights are not drawn -->
                   <g id="light-fixture-clusters" fill="#ffd080" stroke="#b7791f" stroke-width="1.5">
-                    <circle id="light-foyer-dl" cx="670" cy="1100" r="8"><title>Foyer downlight</title></circle>
+                    <circle id="light-foyer-dl" cx="670" cy="1015" r="8"><title>One ceiling light for the entrance hallway</title></circle>
                     <circle id="light-kitchen-dl" cx="425" cy="910" r="8"><title>Kitchen downlights</title></circle>
-                    <circle id="light-hall-dl" cx="680" cy="955" r="8"><title>Hallway downlights</title></circle>
                     <circle id="light-balcony" cx="700" cy="300" r="8"><title>Balcony light</title></circle>
                     <circle id="light-bed2-dl" cx="450" cy="465" r="8"><title>Bedroom 2 downlights</title></circle>
                     <circle id="light-common-dl" cx="445" cy="625" r="8"><title>Common bathroom downlights</title></circle>
@@ -7167,22 +7120,20 @@ wall-switch action event exposed by the selected Home Assistant integration.
                 <!-- Suggested switch-to-load relationships, not physical conduit routes. Dashed amber paths are wireless scenes. -->
                 <g id="layerSwitchConnections" pointer-events="none">
                   <g class="switch-connection-group" data-switch-id="entrance">
-                    <path d="M 744 1160 Q 710 1120 670 1100"/><circle cx="670" cy="1100" r="5"/><text x="645" y="1082">FOYER DL</text>
+                    <path d="M 744 1160 Q 710 1080 670 1015"/><circle cx="670" cy="1015" r="5"/><text x="640" y="1000">ENTRY / HALL LIGHT</text>
                     <path d="M 744 1160 Q 790 1100 760 1050"/><circle cx="760" cy="1050" r="5"/><text x="770" y="1082">SHOE LED</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="living">
-                    <path d="M 635 570 Q 650 545 670 530"/><circle cx="670" cy="530" r="5"/><text x="646" y="555">LIVING DL</text>
-                    <path class="wireless" d="M 635 570 Q 738 620 850 540"/><circle cx="850" cy="540" r="5"/><text x="742" y="602">FAN SCENE</text>
+                    <path d="M 635 570 Q 650 545 670 530"/><circle cx="670" cy="530" r="5"/><text x="638" y="550">TRACK 1</text>
+                    <path d="M 635 570 Q 740 455 850 530"/><circle cx="850" cy="530" r="5"/><text x="790" y="492">TRACK 2</text>
+                    <path class="wireless" d="M 635 570 Q 755 630 850 540"/><circle cx="850" cy="540" r="5"/><text x="793" y="591">FAN</text>
+                    <path class="wireless" d="M 635 570 Q 690 670 765 620"/><circle id="scene-living" cx="765" cy="620" r="5"/><text x="710" y="653">SCENE</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="dining">
                     <path class="wireless" d="M 638 815 Q 720 855 805 780"/><circle cx="805" cy="780" r="5"/><text x="704" y="835">T2 PENDANT</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="kitchen">
-                    <path d="M 545 875 Q 480 880 425 910"/><circle cx="425" cy="910" r="5"/><text x="440" y="898">KITCHEN DL</text>
-                    <path d="M 545 875 Q 475 810 400 840"/><circle cx="400" cy="840" r="5"/><text x="410" y="820">COUNTER LED</text>
-                  </g>
-                  <g class="switch-connection-group" data-switch-id="hall">
-                    <path d="M 617 985 Q 650 955 680 955"/><circle cx="680" cy="955" r="5"/><text x="642" y="941">HALL DL</text>
+                    <path d="M 600 865 Q 520 865 425 910"/><circle cx="425" cy="910" r="5"/><text x="440" y="898">KITCHEN DL</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="balcony">
                     <path d="M 644 370 Q 670 330 700 300"/><circle cx="700" cy="300" r="5"/><text x="666" y="330">BALCONY LIGHT</text>
@@ -7192,10 +7143,10 @@ wall-switch action event exposed by the selected Home Assistant integration.
                     <path d="M 562 535 Q 510 480 450 465"/><circle cx="450" cy="465" r="5"/><text x="455" y="485">BED 2 DL</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="common-bath-light">
-                    <path d="M 595 615 Q 520 590 445 625"/><circle cx="445" cy="625" r="5"/><text x="470" y="608">BATH DL</text>
+                    <path d="M 595 700 Q 520 675 445 625"/><circle cx="445" cy="625" r="5"/><text x="470" y="608">BATH DL</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="common-bath-heater">
-                    <path d="M 595 720 Q 530 740 450 735"/><circle cx="450" cy="735" r="7"/><text x="464" y="750">HEATER</text>
+                    <path d="M 595 745 Q 530 740 450 735"/><circle cx="450" cy="735" r="7"/><text x="464" y="750">HEATER</text>
                   </g>
                   <g class="switch-connection-group" data-switch-id="master-bed">
                     <path d="M 969 600 Q 1000 575 1020 550"/><circle cx="1020" cy="550" r="5"/><text x="983" y="570">MASTER DL</text>
@@ -7214,7 +7165,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                 <g id="layerWallSwitches">
                   <!-- Entrance: H1 2-Gang, foyer east wall -->
                   <g class="switch-pin" data-switch-id="entrance" transform="translate(725, 1160)">
-                    <title>Entrance: Aqara H1 2-Gang (foyer downlight + shoe cabinet LED)</title>
+                    <title>Entrance: Aqara H1 2-Gang (one entrance-hall ceiling light + shoe cabinet LED)</title>
                     <rect x="0" y="-14" width="38" height="12" rx="3" fill="#0f172a" fill-opacity="0.95" stroke="#38bdf8" stroke-width="0.8" />
                     <text x="19" y="-5" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">2-GANG</text>
                     <rect x="0" y="0" width="38" height="20" rx="3.5" fill="#1e293b" stroke="#ffffff" stroke-width="1.4" filter="url(#badgeShadow)" />
@@ -7225,7 +7176,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
 
                   <!-- Living Room: Z1 Pro 4-Rocker, West Wall at Hallway Entry -->
                   <g class="switch-pin" data-switch-id="living" transform="translate(605, 570)">
-                    <title>Living Room: Aqara Z1 Pro 4-Rocker (downlights + wireless fan/movie scenes)</title>
+                    <title>Living Room: Aqara Z1 Pro 4-Rocker (track 1, track 2, fan, scene)</title>
                     <rect x="0" y="-14" width="60" height="12" rx="3" fill="#0f172a" fill-opacity="0.95" stroke="#38bdf8" stroke-width="0.8" />
                     <text x="30" y="-5" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">Z1 • 4-RKR</text>
                     <rect x="0" y="0" width="60" height="20" rx="3.5" fill="#1e293b" stroke="#ffffff" stroke-width="1.4" filter="url(#badgeShadow)" />
@@ -7248,18 +7199,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
                     <circle cx="19" cy="16" r="1.5" fill="#f59e0b" />
                   </g>
 
-                  <!-- Hallway: H1 1-gang on foyer side of kitchen doorway, not the kitchen switch -->
-                  <g class="switch-pin" data-switch-id="hall" transform="translate(600, 985)">
-                    <title>Hallway: Aqara H1 1-Gang, foyer wall immediately beside kitchen doorway (hallway downlights only)</title>
-                    <rect x="0" y="-14" width="34" height="12" rx="3" fill="#0f172a" fill-opacity="0.95" stroke="#38bdf8" stroke-width="0.8" />
-                    <text x="17" y="-5" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">HALL</text>
-                    <rect x="0" y="0" width="34" height="20" rx="3.5" fill="#1e293b" stroke="#ffffff" stroke-width="1.4" filter="url(#badgeShadow)" />
-                    <circle cx="17" cy="15.5" r="1.5" fill="#38bdf8" />
-                  </g>
-
-                  <!-- Kitchen: 2-Gang (Aqara H1, Dedicated Kitchen Switch) -->
-                  <g class="switch-pin" data-switch-id="kitchen" transform="translate(545, 865)">
-                    <title>Kitchen: Aqara H1 2-Gang Dedicated Smart Switch (Ceiling Downlights + Under-Cabinet LED)</title>
+                  <!-- Kitchen: 2-Gang on dining/hall side of the kitchen's east wall; second rocker is spare -->
+                  <g class="switch-pin" data-switch-id="kitchen" transform="translate(600, 855)">
+                    <title>Kitchen: Aqara H1 2-Gang outside kitchen (ceiling downlights + spare rocker)</title>
                     <rect x="0" y="-14" width="38" height="12" rx="3" fill="#0f172a" fill-opacity="0.95" stroke="#38bdf8" stroke-width="0.8" />
                     <text x="19" y="-5" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">2-GANG</text>
                     <rect x="0" y="0" width="38" height="20" rx="3.5" fill="#1e293b" stroke="#ffffff" stroke-width="1.4" filter="url(#badgeShadow)" />
@@ -7289,7 +7231,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                   </g>
 
                   <!-- Common Bath: 1-Gang (Aqara H1, Outside Common Bath Door) -->
-                  <g class="switch-pin" data-switch-id="common-bath-light" transform="translate(595, 605)">
+                  <g class="switch-pin" data-switch-id="common-bath-light" transform="translate(595, 690)">
                     <title>Common Bath: Aqara H1 1-Gang Dedicated Smart Switch (Bathroom Downlights)</title>
                     <rect x="0" y="-14" width="34" height="12" rx="3" fill="#0f172a" fill-opacity="0.95" stroke="#38bdf8" stroke-width="0.8" />
                     <text x="17" y="-5" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">1-GANG</text>
@@ -7298,7 +7240,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                   </g>
 
                   <!-- Common Bath: Aqara H1 20A smart heater control; separate DP isolator -->
-                  <g class="switch-pin" data-switch-id="common-bath-heater" transform="translate(595, 710)">
+                  <g class="switch-pin" data-switch-id="common-bath-heater" transform="translate(595, 735)">
                     <title>Common Bath: Aqara H1 20A water-heater control (white); separate DP isolator required</title>
                     <rect x="0" y="-14" width="46" height="12" rx="3" fill="#09090b" fill-opacity="0.95" stroke="#ef4444" stroke-width="0.8" />
                     <text x="23" y="-5" font-family="'Space Grotesk', sans-serif" font-size="7.5" font-weight="800" fill="#f87171" text-anchor="middle" letter-spacing="0.5">20A • HTR</text>
@@ -7430,11 +7372,11 @@ wall-switch action event exposed by the selected Home Assistant integration.
                 <span>💡</span> Smart Lighting & Switches
               </div>
               <div class="inspector-box" id="inspectLightingBox">
-                • <strong>Aqara H2 3-Gang Switch</strong> (<span
+                • <strong>Aqara Z1 Pro 4-Rocker</strong> (<span
                   style="color: var(--sage-primary); font-weight: 700"
                   >Relay Mode</span
                 >)<br />
-                • 6x High-CRI (>90) Recessed Downlights<br />
+                • Two independently switched ceiling tracks (3 heads each provisionally)<br />
                 • Fanco DC Ceiling Fan (RF Bond Bridge)
               </div>
             </div>
@@ -7505,7 +7447,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "smart-switch-entrance",
             "name": "Smart Switch (Entrance)",
-            "choice": "Aqara H1 2-Gang (Black / Space Grey; Main entry downlight + Shoe cabinet LED)",
+            "choice": "Aqara H1 2-Gang (Black / Space Grey; one entrance-hall ceiling light + shoe-cabinet LED)",
             "notes": "Selected choice for Entrance.",
             "room": "Entrance",
             "priority": "P0",
@@ -7521,7 +7463,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Aqara H1 2-Gang (Black / Space Grey; Main entry downlight + Shoe cabinet LED)",
+                        "model": "Aqara H1 2-Gang (Black / Space Grey; one entrance-hall ceiling light + shoe-cabinet LED)",
                         "notes": "Selected choice for Entrance.",
                         "stores": [
                               {
@@ -7643,7 +7585,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "smart-switch-kitchen",
             "name": "Smart Switch (Kitchen)",
-            "choice": "Aqara H1 2-Gang (Black / Space Grey; Dedicated switch for kitchen downlights + under-cabinet LED)",
+            "choice": "Aqara H1 2-Gang (Black / Space Grey; outside kitchen on dining-side wall; downlights + spare rocker)",
             "notes": "Selected choice for Kitchen.",
             "room": "Kitchen",
             "priority": "P0",
@@ -7659,47 +7601,13 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "Aqara H1 2-Gang (Black / Space Grey; Dedicated switch for kitchen downlights + under-cabinet LED)",
+                        "model": "Aqara H1 2-Gang (Black / Space Grey; outside kitchen on dining-side wall; downlights + spare rocker)",
                         "notes": "Selected choice for Kitchen.",
                         "stores": [
                               {
                                     "store": "Smart Innovations",
                                     "price": 60,
                                     "priceDisplay": "$60",
-                                    "promo": "",
-                                    "linkText": "Price brochure",
-                                    "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
-                              }
-                        ]
-                  }
-            ]
-      },
-      {
-            "id": "smart-switch-hallway",
-            "name": "Smart Switch (Hallway)",
-            "choice": "Aqara H1 1-Gang (Black / Space Grey; Dedicated corridor switch, beside door to right)",
-            "notes": "Selected choice for Whole House.",
-            "room": "Whole House",
-            "priority": "P0",
-            "status": "Selected",
-            "price": 55,
-            "priceDisplay": "$55",
-            "availableAt": "Smart Innovations",
-            "linkText": "Price brochure",
-            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
-            "sellerDeductible": false,
-            "sellerSavings": 0,
-            "selectedOptionIndex": 0,
-            "selectedStoreIndex": 0,
-            "options": [
-                  {
-                        "model": "Aqara H1 1-Gang (Black / Space Grey; Dedicated corridor switch, beside door to right)",
-                        "notes": "Selected choice for Whole House.",
-                        "stores": [
-                              {
-                                    "store": "Smart Innovations",
-                                    "price": 55,
-                                    "priceDisplay": "$55",
                                     "promo": "",
                                     "linkText": "Price brochure",
                                     "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
@@ -7963,9 +7871,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             ]
       },
       {
-            "id": "dumb-downlights-living-room",
-            "name": "Dumb Downlights (Living Room)",
-            "choice": "6x High-CRI (>90) Recessed Downlights",
+            "id": "track-lights-living-room",
+            "name": "Track Lights (Living Room)",
+            "choice": "2 independently switched ceiling tracks, provisionally 3x High-CRI heads each; $130 fixture allowance excludes track rails/installation (TBD)",
             "notes": "Selected choice for Living Room.",
             "room": "Living Room",
             "priority": "P1",
@@ -7973,7 +7881,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "price": 130,
             "priceDisplay": "$130",
             "availableAt": "Sembawang Lighting House / Shopee",
-            "linkText": "Shopee",
+            "linkText": "Shopee fixture reference",
             "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
             "sellerDeductible": false,
             "sellerSavings": 0,
@@ -7981,7 +7889,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "6x High-CRI (>90) Recessed Downlights",
+                        "model": "2 independently switched ceiling tracks, provisionally 3x High-CRI heads each; $130 fixture allowance excludes track rails/installation (TBD)",
                         "notes": "Selected choice for Living Room.",
                         "stores": [
                               {
@@ -7989,7 +7897,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                                     "price": 130,
                                     "priceDisplay": "$130",
                                     "promo": "",
-                                    "linkText": "Shopee",
+                                    "linkText": "Shopee fixture reference",
                                     "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813"
                               }
                         ]
@@ -8079,9 +7987,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             ]
       },
       {
-            "id": "dumb-downlights-entrance",
-            "name": "Dumb Downlights (Entrance)",
-            "choice": "1x High-CRI (>90) Recessed Downlight",
+            "id": "ceiling-light-entrance-hallway",
+            "name": "Ceiling Light (Entrance / Hallway)",
+            "choice": "1x High-CRI (>90) ceiling light for the whole entrance hallway; controlled by entrance H1 2-gang",
             "notes": "Selected choice for Entrance.",
             "room": "Entrance",
             "priority": "P1",
@@ -8089,7 +7997,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "price": 20,
             "priceDisplay": "$20",
             "availableAt": "Sembawang Lighting House / Shopee",
-            "linkText": "Shopee",
+            "linkText": "Shopee fixture reference",
             "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
             "sellerDeductible": false,
             "sellerSavings": 0,
@@ -8097,7 +8005,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "1x High-CRI (>90) Recessed Downlight",
+                        "model": "1x High-CRI (>90) ceiling light for the whole entrance hallway; controlled by entrance H1 2-gang",
                         "notes": "Selected choice for Entrance.",
                         "stores": [
                               {
@@ -8105,7 +8013,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                                     "price": 20,
                                     "priceDisplay": "$20",
                                     "promo": "",
-                                    "linkText": "Shopee",
+                                    "linkText": "Shopee fixture reference",
                                     "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813"
                               }
                         ]
@@ -8175,40 +8083,6 @@ wall-switch action event exposed by the selected Home Assistant integration.
                                     "promo": "",
                                     "linkText": "Shopee",
                                     "linkUrl": "https://shopee.sg/IP65-LED-Downlight-7W-9W-12W-15W-Waterproof-LED-DownLights-AC220V-230V-240V-Recessed-Downlight-LED-Spot-For-Bathroom-i.800728237.19715736986"
-                              }
-                        ]
-                  }
-            ]
-      },
-      {
-            "id": "dumb-downlights-hallway",
-            "name": "Dumb Downlights (Hallway)",
-            "choice": "2x High-CRI (>90) Recessed Downlights",
-            "notes": "Selected choice for Whole House.",
-            "room": "Whole House",
-            "priority": "P1",
-            "status": "Selected",
-            "price": 45,
-            "priceDisplay": "$45",
-            "availableAt": "Sembawang Lighting House / Shopee",
-            "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813",
-            "sellerDeductible": false,
-            "sellerSavings": 0,
-            "selectedOptionIndex": 0,
-            "selectedStoreIndex": 0,
-            "options": [
-                  {
-                        "model": "2x High-CRI (>90) Recessed Downlights",
-                        "notes": "Selected choice for Whole House.",
-                        "stores": [
-                              {
-                                    "store": "Sembawang Lighting House / Shopee",
-                                    "price": 45,
-                                    "priceDisplay": "$45",
-                                    "promo": "",
-                                    "linkText": "Shopee",
-                                    "linkUrl": "https://shopee.sg/Recessed-Anti-glare-LED-COB-Downlight-5W-7W-220V-Ceiling-Lamp-Spot-Light-9W-12W-Home-Living-Room-Bedroom-Lighting-i.1013019863.24343887813"
                               }
                         ]
                   }
@@ -8311,40 +8185,6 @@ wall-switch action event exposed by the selected Home Assistant integration.
                                     "promo": "",
                                     "linkText": "Shopee",
                                     "linkUrl": "https://shopee.sg/IP65-LED-Downlight-7W-9W-12W-15W-Waterproof-LED-DownLights-AC220V-230V-240V-Recessed-Downlight-LED-Spot-For-Bathroom-i.800728237.19715736986"
-                              }
-                        ]
-                  }
-            ]
-      },
-      {
-            "id": "under-cabinet-led-strip-kitchen",
-            "name": "Under-Cabinet LED Strip (Kitchen)",
-            "choice": "3m 24V COB Warm White LED Strip (3000K, >90 CRI) + Driver",
-            "notes": "Selected choice for Kitchen.",
-            "room": "Kitchen",
-            "priority": "P1",
-            "status": "Selected",
-            "price": 55,
-            "priceDisplay": "$55",
-            "availableAt": "Sembawang Lighting House / Shopee",
-            "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg/COB-LED-Strip-Light-12V-24V-Warm-White-High-Density-Flexible-LED-Tape-Kitchen-Under-Cabinet-Lighting-i.1013019863.24143888921",
-            "sellerDeductible": false,
-            "sellerSavings": 0,
-            "selectedOptionIndex": 0,
-            "selectedStoreIndex": 0,
-            "options": [
-                  {
-                        "model": "3m 24V COB Warm White LED Strip (3000K, >90 CRI) + Driver",
-                        "notes": "Selected choice for Kitchen.",
-                        "stores": [
-                              {
-                                    "store": "Sembawang Lighting House / Shopee",
-                                    "price": 55,
-                                    "priceDisplay": "$55",
-                                    "promo": "",
-                                    "linkText": "Shopee",
-                                    "linkUrl": "https://shopee.sg/COB-LED-Strip-Light-12V-24V-Warm-White-High-Density-Flexible-LED-Tape-Kitchen-Under-Cabinet-Lighting-i.1013019863.24143888921"
                               }
                         ]
                   }
@@ -12518,7 +12358,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
           sensors:
             "• <strong>1x Aqara Presence Sensor FP2 (Multi-Zone)</strong> (North Pelmet)<br>• Wi-Fi 2.4GHz • 5V USB-C in Pelmet<br>• Lengthwise radar sweeps South across Living (Zone 1) & Dining (Zone 2).<br>• <strong>Through-Wall Conduit:</strong> 32mm sleeve to Bed 2 PC rig for 4K 120Hz TV & USB wireless dongles.",
           lighting:
-            "• <strong>Aqara Z1 Pro 4-Rocker</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Relay + scenes</span>)<br>• 6x High-CRI (>90) Recessed Downlights<br>• Fanco DC Ceiling Fan (RF Bond Bridge)",
+            "• <strong>Aqara Z1 Pro 4-Rocker</strong>: track 1, track 2, fan command, one scene<br>• Two independently switched ceiling tracks; provisionally 3 High-CRI heads per track (rail/installation quote TBD)<br>• Fanco DC Ceiling Fan (RF Bond Bridge; keep power independent)",
           automations:
             "• <strong>Sofa Presence (FP2 Zone 1):</strong> Keeps ambient lights & AC active while reading or watching TV.<br>• <strong>15-Min Auto-Powerdown:</strong> Lights turn off after vacancy unless a wall-switch hold is active; AC follows its own rule.<br>• <strong>Manual ON:</strong> hold lights for 2 hours.",
           filterRoom: "Living Room",
@@ -12532,7 +12372,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
           sensors:
             "• <strong>1x Aqara Door Contact Sensor T1</strong> (Main Door Frame)<br>• <strong>1x Aqara PIR Motion Sensor P1</strong> (Shoe Bench)<br>• <strong>Guest Wi-Fi QR Sign:</strong> Custom acrylic/wood QR plaque on hallway pegboard for instant guest Wi-Fi scan-to-connect.<br>• 100% Battery Powered (CR1632 & CR2450, 2-5 yrs)",
           lighting:
-            "• <strong>Aqara H1 2-Gang Switch</strong> (Neutral Wire)<br>• 1x High-CRI Ceiling Downlight<br>• 1x 2m 24V COB Warm White Strip (Floating Shoe Cabinet)",
+            "• <strong>Aqara H1 2-Gang Switch</strong> (Neutral Wire)<br>• Gang 1: the single ceiling light for the whole entrance hallway<br>• Gang 2: 2m 24V COB shoe-cabinet strip<br>• No separate Hall switch or ceiling light",
           automations:
             "• <strong>0ms Instant Welcome:</strong> Door cracks open &rarr; 0ms trigger illuminates shoe cabinet bottom float + warm downlight.<br>• <strong>Gear-Up Departure:</strong> Walking into foyer triggers PIR, illuminating bench while tying riding boots.<br>• <strong>Auto-Off:</strong> Door closes + 2 min no motion turns off lights unless manually held.<br>• <strong>Manual ON:</strong> hold lights for 2 hours.",
           filterRoom: "Entrance",
@@ -12574,23 +12414,23 @@ wall-switch action event exposed by the selected Home Assistant integration.
           sensors:
             "• <strong>1x Aqara Door Contact T1</strong> (Door Frame)<br>• <strong>1x Aqara PIR Motion P1</strong> (Interior Ceiling)<br>• 100% Battery Powered ('Wasp in a Box')",
           lighting:
-            "• <strong>Aqara H1 1-Gang Dedicated Switch (Lights)</strong> (Outside Door Box)<br>• <strong>Aqara H1 20A (Water Heater)</strong> (white; separate DP isolator required)<br>• 2x IP44 Splash-Rated Downlights",
+            "• <strong>Aqara H1 1-Gang Dedicated Switch (Lights)</strong> (outside the bath, beside the lower solid section of the east wall)<br>• <strong>Aqara H1 20A (Water Heater)</strong> (white; separate DP isolator required)<br>• 2x IP44 Splash-Rated Downlights",
           automations:
             "• <strong>Hands-Free Guest Access:</strong> Walk in &rarr; lights turn on instantly.<br>• <strong>Shower Safe:</strong> Door closed keeps lights on indefinitely.<br>• <strong>Water Heater Auto-Off:</strong> 20-min countdown timer prevents wasted power.<br>• <strong>Night Path:</strong> Warm path after 11 PM.<br>• <strong>Manual ON:</strong> 2-hour light hold; closed-door occupancy stays lit beyond it.",
           filterRoom: "Bathrooms",
         },
         Kitchen: {
           icon: "🍳",
-          type: "Utility • Cooking & Coffee Routine",
+          type: "Utility • Cooking",
           zoneId: "zone-Kitchen",
           dimensions:
             "• <strong>Counter Run:</strong> ±2,405 mm (Sink wall) / ±2,450 mm (Depth)<br>• <strong>Aisle Width:</strong> ±1,185 mm (Clear walkway between counters)<br>• <strong>Entrance Width:</strong> ±1,620 mm<br>• <strong>Floor Area:</strong> ~5.8 m² (~62 sq ft)<br>• <strong>AC Ledge:</strong> ±1,090 mm × ±2,450 mm exterior ledge.",
           sensors:
-            "• <strong>Time-Conditioned Smart Switch</strong><br>• Optional Under-Cabinet PIR Sensor<br>• Context-aware routine automation",
+            "• Manual kitchen wall switch outside the kitchen on the dining-side wall<br>• Optional schedule for the ceiling lights",
           lighting:
-            "• <strong>Aqara H1 2-Gang Dedicated Switch</strong> (<span style='color: var(--sage-primary); font-weight: 700;'>Black / Space Grey</span>)<br>• <strong>Dual Rockers:</strong> Rocker 1 (Downlights), Rocker 2 (Under-Cabinet Task LED)<br>• <strong>Wall Sockets:</strong> Legrand Mallia Senses (<span style='color: var(--sage-primary); font-weight: 700;'>Matt White</span> - blends into backsplash tiles)<br>• 3x High-CRI Recessed Downlights<br>• 1x 3m 24V COB Warm White Strip (Under-Cabinet)",
+            "• <strong>Aqara H1 2-Gang</strong> outside kitchen on dining-side wall<br>• Gang 1: 3x High-CRI ceiling downlights<br>• Gang 2: spare, pending electrical design<br>• <strong>Wall Sockets:</strong> Legrand Mallia Senses Matt White",
           automations:
-            "• <strong>7:00 AM Coffee Routine:</strong> Switch press between 06:00–08:30 AM turns on ONLY under-cabinet warm strip at 30%. Glare-free morning coffee before sunrise.<br>• <strong>Meal Prep:</strong> Full 4000K crisp downlights + counter task light.<br>• <strong>Double-Click Override:</strong> Instant 100% full brightness anytime.",
+            "• <strong>Meal Prep:</strong> Turn on the kitchen ceiling lights from outside the kitchen.<br>• No counter LED or under-cabinet strip planned.",
           filterRoom: "Kitchen",
         },
         Hallway: {
@@ -12600,11 +12440,11 @@ wall-switch action event exposed by the selected Home Assistant integration.
           dimensions:
             "• <strong>Corridor Width:</strong> ±1,500 mm<br>• <strong>Clear Length:</strong> ±1,505 mm<br>• <strong>Floor Area:</strong> ~2.3 m² (~25 sq ft)<br>• <strong>Features:</strong> Central corridor connecting Living, Kitchen, Bathrooms, and Bedrooms.",
           sensors:
-            "• PIR Motion Sensor / Pathway Lighting Sync<br>• <strong>Guest Wi-Fi:</strong> Quick-scan QR plaque located on adjacent corridor pegboard.",
-        lighting:
-            "• <strong>Aqara H1 1-Gang Dedicated Switch</strong> (foyer wall beside kitchen doorway; hallway lights only)<br>• 2x High-CRI Recessed Downlights",
+            "• Shares the entrance door contact and PIR pathway automation<br>• <strong>Guest Wi-Fi:</strong> Quick-scan QR plaque on the adjacent corridor pegboard.",
+          lighting:
+            "• Shares the one entrance-hall ceiling light controlled by the main-door H1 2-gang<br>• No dedicated Hall switch or second ceiling light",
           automations:
-            "• <strong>Night Pathway:</strong> Soft illumination when moving between bedrooms and bathrooms.<br>• <strong>Auto-Off:</strong> Turns off after 2 minutes of inactivity unless manually held.<br>• <strong>Manual ON:</strong> hold hallway lights for 2 hours.",
+            "• <strong>Night Pathway:</strong> The shared entrance-hall light comes on when needed.<br>• <strong>Auto-Off:</strong> Entrance vacancy rule applies unless manually held.",
           filterRoom: "Whole House",
         },
         "Bedroom 2 / Study": {
@@ -12770,10 +12610,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
       // Inspect one switch's actual relay loads and wireless scene targets at a time.
       const switchTargets = {
         entrance: ["light-foyer-dl", "light-entrance-strip"],
-        living: ["light-living-spots", "fan-living"],
+        living: ["light-living-track-a", "light-living-track-b", "fan-living", "scene-living"],
         dining: ["light-dining-pendant"],
-        kitchen: ["light-kitchen-dl", "light-kitchen-strip"],
-        hall: ["light-hall-dl"],
+        kitchen: ["light-kitchen-dl"],
         balcony: ["light-balcony", "fan-balcony"],
         bed2: ["light-bed2-dl"],
         "common-bath-light": ["light-common-dl"],
