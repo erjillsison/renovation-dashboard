@@ -10329,21 +10329,59 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "id": "aircon-system-3",
             "name": "Aircon (System 3)",
             "choice": "Daikin iSmile Eco+ MKM75ZVMG (5-Tick Condenser)",
-            "notes": "Daikin iSmile Eco+ MKM75ZVMG + CTKM25ZVMG / CTKM25ZVM x2 + CTKM50ZVMG (indoor model CTKM25ZVM verified at Gain City AMK; Courts Tampines $4,185 provisional choice). Before payment, confirm physical indoor-unit model labels, built-in Wi-Fi for all three units, and pairing in Daikin Mobile Controller; no separate Wi-Fi module budgeted.",
+            "notes": "Selected choice: 18k+9k+9k with CTKM25ZVMG / CTKM25ZVM x2 + CTKM50ZVMG (indoor model CTKM25ZVM verified at Gain City AMK). Built-in Wi-Fi for Daikin Mobile Controller across all 3 indoor units.",
             "room": "Whole House",
             "priority": "P0",
-            "status": "TBD",
+            "status": "Selected",
             "price": 4185,
-            "priceDisplay": "$4,185",
+            "priceDisplay": "$4,185.00",
             "availableAt": "Courts Tampines",
-            "linkText": "Daikin SG",
-            "linkUrl": "https://www.daikin.com.sg/air-conditioners/",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg",
             "sellerDeductible": false,
             "sellerSavings": 0,
             "comparisonCategory": "System 3 Aircon",
-            "selectedOptionIndex": 4,
+            "selectedOptionIndex": 0,
             "selectedStoreIndex": 0,
             "options": [
+                  {
+                        "model": "Daikin iSmile Eco+ MKM75ZVMG (5-Tick Condenser)",
+                        "notes": "Selected choice: 18k+9k+9k with CTKM25ZVMG / CTKM25ZVM x2 + CTKM50ZVMG (indoor model CTKM25ZVM verified at Gain City AMK). Built-in Wi-Fi for Daikin Mobile Controller across all 3 indoor units.",
+                        "stores": [
+                              {
+                                    "store": "Courts Tampines",
+                                    "price": 4185,
+                                    "priceDisplay": "$4,185.00",
+                                    "promo": "Courts Tampines price: CTKM25ZVMG x2 + CTKM50ZVMG; built-in Wi-Fi across all units.",
+                                    "linkText": "Courts SG",
+                                    "linkUrl": "https://www.courts.com.sg"
+                              },
+                              {
+                                    "store": "Gain City (Ang Mo Kio)",
+                                    "price": 4185,
+                                    "priceDisplay": "Showroom Quote",
+                                    "promo": "Showroom visit: confirmed indoor unit model CTKM25ZVM (iSmile Eco+ Series).",
+                                    "linkText": "Gain City",
+                                    "linkUrl": "https://www.gaincity.com"
+                              },
+                              {
+                                    "store": "Courts Ang Mo Kio",
+                                    "price": 4485,
+                                    "priceDisplay": "$4,485.00",
+                                    "promo": "Visit price: MKM75ZVMG + CTKM25ZVMG x2 + CTKM50ZVMG. Wi-Fi built into quoted indoor units.",
+                                    "linkText": "Daikin SG",
+                                    "linkUrl": "https://www.daikin.com.sg/air-conditioners/"
+                              },
+                              {
+                                    "store": "Aircold E-Mart Shopee",
+                                    "price": 3270,
+                                    "priceDisplay": "$3,269.90",
+                                    "promo": "After voucher; System 3: CTKM25ZVMG x2 + CTKM35ZVMG (12k living room).",
+                                    "linkText": "Shopee",
+                                    "linkUrl": "https://shopee.sg/Daikin-Inverter-Multi-Split-AirCon-MKM75ZVMG-CTKM25ZVMG-x-2-CTKM35ZVMG-i.820820633.42556977077"
+                              }
+                        ]
+                  },
                   {
                         "model": "Mitsubishi Electric Starmex 28 (5-Tick Condenser)",
                         "notes": "18k+9k+9k. Quote exact indoor models for Wi-Fi: FP*VGK-SG2 is built in; FP*VG-SG2 needs MAC-589IF-E. Home Assistant needs a separate local-controller compatibility check.",
@@ -10421,44 +10459,6 @@ wall-switch action event exposed by the selected Home Assistant integration.
                                     "promo": "VIP 6% promo",
                                     "linkText": "Courts SG",
                                     "linkUrl": "https://www.courts.com.sg"
-                              }
-                        ]
-                  },
-                  {
-                        "model": "Daikin iSmile Eco+ MKM75ZVMG (5-Tick Condenser)",
-                        "notes": "18k+9k+9k with CTKM25ZVMG x2 + CTKM50ZVMG (indoor model CTKM25ZVM verified at Gain City AMK). These quoted wall-mounted indoor units list built-in Wi-Fi for Daikin Mobile Controller; Home Assistant still needs a separate test.",
-                        "stores": [
-                              {
-                                    "store": "Courts Tampines",
-                                    "price": 4185,
-                                    "priceDisplay": "$4,185.00",
-                                    "promo": "Provisional Courts Tampines price: CTKM25ZVMG x2 + CTKM50ZVMG; confirm physical labels, built-in Wi-Fi and Daikin Mobile Controller pairing before payment.",
-                                    "linkText": "Daikin SG",
-                                    "linkUrl": "https://www.daikin.com.sg/air-conditioners/"
-                              },
-                              {
-                                    "store": "Courts Ang Mo Kio",
-                                    "price": 4485,
-                                    "priceDisplay": "$4,485.00",
-                                    "promo": "Visit price: MKM75ZVMG + CTKM25ZVMG x2 + CTKM50ZVMG. Wi-Fi is built into the quoted indoor units; validate Home Assistant separately.",
-                                    "linkText": "Daikin SG",
-                                    "linkUrl": "https://www.daikin.com.sg/air-conditioners/"
-                              },
-                              {
-                                    "store": "Gain City (Ang Mo Kio)",
-                                    "price": 4185,
-                                    "priceDisplay": "Showroom Quote",
-                                    "promo": "Showroom visit: confirmed indoor unit model CTKM25ZVM (iSmile Eco+ Series); quote TBD.",
-                                    "linkText": "Gain City",
-                                    "linkUrl": "https://www.gaincity.com"
-                              },
-                              {
-                                    "store": "Aircold E-Mart Shopee",
-                                    "price": 3270,
-                                    "priceDisplay": "$3,269.90",
-                                    "promo": "After voucher; System 3: CTKM25ZVMG x2 + CTKM35ZVMG (12k living room, not the 18k design brief).",
-                                    "linkText": "Shopee",
-                                    "linkUrl": "https://shopee.sg/Daikin-Inverter-Multi-Split-AirCon-MKM75ZVMG-CTKM25ZVMG-x-2-CTKM35ZVMG-i.820820633.42556977077"
                               }
                         ]
                   }
@@ -12400,7 +12400,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                         "store": "Courts Tampines",
                         "model": "Daikin iSmile Eco+ MKM75ZVMG + CTKM25ZVMG x2 + CTKM50ZVMG",
                         "listedPrice": "$4,185.00",
-                        "netPrice": "**$4,185.00** _(provisional; confirm built-in Wi-Fi/app pairing before payment)_",
+                        "netPrice": "**$4,185.00** _(Selected Choice; confirm built-in Wi-Fi/app pairing before payment)_",
                         "linkText": "Daikin SG",
                         "linkUrl": "https://www.daikin.com.sg/air-conditioners/"
                   },
