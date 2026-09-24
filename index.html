@@ -133,7 +133,6 @@
         margin-top: 2px;
       }
 
-
       /* --- Tab View 4: Store & Price Comparisons Styling --- */
       .comparison-view-header {
         background: var(--bg-surface);
@@ -184,7 +183,7 @@
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
       }
 
       .category-pill-btn:hover {
@@ -204,13 +203,13 @@
       .category-pill-count {
         font-size: 0.7rem;
         opacity: 0.85;
-        background: rgba(0,0,0,0.08);
+        background: rgba(0, 0, 0, 0.08);
         padding: 1px 6px;
         border-radius: 10px;
       }
 
       .category-pill-btn.active .category-pill-count {
-        background: rgba(255,255,255,0.25);
+        background: rgba(255, 255, 255, 0.25);
         color: #ffffff;
       }
 
@@ -307,15 +306,51 @@
       }
 
       /* Store Badges */
-      .badge-bestdenki { background: #fef2f2 !important; color: #dc2626 !important; border-color: #fecaca !important; }
-      .badge-gaincity { background: #ecfeff !important; color: #0891b2 !important; border-color: #a5f3fc !important; }
-      .badge-courts { background: #eff6ff !important; color: #1d4ed8 !important; border-color: #bfdbfe !important; }
-      .badge-harveynorman { background: #e0e7ff !important; color: #4338ca !important; border-color: #c7d2fe !important; }
-      .badge-shopee { background: #fff7ed !important; color: #ea580c !important; border-color: #fed7aa !important; }
-      .badge-ikea { background: #fefce8 !important; color: #854d0e !important; border-color: #fef08a !important; }
-      .badge-simmons { background: #f5f3ff !important; color: #6d28d9 !important; border-color: #ddd6fe !important; }
-      .badge-castlery { background: #fbf7f4 !important; color: #7c5843 !important; border-color: #ebdcd0 !important; }
-      .badge-smartinnovations { background: #f0fdf4 !important; color: #15803d !important; border-color: #bbf7d0 !important; }
+      .badge-bestdenki {
+        background: #fef2f2 !important;
+        color: #dc2626 !important;
+        border-color: #fecaca !important;
+      }
+      .badge-gaincity {
+        background: #ecfeff !important;
+        color: #0891b2 !important;
+        border-color: #a5f3fc !important;
+      }
+      .badge-courts {
+        background: #eff6ff !important;
+        color: #1d4ed8 !important;
+        border-color: #bfdbfe !important;
+      }
+      .badge-harveynorman {
+        background: #e0e7ff !important;
+        color: #4338ca !important;
+        border-color: #c7d2fe !important;
+      }
+      .badge-shopee {
+        background: #fff7ed !important;
+        color: #ea580c !important;
+        border-color: #fed7aa !important;
+      }
+      .badge-ikea {
+        background: #fefce8 !important;
+        color: #854d0e !important;
+        border-color: #fef08a !important;
+      }
+      .badge-simmons {
+        background: #f5f3ff !important;
+        color: #6d28d9 !important;
+        border-color: #ddd6fe !important;
+      }
+      .badge-castlery {
+        background: #fbf7f4 !important;
+        color: #7c5843 !important;
+        border-color: #ebdcd0 !important;
+      }
+      .badge-smartinnovations {
+        background: #f0fdf4 !important;
+        color: #15803d !important;
+        border-color: #bbf7d0 !important;
+      }
 
       .net-price-cell {
         font-weight: 700;
@@ -375,7 +410,7 @@
         padding: 14px 18px;
         background: #faf8f4;
         border-top: 1px dashed #e2d9cd;
-        box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
       }
 
       .drawer-header {
@@ -1826,7 +1861,9 @@
         transition: filter 0.2s ease;
       }
 
-      .switch-connection-group { opacity: 0.48; }
+      .switch-connection-group {
+        opacity: 0.48;
+      }
       .switch-connection-group path {
         fill: none;
         stroke: #0284c7;
@@ -1851,10 +1888,19 @@
         stroke: #faf9f6;
         stroke-width: 3px;
       }
-      #switchFocusOverlay .switch-connection-group { opacity: 1; }
-      #switchFocusOverlay .switch-connection-group path { stroke-width: 3.5; }
-      #switchFocusOverlay .switch-connection-group text { font-size: 11px; stroke-width: 4px; }
-      #switchFocusOverlay .switch-pin { filter: drop-shadow(0 0 12px #38bdf8); }
+      #switchFocusOverlay .switch-connection-group {
+        opacity: 1;
+      }
+      #switchFocusOverlay .switch-connection-group path {
+        stroke-width: 3.5;
+      }
+      #switchFocusOverlay .switch-connection-group text {
+        font-size: 11px;
+        stroke-width: 4px;
+      }
+      #switchFocusOverlay .switch-pin {
+        filter: drop-shadow(0 0 12px #38bdf8);
+      }
 
       .switch-pin:hover {
         filter: drop-shadow(0 2px 10px rgba(56, 189, 248, 0.6));
@@ -2069,10 +2115,7 @@
             <span>Store Comparisons</span>
             <span
               class="tab-badge"
-              style="
-                background: rgba(224, 122, 95, 0.15);
-                color: #d05d3b;
-              "
+              style="background: rgba(224, 122, 95, 0.15); color: #d05d3b"
               >70 Quotes</span
             >
           </button>
@@ -2679,8 +2722,8 @@
             <div class="principle-desc">
               Most rooms use neutral-powered smart relays for standard
               downlights. Dining is the exception: its H1 press controls
-              always-powered T2 smart bulbs wirelessly. Physical relay
-              operation remains available when automation is offline.
+              always-powered T2 smart bulbs wirelessly. Physical relay operation
+              remains available when automation is offline.
             </div>
           </div>
 
@@ -2697,11 +2740,27 @@
         </div>
 
         <div class="zone-why-box" style="margin: 16px 0 20px">
-          <div class="zone-why-title"><span>✋</span> Wall-switch manual bypass</div>
-          <strong>Press ON:</strong> keep that lighting circuit on for 2 hours, ignoring its normal vacancy-off timer. If a sensor already turned a relay light on, press OFF then ON to request the hold; do not assume double-press support. If the room is still occupied when the hold expires, leave the light on; otherwise start the normal vacancy delay then.
-          <br /><strong>Press OFF:</strong> turn it off immediately and block sensor auto-on until the zone clears and a new arrival occurs, or until another ON press.
-          <br /><strong>Scope:</strong> sensor-controlled lights only. Closed-door bathroom occupancy still prevents automatic shutoff during a shower; the heater's separate 20-minute auto-off is never bypassed. AC, fans, curtains, and manual-first bedrooms keep their own controls.
-          <br /><strong>Implementation:</strong> trigger the hold from a physical H1/Z1 switch action, not from a light state change caused by automation. Confirm action-event support for the chosen integration; use a per-circuit toggle and timer in Home Assistant.
+          <div class="zone-why-title">
+            <span>✋</span> Wall-switch manual bypass
+          </div>
+          <strong>Press ON:</strong> keep that lighting circuit on for 2 hours,
+          ignoring its normal vacancy-off timer. If a sensor already turned a
+          relay light on, press OFF then ON to request the hold; do not assume
+          double-press support. If the room is still occupied when the hold
+          expires, leave the light on; otherwise start the normal vacancy delay
+          then. <br /><strong>Press OFF:</strong> turn it off immediately and
+          block sensor auto-on until the zone clears and a new arrival occurs,
+          or until another ON press. <br /><strong>Scope:</strong>
+          sensor-controlled lights only. Closed-door bathroom occupancy still
+          prevents automatic shutoff during a shower; the heater's separate
+          20-minute auto-off is never bypassed. AC, fans, curtains, and
+          manual-first bedrooms keep their own controls. <br /><strong
+            >Implementation:</strong
+          >
+          trigger the hold from a physical H1/Z1 switch action, not from a light
+          state change caused by automation. Confirm action-event support for
+          the chosen integration; use a per-circuit toggle and timer in Home
+          Assistant.
         </div>
 
         <!-- Sensor Fleet KPI Summary -->
@@ -2921,8 +2980,10 @@
                     style="color: var(--sage-primary); font-weight: 700"
                     >2 light circuits + 2 wireless commands</span
                   >)<br />
-                  • Two independently switched ceiling tracks (3 heads each provisionally)<br />
-                  • Rocker 3 is reserved for the wall-mounted fan control; rocker 4 triggers one scene
+                  • Two independently switched ceiling tracks (3 heads each
+                  provisionally)<br />
+                  • Rocker 3 is reserved for the wall-mounted fan control;
+                  rocker 4 triggers one scene
                 </div>
               </div>
             </div>
@@ -3137,7 +3198,8 @@
                   <span>📡</span> Sensors Deployed
                 </div>
                 <div class="zone-subcol-content">
-                  • <strong>Switch on dining side of kitchen doorway</strong><br />
+                  • <strong>Switch on dining side of kitchen doorway</strong
+                  ><br />
                   <span style="color: var(--text-secondary)"
                     >No motion sensor required</span
                   >
@@ -3398,9 +3460,9 @@
               <div class="zone-why-title">
                 <span>💡</span> Simple Smart Switch Control:
               </div>
-              The H1 press controls the T2 bulb scene wirelessly while the pendant
-              circuit stays powered. The FP2 zone handles normal auto-on/off;
-              a wall press can hold the pendant on for 2 hours.
+              The H1 press controls the T2 bulb scene wirelessly while the
+              pendant circuit stays powered. The FP2 zone handles normal
+              auto-on/off; a wall press can hold the pendant on for 2 hours.
             </div>
           </div>
 
@@ -3437,8 +3499,10 @@
                   <span>💡</span> Switches & Lights
                 </div>
                 <div class="zone-subcol-content">
-                  • <strong>Aqara Z1 Pro 4-Rocker</strong> (indoor command plate)<br />
-                  • 1: Balcony fan/light Bond scene; 2/3: Zip Track raise/lower<br />
+                  • <strong>Aqara Z1 Pro 4-Rocker</strong> (indoor command
+                  plate)<br />
+                  • 1: Balcony fan/light Bond scene; 2/3: Zip Track
+                  raise/lower<br />
                   • 4: Living-room curtain scene
                 </div>
               </div>
@@ -3456,8 +3520,8 @@
                 <span class="zone-auto-bullet">▶</span>
                 <div>
                   <strong>Zip Track & Curtains:</strong> Rockers 2/3 use the
-                  Dooya bridge for raise/lower; rocker 4 controls living curtains.
-                  Keep the Dooya remote for stop and backup.
+                  Dooya bridge for raise/lower; rocker 4 controls living
+                  curtains. Keep the Dooya remote for stop and backup.
                 </div>
               </div>
             </div>
@@ -3765,7 +3829,8 @@ automation:
           <details>
             <summary class="ha-code-summary">
               <span
-                >🛠️ View manual switch bypass logic (implementation outline)</span
+                >🛠️ View manual switch bypass logic (implementation
+                outline)</span
               >
               <span
                 style="
@@ -7104,8 +7169,10 @@ wall-switch action event exposed by the selected Home Assistant integration.
                   style="color: var(--sage-primary); font-weight: 700"
                   >Relay Mode</span
                 >)<br />
-                • Two independently switched ceiling tracks (3 heads each provisionally)<br />
-                • No living-room ceiling fan; wall-mounted fan model and control TBD
+                • Two independently switched ceiling tracks (3 heads each
+                provisionally)<br />
+                • No living-room ceiling fan; wall-mounted fan model and control
+                TBD
               </div>
             </div>
 
@@ -7175,7 +7242,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
           <div class="comparison-view-title-wrap">
             <h2>🏬 Showroom & Retail Store Comparisons</h2>
             <p>
-              Benchmarking Singapore showroom walk-in quotes, megastore packages (Courts Megastore, Best Denki VivoCity, Gain City AMK, Harvey Norman), and official online deals across 70 verified quotations.
+              Benchmarking Singapore showroom walk-in quotes, megastore packages
+              (Courts Megastore, Best Denki VivoCity, Gain City AMK, Harvey
+              Norman), and official online deals across 70 verified quotations.
             </p>
           </div>
           <div class="comparison-search-wrap">
@@ -7183,7 +7252,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
               type="text"
               id="comparisonSearchInput"
               class="search-input"
-              style="width: 260px;"
+              style="width: 260px"
               placeholder="Search stores, models, quotes..."
               oninput="handleComparisonSearch(this.value)"
             />
@@ -12864,7 +12933,10 @@ wall-switch action event exposed by the selected Home Assistant integration.
         } else if (sn.includes("castlery")) {
           cls += " badge-castlery";
           icon = "🪵 ";
-        } else if (sn.includes("smart innovations") || sn.includes("homesmart")) {
+        } else if (
+          sn.includes("smart innovations") ||
+          sn.includes("homesmart")
+        ) {
           cls += " badge-smartinnovations";
           icon = "⚡ ";
         } else if (sn.includes("dreame")) {
@@ -13019,7 +13091,8 @@ wall-switch action event exposed by the selected Home Assistant integration.
             const priorityDisplay = `<span class="badge-priority ${priorityClass}">${item.priority}</span>`;
 
             // 5. Fulfilment status and purchase/quote source
-            const purchaseSource = item.purchaseSource || item.availableAt || "—";
+            const purchaseSource =
+              item.purchaseSource || item.availableAt || "—";
             const purchaseStatusDisplay = `
               <span class="status-badge ${statusClass}">${fulfillmentStatus}</span>
               <div class="purchase-source">${purchaseSource}</div>
@@ -13030,12 +13103,15 @@ wall-switch action event exposed by the selected Home Assistant integration.
               item.options && item.options.length > 1
                 ? item.options.length
                 : item.options && item.options[0] && item.options[0].stores
-                ? item.options[0].stores.length
-                : 1;
+                  ? item.options[0].stores.length
+                  : 1;
 
             const isDrawerOpen = openDrawers.has(item.id);
             const drawerBtnActive = isDrawerOpen ? "active" : "";
-            const btnLabel = optCount > 1 ? `📋 View Details (${optCount})` : "📋 View Details";
+            const btnLabel =
+              optCount > 1
+                ? `📋 View Details (${optCount})`
+                : "📋 View Details";
 
             let actionsHtml = `
               <button type="button" class="btn-table-pill btn-drawer-pill ${drawerBtnActive}" id="toggleBtn-${item.id}" onclick="toggleItemDrawer('${item.id}')" title="View store platform, deals & item specifications">${btnLabel}</button>
@@ -13112,9 +13188,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                 const btnClass = isStoreSelected
                   ? "btn-select-option is-active"
                   : "btn-select-option";
-                const btnText = isStoreSelected
-                  ? "✓ Active Choice"
-                  : "Select";
+                const btnText = isStoreSelected ? "✓ Active Choice" : "Select";
 
                 optionRowsHtml += `
                   <tr class="${rowClass}">
@@ -13190,8 +13264,8 @@ wall-switch action event exposed by the selected Home Assistant integration.
           selectedModel.stores && selectedModel.stores[storeIdx]
             ? selectedModel.stores[storeIdx]
             : selectedModel.stores && selectedModel.stores[0]
-            ? selectedModel.stores[0]
-            : null;
+              ? selectedModel.stores[0]
+              : null;
 
         item.choice = selectedModel.model;
         if (selectedModel.notes) item.notes = selectedModel.notes;
@@ -13223,7 +13297,11 @@ wall-switch action event exposed by the selected Home Assistant integration.
       function handleStoreChange(itemName, storeIndexStr) {
         const item = itemsData.find((i) => i.name === itemName);
         if (!item) return;
-        selectCandidateOption(itemName, item.selectedOptionIndex || 0, storeIndexStr);
+        selectCandidateOption(
+          itemName,
+          item.selectedOptionIndex || 0,
+          storeIndexStr,
+        );
       }
 
       function resetAllOptions() {
@@ -14078,7 +14156,6 @@ wall-switch action event exposed by the selected Home Assistant integration.
         reader.readAsText(file);
       }
 
-      
       let currentComparisonCategoryFilter = "all";
       let currentComparisonSearchTerm = "";
 
@@ -14089,7 +14166,10 @@ wall-switch action event exposed by the selected Home Assistant integration.
 
         // 1. Render Category Pills if empty
         if (pillsBar && pillsBar.children.length === 0) {
-          let allCount = comparisonData.reduce((acc, c) => acc + c.rows.length, 0);
+          let allCount = comparisonData.reduce(
+            (acc, c) => acc + c.rows.length,
+            0,
+          );
           let pillsHtml = `
             <button class="category-pill-btn active" onclick="filterComparisonCategory('all', this)">
               <span>All Showroom Deals</span>
@@ -14125,7 +14205,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                   r.model.toLowerCase().includes(q) ||
                   r.listedPrice.toLowerCase().includes(q) ||
                   r.netPrice.toLowerCase().includes(q) ||
-                  (r.linkText && r.linkText.toLowerCase().includes(q))
+                  (r.linkText && r.linkText.toLowerCase().includes(q)),
               );
             }
             if (rows.length === 0) return null;
@@ -14158,8 +14238,13 @@ wall-switch action event exposed by the selected Home Assistant integration.
                   : '<span style="color: var(--text-muted); font-size: 0.75rem;">—</span>';
 
                 let promoMatch = r.netPrice.match(/\((.*?)\)/);
-                let mainPrice = r.netPrice.replace(/\(.*?\)/, "").replace(/\*\*/g, "").trim();
-                let promoText = promoMatch ? promoMatch[1].replace(/_/g, "") : "";
+                let mainPrice = r.netPrice
+                  .replace(/\(.*?\)/, "")
+                  .replace(/\*\*/g, "")
+                  .trim();
+                let promoText = promoMatch
+                  ? promoMatch[1].replace(/_/g, "")
+                  : "";
 
                 return `
                 <tr>
@@ -14220,7 +14305,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
         if (btnElement) {
           btnElement.classList.add("active");
         } else if (pillsBar) {
-          const matchingBtn = pillsBar.querySelector(`[data-cat="${category}"]`);
+          const matchingBtn = pillsBar.querySelector(
+            `[data-cat="${category}"]`,
+          );
           if (matchingBtn) matchingBtn.classList.add("active");
         }
         renderComparisonTables();
@@ -14236,7 +14323,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
         filterComparisonCategory(category);
         setTimeout(() => {
           const card = document.getElementById(
-            `card-${category.replace(/[^a-zA-Z0-9]/g, "-")}`
+            `card-${category.replace(/[^a-zA-Z0-9]/g, "-")}`,
           );
           if (card) {
             card.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -14350,7 +14437,8 @@ wall-switch action event exposed by the selected Home Assistant integration.
           if (typeof renderComparisonTables === "function") {
             renderComparisonTables();
           }
-          if (history.replaceState) history.replaceState(null, null, "#comparisons");
+          if (history.replaceState)
+            history.replaceState(null, null, "#comparisons");
         }
       }
 
@@ -14508,7 +14596,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "• <strong>Zone Depth:</strong> ±1,750 mm<br>• <strong>Walkway Width:</strong> ±1,505 mm<br>• <strong>Threshold Opening:</strong> ±1,500 mm<br>• <strong>Floor Area:</strong> ~5.3 m² (~57 sq ft)<br>• <strong>Layout:</strong> Fits IKEA Norden folding gateleg table (up to 152cm extended).",
           sensors:
             "• Lengthwise mmWave radar from North pelmet (Aqara FP2 Zone 2: Dining Table)<br>• Multi-zone autonomous presence tracking",
-        lighting:
+          lighting:
             "• <strong>IKEA Wireless Dimmer Remote</strong> (Homeowner-owned / Retained; $0) paired via Zigbee to Home Assistant<br>• 2x Aqara T2 smart pendant bulbs (constant 230V mains power)<br>• Wireless dimming and scene control through remote, app, or automations<br>• 18k AC indoor unit mounted on east dining wall; installer to confirm exact position",
           automations:
             "• <strong>Mealtime Presence (FP2 Zone 2):</strong> mmWave turns on dining pendant automatically when table is occupied.<br>• <strong>Auto-Off:</strong> Shuts off after table clears unless manually held.<br>• <strong>IKEA Remote / HA:</strong> Dimming and warm dinner / meal-prep scene toggle.",
@@ -14649,10 +14737,19 @@ wall-switch action event exposed by the selected Home Assistant integration.
       // Inspect one switch's actual relay loads and wireless scene targets at a time.
       const switchTargets = {
         entrance: ["light-foyer-dl", "light-entrance-strip"],
-        living: ["light-living-track-a", "light-living-track-b", "scene-living"],
+        living: [
+          "light-living-track-a",
+          "light-living-track-b",
+          "scene-living",
+        ],
         dining: ["light-dining-pendant"],
         kitchen: ["light-kitchen-dl"],
-        balcony: ["light-balcony", "fan-balcony", "zip-track", "curtain-living"],
+        balcony: [
+          "light-balcony",
+          "fan-balcony",
+          "zip-track",
+          "curtain-living",
+        ],
         bed2: ["light-bed2-dl"],
         "common-bath-light": ["light-common-dl"],
         "common-bath-heater": [],
@@ -14669,16 +14766,23 @@ wall-switch action event exposed by the selected Home Assistant integration.
         clearSwitchFocus();
         const svg = pin.closest("svg");
         const key = pin.dataset.switchId;
-        const connections = [...svg.querySelectorAll(".switch-connection-group")]
-          .find((group) => group.dataset.switchId === key);
+        const connections = [
+          ...svg.querySelectorAll(".switch-connection-group"),
+        ].find((group) => group.dataset.switchId === key);
         if (!key || !connections) return;
         const ns = "http://www.w3.org/2000/svg";
         const overlay = document.createElementNS(ns, "g");
         overlay.id = "switchFocusOverlay";
         overlay.setAttribute("pointer-events", "none");
         const shade = document.createElementNS(ns, "rect");
-        Object.entries({ x: 0, y: 0, width: 1600, height: 1251, fill: "#06121b", opacity: 0.68 })
-          .forEach(([name, value]) => shade.setAttribute(name, value));
+        Object.entries({
+          x: 0,
+          y: 0,
+          width: 1600,
+          height: 1251,
+          fill: "#06121b",
+          opacity: 0.68,
+        }).forEach(([name, value]) => shade.setAttribute(name, value));
         overlay.append(shade);
         for (const id of switchTargets[key] || []) {
           const target = svg.querySelector(`[id="${id}"]`);
@@ -14709,13 +14813,15 @@ wall-switch action event exposed by the selected Home Assistant integration.
       }
 
       function initSwitchFocus() {
-        document.querySelectorAll(".map-svg .switch-pin[data-switch-id]").forEach((pin) => {
-          pin.setAttribute("tabindex", "0");
-          pin.addEventListener("mouseenter", () => focusSwitch(pin));
-          pin.addEventListener("mouseleave", clearSwitchFocus);
-          pin.addEventListener("focus", () => focusSwitch(pin));
-          pin.addEventListener("blur", clearSwitchFocus);
-        });
+        document
+          .querySelectorAll(".map-svg .switch-pin[data-switch-id]")
+          .forEach((pin) => {
+            pin.setAttribute("tabindex", "0");
+            pin.addEventListener("mouseenter", () => focusSwitch(pin));
+            pin.addEventListener("mouseleave", clearSwitchFocus);
+            pin.addEventListener("focus", () => focusSwitch(pin));
+            pin.addEventListener("blur", clearSwitchFocus);
+          });
       }
 
       // Initialize
