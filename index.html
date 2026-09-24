@@ -6913,11 +6913,11 @@ wall-switch action event exposed by the selected Home Assistant integration.
                     <circle cx="52.5" cy="15.5" r="1.5" fill="#38bdf8" />
                   </g>
 
-                  <!-- Dining: H1 1-gang decoupled scene switch on kitchen/dining wall -->
+                  <!-- Dining: IKEA wireless dimmer remote for dining pendant scenes -->
                   <g class="switch-pin" data-switch-id="dining" transform="translate(600, 805)">
-                    <title>Dining: Aqara H1 1-Gang (decoupled wireless control of T2 smart pendant bulbs)</title>
-                    <rect x="-2" y="-14" width="42" height="12" rx="3" fill="#0f172a" fill-opacity="0.95" stroke="#f59e0b" stroke-width="0.8" />
-                    <text x="19" y="-5" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="800" fill="#f59e0b" text-anchor="middle" letter-spacing="0.5">DIN • H1</text>
+                    <title>Dining: IKEA Wireless Dimmer Remote (wireless control of T2 smart pendant bulbs)</title>
+                    <rect x="-4" y="-14" width="46" height="12" rx="3" fill="#0f172a" fill-opacity="0.95" stroke="#f59e0b" stroke-width="0.8" />
+                    <text x="19" y="-5" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="800" fill="#f59e0b" text-anchor="middle" letter-spacing="0.5">IKEA DIM</text>
                     <rect x="0" y="0" width="38" height="20" rx="3.5" fill="#1e293b" stroke="#ffffff" stroke-width="1.4" filter="url(#badgeShadow)" />
                     <line x1="19" y1="2" x2="19" y2="18" stroke="#475569" stroke-width="1" />
                     <circle cx="19" cy="16" r="1.5" fill="#f59e0b" />
@@ -7291,19 +7291,19 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "smart-switch-dining",
             "name": "Smart Switch (Dining)",
-            "choice": "Aqara H1 1-Gang with Neutral",
-            "notes": "Use in Decoupled Mode: the pendant circuit remains permanently powered and the rocker calls dining smart-bulb scenes.",
+            "choice": "IKEA Wireless Dimmer Remote (Existing / Retained)",
+            "notes": "Homeowner-owned wireless Zigbee dimmer remote (e.g. IKEA Rodret / Tradfri) paired via Zigbee to Home Assistant to control dining pendant scenes and dimming. $0 procurement cost.",
             "room": "Dining",
             "priority": "P0",
             "status": "Selected",
             "fulfillmentStatus": "Pending Purchase",
-            "purchaseSource": "Smart Innovations",
+            "purchaseSource": "Existing / Retained",
             "purchaseNotes": "",
-            "price": 55,
-            "priceDisplay": "$55.00",
-            "availableAt": "Smart Innovations",
-            "linkText": "Aqara brochure",
-            "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf",
+            "price": 0,
+            "priceDisplay": "$0",
+            "availableAt": "Existing / Retained",
+            "linkText": "IKEA SG",
+            "linkUrl": "https://www.ikea.com/sg/en/cat/wireless-dimmers-remotes-smart-44754/",
             "sellerDeductible": false,
             "sellerSavings": 0,
             "comparisonCategory": null,
@@ -7311,8 +7311,22 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "selectedStoreIndex": 0,
             "options": [
                   {
+                        "model": "IKEA Wireless Dimmer Remote (Existing / Retained)",
+                        "notes": "Homeowner-owned wireless Zigbee dimmer remote (e.g. IKEA Rodret / Tradfri) paired via Zigbee to Home Assistant to control dining pendant scenes and dimming. $0 procurement cost.",
+                        "stores": [
+                              {
+                                    "store": "Existing / Retained",
+                                    "price": 0,
+                                    "priceDisplay": "$0",
+                                    "promo": "Homeowner already owns remote; zero procurement cost.",
+                                    "linkText": "IKEA SG",
+                                    "linkUrl": "https://www.ikea.com/sg/en/cat/wireless-dimmers-remotes-smart-44754/"
+                              }
+                        ]
+                  },
+                  {
                         "model": "Aqara H1 1-Gang with Neutral",
-                        "notes": "Use in Decoupled Mode: the pendant circuit remains permanently powered and the rocker calls dining smart-bulb scenes.",
+                        "notes": "Hardwired wall switch in Decoupled Mode: the pendant circuit remains permanently powered and the rocker calls dining smart-bulb scenes.",
                         "stores": [
                               {
                                     "store": "Smart Innovations",
@@ -7335,20 +7349,6 @@ wall-switch action event exposed by the selected Home Assistant integration.
                                     "promo": "Zigbee scene plate.",
                                     "linkText": "Aqara brochure",
                                     "linkUrl": "https://smartinnovations.sg/wp-content/uploads/2024/12/Aqara-brochure-6-Nov-compressed.pdf"
-                              }
-                        ]
-                  },
-                  {
-                        "model": "Aqara Dimmer Switch H2 EU",
-                        "notes": "Hard-wired rotary dimmer for ordinary triac bulbs; retained only as the non-smart-bulb alternative.",
-                        "stores": [
-                              {
-                                    "store": "PassionHome / HomeSmart / Shopee",
-                                    "price": 88,
-                                    "priceDisplay": "$88.00",
-                                    "promo": "Requires triac-dimmable bulbs.",
-                                    "linkText": "PassionHome",
-                                    "linkUrl": "https://passionhome.sg"
                               }
                         ]
                   }
@@ -14509,9 +14509,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
           sensors:
             "• Lengthwise mmWave radar from North pelmet (Aqara FP2 Zone 2: Dining Table)<br>• Multi-zone autonomous presence tracking",
         lighting:
-            "• <strong>Aqara H1 1-Gang</strong> on the kitchen/dining dividing wall, decoupled from the pendant circuit<br>• 2x Aqara T2 smart pendant bulbs<br>• Wireless on/off and scene control through the hub<br>• 18k AC indoor unit mounted on the east dining wall; installer to confirm exact position",
+            "• <strong>IKEA Wireless Dimmer Remote</strong> (Homeowner-owned / Retained; $0) paired via Zigbee to Home Assistant<br>• 2x Aqara T2 smart pendant bulbs (constant 230V mains power)<br>• Wireless dimming and scene control through remote, app, or automations<br>• 18k AC indoor unit mounted on east dining wall; installer to confirm exact position",
           automations:
-            "• <strong>Mealtime Presence (FP2 Zone 2):</strong> mmWave turns on dining pendant automatically when table is occupied.<br>• <strong>Auto-Off:</strong> Shuts off after the table clears unless manually held.<br>• <strong>Dining H1 press:</strong> hold smart pendant on for 2 hours.",
+            "• <strong>Mealtime Presence (FP2 Zone 2):</strong> mmWave turns on dining pendant automatically when table is occupied.<br>• <strong>Auto-Off:</strong> Shuts off after table clears unless manually held.<br>• <strong>IKEA Remote / HA:</strong> Dimming and warm dinner / meal-prep scene toggle.",
           filterRoom: "Dining",
         },
         Balcony: {
