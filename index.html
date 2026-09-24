@@ -2451,9 +2451,9 @@
                 <div class="mini-cost">$800 • Neutral Wire</div>
               </div>
               <div class="stack-mini-card">
-                <div class="mini-title">Fan Control</div>
-                <div class="mini-choice">Bond Bridge + RF</div>
-                <div class="mini-cost">$600 • Fanco DC</div>
+                <div class="mini-title">Fan Plan</div>
+                <div class="mini-choice">Wall fan TBD + balcony relocation</div>
+                <div class="mini-cost">$200–$500 • wall fan</div>
               </div>
             </div>
           </div>
@@ -2922,7 +2922,7 @@
                     >2 light circuits + 2 wireless commands</span
                   >)<br />
                   • Two independently switched ceiling tracks (3 heads each provisionally)<br />
-                  • Rocker 3 commands Fanco DC fan; rocker 4 triggers one scene
+                  • Rocker 3 is reserved for the wall-mounted fan control; rocker 4 triggers one scene
                 </div>
               </div>
             </div>
@@ -6433,10 +6433,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                     <text x="27" y="13" font-size="9" font-weight="700" fill="#2d6b85" text-anchor="middle">AC 9k</text>
                   </g>
 
-                  <!-- Fanco Ceiling Fans -->
-                  <circle id="fan-living" cx="850" cy="540" r="22" fill="none" stroke="#3a7d99" stroke-width="2" stroke-dasharray="4 3" />
-                  <text x="850" y="544" font-size="10" font-weight="700" fill="#3a7d99" text-anchor="middle">FAN</text>
-
+                  <!-- Existing ceiling fan relocated to balcony; living wall fan is TBD and intentionally not positioned. -->
                   <circle id="fan-balcony" cx="770" cy="180" r="22" fill="none" stroke="#3a7d99" stroke-width="2" stroke-dasharray="4 3" />
                   <text x="770" y="184" font-size="10" font-weight="700" fill="#3a7d99" text-anchor="middle">FAN</text>
 
@@ -7108,7 +7105,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
                   >Relay Mode</span
                 >)<br />
                 • Two independently switched ceiling tracks (3 heads each provisionally)<br />
-                • Fanco DC Ceiling Fan (RF Bond Bridge)
+                • No living-room ceiling fan; wall-mounted fan model and control TBD
               </div>
             </div>
 
@@ -10888,8 +10885,8 @@ wall-switch action event exposed by the selected Home Assistant integration.
       {
             "id": "living-room-wall-mounted-fan",
             "name": "Living Room Wall-Mounted Fan",
-            "choice": "No living-room ceiling fan",
-            "notes": "No living-room ceiling fan. Confirm the wall mount, dedicated power point and control method with ID/electrician before electrical close-up.",
+            "choice": "Wall-mounted fan only; model, wall mount, dedicated power point and control method TBD",
+            "notes": "Wall-mounted fan only; model, wall mount, dedicated power point and control method TBD. No living-room ceiling fan.",
             "room": "Living Room",
             "priority": "P1",
             "status": "TBD",
@@ -10908,8 +10905,8 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "selectedStoreIndex": 0,
             "options": [
                   {
-                        "model": "No living-room ceiling fan",
-                        "notes": "No living-room ceiling fan. Confirm the wall mount, dedicated power point and control method with ID/electrician before electrical close-up.",
+                        "model": "Wall-mounted fan only; model, wall mount, dedicated power point and control method TBD",
+                        "notes": "Wall-mounted fan only; model, wall mount, dedicated power point and control method TBD. No living-room ceiling fan.",
                         "stores": [
                               {
                                     "store": "-",
@@ -14264,7 +14261,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
           sensors:
             "• <strong>1x Aqara Presence Sensor FP2 (Multi-Zone)</strong> (North Pelmet)<br>• Wi-Fi 2.4GHz • 5V USB-C in Pelmet<br>• Lengthwise radar sweeps South across Living (Zone 1) & Dining (Zone 2).<br>• <strong>Through-Wall Conduit:</strong> 32mm sleeve to Bed 2 PC rig for 4K 120Hz TV & USB wireless dongles.",
           lighting:
-            "• <strong>Aqara Z1 Pro 4-Rocker</strong>: track 1, track 2, fan command, one scene<br>• Two independently switched ceiling tracks; provisionally 3 High-CRI heads per track (rail/installation quote TBD)<br>• Fanco DC Ceiling Fan (RF Bond Bridge; keep power independent)",
+            "• <strong>Aqara Z1 Pro 4-Rocker</strong>: track 1, track 2, wall-fan command, one scene<br>• Two independently switched ceiling tracks; provisionally 3 High-CRI heads per track (rail/installation quote TBD)<br>• No living-room ceiling fan; wall-mounted fan model, mount point and control method TBD",
           automations:
             "• <strong>Sofa Presence (FP2 Zone 1):</strong> Keeps ambient lights & AC active while reading or watching TV.<br>• <strong>15-Min Auto-Powerdown:</strong> Lights turn off after vacancy unless a wall-switch hold is active; AC follows its own rule.<br>• <strong>Manual ON:</strong> hold lights for 2 hours.",
           filterRoom: "Living Room",

@@ -3680,8 +3680,8 @@
   {
     "id": "living-room-wall-mounted-fan",
     "name": "Living Room Wall-Mounted Fan",
-    "choice": "No living-room ceiling fan",
-    "notes": "No living-room ceiling fan. Confirm the wall mount, dedicated power point and control method with ID/electrician before electrical close-up.",
+    "choice": "Wall-mounted fan only; model, wall mount, dedicated power point and control method TBD",
+    "notes": "Wall-mounted fan only; model, wall mount, dedicated power point and control method TBD. No living-room ceiling fan.",
     "room": "Living Room",
     "priority": "P1",
     "status": "TBD",
@@ -3700,8 +3700,8 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "No living-room ceiling fan",
-        "notes": "No living-room ceiling fan. Confirm the wall mount, dedicated power point and control method with ID/electrician before electrical close-up.",
+        "model": "Wall-mounted fan only; model, wall mount, dedicated power point and control method TBD",
+        "notes": "Wall-mounted fan only; model, wall mount, dedicated power point and control method TBD. No living-room ceiling fan.",
         "stores": [
           {
             "store": "-",
