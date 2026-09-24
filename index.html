@@ -2484,12 +2484,12 @@
                   <span class="sort-icon" id="sort-choice">⇅</span>
                 </th>
                 <th
-                  class="sortable"
+                  class="sortable sorted-desc"
                   onclick="handleSort('price')"
                   style="width: 11%; min-width: 105px; text-align: right"
                 >
                   Price
-                  <span class="sort-icon" id="sort-price">⇅</span>
+                  <span class="sort-icon" id="sort-price">▼</span>
                 </th>
                 <th
                   class="sortable"
@@ -12784,8 +12784,8 @@ wall-switch action event exposed by the selected Home Assistant integration.
       let currentSearchTerm = "";
       let isSellerDeducted = false;
 
-      let currentSortColumn = null;
-      let currentSortDirection = "asc"; // 'asc' or 'desc'
+      let currentSortColumn = "price";
+      let currentSortDirection = "desc"; // 'asc' or 'desc'
 
       let roomSpendChartInstance = null;
       let itemPriceChartInstance = null;
@@ -12813,6 +12813,8 @@ wall-switch action event exposed by the selected Home Assistant integration.
           "price",
           "room",
           "priority",
+          "fulfillmentStatus",
+          "availableAt",
         ];
         columns.forEach((col) => {
           const iconEl = document.getElementById(`sort-${col}`);
@@ -14719,6 +14721,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
       // Initialize
       window.addEventListener("DOMContentLoaded", () => {
         initSwitchFocus();
+        updateSortIcons();
         renderTable();
         updateKPIs();
         initCharts();
