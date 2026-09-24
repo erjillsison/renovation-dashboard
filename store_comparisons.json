@@ -383,7 +383,7 @@
         "store": "Courts Ang Mo Kio",
         "model": "King Koil Cool Extreme Polaris Queen + storage bed + headboard",
         "listedPrice": "$4,055.00",
-        "netPrice": "**$4,055.00 \u2014 selected**",
+        "netPrice": "**$4,055.00** _(Showroom Package Contender)_",
         "linkText": "Polaris",
         "linkUrl": "https://www.courts.com.sg/kingkoil-cool-extreme-polaris-queen-size-mattress-cool-extreme-polaris-IP186422.html"
       },
@@ -405,9 +405,17 @@
       },
       {
         "store": "Woosa SG",
-        "model": "Woosa The Mysa (Queen)",
+        "model": "Woosa The Mysa (Queen) \u2014 selected benchmark",
         "listedPrice": "$1,949.00",
-        "netPrice": "**$1,949.00** _(30-Night Trial)_",
+        "netPrice": "**$1,949.00 \u2014 selected** _(30-Night Trial)_",
+        "linkText": "Woosa SG",
+        "linkUrl": "https://woosasleep.co/products/the-mysa-mattress"
+      },
+      {
+        "store": "Woosa SG / Courts",
+        "model": "Woosa The Mysa Queen + Hydraulic Storage Bed Frame",
+        "listedPrice": "$2,539.00",
+        "netPrice": "**$2,539.00 \u2014 selected package**",
         "linkText": "Woosa SG",
         "linkUrl": "https://woosasleep.co/products/the-mysa-mattress"
       },
