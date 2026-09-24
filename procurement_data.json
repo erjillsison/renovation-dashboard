@@ -1584,6 +1584,76 @@
             "linkUrl": "https://simmons.com.sg"
           }
         ]
+      },
+      {
+        "model": "Slumberland TempSmart 5.0 Regina II (Queen) + Storage Frame",
+        "notes": "Research option (untested). 6.0 medium firmness, 1,600 ComfortPlush springs, box-top, gel memory foam, lambswool, TempSmart Tencel, Kikoo heat-release strips (12h cooling). Estimated ~$2,199 promo mattress + $590 storage frame.",
+        "stores": [
+          {
+            "store": "Slumberland SG / Retailers",
+            "price": 2789,
+            "priceDisplay": "$2,789.00",
+            "promo": "Slumberland promo mattress (~$2,199) + Courts hydraulic storage bed frame ($590 promo).",
+            "linkText": "Slumberland SG",
+            "linkUrl": "https://slumberland.com.sg/products/tempsmart-5-0-regina-ii"
+          }
+        ]
+      },
+      {
+        "model": "Woosa The Mysa (Queen) + Storage Frame",
+        "notes": "Research option (untested). 6.0\u20136.5 medium plush, Belgian Cloud Foam, Sonocore latex, Aer-Memory foam, microcoils, Italian Silver Microtencel cover. 30-night full refund trial. Mattress $1,949 + $590 storage frame.",
+        "stores": [
+          {
+            "store": "Woosa SG",
+            "price": 2539,
+            "priceDisplay": "$2,539.00",
+            "promo": "$1,949 mattress (30-night full refund trial) + $590 Courts storage bed frame.",
+            "linkText": "Woosa SG",
+            "linkUrl": "https://woosasleep.co/products/the-mysa-mattress"
+          }
+        ]
+      },
+      {
+        "model": "Four Star DETENSE ArcticSilk Aster (Queen) + Storage Frame",
+        "notes": "Research option (untested). 6.0\u20136.5 medium-firm, 5-zone pocket springs, Japanese Aire Flex, dual latex, gel foam, anti-static carbon threads, ArcticSilk cooling yarns. Mattress ~$1,798 + $590 storage frame.",
+        "stores": [
+          {
+            "store": "Four Star Showroom / Flagship",
+            "price": 2388,
+            "priceDisplay": "$2,388.00",
+            "promo": "~$1,798 promo mattress + $590 Courts storage bed frame.",
+            "linkText": "Four Star",
+            "linkUrl": "https://fourstar.com.sg/collections/detense-arcticsilk-advanze-aire-flex/products/aster"
+          }
+        ]
+      },
+      {
+        "model": "Origin LumbarCloud (Queen) + Storage Frame",
+        "notes": "Research option (untested). 6.5\u20137.0 medium cushion, 11 layers: HexaGrid, microcoils, 7-zone springs, graphite latex, ArcticSilk Luxe cover, 120-night trial. Mattress $2,499 + $590 storage frame.",
+        "stores": [
+          {
+            "store": "Origin Mattress SG",
+            "price": 3089,
+            "priceDisplay": "$3,089.00",
+            "promo": "$2,499 promo mattress (120-night full refund trial) + $590 Courts storage bed frame.",
+            "linkText": "Origin SG",
+            "linkUrl": "https://originmattress.com.sg/product/origin-lumbarcloud-mattress/"
+          }
+        ]
+      },
+      {
+        "model": "Peacelily 100% Natural Latex (Queen) + Storage Frame",
+        "notes": "Research option (untested). 5.5 medium / 7.5 firm flippable 100% natural Dunlop rubber latex layers, GOTS organic cotton cover, 25-yr warranty. SG direct web store closed. Mattress ~$1,399 + $590 storage frame.",
+        "stores": [
+          {
+            "store": "Peacelily SG / Overseas",
+            "price": 1989,
+            "priceDisplay": "$1,989.00",
+            "promo": "~$1,399 mattress + $590 Courts storage bed frame (SG online store closed).",
+            "linkText": "Peacelily SG",
+            "linkUrl": "https://peacelily.sg"
+          }
+        ]
       }
     ]
   },

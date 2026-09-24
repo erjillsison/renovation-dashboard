@@ -386,6 +386,54 @@
         "netPrice": "**$4,055.00 \u2014 selected**",
         "linkText": "Polaris",
         "linkUrl": "https://www.courts.com.sg/kingkoil-cool-extreme-polaris-queen-size-mattress-cool-extreme-polaris-IP186422.html"
+      },
+      {
+        "store": "Courts Ang Mo Kio",
+        "model": "King Koil Cool Extreme Polaris Queen (Mattress Only)",
+        "listedPrice": "$3,321.00",
+        "netPrice": "**$3,321.00** _(Mattress Standalone)_",
+        "linkText": "Polaris",
+        "linkUrl": "https://www.courts.com.sg/kingkoil-cool-extreme-polaris-queen-size-mattress-cool-extreme-polaris-IP186422.html"
+      },
+      {
+        "store": "Slumberland SG Flagship",
+        "model": "Slumberland TempSmart 5.0 Regina II (Queen)",
+        "listedPrice": "$7,398.00",
+        "netPrice": "**$2,199 \u2013 $3,299** _(Retail promo)_",
+        "linkText": "Slumberland SG",
+        "linkUrl": "https://slumberland.com.sg/products/tempsmart-5-0-regina-ii"
+      },
+      {
+        "store": "Woosa SG",
+        "model": "Woosa The Mysa (Queen)",
+        "listedPrice": "$1,949.00",
+        "netPrice": "**$1,949.00** _(30-Night Trial)_",
+        "linkText": "Woosa SG",
+        "linkUrl": "https://woosasleep.co/products/the-mysa-mattress"
+      },
+      {
+        "store": "Four Star Flagship",
+        "model": "Four Star DETENSE ArcticSilk Advanze Aire Flex (Aster Queen)",
+        "listedPrice": "$3,598.00",
+        "netPrice": "**$1,798 \u2013 $1,799** _(Direct promo)_",
+        "linkText": "Four Star",
+        "linkUrl": "https://fourstar.com.sg/collections/detense-arcticsilk-advanze-aire-flex/products/aster"
+      },
+      {
+        "store": "Origin Mattress SG",
+        "model": "Origin LumbarCloud Mattress (Queen)",
+        "listedPrice": "$3,998.00",
+        "netPrice": "**$2,499.00** _(120-Night Trial)_",
+        "linkText": "Origin SG",
+        "linkUrl": "https://originmattress.com.sg/product/origin-lumbarcloud-mattress/"
+      },
+      {
+        "store": "Peacelily SG / Overseas",
+        "model": "Peacelily Natural Rubber Latex Mattress (Queen)",
+        "listedPrice": "$1,499.00",
+        "netPrice": "**$1,299 \u2013 $1,499** _(SG direct store closed)_",
+        "linkText": "Peacelily SG",
+        "linkUrl": "https://peacelily.sg"
       }
     ]
   },
