@@ -901,7 +901,7 @@
 
       .items-table {
         width: 100%;
-        min-width: 1020px;
+        min-width: 1140px;
         border-collapse: collapse;
         text-align: left;
         font-size: 0.82rem;
@@ -1082,6 +1082,37 @@
         background: #f1f3f5;
         color: #6c757d;
         border: 1px solid #dee2e6;
+      }
+
+      .status-pending-purchase {
+        background: #fff7ed;
+        color: #c2410c;
+        border: 1px solid #fed7aa;
+      }
+
+      .status-awaiting-delivery {
+        background: #eff6ff;
+        color: #1d4ed8;
+        border: 1px solid #bfdbfe;
+      }
+
+      .status-delivered {
+        background: #f5f3ff;
+        color: #6d28d9;
+        border: 1px solid #ddd6fe;
+      }
+
+      .status-installed {
+        background: #ecfdf5;
+        color: #047857;
+        border: 1px solid #a7f3d0;
+      }
+
+      .purchase-source {
+        margin-top: 4px;
+        color: var(--text-secondary);
+        font-size: 0.7rem;
+        line-height: 1.25;
       }
 
       .item-link-btn {
@@ -2470,14 +2501,22 @@
                 <th
                   class="sortable"
                   onclick="handleSort('priority')"
-                  style="width: 9%; min-width: 80px"
+                  style="width: 8%; min-width: 80px"
                 >
                   Priority <span class="sort-icon" id="sort-priority">⇅</span>
                 </th>
                 <th
                   class="sortable"
+                  onclick="handleSort('fulfillmentStatus')"
+                  style="width: 15%; min-width: 165px"
+                >
+                  Purchase Status & Source
+                  <span class="sort-icon" id="sort-fulfillmentStatus">⇅</span>
+                </th>
+                <th
+                  class="sortable"
                   onclick="handleSort('availableAt')"
-                  style="width: 23%; min-width: 210px"
+                  style="width: 20%; min-width: 195px"
                 >
                   Details and Options
                   <span class="sort-icon" id="sort-availableAt">⇅</span>
@@ -7176,6 +7215,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Entrance",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Smart Innovations",
+            "purchaseNotes": "",
             "price": 60,
             "priceDisplay": "$60",
             "availableAt": "Smart Innovations",
@@ -7211,6 +7253,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Living Room",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Shopee SG",
+            "purchaseNotes": "",
             "price": 82,
             "priceDisplay": "$82.00",
             "availableAt": "Shopee SG",
@@ -7254,6 +7299,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Dining",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Smart Innovations",
+            "purchaseNotes": "",
             "price": 55,
             "priceDisplay": "$55.00",
             "availableAt": "Smart Innovations",
@@ -7317,6 +7365,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Kitchen",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Smart Innovations",
+            "purchaseNotes": "",
             "price": 60,
             "priceDisplay": "$60",
             "availableAt": "Smart Innovations",
@@ -7352,6 +7403,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Balcony",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Shopee SG",
+            "purchaseNotes": "",
             "price": 82,
             "priceDisplay": "$82",
             "availableAt": "Shopee SG",
@@ -7387,6 +7441,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Master Bed",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Smart Innovations",
+            "purchaseNotes": "",
             "price": 95,
             "priceDisplay": "$95",
             "availableAt": "Smart Innovations",
@@ -7422,6 +7479,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bedroom 2 / Study",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Smart Innovations",
+            "purchaseNotes": "",
             "price": 55,
             "priceDisplay": "$55",
             "availableAt": "Smart Innovations",
@@ -7457,6 +7517,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bathrooms",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Smart Innovations",
+            "purchaseNotes": "",
             "price": 60,
             "priceDisplay": "$60",
             "availableAt": "Smart Innovations",
@@ -7492,6 +7555,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bathrooms",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Smart Innovations",
+            "purchaseNotes": "",
             "price": 55,
             "priceDisplay": "$55",
             "availableAt": "Smart Innovations",
@@ -7527,6 +7593,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bathrooms",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Smart Innovations",
+            "purchaseNotes": "",
             "price": 67,
             "priceDisplay": "$67",
             "availableAt": "Smart Innovations",
@@ -7570,6 +7639,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bathrooms",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Smart Innovations",
+            "purchaseNotes": "",
             "price": 67,
             "priceDisplay": "$67",
             "availableAt": "Smart Innovations",
@@ -7613,6 +7685,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Living Room",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Sembawang Lighting House / Shopee",
+            "purchaseNotes": "",
             "price": 130,
             "priceDisplay": "$130",
             "availableAt": "Sembawang Lighting House / Shopee",
@@ -7648,6 +7723,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Dining",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Aqara Singapore Official Shopee",
+            "purchaseNotes": "",
             "price": 72,
             "priceDisplay": "$71.72",
             "availableAt": "Aqara Singapore Official Shopee",
@@ -7697,6 +7775,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Master Bed",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Sembawang Lighting House / Shopee",
+            "purchaseNotes": "",
             "price": 85,
             "priceDisplay": "$85",
             "availableAt": "Sembawang Lighting House / Shopee",
@@ -7732,6 +7813,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Entrance",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Sembawang Lighting House / Shopee",
+            "purchaseNotes": "",
             "price": 20,
             "priceDisplay": "$20",
             "availableAt": "Sembawang Lighting House / Shopee",
@@ -7767,6 +7851,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Kitchen",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Sembawang Lighting House / Shopee",
+            "purchaseNotes": "",
             "price": 65,
             "priceDisplay": "$65",
             "availableAt": "Sembawang Lighting House / Shopee",
@@ -7802,6 +7889,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Balcony",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Sembawang Lighting House / Shopee",
+            "purchaseNotes": "",
             "price": 25,
             "priceDisplay": "$25",
             "availableAt": "Sembawang Lighting House / Shopee",
@@ -7837,6 +7927,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bedroom 2 / Study",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Sembawang Lighting House / Shopee",
+            "purchaseNotes": "",
             "price": 65,
             "priceDisplay": "$65",
             "availableAt": "Sembawang Lighting House / Shopee",
@@ -7872,6 +7965,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bathrooms",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Sembawang Lighting House / Shopee",
+            "purchaseNotes": "",
             "price": 50,
             "priceDisplay": "$50",
             "availableAt": "Sembawang Lighting House / Shopee",
@@ -7907,6 +8003,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bathrooms",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Sembawang Lighting House / Shopee",
+            "purchaseNotes": "",
             "price": 50,
             "priceDisplay": "$50",
             "availableAt": "Sembawang Lighting House / Shopee",
@@ -7942,6 +8041,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Entrance",
             "priority": "P2",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Sembawang Lighting House / Shopee",
+            "purchaseNotes": "",
             "price": 40,
             "priceDisplay": "$40",
             "availableAt": "Sembawang Lighting House / Shopee",
@@ -7977,6 +8079,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Living Room",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Sembawang Lighting House / Shopee",
+            "purchaseNotes": "",
             "price": 350,
             "priceDisplay": "$350",
             "availableAt": "Sembawang Lighting House / Shopee",
@@ -8012,6 +8117,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Balcony",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Existing (Seller Inclusion)",
+            "purchaseNotes": "",
             "price": 0,
             "priceDisplay": "$0.00 (Owned)",
             "availableAt": "Existing (Seller Inclusion)",
@@ -8075,6 +8183,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Whole House",
             "priority": "P2",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Nabu Casa / Seeed Studio",
+            "purchaseNotes": "",
             "price": 250,
             "priceDisplay": "$250.00",
             "availableAt": "Nabu Casa / Seeed Studio",
@@ -8124,6 +8235,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Whole House",
             "priority": "P2",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Courts / Shopee Mall",
+            "purchaseNotes": "",
             "price": 650,
             "priceDisplay": "$650.00",
             "availableAt": "Courts / Shopee Mall",
@@ -8195,6 +8309,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Whole House",
             "priority": "P2",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Dreame SG Official",
+            "purchaseNotes": "",
             "price": 1599,
             "priceDisplay": "$1,599.00",
             "availableAt": "Dreame SG Official",
@@ -8290,6 +8407,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Kitchen",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Courts Megastore",
+            "purchaseNotes": "",
             "price": 2000,
             "priceDisplay": "$2,000.00",
             "availableAt": "Courts Megastore",
@@ -8405,6 +8525,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Kitchen",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Courts Megastore",
+            "purchaseNotes": "",
             "price": 1000,
             "priceDisplay": "$1,000.00",
             "availableAt": "Courts Megastore",
@@ -8484,6 +8607,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Entrance",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Smart Innovations",
+            "purchaseNotes": "",
             "price": 869,
             "priceDisplay": "$869.00",
             "availableAt": "Smart Innovations",
@@ -8597,6 +8723,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Whole House",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Legrand / Local Electrical Supplier",
+            "purchaseNotes": "",
             "price": 500,
             "priceDisplay": "$500",
             "availableAt": "Legrand / Local Electrical Supplier",
@@ -8632,6 +8761,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Master Bed",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Courts Ang Mo Kio",
+            "purchaseNotes": "",
             "price": 4055,
             "priceDisplay": "$4,055.00",
             "availableAt": "Courts Ang Mo Kio",
@@ -8709,6 +8841,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Living Room",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Smart Innovations",
+            "purchaseNotes": "",
             "price": 818,
             "priceDisplay": "$818.00",
             "availableAt": "Smart Innovations",
@@ -8766,6 +8901,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Living Room",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Son & Bear",
+            "purchaseNotes": "",
             "price": 1388,
             "priceDisplay": "$1,388.00",
             "availableAt": "Son & Bear",
@@ -8829,6 +8967,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Living Room",
             "priority": "P2",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Castlery",
+            "purchaseNotes": "",
             "price": 700,
             "priceDisplay": "$700.00",
             "availableAt": "Castlery",
@@ -8892,6 +9033,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Living Room",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Courts Megastore / Samsung (current quote)",
+            "purchaseNotes": "Samsung 65\" OLED S90H at $3,199. No order or payment recorded yet.",
             "price": 3199,
             "priceDisplay": "$3,199.00",
             "availableAt": "Courts Megastore",
@@ -9015,6 +9159,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Living Room",
             "priority": "P2",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Courts Megastore / Samsung (TV bundle quote)",
+            "purchaseNotes": "Samsung HW-Q990H at $1,399; confirm the TV-bundle condition when ordering. No order or payment recorded yet.",
             "price": 1399,
             "priceDisplay": "$1,399.00",
             "availableAt": "Courts Megastore",
@@ -9094,6 +9241,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Dining",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "IKEA SG",
+            "purchaseNotes": "",
             "price": 299,
             "priceDisplay": "$299.00",
             "availableAt": "IKEA SG",
@@ -9157,6 +9307,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Balcony",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Zip Track Specialist / Contractor",
+            "purchaseNotes": "",
             "price": 2850,
             "priceDisplay": "$2,850.00",
             "availableAt": "Zip Track Specialist / Contractor",
@@ -9220,6 +9373,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Living Room",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Aqara Official / Shopee",
+            "purchaseNotes": "",
             "price": 124,
             "priceDisplay": "$124",
             "availableAt": "Aqara Official / Shopee",
@@ -9255,6 +9411,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Entrance",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Aqara Official / Shopee",
+            "purchaseNotes": "",
             "price": 15,
             "priceDisplay": "$15",
             "availableAt": "Aqara Official / Shopee",
@@ -9290,6 +9449,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Entrance",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Aqara Official / Shopee",
+            "purchaseNotes": "",
             "price": 28,
             "priceDisplay": "$28",
             "availableAt": "Aqara Official / Shopee",
@@ -9325,6 +9487,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bathrooms",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Aqara Official / Shopee",
+            "purchaseNotes": "",
             "price": 15,
             "priceDisplay": "$15",
             "availableAt": "Aqara Official / Shopee",
@@ -9360,6 +9525,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bathrooms",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Aqara Official / Shopee",
+            "purchaseNotes": "",
             "price": 28,
             "priceDisplay": "$28",
             "availableAt": "Aqara Official / Shopee",
@@ -9395,6 +9563,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bathrooms",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Aqara Official / Shopee",
+            "purchaseNotes": "",
             "price": 15,
             "priceDisplay": "$15",
             "availableAt": "Aqara Official / Shopee",
@@ -9430,6 +9601,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bathrooms",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Aqara Official / Shopee",
+            "purchaseNotes": "",
             "price": 28,
             "priceDisplay": "$28",
             "availableAt": "Aqara Official / Shopee",
@@ -9465,6 +9639,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Master Bed",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Aqara Official / Shopee",
+            "purchaseNotes": "",
             "price": 15,
             "priceDisplay": "$15",
             "availableAt": "Aqara Official / Shopee",
@@ -9500,6 +9677,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Master Bed",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Aqara Official / Shopee",
+            "purchaseNotes": "",
             "price": 18,
             "priceDisplay": "$18",
             "availableAt": "Aqara Official / Shopee",
@@ -9535,6 +9715,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Whole House",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Shopee SG",
+            "purchaseNotes": "",
             "price": 18,
             "priceDisplay": "$18",
             "availableAt": "Shopee SG",
@@ -9570,6 +9753,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Master Bed",
             "priority": "P1",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Boulder Planet SG",
+            "purchaseNotes": "",
             "price": 195,
             "priceDisplay": "$195.00",
             "availableAt": "Boulder Planet SG",
@@ -9641,6 +9827,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Whole House",
             "priority": "P0",
             "status": "Selected",
+            "fulfillmentStatus": "Pending Purchase",
+            "purchaseSource": "Courts Tampines",
+            "purchaseNotes": "",
             "price": 4185,
             "priceDisplay": "$4,185.00",
             "availableAt": "Courts Tampines",
@@ -9780,6 +9969,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Dining",
             "priority": "P1",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 200,
             "priceDisplay": "$100-$300",
             "availableAt": "IKEA SG",
@@ -9843,6 +10035,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bedroom 2 / Study",
             "priority": "P2",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 1125,
             "priceDisplay": "$750-$1,500",
             "availableAt": "IKEA SG",
@@ -9906,6 +10101,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bedroom 2 / Study",
             "priority": "P2",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 750,
             "priceDisplay": "$500-$1,000",
             "availableAt": "Omnidesk SG / EverDesk",
@@ -9969,6 +10167,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bedroom 2 / Study",
             "priority": "P2",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 650,
             "priceDisplay": "$400-$900",
             "availableAt": "Hinomi SG / Secretlab",
@@ -10032,6 +10233,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bedroom 2 / Study",
             "priority": "P2",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 325,
             "priceDisplay": "$150-$500",
             "availableAt": "Shopee / Prism+ / Flight",
@@ -10095,6 +10299,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Master Bed",
             "priority": "P1",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 550,
             "priceDisplay": "$300-$800",
             "availableAt": "IKEA SG",
@@ -10158,6 +10365,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bedroom 2 / Study",
             "priority": "P1",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 650,
             "priceDisplay": "$400-$900",
             "availableAt": "Direct Blinds SG / Shopee",
@@ -10221,6 +10431,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Master Bed",
             "priority": "P1",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 650,
             "priceDisplay": "$400-$900",
             "availableAt": "-",
@@ -10256,6 +10469,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bathrooms",
             "priority": "P1",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 550,
             "priceDisplay": "$300-$800",
             "availableAt": "Hoe Kee / Sim Siang Choon",
@@ -10319,6 +10535,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bathrooms",
             "priority": "P1",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 1300,
             "priceDisplay": "$800-$1,800",
             "availableAt": "Glass Contractor / Bathroom Warehouse",
@@ -10382,6 +10601,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Bathrooms",
             "priority": "P1",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 550,
             "priceDisplay": "$350-$750",
             "availableAt": "Bathroom Warehouse / Hoe Kee",
@@ -10445,6 +10667,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Kitchen",
             "priority": "P1",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 1300,
             "priceDisplay": "$800-$1,800",
             "availableAt": "Courts / Gain City",
@@ -10508,6 +10733,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Kitchen",
             "priority": "P1",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 600,
             "priceDisplay": "$300-$900",
             "availableAt": "Takashimaya / Amazon SG / Shopee",
@@ -10571,6 +10799,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Living Room",
             "priority": "P2",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 600,
             "priceDisplay": "$300-$900",
             "availableAt": "IKEA SG",
@@ -10634,6 +10865,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Living Room",
             "priority": "P2",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 1200,
             "priceDisplay": "$600-$1,800",
             "availableAt": "Castlery SG",
@@ -10697,6 +10931,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Entrance",
             "priority": "P2",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 475,
             "priceDisplay": "$250-$700",
             "availableAt": "IKEA SG",
@@ -10760,6 +10997,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Entrance",
             "priority": "P1",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 325,
             "priceDisplay": "$150-$500",
             "availableAt": "IKEA SG",
@@ -10823,6 +11063,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Whole House",
             "priority": "P1",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 1000,
             "priceDisplay": "$600-$1,400",
             "availableAt": "-",
@@ -10858,6 +11101,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Whole House",
             "priority": "P1",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 1350,
             "priceDisplay": "$700-$2,000",
             "availableAt": "-",
@@ -10893,6 +11139,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Living Room",
             "priority": "P2",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 200,
             "priceDisplay": "$120-$280",
             "availableAt": "IKEA SG",
@@ -10956,6 +11205,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Living Room",
             "priority": "P2",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 550,
             "priceDisplay": "$300-$800",
             "availableAt": "Castlery SG",
@@ -11019,6 +11271,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Balcony",
             "priority": "P1",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 275,
             "priceDisplay": "$150-$400",
             "availableAt": "IKEA SG",
@@ -11082,6 +11337,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Balcony",
             "priority": "P1",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 300,
             "priceDisplay": "$150-$450",
             "availableAt": "IKEA SG",
@@ -11145,6 +11403,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Balcony",
             "priority": "P2",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 250,
             "priceDisplay": "$150-$350",
             "availableAt": "IKEA SG",
@@ -11194,6 +11455,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Balcony",
             "priority": "P2",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 100,
             "priceDisplay": "$50-$150",
             "availableAt": "Shopee SG / YuHome / Steigen Alternative",
@@ -11257,6 +11521,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Balcony",
             "priority": "P2",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 200,
             "priceDisplay": "$100-$300",
             "availableAt": "IKEA SG",
@@ -11320,6 +11587,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Entrance",
             "priority": "P2",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 165,
             "priceDisplay": "$80-$250",
             "availableAt": "Smart Innovations / Shopee",
@@ -11383,6 +11653,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Dining",
             "priority": "P1",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 225,
             "priceDisplay": "$100-$350",
             "availableAt": "Sembawang Lighting / Taobao",
@@ -11446,6 +11719,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Balcony",
             "priority": "P2",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 200,
             "priceDisplay": "$100-$300",
             "availableAt": "-",
@@ -11481,6 +11757,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Whole House",
             "priority": "P1",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 425,
             "priceDisplay": "$250-$600",
             "availableAt": "Direct Blinds Fabricator / Shopee",
@@ -11544,6 +11823,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Master Bed",
             "priority": "P2",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 100,
             "priceDisplay": "$50-$150",
             "availableAt": "-",
@@ -11579,6 +11861,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Master Bed",
             "priority": "P2",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 0,
             "priceDisplay": "$0 (Retained)",
             "availableAt": "Existing Unit (Retained)",
@@ -11642,6 +11927,9 @@ wall-switch action event exposed by the selected Home Assistant integration.
             "room": "Kitchen",
             "priority": "P2",
             "status": "TBD",
+            "fulfillmentStatus": "TBD",
+            "purchaseSource": "",
+            "purchaseNotes": "",
             "price": 28,
             "priceDisplay": "$15-$40",
             "availableAt": "-",
@@ -12544,8 +12832,13 @@ wall-switch action event exposed by the selected Home Assistant integration.
                 : item.priority === "P1"
                   ? "p-1"
                   : "p-2";
-            let statusClass =
-              item.status === "Selected" ? "status-selected" : "status-tbd";
+            const fulfillmentStatus =
+              item.fulfillmentStatus ||
+              (item.status === "Selected" ? "Pending Purchase" : "TBD");
+            const statusClass = `status-${fulfillmentStatus
+              .toLowerCase()
+              .replace(/[^a-z0-9]+/g, "-")
+              .replace(/(^-|-$)/g, "")}`;
 
             const optIdx = item.selectedOptionIndex || 0;
             const currentModel =
@@ -12592,7 +12885,14 @@ wall-switch action event exposed by the selected Home Assistant integration.
             // 4. Priority Column
             const priorityDisplay = `<span class="badge-priority ${priorityClass}">${item.priority}</span>`;
 
-            // 5. Action Column (View Details button and optional Quotes button)
+            // 5. Fulfilment status and purchase/quote source
+            const purchaseSource = item.purchaseSource || item.availableAt || "—";
+            const purchaseStatusDisplay = `
+              <span class="status-badge ${statusClass}">${fulfillmentStatus}</span>
+              <div class="purchase-source">${purchaseSource}</div>
+            `;
+
+            // 6. Action Column (View Details button and optional Quotes button)
             const optCount =
               item.options && item.options.length > 1
                 ? item.options.length
@@ -12625,6 +12925,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
               <td style="text-align: right;"><span class="price-tag">${activePriceDisplay}</span></td>
               <td>${roomDisplay}</td>
               <td>${priorityDisplay}</td>
+              <td>${purchaseStatusDisplay}</td>
               <td style="text-align: center;">${actionCellDisplay}</td>
             `;
             tbody.appendChild(row);
@@ -12707,7 +13008,7 @@ wall-switch action event exposed by the selected Home Assistant integration.
             });
 
             drawerRow.innerHTML = `
-              <td colspan="6">
+              <td colspan="7">
                 <div class="drawer-container">
                   <div class="drawer-header">
                     <span class="drawer-title">📋 Item Details & Deals: <strong>${item.name}</strong></span>
