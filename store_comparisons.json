@@ -249,11 +249,19 @@
       },
       {
         "store": "Samsung SG Official",
-        "model": "Bespoke AI F-WW9DV9EE: 9kg washer + 9kg heat-pump dryer",
+        "model": "Bespoke AI F-WW9DV9EE: WW90DG5U34AESP 9kg washer + DV90T6240LE/SP 9kg dryer",
         "listedPrice": "$2,579.96 _(last displayed)_",
         "netPrice": "**Not currently for sale**",
         "linkText": "Exact Samsung bundle",
         "linkUrl": "https://www.samsung.com/sg/bundles/washer-and-dryer-set/bespoke-ai-laundry-front-load-washer-9kg-and-bespoke-ai-laundry-dryer-9kg-f-ww9dv9ee/"
+      },
+      {
+        "store": "Shopee \u2014 Samsung Official Store",
+        "model": "F-WW9DV9EE exact dryer component: DV90T6240LE/SP 9kg heat-pump dryer",
+        "listedPrice": "$970.00",
+        "netPrice": "**$970.00 dryer only** _(exact SKU; 60 sold, 5.0\u2605)_",
+        "linkText": "Exact dryer listing",
+        "linkUrl": "https://shopee.sg/product/412971223/41800158351"
       },
       {
         "store": "Courts Ang Mo Kio",
