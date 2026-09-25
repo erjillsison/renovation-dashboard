@@ -192,12 +192,20 @@
         "linkUrl": "https://www.gaincity.com"
       },
       {
-        "store": "Shopee SG (Samsung Official)",
-        "model": "Samsung Bespoke Washer + Dryer (Separate Units)",
-        "listedPrice": "$2,698.00",
-        "netPrice": "**~$2,298.00**",
-        "linkText": "Shopee",
-        "linkUrl": "https://shopee.sg"
+        "store": "Shopee \u2014 Samsung Official Store",
+        "model": "Selected: WW90DG6U34LESP 9kg washer + DV90T6240LE/SP 9kg heat-pump dryer",
+        "listedPrice": "$749 + $1,099 regular prices",
+        "netPrice": "**$1,848.00 no-voucher allowance** _(Climate Voucher and checkout vouchers excluded; stacking kit TBD)_",
+        "linkText": "Washer",
+        "linkUrl": "https://shopee.sg/product/412971223/42202283371"
+      },
+      {
+        "store": "Shopee \u2014 Samsung Official Store",
+        "model": "Same selected pair, current product promotion",
+        "listedPrice": "$582.35 + $970.00",
+        "netPrice": "**$1,552.35 before checkout vouchers** _(not a Climate Voucher price; stacking kit TBD)_",
+        "linkText": "Washer",
+        "linkUrl": "https://shopee.sg/product/412971223/42202283371"
       },
       {
         "store": "Courts Megastore",
@@ -254,14 +262,6 @@
         "netPrice": "**Not currently for sale**",
         "linkText": "Exact Samsung bundle",
         "linkUrl": "https://www.samsung.com/sg/bundles/washer-and-dryer-set/bespoke-ai-laundry-front-load-washer-9kg-and-bespoke-ai-laundry-dryer-9kg-f-ww9dv9ee/"
-      },
-      {
-        "store": "Shopee \u2014 Samsung Official Store",
-        "model": "F-WW9DV9EE exact dryer component: DV90T6240LE/SP 9kg heat-pump dryer",
-        "listedPrice": "$970.00",
-        "netPrice": "**$970.00 dryer only** _(exact SKU; 60 sold, 5.0\u2605)_",
-        "linkText": "Exact dryer listing",
-        "linkUrl": "https://shopee.sg/product/412971223/41800158351"
       },
       {
         "store": "Courts Ang Mo Kio",

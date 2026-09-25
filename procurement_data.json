@@ -1156,52 +1156,44 @@
   {
     "id": "washer-dryer",
     "name": "Washer / Dryer",
-    "choice": "Samsung Bespoke AI Stack (Washer + Heat Pump Dryer + Kit)",
-    "notes": "Dedicated stack with 12kg AI washer + 9kg heat pump dryer. Potential seller inclusion savings.",
+    "choice": "Samsung Bespoke AI Shopee Pair (WW90DG6U34LESP + DV90T6240LE/SP, 9kg + 9kg)",
+    "notes": "Selected Shopee pair: 9kg Bespoke AI Control washer + 9kg Bespoke AI heat-pump dryer. Both support SmartThings; the dryer is 5-tick and has OptimalDry. Budget uses the $749 + $1,099 regular Shopee prices with no Climate Voucher or checkout vouchers. Current product promotion is $1,552.35 before checkout vouchers; confirm the compatible stacking kit because it is not included in these separate listings.",
     "room": "Kitchen",
     "priority": "P0",
     "status": "Selected",
     "fulfillmentStatus": "Pending Purchase",
-    "purchaseSource": "Courts Megastore",
-    "purchaseNotes": "",
-    "price": 2000,
-    "priceDisplay": "$2,000.00",
-    "availableAt": "Courts Megastore",
-    "linkText": "Courts",
-    "linkUrl": "https://www.courts.com.sg",
+    "purchaseSource": "Shopee \u2014 Samsung Official Store",
+    "purchaseNotes": "Selected WW90DG6U34LESP washer + DV90T6240LE/SP dryer. $1,848 allowance uses $749 + $1,099 regular listing prices without Climate Voucher or checkout vouchers; current product promo is $1,552.35. Stacking kit remains to be confirmed.",
+    "price": 1848,
+    "priceDisplay": "$1,848.00",
+    "availableAt": "Shopee \u2014 Samsung Official Store",
+    "linkText": "Shopee washer",
+    "linkUrl": "https://shopee.sg/product/412971223/42202283371",
     "sellerDeductible": true,
-    "sellerSavings": 2000,
+    "sellerSavings": 1848,
     "comparisonCategory": "Washer & Dryer Stack",
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Samsung Bespoke AI Stack (Washer + Heat Pump Dryer + Kit)",
-        "notes": "Dedicated stack with 12kg AI washer + 9kg heat pump dryer. Potential seller inclusion savings.",
+        "model": "Samsung Bespoke AI Shopee Pair (WW90DG6U34LESP + DV90T6240LE/SP, 9kg + 9kg)",
+        "notes": "Selected Shopee pair: 9kg Bespoke AI Control washer + 9kg Bespoke AI heat-pump dryer. Both support SmartThings; the dryer is 5-tick and has OptimalDry. Budget uses the $749 + $1,099 regular Shopee prices with no Climate Voucher or checkout vouchers. Current product promotion is $1,552.35 before checkout vouchers; confirm the compatible stacking kit because it is not included in these separate listings.",
         "stores": [
           {
-            "store": "Courts Megastore",
-            "price": 2000,
-            "priceDisplay": "$2,000.00",
-            "promo": "Bundle Promo",
-            "linkText": "Courts",
-            "linkUrl": "https://www.courts.com.sg"
+            "store": "Shopee \u2014 Samsung Official Store",
+            "price": 1848,
+            "priceDisplay": "$1,848.00",
+            "promo": "No-voucher allowance: $749 washer + $1,099 dryer. No Climate Voucher or checkout vouchers assumed; stacking kit excluded.",
+            "linkText": "Shopee washer",
+            "linkUrl": "https://shopee.sg/product/412971223/42202283371"
           },
           {
-            "store": "Gain City / Harvey Norman",
-            "price": 2599,
-            "priceDisplay": "$2,599.00",
-            "promo": "Stack Package",
-            "linkText": "Gain City",
-            "linkUrl": "https://www.gaincity.com"
-          },
-          {
-            "store": "Shopee SG (Samsung Official)",
-            "price": 2698,
-            "priceDisplay": "$2,698.00",
-            "promo": "Separate Units",
-            "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg/samsung_official_store"
+            "store": "Shopee \u2014 Samsung Official Store",
+            "price": 1552.35,
+            "priceDisplay": "$1,552.35",
+            "promo": "Current product promotion: $582.35 washer + $970 dryer, before any checkout vouchers; stacking kit excluded.",
+            "linkText": "Shopee dryer",
+            "linkUrl": "https://shopee.sg/product/412971223/41800158351"
           }
         ]
       },
