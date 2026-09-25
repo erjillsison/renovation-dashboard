@@ -224,6 +224,22 @@
         "linkUrl": "https://www.electrolux.com.sg/appliances/washing-machines/ewf8024d3wc/"
       },
       {
+        "store": "Bosch SG Official",
+        "model": "Serie 4: WGA25400SG 10kg washer + WTH85008SG 8kg heat-pump dryer",
+        "listedPrice": "$3,099 + $2,599",
+        "netPrice": "**$5,698.00** _(list; currently unavailable)_",
+        "linkText": "Washer",
+        "linkUrl": "https://www.bosch-home.com.sg/en/product/WGA25400SG"
+      },
+      {
+        "store": "Bosch SG Official",
+        "model": "Serie 6: WGG25400SG 10kg washer + WQG24200SG 9kg heat-pump dryer",
+        "listedPrice": "$3,199 + $2,699",
+        "netPrice": "**$5,898.00** _(list; washer limited-stock/pre-order)_",
+        "linkText": "Bosch laundry range",
+        "linkUrl": "https://www.bosch-home.com.sg/en/category/washers-dryers"
+      },
+      {
         "store": "Courts Ang Mo Kio",
         "model": "Hitachi BD-100YFVEM 10kg Washer + TD-100XFVEM 10kg Heat Pump Dryer",
         "listedPrice": "$2,228.00",
