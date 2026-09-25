@@ -2930,6 +2930,86 @@
     ]
   },
   {
+    "id": "office-chair",
+    "name": "Office Chair",
+    "choice": "Existing Ergonomic Chair (Retained)",
+    "notes": "Homeowner existing ergonomic chair retained for Bedroom 2 workstation.",
+    "room": "Bedroom 2 / Study",
+    "priority": "P1",
+    "status": "Selected",
+    "fulfillmentStatus": "Pending Purchase",
+    "purchaseSource": "Existing / Retained",
+    "purchaseNotes": "",
+    "price": 0,
+    "priceDisplay": "$0",
+    "availableAt": "Existing / Retained",
+    "linkText": "-",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "comparisonCategory": null,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Existing Ergonomic Chair (Retained)",
+        "notes": "Homeowner existing ergonomic chair retained for Bedroom 2 workstation.",
+        "stores": [
+          {
+            "store": "Existing / Retained",
+            "price": 0,
+            "priceDisplay": "$0",
+            "promo": "Retained by Homeowner",
+            "linkText": "-",
+            "linkUrl": ""
+          }
+        ]
+      },
+      {
+        "model": "Hinomi H1 Pro / Secretlab Titan Evo Ergonomic Chair",
+        "notes": "High backrest with 3D lumbar support, breathable mesh, and multi-tilt lock.",
+        "stores": [
+          {
+            "store": "Hinomi SG / Secretlab",
+            "price": 600,
+            "priceDisplay": "$600.00",
+            "promo": "Ergonomic Performance",
+            "linkText": "Hinomi SG",
+            "linkUrl": "https://www.hinomi.sg"
+          }
+        ]
+      },
+      {
+        "model": "Sihoo M57 Ergonomic Mesh Chair",
+        "notes": "Budget-friendly full mesh ergonomic chair with adjustable headrest and lumbar pad.",
+        "stores": [
+          {
+            "store": "Shopee SG (Sihoo Official)",
+            "price": 250,
+            "priceDisplay": "$250.00",
+            "promo": "Budget Value Pick",
+            "linkText": "Shopee",
+            "linkUrl": "https://shopee.sg"
+          }
+        ]
+      },
+      {
+        "model": "Herman Miller Aeron / Steelcase Gesture Ergonomic Chair",
+        "notes": "Gold-standard 12-year warranty posture fit ergonomic chair for 10+ hour WFH daily productivity.",
+        "stores": [
+          {
+            "store": "Xtra Singapore / Herman Miller",
+            "price": 1500,
+            "priceDisplay": "$1,500.00",
+            "promo": "Industry Benchmark",
+            "linkText": "Xtra SG",
+            "linkUrl": "https://xtrastore.cn"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "dining-chairs-2-no",
     "name": "Dining Chairs (2 No.)",
     "choice": "IKEA Lisabo / Odger Ergonomic Dining Chairs (Pair)",
@@ -3056,72 +3136,6 @@
             "promo": "Compact Folding Pick",
             "linkText": "Shopee",
             "linkUrl": "https://shopee.sg"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "office-chair",
-    "name": "Office Chair",
-    "choice": "Hinomi H1 Pro / Secretlab Titan Evo Ergonomic Chair",
-    "notes": "Boulies EP200 / Sihoo C300 / Steelcase Leap.",
-    "room": "Bedroom 2 / Study",
-    "priority": "P2",
-    "status": "TBD",
-    "fulfillmentStatus": "TBD",
-    "purchaseSource": "",
-    "purchaseNotes": "",
-    "price": 650,
-    "priceDisplay": "$400-$900",
-    "availableAt": "Hinomi SG / Secretlab",
-    "linkText": "Hinomi SG",
-    "linkUrl": "https://www.hinomi.sg",
-    "sellerDeductible": false,
-    "sellerSavings": 0,
-    "comparisonCategory": null,
-    "selectedOptionIndex": 0,
-    "selectedStoreIndex": 0,
-    "options": [
-      {
-        "model": "Hinomi H1 Pro / Secretlab Titan Evo Ergonomic Chair",
-        "notes": "High backrest with 3D lumbar support, breathable mesh, and multi-tilt lock.",
-        "stores": [
-          {
-            "store": "Hinomi SG / Secretlab",
-            "price": 600,
-            "priceDisplay": "$600.00",
-            "promo": "Ergonomic Performance",
-            "linkText": "Hinomi SG",
-            "linkUrl": "https://www.hinomi.sg"
-          }
-        ]
-      },
-      {
-        "model": "Sihoo M57 Ergonomic Mesh Chair",
-        "notes": "Budget-friendly full mesh ergonomic chair with adjustable headrest and lumbar pad.",
-        "stores": [
-          {
-            "store": "Shopee SG (Sihoo Official)",
-            "price": 250,
-            "priceDisplay": "$250.00",
-            "promo": "Budget Value Pick",
-            "linkText": "Shopee",
-            "linkUrl": "https://shopee.sg"
-          }
-        ]
-      },
-      {
-        "model": "Herman Miller Aeron / Steelcase Gesture Ergonomic Chair",
-        "notes": "Gold-standard 12-year warranty posture fit ergonomic chair for 10+ hour WFH daily productivity.",
-        "stores": [
-          {
-            "store": "Xtra Singapore / Herman Miller",
-            "price": 1500,
-            "priceDisplay": "$1,500.00",
-            "promo": "Industry Benchmark",
-            "linkText": "Xtra SG",
-            "linkUrl": "https://xtrastore.cn"
           }
         ]
       }
