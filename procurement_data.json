@@ -3616,7 +3616,7 @@
   {
     "id": "living-room-rug",
     "name": "Living Room Rug",
-    "choice": "Castlery Wool Blend Area Rug (200x300cm)",
+    "choice": "Washable low-pile rug (anchors sofa & aids acoustics)",
     "notes": "Washable low-pile rug (anchors sofa & aids acoustics).",
     "room": "Living Room",
     "priority": "P2",
@@ -3626,9 +3626,9 @@
     "purchaseNotes": "",
     "price": 550,
     "priceDisplay": "$300-$800",
-    "availableAt": "Castlery SG",
-    "linkText": "Castlery SG",
-    "linkUrl": "https://www.castlery.com/sg",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "comparisonCategory": null,
@@ -3636,44 +3636,16 @@
     "selectedStoreIndex": 0,
     "options": [
       {
-        "model": "Castlery Wool Blend Area Rug (200x300cm)",
-        "notes": "Durable textured wool blend rug grounding the living room conversation area.",
+        "model": "Washable low-pile rug (anchors sofa & aids acoustics)",
+        "notes": "Washable low-pile rug (anchors sofa & aids acoustics).",
         "stores": [
           {
-            "store": "Castlery SG",
+            "store": "-",
             "price": 550,
-            "priceDisplay": "$550.00",
-            "promo": "Wool Blend Area Rug",
-            "linkText": "Castlery SG",
-            "linkUrl": "https://www.castlery.com/sg"
-          }
-        ]
-      },
-      {
-        "model": "IKEA Stockholm 2017 Flatwoven Rug (170x240cm)",
-        "notes": "Reversible 100% pure wool flatwoven rug with dirt-repellent surface.",
-        "stores": [
-          {
-            "store": "IKEA SG",
-            "price": 299,
-            "priceDisplay": "$299.00",
-            "promo": "Flatwoven Pure Wool",
-            "linkText": "IKEA SG",
-            "linkUrl": "https://www.ikea.com/sg/en"
-          }
-        ]
-      },
-      {
-        "model": "Washable Low-Pile Living Room Rug",
-        "notes": "Low-pile stain-resistant washable rug anchoring sofa and improving acoustics.",
-        "stores": [
-          {
-            "store": "Castlery SG / Ruggable",
-            "price": 400,
-            "priceDisplay": "$400.00",
-            "promo": "Washable Low-Pile",
-            "linkText": "Castlery SG",
-            "linkUrl": "https://www.castlery.com/sg"
+            "priceDisplay": "$300-$800",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
           }
         ]
       }
@@ -3844,44 +3816,6 @@
             "promo": "Solid Wood Scandinavian",
             "linkText": "Castlery SG",
             "linkUrl": "https://www.castlery.com/sg"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "cleaning-laundry-basics",
-    "name": "Cleaning / Laundry Basics",
-    "choice": "Cordless stick vacuum (Dreame R20) + spin mop",
-    "notes": "Cordless stick vacuum (Dreame R20) + spin mop.",
-    "room": "Whole House",
-    "priority": "P1",
-    "status": "TBD",
-    "fulfillmentStatus": "TBD",
-    "purchaseSource": "",
-    "purchaseNotes": "",
-    "price": 1000,
-    "priceDisplay": "$600-$1,400",
-    "availableAt": "-",
-    "linkText": "",
-    "linkUrl": "",
-    "sellerDeductible": false,
-    "sellerSavings": 0,
-    "comparisonCategory": null,
-    "selectedOptionIndex": 0,
-    "selectedStoreIndex": 0,
-    "options": [
-      {
-        "model": "Cordless stick vacuum (Dreame R20) + spin mop",
-        "notes": "Cordless stick vacuum (Dreame R20) + spin mop.",
-        "stores": [
-          {
-            "store": "-",
-            "price": 1000,
-            "priceDisplay": "$600-$1,400",
-            "promo": "",
-            "linkText": "",
-            "linkUrl": ""
           }
         ]
       }
