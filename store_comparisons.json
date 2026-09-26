@@ -208,6 +208,22 @@
         "linkUrl": "https://shopee.sg/product/412971223/42202283371"
       },
       {
+        "store": "Mega Discount Store (in-store)",
+        "model": "Whirlpool FWEB9012GW 9kg washer + HWEC8002GW 8kg SaniCare heat-pump dryer",
+        "listedPrice": "$599 + $799",
+        "netPrice": "**$1,398.00** _(photo-recorded showroom prices; stacking kit / installation to confirm)_",
+        "linkText": "Washer",
+        "linkUrl": "https://www.whirlpool.com.sg/datasheet/front-load-washer/FWEB9012GW"
+      },
+      {
+        "store": "Mega Discount Store (in-store)",
+        "model": "Whirlpool FWEB9012GW 9kg washer + HWFB9002GW 9kg FreshCare+ heat-pump dryer",
+        "listedPrice": "$599 + $999",
+        "netPrice": "**$1,598.00** _(photo-recorded showroom prices; stacking kit / installation to confirm)_",
+        "linkText": "Washer",
+        "linkUrl": "https://www.whirlpool.com.sg/datasheet/front-load-washer/FWEB9012GW"
+      },
+      {
         "store": "Courts Megastore",
         "model": "Midea 9.5kg Washer + Heat Pump Dryer Stack",
         "listedPrice": "$2,199.00",
@@ -324,6 +340,14 @@
         "netPrice": "**~$1,019 \u2013 $1,079**",
         "linkText": "Shopee",
         "linkUrl": "https://shopee.sg"
+      },
+      {
+        "store": "Mega Discount Store (in-store)",
+        "model": "Whirlpool WF2B290RBSG 292L Bottom Mount",
+        "listedPrice": "$899.00",
+        "netPrice": "**$729.00** _(photo-recorded; verify physical NEA energy label before purchase)_",
+        "linkText": "Whirlpool SG",
+        "linkUrl": "https://www.whirlpool.com.sg/fridge-freezer/WF2B290RBSG"
       },
       {
         "store": "Gain City / Mega Discount",
@@ -508,8 +532,8 @@
       {
         "store": "Best Denki (VivoCity)",
         "model": "Samsung 65\" OLED S95F (Flagship QD-OLED Glare Free)",
-        "listedPrice": "$3,199.00",
-        "netPrice": "**$2,899.00** _(Showroom promo $2,999 - $100 bundle discount applied to TV)_",
+        "listedPrice": "$2,999.00",
+        "netPrice": "**$2,899.00 net** _(S$2,999 item price; $100 bundle discount allocated to TV for accounting)_",
         "linkText": "Best Denki",
         "linkUrl": "https://www.bestdenki.com.sg"
       },

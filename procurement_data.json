@@ -1212,6 +1212,34 @@
         ]
       },
       {
+        "model": "Whirlpool FWEB9012GW + HWEC8002GW (9kg + 8kg)",
+        "notes": "Mega Discount Store showroom option. FWEB9012GW: 9kg, 1400rpm, Allergy Care, Sanitize Wash and 4-tick water efficiency. HWEC8002GW: 8kg 5-tick SaniCare heat-pump dryer with Intelli-Dry, Allergy Care and a direct-drain hose. Strong value at S$1,398, but the dryer is 1kg smaller than the washer; confirm stacking kit, installation and cabinet service clearance.",
+        "stores": [
+          {
+            "store": "Mega Discount Store (in-store)",
+            "price": 1398,
+            "priceDisplay": "$1,398.00",
+            "promo": "Photo-recorded showroom prices: S$599 washer + S$799 dryer. Stacking kit and installation are not confirmed.",
+            "linkText": "Whirlpool washer",
+            "linkUrl": "https://www.whirlpool.com.sg/datasheet/front-load-washer/FWEB9012GW"
+          }
+        ]
+      },
+      {
+        "model": "Whirlpool FWEB9012GW + HWFB9002GW (9kg + 9kg)",
+        "notes": "Mega Discount Store showroom option. Matched 9kg washer and 5-tick FreshCare+ heat-pump dryer with 6th Sense. The S$200 premium over the HWEC8002GW pair buys matching capacity and FreshCare+; confirm stacking kit, installation and cabinet service clearance.",
+        "stores": [
+          {
+            "store": "Mega Discount Store (in-store)",
+            "price": 1598,
+            "priceDisplay": "$1,598.00",
+            "promo": "Photo-recorded showroom prices: S$599 washer + S$999 dryer. Stacking kit and installation are not confirmed.",
+            "linkText": "Whirlpool dryer",
+            "linkUrl": "https://www.whirlpool.com.sg/dryer/HWFB9002GW"
+          }
+        ]
+      },
+      {
         "model": "Samsung WW11CB944DGHSP + DV10BB9440GHSP (11kg + 10kg)",
         "notes": "Courts Ang Mo Kio visit pair. Existing preferred Samsung ecosystem option; confirm matching stacking kit, delivery and final discount.",
         "stores": [
@@ -1394,6 +1422,20 @@
         ]
       },
       {
+        "model": "Whirlpool WF2B290RBSG 292L Bottom Mount",
+        "notes": "Mega Discount Store showroom option. Compact 292L no-frost, reversible-hinge refrigerator (595 x 1,785 x 590mm). The Whirlpool product sheet marks Singapore energy rating as draft/TBC and 2 ticks; inspect the physical NEA label and do not buy unless the supplied model meets the current 3-tick refrigerator minimum. Conditional value only for a one- to two-person household.",
+        "stores": [
+          {
+            "store": "Mega Discount Store (in-store)",
+            "price": 729,
+            "priceDisplay": "$729.00",
+            "promo": "Photo-recorded showroom price (usual S$899). Verify physical NEA label before purchase.",
+            "linkText": "Whirlpool SG",
+            "linkUrl": "https://www.whirlpool.com.sg/fridge-freezer/WF2B290RBSG"
+          }
+        ]
+      },
+      {
         "model": "Mitsubishi Electric MR-V45E 3-Door (Vegetable Drawer)",
         "notes": "Japanese ergonomics with dedicated vegetable humidity drawer.",
         "stores": [
@@ -1404,6 +1446,72 @@
             "promo": "Showroom Price",
             "linkText": "Gain City",
             "linkUrl": "https://www.gaincity.com"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kitchen-small-appliances",
+    "name": "Kitchen Small Appliances",
+    "choice": "Philips XXL Connected Airfryer + Nespresso Essenza Mini",
+    "notes": "High-efficiency rapid hot air cooking and compact single-serve espresso maker.",
+    "room": "Kitchen",
+    "priority": "P1",
+    "status": "Selected",
+    "fulfillmentStatus": "Pending Purchase",
+    "purchaseSource": "Courts / Gain City",
+    "purchaseNotes": "",
+    "price": 350,
+    "priceDisplay": "$350.00",
+    "availableAt": "Courts / Gain City",
+    "linkText": "Courts SG",
+    "linkUrl": "https://www.courts.com.sg",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "comparisonCategory": null,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Philips XXL Connected Airfryer + Nespresso Essenza Mini",
+        "notes": "High-efficiency rapid hot air cooking and compact single-serve espresso maker.",
+        "stores": [
+          {
+            "store": "Courts / Gain City",
+            "price": 350,
+            "priceDisplay": "$350.00",
+            "promo": "Everyday Kitchen Pick",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      },
+      {
+        "model": "Essential Electric Kettle + 2-Slice Toaster Set",
+        "notes": "Rapid-boil stainless steel kettle and defrost toaster.",
+        "stores": [
+          {
+            "store": "Shopee / Courts",
+            "price": 100,
+            "priceDisplay": "$100.00",
+            "promo": "Budget Essentials",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
+          }
+        ]
+      },
+      {
+        "model": "Balmuda The Toaster + De'Longhi Dedica Espresso Machine",
+        "notes": "Japanese steam micro-toasting and 15-bar Italian espresso extraction.",
+        "stores": [
+          {
+            "store": "Takashimaya / Tangs / Courts",
+            "price": 800,
+            "priceDisplay": "$800.00",
+            "promo": "Specialty Gourmet Set",
+            "linkText": "Courts SG",
+            "linkUrl": "https://www.courts.com.sg"
           }
         ]
       }
@@ -1917,15 +2025,15 @@
     "id": "tv",
     "name": "TV",
     "choice": "Samsung 65\" OLED S95F (Flagship QD-OLED Glare Free)",
-    "notes": "Flagship QD-OLED panel (~1,600 nits), Glare Free matte coating, One Connect box, 4K 144Hz.",
+    "notes": "Flagship QD-OLED panel (~1,600 nits), Glare Free matte coating, One Connect box, 4K 165Hz. Route every TV cable to the One Connect Box in the console, not directly to the wall-mounted display.",
     "room": "Living Room",
     "priority": "P1",
     "status": "Selected",
     "fulfillmentStatus": "Awaiting Delivery",
     "purchaseSource": "Best Denki VivoCity",
-    "purchaseNotes": "Purchased Samsung 65\" OLED S95F at $2,899 (net of $100 TV/soundbar bundle discount applied directly to TV; list was $2,999). TV mount and installation are included. Combined TV + soundbar net is $4,298 ($2,298 deposit paid; $2,000 remains payable on delivery).",
-    "price": 2899,
-    "priceDisplay": "$2,899.00",
+    "purchaseNotes": "Purchased Samsung 65\" OLED S95F at $2,999 item price; $100 bundle discount is applied to TV for $2,899 net accounting. TV mount and installation are included. Route all TV wiring to the One Connect Box, not directly to the display. Combined TV + soundbar net is $4,298 ($2,298 deposit paid; $2,000 remains payable on delivery).",
+    "price": 2999,
+    "priceDisplay": "$2,999.00",
     "availableAt": "Best Denki (VivoCity)",
     "linkText": "Best Denki",
     "linkUrl": "https://www.bestdenki.com.sg",
@@ -1959,13 +2067,13 @@
       },
       {
         "model": "Samsung 65\" OLED S95F (Flagship QD-OLED Glare Free)",
-        "notes": "Flagship QD-OLED panel (~1,600 nits), Glare Free matte coating, One Connect box, 4K 144Hz.",
+        "notes": "Flagship QD-OLED panel (~1,600 nits), Glare Free matte coating, One Connect box, 4K 165Hz. Route every TV cable to the One Connect Box in the console, not directly to the wall-mounted display.",
         "stores": [
           {
             "store": "Best Denki (VivoCity)",
-            "price": 2899,
-            "priceDisplay": "$2,899.00",
-            "promo": "Purchased at Best Denki VivoCity ($2,899 net after $100 TV + soundbar bundle discount applied to TV). TV mount and installation included; $2,298 bundle deposit paid and $2,000 due on delivery.",
+            "price": 2999,
+            "priceDisplay": "$2,999.00",
+            "promo": "Purchased at S$2,999 item price; S$100 TV + Q990H bundle discount is allocated to TV for S$2,899 net accounting. TV mount and installation included; S$2,298 bundle deposit paid and S$2,000 due on delivery.",
             "linkText": "Best Denki",
             "linkUrl": "https://www.bestdenki.com.sg"
           },
@@ -2852,39 +2960,25 @@
   {
     "id": "study-wfh-desk",
     "name": "Study / WFH Desk",
-    "choice": "Existing IKEA Desk (Retained)",
-    "notes": "Homeowner existing IKEA desk retained for Bedroom 2 workstation.",
+    "choice": "Omnidesk Ascent / EverDesk Max Motorized Sit-Stand Desk (150cm)",
+    "notes": "Dual-motor motorized standing desk with anti-collision, integrated cable tray, and memory keypad.",
     "room": "Bedroom 2 / Study",
     "priority": "P1",
     "status": "Selected",
     "fulfillmentStatus": "Pending Purchase",
-    "purchaseSource": "Existing / Retained",
+    "purchaseSource": "Omnidesk SG / EverDesk",
     "purchaseNotes": "",
-    "price": 0,
-    "priceDisplay": "$0",
-    "availableAt": "Existing / Retained",
-    "linkText": "IKEA SG",
-    "linkUrl": "https://www.ikea.com/sg/en",
+    "price": 800,
+    "priceDisplay": "$800.00",
+    "availableAt": "Omnidesk SG / EverDesk",
+    "linkText": "Omnidesk SG",
+    "linkUrl": "https://theomnidesk.com",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "comparisonCategory": null,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
-      {
-        "model": "Existing IKEA Desk (Retained)",
-        "notes": "Homeowner existing IKEA desk retained for Bedroom 2 workstation.",
-        "stores": [
-          {
-            "store": "Existing / Retained",
-            "price": 0,
-            "priceDisplay": "$0",
-            "promo": "Retained by Homeowner",
-            "linkText": "IKEA SG",
-            "linkUrl": "https://www.ikea.com/sg/en"
-          }
-        ]
-      },
       {
         "model": "Omnidesk Ascent / EverDesk Max Motorized Sit-Stand Desk (150cm)",
         "notes": "Dual-motor motorized standing desk with anti-collision, integrated cable tray, and memory keypad.",
@@ -2932,39 +3026,25 @@
   {
     "id": "office-chair",
     "name": "Office Chair",
-    "choice": "Existing Ergonomic Chair (Retained)",
-    "notes": "Homeowner existing ergonomic chair retained for Bedroom 2 workstation.",
+    "choice": "Hinomi H1 Pro / Secretlab Titan Evo Ergonomic Chair",
+    "notes": "High backrest with 3D lumbar support, breathable mesh, and multi-tilt lock.",
     "room": "Bedroom 2 / Study",
     "priority": "P1",
     "status": "Selected",
     "fulfillmentStatus": "Pending Purchase",
-    "purchaseSource": "Existing / Retained",
+    "purchaseSource": "Hinomi SG / Secretlab",
     "purchaseNotes": "",
-    "price": 0,
-    "priceDisplay": "$0",
-    "availableAt": "Existing / Retained",
-    "linkText": "-",
-    "linkUrl": "",
+    "price": 600,
+    "priceDisplay": "$600.00",
+    "availableAt": "Hinomi SG / Secretlab",
+    "linkText": "Hinomi SG",
+    "linkUrl": "https://www.hinomi.sg",
     "sellerDeductible": false,
     "sellerSavings": 0,
     "comparisonCategory": null,
     "selectedOptionIndex": 0,
     "selectedStoreIndex": 0,
     "options": [
-      {
-        "model": "Existing Ergonomic Chair (Retained)",
-        "notes": "Homeowner existing ergonomic chair retained for Bedroom 2 workstation.",
-        "stores": [
-          {
-            "store": "Existing / Retained",
-            "price": 0,
-            "priceDisplay": "$0",
-            "promo": "Retained by Homeowner",
-            "linkText": "-",
-            "linkUrl": ""
-          }
-        ]
-      },
       {
         "model": "Hinomi H1 Pro / Secretlab Titan Evo Ergonomic Chair",
         "notes": "High backrest with 3D lumbar support, breathable mesh, and multi-tilt lock.",
@@ -3570,6 +3650,44 @@
             "promo": "Under-Sink Bins",
             "linkText": "IKEA SG",
             "linkUrl": "https://www.ikea.com/sg/en"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "induction-cookware",
+    "name": "Induction Cookware",
+    "choice": "Confirm whether existing cookware is induction-compatible; air fryer, rice cooker, kettle, and coffee setup are already owned",
+    "notes": "Confirm whether existing cookware is induction-compatible; air fryer, rice cooker, kettle, and coffee setup are already owned.",
+    "room": "Kitchen",
+    "priority": "P1",
+    "status": "TBD",
+    "fulfillmentStatus": "TBD",
+    "purchaseSource": "",
+    "purchaseNotes": "",
+    "price": 0,
+    "priceDisplay": "$TBD",
+    "availableAt": "-",
+    "linkText": "",
+    "linkUrl": "",
+    "sellerDeductible": false,
+    "sellerSavings": 0,
+    "comparisonCategory": null,
+    "selectedOptionIndex": 0,
+    "selectedStoreIndex": 0,
+    "options": [
+      {
+        "model": "Confirm whether existing cookware is induction-compatible; air fryer, rice cooker, kettle, and coffee setup are already owned",
+        "notes": "Confirm whether existing cookware is induction-compatible; air fryer, rice cooker, kettle, and coffee setup are already owned.",
+        "stores": [
+          {
+            "store": "-",
+            "price": 0,
+            "priceDisplay": "$TBD",
+            "promo": "",
+            "linkText": "",
+            "linkUrl": ""
           }
         ]
       }
